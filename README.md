@@ -20,6 +20,12 @@ WIP mapping guidelines are available [here](https://docs.google.com/document/d/1
 ## Gradle
 POMF uses Gradle to provide a number of utility tasks for working with POMF.
 
+### `downloadVersionsManifest`
+Downloads the manifest from mojang that contains all the versions.
+
+### `downloadWantedVersionManifest`
+Downloads the manifest for the configured pomf version.
+
 ### `download`
 Downloads the client and server Minecraft jars for the current Minecraft version to `.gradle/minecraft`
 
