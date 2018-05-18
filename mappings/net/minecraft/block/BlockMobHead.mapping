@@ -1,5 +1,6 @@
 CLASS bkk net/minecraft/block/BlockMobHead
-	CLASS bkk$b
+	CLASS bkk$a IHeadType
+	CLASS bkk$b Type
 		FIELD a SKELETON Lbkk$b;
 		FIELD b WITHER_SKELETON Lbkk$b;
 		FIELD c PLAYER Lbkk$b;
@@ -7,6 +8,14 @@ CLASS bkk net/minecraft/block/BlockMobHead
 		FIELD e CREEPER Lbkk$b;
 		FIELD f DRAGON Lbkk$b;
 	FIELD a ROTATION Lboz;
+	FIELD b boundingBox Lcgz;
+	METHOD <init> (Lbkk$a;Lbfs$b;)V
+		ARG 0 type
+		ARG 1 builder
 	METHOD a getDefaultState (Laur;)Lbob;
 	METHOD a withMirror (Lbob;Lbiy;)Lbob;
+		ARG 0 state
+		ARG 1 direction
 	METHOD a withRotation (Lbob;Lbkb;)Lbob;
+		ARG 0 state
+		ARG 1 rotation

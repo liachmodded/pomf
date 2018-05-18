@@ -6,14 +6,22 @@ CLASS bfs net/minecraft/block/Block
 	CLASS bfs$b Builder
 		FIELD a material Lcbh;
 		FIELD b mapColor Lcbi;
+		FIELD c hasCollision Z
 		FIELD d soundGroup Lbkr;
 		FIELD e lightValue I
 		FIELD f resistance F
 		FIELD g hardness F
 		FIELD h tickRandomly Z
 		FIELD i slipperiness F
+		METHOD <init> (Lcbh;Lcbi;)V
+			ARG 0 material
+			ARG 1 mapColor
+		METHOD a setNoCollision ()Lbfs$b;
 		METHOD a withSlipperiness (F)Lbfs$b;
 			ARG 0 value
+		METHOD a withBreakProperties (FF)Lbfs$b;
+			ARG 0 hardness
+			ARG 1 resistance
 		METHOD a withLightValue (I)Lbfs$b;
 			ARG 0 lightValue
 		METHOD a from (Lbfs;)Lbfs$b;
@@ -21,8 +29,16 @@ CLASS bfs net/minecraft/block/Block
 		METHOD a withSoundGroup (Lbkr;)Lbfs$b;
 			ARG 0 value
 		METHOD a of (Lcbh;)Lbfs$b;
+			ARG 0 material
 		METHOD a of (Lcbh;Lavk;)Lbfs$b;
+			ARG 0 material
+			ARG 1 dyeColor
 		METHOD a of (Lcbh;Lcbi;)Lbfs$b;
+			ARG 0 material
+			ARG 1 mapColor
+		METHOD b setInstantBreak ()Lbfs$b;
+		METHOD b withBreakProperties (F)Lbfs$b;
+			ARG 0 hardnessAndResistance
 		METHOD c setTickRandomly ()Lbfs$b;
 	FIELD a AIR_ID Lok;
 	FIELD c defaultState Lbob;
@@ -40,6 +56,7 @@ CLASS bfs net/minecraft/block/Block
 	FIELD o mapColor Lcbi;
 	FIELD p slipperiness F
 	FIELD q stateContainer Lbod;
+	FIELD r hasCollision Z
 	FIELD s translationKey Ljava/lang/String;
 	METHOD <init> (Lbfs$b;)V
 		ARG 0 builder
@@ -103,6 +120,7 @@ CLASS bfs net/minecraft/block/Block
 		ARG 1 world
 		ARG 2 pos
 	METHOD a dropItems (Lbob;Lbbd;Leg;FI)V
+		ARG 0 state
 		ARG 1 world
 		ARG 2 pos
 		ARG 3 dropChance
@@ -141,8 +159,16 @@ CLASS bfs net/minecraft/block/Block
 		ARG 1 world
 		ARG 2 pos
 		ARG 3 random
+	METHOD a (Lbob;Lbbe;Leg;)Lbob;
+		ARG 0 state
+		ARG 1 world
+		ARG 2 pos
 	METHOD a withMirror (Lbob;Lbiy;)Lbob;
+		ARG 0 state
+		ARG 1 direction
 	METHOD a withRotation (Lbob;Lbkb;)Lbob;
+		ARG 0 state
+		ARG 1 rotation
 	METHOD a (Lbob;Lbob;Lbbe;Leg;)Lbob;
 		ARG 1 state
 		ARG 2 world
@@ -151,10 +177,15 @@ CLASS bfs net/minecraft/block/Block
 	METHOD a get (Ljava/lang/String;)Lbfs;
 		ARG 0 identifier
 	METHOD a register (Ljava/lang/String;Lbfs;)V
+		ARG 0 identifier
+		ARG 1 block
 	METHOD a register (Lok;Lbfs;)V
+		ARG 0 identifier
+		ARG 1 block
 	METHOD a hasTag (Lwg;)Z
 		ARG 0 tag
 	METHOD b getState (I)Lbob;
+		ARG 0 id
 	METHOD b getStrongRedstonePower (Lbob;Lbar;Leg;Lem;)I
 		ARG 1 view
 		ARG 2 pos
@@ -189,7 +220,9 @@ CLASS bfs net/minecraft/block/Block
 		ARG 0 state
 	METHOD l getTranslationKey ()Ljava/lang/String;
 	METHOD l getLightValue (Lbob;)I
+		ARG 0 state
 	METHOD m getMaterial (Lbob;)Lcbh;
+		ARG 0 state
 	METHOD m getOffset (Lbob;Lbar;Leg;)Lcgi;
 	METHOD n getDefaultState ()Lbob;
 	METHOD o getOffsetType ()Lbfs$a;

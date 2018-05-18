@@ -28,6 +28,7 @@ CLASS bbd net/minecraft/world/World
 	FIELD s provider Lbqk;
 	FIELD t pathingCoordinator Lamf;
 	FIELD u listeners Ljava/util/List;
+	FIELD v chunkProvider Lbpl;
 	FIELD w saveHandler Lceg;
 	FIELD x properties Lcef;
 	FIELD z villageManager Lamq;
@@ -39,6 +40,7 @@ CLASS bbd net/minecraft/world/World
 		ARG 4 isRemote
 	METHOD E getPendingBlockEntity (Leg;)Lbmh;
 		ARG 0 pos
+	METHOD F getChunkProvider ()Lbpl;
 	METHOD J isDaylight ()Z
 	METHOD L getEntityCountAsString ()Ljava/lang/String;
 	METHOD N updateAmbientDarkness ()V
@@ -113,6 +115,10 @@ CLASS bbd net/minecraft/world/World
 		ARG 0 listener
 	METHOD a init (Lbbi;)V
 		ARG 0 info
+	METHOD a setLight (Lbbm;Leg;I)V
+		ARG 0 lightType
+		ARG 1 pos
+		ARG 2 flag
 	METHOD a addBlockEntity (Lbmh;)Z
 		ARG 0 blockEntity
 	METHOD a isAreaNotEmpty (Lcge;)Z
@@ -144,10 +150,17 @@ CLASS bbd net/minecraft/world/World
 		ARG 1 blockEntity
 	METHOD a setBlockState (Leg;Lbob;)Z
 		ARG 0 pos
+	METHOD a setBlockState (Leg;Lbob;I)Z
+		ARG 0 pos
+		ARG 1 state
+		ARG 2 flag
 	METHOD a updateListeners (Leg;Lbob;Lbob;I)V
 		ARG 0 pos
 		ARG 3 listenerMask
 	METHOD a markRegionForRenderUpdate (Leg;Leg;)V
+	METHOD a breakBlock (Leg;Z)Z
+		ARG 0 pos
+		ARG 1 dropItem
 	METHOD a sendPacket (Liq;)V
 		ARG 0 packet
 	METHOD a countTransientEntities (Ljava/lang/Class;)I
@@ -210,6 +223,9 @@ CLASS bbd net/minecraft/world/World
 		ARG 0 uuid
 	METHOD c setAmbientDarkness (I)V
 		ARG 0 value
+	METHOD c getChunk (II)Lbpg;
+		ARG 0 x
+		ARG 1 z
 	METHOD c setBlockBreakingProgress (ILeg;I)V
 		ARG 0 entityId
 		ARG 1 pos
@@ -224,6 +240,9 @@ CLASS bbd net/minecraft/world/World
 		ARG 1 facingFrom
 	METHOD c unloadEntities (Ljava/util/Collection;)V
 		ARG 0 entities
+	METHOD d getChunk (II)Lbpr;
+		ARG 0 x
+		ARG 1 z
 	METHOD d addGlobalEntity (Lahz;)Z
 		ARG 0 entity
 	METHOD f getChunkHeight (II)I
@@ -236,8 +255,11 @@ CLASS bbd net/minecraft/world/World
 	METHOD g isSpawnChunk (II)Z
 		ARG 0 chunkX
 		ARG 1 chunkY
+	METHOD g setBlockToAir (Leg;)Z
+		ARG 0 pos
 	METHOD h setThunderGradient (F)V
 		ARG 0 value
+	METHOD i getWorldSaveHandler ()Lceg;
 	METHOD i getRainGradient (F)F
 		ARG 0 deltaTicks
 	METHOD i getTopNonAirState (Leg;)Lbob;
@@ -254,6 +276,7 @@ CLASS bbd net/minecraft/world/World
 	METHOD l updateEntities ()V
 	METHOD l getChunk (Leg;)Lbpr;
 		ARG 0 pos
+	METHOD m getRandom ()Ljava/util/Random;
 	METHOD m_ tickRandomBlocks ()V
 	METHOD n removeBlockEntity (Leg;)V
 		ARG 0 pos
