@@ -22,11 +22,11 @@ CLASS bfs net/minecraft/block/Block
 		METHOD a withBreakProperties (FF)Lbfs$b;
 			ARG 0 hardness
 			ARG 1 resistance
-		METHOD a withLightValue (I)Lbfs$b;
+		METHOD a withLightValue (I)Lbfs$b; ACC:PUBLIC
 			ARG 0 lightValue
 		METHOD a from (Lbfs;)Lbfs$b;
 			ARG 0 block
-		METHOD a withSoundGroup (Lbkr;)Lbfs$b;
+		METHOD a withSoundGroup (Lbkr;)Lbfs$b; ACC:PUBLIC
 			ARG 0 value
 		METHOD a of (Lcbh;)Lbfs$b;
 			ARG 0 material
@@ -36,10 +36,10 @@ CLASS bfs net/minecraft/block/Block
 		METHOD a of (Lcbh;Lcbi;)Lbfs$b;
 			ARG 0 material
 			ARG 1 mapColor
-		METHOD b setInstantBreak ()Lbfs$b;
-		METHOD b withBreakProperties (F)Lbfs$b;
+		METHOD b setInstantBreak ()Lbfs$b; ACC:PUBLIC
+		METHOD b withBreakProperties (F)Lbfs$b; ACC:PUBLIC
 			ARG 0 hardnessAndResistance
-		METHOD c setTickRandomly ()Lbfs$b;
+		METHOD c setTickRandomly ()Lbfs$b; ACC:PUBLIC
 	FIELD a AIR_ID Lok;
 	FIELD c defaultState Lbob;
 	FIELD d LOGGER Lorg/apache/logging/log4j/Logger;
@@ -197,6 +197,8 @@ CLASS bfs net/minecraft/block/Block
 	METHOD a register (Ljava/lang/String;Lbfs;)V
 		ARG 0 identifier
 		ARG 1 block
+	METHOD a (Ljava/util/EnumMap;)V
+		ARG 0 map
 	METHOD a register (Lok;Lbfs;)V
 		ARG 0 identifier
 		ARG 1 block
