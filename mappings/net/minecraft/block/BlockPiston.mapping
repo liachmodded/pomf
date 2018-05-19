@@ -2,6 +2,7 @@ CLASS bnu net/minecraft/block/BlockPiston
 	FIELD b EXTENDED Lbow;
 	FIELD y isSticky Z
 	METHOD a getDefaultState (Laur;)Lbob;
+		ARG 0 interaction
 	METHOD a getBlockFaceShape (Lbar;Lbob;Leg;Lem;)Lboa;
 		ARG 0 blockView
 		ARG 2 pos
@@ -36,6 +37,8 @@ CLASS bnu net/minecraft/block/BlockPiston
 	METHOD a withRotation (Lbob;Lbkb;)Lbob;
 		ARG 0 state
 		ARG 1 rotation
+	METHOD a buildStates (Lbod$a;)V
+		ARG 0 builder
 	METHOD b onBlockAdded (Lbob;Lbbd;Leg;Lbob;)V
 		ARG 1 world
 		ARG 2 pos

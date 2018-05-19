@@ -2,6 +2,7 @@ CLASS bhs net/minecraft/block/BlockFire
 	FIELD a AGE Lboz;
 	METHOD X_ getRenderLayer ()Lbas;
 	METHOD a getDefaultState (Laur;)Lbob;
+		ARG 0 interaction
 	METHOD a getBlockFaceShape (Lbar;Lbob;Leg;Lem;)Lboa;
 		ARG 0 blockView
 		ARG 2 pos
@@ -9,6 +10,8 @@ CLASS bhs net/minecraft/block/BlockFire
 	METHOD a trySpreadFire (Lbbd;Leg;ILjava/util/Random;I)V
 	METHOD a isFullBlock (Lbob;)Z
 	METHOD a getDropAmount (Lbob;Ljava/util/Random;)I
+	METHOD a buildStates (Lbod$a;)V
+		ARG 0 builder
 	METHOD b onBlockAdded (Lbob;Lbbd;Leg;Lbob;)V
 		ARG 1 world
 		ARG 2 pos

@@ -4,6 +4,7 @@ CLASS bln net/minecraft/block/BlockTripwireHook
 	FIELD c ATTACHED Lbow;
 	METHOD X_ getRenderLayer ()Lbas;
 	METHOD a getDefaultState (Laur;)Lbob;
+		ARG 0 interaction
 	METHOD a getBlockFaceShape (Lbar;Lbob;Leg;Lem;)Lboa;
 		ARG 0 blockView
 		ARG 2 pos
@@ -31,6 +32,8 @@ CLASS bln net/minecraft/block/BlockTripwireHook
 	METHOD a withRotation (Lbob;Lbkb;)Lbob;
 		ARG 0 state
 		ARG 1 rotation
+	METHOD a buildStates (Lbod$a;)V
+		ARG 0 builder
 	METHOD b getStrongRedstonePower (Lbob;Lbar;Leg;Lem;)I
 		ARG 1 view
 		ARG 2 pos

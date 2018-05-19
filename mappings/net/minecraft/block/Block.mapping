@@ -65,6 +65,7 @@ CLASS bfs net/minecraft/block/Block
 	METHOD a get (I)Lbfs;
 		ARG 0 id
 	METHOD a getDefaultState (Laur;)Lbob;
+		ARG 0 interaction
 	METHOD a getSubBlocks (Lavg;Lev;)V
 	METHOD a getBlockFromItem (Lawi;)Lbfs;
 		ARG 0 item
@@ -174,6 +175,8 @@ CLASS bfs net/minecraft/block/Block
 		ARG 2 world
 		ARG 3 pos
 	METHOD a getDropAmount (Lbob;Ljava/util/Random;)I
+	METHOD a buildStates (Lbod$a;)V
+		ARG 0 builder
 	METHOD a get (Ljava/lang/String;)Lbfs;
 		ARG 0 identifier
 	METHOD a register (Ljava/lang/String;Lbfs;)V
@@ -186,6 +189,8 @@ CLASS bfs net/minecraft/block/Block
 		ARG 0 tag
 	METHOD b getState (I)Lbob;
 		ARG 0 id
+	METHOD b (Lbob;)Z
+		ARG 0 state
 	METHOD b getStrongRedstonePower (Lbob;Lbar;Leg;Lem;)I
 		ARG 1 view
 		ARG 2 pos
@@ -225,6 +230,8 @@ CLASS bfs net/minecraft/block/Block
 		ARG 0 state
 	METHOD m getOffset (Lbob;Lbar;Leg;)Lcgi;
 	METHOD n getDefaultState ()Lbob;
+	METHOD n (Lbob;)Z
+		ARG 0 state
 	METHOD o getOffsetType ()Lbfs$a;
 	METHOD p getSoundGroup ()Lbkr;
 	METHOD q registerBlocks ()V

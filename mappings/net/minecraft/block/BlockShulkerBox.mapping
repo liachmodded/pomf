@@ -1,6 +1,7 @@
 CLASS bki net/minecraft/block/BlockShulkerBox
 	FIELD b color Lavk;
 	METHOD a getDefaultState (Laur;)Lbob;
+		ARG 0 interaction
 	METHOD a getTooltipInformation (Lawm;Lbar;Ljava/util/List;Laxu;)V
 		ARG 0 stack
 		ARG 1 world
@@ -51,8 +52,12 @@ CLASS bki net/minecraft/block/BlockShulkerBox
 	METHOD a withRotation (Lbob;Lbkb;)Lbob;
 		ARG 0 state
 		ARG 1 rotation
+	METHOD a buildStates (Lbod$a;)V
+		ARG 0 builder
 	METHOD b getColor (Lawi;)Lavk;
 		ARG 0 item
+	METHOD b (Lbob;)Z
+		ARG 0 state
 	METHOD c getColor ()Lavk;
 	METHOD c getRenderType (Lbob;)Lbjy;
 	METHOD e getColor (Lbfs;)Lavk;
