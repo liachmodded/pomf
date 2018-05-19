@@ -16,12 +16,17 @@ CLASS bnv net/minecraft/block/BlockPistonHead
 		ARG 1 pos
 		ARG 3 player
 	METHOD a isFullBlock (Lbob;)Z
+		ARG 0 state
 	METHOD a update (Lbob;Lbbd;Leg;Lbfs;Leg;)V
 		ARG 1 world
 		ARG 2 pos
 		ARG 3 block
 		ARG 4 updatePos
 	METHOD a onBlockRemoved (Lbob;Lbbd;Leg;Lbob;)V
+		ARG 1 world
+		ARG 2 pos
+	METHOD a canBePlanted (Lbob;Lbbh;Leg;)Z
+		ARG 0 state
 		ARG 1 world
 		ARG 2 pos
 	METHOD a withMirror (Lbob;Lbiy;)Lbob;

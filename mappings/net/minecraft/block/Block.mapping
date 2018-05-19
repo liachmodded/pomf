@@ -64,6 +64,8 @@ CLASS bfs net/minecraft/block/Block
 	METHOD a canEntitiesSpawnInside ()Z
 	METHOD a get (I)Lbfs;
 		ARG 0 id
+	METHOD a getResistence (Lahz;)F
+		ARG 0 entity
 	METHOD a getDefaultState (Laur;)Lbob;
 		ARG 0 interaction
 	METHOD a getSubBlocks (Lavg;Lev;)V
@@ -89,6 +91,10 @@ CLASS bfs net/minecraft/block/Block
 		ARG 2 pos
 		ARG 4 blockEntity
 		ARG 5 stack
+	METHOD a dropExperience (Lbbd;Leg;I)V
+		ARG 0 world
+		ARG 1 pos
+		ARG 2 amount
 	METHOD a onSteppedOn (Lbbd;Leg;Lahz;)V
 		ARG 0 world
 		ARG 1 pos
@@ -98,6 +104,10 @@ CLASS bfs net/minecraft/block/Block
 		ARG 1 pos
 		ARG 2 entity
 		ARG 3 fallDistance
+	METHOD a dropItem (Lbbd;Leg;Lawm;)V
+		ARG 0 world
+		ARG 1 pos
+		ARG 2 stack
 	METHOD a onPlaced (Lbbd;Leg;Lbob;Laii;Lawm;)V
 		ARG 0 world
 		ARG 1 pos
@@ -109,6 +119,7 @@ CLASS bfs net/minecraft/block/Block
 		ARG 3 player
 	METHOD a modifyAcceleration (Lbbh;Leg;Lahz;Lcgi;)Lcgi;
 	METHOD a isFullBlock (Lbob;)Z
+		ARG 0 state
 	METHOD a getDropAmount (Lbob;ILbbd;Leg;Ljava/util/Random;)I
 	METHOD a canEntitySpawn (Lbob;Lahz;)Z
 	METHOD a isNotSolid (Lbob;Lbar;Leg;)Z
@@ -161,6 +172,10 @@ CLASS bfs net/minecraft/block/Block
 		ARG 2 pos
 		ARG 3 random
 	METHOD a (Lbob;Lbbe;Leg;)Lbob;
+		ARG 0 state
+		ARG 1 world
+		ARG 2 pos
+	METHOD a canBePlanted (Lbob;Lbbh;Leg;)Z
 		ARG 0 state
 		ARG 1 world
 		ARG 2 pos
@@ -238,5 +253,6 @@ CLASS bfs net/minecraft/block/Block
 	METHOD r shouldTickRandomly (Lbob;)Z
 	METHOD s getSilkDrop (Lbob;)Lawm;
 	METHOD t getFluidState (Lbob;)Lcbd;
+		ARG 0 state
 	METHOD v setDefaultState (Lbob;)V
 		ARG 0 state

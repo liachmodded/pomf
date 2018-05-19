@@ -23,6 +23,7 @@ CLASS bju net/minecraft/block/BlockRedstoneWire
 		ARG 1 pos
 		ARG 2 facing
 	METHOD a isFullBlock (Lbob;)Z
+		ARG 0 state
 	METHOD a getWeakRedstonePower (Lbob;Lbar;Leg;Lem;)I
 		ARG 1 view
 		ARG 2 pos
@@ -33,6 +34,10 @@ CLASS bju net/minecraft/block/BlockRedstoneWire
 		ARG 3 block
 		ARG 4 updatePos
 	METHOD a onBlockRemoved (Lbob;Lbbd;Leg;Lbob;)V
+		ARG 1 world
+		ARG 2 pos
+	METHOD a canBePlanted (Lbob;Lbbh;Leg;)Z
+		ARG 0 state
 		ARG 1 world
 		ARG 2 pos
 	METHOD a withMirror (Lbob;Lbiy;)Lbob;

@@ -38,6 +38,7 @@ CLASS bfq net/minecraft/block/BlockBed
 		ARG 1 pos
 		ARG 3 player
 	METHOD a isFullBlock (Lbob;)Z
+		ARG 0 state
 	METHOD a getDroppedItem (Lbob;Lbbd;Leg;I)Lbbc;
 	METHOD a onActivated (Lbob;Lbbd;Leg;Larn;Lags;Lem;FFF)Z
 		ARG 0 state
@@ -49,6 +50,10 @@ CLASS bfq net/minecraft/block/BlockBed
 		ARG 6 hitX
 		ARG 7 hitY
 		ARG 8 hitZ
+	METHOD a canBePlanted (Lbob;Lbbh;Leg;)Z
+		ARG 0 state
+		ARG 1 world
+		ARG 2 pos
 	METHOD a buildStates (Lbod$a;)V
 		ARG 0 builder
 	METHOD b (Lbob;)Z
