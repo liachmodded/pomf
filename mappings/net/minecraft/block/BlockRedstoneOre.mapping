@@ -4,6 +4,10 @@ CLASS bjt net/minecraft/block/BlockRedstoneOre
 		ARG 1 pos
 		ARG 2 entity
 	METHOD a getDropAmount (Lbob;ILbbd;Leg;Ljava/util/Random;)I
+		ARG 0 state
+		ARG 2 world
+		ARG 3 pos
+		ARG 4 rand
 	METHOD a dropItems (Lbob;Lbbd;Leg;FI)V
 		ARG 0 state
 		ARG 1 world
@@ -11,6 +15,10 @@ CLASS bjt net/minecraft/block/BlockRedstoneOre
 		ARG 3 dropChance
 		ARG 4 fortune
 	METHOD a getDroppedItem (Lbob;Lbbd;Leg;I)Lbbc;
+		ARG 0 state
+		ARG 1 world
+		ARG 2 pos
+		ARG 3 amount
 	METHOD a onBlockBreakStart (Lbob;Lbbd;Leg;Larn;)V
 		ARG 1 world
 		ARG 2 pos
@@ -26,7 +34,9 @@ CLASS bjt net/minecraft/block/BlockRedstoneOre
 		ARG 7 hitY
 		ARG 8 hitZ
 	METHOD a getDropAmount (Lbob;Ljava/util/Random;)I
-	METHOD a buildStates (Lbod$a;)V
+		ARG 0 state
+		ARG 1 rand
+	METHOD a addProperties (Lbod$a;)V
 		ARG 0 builder
 	METHOD b updateTick (Lbob;Lbbd;Leg;Ljava/util/Random;)V
 		ARG 1 world

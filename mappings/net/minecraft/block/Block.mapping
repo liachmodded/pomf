@@ -64,25 +64,31 @@ CLASS bfs net/minecraft/block/Block
 	METHOD a canEntitiesSpawnInside ()Z
 	METHOD a get (I)Lbfs;
 		ARG 0 id
-	METHOD a getResistence (Lahz;)F
+	METHOD a getResistance (Lahz;)F
 		ARG 0 entity
 	METHOD a getDefaultState (Laur;)Lbob;
 		ARG 0 interaction
-	METHOD a getSubBlocks (Lavg;Lev;)V
+	METHOD a addSubBlocks (Lavg;Lev;)V
+		ARG 0 itemGroup
+		ARG 1 list
 	METHOD a getBlockFromItem (Lawi;)Lbfs;
 		ARG 0 item
-	METHOD a getTooltipInformation (Lawm;Lbar;Ljava/util/List;Laxu;)V
+	METHOD a addTooltipLines (Lawm;Lbar;Ljava/util/List;Laxu;)V
 		ARG 0 stack
 		ARG 1 world
 		ARG 2 tooltip
 		ARG 3 flag
 	METHOD a onEntityLand (Lbar;Lahz;)V
+		ARG 0 world
 		ARG 1 entity
 	METHOD a getBlockFaceShape (Lbar;Lbob;Leg;Lem;)Lboa;
 		ARG 0 blockView
 		ARG 2 pos
 		ARG 3 face
-	METHOD a getItem (Lbar;Leg;Lbob;)Lawm;
+	METHOD a getItemStack (Lbar;Leg;Lbob;)Lawm;
+		ARG 0 world
+		ARG 1 pos
+		ARG 2 state
 	METHOD a canDropFromExplosion (Lbax;)Z
 		ARG 0 explosion
 	METHOD a afterBreak (Lbbd;Larn;Leg;Lbob;Lbmh;Lawm;)V
@@ -111,24 +117,33 @@ CLASS bfs net/minecraft/block/Block
 	METHOD a onPlaced (Lbbd;Leg;Lbob;Laii;Lawm;)V
 		ARG 0 world
 		ARG 1 pos
+		ARG 2 state
 		ARG 3 placer
 		ARG 4 stack
 	METHOD a onBreak (Lbbd;Leg;Lbob;Larn;)V
 		ARG 0 world
 		ARG 1 pos
+		ARG 2 state
 		ARG 3 player
 	METHOD a modifyAcceleration (Lbbh;Leg;Lahz;Lcgi;)Lcgi;
 	METHOD a isFullBlock (Lbob;)Z
 		ARG 0 state
 	METHOD a getDropAmount (Lbob;ILbbd;Leg;Ljava/util/Random;)I
+		ARG 0 state
+		ARG 2 world
+		ARG 3 pos
+		ARG 4 rand
 	METHOD a canEntitySpawn (Lbob;Lahz;)Z
 	METHOD a isNotSolid (Lbob;Lbar;Leg;)Z
+		ARG 0 state
+		ARG 1 world
 		ARG 2 pos
 	METHOD a getWeakRedstonePower (Lbob;Lbar;Leg;Lem;)I
 		ARG 1 view
 		ARG 2 pos
 		ARG 3 facingFrom
 	METHOD a getComparatorOutput (Lbob;Lbbd;Leg;)I
+		ARG 0 state
 		ARG 1 world
 		ARG 2 pos
 	METHOD a dropItems (Lbob;Lbbd;Leg;FI)V
@@ -138,7 +153,11 @@ CLASS bfs net/minecraft/block/Block
 		ARG 3 dropChance
 		ARG 4 fortune
 	METHOD a getDroppedItem (Lbob;Lbbd;Leg;I)Lbbc;
+		ARG 0 state
+		ARG 1 world
+		ARG 2 pos
 	METHOD a onBlockAction (Lbob;Lbbd;Leg;II)Z
+		ARG 0 state
 		ARG 1 world
 		ARG 2 pos
 	METHOD a onEntityCollision (Lbob;Lbbd;Leg;Lahz;)V
@@ -175,7 +194,7 @@ CLASS bfs net/minecraft/block/Block
 		ARG 0 state
 		ARG 1 world
 		ARG 2 pos
-	METHOD a canBePlanted (Lbob;Lbbh;Leg;)Z
+	METHOD a canBePlaced (Lbob;Lbbh;Leg;)Z
 		ARG 0 state
 		ARG 1 world
 		ARG 2 pos
@@ -189,8 +208,15 @@ CLASS bfs net/minecraft/block/Block
 		ARG 1 state
 		ARG 2 world
 		ARG 3 pos
+	METHOD a onBlockUpdate (Lbob;Lem;Lbob;Lbbe;Leg;Leg;)Lbob;
+		ARG 0 state
+		ARG 1 facing
+		ARG 2 updateSource
+		ARG 3 world
 	METHOD a getDropAmount (Lbob;Ljava/util/Random;)I
-	METHOD a buildStates (Lbod$a;)V
+		ARG 0 state
+		ARG 1 rand
+	METHOD a addProperties (Lbod$a;)V
 		ARG 0 builder
 	METHOD a get (Ljava/lang/String;)Lbfs;
 		ARG 0 identifier
@@ -208,6 +234,10 @@ CLASS bfs net/minecraft/block/Block
 		ARG 0 id
 	METHOD b (Lbob;)Z
 		ARG 0 state
+	METHOD b getBoundingBox (Lbob;Lbar;Leg;)Lcgz;
+		ARG 0 state
+		ARG 1 world
+		ARG 2 pos
 	METHOD b getStrongRedstonePower (Lbob;Lbar;Leg;Lem;)I
 		ARG 1 view
 		ARG 2 pos
@@ -223,21 +253,29 @@ CLASS bfs net/minecraft/block/Block
 		ARG 0 world
 		ARG 1 pos
 	METHOD c isStone (Lbfs;)Z
+		ARG 0 block
 	METHOD c getRenderType (Lbob;)Lbjy;
 	METHOD c randomDisplayTick (Lbob;Lbbd;Leg;Ljava/util/Random;)V
 		ARG 1 world
 		ARG 2 pos
 		ARG 3 rand
 	METHOD d isDirt (Lbfs;)Z
+		ARG 0 block
 	METHOD d getMapColor (Lbob;Lbar;Leg;)Lcbi;
 	METHOD e getHardness (Lbob;Lbar;Leg;)F
-	METHOD f isCollidableSolid (Lbob;)Z
+	METHOD f hasCollisionAndSolidRenderLayer (Lbob;)Z
 		ARG 0 state
 	METHOD g hasBlockEntity ()Z
 	METHOD g getAmbientOcclusionLightValue (Lbob;)F
+		ARG 0 state
+	METHOD g getEmptyShape (Lbob;Lbar;Leg;)Lcgz;
+		ARG 0 state
+		ARG 1 world
+		ARG 2 pos
 	METHOD h getItem ()Lawi;
 	METHOD h canProvidePower (Lbob;)Z
 	METHOD i getPistonBehavior (Lbob;)Lcbj;
+		ARG 0 state
 	METHOD j canSilkHarvest ()Z
 	METHOD k getTranslationName ()Lid;
 	METHOD k getStateId (Lbob;)I
@@ -245,20 +283,27 @@ CLASS bfs net/minecraft/block/Block
 	METHOD l getTranslationKey ()Ljava/lang/String;
 	METHOD l getLightValue (Lbob;)I
 		ARG 0 state
+	METHOD m getStateContainer ()Lbod;
 	METHOD m getMaterial (Lbob;)Lcbh;
 		ARG 0 state
 	METHOD m getOffset (Lbob;Lbar;Leg;)Lcgi;
+		ARG 0 state
+		ARG 1 world
+		ARG 2 pos
 	METHOD n getDefaultState ()Lbob;
-	METHOD n (Lbob;)Z
+	METHOD n isSolidAndFullBlock (Lbob;)Z
 		ARG 0 state
 	METHOD o getOffsetType ()Lbfs$a;
 	METHOD p getSoundGroup ()Lbkr;
+	METHOD p isDefaultStateSolidAndFullBlock (Lbob;)Z
+		ARG 0 state
 	METHOD q registerBlocks ()V
 	METHOD q (Lbob;)Z
 		ARG 0 state
 	METHOD r shouldTickRandomly (Lbob;)Z
 		ARG 0 state
 	METHOD s getSilkDrop (Lbob;)Lawm;
+		ARG 0 state
 	METHOD t getFluidState (Lbob;)Lcbd;
 		ARG 0 state
 	METHOD v setDefaultState (Lbob;)V

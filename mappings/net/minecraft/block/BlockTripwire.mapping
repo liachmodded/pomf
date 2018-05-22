@@ -12,6 +12,7 @@ CLASS blm net/minecraft/block/BlockTripwire
 	METHOD a onBreak (Lbbd;Leg;Lbob;Larn;)V
 		ARG 0 world
 		ARG 1 pos
+		ARG 2 state
 		ARG 3 player
 	METHOD a isFullBlock (Lbob;)Z
 		ARG 0 state
@@ -20,6 +21,7 @@ CLASS blm net/minecraft/block/BlockTripwire
 		ARG 2 pos
 		ARG 3 entity
 	METHOD a onBlockRemoved (Lbob;Lbbd;Leg;Lbob;)V
+		ARG 0 state
 		ARG 1 world
 		ARG 2 pos
 	METHOD a randomTick (Lbob;Lbbd;Leg;Ljava/util/Random;)V
@@ -32,9 +34,21 @@ CLASS blm net/minecraft/block/BlockTripwire
 	METHOD a withRotation (Lbob;Lbkb;)Lbob;
 		ARG 0 state
 		ARG 1 rotation
-	METHOD a buildStates (Lbod$a;)V
+	METHOD a onBlockUpdate (Lbob;Lem;Lbob;Lbbe;Leg;Leg;)Lbob;
+		ARG 0 state
+		ARG 1 facing
+		ARG 2 updateSource
+		ARG 3 world
+		ARG 4 pos
+		ARG 5 sourcePos
+	METHOD a addProperties (Lbod$a;)V
 		ARG 0 builder
+	METHOD b getBoundingBox (Lbob;Lbar;Leg;)Lcgz;
+		ARG 0 state
+		ARG 1 world
+		ARG 2 pos
 	METHOD b onBlockAdded (Lbob;Lbbd;Leg;Lbob;)V
+		ARG 0 state
 		ARG 1 world
 		ARG 2 pos
 	METHOD b updateTick (Lbob;Lbbd;Leg;Ljava/util/Random;)V

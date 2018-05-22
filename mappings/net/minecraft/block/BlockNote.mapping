@@ -17,6 +17,7 @@ CLASS bje net/minecraft/block/BlockNote
 	METHOD a getDefaultState (Laur;)Lbob;
 		ARG 0 interaction
 	METHOD a onBlockAction (Lbob;Lbbd;Leg;II)Z
+		ARG 0 state
 		ARG 1 world
 		ARG 2 pos
 	METHOD a onBlockBreakStart (Lbob;Lbbd;Leg;Larn;)V
@@ -38,5 +39,12 @@ CLASS bje net/minecraft/block/BlockNote
 		ARG 2 pos
 		ARG 3 block
 		ARG 4 updatePos
-	METHOD a buildStates (Lbod$a;)V
+	METHOD a onBlockUpdate (Lbob;Lem;Lbob;Lbbe;Leg;Leg;)Lbob;
+		ARG 0 state
+		ARG 1 facing
+		ARG 2 updateSource
+		ARG 3 world
+		ARG 4 pos
+		ARG 5 sourcePos
+	METHOD a addProperties (Lbod$a;)V
 		ARG 0 builder

@@ -18,11 +18,13 @@ CLASS bgh net/minecraft/block/BlockChest
 	METHOD a onPlaced (Lbbd;Leg;Lbob;Laii;Lawm;)V
 		ARG 0 world
 		ARG 1 pos
+		ARG 2 state
 		ARG 3 placer
 		ARG 4 stack
 	METHOD a isFullBlock (Lbob;)Z
 		ARG 0 state
 	METHOD a getComparatorOutput (Lbob;Lbbd;Leg;)I
+		ARG 0 state
 		ARG 1 world
 		ARG 2 pos
 	METHOD a onActivated (Lbob;Lbbd;Leg;Larn;Lags;Lem;FFF)Z
@@ -36,6 +38,7 @@ CLASS bgh net/minecraft/block/BlockChest
 		ARG 7 hitY
 		ARG 8 hitZ
 	METHOD a onBlockRemoved (Lbob;Lbbd;Leg;Lbob;)V
+		ARG 0 state
 		ARG 1 world
 		ARG 2 pos
 	METHOD a withMirror (Lbob;Lbiy;)Lbob;
@@ -44,10 +47,21 @@ CLASS bgh net/minecraft/block/BlockChest
 	METHOD a withRotation (Lbob;Lbkb;)Lbob;
 		ARG 0 state
 		ARG 1 rotation
-	METHOD a buildStates (Lbod$a;)V
+	METHOD a onBlockUpdate (Lbob;Lem;Lbob;Lbbe;Leg;Leg;)Lbob;
+		ARG 0 state
+		ARG 1 facing
+		ARG 2 updateSource
+		ARG 3 world
+		ARG 4 pos
+		ARG 5 sourcePos
+	METHOD a addProperties (Lbod$a;)V
 		ARG 0 builder
 	METHOD b (Lbob;)Z
 		ARG 0 state
+	METHOD b getBoundingBox (Lbob;Lbar;Leg;)Lcgz;
+		ARG 0 state
+		ARG 1 world
+		ARG 2 pos
 	METHOD c getRenderType (Lbob;)Lbjy;
 	METHOD t getFluidState (Lbob;)Lcbd;
 		ARG 0 state

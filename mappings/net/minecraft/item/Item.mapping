@@ -21,17 +21,19 @@ CLASS awi net/minecraft/item/Item
 			ARG 2 user
 	CLASS awi$a Builder
 		FIELD a maxStackSize I
-		FIELD b damage I
-		FIELD c containerItem Lawi;
-		FIELD d tab Lavg;
+		FIELD b maxDamage I
+		FIELD c emptiedItem Lawi;
+		FIELD d itemGroup Lavg;
 		METHOD a withMaxStackSize (I)Lawi$a;
 			ARG 0 value
-		METHOD a withTab (Lavg;)Lawi$a;
-		METHOD a withContainerItem (Lawi;)Lawi$a;
+		METHOD a withItemGroup (Lavg;)Lawi$a;
+			ARG 0 itemGroup
+		METHOD a withEmptiedItem (Lawi;)Lawi$a;
+			ARG 0 emptiedItem
 		METHOD b withDamage (I)Lawi$a;
-			ARG 0 value
-		METHOD c setDamage (I)Lawi$a;
-			ARG 0 value
+			ARG 0 maxDamage
+		METHOD c setMaxDamage (I)Lawi$a;
+			ARG 0 maxDamage
 	FIELD a DAMAGED_PROPERTY Lawl;
 	FIELD b DAMAGE_PROPERTY Lawl;
 	FIELD c LEFTHANDED_PROPERTY Lawl;
@@ -82,7 +84,7 @@ CLASS awi net/minecraft/item/Item
 		ARG 1 world
 		ARG 3 pos
 		ARG 4 user
-	METHOD a addInformation (Lawm;Lbbd;Ljava/util/List;Laxu;)V
+	METHOD a addTooltipLines (Lawm;Lbbd;Ljava/util/List;Laxu;)V
 		ARG 0 stack
 		ARG 1 world
 		ARG 2 tooltip
@@ -95,10 +97,18 @@ CLASS awi net/minecraft/item/Item
 		ARG 2 hand
 	METHOD a rayTrace (Lbbd;Larn;Z)Lcgf;
 	METHOD a getItemFromBlock (Lbfs;)Lawi;
-	METHOD a registerItemBlock (Lbfs;Lavg;)V
+	METHOD a register (Lbfs;Lavg;)V
 		ARG 0 block
 		ARG 1 tab
+	METHOD a register (Lbfs;Lawi;)V
+		ARG 0 block
+		ARG 1 item
 	METHOD a register (Ljava/lang/String;Lawi;)V
+		ARG 0 identifier
+		ARG 1 item
+	METHOD a register (Lok;Lawi;)V
+		ARG 0 identifier
+		ARG 1 item
 	METHOD a registerProperty (Lok;Lawl;)V
 	METHOD b hasEnchantmentGlow (Lawm;)Z
 		ARG 0 stack
@@ -106,7 +116,7 @@ CLASS awi net/minecraft/item/Item
 		ARG 0 stack
 		ARG 1 world
 		ARG 2 player
-	METHOD b registerItemBlock (Lbfs;)V
+	METHOD b register (Lbfs;)V
 		ARG 0 block
 	METHOD c getEnchantability ()I
 	METHOD c getMaxUseTime (Lawm;)I

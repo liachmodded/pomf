@@ -7,6 +7,7 @@ CLASS blc net/minecraft/block/BlockStructure
 	METHOD a onPlaced (Lbbd;Leg;Lbob;Laii;Lawm;)V
 		ARG 0 world
 		ARG 1 pos
+		ARG 2 state
 		ARG 3 placer
 		ARG 4 stack
 	METHOD a onActivated (Lbob;Lbbd;Leg;Larn;Lags;Lem;FFF)Z
@@ -25,6 +26,8 @@ CLASS blc net/minecraft/block/BlockStructure
 		ARG 3 block
 		ARG 4 updatePos
 	METHOD a getDropAmount (Lbob;Ljava/util/Random;)I
-	METHOD a buildStates (Lbod$a;)V
+		ARG 0 state
+		ARG 1 rand
+	METHOD a addProperties (Lbod$a;)V
 		ARG 0 builder
 	METHOD c getRenderType (Lbob;)Lbjy;

@@ -1,5 +1,10 @@
 CLASS bkd net/minecraft/block/BlockSapling
 	FIELD a STAGE Lboz;
+	FIELD b BOUNDING_BOX Lcgz;
+	FIELD c treeGenerator Lbnk;
+	METHOD <init> (Lbnk;Lbfs$b;)V
+		ARG 0 treeGenerator
+		ARG 1 builder
 	METHOD a isFertilizable (Lbar;Leg;Lbob;Z)Z
 		ARG 1 pos
 		ARG 3 remote
@@ -7,11 +12,17 @@ CLASS bkd net/minecraft/block/BlockSapling
 		ARG 0 world
 		ARG 1 rand
 		ARG 2 pos
-	METHOD a buildStates (Lbod$a;)V
+	METHOD a growTree (Lbbe;Leg;Lbob;Ljava/util/Random;)V
+	METHOD a addProperties (Lbod$a;)V
 		ARG 0 builder
 	METHOD b grow (Lbbd;Ljava/util/Random;Leg;Lbob;)V
 		ARG 0 world
 		ARG 1 rand
+		ARG 2 pos
+		ARG 3 state
+	METHOD b getBoundingBox (Lbob;Lbar;Leg;)Lcgz;
+		ARG 0 state
+		ARG 1 world
 		ARG 2 pos
 	METHOD b updateTick (Lbob;Lbbd;Leg;Ljava/util/Random;)V
 		ARG 1 world

@@ -15,17 +15,30 @@ CLASS bhd net/minecraft/block/BlockDoubleTallPlant
 	METHOD a onPlaced (Lbbd;Leg;Lbob;Laii;Lawm;)V
 		ARG 0 world
 		ARG 1 pos
+		ARG 2 state
 		ARG 3 placer
 		ARG 4 stack
 	METHOD a onBreak (Lbbd;Leg;Lbob;Larn;)V
 		ARG 0 world
 		ARG 1 pos
+		ARG 2 state
 		ARG 3 player
 	METHOD a getDroppedItem (Lbob;Lbbd;Leg;I)Lbbc;
-	METHOD a canBePlanted (Lbob;Lbbh;Leg;)Z
 		ARG 0 state
 		ARG 1 world
 		ARG 2 pos
-	METHOD a buildStates (Lbod$a;)V
+		ARG 3 amount
+	METHOD a canBePlaced (Lbob;Lbbh;Leg;)Z
+		ARG 0 state
+		ARG 1 world
+		ARG 2 pos
+	METHOD a onBlockUpdate (Lbob;Lem;Lbob;Lbbe;Leg;Leg;)Lbob;
+		ARG 0 state
+		ARG 1 facing
+		ARG 2 updateSource
+		ARG 3 world
+		ARG 4 pos
+		ARG 5 sourcePos
+	METHOD a addProperties (Lbod$a;)V
 		ARG 0 builder
 	METHOD o getOffsetType ()Lbfs$a;

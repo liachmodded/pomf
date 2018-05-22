@@ -12,6 +12,7 @@ CLASS bfq net/minecraft/block/BlockBed
 	METHOD a createBlockEntity (Lbar;)Lbmh;
 		ARG 0 world
 	METHOD a onEntityLand (Lbar;Lahz;)V
+		ARG 0 world
 		ARG 1 entity
 	METHOD a getBlockFaceShape (Lbar;Lbob;Leg;Lem;)Lboa;
 		ARG 0 blockView
@@ -31,15 +32,21 @@ CLASS bfq net/minecraft/block/BlockBed
 	METHOD a onPlaced (Lbbd;Leg;Lbob;Laii;Lawm;)V
 		ARG 0 world
 		ARG 1 pos
+		ARG 2 state
 		ARG 3 placer
 		ARG 4 stack
 	METHOD a onBreak (Lbbd;Leg;Lbob;Larn;)V
 		ARG 0 world
 		ARG 1 pos
+		ARG 2 state
 		ARG 3 player
 	METHOD a isFullBlock (Lbob;)Z
 		ARG 0 state
 	METHOD a getDroppedItem (Lbob;Lbbd;Leg;I)Lbbc;
+		ARG 0 state
+		ARG 1 world
+		ARG 2 pos
+		ARG 3 amount
 	METHOD a onActivated (Lbob;Lbbd;Leg;Larn;Lags;Lem;FFF)Z
 		ARG 0 state
 		ARG 1 world
@@ -50,14 +57,26 @@ CLASS bfq net/minecraft/block/BlockBed
 		ARG 6 hitX
 		ARG 7 hitY
 		ARG 8 hitZ
-	METHOD a canBePlanted (Lbob;Lbbh;Leg;)Z
+	METHOD a canBePlaced (Lbob;Lbbh;Leg;)Z
 		ARG 0 state
 		ARG 1 world
 		ARG 2 pos
-	METHOD a buildStates (Lbod$a;)V
+	METHOD a onBlockUpdate (Lbob;Lem;Lbob;Lbbe;Leg;Leg;)Lbob;
+		ARG 0 state
+		ARG 1 facing
+		ARG 2 updateSource
+		ARG 3 world
+		ARG 4 pos
+		ARG 5 sourcePos
+	METHOD a addProperties (Lbod$a;)V
 		ARG 0 builder
 	METHOD b (Lbob;)Z
 		ARG 0 state
+	METHOD b getBoundingBox (Lbob;Lbar;Leg;)Lcgz;
+		ARG 0 state
+		ARG 1 world
+		ARG 2 pos
 	METHOD c getRenderType (Lbob;)Lbjy;
 	METHOD d getMapColor (Lbob;Lbar;Leg;)Lcbi;
 	METHOD i getPistonBehavior (Lbob;)Lcbj;
+		ARG 0 state

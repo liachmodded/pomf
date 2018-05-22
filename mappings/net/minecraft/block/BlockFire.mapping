@@ -10,14 +10,28 @@ CLASS bhs net/minecraft/block/BlockFire
 	METHOD a trySpreadFire (Lbbd;Leg;ILjava/util/Random;I)V
 	METHOD a isFullBlock (Lbob;)Z
 		ARG 0 state
-	METHOD a canBePlanted (Lbob;Lbbh;Leg;)Z
+	METHOD a canBePlaced (Lbob;Lbbh;Leg;)Z
 		ARG 0 state
 		ARG 1 world
 		ARG 2 pos
+	METHOD a onBlockUpdate (Lbob;Lem;Lbob;Lbbe;Leg;Leg;)Lbob;
+		ARG 0 state
+		ARG 1 facing
+		ARG 2 updateSource
+		ARG 3 world
+		ARG 4 pos
+		ARG 5 sourcePos
 	METHOD a getDropAmount (Lbob;Ljava/util/Random;)I
-	METHOD a buildStates (Lbod$a;)V
+		ARG 0 state
+		ARG 1 rand
+	METHOD a addProperties (Lbod$a;)V
 		ARG 0 builder
+	METHOD b getBoundingBox (Lbob;Lbar;Leg;)Lcgz;
+		ARG 0 state
+		ARG 1 world
+		ARG 2 pos
 	METHOD b onBlockAdded (Lbob;Lbbd;Leg;Lbob;)V
+		ARG 0 state
 		ARG 1 world
 		ARG 2 pos
 	METHOD b updateTick (Lbob;Lbbd;Leg;Ljava/util/Random;)V

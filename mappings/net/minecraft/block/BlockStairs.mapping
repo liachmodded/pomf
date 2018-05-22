@@ -1,5 +1,5 @@
 CLASS bkw net/minecraft/block/BlockStairs
-	CLASS bkw$a Half
+	CLASS bkw$a Base
 		FIELD a TOP Lbkw$a;
 		FIELD b BOTTOM Lbkw$a;
 		FIELD c name Ljava/lang/String;
@@ -18,14 +18,14 @@ CLASS bkw net/minecraft/block/BlockStairs
 		METHOD m asString ()Ljava/lang/String;
 	FIELD H parentBlock Lbfs;
 	FIELD I parentState Lbob;
-	FIELD b HALF Lboy;
+	FIELD b BASE Lboy;
 	FIELD c SHAPE Lboy;
 	FIELD t WATERLOGGED Lbow;
 	METHOD <init> (Lbob;Lbfs$b;)V
 		ARG 0 parent
 		ARG 1 builder
 	METHOD X_ getRenderLayer ()Lbas;
-	METHOD a getResistence (Lahz;)F
+	METHOD a getResistance (Lahz;)F
 		ARG 0 entity
 	METHOD a getDefaultState (Laur;)Lbob;
 		ARG 0 interaction
@@ -55,6 +55,7 @@ CLASS bkw net/minecraft/block/BlockStairs
 		ARG 7 hitY
 		ARG 8 hitZ
 	METHOD a onBlockRemoved (Lbob;Lbbd;Leg;Lbob;)V
+		ARG 0 state
 		ARG 1 world
 		ARG 2 pos
 	METHOD a withMirror (Lbob;Lbiy;)Lbob;
@@ -63,9 +64,21 @@ CLASS bkw net/minecraft/block/BlockStairs
 	METHOD a withRotation (Lbob;Lbkb;)Lbob;
 		ARG 0 state
 		ARG 1 rotation
-	METHOD a buildStates (Lbod$a;)V
+	METHOD a onBlockUpdate (Lbob;Lem;Lbob;Lbbe;Leg;Leg;)Lbob;
+		ARG 0 state
+		ARG 1 facing
+		ARG 2 updateSource
+		ARG 3 world
+		ARG 4 pos
+		ARG 5 sourcePos
+	METHOD a addProperties (Lbod$a;)V
 		ARG 0 builder
+	METHOD b getBoundingBox (Lbob;Lbar;Leg;)Lcgz;
+		ARG 0 state
+		ARG 1 world
+		ARG 2 pos
 	METHOD b onBlockAdded (Lbob;Lbbd;Leg;Lbob;)V
+		ARG 0 state
 		ARG 1 world
 		ARG 2 pos
 	METHOD b updateTick (Lbob;Lbbd;Leg;Ljava/util/Random;)V

@@ -48,6 +48,9 @@ CLASS bob net/minecraft/block/state/IBlockState
 		ARG 0 world
 		ARG 1 pos
 		ARG 2 rand
+	METHOD a (Lbbh;Leg;)Z
+		ARG 0 world
+		ARG 1 pos
 	METHOD a withMirror (Lbiy;)Lbob;
 	METHOD a withRotation (Lbkb;)Lbob;
 	METHOD a hasTag (Lwg;)Z
@@ -68,6 +71,10 @@ CLASS bob net/minecraft/block/state/IBlockState
 		ARG 1 pos
 		ARG 2 rand
 	METHOD c getBlock ()Lbfs;
+	METHOD c getBlockFaceShape (Lbar;Leg;Lem;)Lboa;
+		ARG 0 world
+		ARG 1 pos
+		ARG 2 face
 	METHOD d getMaterial ()Lcbh;
 	METHOD d getMapColor (Lbar;Leg;)Lcbi;
 	METHOD e getLightValue ()I
@@ -75,11 +82,19 @@ CLASS bob net/minecraft/block/state/IBlockState
 		ARG 0 view
 		ARG 1 pos
 	METHOD g isFullBlock ()Z
+	METHOD g getBoundingBox (Lbar;Leg;)Lcgz;
+		ARG 0 world
+		ARG 1 pos
+	METHOD h getCollisionBox (Lbar;Leg;)Lcgz;
+		ARG 0 world
+		ARG 1 pos
 	METHOD i getRenderType ()Lbjy;
 	METHOD j getAmbientOcclusionLightValue ()F
 	METHOD k isNormalCube ()Z
 	METHOD k getOffset (Lbar;Leg;)Lcgi;
 	METHOD l isNotSolid (Lbar;Leg;)Z
+		ARG 0 world
+		ARG 1 pos
 	METHOD m canProvidePower ()Z
 	METHOD o getPistonBehavior ()Lcbj;
 	METHOD p isCollidableSolid ()Z

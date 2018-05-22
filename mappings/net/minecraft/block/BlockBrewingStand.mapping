@@ -9,11 +9,13 @@ CLASS bfx net/minecraft/block/BlockBrewingStand
 	METHOD a onPlaced (Lbbd;Leg;Lbob;Laii;Lawm;)V
 		ARG 0 world
 		ARG 1 pos
+		ARG 2 state
 		ARG 3 placer
 		ARG 4 stack
 	METHOD a isFullBlock (Lbob;)Z
 		ARG 0 state
 	METHOD a getComparatorOutput (Lbob;Lbbd;Leg;)I
+		ARG 0 state
 		ARG 1 world
 		ARG 2 pos
 	METHOD a onActivated (Lbob;Lbbd;Leg;Larn;Lags;Lem;FFF)Z
@@ -27,10 +29,15 @@ CLASS bfx net/minecraft/block/BlockBrewingStand
 		ARG 7 hitY
 		ARG 8 hitZ
 	METHOD a onBlockRemoved (Lbob;Lbbd;Leg;Lbob;)V
+		ARG 0 state
 		ARG 1 world
 		ARG 2 pos
-	METHOD a buildStates (Lbod$a;)V
+	METHOD a addProperties (Lbod$a;)V
 		ARG 0 builder
+	METHOD b getBoundingBox (Lbob;Lbar;Leg;)Lcgz;
+		ARG 0 state
+		ARG 1 world
+		ARG 2 pos
 	METHOD c getRenderType (Lbob;)Lbjy;
 	METHOD c randomDisplayTick (Lbob;Lbbd;Leg;Ljava/util/Random;)V
 		ARG 1 world

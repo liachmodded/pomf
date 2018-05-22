@@ -3,8 +3,14 @@ CLASS awd net/minecraft/item/ItemFood
 	FIELD b saturationRestored F
 	FIELD c wolfFood Z
 	FIELD d alwaysConsumable Z
+	FIELD e quicklyConsumed Z
 	FIELD l statusEffect Lahs;
 	FIELD m statusEffectChance F
+	METHOD <init> (IFZLawi$a;)V
+		ARG 0 hungerRestored
+		ARG 1 saturationRestored
+		ARG 2 wolfFood
+		ARG 3 builder
 	METHOD a setStatusEffect (Lahs;F)Lawd;
 		ARG 0 effect
 		ARG 1 chance
@@ -26,6 +32,7 @@ CLASS awd net/minecraft/item/ItemFood
 	METHOD d getUseAction (Lawm;)Laxw;
 		ARG 0 stack
 	METHOD e setAlwaysConsumable ()Lawd;
+	METHOD f setQuicklyConsumed ()Lawd;
 	METHOD f getHungerRestored (Lawm;)I
 		ARG 0 stack
 	METHOD g getSaturatationRestored (Lawm;)F

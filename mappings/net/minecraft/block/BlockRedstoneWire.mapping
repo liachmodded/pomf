@@ -34,9 +34,10 @@ CLASS bju net/minecraft/block/BlockRedstoneWire
 		ARG 3 block
 		ARG 4 updatePos
 	METHOD a onBlockRemoved (Lbob;Lbbd;Leg;Lbob;)V
+		ARG 0 state
 		ARG 1 world
 		ARG 2 pos
-	METHOD a canBePlanted (Lbob;Lbbh;Leg;)Z
+	METHOD a canBePlaced (Lbob;Lbbh;Leg;)Z
 		ARG 0 state
 		ARG 1 world
 		ARG 2 pos
@@ -46,13 +47,25 @@ CLASS bju net/minecraft/block/BlockRedstoneWire
 	METHOD a withRotation (Lbob;Lbkb;)Lbob;
 		ARG 0 state
 		ARG 1 rotation
-	METHOD a buildStates (Lbod$a;)V
+	METHOD a onBlockUpdate (Lbob;Lem;Lbob;Lbbe;Leg;Leg;)Lbob;
+		ARG 0 state
+		ARG 1 facing
+		ARG 2 updateSource
+		ARG 3 world
+		ARG 4 pos
+		ARG 5 sourcePos
+	METHOD a addProperties (Lbod$a;)V
 		ARG 0 builder
+	METHOD b getBoundingBox (Lbob;Lbar;Leg;)Lcgz;
+		ARG 0 state
+		ARG 1 world
+		ARG 2 pos
 	METHOD b getStrongRedstonePower (Lbob;Lbar;Leg;Lem;)I
 		ARG 1 view
 		ARG 2 pos
 		ARG 3 facingFrom
 	METHOD b onBlockAdded (Lbob;Lbbd;Leg;Lbob;)V
+		ARG 0 state
 		ARG 1 world
 		ARG 2 pos
 	METHOD c getWireColor (I)I
