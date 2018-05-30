@@ -73,10 +73,10 @@ CLASS bfs net/minecraft/block/Block
 		ARG 1 list
 	METHOD a getBlockFromItem (Lawi;)Lbfs;
 		ARG 0 item
-	METHOD a addTooltipLines (Lawm;Lbar;Ljava/util/List;Laxu;)V
+	METHOD a addTooltip (Lawm;Lbar;Ljava/util/List;Laxu;)V
 		ARG 0 stack
 		ARG 1 world
-		ARG 2 tooltip
+		ARG 2 lines
 		ARG 3 flag
 	METHOD a onEntityLand (Lbar;Lahz;)V
 		ARG 0 world
@@ -85,7 +85,7 @@ CLASS bfs net/minecraft/block/Block
 		ARG 0 blockView
 		ARG 2 pos
 		ARG 3 face
-	METHOD a getItemStack (Lbar;Leg;Lbob;)Lawm;
+	METHOD a getPickItemStack (Lbar;Leg;Lbob;)Lawm;
 		ARG 0 world
 		ARG 1 pos
 		ARG 2 state
@@ -216,7 +216,7 @@ CLASS bfs net/minecraft/block/Block
 	METHOD a getDropAmount (Lbob;Ljava/util/Random;)I
 		ARG 0 state
 		ARG 1 rand
-	METHOD a addProperties (Lbod$a;)V
+	METHOD a addStateProperties (Lbod$a;)V
 		ARG 0 builder
 	METHOD a get (Ljava/lang/String;)Lbfs;
 		ARG 0 identifier
