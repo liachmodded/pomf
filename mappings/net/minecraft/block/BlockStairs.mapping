@@ -1,7 +1,10 @@
 CLASS bkw net/minecraft/block/BlockStairs
-	CLASS bkw$a
+	CLASS bkw$a Base
 		FIELD a TOP Lbkw$a;
 		FIELD b BOTTOM Lbkw$a;
+		FIELD c name Ljava/lang/String;
+		METHOD <init> (Ljava/lang/String;ILjava/lang/String;)V
+			ARG 2 name
 		METHOD m asString ()Ljava/lang/String;
 	CLASS bkw$b Shape
 		FIELD a STRAIGHT Lbkw$b;
@@ -10,12 +13,22 @@ CLASS bkw net/minecraft/block/BlockStairs
 		FIELD d OUTER_LEFT Lbkw$b;
 		FIELD e OUTER_RIGHT Lbkw$b;
 		FIELD f name Ljava/lang/String;
+		METHOD <init> (Ljava/lang/String;ILjava/lang/String;)V
+			ARG 2 name
 		METHOD m asString ()Ljava/lang/String;
-	FIELD b HALF Lboy;
+	FIELD H parentBlock Lbfs;
+	FIELD I parentState Lbob;
+	FIELD b BASE Lboy;
 	FIELD c SHAPE Lboy;
 	FIELD t WATERLOGGED Lbow;
+	METHOD <init> (Lbob;Lbfs$b;)V
+		ARG 0 parent
+		ARG 1 builder
 	METHOD X_ getRenderLayer ()Lbas;
+	METHOD a getResistance (Lahz;)F
+		ARG 0 entity
 	METHOD a getDefaultState (Laur;)Lbob;
+		ARG 0 interaction
 	METHOD a getBlockFaceShape (Lbar;Lbob;Leg;Lem;)Lboa;
 		ARG 0 blockView
 		ARG 2 pos
@@ -26,6 +39,7 @@ CLASS bkw net/minecraft/block/BlockStairs
 		ARG 2 entity
 	METHOD a modifyAcceleration (Lbbh;Leg;Lahz;Lcgi;)Lcgi;
 	METHOD a isFullBlock (Lbob;)Z
+		ARG 0 state
 	METHOD a onBlockBreakStart (Lbob;Lbbd;Leg;Larn;)V
 		ARG 1 world
 		ARG 2 pos
@@ -41,11 +55,30 @@ CLASS bkw net/minecraft/block/BlockStairs
 		ARG 7 hitY
 		ARG 8 hitZ
 	METHOD a onBlockRemoved (Lbob;Lbbd;Leg;Lbob;)V
+		ARG 0 state
 		ARG 1 world
 		ARG 2 pos
 	METHOD a withMirror (Lbob;Lbiy;)Lbob;
+		ARG 0 state
+		ARG 1 direction
 	METHOD a withRotation (Lbob;Lbkb;)Lbob;
+		ARG 0 state
+		ARG 1 rotation
+	METHOD a onBlockUpdate (Lbob;Lem;Lbob;Lbbe;Leg;Leg;)Lbob;
+		ARG 0 state
+		ARG 1 facing
+		ARG 2 updateSource
+		ARG 3 world
+		ARG 4 pos
+		ARG 5 sourcePos
+	METHOD a addStateProperties (Lbod$a;)V
+		ARG 0 builder
+	METHOD b getBoundingBox (Lbob;Lbar;Leg;)Lcgz;
+		ARG 0 state
+		ARG 1 world
+		ARG 2 pos
 	METHOD b onBlockAdded (Lbob;Lbbd;Leg;Lbob;)V
+		ARG 0 state
 		ARG 1 world
 		ARG 2 pos
 	METHOD b updateTick (Lbob;Lbbd;Leg;Ljava/util/Random;)V
@@ -56,4 +89,7 @@ CLASS bkw net/minecraft/block/BlockStairs
 		ARG 1 world
 		ARG 2 pos
 		ARG 3 rand
+	METHOD q (Lbob;)Z
+		ARG 0 state
 	METHOD t getFluidState (Lbob;)Lcbd;
+		ARG 0 state

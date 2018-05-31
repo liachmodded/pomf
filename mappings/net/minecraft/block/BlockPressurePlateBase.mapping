@@ -5,7 +5,10 @@ CLASS bfn net/minecraft/block/BlockPressurePlateBase
 		ARG 2 pos
 		ARG 3 face
 	METHOD a isFullBlock (Lbob;)Z
+		ARG 0 state
 	METHOD a isNotSolid (Lbob;Lbar;Leg;)Z
+		ARG 0 state
+		ARG 1 world
 		ARG 2 pos
 	METHOD a getWeakRedstonePower (Lbob;Lbar;Leg;Lem;)I
 		ARG 1 view
@@ -16,12 +19,28 @@ CLASS bfn net/minecraft/block/BlockPressurePlateBase
 		ARG 2 pos
 		ARG 3 entity
 	METHOD a onBlockRemoved (Lbob;Lbbd;Leg;Lbob;)V
+		ARG 0 state
 		ARG 1 world
 		ARG 2 pos
 	METHOD a randomTick (Lbob;Lbbd;Leg;Ljava/util/Random;)V
 		ARG 1 world
 		ARG 2 pos
 		ARG 3 random
+	METHOD a canBePlaced (Lbob;Lbbh;Leg;)Z
+		ARG 0 state
+		ARG 1 world
+		ARG 2 pos
+	METHOD a onBlockUpdate (Lbob;Lem;Lbob;Lbbe;Leg;Leg;)Lbob;
+		ARG 0 state
+		ARG 1 facing
+		ARG 2 updateSource
+		ARG 3 world
+		ARG 4 pos
+		ARG 5 sourcePos
+	METHOD b getBoundingBox (Lbob;Lbar;Leg;)Lcgz;
+		ARG 0 state
+		ARG 1 world
+		ARG 2 pos
 	METHOD b getStrongRedstonePower (Lbob;Lbar;Leg;Lem;)I
 		ARG 1 view
 		ARG 2 pos
@@ -32,3 +51,4 @@ CLASS bfn net/minecraft/block/BlockPressurePlateBase
 		ARG 3 random
 	METHOD h canProvidePower (Lbob;)Z
 	METHOD i getPistonBehavior (Lbob;)Lcbj;
+		ARG 0 state

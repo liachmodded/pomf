@@ -3,15 +3,32 @@ CLASS bhj net/minecraft/block/BlockEndPortalFrame
 	FIELD b EYE Lbow;
 	FIELD v COMPLETED_FRAME Lboh;
 	METHOD a getDefaultState (Laur;)Lbob;
+		ARG 0 interaction
 	METHOD a getBlockFaceShape (Lbar;Lbob;Leg;Lem;)Lboa;
 		ARG 0 blockView
 		ARG 2 pos
 		ARG 3 face
 	METHOD a isFullBlock (Lbob;)Z
+		ARG 0 state
 	METHOD a getComparatorOutput (Lbob;Lbbd;Leg;)I
+		ARG 0 state
 		ARG 1 world
 		ARG 2 pos
 	METHOD a getDroppedItem (Lbob;Lbbd;Leg;I)Lbbc;
+		ARG 0 state
+		ARG 1 world
+		ARG 2 pos
+		ARG 3 amount
 	METHOD a withMirror (Lbob;Lbiy;)Lbob;
+		ARG 0 state
+		ARG 1 direction
 	METHOD a withRotation (Lbob;Lbkb;)Lbob;
+		ARG 0 state
+		ARG 1 rotation
+	METHOD a addStateProperties (Lbod$a;)V
+		ARG 0 builder
+	METHOD b getBoundingBox (Lbob;Lbar;Leg;)Lcgz;
+		ARG 0 state
+		ARG 1 world
+		ARG 2 pos
 	METHOD c getCompletedFramePattern ()Lboh;

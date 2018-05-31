@@ -1,10 +1,11 @@
 CLASS bki net/minecraft/block/BlockShulkerBox
 	FIELD b color Lavk;
 	METHOD a getDefaultState (Laur;)Lbob;
-	METHOD a getTooltipInformation (Lawm;Lbar;Ljava/util/List;Laxu;)V
+		ARG 0 interaction
+	METHOD a addTooltip (Lawm;Lbar;Ljava/util/List;Laxu;)V
 		ARG 0 stack
 		ARG 1 world
-		ARG 2 tooltip
+		ARG 2 lines
 		ARG 3 flag
 	METHOD a createBlockEntity (Lbar;)Lbmh;
 		ARG 0 world
@@ -12,21 +13,29 @@ CLASS bki net/minecraft/block/BlockShulkerBox
 		ARG 0 blockView
 		ARG 2 pos
 		ARG 3 face
-	METHOD a getItem (Lbar;Leg;Lbob;)Lawm;
+	METHOD a getPickItemStack (Lbar;Leg;Lbob;)Lawm;
+		ARG 0 world
+		ARG 1 pos
+		ARG 2 state
 	METHOD a onPlaced (Lbbd;Leg;Lbob;Laii;Lawm;)V
 		ARG 0 world
 		ARG 1 pos
+		ARG 2 state
 		ARG 3 placer
 		ARG 4 stack
 	METHOD a onBreak (Lbbd;Leg;Lbob;Larn;)V
 		ARG 0 world
 		ARG 1 pos
+		ARG 2 state
 		ARG 3 player
 	METHOD a isFullBlock (Lbob;)Z
+		ARG 0 state
 	METHOD a getComparatorOutput (Lbob;Lbbd;Leg;)I
+		ARG 0 state
 		ARG 1 world
 		ARG 2 pos
 	METHOD a dropItems (Lbob;Lbbd;Leg;FI)V
+		ARG 0 state
 		ARG 1 world
 		ARG 2 pos
 		ARG 3 dropChance
@@ -42,14 +51,32 @@ CLASS bki net/minecraft/block/BlockShulkerBox
 		ARG 7 hitY
 		ARG 8 hitZ
 	METHOD a onBlockRemoved (Lbob;Lbbd;Leg;Lbob;)V
+		ARG 0 state
 		ARG 1 world
 		ARG 2 pos
 	METHOD a withMirror (Lbob;Lbiy;)Lbob;
+		ARG 0 state
+		ARG 1 direction
 	METHOD a withRotation (Lbob;Lbkb;)Lbob;
+		ARG 0 state
+		ARG 1 rotation
+	METHOD a addStateProperties (Lbod$a;)V
+		ARG 0 builder
 	METHOD b getColor (Lawi;)Lavk;
 		ARG 0 item
+	METHOD b (Lbob;)Z
+		ARG 0 state
+	METHOD b getBoundingBox (Lbob;Lbar;Leg;)Lcgz;
+		ARG 0 state
+		ARG 1 world
+		ARG 2 pos
 	METHOD c getColor ()Lavk;
 	METHOD c getRenderType (Lbob;)Lbjy;
 	METHOD e getColor (Lbfs;)Lavk;
 		ARG 0 block
+	METHOD f hasCollisionAndSolidRenderLayer (Lbob;)Z
+		ARG 0 state
 	METHOD i getPistonBehavior (Lbob;)Lcbj;
+		ARG 0 state
+	METHOD p isDefaultStateSolidAndFullBlock (Lbob;)Z
+		ARG 0 state

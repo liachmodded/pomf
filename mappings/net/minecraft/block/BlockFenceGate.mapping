@@ -5,12 +5,16 @@ CLASS bhr net/minecraft/block/BlockFenceGate
 	METHOD <init> (Lbfs$b;)V
 		ARG 0 type
 	METHOD a getDefaultState (Laur;)Lbob;
+		ARG 0 interaction
 	METHOD a getBlockFaceShape (Lbar;Lbob;Leg;Lem;)Lboa;
 		ARG 0 blockView
 		ARG 2 pos
 		ARG 3 face
 	METHOD a isFullBlock (Lbob;)Z
+		ARG 0 state
 	METHOD a isNotSolid (Lbob;Lbar;Leg;)Z
+		ARG 0 state
+		ARG 1 world
 		ARG 2 pos
 	METHOD a onActivated (Lbob;Lbbd;Leg;Larn;Lags;Lem;FFF)Z
 		ARG 0 state
@@ -27,3 +31,20 @@ CLASS bhr net/minecraft/block/BlockFenceGate
 		ARG 2 pos
 		ARG 3 block
 		ARG 4 updatePos
+	METHOD a onBlockUpdate (Lbob;Lem;Lbob;Lbbe;Leg;Leg;)Lbob;
+		ARG 0 state
+		ARG 1 facing
+		ARG 2 updateSource
+		ARG 3 world
+		ARG 4 pos
+		ARG 5 sourcePos
+	METHOD a addStateProperties (Lbod$a;)V
+		ARG 0 builder
+	METHOD b getBoundingBox (Lbob;Lbar;Leg;)Lcgz;
+		ARG 0 state
+		ARG 1 world
+		ARG 2 pos
+	METHOD g getEmptyShape (Lbob;Lbar;Leg;)Lcgz;
+		ARG 0 state
+		ARG 1 world
+		ARG 2 pos

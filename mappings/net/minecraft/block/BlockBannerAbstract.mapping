@@ -1,0 +1,44 @@
+CLASS bff net/minecraft/block/BlockBannerAbstract
+	FIELD a color Lavk;
+	METHOD <init> (Lavk;Lbfs$b;)V
+		ARG 0 color
+		ARG 1 builder
+	METHOD a canEntitiesSpawnInside ()Z
+	METHOD a createBlockEntity (Lbar;)Lbmh;
+		ARG 0 world
+	METHOD a getBlockFaceShape (Lbar;Lbob;Leg;Lem;)Lboa;
+		ARG 0 blockView
+		ARG 2 pos
+		ARG 3 face
+	METHOD a getPickItemStack (Lbar;Leg;Lbob;)Lawm;
+		ARG 0 world
+		ARG 1 pos
+		ARG 2 state
+	METHOD a afterBreak (Lbbd;Larn;Leg;Lbob;Lbmh;Lawm;)V
+		ARG 0 world
+		ARG 1 player
+		ARG 2 pos
+		ARG 4 blockEntity
+		ARG 5 stack
+	METHOD a onPlaced (Lbbd;Leg;Lbob;Laii;Lawm;)V
+		ARG 0 world
+		ARG 1 pos
+		ARG 2 state
+		ARG 3 placer
+		ARG 4 stack
+	METHOD a isFullBlock (Lbob;)Z
+		ARG 0 state
+	METHOD a isNotSolid (Lbob;Lbar;Leg;)Z
+		ARG 0 state
+		ARG 1 world
+		ARG 2 pos
+	METHOD a dropItems (Lbob;Lbbd;Leg;FI)V
+		ARG 0 state
+		ARG 1 world
+		ARG 2 pos
+		ARG 3 dropChance
+		ARG 4 fortune
+	METHOD a getDroppedItem (Lbob;Lbbd;Leg;I)Lbbc;
+		ARG 0 state
+		ARG 1 world
+		ARG 2 pos

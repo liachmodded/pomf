@@ -2,6 +2,7 @@ CLASS bhb net/minecraft/block/BlockDispenser
 	FIELD a FACING Lbox;
 	FIELD b TRIGGERED Lbow;
 	METHOD a getDefaultState (Laur;)Lbob;
+		ARG 0 interaction
 	METHOD a getDispenserBehavior (Lawm;)Leo;
 		ARG 0 stack
 	METHOD a createBlockEntity (Lbar;)Lbmh;
@@ -10,9 +11,11 @@ CLASS bhb net/minecraft/block/BlockDispenser
 	METHOD a onPlaced (Lbbd;Leg;Lbob;Laii;Lawm;)V
 		ARG 0 world
 		ARG 1 pos
+		ARG 2 state
 		ARG 3 placer
 		ARG 4 stack
 	METHOD a getComparatorOutput (Lbob;Lbbd;Leg;)I
+		ARG 0 state
 		ARG 1 world
 		ARG 2 pos
 	METHOD a onActivated (Lbob;Lbbd;Leg;Larn;Lags;Lem;FFF)Z
@@ -31,6 +34,7 @@ CLASS bhb net/minecraft/block/BlockDispenser
 		ARG 3 block
 		ARG 4 updatePos
 	METHOD a onBlockRemoved (Lbob;Lbbd;Leg;Lbob;)V
+		ARG 0 state
 		ARG 1 world
 		ARG 2 pos
 	METHOD a randomTick (Lbob;Lbbd;Leg;Ljava/util/Random;)V
@@ -38,7 +42,13 @@ CLASS bhb net/minecraft/block/BlockDispenser
 		ARG 2 pos
 		ARG 3 random
 	METHOD a withMirror (Lbob;Lbiy;)Lbob;
+		ARG 0 state
+		ARG 1 direction
 	METHOD a withRotation (Lbob;Lbkb;)Lbob;
+		ARG 0 state
+		ARG 1 rotation
+	METHOD a addStateProperties (Lbod$a;)V
+		ARG 0 builder
 	METHOD a getDispenseLocation (Leh;)Lew;
 		ARG 0 block
 	METHOD b updateTick (Lbob;Lbbd;Leg;Ljava/util/Random;)V

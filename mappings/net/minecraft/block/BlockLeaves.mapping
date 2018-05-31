@@ -3,6 +3,7 @@ CLASS biq net/minecraft/block/BlockLeaves
 	FIELD b CHECK_DECAY Lbow;
 	METHOD X_ getRenderLayer ()Lbas;
 	METHOD a getDefaultState (Laur;)Lbob;
+		ARG 0 interaction
 	METHOD a afterBreak (Lbbd;Larn;Leg;Lbob;Lbmh;Lawm;)V
 		ARG 0 world
 		ARG 1 player
@@ -10,15 +11,25 @@ CLASS biq net/minecraft/block/BlockLeaves
 		ARG 4 blockEntity
 		ARG 5 stack
 	METHOD a dropItems (Lbob;Lbbd;Leg;FI)V
+		ARG 0 state
 		ARG 1 world
 		ARG 2 pos
 		ARG 3 dropChance
 		ARG 4 fortune
 	METHOD a getDroppedItem (Lbob;Lbbd;Leg;I)Lbbc;
+		ARG 0 state
+		ARG 1 world
+		ARG 2 pos
+		ARG 3 amount
 	METHOD a onBlockRemoved (Lbob;Lbbd;Leg;Lbob;)V
+		ARG 0 state
 		ARG 1 world
 		ARG 2 pos
 	METHOD a getDropAmount (Lbob;Ljava/util/Random;)I
+		ARG 0 state
+		ARG 1 rand
+	METHOD a addStateProperties (Lbod$a;)V
+		ARG 0 builder
 	METHOD b updateTick (Lbob;Lbbd;Leg;Ljava/util/Random;)V
 		ARG 1 world
 		ARG 2 pos
@@ -27,3 +38,5 @@ CLASS biq net/minecraft/block/BlockLeaves
 		ARG 1 world
 		ARG 2 pos
 		ARG 3 rand
+	METHOD p isDefaultStateSolidAndFullBlock (Lbob;)Z
+		ARG 0 state

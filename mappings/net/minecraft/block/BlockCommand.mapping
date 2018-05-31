@@ -3,14 +3,17 @@ CLASS bgm net/minecraft/block/BlockCommand
 	FIELD b CONDITIONAL Lbow;
 	FIELD c LOGGER Lorg/apache/logging/log4j/Logger;
 	METHOD a getDefaultState (Laur;)Lbob;
+		ARG 0 interaction
 	METHOD a createBlockEntity (Lbar;)Lbmh;
 		ARG 0 world
 	METHOD a onPlaced (Lbbd;Leg;Lbob;Laii;Lawm;)V
 		ARG 0 world
 		ARG 1 pos
+		ARG 2 state
 		ARG 3 placer
 		ARG 4 stack
 	METHOD a getComparatorOutput (Lbob;Lbbd;Leg;)I
+		ARG 0 state
 		ARG 1 world
 		ARG 2 pos
 	METHOD a onActivated (Lbob;Lbbd;Leg;Larn;Lags;Lem;FFF)Z
@@ -33,8 +36,16 @@ CLASS bgm net/minecraft/block/BlockCommand
 		ARG 2 pos
 		ARG 3 random
 	METHOD a withMirror (Lbob;Lbiy;)Lbob;
+		ARG 0 state
+		ARG 1 direction
 	METHOD a withRotation (Lbob;Lbkb;)Lbob;
+		ARG 0 state
+		ARG 1 rotation
 	METHOD a getDropAmount (Lbob;Ljava/util/Random;)I
+		ARG 0 state
+		ARG 1 rand
+	METHOD a addStateProperties (Lbod$a;)V
+		ARG 0 builder
 	METHOD b updateTick (Lbob;Lbbd;Leg;Ljava/util/Random;)V
 		ARG 1 world
 		ARG 2 pos

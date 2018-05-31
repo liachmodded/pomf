@@ -1,11 +1,13 @@
 CLASS bjf net/minecraft/block/BlockObserver
 	FIELD b POWERED Lbow;
 	METHOD a getDefaultState (Laur;)Lbob;
+		ARG 0 interaction
 	METHOD a getWeakRedstonePower (Lbob;Lbar;Leg;Lem;)I
 		ARG 1 view
 		ARG 2 pos
 		ARG 3 facingFrom
 	METHOD a onBlockRemoved (Lbob;Lbbd;Leg;Lbob;)V
+		ARG 0 state
 		ARG 1 world
 		ARG 2 pos
 	METHOD a randomTick (Lbob;Lbbd;Leg;Ljava/util/Random;)V
@@ -13,12 +15,26 @@ CLASS bjf net/minecraft/block/BlockObserver
 		ARG 2 pos
 		ARG 3 random
 	METHOD a withMirror (Lbob;Lbiy;)Lbob;
+		ARG 0 state
+		ARG 1 direction
 	METHOD a withRotation (Lbob;Lbkb;)Lbob;
+		ARG 0 state
+		ARG 1 rotation
+	METHOD a onBlockUpdate (Lbob;Lem;Lbob;Lbbe;Leg;Leg;)Lbob;
+		ARG 0 state
+		ARG 1 facing
+		ARG 2 updateSource
+		ARG 3 world
+		ARG 4 pos
+		ARG 5 sourcePos
+	METHOD a addStateProperties (Lbod$a;)V
+		ARG 0 builder
 	METHOD b getStrongRedstonePower (Lbob;Lbar;Leg;Lem;)I
 		ARG 1 view
 		ARG 2 pos
 		ARG 3 facingFrom
 	METHOD b onBlockAdded (Lbob;Lbbd;Leg;Lbob;)V
+		ARG 0 state
 		ARG 1 world
 		ARG 2 pos
 	METHOD b updateTick (Lbob;Lbbd;Leg;Ljava/util/Random;)V

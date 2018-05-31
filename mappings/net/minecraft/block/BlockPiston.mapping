@@ -2,6 +2,7 @@ CLASS bnu net/minecraft/block/BlockPiston
 	FIELD b EXTENDED Lbow;
 	FIELD y isSticky Z
 	METHOD a getDefaultState (Laur;)Lbob;
+		ARG 0 interaction
 	METHOD a getBlockFaceShape (Lbar;Lbob;Leg;Lem;)Lboa;
 		ARG 0 blockView
 		ARG 2 pos
@@ -9,6 +10,7 @@ CLASS bnu net/minecraft/block/BlockPiston
 	METHOD a onPlaced (Lbbd;Leg;Lbob;Laii;Lawm;)V
 		ARG 0 world
 		ARG 1 pos
+		ARG 2 state
 		ARG 3 placer
 		ARG 4 stack
 	METHOD a move (Lbbd;Leg;Lem;Z)Z
@@ -17,7 +19,9 @@ CLASS bnu net/minecraft/block/BlockPiston
 		ARG 2 dir
 		ARG 3 forward
 	METHOD a isFullBlock (Lbob;)Z
+		ARG 0 state
 	METHOD a onBlockAction (Lbob;Lbbd;Leg;II)Z
+		ARG 0 state
 		ARG 1 world
 		ARG 2 pos
 	METHOD a update (Lbob;Lbbd;Leg;Lbfs;Leg;)V
@@ -31,7 +35,22 @@ CLASS bnu net/minecraft/block/BlockPiston
 		ARG 3 facing
 		ARG 4 canBreak
 	METHOD a withMirror (Lbob;Lbiy;)Lbob;
+		ARG 0 state
+		ARG 1 direction
 	METHOD a withRotation (Lbob;Lbkb;)Lbob;
-	METHOD b onBlockAdded (Lbob;Lbbd;Leg;Lbob;)V
+		ARG 0 state
+		ARG 1 rotation
+	METHOD a addStateProperties (Lbod$a;)V
+		ARG 0 builder
+	METHOD b getBoundingBox (Lbob;Lbar;Leg;)Lcgz;
+		ARG 0 state
 		ARG 1 world
 		ARG 2 pos
+	METHOD b onBlockAdded (Lbob;Lbbd;Leg;Lbob;)V
+		ARG 0 state
+		ARG 1 world
+		ARG 2 pos
+	METHOD p isDefaultStateSolidAndFullBlock (Lbob;)Z
+		ARG 0 state
+	METHOD q (Lbob;)Z
+		ARG 0 state

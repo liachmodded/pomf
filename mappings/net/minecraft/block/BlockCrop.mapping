@@ -1,6 +1,9 @@
 CLASS bgu net/minecraft/block/BlockCrop
 	FIELD b AGE Lboz;
-	METHOD a getItem (Lbar;Leg;Lbob;)Lawm;
+	METHOD a getPickItemStack (Lbar;Leg;Lbob;)Lawm;
+		ARG 0 world
+		ARG 1 pos
+		ARG 2 state
 	METHOD a isFertilizable (Lbar;Leg;Lbob;Z)Z
 		ARG 1 pos
 		ARG 3 remote
@@ -9,14 +12,30 @@ CLASS bgu net/minecraft/block/BlockCrop
 		ARG 1 rand
 		ARG 2 pos
 	METHOD a dropItems (Lbob;Lbbd;Leg;FI)V
+		ARG 0 state
 		ARG 1 world
 		ARG 2 pos
 		ARG 3 dropChance
 		ARG 4 fortune
 	METHOD a getDroppedItem (Lbob;Lbbd;Leg;I)Lbbc;
+		ARG 0 state
+		ARG 1 world
+		ARG 2 pos
+		ARG 3 amount
+	METHOD a canBePlaced (Lbob;Lbbh;Leg;)Z
+		ARG 0 state
+		ARG 1 world
+		ARG 2 pos
+	METHOD a addStateProperties (Lbod$a;)V
+		ARG 0 builder
 	METHOD b grow (Lbbd;Ljava/util/Random;Leg;Lbob;)V
 		ARG 0 world
 		ARG 1 rand
+		ARG 2 pos
+		ARG 3 state
+	METHOD b getBoundingBox (Lbob;Lbar;Leg;)Lcgz;
+		ARG 0 state
+		ARG 1 world
 		ARG 2 pos
 	METHOD b updateTick (Lbob;Lbbd;Leg;Ljava/util/Random;)V
 		ARG 1 world
@@ -25,6 +44,10 @@ CLASS bgu net/minecraft/block/BlockCrop
 	METHOD c getAgeProperty ()Lboz;
 	METHOD c deserializeCropAge (I)Lbob;
 		ARG 0 age
+	METHOD c canBePlacedOn (Lbob;Lbar;Leg;)Z
+		ARG 0 soilBlock
+		ARG 1 world
+		ARG 2 pos
 	METHOD d getAgeMaximum ()I
 	METHOD e getItemSeed ()Lbbc;
 	METHOD f getItemMature ()Lbbc;

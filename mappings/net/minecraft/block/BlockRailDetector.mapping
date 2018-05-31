@@ -6,6 +6,7 @@ CLASS bgy net/minecraft/block/BlockRailDetector
 		ARG 2 pos
 		ARG 3 facingFrom
 	METHOD a getComparatorOutput (Lbob;Lbbd;Leg;)I
+		ARG 0 state
 		ARG 1 world
 		ARG 2 pos
 	METHOD a onEntityCollision (Lbob;Lbbd;Leg;Lahz;)V
@@ -17,12 +18,19 @@ CLASS bgy net/minecraft/block/BlockRailDetector
 		ARG 2 pos
 		ARG 3 random
 	METHOD a withMirror (Lbob;Lbiy;)Lbob;
+		ARG 0 state
+		ARG 1 direction
 	METHOD a withRotation (Lbob;Lbkb;)Lbob;
+		ARG 0 state
+		ARG 1 rotation
+	METHOD a addStateProperties (Lbod$a;)V
+		ARG 0 builder
 	METHOD b getStrongRedstonePower (Lbob;Lbar;Leg;Lem;)I
 		ARG 1 view
 		ARG 2 pos
 		ARG 3 facingFrom
 	METHOD b onBlockAdded (Lbob;Lbbd;Leg;Lbob;)V
+		ARG 0 state
 		ARG 1 world
 		ARG 2 pos
 	METHOD b updateTick (Lbob;Lbbd;Leg;Ljava/util/Random;)V

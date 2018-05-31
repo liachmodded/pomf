@@ -5,14 +5,34 @@ CLASS bjl net/minecraft/block/BlockPortal
 		ARG 0 blockView
 		ARG 2 pos
 		ARG 3 face
-	METHOD a getItem (Lbar;Leg;Lbob;)Lawm;
+	METHOD a getPickItemStack (Lbar;Leg;Lbob;)Lawm;
+		ARG 0 world
+		ARG 1 pos
+		ARG 2 state
 	METHOD a isFullBlock (Lbob;)Z
+		ARG 0 state
 	METHOD a onEntityCollision (Lbob;Lbbd;Leg;Lahz;)V
 		ARG 1 world
 		ARG 2 pos
 		ARG 3 entity
 	METHOD a withRotation (Lbob;Lbkb;)Lbob;
+		ARG 0 state
+		ARG 1 rotation
+	METHOD a onBlockUpdate (Lbob;Lem;Lbob;Lbbe;Leg;Leg;)Lbob;
+		ARG 0 state
+		ARG 1 facing
+		ARG 2 updateSource
+		ARG 3 world
+		ARG 5 sourcePos
 	METHOD a getDropAmount (Lbob;Ljava/util/Random;)I
+		ARG 0 state
+		ARG 1 rand
+	METHOD a addStateProperties (Lbod$a;)V
+		ARG 0 builder
+	METHOD b getBoundingBox (Lbob;Lbar;Leg;)Lcgz;
+		ARG 0 state
+		ARG 1 world
+		ARG 2 pos
 	METHOD b updateTick (Lbob;Lbbd;Leg;Ljava/util/Random;)V
 		ARG 1 world
 		ARG 2 pos

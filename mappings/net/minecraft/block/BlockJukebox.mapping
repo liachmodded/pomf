@@ -3,9 +3,11 @@ CLASS bim net/minecraft/block/BlockJukebox
 	METHOD a createBlockEntity (Lbar;)Lbmh;
 		ARG 0 world
 	METHOD a getComparatorOutput (Lbob;Lbbd;Leg;)I
+		ARG 0 state
 		ARG 1 world
 		ARG 2 pos
 	METHOD a dropItems (Lbob;Lbbd;Leg;FI)V
+		ARG 0 state
 		ARG 1 world
 		ARG 2 pos
 		ARG 3 dropChance
@@ -21,6 +23,9 @@ CLASS bim net/minecraft/block/BlockJukebox
 		ARG 7 hitY
 		ARG 8 hitZ
 	METHOD a onBlockRemoved (Lbob;Lbbd;Leg;Lbob;)V
+		ARG 0 state
 		ARG 1 world
 		ARG 2 pos
+	METHOD a addStateProperties (Lbod$a;)V
+		ARG 0 builder
 	METHOD c getRenderType (Lbob;)Lbjy;
