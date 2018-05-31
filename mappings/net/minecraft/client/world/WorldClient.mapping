@@ -1,65 +1,23 @@
-CLASS cso net/minecraft/client/world/WorldClient
-	FIELD H game Lchv;
-	FIELD b netHandler Lcsl;
-	FIELD c chunkProvider Lcsj;
-	METHOD <init> (Lcsl;Lbbi;ILagq;Lxa;)V
-		ARG 0 netHandler
-		ARG 1 levelInfo
-		ARG 2 worldTypeId
-		ARG 3 difficulty
-		ARG 4 profiler
-	METHOD F getChunkProvider ()Lbpl;
+CLASS cth net/minecraft/client/world/WorldClient
+	FIELD H game Lcio;
+	FIELD b netHandler Lcte;
+	FIELD c chunkProvider Lctc;
+	METHOD F getChunkProvider ()Lbqd;
 	METHOD R quitClient ()V
-	METHOD a playSound (DDDLvp;Lvr;FFZ)V
-		ARG 0 x
-		ARG 1 y
-		ARG 2 z
-		ARG 3 sound
-		ARG 4 category
-		ARG 5 volume
-		ARG 6 pitch
-	METHOD a getEntityById (I)Lahz;
-		ARG 0 id
+	METHOD a playSound (DDDLvr;Lvt;FFZ)V
+	METHOD a getEntityById (I)Laic;
 	METHOD a doRandomBlockDisplayTicks (III)V
-		ARG 0 xCenter
-		ARG 1 yCenter
-		ARG 2 zCenter
-	METHOD a randomBlockDisplayTick (IIIILjava/util/Random;ZLeg$a;)V
-		ARG 0 xCenter
-		ARG 1 yCenter
-		ARG 2 zCenter
-		ARG 3 radius
-		ARG 4 rand
-		ARG 5 spawnBarrierParticles
-		ARG 6 posMutable
-	METHOD a spawnEntity (Lahz;)Z
-		ARG 0 entity
-	METHOD a playSound (Larn;DDDLvp;Lvr;FF)V
-		ARG 0 player
-		ARG 1 x
-		ARG 2 y
-		ARG 3 z
-		ARG 4 sound
-		ARG 5 category
-		ARG 6 volume
-		ARG 7 pitch
-	METHOD a playSoundClient (Leg;Lvp;Lvr;FFZ)V
-		ARG 0 pos
-		ARG 1 sound
-		ARG 2 category
-		ARG 3 volume
-		ARG 4 pitch
-	METHOD a sendPacket (Liq;)V
-		ARG 0 packet
+	METHOD a randomBlockDisplayTick (IIIILjava/util/Random;ZLeh$a;)V
+	METHOD a spawnEntity (Laic;)Z
+	METHOD a playSound (Larq;DDDLvr;Lvt;FF)V
+	METHOD a playSoundClient (Leh;Lvr;Lvt;FFZ)V
+	METHOD a sendPacket (Lis;)V
 	METHOD b setTimeOfDay (J)V
-		ARG 0 time
-	METHOD b onEntityAdded (Lahz;)V
-		ARG 0 entity
-	METHOD c onEntityRemoved (Lahz;)V
-		ARG 0 entity
-	METHOD c getGameInstance (Lcso;)Lchv;
-	METHOD f getChunkProvider ()Lcsj;
+	METHOD b onEntityAdded (Laic;)V
+	METHOD c onEntityRemoved (Laic;)V
+	METHOD c getGameInstance (Lcth;)Lcio;
+	METHOD h getChunkProvider ()Lctc;
 	METHOD i_ update ()V
-	METHOD m_ tickRandomBlocks ()V
-	METHOD p createChunkProvider ()Lbpl;
+	METHOD n_ tickRandomBlocks ()V
+	METHOD p createChunkProvider ()Lbqd;
 	METHOD u updateWeather ()V

@@ -1,178 +1,145 @@
-CLASS cvh net/minecraft/client/gl/GlHandler
-	CLASS cvh$a AlphaTestState
-		FIELD a capState Lcvh$c;
+CLASS cwa net/minecraft/client/gl/GlHandler
+	CLASS cwa$a AlphaTestState
+		FIELD a capState Lcwa$c;
 		FIELD b func I
 		FIELD c ref F
-	CLASS cvh$b BlendFuncState
-		FIELD a capState Lcvh$c;
+	CLASS cwa$b BlendFuncState
+		FIELD a capState Lcwa$c;
 		FIELD b sfactor I
 		FIELD c dfactor I
 		FIELD d srcAlpha I
 		FIELD e dstAlpha I
-	CLASS cvh$c CapabilityTracker
+	CLASS cwa$c CapabilityTracker
 		FIELD a cap I
 		FIELD b state Z
 		METHOD a disable ()V
 		METHOD a setState (Z)V
 		METHOD b enable ()V
-	CLASS cvh$d ClearState
+	CLASS cwa$d ClearState
 		FIELD a clearDepth D
-		FIELD b clearColor Lcvh$e;
-	CLASS cvh$e Color4
+		FIELD b clearColor Lcwa$e;
+	CLASS cwa$e Color4
 		FIELD a red F
 		FIELD b green F
 		FIELD c blue F
 		FIELD d alpha F
-	CLASS cvh$f LogicOpState
-		FIELD a capState Lcvh$c;
+	CLASS cwa$f LogicOpState
+		FIELD a capState Lcwa$c;
 		FIELD b opcode I
-	CLASS cvh$g ColorMask
+	CLASS cwa$g ColorMask
 		FIELD a red Z
 		FIELD b green Z
 		FIELD c blue Z
 		FIELD d alpha Z
-	CLASS cvh$h ColorMaterialState
-		FIELD a capState Lcvh$c;
+	CLASS cwa$h ColorMaterialState
+		FIELD a capState Lcwa$c;
 		FIELD b face I
 		FIELD c mode I
-	CLASS cvh$i FaceSides
-		FIELD a FRONT Lcvh$i;
-		FIELD b BACK Lcvh$i;
-		FIELD c FRONT_AND_BACK Lcvh$i;
+	CLASS cwa$i FaceSides
+		FIELD a FRONT Lcwa$i;
+		FIELD b BACK Lcwa$i;
+		FIELD c FRONT_AND_BACK Lcwa$i;
 		FIELD d glConstant I
-	CLASS cvh$j CullFaceState
-		FIELD a capState Lcvh$c;
+	CLASS cwa$j CullFaceState
+		FIELD a capState Lcwa$c;
 		FIELD b mode I
-	CLASS cvh$k DepthTestState
-		FIELD a capState Lcvh$c;
+	CLASS cwa$k DepthTestState
+		FIELD a capState Lcwa$c;
 		FIELD b mask Z
 		FIELD c func I
-	CLASS cvh$l DestFactor
-		FIELD a CONSTANT_ALPHA Lcvh$l;
-		FIELD b CONSTANT_COLOR Lcvh$l;
-		FIELD c DST_ALPHA Lcvh$l;
-		FIELD d DST_COLOR Lcvh$l;
-		FIELD e ONE Lcvh$l;
-		FIELD f ONE_MINUS_CONSTANT_ALPHA Lcvh$l;
-		FIELD g ONE_MINUS_CONSTANT_COLOR Lcvh$l;
-		FIELD h ONE_MINUS_DST_ALPHA Lcvh$l;
-		FIELD i ONE_MINUS_DST_COLOR Lcvh$l;
-		FIELD j ONE_MINUS_SRC_ALPHA Lcvh$l;
-		FIELD k ONE_MINUS_SRC_COLOR Lcvh$l;
-		FIELD l SRC_ALPHA Lcvh$l;
-		FIELD m SRC_COLOR Lcvh$l;
-		FIELD n ZERO Lcvh$l;
-		FIELD o glConstant I
-	CLASS cvh$m FogMode
-		FIELD a LINEAR Lcvh$m;
-		FIELD b EXP Lcvh$m;
-		FIELD c EXP2 Lcvh$m;
+	CLASS cwa$m FogMode
+		FIELD a LINEAR Lcwa$m;
+		FIELD b EXP Lcwa$m;
+		FIELD c EXP2 Lcwa$m;
 		FIELD d glConstant I
-	CLASS cvh$n FogState
-		FIELD a capState Lcvh$c;
+	CLASS cwa$n FogState
+		FIELD a capState Lcwa$c;
 		FIELD b mode I
 		FIELD c density F
 		FIELD d start F
 		FIELD e end F
-	CLASS cvh$o LogicOp
-		FIELD a AND Lcvh$o;
-		FIELD b AND_INVERTED Lcvh$o;
-		FIELD c AND_REVERSE Lcvh$o;
-		FIELD d CLEAR Lcvh$o;
-		FIELD e COPY Lcvh$o;
-		FIELD f COPY_INVERTED Lcvh$o;
-		FIELD g EQUIV Lcvh$o;
-		FIELD h INVERT Lcvh$o;
-		FIELD i NAND Lcvh$o;
-		FIELD j NOOP Lcvh$o;
-		FIELD k NOR Lcvh$o;
-		FIELD l OR Lcvh$o;
-		FIELD m OR_INVERTED Lcvh$o;
-		FIELD n OR_REVERSE Lcvh$o;
-		FIELD o SET Lcvh$o;
-		FIELD p XOR Lcvh$o;
+	CLASS cwa$o LogicOp
+		FIELD a AND Lcwa$o;
+		FIELD b AND_INVERTED Lcwa$o;
+		FIELD c AND_REVERSE Lcwa$o;
+		FIELD d CLEAR Lcwa$o;
+		FIELD e COPY Lcwa$o;
+		FIELD f COPY_INVERTED Lcwa$o;
+		FIELD g EQUIV Lcwa$o;
+		FIELD h INVERT Lcwa$o;
+		FIELD i NAND Lcwa$o;
+		FIELD j NOOP Lcwa$o;
+		FIELD k NOR Lcwa$o;
+		FIELD l OR Lcwa$o;
+		FIELD m OR_INVERTED Lcwa$o;
+		FIELD n OR_REVERSE Lcwa$o;
+		FIELD o SET Lcwa$o;
+		FIELD p XOR Lcwa$o;
 		FIELD q glConstant I
-	CLASS cvh$p PolygonOffsetState
-		FIELD a capFill Lcvh$c;
-		FIELD b capLine Lcvh$c;
+	CLASS cwa$p PolygonOffsetState
+		FIELD a capFill Lcwa$c;
+		FIELD b capLine Lcwa$c;
 		FIELD c factor F
 		FIELD d units F
-	CLASS cvh$q RenderMode
-		CLASS cvh$q$1
+	CLASS cwa$q RenderMode
+		CLASS cwa$q$1
 			METHOD a begin ()V
 			METHOD b end ()V
-		CLASS cvh$q$2
+		CLASS cwa$q$2
 			METHOD a begin ()V
 			METHOD b end ()V
-		CLASS cvh$q$3
+		CLASS cwa$q$3
 			METHOD a begin ()V
 			METHOD b end ()V
-		FIELD a DEFAULT Lcvh$q;
-		FIELD b PLAYER_SKIN Lcvh$q;
-		FIELD c TRANSPARENT_MODEL Lcvh$q;
+		FIELD a DEFAULT Lcwa$q;
+		FIELD b PLAYER_SKIN Lcwa$q;
+		FIELD c TRANSPARENT_MODEL Lcwa$q;
 		METHOD a begin ()V
 		METHOD b end ()V
-	CLASS cvh$r SourceFactor
-		FIELD a CONSTANT_ALPHA Lcvh$r;
-		FIELD b CONSTANT_COLOR Lcvh$r;
-		FIELD c DST_ALPHA Lcvh$r;
-		FIELD d DST_COLOR Lcvh$r;
-		FIELD e ONE Lcvh$r;
-		FIELD f ONE_MINUS_CONSTANT_ALPHA Lcvh$r;
-		FIELD g ONE_MINUS_CONSTANT_COLOR Lcvh$r;
-		FIELD h ONE_MINUS_DST_ALPHA Lcvh$r;
-		FIELD i ONE_MINUS_DST_COLOR Lcvh$r;
-		FIELD j ONE_MINUS_SRC_ALPHA Lcvh$r;
-		FIELD k ONE_MINUS_SRC_COLOR Lcvh$r;
-		FIELD l SRC_ALPHA Lcvh$r;
-		FIELD m SRC_ALPHA_SATURATE Lcvh$r;
-		FIELD n SRC_COLOR Lcvh$r;
-		FIELD o ZERO Lcvh$r;
-		FIELD p glConstant I
-	CLASS cvh$s StencilSubState
+	CLASS cwa$s StencilSubState
 		FIELD a func I
-	CLASS cvh$t StencilState
-		FIELD a subState Lcvh$s;
-	CLASS cvh$u TexCoord
-		FIELD a S Lcvh$u;
-		FIELD b T Lcvh$u;
-		FIELD c R Lcvh$u;
-		FIELD d Q Lcvh$u;
-	CLASS cvh$v TexGenCoordState
-		FIELD a capState Lcvh$c;
+	CLASS cwa$t StencilState
+		FIELD a subState Lcwa$s;
+	CLASS cwa$u TexCoord
+		FIELD a S Lcwa$u;
+		FIELD b T Lcwa$u;
+		FIELD c R Lcwa$u;
+		FIELD d Q Lcwa$u;
+	CLASS cwa$v TexGenCoordState
+		FIELD a capState Lcwa$c;
 		FIELD b coord I
 		FIELD c mode I
-	CLASS cvh$w TexGenState
-		FIELD a s Lcvh$v;
-		FIELD b t Lcvh$v;
-		FIELD c r Lcvh$v;
-		FIELD d q Lcvh$v;
-	CLASS cvh$x Texture2DState
-		FIELD a capState Lcvh$c;
+	CLASS cwa$w TexGenState
+		FIELD a s Lcwa$v;
+		FIELD b t Lcwa$v;
+		FIELD c r Lcwa$v;
+		FIELD d q Lcwa$v;
+	CLASS cwa$x Texture2DState
+		FIELD a capState Lcwa$c;
 		FIELD b boundTexture I
-	CLASS cvh$y
-		FIELD a INSTANCE Lcvh$y;
+	CLASS cwa$y
+		FIELD a INSTANCE Lcwa$y;
 	FIELD b vectorBuf Ljava/nio/FloatBuffer;
-	FIELD c alphaTestState Lcvh$a;
-	FIELD d lightSystemEnabled Lcvh$c;
-	FIELD e glLights [Lcvh$c;
-	FIELD f colorMaterial Lcvh$h;
-	FIELD g blendFunc Lcvh$b;
-	FIELD h depth Lcvh$k;
-	FIELD i fogState Lcvh$n;
-	FIELD j cullFaceState Lcvh$j;
-	FIELD k polygonOffset Lcvh$p;
-	FIELD l logicOpState Lcvh$f;
-	FIELD m texGenState Lcvh$w;
-	FIELD n clearState Lcvh$d;
-	FIELD o stencilState Lcvh$t;
-	FIELD p normalizeEnabled Lcvh$c;
+	FIELD c alphaTestState Lcwa$a;
+	FIELD d lightSystemEnabled Lcwa$c;
+	FIELD e glLights [Lcwa$c;
+	FIELD f colorMaterial Lcwa$h;
+	FIELD g blendFunc Lcwa$b;
+	FIELD h depth Lcwa$k;
+	FIELD i fogState Lcwa$n;
+	FIELD j cullFaceState Lcwa$j;
+	FIELD k polygonOffset Lcwa$p;
+	FIELD l logicOpState Lcwa$f;
+	FIELD m texGenState Lcwa$w;
+	FIELD n clearState Lcwa$d;
+	FIELD o stencilState Lcwa$t;
+	FIELD p normalizeEnabled Lcwa$c;
 	FIELD q activeTexture I
-	FIELD r textureStates [Lcvh$x;
+	FIELD r textureStates [Lcwa$x;
 	FIELD s shadeModel I
-	FIELD t rescaleNormalEnabled Lcvh$c;
-	FIELD u colorMask Lcvh$g;
-	FIELD v color Lcvh$e;
+	FIELD t rescaleNormalEnabled Lcwa$c;
+	FIELD u colorMask Lcwa$g;
+	FIELD v color Lcwa$e;
 	METHOD A genTextures ()I
 	METHOD B enableNormalize ()V
 	METHOD C disableNormalize ()V
@@ -191,17 +158,11 @@ CLASS cvh net/minecraft/client/gl/GlHandler
 	METHOD a ortho (DDDDDD)V
 	METHOD a fogDensity (F)V
 	METHOD a polygonOffset (FF)V
-		ARG 0 factor
-		ARG 1 units
 	METHOD a normal (FFF)V
 	METHOD a clearColor (FFFF)V
 	METHOD a enableLight (I)V
 	METHOD a alphaFunc (IF)V
-		ARG 0 func
-		ARG 1 ref
 	METHOD a colorMaterial (II)V
-		ARG 0 face
-		ARG 1 mode
 	METHOD a texEnv (IIF)V
 	METHOD a texEnv (III)V
 	METHOD a blendFuncSeparate (IIII)V
@@ -214,16 +175,16 @@ CLASS cvh net/minecraft/client/gl/GlHandler
 	METHOD a normalPointer (IILjava/nio/ByteBuffer;)V
 	METHOD a light (IILjava/nio/FloatBuffer;)V
 	METHOD a lightModel (ILjava/nio/FloatBuffer;)V
-	METHOD a cullFace (Lcvh$i;)V
-	METHOD a fogMode (Lcvh$m;)V
-	METHOD a logicOp (Lcvh$o;)V
-	METHOD a beginRenderMode (Lcvh$q;)V
-	METHOD a blendFunc (Lcvh$r;Lcvh$l;)V
-	METHOD a blendFuncSeparate (Lcvh$r;Lcvh$l;Lcvh$r;Lcvh$l;)V
-	METHOD a enableTextureGen (Lcvh$u;)V
-	METHOD a texGenMode (Lcvh$u;I)V
-	METHOD a texGen (Lcvh$u;ILjava/nio/FloatBuffer;)V
-	METHOD a multMatrix (Ldit;)V
+	METHOD a cullFace (Lcwa$i;)V
+	METHOD a fogMode (Lcwa$m;)V
+	METHOD a logicOp (Lcwa$o;)V
+	METHOD a beginRenderMode (Lcwa$q;)V
+	METHOD a blendFunc (Lcwa$r;Lcwa$l;)V
+	METHOD a blendFuncSeparate (Lcwa$r;Lcwa$l;Lcwa$r;Lcwa$l;)V
+	METHOD a enableTextureGen (Lcwa$u;)V
+	METHOD a texGenMode (Lcwa$u;I)V
+	METHOD a texGen (Lcwa$u;ILjava/nio/FloatBuffer;)V
+	METHOD a multMatrix (Ldjm;)V
 	METHOD a multMatrix (Ljava/nio/FloatBuffer;)V
 	METHOD a depthMask (Z)V
 	METHOD a colorMask (ZZZZ)V
@@ -241,29 +202,22 @@ CLASS cvh net/minecraft/client/gl/GlHandler
 	METHOD b vertexPointer (IIILjava/nio/ByteBuffer;)V
 	METHOD b texEnv (IILjava/nio/FloatBuffer;)V
 	METHOD b fogfv (ILjava/nio/FloatBuffer;)V
-	METHOD b endRenderMode (Lcvh$q;)V
-	METHOD b disableTextureGen (Lcvh$u;)V
+	METHOD b endRenderMode (Lcwa$q;)V
+	METHOD b disableTextureGen (Lcwa$u;)V
 	METHOD c popAttrib ()V
 	METHOD c fogEnd (F)V
 	METHOD c translate (FFF)V
 	METHOD c color (FFFF)V
-		ARG 0 red
-		ARG 1 green
-		ARG 2 blue
-		ARG 3 alpha
 	METHOD c depthFunc (I)V
 	METHOD c fog (II)V
 	METHOD c getTexLevelParameter (III)I
 	METHOD c texCoordPointer (IIII)V
 	METHOD c colorPointer (IIILjava/nio/ByteBuffer;)V
 	METHOD c getFloat (ILjava/nio/FloatBuffer;)V
-	METHOD c getTexGenCoordState (Lcvh$u;)Lcvh$v;
+	METHOD c getTexGenCoordState (Lcwa$u;)Lcwa$v;
 	METHOD d disableAlphaTest ()V
 	METHOD d lineWidth (F)V
 	METHOD d color (FFF)V
-		ARG 0 red
-		ARG 1 green
-		ARG 2 blue
 	METHOD d blendEquation (I)V
 	METHOD d polygonMode (II)V
 	METHOD d vertexPointer (IIII)V
@@ -279,9 +233,6 @@ CLASS cvh net/minecraft/client/gl/GlHandler
 	METHOD g activeTexture (I)V
 	METHOD g pixelStore (II)V
 	METHOD g drawArrays (III)V
-		ARG 0 mode
-		ARG 1 first
-		ARG 2 count
 	METHOD h enableColorMaterial ()V
 	METHOD h deleteTextures (I)V
 	METHOD i disableColorMaterial ()V
@@ -305,7 +256,6 @@ CLASS cvh net/minecraft/client/gl/GlHandler
 	METHOD t disablePolygonOffsetFill ()V
 	METHOD t genLists (I)I
 	METHOD u getString (I)Ljava/lang/String;
-	METHOD v getInteger (I)I
 	METHOD w enableColorLogicOp ()V
 	METHOD w fogMode (I)V
 	METHOD x disableColorLogicOp ()V

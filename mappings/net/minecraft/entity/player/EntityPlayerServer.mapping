@@ -1,76 +1,41 @@
-CLASS sm net/minecraft/entity/player/EntityPlayerServer
-	FIELD a networkHandler Ltj;
-	FIELD bZ LOGGER Lorg/apache/logging/log4j/Logger;
-	FIELD ca enUs Ljava/lang/String;
-	FIELD cu seenCredits Z
+CLASS so net/minecraft/entity/player/EntityPlayerServer
+	FIELD a networkHandler Ltl;
+	FIELD cb LOGGER Lorg/apache/logging/log4j/Logger;
+	FIELD cc enUs Ljava/lang/String;
+	FIELD cw seenCredits Z
 	METHOD D updatePotionVisibility ()V
 	METHOD F updatePortalCooldown ()V
-	METHOD R_ update ()V
-	METHOD S_ stopRiding ()V
-	METHOD a openInventory (Lagm;)V
-		ARG 0 inv
-	METHOD a swingHand (Lags;)V
-		ARG 0 hand
-	METHOD a openContainer (Lagt;)V
-	METHOD a onDeath (Lahi;)V
-		ARG 0 damageSource
-	METHOD a damage (Lahi;F)Z
-		ARG 0 source
-		ARG 1 damage
-	METHOD a copyEntityData (Lahz;)V
-		ARG 0 entity
-	METHOD a startRiding (Lahz;Z)Z
-		ARG 0 entity
-		ARG 1 ignoreRequirements
-	METHOD a openHorseInventory (Lanv;Lagm;)V
-	METHOD a shouldDamagePlayer (Larn;)Z
-		ARG 0 target
-	METHOD a onContainerPropertyUpdate (Latc;II)V
-		ARG 0 container
-		ARG 1 propertyId
-		ARG 2 newValue
-	METHOD a onContainerSlotUpdate (Latc;ILawm;)V
-		ARG 0 container
-		ARG 1 slotId
-		ARG 2 newStack
-	METHOD a onContainerInvRegistered (Latc;Lagm;)V
-		ARG 0 container
-		ARG 1 inventory
-	METHOD a onContainerRegistered (Latc;Lev;)V
-		ARG 0 container
-		ARG 1 stacks
-	METHOD a openBookEditor (Lawm;Lags;)V
-	METHOD a openVillagerGui (Lbak;)V
-		ARG 0 villager
-	METHOD a setGameMode (Lbba;)V
-		ARG 0 value
-	METHOD a openCommandBlock (Lbml;)V
-	METHOD a openSignEditor (Lbnc;)V
-		ARG 0 sign
-	METHOD a trySleep (Leg;)Larn$a;
-		ARG 0 pos
-	METHOD a deserializeCustomData (Lgv;)V
-		ARG 0 tag
-	METHOD a appendCommandFeedback (Lid;)V
-		ARG 0 feedback
-	METHOD a addChatMessage (Lid;Z)V
-		ARG 0 message
-	METHOD a resetStat (Lvw;)V
-		ARG 0 stat
-	METHOD a incrementStat (Lvw;I)V
-		ARG 0 stat
-		ARG 1 amount
-	METHOD b isInvulnerableTo (Lahi;)Z
-		ARG 0 source
-	METHOD b serializeCustomData (Lgv;)V
-		ARG 0 tag
-	METHOD d changeWorld (I)Lahz;
-		ARG 0 worldId
+	METHOD S_ update ()V
+	METHOD T_ stopRiding ()V
+	METHOD a openInventory (Lagp;)V
+	METHOD a swingHand (Lagv;)V
+	METHOD a openContainer (Lagw;)V
+	METHOD a onDeath (Lahl;)V
+	METHOD a damage (Lahl;F)Z
+	METHOD a copyEntityData (Laic;)V
+	METHOD a startRiding (Laic;Z)Z
+	METHOD a openHorseInventory (Lany;Lagp;)V
+	METHOD a shouldDamagePlayer (Larq;)Z
+	METHOD a onContainerPropertyUpdate (Latf;II)V
+	METHOD a onContainerSlotUpdate (Latf;ILawp;)V
+	METHOD a onContainerInvRegistered (Latf;Lagp;)V
+	METHOD a onContainerRegistered (Latf;Lew;)V
+	METHOD a openBookEditor (Lawp;Lagv;)V
+	METHOD a openVillagerGui (Lban;)V
+	METHOD a setGameMode (Lbbd;)V
+	METHOD a openCommandBlock (Lbmo;)V
+	METHOD a openSignEditor (Lbnf;)V
+	METHOD a trySleep (Leh;)Larq$a;
+	METHOD a deserializeCustomData (Lgx;)V
+	METHOD a addChatMessage (Lig;Z)V
+	METHOD a resetStat (Lvy;)V
+	METHOD a incrementStat (Lvy;I)V
+	METHOD b isInvulnerableTo (Lahl;)Z
+	METHOD b serializeCustomData (Lgx;)V
+	METHOD d changeWorld (I)Laic;
 	METHOD e addExperience (I)V
-		ARG 0 experience
-	METHOD f attackPlayer (Lahz;)V
-		ARG 0 entity
-	METHOD g createCooldownManager ()Lawj;
+	METHOD f attackPlayer (Laic;)V
+	METHOD g createCooldownManager ()Lawm;
 	METHOD t isSpectator ()Z
 	METHOD u isCreative ()Z
-	METHOD y getBlockPos ()Leg;
+	METHOD y getBlockPos ()Leh;

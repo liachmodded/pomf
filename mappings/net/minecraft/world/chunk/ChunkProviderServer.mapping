@@ -1,31 +1,19 @@
-CLASS sj net/minecraft/world/chunk/ChunkProviderServer
+CLASS sl net/minecraft/world/chunk/ChunkProviderServer
 	FIELD a LOGGER Lorg/apache/logging/log4j/Logger;
-	FIELD d saveHandler Lbqe;
+	FIELD d saveHandler Lbqw;
 	FIELD e chunkByIdMap Lit/unimi/dsi/fastutil/longs/Long2ObjectMap;
-	FIELD h world Lsk;
+	FIELD h world Lsm;
 	METHOD a getChunks ()Ljava/util/Collection;
-	METHOD a dropChunk (Lbpr;)V
-		ARG 0 chunk
+	METHOD a dropChunk (Lbqj;)V
 	METHOD a saveChunks (Z)Z
-		ARG 0 entities
 	METHOD b dropAll ()V
-	METHOD b getOrLoadChunk (II)Lbpr;
-		ARG 0 x
-		ARG 1 z
-	METHOD b saveChunk (Lbpg;)V
-		ARG 0 chunk
-	METHOD b saveEntities (Lbpr;)V
-		ARG 0 chunk
+	METHOD b getOrLoadChunk (II)Lbqj;
+	METHOD b saveChunk (Lbpy;)V
+	METHOD b saveEntities (Lbqj;)V
 	METHOD c flushChunks ()V
-	METHOD c getChunk (II)Lbpr;
-	METHOD d generate (II)Lbpg;
-		ARG 0 chunkX
-		ARG 1 chunkZ
+	METHOD c getChunk (II)Lbqj;
+	METHOD d generate (II)Lbpy;
 	METHOD e canAutoSave ()Z
 	METHOD e hasChunk (II)Z
-		ARG 0 x
-		ARG 1 z
-	METHOD g loadChunk (II)Lbpr;
-		ARG 0 x
-		ARG 1 z
+	METHOD g loadChunk (II)Lbqj;
 	METHOD h getChunkCount ()I

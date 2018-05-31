@@ -1,28 +1,22 @@
-CLASS tl net/minecraft/network/handler/NetworkLoginHandlerServer
-	CLASS tl$a State
-		FIELD a HELLO Ltl$a;
-		FIELD b KEY Ltl$a;
-		FIELD c AUTHENTICATING Ltl$a;
-		FIELD d READY_TO_ACCEPT Ltl$a;
-		FIELD e DELAY_ACCEPT Ltl$a;
-		FIELD f ACCEPTED Ltl$a;
-	FIELD a connection Lhs;
+CLASS tn net/minecraft/network/handler/NetworkLoginHandlerServer
+	CLASS tn$a State
+		FIELD a HELLO Ltn$a;
+		FIELD b KEY Ltn$a;
+		FIELD c AUTHENTICATING Ltn$a;
+		FIELD d READY_TO_ACCEPT Ltn$a;
+		FIELD e DELAY_ACCEPT Ltn$a;
+		FIELD f ACCEPTED Ltn$a;
+	FIELD a connection Lhu;
 	FIELD c LOGGER Lorg/apache/logging/log4j/Logger;
 	FIELD d RAND Ljava/util/Random;
 	FIELD f server Lnet/minecraft/server/MinecraftServer;
-	FIELD g state Ltl$a;
+	FIELD g state Ltn$a;
 	FIELD h loginTicks I
 	FIELD i profile Lcom/mojang/authlib/GameProfile;
-	FIELD l playerEntity Lsm;
-	METHOD <init> (Lnet/minecraft/server/MinecraftServer;Lhs;)V
-		ARG 0 server
-		ARG 1 connection
+	FIELD l playerEntity Lso;
 	METHOD Y_ update ()V
-	METHOD a onConnectionLost (Lid;)V
-		ARG 0 reason
-	METHOD a onLoginStart (Lnn;)V
-		ARG 0 packet
-	METHOD a onLoginEncryptionResponse (Lno;)V
-		ARG 0 packet
-	METHOD b disconnect (Lid;)V
+	METHOD a onConnectionLost (Lig;)V
+	METHOD a onLoginStart (Lnp;)V
+	METHOD a onLoginEncryptionResponse (Lnq;)V
+	METHOD b disconnect (Lig;)V
 	METHOD c getConnectionString ()Ljava/lang/String;

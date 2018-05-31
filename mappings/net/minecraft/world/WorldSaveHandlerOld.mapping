@@ -1,34 +1,23 @@
-CLASS ced net/minecraft/world/WorldSaveHandlerOld
-	FIELD a migrationHandler Lxm;
+CLASS cew net/minecraft/world/WorldSaveHandlerOld
+	FIELD a migrationHandler Lxo;
 	FIELD b LOGGER Lorg/apache/logging/log4j/Logger;
 	FIELD c worldDir Ljava/io/File;
 	FIELD d playerDataDir Ljava/io/File;
 	FIELD e worldDataDir Ljava/io/File;
 	FIELD f saveStartTime J
 	FIELD g worldName Ljava/lang/String;
-	METHOD <init> (Ljava/io/File;Ljava/lang/String;Lnet/minecraft/server/MinecraftServer;Lxm;)V
-		ARG 0 savesDir
-		ARG 1 worldName
-		ARG 3 migrationHandler
 	METHOD a saveRegions ()V
-	METHOD a savePlayerData (Larn;)V
-		ARG 0 player
-	METHOD a createChunkSaveHandler (Lbqk;)Lbqe;
-		ARG 0 worldProvider
-	METHOD a saveWorld (Lcef;)V
-		ARG 0 properties
-	METHOD a saveWorld (Lcef;Lgv;)V
-		ARG 0 properties
-		ARG 1 playerTag
+	METHOD a savePlayerData (Larq;)V
+	METHOD a createChunkSaveHandler (Lbrc;)Lbqw;
+	METHOD a saveWorld (Lcey;)V
+	METHOD a saveWorld (Lcey;Lgx;)V
 	METHOD a getDataFile (Ljava/lang/String;)Ljava/io/File;
-		ARG 0 name
 	METHOD b getWorldDir ()Ljava/io/File;
-	METHOD b loadPlayerData (Larn;)Lgv;
-		ARG 0 player
+	METHOD b loadPlayerData (Larq;)Lgx;
 	METHOD c checkSessionLock ()V
-	METHOD d readProperties ()Lcef;
-	METHOD e getPlayerSaveHandler ()Lcem;
+	METHOD d readProperties ()Lcey;
+	METHOD e getPlayerSaveHandler ()Lcff;
 	METHOD f getSavedPlayerIds ()[Ljava/lang/String;
-	METHOD h getTemplateManager ()Lbzt;
-	METHOD i getDatafix ()Lxm;
+	METHOD h getTemplateManager ()Lcam;
+	METHOD i getDatafix ()Lxo;
 	METHOD j writeSessionLock ()V

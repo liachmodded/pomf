@@ -1,36 +1,21 @@
-CLASS amq net/minecraft/world/WorldVillageManager
-	FIELD a world Lbbd;
+CLASS amt net/minecraft/world/WorldVillageManager
+	FIELD a world Lbbg;
 	FIELD b recentVillagerPositions Ljava/util/List;
 	FIELD c recentlySeenDoors Ljava/util/List;
 	FIELD d villages Ljava/util/List;
 	FIELD e tick I
-	METHOD <init> (Lbbd;)V
-		ARG 0 world
 	METHOD a update ()V
-	METHOD a setWorld (Lbbd;)V
-		ARG 0 world
-	METHOD a getBaseTag (Lbqk;)Ljava/lang/String;
-		ARG 0 provider
-	METHOD a addRecentVillagerPosition (Leg;)V
-		ARG 0 pos
-	METHOD a getNearestVillage (Leg;I)Lamo;
-		ARG 0 pos
-		ARG 1 maxDistance
-	METHOD a isDoorLeadingOutside (Leg;Lem;I)I
-		ARG 0 pos
-		ARG 1 facing
-		ARG 2 range
-	METHOD a deserialize (Lgv;)V
-		ARG 0 tag
+	METHOD a setWorld (Lbbg;)V
+	METHOD a getBaseTag (Lbrc;)Ljava/lang/String;
+	METHOD a addRecentVillagerPosition (Leh;)V
+	METHOD a getNearestVillage (Leh;I)Lamr;
+	METHOD a isDoorLeadingOutside (Leh;Len;I)I
+	METHOD a deserialize (Lgx;)V
 	METHOD b getVillages ()Ljava/util/List;
-	METHOD b updateDoorsSeenByVillager (Leg;)V
-		ARG 0 villagerSeenPos
-	METHOD b serialize (Lgv;)Lgv;
-		ARG 0 tag
-	METHOD c getRecentlySeenDoor (Leg;)Lamn;
-		ARG 0 pos
-	METHOD d isRecentVillagerPosition (Leg;)Z
-		ARG 0 pos
+	METHOD b updateDoorsSeenByVillager (Leh;)V
+	METHOD b serialize (Lgx;)Lgx;
+	METHOD c getRecentlySeenDoor (Leh;)Lamq;
+	METHOD d isRecentVillagerPosition (Leh;)Z
 	METHOD f validateVillageProperties ()V
 	METHOD g updateDoorsSeenByVillagers ()V
 	METHOD h addDoorsToVillages ()V

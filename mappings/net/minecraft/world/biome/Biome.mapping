@@ -1,8 +1,8 @@
-CLASS bbx net/minecraft/world/biome/Biome
-	CLASS bbx$a Builder
-		FIELD a surfaceBuilder Lbzy;
-		FIELD b precipitation Lbbx$e;
-		FIELD c category Lbbx$b;
+CLASS bca net/minecraft/world/biome/Biome
+	CLASS bca$a Builder
+		FIELD a surfaceBuilder Lcar;
+		FIELD b precipitation Lbca$e;
+		FIELD c category Lbca$b;
 		FIELD d depth Ljava/lang/Float;
 		FIELD e scale Ljava/lang/Float;
 		FIELD f temperature Ljava/lang/Float;
@@ -10,99 +10,84 @@ CLASS bbx net/minecraft/world/biome/Biome
 		FIELD h waterColor Ljava/lang/Integer;
 		FIELD i waterFogColor Ljava/lang/Integer;
 		FIELD j parent Ljava/lang/String;
-		METHOD a withDepth (F)Lbbx$a;
-			ARG 0 depth
-		METHOD a withWaterColor (I)Lbbx$a;
-			ARG 0 waterColor
-		METHOD a withCategory (Lbbx$b;)Lbbx$a;
-			ARG 0 category
-		METHOD a withPrecipitation (Lbbx$e;)Lbbx$a;
-			ARG 0 precipitation
-		METHOD a withSurface (Lbzy;)Lbbx$a;
-			ARG 0 surfaceBuilder
-		METHOD a withParent (Ljava/lang/String;)Lbbx$a;
-			ARG 0 parent
-		METHOD b withScale (F)Lbbx$a;
-			ARG 0 scale
-		METHOD b withWaterFogColor (I)Lbbx$a;
-			ARG 0 waterFogColor
-		METHOD c withTemperature (F)Lbbx$a;
-			ARG 0 temperature
-		METHOD d withDownfall (F)Lbbx$a;
-			ARG 0 downfall
-	CLASS bbx$b Category
-		FIELD a NONE Lbbx$b;
-		FIELD b TAIGA Lbbx$b;
-		FIELD c EXTREME_HILLS Lbbx$b;
-		FIELD d JUNGLE Lbbx$b;
-		FIELD e MESA Lbbx$b;
-		FIELD f PLAINS Lbbx$b;
-		FIELD g SAVANNA Lbbx$b;
-		FIELD h ICY Lbbx$b;
-		FIELD i THEEND Lbbx$b;
-		FIELD j BEACH Lbbx$b;
-		FIELD k FOREST Lbbx$b;
-		FIELD l OCEAN Lbbx$b;
-		FIELD m DESERT Lbbx$b;
-		FIELD n RIVER Lbbx$b;
-		FIELD o SWAMP Lbbx$b;
-		FIELD p MUSHROOM Lbbx$b;
-		FIELD q NETHER Lbbx$b;
-	CLASS bbx$c TemperatureGroup
-		FIELD a OCEAN Lbbx$c;
-		FIELD b COLD Lbbx$c;
-		FIELD c MEDIUM Lbbx$c;
-		FIELD d WARM Lbbx$c;
-	CLASS bbx$d EntitySpawnEntry
-		FIELD b entityEntry Laid;
+		METHOD a withDepth (F)Lbca$a;
+		METHOD a withWaterColor (I)Lbca$a;
+		METHOD a withCategory (Lbca$b;)Lbca$a;
+		METHOD a withPrecipitation (Lbca$e;)Lbca$a;
+		METHOD a withSurface (Lcar;)Lbca$a;
+		METHOD a withParent (Ljava/lang/String;)Lbca$a;
+		METHOD b withScale (F)Lbca$a;
+		METHOD b withWaterFogColor (I)Lbca$a;
+		METHOD c withTemperature (F)Lbca$a;
+		METHOD d withDownfall (F)Lbca$a;
+	CLASS bca$b Category
+		FIELD a NONE Lbca$b;
+		FIELD b TAIGA Lbca$b;
+		FIELD c EXTREME_HILLS Lbca$b;
+		FIELD d JUNGLE Lbca$b;
+		FIELD e MESA Lbca$b;
+		FIELD f PLAINS Lbca$b;
+		FIELD g SAVANNA Lbca$b;
+		FIELD h ICY Lbca$b;
+		FIELD i THEEND Lbca$b;
+		FIELD j BEACH Lbca$b;
+		FIELD k FOREST Lbca$b;
+		FIELD l OCEAN Lbca$b;
+		FIELD m DESERT Lbca$b;
+		FIELD n RIVER Lbca$b;
+		FIELD o SWAMP Lbca$b;
+		FIELD p MUSHROOM Lbca$b;
+		FIELD q NETHER Lbca$b;
+	CLASS bca$c TemperatureGroup
+		FIELD a OCEAN Lbca$c;
+		FIELD b COLD Lbca$c;
+		FIELD c MEDIUM Lbca$c;
+		FIELD d WARM Lbca$c;
+	CLASS bca$d EntitySpawnEntry
+		FIELD b entityEntry Laig;
 		FIELD c minGroupSize I
 		FIELD d maxGroupSize I
-		METHOD <init> (Laid;III)V
-			ARG 0 entityEntry
-			ARG 1 weight
-			ARG 2 minGroupSize
-			ARG 3 maxGroupSize
-	CLASS bbx$e Precipitation
-		FIELD a NONE Lbbx$e;
-		FIELD b RAIN Lbbx$e;
-		FIELD c SNOW Lbbx$e;
-	FIELD A TWICE_SURFACE_WITH_CHANCE_MULTIPLE Lbxo;
-	FIELD B DEPTH_AVERAGE Lbxo;
-	FIELD C TOP_SOLID_ONCE Lbxo;
-	FIELD D TOP_SOLID_RANGE Lbxo;
-	FIELD E TOP_SOLID_WITH_NOISE Lbxo;
-	FIELD F CAVE_EDGE Lbxo;
-	FIELD G AT_SURFACE_RANDOM_COUNT Lbxo;
-	FIELD H NETHER_FIRE Lbxo;
-	FIELD I NETHER_MAGMA Lbxo;
-	FIELD J HEIGHT_4_TO_32 Lbxo;
-	FIELD K LAKE_LAVA_PLACEMENT Lbxo;
-	FIELD L LAKE_WATER_PLACEMENT Lbxo;
-	FIELD M DUNGEON_ROOM Lbxo;
-	FIELD N ROOFED_TREE_PLACEMENT Lbxo;
-	FIELD O ICEBURG_PLACEMENT Lbxo;
-	FIELD P NETHER_GLOWSTONE_PLACEMENT Lbxo;
-	FIELD Q END_SPIKES_PLACEMENT Lbxo;
-	FIELD R END_ISLAND_PLACEMENT Lbxo;
-	FIELD S CHORUS_PLANT_PLACEMENT Lbxo;
-	FIELD T END_GATEWAY_PLACEMENT Lbxo;
-	FIELD U AIR Lbob;
-	FIELD V DIRT Lbob;
-	FIELD W GRASS Lbob;
-	FIELD X PODZOL Lbob;
-	FIELD Y GRAVEL Lbob;
-	FIELD Z STONE Lbob;
-	FIELD aA SWAMP_SURFACE_BUILDER Lcaj;
-	FIELD aB MESA_SURFACE_BUILDER Lcaj;
-	FIELD aC MESA_FOREST_SURFACE_BUILDER Lcaj;
-	FIELD aD MESA_BRYCE_SURFACE_BUILDER Lcaj;
-	FIELD aE FROZEN_OCEAN_SURFACE_BUILDER Lcaj;
-	FIELD aF NETHER_SURFACE_BUILDER Lcaj;
-	FIELD aG VOID_SURFACE_BUILDER Lcaj;
-	FIELD aI MUTATION_TO_BASE_ID_MAP Leq;
-	FIELD aJ TEMPERATURE_NOISE Lcar;
-	FIELD aK GRASS_COLOR_NOISE Lcar;
-	FIELD aL REGISTRY Leu;
+	CLASS bca$e Precipitation
+		FIELD a NONE Lbca$e;
+		FIELD b RAIN Lbca$e;
+		FIELD c SNOW Lbca$e;
+	FIELD A TWICE_SURFACE_WITH_CHANCE_MULTIPLE Lbyg;
+	FIELD B DEPTH_AVERAGE Lbyg;
+	FIELD C TOP_SOLID_ONCE Lbyg;
+	FIELD D TOP_SOLID_RANGE Lbyg;
+	FIELD E TOP_SOLID_WITH_NOISE Lbyg;
+	FIELD F CAVE_EDGE Lbyg;
+	FIELD G AT_SURFACE_RANDOM_COUNT Lbyg;
+	FIELD H NETHER_FIRE Lbyg;
+	FIELD I NETHER_MAGMA Lbyg;
+	FIELD J HEIGHT_4_TO_32 Lbyg;
+	FIELD K LAKE_LAVA_PLACEMENT Lbyg;
+	FIELD L LAKE_WATER_PLACEMENT Lbyg;
+	FIELD M DUNGEON_ROOM Lbyg;
+	FIELD N ROOFED_TREE_PLACEMENT Lbyg;
+	FIELD O ICEBURG_PLACEMENT Lbyg;
+	FIELD P NETHER_GLOWSTONE_PLACEMENT Lbyg;
+	FIELD Q END_SPIKES_PLACEMENT Lbyg;
+	FIELD R END_ISLAND_PLACEMENT Lbyg;
+	FIELD S CHORUS_PLANT_PLACEMENT Lbyg;
+	FIELD T END_GATEWAY_PLACEMENT Lbyg;
+	FIELD U AIR Lboe;
+	FIELD V DIRT Lboe;
+	FIELD W GRASS Lboe;
+	FIELD X PODZOL Lboe;
+	FIELD Y GRAVEL Lboe;
+	FIELD Z STONE Lboe;
+	FIELD aA SWAMP_SURFACE_BUILDER Lcbc;
+	FIELD aB MESA_SURFACE_BUILDER Lcbc;
+	FIELD aC MESA_FOREST_SURFACE_BUILDER Lcbc;
+	FIELD aD MESA_BRYCE_SURFACE_BUILDER Lcbc;
+	FIELD aE FROZEN_OCEAN_SURFACE_BUILDER Lcbc;
+	FIELD aF NETHER_SURFACE_BUILDER Lcbc;
+	FIELD aG VOID_SURFACE_BUILDER Lcbc;
+	FIELD aI MUTATION_TO_BASE_ID_MAP Ler;
+	FIELD aJ TEMPERATURE_NOISE Lcbk;
+	FIELD aK GRASS_COLOR_NOISE Lcbk;
+	FIELD aL REGISTRY Lev;
 	FIELD a LOGGER Lorg/apache/logging/log4j/Logger;
 	FIELD aM translationKey Ljava/lang/String;
 	FIELD aN depth F
@@ -112,119 +97,91 @@ CLASS bbx net/minecraft/world/biome/Biome
 	FIELD aR waterColor I
 	FIELD aS waterFogColor I
 	FIELD aT parent Ljava/lang/String;
-	FIELD aU surface Lbzy;
-	FIELD aV category Lbbx$b;
-	FIELD aW precipitation Lbbx$e;
+	FIELD aU surface Lcar;
+	FIELD aV category Lbca$b;
+	FIELD aW precipitation Lbca$e;
 	FIELD aX carverFeatures Ljava/util/Map;
 	FIELD aY decorationFeatures Ljava/util/Map;
 	FIELD aZ flowerFeatures Ljava/util/List;
-	FIELD aa COARSE_DIRT Lbob;
-	FIELD ab SAND Lbob;
-	FIELD ac RED_SAND Lbob;
-	FIELD ad WHITE_TERRACOTTA Lbob;
-	FIELD ae MYCELIUM Lbob;
-	FIELD af NETHERRACK Lbob;
-	FIELD ag END_STONE Lbob;
-	FIELD ah VOID_SURFACE_CONFIG Lcak;
-	FIELD ai DIRT_SURFACE_CONFIG Lcak;
-	FIELD aj GRASS_SURFACE_CONFIG Lcak;
-	FIELD ak STONE_SURFACE_CONFIG Lcak;
-	FIELD al GRAVEL_SURFACE_CONFIG Lcak;
-	FIELD am COARSE_DIRT_SURFACE_CONFIG Lcak;
-	FIELD an PODZOL_SURFACE_CONFIG Lcak;
-	FIELD ao WARM_OCEAN_SURFACE_CONFIG Lcak;
-	FIELD ap LUKEWARM_OCEAN_SURFACE_CONFIG Lcak;
-	FIELD aq SAND_SURFACE_CONFIG Lcak;
-	FIELD ar MESA_SURFACE_CONFIG Lcak;
-	FIELD as MUSHROOM_ISLAND_SURFACE_CONFIG Lcak;
-	FIELD at NETHER_SURFACE_CONFIG Lcak;
-	FIELD au END_SURFACE_CONFIG Lcak;
-	FIELD av DEFAULT_SURFACE_BUILDER Lcaj;
-	FIELD aw EXTREME_HILLS_SURFACE_BUILDER Lcaj;
-	FIELD ax SAVANNA_MUTATED_SURFACE_BUILDER Lcaj;
-	FIELD ay EXTREME_HILLS_MUTATED_SURFACE Lcaj;
-	FIELD az MEGA_TAIGA_SURFACE_BUILDER Lcaj;
-	FIELD b CAVE_WORLD_CARVER Lbym;
+	FIELD aa COARSE_DIRT Lboe;
+	FIELD ab SAND Lboe;
+	FIELD ac RED_SAND Lboe;
+	FIELD ad WHITE_TERRACOTTA Lboe;
+	FIELD ae MYCELIUM Lboe;
+	FIELD af NETHERRACK Lboe;
+	FIELD ag END_STONE Lboe;
+	FIELD ah VOID_SURFACE_CONFIG Lcbd;
+	FIELD ai DIRT_SURFACE_CONFIG Lcbd;
+	FIELD aj GRASS_SURFACE_CONFIG Lcbd;
+	FIELD ak STONE_SURFACE_CONFIG Lcbd;
+	FIELD al GRAVEL_SURFACE_CONFIG Lcbd;
+	FIELD am COARSE_DIRT_SURFACE_CONFIG Lcbd;
+	FIELD an PODZOL_SURFACE_CONFIG Lcbd;
+	FIELD ao WARM_OCEAN_SURFACE_CONFIG Lcbd;
+	FIELD ap LUKEWARM_OCEAN_SURFACE_CONFIG Lcbd;
+	FIELD aq SAND_SURFACE_CONFIG Lcbd;
+	FIELD ar MESA_SURFACE_CONFIG Lcbd;
+	FIELD as MUSHROOM_ISLAND_SURFACE_CONFIG Lcbd;
+	FIELD at NETHER_SURFACE_CONFIG Lcbd;
+	FIELD au END_SURFACE_CONFIG Lcbd;
+	FIELD av DEFAULT_SURFACE_BUILDER Lcbc;
+	FIELD aw EXTREME_HILLS_SURFACE_BUILDER Lcbc;
+	FIELD ax SAVANNA_MUTATED_SURFACE_BUILDER Lcbc;
+	FIELD ay EXTREME_HILLS_MUTATED_SURFACE Lcbc;
+	FIELD az MEGA_TAIGA_SURFACE_BUILDER Lcbc;
+	FIELD b CAVE_WORLD_CARVER Lbze;
 	FIELD ba structureFeatures Ljava/util/Map;
 	FIELD bb entitySpawns Ljava/util/Map;
-	FIELD c NETHER_CAVE_WORLD_CARVER Lbym;
-	FIELD d CANYON_WORLD_CARVER Lbym;
-	FIELD e UNDERWATER_CANYON_WORLD_CARVER Lbym;
-	FIELD f UNDERWATER_CAVE_WORLD_CARVER Lbym;
-	FIELD g AT_SURFACE Lbxo;
-	FIELD h TOP_SOLID Lbxo;
-	FIELD i SURFACE_PLUS_32 Lbxo;
-	FIELD j TWICE_SURFACE Lbxo;
-	FIELD k AT_HEIGHT_64 Lbxo;
-	FIELD l SURFACE_PLUS_32_WITH_NOISE Lbxo;
-	FIELD m TWICE_SURFACE_WITH_NOISE Lbxo;
-	FIELD n PASSTHROUGH Lbxo;
-	FIELD o CHUNK_CENTER Lbxo;
-	FIELD p AT_SURFACE_WITH_CHANCE Lbxo;
-	FIELD q TWICE_SURFACE_WITH_CHANCE Lbxo;
-	FIELD r WITH_CHANCE Lbxo;
-	FIELD s TOP_SOLID_WITH_CHANCE Lbxo;
-	FIELD t AT_SURFACE_WITH_EXTRA Lbxo;
-	FIELD u COUNT_RANGE Lbxo;
-	FIELD v HEIGHT_BIASED_RANGE Lbxo;
-	FIELD w HEIGHT_VERY_BIASED_RANGE Lbxo;
-	FIELD x RANDOM_COUNT_WITH_RANGE Lbxo;
-	FIELD y CHANCE_RANGE Lbxo;
-	FIELD z AT_SURFACE_WITH_CHANCE_MULTIPLE Lbxo;
-	METHOD <init> (Lbbx$a;)V
-		ARG 0 builder
+	FIELD c NETHER_CAVE_WORLD_CARVER Lbze;
+	FIELD d CANYON_WORLD_CARVER Lbze;
+	FIELD e UNDERWATER_CANYON_WORLD_CARVER Lbze;
+	FIELD f UNDERWATER_CAVE_WORLD_CARVER Lbze;
+	FIELD g AT_SURFACE Lbyg;
+	FIELD h TOP_SOLID Lbyg;
+	FIELD i SURFACE_PLUS_32 Lbyg;
+	FIELD j TWICE_SURFACE Lbyg;
+	FIELD k AT_HEIGHT_64 Lbyg;
+	FIELD l SURFACE_PLUS_32_WITH_NOISE Lbyg;
+	FIELD m TWICE_SURFACE_WITH_NOISE Lbyg;
+	FIELD n PASSTHROUGH Lbyg;
+	FIELD o CHUNK_CENTER Lbyg;
+	FIELD p AT_SURFACE_WITH_CHANCE Lbyg;
+	FIELD q TWICE_SURFACE_WITH_CHANCE Lbyg;
+	FIELD r WITH_CHANCE Lbyg;
+	FIELD s TOP_SOLID_WITH_CHANCE Lbyg;
+	FIELD t AT_SURFACE_WITH_EXTRA Lbyg;
+	FIELD u COUNT_RANGE Lbyg;
+	FIELD v HEIGHT_BIASED_RANGE Lbyg;
+	FIELD w HEIGHT_VERY_BIASED_RANGE Lbyg;
+	FIELD x RANDOM_COUNT_WITH_RANGE Lbyg;
+	FIELD y CHANCE_RANGE Lbyg;
+	FIELD z AT_SURFACE_WITH_CHANCE_MULTIPLE Lbyg;
 	METHOD a addDefaultFeatures ()V
-	METHOD a getBiome (I)Lbbx;
-		ARG 0 id
-	METHOD a register (ILjava/lang/String;Lbbx;)V
-		ARG 0 id
-		ARG 1 identifier
-		ARG 2 biome
-	METHOD a addEntitySpawn (Laik;Lbbx$d;)V
-	METHOD a getBiomeId (Lbbx;)I
-		ARG 0 biome
-	METHOD a addCarvingFeature (Lbqy$a;Lbyr;)V
-	METHOD a (Lbqy$b;Lbph;Lbbe;JLbrh;Leg;)V
-		ARG 0 decoration
-		ARG 1 chunkGen
-		ARG 2 world
-		ARG 5 pos
-	METHOD a addDecorationFeature (Lbqy$b;Lbrv;)V
-		ARG 0 genType
-		ARG 1 feature
-	METHOD a makeCompositeFeature (Lbsv;Lbsw;Lbxo;Lbsf;)Lbrv;
-		ARG 0 feature
-		ARG 1 featureConfig
-		ARG 2 placement
-		ARG 3 placementConfig
-	METHOD a makeCompositeFlowerFeature (Lbsz;Lbxo;Lbsf;)Lbsy;
-		ARG 0 flowerFeature
-		ARG 1 placement
-		ARG 2 placementConfig
-	METHOD a addStructureFeature (Lbvs;Lbsw;)V
-	METHOD a makeCarverWrapper (Lbzq;Lbsw;)Lbyr;
-		ARG 0 carver
-		ARG 1 config
-	METHOD a getTemperatureAtPos (Leg;)F
-		ARG 0 pos
+	METHOD a getBiome (I)Lbca;
+	METHOD a register (ILjava/lang/String;Lbca;)V
+	METHOD a addEntitySpawn (Lain;Lbca$d;)V
+	METHOD a getBiomeId (Lbca;)I
+	METHOD a addCarvingFeature (Lbrq$a;Lbzj;)V
+	METHOD a addDecorationFeature (Lbrq$b;Lbsn;)V
+	METHOD a makeCompositeFeature (Lbtn;Lbto;Lbyg;Lbsx;)Lbsn;
+	METHOD a makeCompositeFlowerFeature (Lbtr;Lbyg;Lbsx;)Lbtq;
+	METHOD a addStructureFeature (Lbwk;Lbto;)V
+	METHOD a makeCarverWrapper (Lcaj;Lbto;)Lbzj;
+	METHOD a getTemperatureAtPos (Leh;)F
 	METHOD b hasParent ()Z
-	METHOD b getParentBiome (Lbbx;)Lbbx;
-		ARG 0 biome
-	METHOD b getGrassColor (Leg;)I
-		ARG 0 pos
-	METHOD c getPrecipitation ()Lbbx$e;
-	METHOD c getFoliageColor (Leg;)I
-		ARG 0 pos
-	METHOD e ()F
-	METHOD g getTemperatureGroup ()Lbbx$c;
+	METHOD b getParentBiome (Lbca;)Lbca;
+	METHOD b getGrassColor (Leh;)I
+	METHOD c getPrecipitation ()Lbca$e;
+	METHOD c getFoliageColor (Leh;)I
+	METHOD g getTemperatureGroup ()Lbca$c;
 	METHOD h getDepth ()F
 	METHOD i getDownfall ()F
-	METHOD j getTranslatedName ()Lid;
+	METHOD j getTranslatedName ()Lig;
 	METHOD k getScale ()F
 	METHOD l getTemperature ()F
 	METHOD m getWaterColor ()I
 	METHOD n getWaterFogColor ()I
-	METHOD o getCategory ()Lbbx$b;
-	METHOD p getSurface ()Lbzy;
+	METHOD o getCategory ()Lbca$b;
+	METHOD p getSurface ()Lcar;
 	METHOD r getParent ()Ljava/lang/String;
 	METHOD s registerBiomes ()V

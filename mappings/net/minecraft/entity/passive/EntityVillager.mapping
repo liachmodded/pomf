@@ -1,61 +1,40 @@
-CLASS ari net/minecraft/entity/passive/EntityVillager
-	FIELD bA VILLAGER_TYPE Lnz;
-	FIELD bE properties Lamo;
-	FIELD bG recipeList Lbam;
-	FIELD bJ willing Z
-	FIELD bK riches I
-	FIELD bM career I
-	FIELD bN careerLevel I
-	FIELD bQ inventory Lahb;
-	FIELD bR MONUMENT [[[[Lari$f;
-	FIELD bz LOGGER Lorg/apache/logging/log4j/Logger;
-	METHOD <init> (Lbbd;I)V
-		ARG 0 world
-		ARG 1 type
-	METHOD E getSoundAmbient ()Lvp;
-	METHOD H getLootTableId ()Lok;
+CLASS arl net/minecraft/entity/passive/EntityVillager
+	FIELD bB LOGGER Lorg/apache/logging/log4j/Logger;
+	FIELD bC VILLAGER_TYPE Lob;
+	FIELD bG properties Lamr;
+	FIELD bI recipeList Lbap;
+	FIELD bL willing Z
+	FIELD bM riches I
+	FIELD bO career I
+	FIELD bP careerLevel I
+	FIELD bS inventory Lahe;
+	FIELD bT MONUMENT [[[[Larl$f;
+	METHOD E getSoundAmbient ()Lvr;
+	METHOD H getLootTableId ()Lom;
 	METHOD K mobTick ()V
-	METHOD M_ getCurrentCustomer ()Larn;
-	METHOD P getDisplayName ()Lid;
-	METHOD a (Lagr;Lail;Lawm;)Lail;
-		ARG 0 difficulty
-	METHOD a onDeath (Lahi;)V
-		ARG 0 damageSource
-	METHOD a createChild (Lahw;)Lahw;
-		ARG 0 other
-	METHOD a setAttacker (Laii;)V
-		ARG 0 value
-	METHOD a onStruckByLightning (Lapq;)V
-		ARG 0 lightning
-	METHOD a canBeLeashedBy (Larn;)Z
-		ARG 0 player
-	METHOD a interactMob (Larn;Lags;)Z
-		ARG 0 player
-		ARG 1 playerHand
-	METHOD a onSellingItem (Lawm;)V
-		ARG 0 stack
-	METHOD a useRecipe (Lbal;)V
-		ARG 0 recipe
-	METHOD a setRecipeList (Lbam;)V
-		ARG 0 recipeLIst
-	METHOD a deserializeCustomData (Lgv;)V
-		ARG 0 tag
-	METHOD a_ setCurrentCustomer (Larn;)V
-		ARG 0 currentCustomer
-	METHOD b createChild (Lahw;)Lari;
-		ARG 0 other
-	METHOD b serializeCustomData (Lgv;)V
-		ARG 0 tag
+	METHOD N_ getCurrentCustomer ()Larq;
+	METHOD P getDisplayName ()Lig;
+	METHOD a onDeath (Lahl;)V
+	METHOD a createChild (Lahz;)Lahz;
+	METHOD a setAttacker (Lail;)V
+	METHOD a onStruckByLightning (Lapt;)V
+	METHOD a canBeLeashedBy (Larq;)Z
+	METHOD a interactMob (Larq;Lagv;)Z
+	METHOD a onSellingItem (Lawp;)V
+	METHOD a useRecipe (Lbao;)V
+	METHOD a setRecipeList (Lbap;)V
+	METHOD a deserializeCustomData (Lgx;)V
+	METHOD a_ setCurrentCustomer (Larq;)V
+	METHOD b createChild (Lahz;)Larl;
+	METHOD b serializeCustomData (Lgx;)V
 	METHOD bI getEyeHeight ()F
-	METHOD b_ getRecipes (Larn;)Lbam;
-		ARG 0 player
-	METHOD c getWorld ()Lbbd;
+	METHOD b_ getRecipes (Larq;)Lbap;
+	METHOD c getWorld ()Lbbg;
 	METHOD ca initAttributes ()V
-	METHOD ct getSoundDeath ()Lvp;
-	METHOD d getPos ()Leg;
-	METHOD d getSoundHurt (Lahi;)Lvp;
-	METHOD dC getVillagerType ()I
-	METHOD dH getInventory ()Lahb;
+	METHOD ct getSoundDeath ()Lvr;
+	METHOD d getPos ()Leh;
+	METHOD d getSoundHurt (Lahl;)Lvr;
+	METHOD dD getVillagerType ()I
+	METHOD dI getInventory ()Lahe;
 	METHOD e setVillagerType (I)V
-		ARG 0 value
-	METHOD w_ initDataTracker ()V
+	METHOD x_ initDataTracker ()V

@@ -1,135 +1,66 @@
-CLASS awi net/minecraft/item/Item
-	CLASS awi$1
-		METHOD a getProperty (Lawm;Lbbd;Laii;)F
-			ARG 0 stack
-			ARG 1 world
-			ARG 2 user
-	CLASS awi$2
-		METHOD a getProperty (Lawm;Lbbd;Laii;)F
-			ARG 0 stack
-			ARG 1 world
-			ARG 2 user
-	CLASS awi$3
-		METHOD a getProperty (Lawm;Lbbd;Laii;)F
-			ARG 0 stack
-			ARG 1 world
-			ARG 2 user
-	CLASS awi$4
-		METHOD a getProperty (Lawm;Lbbd;Laii;)F
-			ARG 0 stack
-			ARG 1 world
-			ARG 2 user
-	CLASS awi$a Builder
+CLASS awl net/minecraft/item/Item
+	CLASS awl$1
+		METHOD a getProperty (Lawp;Lbbg;Lail;)F
+	CLASS awl$2
+		METHOD a getProperty (Lawp;Lbbg;Lail;)F
+	CLASS awl$3
+		METHOD a getProperty (Lawp;Lbbg;Lail;)F
+	CLASS awl$4
+		METHOD a getProperty (Lawp;Lbbg;Lail;)F
+	CLASS awl$a Builder
 		FIELD a maxStackSize I
 		FIELD b maxDamage I
-		FIELD c emptiedItem Lawi;
-		FIELD d itemGroup Lavg;
-		METHOD a withMaxStackSize (I)Lawi$a;
-			ARG 0 value
-		METHOD a withItemGroup (Lavg;)Lawi$a;
-			ARG 0 itemGroup
-		METHOD a withEmptiedItem (Lawi;)Lawi$a;
-			ARG 0 emptiedItem
-		METHOD b withDamage (I)Lawi$a;
-			ARG 0 maxDamage
-		METHOD c setMaxDamage (I)Lawi$a;
-			ARG 0 maxDamage
-	FIELD a DAMAGED_PROPERTY Lawl;
-	FIELD b DAMAGE_PROPERTY Lawl;
-	FIELD c LEFTHANDED_PROPERTY Lawl;
-	FIELD d COOLDOWN_PROPERTY Lawl;
-	FIELD e propertyRegistry Ley;
-	FIELD f REGISTRY Leu;
-	FIELD j tab Lavg;
-	FIELD l maxStackSize I
-	FIELD m damage I
-	FIELD n containerItem Lawi;
-	FIELD o item Ljava/lang/String;
-	METHOD W_ isMap ()Z
+		FIELD c emptiedItem Lawl;
+		FIELD d itemGroup Lavj;
+		METHOD a withMaxStackSize (I)Lawl$a;
+		METHOD a withItemGroup (Lavj;)Lawl$a;
+		METHOD a withEmptiedItem (Lawl;)Lawl$a;
+		METHOD b withDamage (I)Lawl$a;
+		METHOD c setMaxDamage (I)Lawl$a;
+	FIELD a DAMAGED_PROPERTY Lawo;
+	FIELD b DAMAGE_PROPERTY Lawo;
+	FIELD c LEFTHANDED_PROPERTY Lawo;
+	FIELD d COOLDOWN_PROPERTY Lawo;
+	FIELD e propertyRegistry Lez;
+	FIELD f REGISTRY Lev;
+	FIELD j tab Lavj;
+	FIELD m maxStackSize I
+	FIELD n damage I
+	FIELD o containerItem Lawl;
+	FIELD p item Ljava/lang/String;
+	METHOD X_ isMap ()Z
 	METHOD a getTranslationKey ()Ljava/lang/String;
-	METHOD a getAttributeModifiers (Laie;)Lcom/google/common/collect/Multimap;
-		ARG 0 effectiveSlot
-	METHOD a register (Lauq;)V
-		ARG 0 itemBlock
-	METHOD a isInTab (Lavg;)Z
-	METHOD a addStacksForDisplay (Lavg;Lev;)V
-		ARG 0 itemGroup
-		ARG 1 items
-	METHOD a isTool (Lawm;)Z
-		ARG 0 stack
-	METHOD a onEntityDamaged (Lawm;Laii;Laii;)Z
-		ARG 0 stack
-		ARG 1 target
-		ARG 2 user
-	METHOD a canRepair (Lawm;Lawm;)Z
-		ARG 0 item
-		ARG 1 repairItem
-	METHOD a onUpdate (Lawm;Lbbd;Lahz;IZ)V
-		ARG 0 stack
-		ARG 1 world
-		ARG 2 entity
-		ARG 3 invSlot
-		ARG 4 held
-	METHOD a onItemFinishedUsing (Lawm;Lbbd;Laii;)Lawm;
-		ARG 0 stack
-		ARG 1 world
-		ARG 2 user
-	METHOD a onItemStopUsing (Lawm;Lbbd;Laii;I)V
-		ARG 0 stack
-		ARG 1 world
-		ARG 2 player
-		ARG 3 remainingTime
-	METHOD a onBlockBroken (Lawm;Lbbd;Lbob;Leg;Laii;)Z
-		ARG 0 stack
-		ARG 1 world
-		ARG 3 pos
-		ARG 4 user
-	METHOD a addTooltipLines (Lawm;Lbbd;Ljava/util/List;Laxu;)V
-		ARG 0 stack
-		ARG 1 world
-		ARG 2 tooltip
-		ARG 3 flag
-	METHOD a onItemUse (Laxx;)Lagu;
-		ARG 0 interaction
-	METHOD a onRightClick (Lbbd;Larn;Lags;)Lagv;
-		ARG 0 world
-		ARG 1 player
-		ARG 2 hand
-	METHOD a rayTrace (Lbbd;Larn;Z)Lcgf;
-	METHOD a getItemFromBlock (Lbfs;)Lawi;
-	METHOD a register (Lbfs;Lavg;)V
-		ARG 0 block
-		ARG 1 tab
-	METHOD a register (Lbfs;Lawi;)V
-		ARG 0 block
-		ARG 1 item
-	METHOD a register (Ljava/lang/String;Lawi;)V
-		ARG 0 identifier
-		ARG 1 item
-	METHOD a register (Lok;Lawi;)V
-		ARG 0 identifier
-		ARG 1 item
-	METHOD a registerProperty (Lok;Lawl;)V
-	METHOD b hasEnchantmentGlow (Lawm;)Z
-		ARG 0 stack
-	METHOD b onCrafted (Lawm;Lbbd;Larn;)V
-		ARG 0 stack
-		ARG 1 world
-		ARG 2 player
-	METHOD b register (Lbfs;)V
-		ARG 0 block
+	METHOD a getAttributeModifiers (Laih;)Lcom/google/common/collect/Multimap;
+	METHOD a register (Laut;)V
+	METHOD a isInTab (Lavj;)Z
+	METHOD a addStacksForDisplay (Lavj;Lew;)V
+	METHOD a isTool (Lawp;)Z
+	METHOD a onEntityDamaged (Lawp;Lail;Lail;)Z
+	METHOD a canRepair (Lawp;Lawp;)Z
+	METHOD a onUpdate (Lawp;Lbbg;Laic;IZ)V
+	METHOD a onItemFinishedUsing (Lawp;Lbbg;Lail;)Lawp;
+	METHOD a onItemStopUsing (Lawp;Lbbg;Lail;I)V
+	METHOD a onBlockBroken (Lawp;Lbbg;Lboe;Leh;Lail;)Z
+	METHOD a addTooltipLines (Lawp;Lbbg;Ljava/util/List;Laxx;)V
+	METHOD a onItemUse (Laya;)Lagx;
+	METHOD a onRightClick (Lbbg;Larq;Lagv;)Lagy;
+	METHOD a rayTrace (Lbbg;Larq;Z)Lcgy;
+	METHOD a getItemFromBlock (Lbfv;)Lawl;
+	METHOD a register (Lbfv;Lavj;)V
+	METHOD a register (Lbfv;Lawl;)V
+	METHOD a register (Ljava/lang/String;Lawl;)V
+	METHOD a register (Lom;Lawl;)V
+	METHOD a registerProperty (Lom;Lawo;)V
+	METHOD b hasEnchantmentGlow (Lawp;)Z
+	METHOD b onCrafted (Lawp;Lbbg;Larq;)V
+	METHOD b register (Lbfv;)V
 	METHOD c getEnchantability ()I
-	METHOD c getMaxUseTime (Lawm;)I
-		ARG 0 stack
-	METHOD d getUseAction (Lawm;)Laxw;
-		ARG 0 stack
-	METHOD e getRarity (Lawm;)Lawy;
-		ARG 0 stack
-	METHOD h getItem ()Lawi;
-	METHOD i getTranslatedNameTrimmed (Lawm;)Lid;
-		ARG 0 stack
+	METHOD c getMaxUseTime (Lawp;)I
+	METHOD d getUseAction (Lawp;)Laxz;
+	METHOD h getItem ()Lawl;
+	METHOD i getTranslatedNameTrimmed (Lawp;)Lig;
 	METHOD m getUnlocalizedName ()Ljava/lang/String;
-	METHOD o getContainerItem ()Lawi;
+	METHOD o getContainerItem ()Lawl;
 	METHOD p hasContainerItem ()Z
-	METHOD q getCreativeTab ()Lavg;
+	METHOD q getCreativeTab ()Lavj;
 	METHOD r registerItems ()V

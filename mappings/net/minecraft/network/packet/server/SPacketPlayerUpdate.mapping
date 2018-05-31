@@ -1,25 +1,16 @@
-CLASS ml net/minecraft/network/packet/server/SPacketPlayerUpdate
-	CLASS ml$a Position
-		METHOD a readPacket (Lhu;)V
-			ARG 0 buf
-		METHOD a applyPacket (Lhx;)V
-			ARG 0 handler
-		METHOD b writePacket (Lhu;)V
-			ARG 0 buf
-	CLASS ml$b PositionRotation
-		METHOD a readPacket (Lhu;)V
-			ARG 0 buf
-		METHOD a applyPacket (Lhx;)V
-			ARG 0 handler
-		METHOD b writePacket (Lhu;)V
-			ARG 0 buf
-	CLASS ml$c Rotation
-		METHOD a readPacket (Lhu;)V
-			ARG 0 buf
-		METHOD a applyPacket (Lhx;)V
-			ARG 0 handler
-		METHOD b writePacket (Lhu;)V
-			ARG 0 buf
+CLASS mn net/minecraft/network/packet/server/SPacketPlayerUpdate
+	CLASS mn$a Position
+		METHOD a readPacket (Lhw;)V
+		METHOD a applyPacket (Lhz;)V
+		METHOD b writePacket (Lhw;)V
+	CLASS mn$b PositionRotation
+		METHOD a readPacket (Lhw;)V
+		METHOD a applyPacket (Lhz;)V
+		METHOD b writePacket (Lhw;)V
+	CLASS mn$c Rotation
+		METHOD a readPacket (Lhw;)V
+		METHOD a applyPacket (Lhz;)V
+		METHOD b writePacket (Lhw;)V
 	FIELD a x D
 	FIELD b yFeet D
 	FIELD c z D
@@ -28,24 +19,13 @@ CLASS ml net/minecraft/network/packet/server/SPacketPlayerUpdate
 	FIELD f onGround Z
 	FIELD g hasPosition Z
 	FIELD h hasRotation Z
-	METHOD <init> (Z)V
-		ARG 0 onGround
 	METHOD a isOnGround ()Z
 	METHOD a getX (D)D
-		ARG 0 old
 	METHOD a getYaw (F)F
-		ARG 0 old
-	METHOD a readPacket (Lhu;)V
-		ARG 0 buf
-	METHOD a applyPacket (Lhx;)V
-		ARG 0 handler
-	METHOD a applyPacket (Lly;)V
-		ARG 0 handler
+	METHOD a readPacket (Lhw;)V
+	METHOD a applyPacket (Lhz;)V
+	METHOD a applyPacket (Lma;)V
 	METHOD b getYFeet (D)D
-		ARG 0 old
 	METHOD b getPitch (F)F
-		ARG 0 old
-	METHOD b writePacket (Lhu;)V
-		ARG 0 buf
+	METHOD b writePacket (Lhw;)V
 	METHOD c getZ (D)D
-		ARG 0 old

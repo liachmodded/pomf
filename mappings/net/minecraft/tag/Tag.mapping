@@ -1,41 +1,24 @@
-CLASS wg net/minecraft/tag/Tag
-	CLASS wg$a Builder
+CLASS wi net/minecraft/tag/Tag
+	CLASS wi$a Builder
 		FIELD a tagEntries Ljava/util/Set;
-		METHOD a makeBuilder ()Lwg$a;
-		METHOD a addTagEntry (Lwg$b;)Lwg$a;
-			ARG 0 tagEntry
-	CLASS wg$b ITagEntry
+		METHOD a makeBuilder ()Lwi$a;
+		METHOD a addTagEntry (Lwi$b;)Lwi$a;
+	CLASS wi$b ITagEntry
 		METHOD a serialize (Lcom/google/gson/JsonArray;Ljava/util/function/Function;)V
 		METHOD a build (Ljava/util/Collection;)V
-			ARG 0 list
-	CLASS wg$c TagEntry
-		FIELD a identifier Lok;
-		FIELD b tag Lwg;
-		METHOD <init> (Lok;)V
-			ARG 0 identifier
-		METHOD <init> (Lwg;)V
-			ARG 0 tag
-		METHOD a serialize ()Lok;
+	CLASS wi$c TagEntry
+		FIELD a identifier Lom;
+		FIELD b tag Lwi;
+		METHOD a serialize ()Lom;
 		METHOD a serialize (Lcom/google/gson/JsonArray;Ljava/util/function/Function;)V
 		METHOD a build (Ljava/util/Collection;)V
-	CLASS wg$d ListEntry
+	CLASS wi$d ListEntry
 		FIELD a list Ljava/util/Collection;
-		METHOD <init> (Ljava/util/Collection;)V
-			ARG 0 list
 		METHOD a serialize (Lcom/google/gson/JsonArray;Ljava/util/function/Function;)V
 		METHOD a build (Ljava/util/Collection;)V
-			ARG 0 list
-	FIELD a key Lok;
+	FIELD a key Lom;
 	FIELD b values Ljava/util/Set;
 	FIELD c tagEntries Ljava/util/Collection;
-	METHOD <init> (Lok;)V
-		ARG 0 identifier
-	METHOD <init> (Lok;Ljava/util/Collection;Z)V
-		ARG 0 identifier
-		ARG 1 values
-		ARG 2 ordered
 	METHOD a contains (Ljava/lang/Object;)Z
-		ARG 0 value
 	METHOD a getRandomValue (Ljava/util/Random;)Ljava/lang/Object;
-		ARG 0 rand
-	METHOD c getKey ()Lok;
+	METHOD c getKey ()Lom;

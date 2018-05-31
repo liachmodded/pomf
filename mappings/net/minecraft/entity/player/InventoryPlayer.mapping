@@ -1,83 +1,49 @@
-CLASS arm net/minecraft/entity/player/InventoryPlayer
-	FIELD a main Lev;
-	FIELD b armor Lev;
-	FIELD c offHand Lev;
+CLASS arp net/minecraft/entity/player/InventoryPlayer
+	FIELD a main Lew;
+	FIELD b armor Lew;
+	FIELD c offHand Lew;
 	FIELD d selectedSlot I
-	FIELD e player Larn;
-	FIELD g cursorStack Lawm;
-	METHOD <init> (Larn;)V
-		ARG 0 player
-	METHOD N_ getNameAsComponent ()Lid;
-	METHOD O_ hasCustomName ()Z
-	METHOD P_ isInvEmpty ()Z
-	METHOD T_ getInvSize ()I
-	METHOD a getInvStack (I)Lawm;
-		ARG 0 slot
-	METHOD a takeInvStack (II)Lawm;
-		ARG 0 slot
-		ARG 1 amount
-	METHOD a setInvStack (ILawm;)V
-		ARG 0 slot
-		ARG 1 stack
-	METHOD a clone (Larm;)V
-	METHOD a canPlayerUseInv (Larn;)Z
-		ARG 0 player
-	METHOD a addPickBlock (Lawm;)V
-		ARG 0 stack
-	METHOD a canStackAddMore (Lawm;Lawm;)Z
-		ARG 0 existingStack
-		ARG 1 stackToAdd
-	METHOD a serialize (Lhb;)Lhb;
-		ARG 0 tag
-	METHOD b removeInvStack (I)Lawm;
-		ARG 0 slot
+	FIELD e player Larq;
+	FIELD g cursorStack Lawp;
+	METHOD O_ getNameAsComponent ()Lig;
+	METHOD P_ hasCustomName ()Z
+	METHOD Q_ isInvEmpty ()Z
+	METHOD U_ getInvSize ()I
+	METHOD a getInvStack (I)Lawp;
+	METHOD a takeInvStack (II)Lawp;
+	METHOD a setInvStack (ILawp;)V
+	METHOD a clone (Larp;)V
+	METHOD a canPlayerUseInv (Larq;)Z
+	METHOD a addPickBlock (Lawp;)V
+	METHOD a canStackAddMore (Lawp;Lawp;)Z
+	METHOD a serialize (Lhd;)Lhd;
+	METHOD b removeInvStack (I)Lawp;
 	METHOD b setInvProperty (II)V
-		ARG 0 pos
-		ARG 1 value
-	METHOD b isValidInvStack (ILawm;)Z
-		ARG 0 slot
-		ARG 1 stack
-	METHOD b onInvOpen (Larn;)V
-		ARG 0 player
-	METHOD b getSlotWithStack (Lawm;)I
-		ARG 0 stack
-	METHOD b areItemsEqual (Lawm;Lawm;)Z
-		ARG 0 stack1
-		ARG 1 stack2
-	METHOD b deserialize (Lhb;)V
-		ARG 0 list
+	METHOD b isValidInvStack (ILawp;)Z
+	METHOD b onInvOpen (Larq;)V
+	METHOD b getSlotWithStack (Lawp;)I
+	METHOD b areItemsEqual (Lawp;Lawp;)Z
+	METHOD b deserialize (Lhd;)V
 	METHOD c getInvProperty (I)I
-		ARG 0 pos
-	METHOD c insertStack (ILawm;)Z
-		ARG 0 slot
-		ARG 1 stack
-	METHOD c onInvClose (Larn;)V
-		ARG 0 player
+	METHOD c insertStack (ILawp;)Z
+	METHOD c onInvClose (Larq;)V
 	METHOD d swapSlotWithHotbar (I)V
-		ARG 0 slot
-	METHOD d getOccupiedSlotWithRoomForStack (Lawm;)I
-		ARG 0 stack
-	METHOD e getTextComponent ()Lid;
+	METHOD d getOccupiedSlotWithRoomForStack (Lawp;)I
+	METHOD e getTextComponent ()Lig;
 	METHOD e isValidHotbarIndex (I)Z
-		ARG 0 slot
-	METHOD e insertStack (Lawm;)Z
-		ARG 0 stack
+	METHOD e insertStack (Lawp;)Z
 	METHOD f getInvMaxStackAmount ()I
-	METHOD f getArmorStack (I)Lawm;
-		ARG 0 slot
-	METHOD f removeOne (Lawm;)V
-		ARG 0 item
+	METHOD f getArmorStack (I)Lawp;
+	METHOD f removeOne (Lawp;)V
 	METHOD g markDirty ()V
-	METHOD g setCursorStack (Lawm;)V
-		ARG 0 stack
+	METHOD g setCursorStack (Lawp;)V
 	METHOD h getInvPropertyCount ()I
-	METHOD i getMainHandStack ()Lawm;
-	METHOD i addStack (Lawm;)I
-		ARG 0 stack
+	METHOD i getMainHandStack ()Lawp;
+	METHOD i addStack (Lawp;)I
 	METHOD j getHotbarSize ()I
 	METHOD k getEmptySlot ()I
 	METHOD l getSwappableHotbarSlot ()I
 	METHOD m clearInv ()V
 	METHOD p updateItems ()V
 	METHOD q dropAll ()V
-	METHOD s getCursorStack ()Lawm;
+	METHOD s getCursorStack ()Lawp;

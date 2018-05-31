@@ -1,100 +1,39 @@
-CLASS cvl net/minecraft/client/render/Renderer
+CLASS cwe net/minecraft/client/render/Renderer
 	FIELD A ticks I
 	FIELD B partiallyBrokenBlocks Ljava/util/Map;
-	FIELD E framebuffer Lcvr;
-	FIELD X chunkLayerRenderer Lcvb;
+	FIELD E framebuffer Lcwk;
+	FIELD X chunkLayerRenderer Lcvu;
 	FIELD Y renderDistance I
 	FIELD aa totalEntities I
 	FIELD ab renderedEntities I
 	FIELD ah vertexBufferObjectsEnabled Z
 	FIELD b LOGGER Lorg/apache/logging/log4j/Logger;
-	FIELD c MOON_PHASES_TEX Lok;
-	FIELD d SUN_TEX Lok;
-	FIELD e CLOUDS_TEX Lok;
-	FIELD f END_SKY_TEX Lok;
-	FIELD g FORCEFIELD_TEX Lok;
-	FIELD h game Lchv;
-	FIELD i textureManager Ldez;
-	FIELD j entityRenderManager Ldaa;
-	FIELD k world Lcso;
-	METHOD <init> (Lchv;)V
-		ARG 0 game
+	FIELD c MOON_PHASES_TEX Lom;
+	FIELD d SUN_TEX Lom;
+	FIELD e CLOUDS_TEX Lom;
+	FIELD f END_SKY_TEX Lom;
+	FIELD g FORCEFIELD_TEX Lom;
+	FIELD h game Lcio;
+	FIELD i textureManager Ldfs;
+	FIELD j entityRenderManager Ldat;
+	FIELD k world Lcth;
 	METHOD a markRegionForRenderUpdate (IIIIII)V
 	METHOD a markRegionForRenderUpdate (IIIIIIZ)V
-	METHOD a onGlobalWorldEvent (ILeg;I)V
-		ARG 0 eventId
-		ARG 1 pos
-		ARG 2 data
-	METHOD a onEntityAdded (Lahz;)V
-		ARG 0 entity
-	METHOD a (Lahz;F)V
-		ARG 0 entity
-	METHOD a (Lahz;FLcyl;IZ)V
-		ARG 0 entity
-	METHOD a renderEntities (Lahz;Lcyl;F)V
-		ARG 0 cameraEntity
-	METHOD a onWorldEvent (Larn;ILeg;I)V
-		ARG 0 player
-		ARG 1 eventId
-		ARG 2 pos
-		ARG 3 data
-	METHOD a onSound (Larn;Lvp;Lvr;DDDFF)V
-		ARG 0 player
-		ARG 1 sound
-		ARG 2 category
-		ARG 3 x
-		ARG 4 y
-		ARG 5 z
-		ARG 6 volume
-		ARG 7 pitch
-	METHOD a onBlockUpdate (Lbar;Leg;Lbob;Lbob;I)V
-		ARG 1 pos
-		ARG 4 flags
-	METHOD a renderChunkLayer (Lbas;)V
-	METHOD a (Lbas;DLahz;)I
-		ARG 2 entity
-	METHOD a (Lcuy;DDDDDDFFFF)V
-		ARG 0 builder
-	METHOD a (Lcuy;DDDLcgi;)V
-		ARG 0 builder
-	METHOD a renderPartiallyBrokenBlocks (Lcvs;Lcuy;Lahz;F)V
-		ARG 0 tesselator
-		ARG 1 buffer
-		ARG 2 cameraEntity
-		ARG 3 deltaTicks
-	METHOD a (Lfh;DDDDDD)V
-		ARG 0 type
-		ARG 1 x
-		ARG 2 y
-		ARG 3 z
-		ARG 4 velocityX
-		ARG 5 velocityY
-	METHOD a addParticle (Lfh;ZDDDDDD)V
-		ARG 1 ignoreCameraBounds
-		ARG 2 x
-		ARG 3 y
-		ARG 4 z
-		ARG 5 velocityX
-		ARG 6 velocityY
-	METHOD a addParticle (Lfh;ZZDDDDDD)V
-	METHOD a onResourceReload (Lum;)V
-		ARG 0 container
-	METHOD b onBlockBreakingProgress (ILeg;I)V
-		ARG 0 entityId
-		ARG 1 pos
-		ARG 2 progress
-	METHOD b onEntityRemoved (Lahz;)V
-		ARG 0 entity
-	METHOD b (Lcuy;DDDDDDFFFF)V
-		ARG 0 builder
-	METHOD b spawnParticle (Lfh;ZDDDDDD)Lctu;
-		ARG 1 ignoreCameraBounds
-		ARG 2 x
-		ARG 3 y
-		ARG 4 z
-		ARG 5 velocityX
-		ARG 6 velocityY
-	METHOD b spawnParticle (Lfh;ZZDDDDDD)Lctu;
+	METHOD a onGlobalWorldEvent (ILeh;I)V
+	METHOD a onEntityAdded (Laic;)V
+	METHOD a renderEntities (Laic;Lcze;F)V
+	METHOD a onWorldEvent (Larq;ILeh;I)V
+	METHOD a onSound (Larq;Lvr;Lvt;DDDFF)V
+	METHOD a onBlockUpdate (Lbau;Leh;Lboe;Lboe;I)V
+	METHOD a renderChunkLayer (Lbav;)V
+	METHOD a renderPartiallyBrokenBlocks (Lcwl;Lcvr;Laic;F)V
+	METHOD a addParticle (Lfi;ZDDDDDD)V
+	METHOD a addParticle (Lfi;ZZDDDDDD)V
+	METHOD a onResourceReload (Luo;)V
+	METHOD b onBlockBreakingProgress (ILeh;I)V
+	METHOD b onEntityRemoved (Laic;)V
+	METHOD b spawnParticle (Lfi;ZDDDDDD)Lcun;
+	METHOD b spawnParticle (Lfi;ZZDDDDDD)Lcun;
 	METHOD c drawFramebuffer ()V
 	METHOD g getChunkNumber ()I
 	METHOD h getEntitiesDebugString ()Ljava/lang/String;

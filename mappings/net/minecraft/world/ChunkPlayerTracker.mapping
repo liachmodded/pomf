@@ -1,40 +1,25 @@
-CLASS sr net/minecraft/world/ChunkPlayerTracker
+CLASS st net/minecraft/world/ChunkPlayerTracker
 	FIELD a LOGGER Lorg/apache/logging/log4j/Logger;
-	FIELD b owner Lss;
+	FIELD b owner Lsu;
 	FIELD c players Ljava/util/List;
-	FIELD d pos Lbat;
+	FIELD d pos Lbaw;
 	FIELD e pendingUpdatePosCache [S
-	FIELD f chunk Lbpr;
+	FIELD f chunk Lbqj;
 	FIELD g pendingUpdates I
 	FIELD h pendingUpdateStrips I
 	FIELD j initialized Z
-	METHOD <init> (Lss;II)V
-		ARG 0 owner
-		ARG 1 chunkX
-		ARG 2 chunkZ
-	METHOD a getChunkPos ()Lbat;
+	METHOD a getChunkPos ()Lbaw;
 	METHOD a matches (DLjava/util/function/Predicate;)Z
-		ARG 0 maxDistance
 	METHOD a markBlockDirty (III)V
-		ARG 0 x
-		ARG 1 y
-		ARG 2 z
-	METHOD a sendBlockEntityUpdate (Lbmh;)V
-		ARG 0 blockEntity
-	METHOD a sendPacket (Liq;)V
-		ARG 0 packet
-	METHOD a addPlayer (Lsm;)V
-		ARG 0 player
+	METHOD a sendBlockEntityUpdate (Lbmk;)V
+	METHOD a sendPacket (Lis;)V
+	METHOD a addPlayer (Lso;)V
 	METHOD a loadChunk (Z)Z
-		ARG 0 generate
 	METHOD b initialize ()Z
-	METHOD b removePlayer (Lsm;)V
-		ARG 0 player
-	METHOD c sendChunkData (Lsm;)V
-		ARG 0 player
+	METHOD b removePlayer (Lso;)V
+	METHOD c sendChunkData (Lso;)V
 	METHOD d sendPendingUpdates ()V
-	METHOD d contains (Lsm;)Z
-		ARG 0 player
+	METHOD d contains (Lso;)Z
 	METHOD e isInitialized ()Z
-	METHOD f getChunk ()Lbpr;
+	METHOD f getChunk ()Lbqj;
 	METHOD g getClosestDistanceToCenter ()D

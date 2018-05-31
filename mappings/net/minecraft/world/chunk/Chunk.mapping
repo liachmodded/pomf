@@ -1,69 +1,44 @@
-CLASS bpr net/minecraft/world/chunk/Chunk
-	CLASS bpr$a CreationMode
-		FIELD a IMMEDIATE Lbpr$a;
-		FIELD b QUEUED Lbpr$a;
-		FIELD c CHECK Lbpr$a;
-	FIELD D state Lbpm;
+CLASS bqj net/minecraft/world/chunk/Chunk
+	CLASS bqj$a CreationMode
+		FIELD a IMMEDIATE Lbqj$a;
+		FIELD b QUEUED Lbqj$a;
+		FIELD c CHECK Lbqj$a;
+	FIELD D state Lbqe;
 	FIELD E neighborCount I
-	FIELD a EMPTY_SECTION Lbps;
+	FIELD a EMPTY_SECTION Lbqk;
 	FIELD b chunkX I
 	FIELD c chunkZ I
 	FIELD e LOGGER Lorg/apache/logging/log4j/Logger;
-	FIELD f sections [Lbps;
-	FIELD g biomes [Lbbx;
+	FIELD f sections [Lbqk;
+	FIELD g biomes [Lbca;
 	FIELD j loaded Z
-	FIELD k world Lbbd;
+	FIELD k world Lbbg;
 	FIELD o blockEntities Ljava/util/Map;
-	FIELD p entitySections [Lwl;
+	FIELD p entitySections [Lwn;
 	FIELD q structures Ljava/util/Map;
 	METHOD A getBlockEntities ()Ljava/util/Map;
-	METHOD B getEntitySections ()[Lwl;
+	METHOD B getEntitySections ()[Lwn;
 	METHOD J addToCache ()V
 	METHOD K removeFromCache ()V
 	METHOD L areNeighborsLoaded ()Z
-	METHOD a getBlockState (III)Lbob;
-		ARG 0 x
-		ARG 1 y
-		ARG 2 z
-	METHOD a addEntity (Lahz;)V
-	METHOD a getLight (Lbbm;Leg;)I
-	METHOD a setLight (Lbbm;Leg;I)V
-	METHOD a getLight (Lbbm;Leg;Z)I
-	METHOD a setLight (Lbbm;ZLeg;I)V
-	METHOD a addBlockEntity (Lbmh;)V
-	METHOD a setState (Lbpm;)V
-	METHOD a getSkyLight (Leg;I)I
-	METHOD a getSkyLight (Leg;IZ)I
-	METHOD a setBlockEntity (Leg;Lbmh;)V
-	METHOD a deserialize (Lhu;IZ)V
-	METHOD a getStructure (Ljava/lang/String;)Lbzj;
+	METHOD a getBlockState (III)Lboe;
+	METHOD a getLight (Lbbp;Leh;)I
+	METHOD a setLight (Lbbp;Leh;I)V
+	METHOD a addBlockEntity (Lbmk;)V
+	METHOD a getSkyLight (Leh;I)I
+	METHOD a deserialize (Lhw;IZ)V
 	METHOD a setStructures (Ljava/util/Map;)V
-	METHOD a setSections ([Lbps;)V
-	METHOD a_ getBlockState (Leg;)Lbob;
-		ARG 0 pos
-	METHOD b getFluidState (III)Lcbd;
-		ARG 0 x
-		ARG 1 y
-		ARG 2 z
-	METHOD b getFluidState (Leg;)Lcbd;
-		ARG 0 pos
-	METHOD c getSections ()[Lbps;
+	METHOD a setSections ([Lbqk;)V
+	METHOD a_ getBlockState (Leh;)Lboe;
+	METHOD b getFluidState (III)Lcbw;
+	METHOD b getFluidState (Leh;)Lcbw;
 	METHOD c setState (Ljava/lang/String;)V
-	METHOD d getChunkPos ()Lbat;
-	METHOD d (III)I
-		ARG 0 x
-		ARG 1 y
-		ARG 2 z
-	METHOD d removeBlockEntity (Leg;)V
 	METHOD e getStructures ()Ljava/util/Map;
 	METHOD e setLoaded (Z)V
-	METHOD f getBlockEntity (Leg;)Lbmh;
-		ARG 0 pos
-	METHOD g getBiomes ()[Lbbx;
+	METHOD f getBlockEntity (Leh;)Lbmk;
 	METHOD g recheckGaps (Z)V
-	METHOD i getState ()Lbpm;
-	METHOD j getBiome (Leg;)Lbbx;
+	METHOD i getBiome (Leh;)Lbca;
 	METHOD o load ()V
 	METHOD p unload ()V
 	METHOD x isLoaded ()Z
-	METHOD y getWorld ()Lbbd;
+	METHOD y getWorld ()Lbbg;

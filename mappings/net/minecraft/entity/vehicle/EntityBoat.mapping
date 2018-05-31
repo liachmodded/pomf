@@ -1,54 +1,34 @@
-CLASS asq net/minecraft/entity/vehicle/EntityBoat
-	CLASS asq$a
-		FIELD a IN_WATER Lasq$a;
-		FIELD b UNDER_WATER Lasq$a;
-		FIELD c UNDER_FLOWING_WATER Lasq$a;
-		FIELD d ON_LAND Lasq$a;
-		FIELD e IN_AIR Lasq$a;
-	CLASS asq$b BoatType
-		FIELD a OAK Lasq$b;
-		FIELD b SPRUCE Lasq$b;
-		FIELD c BIRCH Lasq$b;
-		FIELD d JUNGLE Lasq$b;
-		FIELD e ACACIA Lasq$b;
-		FIELD f DARK_OAK Lasq$b;
+CLASS ast net/minecraft/entity/vehicle/EntityBoat
+	CLASS ast$a
+		FIELD a IN_WATER Last$a;
+		FIELD b UNDER_WATER Last$a;
+		FIELD c UNDER_FLOWING_WATER Last$a;
+		FIELD d ON_LAND Last$a;
+		FIELD e IN_AIR Last$a;
+	CLASS ast$b BoatType
+		FIELD a OAK Last$b;
+		FIELD b SPRUCE Last$b;
+		FIELD c BIRCH Last$b;
+		FIELD d JUNGLE Last$b;
+		FIELD e ACACIA Last$b;
+		FIELD f DARK_OAK Last$b;
 		FIELD g name Ljava/lang/String;
 		METHOD a getName ()Ljava/lang/String;
-		METHOD a getType (I)Lasq$b;
-		METHOD a getType (Ljava/lang/String;)Lasq$b;
-	FIELD d BOAT_TYPE Lnz;
-	METHOD <init> (Lbbd;DDD)V
-		ARG 0 world
-		ARG 1 x
-		ARG 2 y
-		ARG 3 z
-	METHOD R_ update ()V
+		METHOD a getType (I)Last$b;
+		METHOD a getType (Ljava/lang/String;)Last$b;
+	FIELD d BOAT_TYPE Lob;
+	METHOD S_ update ()V
 	METHOD a setPositionAndRotations (DDDFFIZ)V
-		ARG 0 x
-		ARG 1 y
-		ARG 2 z
-		ARG 3 yaw
-		ARG 4 pitch
-	METHOD a damage (Lahi;F)Z
-		ARG 0 source
-		ARG 1 damage
-	METHOD a copyEntityData (Lahz;)V
-		ARG 0 entity
-	METHOD a setBoatType (Lasq$b;)V
-		ARG 0 value
-	METHOD a deserializeCustomData (Lgv;)V
-		ARG 0 tag
+	METHOD a damage (Lahl;F)Z
+	METHOD a copyEntityData (Laic;)V
+	METHOD a setBoatType (Last$b;)V
+	METHOD a deserializeCustomData (Lgx;)V
 	METHOD aD doesCollide ()Z
 	METHOD aL getMountedHeightOffset ()D
-	METHOD b interact (Larn;Lags;)Z
-		ARG 0 player
-		ARG 1 hand
-	METHOD b serializeCustomData (Lgv;)V
-		ARG 0 tag
-	METHOD f asItem ()Lawi;
-	METHOD i pushAwayFrom (Lahz;)V
-		ARG 0 other
-	METHOD p getBoatType ()Lasq$b;
-	METHOD q canAddPassenger (Lahz;)Z
-		ARG 0 entity
-	METHOD w_ initDataTracker ()V
+	METHOD b interact (Larq;Lagv;)Z
+	METHOD b serializeCustomData (Lgx;)V
+	METHOD f asItem ()Lawl;
+	METHOD i pushAwayFrom (Laic;)V
+	METHOD p getBoatType ()Last$b;
+	METHOD q canAddPassenger (Laic;)Z
+	METHOD x_ initDataTracker ()V
