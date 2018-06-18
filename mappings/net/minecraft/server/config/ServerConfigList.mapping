@@ -1,19 +1,19 @@
-CLASS vc net/minecraft/server/config/ServerConfigList
-	CLASS vc$a EntryDeSerializer
-		METHOD a deserialize (Lcom/google/gson/JsonElement;Ljava/lang/reflect/Type;Lcom/google/gson/JsonDeserializationContext;)Lvb;
-		METHOD a serialize (Lvb;Ljava/lang/reflect/Type;Lcom/google/gson/JsonSerializationContext;)Lcom/google/gson/JsonElement;
+CLASS vd net/minecraft/server/config/ServerConfigList
+	CLASS vd$a EntryDeSerializer
+		METHOD a deserialize (Lcom/google/gson/JsonElement;Ljava/lang/reflect/Type;Lcom/google/gson/JsonDeserializationContext;)Lvc;
+		METHOD a serialize (Lvc;Ljava/lang/reflect/Type;Lcom/google/gson/JsonSerializationContext;)Lcom/google/gson/JsonElement;
 	FIELD a LOGGER Lorg/apache/logging/log4j/Logger;
 	FIELD b gson Lcom/google/gson/Gson;
 	FIELD c file Ljava/io/File;
 	FIELD d entries Ljava/util/Map;
 	FIELD e allowEdit Z
 	METHOD a getNames ()[Ljava/lang/String;
-	METHOD a createEntryFromJson (Lcom/google/gson/JsonObject;)Lvb;
+	METHOD a createEntryFromJson (Lcom/google/gson/JsonObject;)Lvc;
 	METHOD a getStringKey (Ljava/lang/Object;)Ljava/lang/String;
-	METHOD a add (Lvb;)V
+	METHOD a add (Lvc;)V
 	METHOD a setAllowEdit (Z)V
 	METHOD b getAllowEdit ()Z
-	METHOD b get (Ljava/lang/Object;)Lvb;
+	METHOD b get (Ljava/lang/Object;)Lvc;
 	METHOD c getFile ()Ljava/io/File;
 	METHOD c remove (Ljava/lang/Object;)V
 	METHOD d isEmpty ()Z

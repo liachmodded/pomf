@@ -1,53 +1,53 @@
-CLASS cvr net/minecraft/client/render/BufferBuilder
-	CLASS cvr$a BufferState
+CLASS cvw net/minecraft/client/render/BufferBuilder
+	CLASS cvw$a BufferState
 		FIELD b rawBuffer [I
-		FIELD c format Ldgb;
+		FIELD c format Ldgi;
 		METHOD a getRawBuffer ()[I
 		METHOD b getVertexCount ()I
-		METHOD c getFormat ()Ldgb;
+		METHOD c getFormat ()Ldgi;
 	FIELD a LOGGER Lorg/apache/logging/log4j/Logger;
 	FIELD b bufByte Ljava/nio/ByteBuffer;
 	FIELD c bufInt Ljava/nio/IntBuffer;
 	FIELD d bufShort Ljava/nio/ShortBuffer;
 	FIELD e bufFloat Ljava/nio/FloatBuffer;
 	FIELD f vertexes I
-	FIELD g currentElement Ldgc;
+	FIELD g currentElement Ldgj;
 	FIELD h currentElementId I
 	FIELD i drawNoColor Z
 	FIELD j drawMode I
 	FIELD k offsetX D
 	FIELD l offsetY D
 	FIELD m offsetZ D
-	FIELD n format Ldgb;
+	FIELD n format Ldgi;
 	FIELD o building Z
-	METHOD a getState ()Lcvr$a;
-	METHOD a texture (DD)Lcvr;
+	METHOD a getState ()Lcvw$a;
+	METHOD a texture (DD)Lcvw;
 	METHOD a putPosition (DDD)V
-	METHOD a color (FFFF)Lcvr;
+	METHOD a color (FFFF)Lcvw;
 	METHOD a putColorMultipliers (FFFI)V
-	METHOD a texture (II)Lcvr;
+	METHOD a texture (II)Lcvw;
 	METHOD a putBrightness (IIII)V
-	METHOD a begin (ILdgb;)V
-	METHOD a restoreState (Lcvr$a;)V
+	METHOD a begin (ILdgi;)V
+	METHOD a restoreState (Lcvw$a;)V
 	METHOD a getDistanceSq (Ljava/nio/FloatBuffer;FFFII)F
 	METHOD a putVertexData ([I)V
 	METHOD b clear ()V
-	METHOD b pos (DDD)Lcvr;
+	METHOD b pos (DDD)Lcvw;
 	METHOD b putNormal (FFF)V
 	METHOD b putColor (FFFI)V
 	METHOD b growBuffer (I)V
 	METHOD b putColor (II)V
-	METHOD b color (IIII)Lcvr;
+	METHOD b color (IIII)Lcvw;
 	METHOD c drawNoColor ()V
 	METHOD c setOffset (DDD)V
-	METHOD c normal (FFF)Lcvr;
+	METHOD c normal (FFF)Lcvw;
 	METHOD c getColorIndex (I)I
 	METHOD c putColor (IIII)V
 	METHOD d endVertex ()V
 	METHOD d putColor (FFF)V
 	METHOD e end ()V
 	METHOD f getByteBuffer ()Ljava/nio/ByteBuffer;
-	METHOD g getVertexFormat ()Ldgb;
+	METHOD g getVertexFormat ()Ldgi;
 	METHOD h getVertexCount ()I
 	METHOD i getDrawMode ()I
 	METHOD j getCurrentSize ()I

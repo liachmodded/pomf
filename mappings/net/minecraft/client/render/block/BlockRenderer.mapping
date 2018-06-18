@@ -1,55 +1,53 @@
-CLASS cwv net/minecraft/client/render/block/BlockRenderer
-	CLASS cwv$a NeighborData
-		FIELD a DOWN Lcwv$a;
-		FIELD b UP Lcwv$a;
-		FIELD c NORTH Lcwv$a;
-		FIELD d SOUTH Lcwv$a;
-		FIELD e WEST Lcwv$a;
-		FIELD f EAST Lcwv$a;
-		FIELD g faces [Len;
+CLASS cxc net/minecraft/client/render/block/BlockRenderer
+	CLASS cxc$a NeighborData
+		FIELD a DOWN Lcxc$a;
+		FIELD b UP Lcxc$a;
+		FIELD c NORTH Lcxc$a;
+		FIELD d SOUTH Lcxc$a;
+		FIELD e WEST Lcxc$a;
+		FIELD f EAST Lcxc$a;
+		FIELD g faces [Leo;
 		FIELD h nonCubicWeight Z
-		FIELD m VALUES [Lcwv$a;
-		METHOD a getData (Len;)Lcwv$a;
-	CLASS cwv$b AmbientOcclusionCalculator
+		METHOD a getData (Leo;)Lcxc$a;
+	CLASS cxc$b AmbientOcclusionCalculator
 		FIELD b colorMultiplier [F
 		FIELD c brightness [I
 		METHOD a getAmbientOcclusionBrightness (IIII)I
 		METHOD a getBrightness (IIIIFFFF)I
-		METHOD a apply (Lbbm;Lboe;Leh;Len;[FLjava/util/BitSet;)V
-	CLASS cwv$c Translation
-		FIELD a DOWN Lcwv$c;
-		FIELD b UP Lcwv$c;
-		FIELD c NORTH Lcwv$c;
-		FIELD d SOUTH Lcwv$c;
-		FIELD e WEST Lcwv$c;
-		FIELD f EAST Lcwv$c;
+		METHOD a apply (Lbbp;Lboh;Lei;Leo;[FLjava/util/BitSet;)V
+	CLASS cxc$c Translation
+		FIELD a DOWN Lcxc$c;
+		FIELD b UP Lcxc$c;
+		FIELD c NORTH Lcxc$c;
+		FIELD d SOUTH Lcxc$c;
+		FIELD e WEST Lcxc$c;
+		FIELD f EAST Lcxc$c;
 		FIELD g firstCorner I
 		FIELD h secondCorner I
 		FIELD i thirdCorner I
 		FIELD j fourthCorner I
-		FIELD k VALUES [Lcwv$c;
-		METHOD a getTranslations (Len;)Lcwv$c;
-	CLASS cwv$d NeighborOrientation
-		FIELD a DOWN Lcwv$d;
-		FIELD b UP Lcwv$d;
-		FIELD c NORTH Lcwv$d;
-		FIELD d SOUTH Lcwv$d;
-		FIELD e WEST Lcwv$d;
-		FIELD f EAST Lcwv$d;
-		FIELD g FLIP_DOWN Lcwv$d;
-		FIELD h FLIP_UP Lcwv$d;
-		FIELD i FLIP_NORTH Lcwv$d;
-		FIELD j FLIP_SOUTH Lcwv$d;
-		FIELD k FLIP_WEST Lcwv$d;
-		FIELD l FLIP_EAST Lcwv$d;
+		METHOD a getTranslations (Leo;)Lcxc$c;
+	CLASS cxc$d NeighborOrientation
+		FIELD a DOWN Lcxc$d;
+		FIELD b UP Lcxc$d;
+		FIELD c NORTH Lcxc$d;
+		FIELD d SOUTH Lcxc$d;
+		FIELD e WEST Lcxc$d;
+		FIELD f EAST Lcxc$d;
+		FIELD g FLIP_DOWN Lcxc$d;
+		FIELD h FLIP_UP Lcxc$d;
+		FIELD i FLIP_NORTH Lcxc$d;
+		FIELD j FLIP_SOUTH Lcxc$d;
+		FIELD k FLIP_WEST Lcxc$d;
+		FIELD l FLIP_EAST Lcxc$d;
 		FIELD m shape I
-	FIELD a colorMap Lcja;
+	FIELD a colorMap Lcjf;
 	METHOD a renderQuad (FFFFLjava/util/List;)V
-	METHOD a tesselateQuadsFlat (Lbbm;Lboe;Leh;IZLcvr;Ljava/util/List;Ljava/util/BitSet;)V
-	METHOD a tesselateQuadsSmooth (Lbbm;Lboe;Leh;Lcvr;Ljava/util/List;[FLjava/util/BitSet;Lcwv$b;)V
-	METHOD a render (Lboe;Ldhd;FFFF)V
-	METHOD a updateShape (Lboe;[ILen;[FLjava/util/BitSet;)V
-	METHOD a render (Ldhd;FFFF)V
-	METHOD a render (Ldhd;Lboe;FZ)V
-	METHOD b tesselateSmooth (Lbbm;Ldhd;Lboe;Leh;Lcvr;ZLjava/util/Random;J)Z
-	METHOD c tesselateFlat (Lbbm;Ldhd;Lboe;Leh;Lcvr;ZLjava/util/Random;J)Z
+	METHOD a tesselateQuadsFlat (Lbbp;Lboh;Lei;IZLcvw;Ljava/util/List;Ljava/util/BitSet;)V
+	METHOD a tesselateQuadsSmooth (Lbbp;Lboh;Lei;Lcvw;Ljava/util/List;[FLjava/util/BitSet;Lcxc$b;)V
+	METHOD a render (Lboh;Ldhk;FFFF)V
+	METHOD a updateShape (Lboh;[ILeo;[FLjava/util/BitSet;)V
+	METHOD a render (Ldhk;FFFF)V
+	METHOD a render (Ldhk;Lboh;FZ)V
+	METHOD b tesselateSmooth (Lbbp;Ldhk;Lboh;Lei;Lcvw;ZLjava/util/Random;J)Z
+	METHOD c tesselateFlat (Lbbp;Ldhk;Lboh;Lei;Lcvw;ZLjava/util/Random;J)Z

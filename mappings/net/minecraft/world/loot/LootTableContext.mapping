@@ -1,35 +1,35 @@
-CLASS cfo net/minecraft/world/loot/LootTableContext
-	CLASS cfo$a Builder
-		FIELD a world Lsm;
+CLASS cft net/minecraft/world/loot/LootTableContext
+	CLASS cft$a Builder
+		FIELD a world Lsn;
 		FIELD b luck F
-		FIELD c lootedEntity Laic;
-		FIELD d player Larq;
-		FIELD e damageSource Lahl;
-		METHOD a build ()Lcfo;
-		METHOD a setLuck (F)Lcfo$a;
-		METHOD a setDamageSource (Lahl;)Lcfo$a;
-		METHOD a setLootedEntity (Laic;)Lcfo$a;
-		METHOD a setPlayer (Larq;)Lcfo$a;
-	CLASS cfo$b Target
-		CLASS cfo$b$a DeSerializer
-			METHOD a deserialize (Lcom/google/gson/stream/JsonReader;)Lcfo$b;
-			METHOD a serialize (Lcom/google/gson/stream/JsonWriter;Lcfo$b;)V
-		FIELD a THIS Lcfo$b;
-		FIELD b KILLER Lcfo$b;
-		FIELD c KILLER_PLAYER Lcfo$b;
+		FIELD c lootedEntity Laif;
+		FIELD d player Lart;
+		FIELD e damageSource Laho;
+		METHOD a build ()Lcft;
+		METHOD a setLuck (F)Lcft$a;
+		METHOD a setDamageSource (Laho;)Lcft$a;
+		METHOD a setLootedEntity (Laif;)Lcft$a;
+		METHOD a setPlayer (Lart;)Lcft$a;
+	CLASS cft$b Target
+		CLASS cft$b$a DeSerializer
+			METHOD a deserialize (Lcom/google/gson/stream/JsonReader;)Lcft$b;
+			METHOD a serialize (Lcom/google/gson/stream/JsonWriter;Lcft$b;)V
+		FIELD a THIS Lcft$b;
+		FIELD b KILLER Lcft$b;
+		FIELD c KILLER_PLAYER Lcft$b;
 		FIELD d type Ljava/lang/String;
-		METHOD a fromString (Ljava/lang/String;)Lcfo$b;
+		METHOD a fromString (Ljava/lang/String;)Lcft$b;
 	FIELD a luck F
-	FIELD c lootTableHandler Lcfq;
-	FIELD d lootedEntity Laic;
-	FIELD e player Larq;
-	FIELD f source Lahl;
+	FIELD c lootTableHandler Lcfv;
+	FIELD d lootedEntity Laif;
+	FIELD e player Lart;
+	FIELD f source Laho;
 	FIELD h lootTables Ljava/util/Set;
-	METHOD a getLootedEntity ()Laic;
-	METHOD a addLootTable (Lcfn;)Z
-	METHOD a getTargetEntity (Lcfo$b;)Laic;
-	METHOD b getKillerPlayer ()Laic;
-	METHOD b removeLootTable (Lcfn;)V
-	METHOD c getKiller ()Laic;
-	METHOD f getLootTableHandler ()Lcfq;
+	METHOD a getLootedEntity ()Laif;
+	METHOD a addLootTable (Lcfs;)Z
+	METHOD a getTargetEntity (Lcft$b;)Laif;
+	METHOD b getKillerPlayer ()Laif;
+	METHOD b removeLootTable (Lcfs;)V
+	METHOD c getKiller ()Laif;
+	METHOD f getLootTableHandler ()Lcfv;
 	METHOD g getLuck ()F
