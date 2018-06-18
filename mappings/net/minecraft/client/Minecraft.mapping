@@ -1,5 +1,7 @@
 CLASS cit net/minecraft/client/Minecraft
+	FIELD D fullscreen Z
 	FIELD E LOGGER Lorg/apache/logging/log4j/Logger;
+	FIELD F resourcePacksFolder Ljava/io/File;
 	FIELD G sessionPropertyMap Lcom/mojang/authlib/properties/PropertyMap;
 	FIELD I currentServerEntry Lctp;
 	FIELD J textureManager Ldfz;
@@ -43,11 +45,14 @@ CLASS cit net/minecraft/client/Minecraft
 	FIELD ao is64Bit Z
 	FIELD ap isDemo Z
 	FIELD as resourceManager Lun;
+	FIELD at downloadingPackFinder Ldgm;
+	FIELD au resourcePacks Luh;
 	FIELD av languageManager Ldgw;
 	FIELD aw blockColorMap Lcjf;
 	FIELD ax itemColorMap Lcji;
 	FIELD ay framebuffer Lcwr;
 	FIELD az spriteAtlas Ldfx;
+	FIELD b memoryReserve [B
 	FIELD c playerCapabilities Lctl;
 	FIELD d mainWindow Lcjd;
 	FIELD e world Lctm;
@@ -65,12 +70,17 @@ CLASS cit net/minecraft/client/Minecraft
 	FIELD v runDirectory Ljava/io/File;
 	FIELD x profiler Lxd;
 	FIELD y fpsDebugString Ljava/lang/String;
+	METHOD <init> (Lcpx;)V
+		ARG 0 runArgs
 	METHOD A getSnooper ()Lahi;
 	METHOD C getSession ()Lcja;
 	METHOD D getSessionProperties ()Lcom/mojang/authlib/properties/PropertyMap;
 	METHOD E getNetworkProxy ()Ljava/net/Proxy;
 	METHOD F getTextureManager ()Ldfz;
 	METHOD G getResourceManager ()Lup;
+	METHOD H getResourcePacks ()Luh;
+	METHOD I getDownloadingResourcePackFinder ()Ldgm;
+	METHOD J getResourcePacksFolder ()Ljava/io/File;
 	METHOD K getLanguageManager ()Ldgw;
 	METHOD L getSpriteAtlas ()Ldfx;
 	METHOD M is64Bit ()Z
@@ -94,11 +104,13 @@ CLASS cit net/minecraft/client/Minecraft
 	METHOD a setCurrentServerEntry (Lctp;)V
 	METHOD a scheduleOnMainThread (Ljava/lang/Runnable;)Lcom/google/common/util/concurrent/ListenableFuture;
 	METHOD a startIntegratedServer (Ljava/lang/String;Ljava/lang/String;Lbbo;)V
+	METHOD aa isConnectedToRealms ()Z
 	METHOD ab getMigrationHandler ()Lxp;
 	METHOD ac getTickDelta ()F
 	METHOD ae getBlockColorMap ()Lcjf;
 	METHOD ag hasReducedDebugInfo ()Z
 	METHOD ah getToastGui ()Lclb;
+	METHOD ai getTutorial ()Ldjp;
 	METHOD aj isFullscreen ()Z
 	METHOD am init ()V
 	METHOD ao checkIs64Bit ()Z
