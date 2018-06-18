@@ -1,16 +1,10 @@
-CLASS ty net/minecraft/resource/pack/VanillaResourcePack
-	FIELD b resourceDomains Ljava/util/Set;
-	FIELD c LOGGER Lorg/apache/logging/log4j/Logger;
-	METHOD <init> ([Ljava/lang/String;)V
-		ARG 0 domains
+CLASS tv net/minecraft/resource/IResourcePack
 	METHOD a getName ()Ljava/lang/String;
 	METHOD a getResourceDomains (Ltw;)Ljava/util/Set;
 		ARG 0 type
 	METHOD a listFiles (Ltw;Ljava/lang/String;ILjava/util/function/Predicate;)Ljava/util/Collection;
 		ARG 0 type
 		ARG 1 path
-		ARG 2 bs
-		ARG 3 predicate
 	METHOD a open (Ltw;Lon;)Ljava/io/InputStream;
 		ARG 0 type
 		ARG 1 identifier
@@ -21,5 +15,3 @@ CLASS ty net/minecraft/resource/pack/VanillaResourcePack
 	METHOD b resourceExists (Ltw;Lon;)Z
 		ARG 0 type
 		ARG 1 identifier
-	METHOD c (Ltw;Lon;)Ljava/io/InputStream;
-		ARG 0 type

@@ -7,10 +7,15 @@ CLASS um net/minecraft/resource/ResourceContainer
 	FIELD b LOGGER Lorg/apache/logging/log4j/Logger;
 	FIELD c metadataDeserializer Ltw;
 	METHOD a getProvidedAssets ()Ljava/util/Set;
+	METHOD a listFiles (Ljava/lang/String;Ljava/util/function/Predicate;)Ljava/util/Collection;
+		ARG 0 path
+		ARG 1 predicate
 	METHOD a getResource (Lon;)Luo;
+		ARG 0 identifier
 	METHOD a open (Lon;Ltv;)Ljava/io/InputStream;
 	METHOD a add (Ltv;)V
 	METHOD b getLogger ()Lorg/apache/logging/log4j/Logger;
 	METHOD b getAllResources (Lon;)Ljava/util/List;
+		ARG 0 identifier
 	METHOD c getMetadataLocation (Lon;)Lon;
 	METHOD d validateLocation (Lon;)V
