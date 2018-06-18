@@ -1,17 +1,23 @@
-CLASS bhr
+CLASS bfw net/minecraft/block/BlockBed
 	METHOD a getDefaultState (Lauy;)Lboh;
 	METHOD a createBlockEntity (Lbax;)Lbmn;
+	METHOD a onEntityLand (Lbax;Laif;)V
 	METHOD a getBlockFaceShape (Lbax;Lboh;Lei;Leo;)Lbog;
+	METHOD a afterBreak (Lbbj;Lart;Lei;Lboh;Lbmn;Laws;)V
+		ARG 1 player
+	METHOD a onLandedUpon (Lbbj;Lei;Laif;F)V
+		ARG 0 world
+	METHOD a onPlaced (Lbbj;Lei;Lboh;Laio;Laws;)V
+		ARG 0 world
+		ARG 1 pos
+	METHOD a onBreak (Lbbj;Lei;Lboh;Lart;)V
 	METHOD a isFullBlock (Lboh;)Z
 	METHOD a getDroppedItem (Lboh;Lbbj;Lei;I)Lbbi;
 	METHOD a onActivated (Lboh;Lbbj;Lei;Lart;Lagy;Leo;FFF)Z
-	METHOD a withMirror (Lboh;Lbje;)Lboh;
-	METHOD a withRotation (Lboh;Lbkh;)Lboh;
 	METHOD a onBlockUpdate (Lboh;Leo;Lboh;Lbbk;Lei;Lei;)Lboh;
-	METHOD a getDropAmount (Lboh;Ljava/util/Random;)I
 	METHOD a addStateProperties (Lboj$a;)V
 	METHOD b getBoundingBox (Lboh;Lbax;Lei;)Lchx;
+	METHOD c getRenderLayer ()Lbay;
 	METHOD c getRenderType (Lboh;)Lbke;
-	METHOD c randomDisplayTick (Lboh;Lbbj;Lei;Ljava/util/Random;)V
-	METHOD j canSilkHarvest ()Z
-	METHOD t getFluidState (Lboh;)Lccb;
+	METHOD d getMapColor (Lboh;Lbax;Lei;)Lccg;
+	METHOD i getPistonBehavior (Lboh;)Lcch;

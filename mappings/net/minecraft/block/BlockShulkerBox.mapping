@@ -2,10 +2,14 @@ CLASS bko net/minecraft/block/BlockShulkerBox
 	FIELD b color Lavq;
 	METHOD a getDefaultState (Lauy;)Lboh;
 	METHOD a addTooltip (Laws;Lbax;Ljava/util/List;Laya;)V
+		ARG 0 stack
+		ARG 3 flag
 	METHOD a createBlockEntity (Lbax;)Lbmn;
 	METHOD a getBlockFaceShape (Lbax;Lboh;Lei;Leo;)Lbog;
 	METHOD a getPickItemStack (Lbax;Lei;Lboh;)Laws;
 	METHOD a onPlaced (Lbbj;Lei;Lboh;Laio;Laws;)V
+		ARG 0 world
+		ARG 1 pos
 	METHOD a onBreak (Lbbj;Lei;Lboh;Lart;)V
 	METHOD a isFullBlock (Lboh;)Z
 	METHOD a getComparatorOutput (Lboh;Lbbj;Lei;)I
@@ -14,6 +18,7 @@ CLASS bko net/minecraft/block/BlockShulkerBox
 	METHOD a onBlockRemoved (Lboh;Lbbj;Lei;Lboh;)V
 	METHOD a withMirror (Lboh;Lbje;)Lboh;
 	METHOD a withRotation (Lboh;Lbkh;)Lboh;
+		ARG 0 state
 	METHOD a addStateProperties (Lboj$a;)V
 	METHOD b getColor ()Lavq;
 	METHOD b getColor (Lawo;)Lavq;
