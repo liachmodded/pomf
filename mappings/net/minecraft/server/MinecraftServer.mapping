@@ -24,28 +24,28 @@ CLASS net/minecraft/server/MinecraftServer
 	FIELD U authService Lcom/mojang/authlib/yggdrasil/YggdrasilAuthenticationService;
 	FIELD V sessionService Lcom/mojang/authlib/minecraft/MinecraftSessionService;
 	FIELD W gameProfileRepo Lcom/mojang/authlib/GameProfileRepository;
-	FIELD X userCache Luv;
+	FIELD X userCache Lux;
 	FIELD Z serverThread Ljava/lang/Thread;
 	FIELD a USER_CACHE_FILE Ljava/io/File;
 	FIELD aa serverStartTime J
 	FIELD ab iconFilePresent Z
-	FIELD ac resourceManager Lun;
-	FIELD ad resourcePacks Luh;
-	FIELD ae datapacks Luf;
-	FIELD b profiler Lxd;
-	FIELD c worlds [Lsn;
+	FIELD ac resourceManager Lup;
+	FIELD ad resourcePacks Luj;
+	FIELD ae datapacks Luh;
+	FIELD b profiler Lxf;
+	FIELD c worlds [Lsp;
 	FIELD e lastTickLengths [J
 	FIELD g jobs Ljava/util/Queue;
 	FIELD h LOGGER Lorg/apache/logging/log4j/Logger;
-	FIELD j snooper Lahi;
+	FIELD j snooper Lahq;
 	FIELD k gameDir Ljava/io/File;
 	FIELD l tickables Ljava/util/List;
-	FIELD m serverNetworkManager Ltl;
-	FIELD n serverMetadata Lnx;
+	FIELD m serverNetworkManager Ltn;
+	FIELD n serverMetadata Lnz;
 	FIELD o rand Ljava/util/Random;
 	FIELD q serverIp Ljava/lang/String;
 	FIELD r serverPort I
-	FIELD s serverConfigurationManager Luz;
+	FIELD s serverConfigurationManager Lvb;
 	FIELD t running Z
 	FIELD u stopped Z
 	FIELD v ticks I
@@ -63,7 +63,7 @@ CLASS net/minecraft/server/MinecraftServer
 	METHOD L getServerName ()Ljava/lang/String;
 	METHOD M isMonsterSpawningEnabled ()Z
 	METHOD N isDemo ()Z
-	METHOD O getLevelStorage ()Lcfg;
+	METHOD O getLevelStorage ()Lcfp;
 	METHOD P getResourcePackUrl ()Ljava/lang/String;
 	METHOD Q getResourcePackHash ()Ljava/lang/String;
 	METHOD T isOnlineMode ()Z
@@ -72,15 +72,15 @@ CLASS net/minecraft/server/MinecraftServer
 	METHOD W shouldSpawnNpcs ()Z
 	METHOD X isUsingNativeTransport ()Z
 	METHOD Z isFlightEnabled ()Z
-	METHOD a getWorld (I)Lsn;
-	METHOD a setDifficulty (Lagw;)V
-	METHOD a addSnooperInfo (Lahi;)V
-	METHOD a setDefaultGameMode (Lbbg;)V
+	METHOD a getWorld (I)Lsp;
+	METHOD a setDifficulty (Lahe;)V
+	METHOD a addSnooperInfo (Lahq;)V
+	METHOD a setDefaultGameMode (Lbbo;)V
 	METHOD a scheduleOnMainThread (Ljava/lang/Runnable;)Lcom/google/common/util/concurrent/ListenableFuture;
 	METHOD a convertSave (Ljava/lang/String;)V
 	METHOD a setKeyPair (Ljava/security/KeyPair;)V
 	METHOD a scheduleOnMainThread (Ljava/util/concurrent/Callable;)Lcom/google/common/util/concurrent/ListenableFuture;
-	METHOD a setConfigurationManager (Luz;)V
+	METHOD a setConfigurationManager (Lvb;)V
 	METHOD a saveWorlds (Z)V
 	METHOD aA getServerStartTime ()J
 	METHOD aB getMainThread ()Ljava/lang/Thread;
@@ -90,18 +90,18 @@ CLASS net/minecraft/server/MinecraftServer
 	METHOD ab getServerMotd ()Ljava/lang/String;
 	METHOD ac getWorldHeight ()I
 	METHOD ad isStopped ()Z
-	METHOD ae getConfigurationManager ()Luz;
-	METHOD ag getServerNetworkManager ()Ltl;
+	METHOD ae getConfigurationManager ()Lvb;
+	METHOD ag getServerNetworkManager ()Ltn;
 	METHOD ai hasGui ()Z
 	METHOD aj getTicks ()I
-	METHOD al getSnooper ()Lahi;
+	METHOD al getSnooper ()Lahq;
 	METHOD an getSpawnProtectionRadius ()I
 	METHOD aq getCurrentTimeMillis ()J
 	METHOD ar getPlayerIdleTimeout ()I
 	METHOD as getSessionService ()Lcom/mojang/authlib/minecraft/MinecraftSessionService;
 	METHOD at getGameProfileRepo ()Lcom/mojang/authlib/GameProfileRepository;
-	METHOD au getUserCache ()Luv;
-	METHOD av getServerMetadata ()Lnx;
+	METHOD au getUserCache ()Lux;
+	METHOD av getServerMetadata ()Lnz;
 	METHOD ax getMaxWorldBorderRadius ()I
 	METHOD ay isMainThread ()Z
 	METHOD az getNetworkCompressionThreshold ()I
@@ -124,11 +124,11 @@ CLASS net/minecraft/server/MinecraftServer
 	METHOD g log (Ljava/lang/String;)V
 	METHOD g setSpawnNpcs (Z)V
 	METHOD g_ generateTerrain ()V
-	METHOD h getDefaultGameMode ()Lbbg;
+	METHOD h getDefaultGameMode ()Lbbo;
 	METHOD h setUserName (Ljava/lang/String;)V
 	METHOD h setPvpEnabled (Z)V
 	METHOD h_ shutdown ()V
-	METHOD i getDefaultDifficulty ()Lagw;
+	METHOD i getDefaultDifficulty ()Lahe;
 	METHOD i setLevelName (Ljava/lang/String;)V
 	METHOD i setFlightEnabled (Z)V
 	METHOD j isHardcore ()Z

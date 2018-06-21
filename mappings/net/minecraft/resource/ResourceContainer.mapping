@@ -1,21 +1,17 @@
-CLASS um net/minecraft/resource/ResourceContainer
-	CLASS um$a DebugInputStream
+CLASS uo net/minecraft/resource/ResourceContainer
+	CLASS uo$a DebugInputStream
 		FIELD a stream Ljava/io/InputStream;
 		FIELD b warningMessage Ljava/lang/String;
 		FIELD c isClosed Z
 	FIELD a packs Ljava/util/List;
 	FIELD b LOGGER Lorg/apache/logging/log4j/Logger;
-	FIELD c metadataDeserializer Ltw;
+	FIELD c metadataDeserializer Lty;
 	METHOD a getProvidedAssets ()Ljava/util/Set;
 	METHOD a listFiles (Ljava/lang/String;Ljava/util/function/Predicate;)Ljava/util/Collection;
-		ARG 0 path
-		ARG 1 predicate
-	METHOD a getResource (Lon;)Luo;
-		ARG 0 identifier
-	METHOD a open (Lon;Ltv;)Ljava/io/InputStream;
-	METHOD a add (Ltv;)V
+	METHOD a getResource (Lop;)Luq;
+	METHOD a open (Lop;Ltx;)Ljava/io/InputStream;
+	METHOD a add (Ltx;)V
 	METHOD b getLogger ()Lorg/apache/logging/log4j/Logger;
-	METHOD b getAllResources (Lon;)Ljava/util/List;
-		ARG 0 identifier
-	METHOD c getMetadataLocation (Lon;)Lon;
-	METHOD d validateLocation (Lon;)V
+	METHOD b getAllResources (Lop;)Ljava/util/List;
+	METHOD c getMetadataLocation (Lop;)Lop;
+	METHOD d validateLocation (Lop;)V

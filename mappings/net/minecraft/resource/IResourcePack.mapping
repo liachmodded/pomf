@@ -1,17 +1,8 @@
-CLASS tv net/minecraft/resource/IResourcePack
+CLASS tx net/minecraft/resource/IResourcePack
 	METHOD a getName ()Ljava/lang/String;
-	METHOD a getResourceDomains (Ltw;)Ljava/util/Set;
-		ARG 0 type
-	METHOD a listFiles (Ltw;Ljava/lang/String;ILjava/util/function/Predicate;)Ljava/util/Collection;
-		ARG 0 type
-		ARG 1 path
-	METHOD a open (Ltw;Lon;)Ljava/io/InputStream;
-		ARG 0 type
-		ARG 1 identifier
-	METHOD a getPackMetadata (Ltz;)Ljava/lang/Object;
-		ARG 0 jsonDeserialiser
+	METHOD a getResourceDomains (Lty;)Ljava/util/Set;
+	METHOD a listFiles (Lty;Ljava/lang/String;ILjava/util/function/Predicate;)Ljava/util/Collection;
+	METHOD a open (Lty;Lop;)Ljava/io/InputStream;
+	METHOD a getPackMetadata (Lub;)Ljava/lang/Object;
 	METHOD b getInputStream (Ljava/lang/String;)Ljava/io/InputStream;
-		ARG 0 location
-	METHOD b resourceExists (Ltw;Lon;)Z
-		ARG 0 type
-		ARG 1 identifier
+	METHOD b resourceExists (Lty;Lop;)Z

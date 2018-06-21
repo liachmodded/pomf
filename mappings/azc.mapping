@@ -1,5 +1,12 @@
 CLASS azc
-	METHOD a matches (Lags;Lbbj;)Z
-	METHOD b getIdentifier ()Lon;
-	METHOD d getOutput ()Laws;
-	METHOD e getPreviewInputs ()Lex;
+	CLASS azc$a SingleStack
+		FIELD a sourceStack Laxa;
+		METHOD a getStackCollection ()Ljava/util/Collection;
+		METHOD b getAsJSON ()Lcom/google/gson/JsonObject;
+	CLASS azc$b TagSource
+		FIELD a sourceTag Lwl;
+		METHOD a getStackCollection ()Ljava/util/Collection;
+		METHOD b getAsJSON ()Lcom/google/gson/JsonObject;
+	CLASS azc$c SerializableSource
+		METHOD a getStackCollection ()Ljava/util/Collection;
+		METHOD b getAsJSON ()Lcom/google/gson/JsonObject;

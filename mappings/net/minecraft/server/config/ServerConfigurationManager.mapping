@@ -1,12 +1,12 @@
-CLASS uz net/minecraft/server/config/ServerConfigurationManager
-	CLASS uz$1
-		METHOD a onSetSize (Lbqa;D)V
-		METHOD a onSetCenter (Lbqa;DD)V
-		METHOD a onInterpolateSize (Lbqa;DDJ)V
-		METHOD a onSetWarningTime (Lbqa;I)V
-		METHOD b onSetDamagePerBlock (Lbqa;D)V
-		METHOD b onSetWarningBlocks (Lbqa;I)V
-		METHOD c onSetSafeZone (Lbqa;D)V
+CLASS vb net/minecraft/server/config/ServerConfigurationManager
+	CLASS vb$1
+		METHOD a onSetSize (Lbqi;D)V
+		METHOD a onSetCenter (Lbqi;DD)V
+		METHOD a onInterpolateSize (Lbqi;DDJ)V
+		METHOD a onSetWarningTime (Lbqi;I)V
+		METHOD b onSetDamagePerBlock (Lbqi;D)V
+		METHOD b onSetWarningBlocks (Lbqi;I)V
+		METHOD c onSetSafeZone (Lbqi;D)V
 	FIELD a BANNED_PLAYERS_FILE Ljava/io/File;
 	FIELD b BANNED_IPS_FILE Ljava/io/File;
 	FIELD c OPS_FILE Ljava/io/File;
@@ -17,51 +17,51 @@ CLASS uz net/minecraft/server/config/ServerConfigurationManager
 	FIELD h server Lnet/minecraft/server/MinecraftServer;
 	FIELD i players Ljava/util/List;
 	FIELD j playerMap Ljava/util/Map;
-	FIELD k bannedProfiles Lve;
-	FIELD l bannedIps Luw;
-	FIELD m operators Lva;
-	FIELD n whitelist Lvg;
+	FIELD k bannedProfiles Lvg;
+	FIELD l bannedIps Luy;
+	FIELD m operators Lvc;
+	FIELD n whitelist Lvi;
 	FIELD o statisticsMap Ljava/util/Map;
-	FIELD q playerSaveHandler Lcfk;
+	FIELD q playerSaveHandler Lcft;
 	FIELD r whitelistEnabled Z
 	FIELD s viewDistance I
-	FIELD t gameMode Lbbg;
+	FIELD t gameMode Lbbo;
 	FIELD u cheatsAllowed Z
 	FIELD v latencyUpdateTimer I
 	METHOD a reloadWhitelist ()V
 	METHOD a setViewDistance (I)V
-	METHOD a getStatManager (Lart;)Lvy;
-	METHOD a sendToAllPlayersInRange (Lart;DDDDILit;)V
-	METHOD a setGameMode (Lbbg;)V
+	METHOD a getStatManager (Lasb;)Lwa;
+	METHOD a sendToAllPlayersInRange (Lasb;DDDDILit;)V
+	METHOD a setGameMode (Lbbo;)V
 	METHOD a addToOperators (Lcom/mojang/authlib/GameProfile;)V
-	METHOD a handlePlayerLogin (Lhv;Lsp;)V
+	METHOD a handlePlayerLogin (Lhv;Lsr;)V
 	METHOD a sendServerMessage (Lih;)V
 	METHOD a sendChatMessage (Lih;Z)V
 	METHOD a sendToAll (Lit;)V
 	METHOD a sendToWorld (Lit;I)V
-	METHOD a getPlayerByName (Ljava/lang/String;)Lsp;
-	METHOD a getPlayer (Ljava/util/UUID;)Lsp;
-	METHOD a respawn (Lsp;IZ)Lsp;
+	METHOD a getPlayerByName (Ljava/lang/String;)Lsr;
+	METHOD a getPlayer (Ljava/util/UUID;)Lsr;
+	METHOD a respawn (Lsr;IZ)Lsr;
 	METHOD a setWhitelistEnabled (Z)V
-	METHOD a onWorldInit ([Lsn;)V
+	METHOD a onWorldInit ([Lsp;)V
 	METHOD b removeFromOperators (Lcom/mojang/authlib/GameProfile;)V
 	METHOD b getPlayersByIp (Ljava/lang/String;)Ljava/util/List;
-	METHOD b savePlayerData (Lsp;)V
-	METHOD b sendPermissionLevel (Lsp;I)V
+	METHOD b savePlayerData (Lsr;)V
+	METHOD b sendPermissionLevel (Lsr;I)V
 	METHOD c getServer ()Lnet/minecraft/server/MinecraftServer;
 	METHOD c setCheatsAllowed (Z)V
 	METHOD e updatePlayerLatency ()V
 	METHOD e isWhitelisted (Lcom/mojang/authlib/GameProfile;)Z
 	METHOD f getPlayerNames ()[Ljava/lang/String;
 	METHOD f canBypassPlayerLimit (Lcom/mojang/authlib/GameProfile;)Z
-	METHOD f sendPermissionLevel (Lsp;)V
-	METHOD h getBannedProfiles ()Lve;
+	METHOD f sendPermissionLevel (Lsr;)V
+	METHOD h getBannedProfiles ()Lvg;
 	METHOD h isOperator (Lcom/mojang/authlib/GameProfile;)Z
-	METHOD i getBannedIps ()Luw;
+	METHOD i getBannedIps ()Luy;
 	METHOD j saveAllPlayerData ()V
-	METHOD k getWhitelist ()Lvg;
+	METHOD k getWhitelist ()Lvi;
 	METHOD l getWhitelistedNames ()[Ljava/lang/String;
-	METHOD m getOperators ()Lva;
+	METHOD m getOperators ()Lvc;
 	METHOD n getOppedNames ()[Ljava/lang/String;
 	METHOD o getCurrentPlayerCount ()I
 	METHOD p getMaxPlayerCount ()I

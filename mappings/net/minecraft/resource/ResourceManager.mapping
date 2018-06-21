@@ -1,18 +1,12 @@
-CLASS ur net/minecraft/resource/ResourceManager
+CLASS ut net/minecraft/resource/ResourceManager
 	FIELD a LOGGER Lorg/apache/logging/log4j/Logger;
 	FIELD c listeners Ljava/util/List;
 	FIELD d providedAssets Ljava/util/Set;
 	METHOD a getProvidedAssets ()Ljava/util/Set;
 	METHOD a listFiles (Ljava/lang/String;Ljava/util/function/Predicate;)Ljava/util/Collection;
-		ARG 0 path
-		ARG 1 predicate
 	METHOD a reload (Ljava/util/List;)V
-		ARG 0 packs
-	METHOD a getResource (Lon;)Luo;
-		ARG 0 identifier
-	METHOD a registerListener (Luq;)V
-		ARG 0 listener
-	METHOD b getAllResources (Lon;)Ljava/util/List;
-		ARG 0 identifier
-	METHOD b invokeListener (Luq;)Ljava/lang/String;
+	METHOD a getResource (Lop;)Luq;
+	METHOD a registerListener (Lus;)V
+	METHOD b getAllResources (Lop;)Ljava/util/List;
+	METHOD b invokeListener (Lus;)Ljava/lang/String;
 	METHOD d invokeListeners ()V

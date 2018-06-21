@@ -1,24 +1,24 @@
-CLASS wj net/minecraft/tag/Tag
-	CLASS wj$a Builder
+CLASS wl net/minecraft/tag/Tag
+	CLASS wl$a Builder
 		FIELD a tagEntries Ljava/util/Set;
-		METHOD a makeBuilder ()Lwj$a;
-		METHOD a addTagEntry (Lwj$b;)Lwj$a;
-	CLASS wj$b ITagEntry
+		METHOD a makeBuilder ()Lwl$a;
+		METHOD a addTagEntry (Lwl$b;)Lwl$a;
+	CLASS wl$b ITagEntry
 		METHOD a serialize (Lcom/google/gson/JsonArray;Ljava/util/function/Function;)V
 		METHOD a build (Ljava/util/Collection;)V
-	CLASS wj$c TagEntry
-		FIELD a identifier Lon;
-		FIELD b tag Lwj;
-		METHOD a serialize ()Lon;
+	CLASS wl$c TagEntry
+		FIELD a identifier Lop;
+		FIELD b tag Lwl;
+		METHOD a serialize ()Lop;
 		METHOD a serialize (Lcom/google/gson/JsonArray;Ljava/util/function/Function;)V
 		METHOD a build (Ljava/util/Collection;)V
-	CLASS wj$d ListEntry
+	CLASS wl$d ListEntry
 		FIELD a list Ljava/util/Collection;
 		METHOD a serialize (Lcom/google/gson/JsonArray;Ljava/util/function/Function;)V
 		METHOD a build (Ljava/util/Collection;)V
-	FIELD a key Lon;
+	FIELD a key Lop;
 	FIELD b values Ljava/util/Set;
 	FIELD c tagEntries Ljava/util/Collection;
 	METHOD a contains (Ljava/lang/Object;)Z
 	METHOD a getRandomValue (Ljava/util/Random;)Ljava/lang/Object;
-	METHOD c getKey ()Lon;
+	METHOD c getKey ()Lop;
