@@ -69,8 +69,8 @@ task downloadVersionsManifest {
 
 task downloadWantedVersionManifest(dependsOn: downloadVersionsManifest){
   def manifestFile = downloadVersionsManifest.outputs.files.singleFile
-  def manifest = new JsonSlurper().parseText(FileUtils.readFileToString(manifestFile))
-  def manifestVersion = manifest.versions.stream().filter({ it.id.equals(minecraft_version) }).findFirst()
+  def manifest = manifestFile.exists() ? new JsonSlurper().parseText(FileUtils.readFileToString(manifestFile)) : null
+  def manifestVersion = manifest != null ? manifest.versions.stream().filter({ it.id.equals(minecraft_version) }).findFirst() : java.util.Optional.empty()
 
   //have to grab the release time as there's a current timestamp on each element?!
   inputs.property "releaseTime",  manifestVersion.isPresent() ? manifestVersion.get().releaseTime : -1
