@@ -78,6 +78,8 @@ task downloadWantedVersionManifest(dependsOn: downloadVersionsManifest){
   outputs.file versionFile
 
   doLast {
+    manifest = manifestFile.exists() ? new JsonSlurper().parseText(FileUtils.readFileToString(manifestFile)) : null
+    manifestVersion = manifest != null ? manifest.versions.stream().filter({ it.id.equals(minecraft_version) }).findFirst() : java.util.Optional.empty()
     if (manifestVersion.isPresent() || versionFile.exists()) {
 
       if (manifestVersion.isPresent())
