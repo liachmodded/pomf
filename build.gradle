@@ -67,10 +67,14 @@ task downloadVersionsManifest {
   }
 }
 
+def getManifestVersion(File manifestFile, String minecraft_version){
+  def manifest = manifestFile.exists() ? new JsonSlurper().parseText(FileUtils.readFileToString(manifestFile)) : null
+  return manifest != null ? manifest.versions.stream().filter({ it.id.equals(minecraft_version) }).findFirst() : java.util.Optional.empty()
+}
+
 task downloadWantedVersionManifest(dependsOn: downloadVersionsManifest){
   def manifestFile = downloadVersionsManifest.outputs.files.singleFile
-  def manifest = manifestFile.exists() ? new JsonSlurper().parseText(FileUtils.readFileToString(manifestFile)) : null
-  def manifestVersion = manifest != null ? manifest.versions.stream().filter({ it.id.equals(minecraft_version) }).findFirst() : java.util.Optional.empty()
+  def manifestVersion = getManifestVersion(manifestFile, minecraft_version)
 
   //have to grab the release time as there's a current timestamp on each element?!
   inputs.property "releaseTime",  manifestVersion.isPresent() ? manifestVersion.get().releaseTime : -1
@@ -78,8 +82,7 @@ task downloadWantedVersionManifest(dependsOn: downloadVersionsManifest){
   outputs.file versionFile
 
   doLast {
-    manifest = manifestFile.exists() ? new JsonSlurper().parseText(FileUtils.readFileToString(manifestFile)) : null
-    manifestVersion = manifest != null ? manifest.versions.stream().filter({ it.id.equals(minecraft_version) }).findFirst() : java.util.Optional.empty()
+    manifestVersion = getManifestVersion(manifestFile, minecraft_version)//nb need to re-read here in case it didn't exist before
     if (manifestVersion.isPresent() || versionFile.exists()) {
 
       if (manifestVersion.isPresent())
