@@ -11,8 +11,14 @@ CLASS cdm net/minecraft/world/gen/LayerUtil
 	FIELD j DEEP_FROZEN_OCEAN_ID I
 	METHOD a isOcean (I)Z
 		ARG 0 biomeId
+	METHOD a areBiomesSimilar (II)Z
 	METHOD a createDefaultProcedure (JLbby;Lbsh;)[Lcdl;
-	METHOD a create (JLceb;Lccv;ILjava/util/function/LongFunction;)Lccv;
+	METHOD a scale (JLceb;Lccv;ILjava/util/function/LongFunction;)Lccv;
 	METHOD a createDefaultProcedure (Lbby;Lbsh;Ljava/util/function/LongFunction;)Lcom/google/common/collect/ImmutableList;
+		ARG 2 contextSupplier
+		ARG 3 producer
+		ARG 4 oceanTemperatureProducer
+		ARG 7 riverProducer
+		ARG 8 terrainLayer
 	METHOD b isShallowOcean (I)Z
-		ARG 0 boimeId
+		ARG 0 biomeId

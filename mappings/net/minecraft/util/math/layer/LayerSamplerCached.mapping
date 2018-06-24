@@ -1,5 +1,5 @@
-CLASS ccw net/minecraft/util/math/layer/CachedLayerSampler
-	FIELD a layer Lcek;
+CLASS ccw net/minecraft/util/math/layer/LayerSamplerCached
+	FIELD a generator Lcek;
 	FIELD b cache Lit/unimi/dsi/fastutil/longs/Long2IntLinkedOpenHashMap;
 	FIELD c cacheCapacity I
 	FIELD d window Lccu;
@@ -7,11 +7,12 @@ CLASS ccw net/minecraft/util/math/layer/CachedLayerSampler
 		ARG 0 cache
 		ARG 1 cacheCapacity
 		ARG 2 window
+		ARG 3 generator
 	METHOD a getCacheCapacity ()I
 	METHOD a sample (II)I
 		ARG 0 x
-		ARG 1 z
+		ARG 1 y
 		ARG 2 cachePos
 	METHOD b getCachePos (II)J
 		ARG 0 x
-		ARG 1 z
+		ARG 1 y
