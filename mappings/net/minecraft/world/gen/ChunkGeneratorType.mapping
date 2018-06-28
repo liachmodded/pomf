@@ -1,6 +1,31 @@
 CLASS bqo net/minecraft/world/gen/ChunkGeneratorType
+	CLASS bqo$a ChunkGenerators
+		FIELD a REGISTRY Lew;
+		FIELD b SURFACE Lbqo$a;
+		FIELD c CAVES Lbqo$a;
+		FIELD d FLOATING_ISLANDS Lbqo$a;
+		FIELD e DEBUG Lbqo$a;
+		FIELD f FLAT Lbqo$a;
+		FIELD g generator Ljava/util/function/Supplier;
+		METHOD <init> (Ljava/util/function/Supplier;)V
+			ARG 0 config
+		METHOD a register (Ljava/lang/String;Ljava/util/function/Supplier;)Lbqo$a;
+			ARG 0 identifier
+			ARG 1 config
+			ARG 2 chunkGen
+	FIELD a REGISTRY Lew;
 	FIELD b SURFACE Lbqo;
 	FIELD c CAVES Lbqo;
 	FIELD d FLOATING_ISLANDS Lbqo;
 	FIELD e DEBUG Lbqo;
 	FIELD f FLAT Lbqo;
+	FIELD g identifier Lop;
+	METHOD <init> (Lbqn;ZLbqo$a;Lop;)V
+	METHOD a getChunkGenSettings ()Lbrz;
+	METHOD a register (Ljava/lang/String;Lbqn;Lbqo$a;Z)Lbqo;
+		ARG 0 registryName
+		ARG 4 identifier
+	METHOD create (Lbbr;Lbcn;Lbrz;)Lbql;
+		ARG 0 world
+		ARG 1 biomeSource
+		ARG 2 config
