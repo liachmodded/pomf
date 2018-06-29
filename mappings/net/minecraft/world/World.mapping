@@ -1,5 +1,5 @@
-CLASS bbr net/minecraft/world/World
-	FIELD A profiler Lxf;
+CLASS axc net/minecraft/world/World
+	FIELD A profiler Lxl;
 	FIELD B isRemote Z
 	FIELD C spawnMonsters Z
 	FIELD D spawnAnimals Z
@@ -7,7 +7,7 @@ CLASS bbr net/minecraft/world/World
 	FIELD G unusedWhite J
 	FIELD H ambientDarkness I
 	FIELD J tickingBlockEntities Z
-	FIELD K border Lbqi;
+	FIELD K border Lblt;
 	FIELD b seaLevel I
 	FIELD c pendingBlockEntities Ljava/util/List;
 	FIELD d LOGGER Lorg/apache/logging/log4j/Logger;
@@ -17,7 +17,7 @@ CLASS bbr net/minecraft/world/World
 	FIELD h tickingBlockEntities Ljava/util/List;
 	FIELD i players Ljava/util/List;
 	FIELD j globalEntities Ljava/util/List;
-	FIELD k entitiesById Lwz;
+	FIELD k entitiesById Lxg;
 	FIELD l randomLocationSeed I
 	FIELD m unusedIncrement I
 	FIELD n rainGradientPrev F
@@ -25,117 +25,117 @@ CLASS bbr net/minecraft/world/World
 	FIELD p thunderGradientPrev F
 	FIELD q thunderGradient F
 	FIELD r rand Ljava/util/Random;
-	FIELD s provider Lbrp;
-	FIELD t pathingCoordinator Lamt;
+	FIELD s provider Lbna;
+	FIELD t pathingCoordinator Laie;
 	FIELD u listeners Ljava/util/List;
-	FIELD v chunkProvider Lbqp;
-	FIELD w saveHandler Lcfn;
-	FIELD x properties Lcfm;
-	FIELD z villageManager Lane;
-	METHOD E getPendingBlockEntity (Lei;)Lbmv;
-	METHOD F getChunkProvider ()Lbqp;
+	FIELD v chunkProvider Lbma;
+	FIELD w saveHandler Lcaz;
+	FIELD x properties Lcay;
+	FIELD z villageManager Laip;
+	METHOD E getPendingBlockEntity (Lei;)Lbig;
+	METHOD F getChunkProvider ()Lbma;
 	METHOD J isDaylight ()Z
 	METHOD L getEntityCountAsString ()Ljava/lang/String;
 	METHOD N updateAmbientDarkness ()V
 	METHOD O initWeatherGradients ()V
 	METHOD P getEntitiesToRender ()Ljava/util/List;
-	METHOD Q getGeneratorType ()Lbby;
+	METHOD Q getGeneratorType ()Laxj;
 	METHOD R quitClient ()V
 	METHOD S checkSessionLock ()V
 	METHOD T getTime ()J
 	METHOD U getTimeOfDay ()J
-	METHOD V getGameRules ()Lbbn;
+	METHOD V getGameRules ()Lawy;
 	METHOD X isRaining ()Z
 	METHOD Y getWorldHeight ()I
 	METHOD a isPlayerVisible (DDDD)Z
-	METHOD a playSound (DDDLvu;Lvw;FFZ)V
+	METHOD a playSound (DDDLwc;Lwe;FFZ)V
 	METHOD a calculateAmbientDarkness (F)I
-	METHOD a getEntityById (I)Lain;
+	METHOD a getEntityById (I)Lady;
 	METHOD a markRegionForRenderUpdate (IIIIII)V
 	METHOD a fireGlobalWorldEvent (ILei;I)V
 	METHOD a setTime (J)V
-	METHOD a spawnEntity (Lain;)Z
-	METHOD a createExplosion (Lain;DDDFZ)Lbbl;
-	METHOD a createExplosion (Lain;DDDFZZ)Lbbl;
-	METHOD a getEntitiesWithinAABB (Lain;Lchl;)Ljava/util/List;
-	METHOD a getEntitiesIn (Lain;Lchl;Ljava/util/function/Predicate;)Ljava/util/List;
-	METHOD a playSound (Lasb;DDDLvu;Lvw;FF)V
-	METHOD a fireWorldEvent (Lasb;ILei;I)V
-	METHOD a registerListener (Lbbu;)V
-	METHOD a init (Lbbw;)V
-	METHOD a setLight (Lbca;Lei;I)V
-	METHOD a addBlockEntity (Lbmv;)Z
-	METHOD a isAreaNotEmpty (Lchl;)Z
-	METHOD a rayTrace (Lchp;Lchp;)Lchm;
-	METHOD a rayTrace (Lchp;Lchp;Lchn;)Lchm;
-	METHOD a rayTrace (Lchp;Lchp;Lchn;ZZ)Lchm;
-	METHOD a addBlockAction (Lei;Lbgg;II)V
-	METHOD a updateBlock (Lei;Lbgg;Lei;)V
-	METHOD a updateNeighborsExcept (Lei;Lbgg;Leo;)V
-	METHOD a setBlockEntity (Lei;Lbmv;)V
-	METHOD a setBlockState (Lei;Lbop;)Z
-	METHOD a setBlockState (Lei;Lbop;I)Z
-	METHOD a updateListeners (Lei;Lbop;Lbop;I)V
+	METHOD a spawnEntity (Lady;)Z
+	METHOD a createExplosion (Lady;DDDFZ)Laww;
+	METHOD a createExplosion (Lady;DDDFZZ)Laww;
+	METHOD a getEntitiesWithinAABB (Lady;Lccx;)Ljava/util/List;
+	METHOD a getEntitiesIn (Lady;Lccx;Ljava/util/function/Predicate;)Ljava/util/List;
+	METHOD a playSound (Lanm;DDDLwc;Lwe;FF)V
+	METHOD a fireWorldEvent (Lanm;ILei;I)V
+	METHOD a registerListener (Laxf;)V
+	METHOD a init (Laxh;)V
+	METHOD a setLight (Laxl;Lei;I)V
+	METHOD a addBlockEntity (Lbig;)Z
+	METHOD a isAreaNotEmpty (Lccx;)Z
+	METHOD a rayTrace (Lcdb;Lcdb;)Lccy;
+	METHOD a rayTrace (Lcdb;Lcdb;Lccz;)Lccy;
+	METHOD a rayTrace (Lcdb;Lcdb;Lccz;ZZ)Lccy;
+	METHOD a addBlockAction (Lei;Lbbr;II)V
+	METHOD a updateBlock (Lei;Lbbr;Lei;)V
+	METHOD a updateNeighborsExcept (Lei;Lbbr;Leo;)V
+	METHOD a setBlockEntity (Lei;Lbig;)V
+	METHOD a setBlockState (Lei;Lbka;)Z
+	METHOD a setBlockState (Lei;Lbka;I)Z
+	METHOD a updateListeners (Lei;Lbka;Lbka;I)V
 	METHOD a markRegionForRenderUpdate (Lei;Lei;)V
 	METHOD a breakBlock (Lei;Z)Z
 	METHOD a sendPacket (Lit;)V
 	METHOD a countTransientEntities (Ljava/lang/Class;)I
-	METHOD a getVisibleEntitiesIn (Ljava/lang/Class;Lchl;)Ljava/util/List;
-	METHOD a getClosestVisibleEntityTo (Ljava/lang/Class;Lchl;Lain;)Lain;
-	METHOD a getEntitiesIn (Ljava/lang/Class;Lchl;Ljava/util/function/Predicate;)Ljava/util/List;
+	METHOD a getVisibleEntitiesIn (Ljava/lang/Class;Lccx;)Ljava/util/List;
+	METHOD a getClosestVisibleEntityTo (Ljava/lang/Class;Lccx;Lady;)Lady;
+	METHOD a getEntitiesIn (Ljava/lang/Class;Lccx;Ljava/util/function/Predicate;)Ljava/util/List;
 	METHOD a getEntities (Ljava/lang/Class;Ljava/util/function/Predicate;)Ljava/util/List;
-	METHOD a getPlayerByName (Ljava/lang/String;)Lasb;
+	METHOD a getPlayerByName (Ljava/lang/String;)Lanm;
 	METHOD a addEntities (Ljava/util/Collection;)V
 	METHOD a setSpawnEnabled (ZZ)V
-	METHOD a_ getBlockState (Lei;)Lbop;
-	METHOD ad getVillageManager ()Lane;
-	METHOD b getWorld ()Lbbs;
+	METHOD a_ getBlockState (Lei;)Lbka;
+	METHOD ad getVillageManager ()Laip;
+	METHOD b getWorld ()Laxd;
 	METHOD b setSeaLevel (I)V
 	METHOD b fireWorldEvent (ILei;I)V
 	METHOD b setTimeOfDay (J)V
-	METHOD b onEntityAdded (Lain;)V
-	METHOD b unregisterListener (Lbbu;)V
-	METHOD b getLight (Lbca;Lei;)I
-	METHOD b unloadBlockEntity (Lbmv;)V
-	METHOD b doesAreaContainFireSource (Lchl;)Z
-	METHOD b getFluidState (Lei;)Lcck;
-	METHOD b updateNeighbors (Lei;Lbgg;)V
-	METHOD b markDirty (Lei;Lbmv;)V
+	METHOD b onEntityAdded (Lady;)V
+	METHOD b unregisterListener (Laxf;)V
+	METHOD b getLight (Laxl;Lei;)I
+	METHOD b unloadBlockEntity (Lbig;)V
+	METHOD b doesAreaContainFireSource (Lccx;)Z
+	METHOD b getFluidState (Lei;)Lbxv;
+	METHOD b updateNeighbors (Lei;Lbbr;)V
+	METHOD b markDirty (Lei;Lbig;)V
 	METHOD b isEmittingRedstonePower (Lei;Leo;)Z
 	METHOD b getPlayers (Ljava/lang/Class;Ljava/util/function/Predicate;)Ljava/util/List;
 	METHOD b addBlockEntities (Ljava/util/Collection;)V
-	METHOD b getPlayerByUuid (Ljava/util/UUID;)Lasb;
+	METHOD b getPlayerByUuid (Ljava/util/UUID;)Lanm;
 	METHOD c setAmbientDarkness (I)V
-	METHOD c getChunk (II)Lbqk;
+	METHOD c getChunk (II)Lblv;
 	METHOD c setBlockBreakingProgress (ILei;I)V
-	METHOD c onEntityRemoved (Lain;)V
-	METHOD c updateHorizontalAdjacent (Lei;Lbgg;)V
+	METHOD c onEntityRemoved (Lady;)V
+	METHOD c updateHorizontalAdjacent (Lei;Lbbr;)V
 	METHOD c getEmittedRedstonePower (Lei;Leo;)I
 	METHOD c unloadEntities (Ljava/util/Collection;)V
-	METHOD d getChunk (II)Lbqw;
-	METHOD d addGlobalEntity (Lain;)Z
+	METHOD d getChunk (II)Lbmh;
+	METHOD d addGlobalEntity (Lady;)Z
 	METHOD f getChunkHeight (II)I
-	METHOD f getBlockEntity (Lei;)Lbmv;
+	METHOD f getBlockEntity (Lei;)Lbig;
 	METHOD g getThunderGradient (F)F
 	METHOD g isSpawnChunk (II)Z
 	METHOD g setBlockToAir (Lei;)Z
 	METHOD h setThunderGradient (F)V
-	METHOD i getWorldSaveHandler ()Lcfn;
+	METHOD i getWorldSaveHandler ()Lcaz;
 	METHOD i getRainGradient (F)F
-	METHOD i getTopNonAirState (Lei;)Lbop;
+	METHOD i getTopNonAirState (Lei;)Lbka;
 	METHOD i_ update ()V
 	METHOD j setRainGradient (F)V
 	METHOD j isValidPos (Lei;)Z
 	METHOD j_ updateSleepingStatus ()V
 	METHOD k isInvalidHeight (Lei;)Z
 	METHOD l updateEntities ()V
-	METHOD l getChunk (Lei;)Lbqw;
+	METHOD l getChunk (Lei;)Lbmh;
 	METHOD l_ setDefaultSpawnClient ()V
 	METHOD m getRandom ()Ljava/util/Random;
 	METHOD n removeBlockEntity (Lei;)V
 	METHOD n_ tickRandomBlocks ()V
-	METHOD p createChunkProvider ()Lbqp;
-	METHOD r_ getProperties ()Lcfm;
+	METHOD p createChunkProvider ()Lbma;
+	METHOD r_ getProperties ()Lcay;
 	METHOD s getReceivedStrongRedstonePower (Lei;)I
 	METHOD t isReceivingRedstonePower (Lei;)Z
 	METHOD u updateWeather ()V

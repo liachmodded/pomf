@@ -1,124 +1,123 @@
-CLASS cjc net/minecraft/client/Minecraft
+CLASS cep net/minecraft/client/Minecraft
 	FIELD D fullscreen Z
 	FIELD E LOGGER Lorg/apache/logging/log4j/Logger;
 	FIELD F resourcePacksFolder Ljava/io/File;
 	FIELD G sessionPropertyMap Lcom/mojang/authlib/properties/PropertyMap;
-	FIELD I currentServerEntry Lcty;
-	FIELD J textureManager Ldgd;
-	FIELD K instance Lcjc;
-	FIELD L migrationHandler Lxs;
-	FIELD M virtualScreen Lcjl;
+	FIELD I currentServerEntry Lcpl;
+	FIELD J textureManager Ldbq;
+	FIELD K instance Lcep;
+	FIELD M virtualScreen Lcey;
 	FIELD N crashed Z
 	FIELD O crashReport Lb;
 	FIELD P connectedToRealms Z
-	FIELD Q renderTickCounter Lcji;
-	FIELD R snooper Lahq;
-	FIELD S entityRenderManager Ldbe;
-	FIELD T itemRenderer Ldbv;
-	FIELD U firstPersonRenderer Lcwr;
-	FIELD V cameraEntity Lain;
-	FIELD X session Lcjj;
+	FIELD Q renderTickCounter Lcev;
+	FIELD R snooper Ladb;
+	FIELD S entityRenderManager Lcwr;
+	FIELD T itemRenderer Lcxj;
+	FIELD U firstPersonRenderer Lcse;
+	FIELD V cameraEntity Lady;
+	FIELD X session Lcew;
 	FIELD Y paused Z
-	FIELD aA musicTracker Ldjf;
+	FIELD aA musicTracker Ldes;
 	FIELD aB sessionService Lcom/mojang/authlib/minecraft/MinecraftSessionService;
-	FIELD aC skinProvider Ldgw;
+	FIELD aC skinProvider Ldcj;
 	FIELD aD taskQueue Ljava/util/Queue;
 	FIELD aE thread Ljava/lang/Thread;
-	FIELD aF bakedModelManager Ldhs;
-	FIELD aG blockRenderManager Lcxj;
-	FIELD aH guiToast Lclk;
+	FIELD aF bakedModelManager Lddf;
+	FIELD aG blockRenderManager Lcsw;
+	FIELD aH guiToast Lcgx;
 	FIELD aI isRunning Z
 	FIELD aK fpsCounter I
-	FIELD aL tutorial Ldju;
+	FIELD aL tutorial Ldfh;
 	FIELD aM root Ljava/lang/String;
 	FIELD a isSystemMac Z
-	FIELD aa server Ldiw;
+	FIELD aa server Ldej;
 	FIELD ac assetDirectory Ljava/io/File;
 	FIELD ad gameVersion Ljava/lang/String;
 	FIELD ae versionType Ljava/lang/String;
 	FIELD af netProxy Ljava/net/Proxy;
-	FIELD ag saves Lcfp;
+	FIELD ag saves Lcbb;
 	FIELD ah currentFps I
 	FIELD aj autoConnectServerIp Ljava/lang/String;
 	FIELD ak autoConnectServerPort I
 	FIELD an is64Bit Z
 	FIELD ao isDemo Z
-	FIELD ar resourceManager Lup;
-	FIELD as downloadingPackFinder Ldgq;
-	FIELD at resourcePacks Luj;
-	FIELD au languageManager Ldha;
-	FIELD av blockColorMap Lcjo;
-	FIELD aw itemColorMap Lcjr;
-	FIELD ax framebuffer Lcxa;
-	FIELD ay spriteAtlas Ldgb;
-	FIELD az soundLoader Ldji;
+	FIELD ar resourceManager Lux;
+	FIELD as downloadingPackFinder Ldcd;
+	FIELD at resourcePacks Lur;
+	FIELD au languageManager Ldcn;
+	FIELD av blockColorMap Lcfb;
+	FIELD aw itemColorMap Lcfe;
+	FIELD ax framebuffer Lcsn;
+	FIELD ay spriteAtlas Ldbo;
+	FIELD az soundLoader Ldev;
 	FIELD b memoryReserve [B
-	FIELD c playerCapabilities Lctu;
-	FIELD d mainWindow Lcjm;
-	FIELD e world Lctv;
-	FIELD f renderer Lcwt;
-	FIELD g player Lcvy;
-	FIELD i particleManager Lcvc;
-	FIELD j fontRenderer Lcjt;
-	FIELD k fontRendererSGA Lcjt;
-	FIELD l currentGui Lcmt;
-	FIELD m worldRenderer Lcwn;
-	FIELD n debugRenderer Lczx;
-	FIELD p hudInGame Lcju;
-	FIELD r hitResult Lchm;
-	FIELD s settings Lcjf;
+	FIELD c playerCapabilities Lcph;
+	FIELD d mainWindow Lcez;
+	FIELD e world Lcpi;
+	FIELD f renderer Lcsg;
+	FIELD g player Lcrl;
+	FIELD i particleManager Lcqp;
+	FIELD j fontRenderer Lcfg;
+	FIELD k fontRendererSGA Lcfg;
+	FIELD l currentGui Lcig;
+	FIELD m worldRenderer Lcsa;
+	FIELD n debugRenderer Lcvk;
+	FIELD p hudInGame Lcfh;
+	FIELD r hitResult Lccy;
+	FIELD s settings Lces;
 	FIELD v runDirectory Ljava/io/File;
-	FIELD x profiler Lxf;
+	FIELD x profiler Lxl;
 	FIELD y fpsDebugString Ljava/lang/String;
-	METHOD A getSnooper ()Lahq;
-	METHOD C getSession ()Lcjj;
+	METHOD A getSnooper ()Ladb;
+	METHOD C getSession ()Lcew;
 	METHOD D getSessionProperties ()Lcom/mojang/authlib/properties/PropertyMap;
 	METHOD E getNetworkProxy ()Ljava/net/Proxy;
-	METHOD F getTextureManager ()Ldgd;
-	METHOD G getResourceManager ()Lur;
-	METHOD H getResourcePacks ()Luj;
-	METHOD I getDownloadingResourcePackFinder ()Ldgq;
+	METHOD F getTextureManager ()Ldbq;
+	METHOD G getResourceManager ()Luz;
+	METHOD H getResourcePacks ()Lur;
+	METHOD I getDownloadingResourcePackFinder ()Ldcd;
 	METHOD J getResourcePacksFolder ()Ljava/io/File;
-	METHOD K getLanguageManager ()Ldha;
-	METHOD L getSpriteAtlas ()Ldgb;
+	METHOD K getLanguageManager ()Ldcn;
+	METHOD L getSpriteAtlas ()Ldbo;
 	METHOD M is64Bit ()Z
 	METHOD N isGamePaused ()Z
-	METHOD O getSoundLoader ()Ldji;
-	METHOD P getMusicType ()Ldjf$a;
+	METHOD O getSoundLoader ()Ldev;
+	METHOD P getMusicType ()Ldes$a;
 	METHOD Q getSessionService ()Lcom/mojang/authlib/minecraft/MinecraftSessionService;
-	METHOD S getSkinProvider ()Ldgw;
-	METHOD T getCameraEntity ()Lain;
-	METHOD U getBlockRenderManager ()Lcxj;
-	METHOD V getEntityRenderManager ()Ldbe;
-	METHOD W getItemRenderer ()Ldbv;
-	METHOD X getFirstPersonRenderer ()Lcwr;
+	METHOD S getSkinProvider ()Ldcj;
+	METHOD T getCameraEntity ()Lady;
+	METHOD U getBlockRenderManager ()Lcsw;
+	METHOD V getEntityRenderManager ()Lcwr;
+	METHOD W getItemRenderer ()Lcxj;
+	METHOD X getFirstPersonRenderer ()Lcse;
 	METHOD Y getCurrentFps ()I
 	METHOD a start ()V
-	METHOD a addSnooperInfo (Lahq;)V
-	METHOD a setCameraEntity (Lain;)V
-	METHOD a serializeBlockEntityTag (Laxa;Lbmv;)Laxa;
+	METHOD a addSnooperInfo (Ladb;)V
+	METHOD a setCameraEntity (Lady;)V
+	METHOD a serializeBlockEntityTag (Lask;Lbig;)Lask;
 	METHOD a setCrashReport (Lb;)V
-	METHOD a openGui (Lcmt;)V
-	METHOD a setCurrentServerEntry (Lcty;)V
+	METHOD a openGui (Lcig;)V
+	METHOD a setCurrentServerEntry (Lcpl;)V
 	METHOD a scheduleOnMainThread (Ljava/lang/Runnable;)Lcom/google/common/util/concurrent/ListenableFuture;
-	METHOD a startIntegratedServer (Ljava/lang/String;Ljava/lang/String;Lbbw;)V
+	METHOD a startIntegratedServer (Ljava/lang/String;Ljava/lang/String;Laxh;)V
 	METHOD aa isConnectedToRealms ()Z
-	METHOD ab getMigrationHandler ()Lxs;
+	METHOD ab getMigrationHandler ()Lcom/mojang/datafixers/DataFixer;
 	METHOD ac getTickDelta ()F
-	METHOD ae getBlockColorMap ()Lcjo;
+	METHOD ae getBlockColorMap ()Lcfb;
 	METHOD ag hasReducedDebugInfo ()Z
-	METHOD ah getToastGui ()Lclk;
-	METHOD ai getTutorial ()Ldju;
+	METHOD ah getToastGui ()Lcgx;
+	METHOD ai getTutorial ()Ldfh;
 	METHOD aj isFullscreen ()Z
-	METHOD an init ()V
-	METHOD ap checkIs64Bit ()Z
-	METHOD ar registerMetadataDeserializers ()V
-	METHOD at doAttack ()V
-	METHOD au doItemUse ()V
-	METHOD aw doItemPick ()V
-	METHOD ax getCurrentAction ()Ljava/lang/String;
+	METHOD am init ()V
+	METHOD ao checkIs64Bit ()Z
+	METHOD aq registerMetadataDeserializers ()V
+	METHOD as doAttack ()V
+	METHOD at doItemUse ()V
+	METHOD av doItemPick ()V
+	METHOD aw getCurrentAction ()Ljava/lang/String;
 	METHOD ay isMainThread ()Z
-	METHOD b getFramebuffer ()Lcxa;
+	METHOD b getFramebuffer ()Lcsn;
 	METHOD b addCrashReportDetails (Lb;)Lb;
 	METHOD c getGameVersion ()Ljava/lang/String;
 	METHOD c printCrashReport (Lb;)V
@@ -128,15 +127,15 @@ CLASS cjc net/minecraft/client/Minecraft
 	METHOD h stop ()V
 	METHOD j stopThread ()V
 	METHOD k openInGameMenu ()V
-	METHOD l getMusicTracker ()Ldjf;
+	METHOD l getMusicTracker ()Ldes;
 	METHOD m tick ()V
 	METHOD n isDemo ()Z
-	METHOD o getNetworkHandler ()Lcts;
+	METHOD o getNetworkHandler ()Lcpf;
 	METHOD q isFancyGraphicsEnabled ()Z
 	METHOD r isAmbientOcclusionEnabled ()Z
-	METHOD s getInstance ()Lcjc;
+	METHOD s getInstance ()Lcep;
 	METHOD t scheduleReloadResources ()Lcom/google/common/util/concurrent/ListenableFuture;
 	METHOD u checkMaxTextureSize ()I
-	METHOD v getCurrentServerEntry ()Lcty;
-	METHOD y getServer ()Ldiw;
+	METHOD v getCurrentServerEntry ()Lcpl;
+	METHOD y getServer ()Ldej;
 	METHOD z onShutdown ()V

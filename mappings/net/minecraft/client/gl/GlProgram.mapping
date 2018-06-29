@@ -1,7 +1,7 @@
-CLASS dfi net/minecraft/client/gl/GlProgram
+CLASS dav net/minecraft/client/gl/GlProgram
 	FIELD a LOGGER Lorg/apache/logging/log4j/Logger;
-	FIELD b dummyUniform Ldfg;
-	FIELD c activeProgram Ldfi;
+	FIELD b dummyUniform Ldat;
+	FIELD c activeProgram Ldav;
 	FIELD d activeProgramRef I
 	FIELD e samplerBinds Ljava/util/Map;
 	FIELD f samplerNames Ljava/util/List;
@@ -13,20 +13,20 @@ CLASS dfi net/minecraft/client/gl/GlProgram
 	FIELD l name Ljava/lang/String;
 	FIELD m useCullFace Z
 	FIELD n uniformStateDirty Z
-	FIELD o blendState Ldfh;
+	FIELD o blendState Ldau;
 	FIELD p attribLocs Ljava/util/List;
 	FIELD q attribNames Ljava/util/List;
-	FIELD r vertexShader Ldfl;
-	FIELD s fragmentShader Ldfl;
+	FIELD r vertexShader Lday;
+	FIELD s fragmentShader Lday;
 	METHOD a disable ()V
 	METHOD a addSampler (Lcom/google/gson/JsonElement;)V
-	METHOD a getUniformByName (Ljava/lang/String;)Ldfn;
+	METHOD a getUniformByName (Ljava/lang/String;)Ldba;
 	METHOD a bindSampler (Ljava/lang/String;Ljava/lang/Object;)V
 	METHOD b enable ()V
 	METHOD b addUniform (Lcom/google/gson/JsonElement;)V
-	METHOD b getUniformByNameOrDummy (Ljava/lang/String;)Ldfg;
+	METHOD b getUniformByNameOrDummy (Ljava/lang/String;)Ldat;
 	METHOD c markUniformStateDirty ()V
-	METHOD d getVertexShader ()Ldfl;
-	METHOD e getFragmentShader ()Ldfl;
+	METHOD d getVertexShader ()Lday;
+	METHOD e getFragmentShader ()Lday;
 	METHOD g getProgramRef ()I
 	METHOD h finalizeUniformsAndSamplers ()V
