@@ -1,9 +1,13 @@
 CLASS sw net/minecraft/world/chunk/ChunkProviderServer
 	FIELD a LOGGER Lorg/apache/logging/log4j/Logger;
+	FIELD c generator Lblw;
 	FIELD d saveHandler Lbmu;
 	FIELD e chunkByIdMap Lit/unimi/dsi/fastutil/longs/Long2ObjectMap;
+	FIELD f scheduler Ltr;
 	FIELD h world Lsx;
 	METHOD a getChunks ()Ljava/util/Collection;
+	METHOD a getAlreadyLoadedChunk (II)Lbmh;
+	METHOD a createCrashException (IILjava/lang/Throwable;)Lh;
 	METHOD a dropChunk (Lbmh;)V
 	METHOD a saveChunks (Z)Z
 	METHOD b dropAll ()V
