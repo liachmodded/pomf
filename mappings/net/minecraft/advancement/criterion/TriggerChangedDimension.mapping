@@ -6,6 +6,15 @@ CLASS ab net/minecraft/advancement/criterion/TriggerChangedDimension
 		METHOD a handle (Lbnb;Lbnb;)V
 		METHOD a addCondition (Ls$a;)V
 		METHOD b removeCondition (Ls$a;)V
+	CLASS ab$b Instance
+		FIELD a from Lbnb;
+		FIELD b to Lbnb;
+		METHOD <init> (Lbnb;Lbnb;)V
+			ARG 0 dimFrom
+			ARG 1 dimTo
+		METHOD a createFromAnyTo (Lbnb;)Lab$b;
+		METHOD b serialize ()Lcom/google/gson/JsonElement;
+		METHOD b create (Lbnb;Lbnb;)Z
 	FIELD a ID Lox;
 	FIELD b handlers Ljava/util/Map;
 	METHOD a getId ()Lox;
