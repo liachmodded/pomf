@@ -1,1 +1,40 @@
 CLASS ah net/minecraft/util/DamageSourcePredicate
+	CLASS ah$a Builder
+		FIELD a projectile Ljava/lang/Boolean;
+		FIELD b explosive Ljava/lang/Boolean;
+		FIELD c bypassArmor Ljava/lang/Boolean;
+		FIELD d damageCreative Ljava/lang/Boolean;
+		FIELD e bypassMagic Ljava/lang/Boolean;
+		FIELD f fire Ljava/lang/Boolean;
+		FIELD g magic Ljava/lang/Boolean;
+		FIELD h directEntity Lao;
+		FIELD i sourceEntity Lao;
+		METHOD a create ()Lah$a;
+		METHOD a isProjectile (Ljava/lang/Boolean;)Lah$a;
+		METHOD a setDirectEntity (Lnet/minecraft/advancement/criterion/EntityPredicate$a;)Lah$a;
+		METHOD b build ()Lah;
+	FIELD a ANYTHING Lah;
+	FIELD b isProjectile Ljava/lang/Boolean;
+	FIELD c isExplosive Ljava/lang/Boolean;
+	FIELD d bypassesArmor Ljava/lang/Boolean;
+	FIELD e damagesCreativePlayers Ljava/lang/Boolean;
+	FIELD f bypassesMagic Ljava/lang/Boolean;
+	FIELD g isFire Ljava/lang/Boolean;
+	FIELD h isMagic Ljava/lang/Boolean;
+	FIELD i directEntity Lao;
+	FIELD j sourceEntity Lao;
+	METHOD <init> (Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Boolean;Lao;Lao;)V
+		ARG 0 projectile
+		ARG 1 explosive
+		ARG 2 bypassArmorIn
+		ARG 3 damageCreative
+		ARG 4 bypassMagic
+		ARG 5 fire
+		ARG 6 magic
+		ARG 7 directEntityIn
+		ARG 8 sourceEntityIn
+	METHOD a serialise ()Lcom/google/gson/JsonElement;
+	METHOD a deserialise (Lcom/google/gson/JsonElement;)Lah;
+	METHOD a getIfPresent (Lcom/google/gson/JsonObject;Ljava/lang/String;)Ljava/lang/Boolean;
+	METHOD a setIfNonNull (Lcom/google/gson/JsonObject;Ljava/lang/String;Ljava/lang/Boolean;)V
+	METHOD a matches (Lsz;Ladh;)Z
