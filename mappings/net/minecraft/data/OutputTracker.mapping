@@ -1,0 +1,20 @@
+CLASS fq net/minecraft/data/OutputTracker
+	FIELD a LOGGER Lorg/apache/logging/log4j/Logger;
+	FIELD b baseDir Ljava/nio/file/Path;
+	FIELD c indexFile Ljava/nio/file/Path;
+	FIELD d cacheHits I
+	FIELD e oldEntries Ljava/util/Map;
+	FIELD f pathHashesMaybe Ljava/util/Map;
+	METHOD <init> (Ljava/nio/file/Path;Ljava/lang/String;)V
+		ARG 0 baseDirIn
+		ARG 1 indexFilename
+	METHOD a save ()V
+	METHOD a getOldEntry (Ljava/nio/file/Path;)Ljava/lang/String;
+		ARG 0 filename
+	METHOD a setHash (Ljava/nio/file/Path;Ljava/lang/String;)V
+		ARG 0 filename
+		ARG 1 contentsHash
+	METHOD b cleanOldEntries ()V
+	METHOD b hasOldEntry (Ljava/nio/file/Path;)Z
+		ARG 0 filename
+	METHOD c getSubDirs ()Ljava/util/stream/Stream;
