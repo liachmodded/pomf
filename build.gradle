@@ -9,11 +9,17 @@ buildscript {
       name "Modmuss50 Repository"
       url 'https://maven.modmuss50.me'
     }
+    maven {
+      name = "Thiakil"
+      url = "http://maven.thiakil.com"
+    }
+    mavenLocal()
   }
   dependencies {
     classpath "net.fabricmc:weave:+"
     classpath "commons-io:commons-io:1.4"
     classpath "com.google.guava:guava:19.0"
+    classpath 'org.jetbrains.java.decompiler:FernFlower:43fec2e'
   }
 }
 
@@ -35,8 +41,17 @@ def serverJar = new File(cacheFilesMinecraft, "${minecraft_version}-server.jar")
 
 import com.google.common.hash.Hashing
 import com.google.common.io.Files
-
+import cuchaz.enigma.Deobfuscator
+import cuchaz.enigma.TranslatingTypeLoader
+import cuchaz.enigma.mapping.ClassEntry
+import cuchaz.enigma.mapping.ClassMapping
+import cuchaz.enigma.mapping.FieldEntry
+import cuchaz.enigma.mapping.MappingsEnigmaReader
+import cuchaz.enigma.mapping.MethodEntry
+import cuchaz.enigma.mapping.TranslationDirection
+import cuchaz.enigma.mapping.Translator
 import groovy.json.JsonSlurper
+import javassist.CtClass
 import net.fabricmc.weave.CommandFindMappingErrors
 import net.fabricmc.weave.CommandTinyify
 import net.fabricmc.weave.merge.JarMerger
@@ -96,14 +111,14 @@ task downloadWantedVersionManifest(dependsOn: downloadVersionsManifest){
 
 task download(dependsOn: downloadWantedVersionManifest) {
 
-  def version = versionFile.exists() ? new JsonSlurper().parseText(FileUtils.readFileToString(versionFile)) : null
-  inputs.property "client_sha", version?.downloads?.client?.sha1
-  inputs.property "server_sha", version?.downloads?.server?.sha1
-
-  inputs.property "client_sha_match", clientJar.exists() && version?.downloads?.client?.sha1 && validateChecksum(clientJar, version.downloads.client.sha1)
-  inputs.property "server_sha_match", serverJar.exists() && version?.downloads?.server?.sha1 && validateChecksum(serverJar, version.downloads.server.sha1)
+  inputs.files versionFile
 
   outputs.files(clientJar, serverJar)
+
+  outputs.upToDateWhen {
+    def version = new JsonSlurper().parseText(FileUtils.readFileToString(versionFile))
+    return clientJar.exists() && serverJar.exists() && validateChecksum(clientJar, version.downloads.client.sha1) && validateChecksum(serverJar, version.downloads.server.sha1)
+  }
 
   doLast {
     if (!versionFile.exists()){
@@ -111,7 +126,7 @@ task download(dependsOn: downloadWantedVersionManifest) {
     }
 
     //reload in case it changed
-    version = new JsonSlurper().parseText(FileUtils.readFileToString(versionFile))
+    def version = new JsonSlurper().parseText(FileUtils.readFileToString(versionFile))
 
     logger.lifecycle(":downloading minecraft jars")
 
@@ -243,3 +258,200 @@ task buildTiny(dependsOn: "mergeJars") {
 }
 
 tasks.build.dependsOn "buildTiny"
+
+class CustomClassTransformer implements Deobfuscator.ClassTransformer {
+
+  TranslatingTypeLoader loader;
+
+  public CustomClassTransformer(TranslatingTypeLoader loader) {
+    this.loader = loader;
+  }
+
+  @Override
+  public CtClass transform(CtClass ctClass) throws Exception {
+    return loader.transformClass(ctClass);
+  }
+}
+
+class SpecialTranslator extends Translator{
+
+  SpecialTranslator(Translator parent){
+    super(parent.direction, getClasses(parent), parent.translationIndex)
+  }
+
+  static Map<String, ClassMapping> getClasses(Translator t){
+    def field = Translator.class.getDeclaredField("classes")
+    field.setAccessible(true)
+    return (Map<String, ClassMapping>)field.get(t)
+  }
+
+  @Override
+  ClassEntry translateEntry(ClassEntry classEntry) {
+    def result = super.translateEntry(classEntry)
+    if (result.getName().indexOf("/") == -1){
+      return new ClassEntry("unnamed/"+result.getName())
+    }
+    return result
+  }
+
+  @Override
+  String translate(MethodEntry entry) {
+    def result = super.translate(entry)
+    if (result == null && entry.getName() == "do"){
+      return "do_"
+    }
+    return result
+  }
+
+  @Override
+  String translate(FieldEntry entry) {
+    def result = super.translate(entry)
+    if (result == null && entry.getName() == "do"){
+      return "do_"
+    }
+    return result
+  }
+}
+
+task mapJar(dependsOn: mergeJars){
+  inputs.file mergedFile
+  inputs.dir file("mappings")
+  outputs.file file(mergedFile.name.replace(".jar", "-mapped.jar"))
+
+  doLast {
+    def deobfuscator = new Deobfuscator(new JarFile(mergedFile));
+    deobfuscator.setMappings(new MappingsEnigmaReader().read(file("mappings")));
+    TranslatingTypeLoader loader = new TranslatingTypeLoader(deobfuscator.getJar(), deobfuscator.getJarIndex(), deobfuscator.getTranslator(TranslationDirection.Obfuscating), new SpecialTranslator(deobfuscator.getTranslator(TranslationDirection.Deobfuscating)));
+    deobfuscator.transformJar(outputs.files.singleFile, null, new CustomClassTransformer(loader));
+  }
+}
+
+import org.objectweb.asm.FieldVisitor
+import org.objectweb.asm.MethodVisitor
+
+import java.util.jar.JarFile
+import java.util.jar.JarOutputStream
+import java.util.regex.Pattern
+import java.util.zip.ZipEntry;
+import org.objectweb.asm.ClassReader
+import org.objectweb.asm.ClassVisitor
+import org.objectweb.asm.ClassWriter
+import org.objectweb.asm.Opcodes
+
+static def pipe(InputStream is, OutputStream os){
+  try {
+    int n;
+    byte[] buffer = new byte[1024];
+    while ((n = is.read(buffer)) > -1) {
+      os.write(buffer, 0, n);   // Don't allow any extra bytes to creep in, final write
+    }
+    //os.close ();
+    is.close()
+  } catch (IOException e){
+    throw new RuntimeException(e)
+  }
+}
+
+class Visitor extends ClassVisitor{
+  static Pattern objectPattern = Pattern.compile(".*:Ljava/lang/Object;:.*");
+
+  public Visitor(ClassVisitor cv){
+    super(Opcodes.ASM5, cv);
+  }
+
+  private String getFixedSignature(String signature){
+    if (signature != null && objectPattern.matcher(signature).matches()){
+      signature = signature.replaceAll(":Ljava/lang/Object;:", "::")
+    }
+    return signature;
+  }
+
+  @Override
+  void visit(int version, int access, String name, String signature, String superName, String[] interfaces) {
+    super.visit(version, access, name, getFixedSignature(signature), superName, interfaces)
+  }
+
+  @Override
+  MethodVisitor visitMethod(int access, String name, String desc, String signature, String[] exceptions) {
+    return super.visitMethod(access, name, desc, getFixedSignature(signature), exceptions)
+  }
+
+  @Override
+  FieldVisitor visitField(int access, String name, String desc, String signature, Object value) {
+    return super.visitField(access, name, desc, getFixedSignature(signature), value)
+  }
+}
+
+task fixGenerics {
+  doLast {
+    def mappedJar = tasks.mapJar.outputs.files.singleFile
+    if (mappedJar.exists()){
+      logger.lifecycle("Fixing generics in ${mappedJar.absolutePath}")
+      def tmpFile = new File(mappedJar.parentFile, mappedJar.name+".tmp")
+      if (tmpFile.exists())
+        tmpFile.delete()
+      if (!mappedJar.renameTo(tmpFile)){
+        throw new RuntimeException("Couldnt rename ${mappedJar.absolutePath} to ${tmpFile.absolutePath}")
+      }
+      def jarIn = new JarFile(tmpFile)
+      def jarOut = new JarOutputStream(new FileOutputStream(mappedJar));
+      /*def jarIn = new JarFile(mappedJar)
+      def jarOut = new JarOutputStream(new FileOutputStream(tmpFile));*/
+      jarIn.stream().forEach({ entry->
+        if (!entry.name.endsWith(".class")){
+          try {
+            jarOut.putNextEntry(new ZipEntry(entry))
+          } catch (IOException e){
+            throw new RuntimeException(e)
+          }
+          pipe(jarIn.getInputStream(entry), jarOut)
+        } else {
+          InputStream clazzIn = jarIn.getInputStream(entry)
+          ClassReader reader = new ClassReader(clazzIn)
+          ClassWriter cw = new ClassWriter(0)
+          reader.accept(new Visitor(cw), 0)
+          try {
+            jarOut.putNextEntry(new ZipEntry(entry.name))
+          } catch (IOException e){
+            throw new RuntimeException(e)
+          }
+          pipe(new ByteArrayInputStream(cw.toByteArray()), jarOut)
+        }
+      })
+      jarOut.close()
+      jarIn.close()
+      tmpFile.delete()
+    }
+  }
+}
+
+mapJar.finalizedBy(fixGenerics)
+
+task decompMapped(dependsOn: mapJar) {
+  inputs.file tasks.mapJar.outputs.files.singleFile
+  outputs.file file(mergedFile.name.replace(".jar", "-sources.jar"))
+
+  doLast {
+    def cacheFilesDecomp = file(".gradle/decompCache")
+    cacheFilesDecomp.mkdirs()
+    org.jetbrains.java.decompiler.main.decompiler.ConsoleDecompiler.main((String[]) [
+            "-dgs=true",
+            "-rbr=true",
+            "-jvn=1",
+            "-sef=1",
+            "-log=warn",
+            inputs.files.singleFile.toString(),
+            cacheFilesDecomp.toString()
+    ])
+    def decompFile = new File(cacheFilesDecomp, getInputs().files.singleFile.getName())
+    def destFile = outputs.files.singleFile
+    if (destFile.exists())
+      destFile.delete()
+    decompFile.renameTo(destFile)
+  }
+}
+
+task extractDecomp(dependsOn: decompMapped, type: Sync){
+  from zipTree(tasks.decompMapped.outputs.files.singleFile)
+  into file("decomp/src/main/java/")
+}
