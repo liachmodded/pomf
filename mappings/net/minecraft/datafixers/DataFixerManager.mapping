@@ -1,4 +1,4 @@
-CLASS xs
+CLASS xs net/minecraft/datafixers/DataFixerManager
 	CLASS xs$1
 		METHOD <init> (Lcom/mojang/datafixers/schemas/Schema;ZLjava/lang/String;Lcom/mojang/datafixers/DSL$TypeReference;Ljava/lang/String;)V
 			ARG 2 nameIn
@@ -7,3 +7,10 @@ CLASS xs
 		METHOD <init> (Lcom/mojang/datafixers/schemas/Schema;ZLjava/lang/String;Lcom/mojang/datafixers/DSL$TypeReference;Ljava/lang/String;)V
 			ARG 2 nameIn
 		METHOD a runFix (Lcom/mojang/datafixers/Typed;)Lcom/mojang/datafixers/Typed;
+	FIELD a LOGGER Lorg/apache/logging/log4j/Logger;
+	FIELD b BLANK_SCHEMA_FACTORY Ljava/util/function/BiFunction;
+	FIELD c ADD_NAMESPACE_FACTORY Ljava/util/function/BiFunction;
+	FIELD d INSTANCE Lcom/mojang/datafixers/DataFixer;
+	METHOD a getInstance ()Lcom/mojang/datafixers/DataFixer;
+	METHOD a registerBuiltIns (Lcom/mojang/datafixers/DataFixerBuilder;)V
+	METHOD b setup ()Lcom/mojang/datafixers/DataFixer;
