@@ -1,50 +1,50 @@
-CLASS crs net/minecraft/client/render/BufferBuilder
-	CLASS crs$a BufferState
+CLASS csj net/minecraft/client/render/BufferBuilder
+	CLASS csj$a BufferState
 		FIELD b rawBuffer [I
-		FIELD c format Ldbz;
+		FIELD c format Ldcq;
 		METHOD a getRawBuffer ()[I
 		METHOD b getVertexCount ()I
-		METHOD c getFormat ()Ldbz;
+		METHOD c getFormat ()Ldcq;
 	FIELD a LOGGER Lorg/apache/logging/log4j/Logger;
 	FIELD b bufByte Ljava/nio/ByteBuffer;
 	FIELD c bufInt Ljava/nio/IntBuffer;
 	FIELD d bufShort Ljava/nio/ShortBuffer;
 	FIELD e bufFloat Ljava/nio/FloatBuffer;
 	FIELD f vertexes I
-	FIELD g currentElement Ldca;
+	FIELD g currentElement Ldcr;
 	FIELD h currentElementId I
 	FIELD i drawNoColor Z
 	FIELD j drawMode I
-	FIELD n format Ldbz;
+	FIELD n format Ldcq;
 	FIELD o building Z
-	METHOD a getState ()Lcrs$a;
-	METHOD a texture (DD)Lcrs;
+	METHOD a getState ()Lcsj$a;
+	METHOD a texture (DD)Lcsj;
 	METHOD a putPosition (DDD)V
-	METHOD a color (FFFF)Lcrs;
+	METHOD a color (FFFF)Lcsj;
 	METHOD a putColorMultipliers (FFFI)V
-	METHOD a texture (II)Lcrs;
+	METHOD a texture (II)Lcsj;
 	METHOD a putBrightness (IIII)V
-	METHOD a begin (ILdbz;)V
-	METHOD a restoreState (Lcrs$a;)V
+	METHOD a begin (ILdcq;)V
+	METHOD a restoreState (Lcsj$a;)V
 	METHOD a getDistanceSq (Ljava/nio/FloatBuffer;FFFII)F
 	METHOD a putVertexData ([I)V
 	METHOD b clear ()V
-	METHOD b pos (DDD)Lcrs;
+	METHOD b pos (DDD)Lcsj;
 	METHOD b putNormal (FFF)V
 	METHOD b putColor (FFFI)V
 	METHOD b growBuffer (I)V
 	METHOD b putColor (II)V
-	METHOD b color (IIII)Lcrs;
+	METHOD b color (IIII)Lcsj;
 	METHOD c drawNoColor ()V
 	METHOD c setOffset (DDD)V
-	METHOD c normal (FFF)Lcrs;
+	METHOD c normal (FFF)Lcsj;
 	METHOD c getColorIndex (I)I
 	METHOD c putColor (IIII)V
 	METHOD d endVertex ()V
 	METHOD d putColor (FFF)V
 	METHOD e end ()V
 	METHOD f getByteBuffer ()Ljava/nio/ByteBuffer;
-	METHOD g getVertexFormat ()Ldbz;
+	METHOD g getVertexFormat ()Ldcq;
 	METHOD h getVertexCount ()I
 	METHOD i getDrawMode ()I
 	METHOD j getCurrentSize ()I

@@ -1,42 +1,11 @@
-CLASS cfg net/minecraft/client/render/FontRenderer
+CLASS cfj net/minecraft/client/render/FontRenderer
 	FIELD a FONT_HEIGHT I
 	FIELD b rand Ljava/util/Random;
-	FIELD c LOGGER Lorg/apache/logging/log4j/Logger;
-	FIELD e charWidths [I
-	FIELD f glyphWidths [B
-	FIELD g chatColors [I
-	FIELD h fontTextureLoc Lox;
-	FIELD i textureManager Ldbq;
-	FIELD j renderX F
-	FIELD k renderY F
-	FIELD l useUnicodeFont Z
-	FIELD m rightToLeft Z
-	FIELD r chatColor I
-	METHOD a usesUnicodeFont ()Z
-	METHOD a getCharWidth (C)I
-	METHOD a renderChar (CZ)F
-	METHOD a getUnicodeTexture (I)Lox;
-	METHOD a renderNormalChar (IZ)F
-	METHOD a getStringWidth (Ljava/lang/String;)I
+	FIELD d textureManager Ldch;
 	METHOD a drawString (Ljava/lang/String;FFI)I
-	METHOD a drawString (Ljava/lang/String;FFIZ)I
-	METHOD a drawStringWithoutShadow (Ljava/lang/String;III)I
-	METHOD a drawStringBounded (Ljava/lang/String;IIII)V
-	METHOD a renderString (Ljava/lang/String;IIIIZ)I
-	METHOD a renderStringBounded (Ljava/lang/String;IIIZ)V
-	METHOD a renderText (Ljava/lang/String;Z)V
-	METHOD a onResourceReload (Luz;)V
-	METHOD a setUnicodeFont (Z)V
-	METHOD b isRightToLeft ()Z
-	METHOD b isChatColorModifier (C)Z
-	METHOD b renderUnicodeChar (CZ)F
-	METHOD b bindUnicodeTexture (I)V
-	METHOD b renderString (Ljava/lang/String;FFIZ)I
+	METHOD a onResourceReload (Lvb;)V
+	METHOD b mirror (Ljava/lang/String;)Ljava/lang/String;
 	METHOD b getStringBoundedHeight (Ljava/lang/String;I)I
-	METHOD b setRightToLeft (Z)V
-	METHOD c isChatFormattingModifier (C)Z
-	METHOD c mirror (Ljava/lang/String;)Ljava/lang/String;
+	METHOD b renderStringBounded (Ljava/lang/String;IIII)V
+	METHOD c trimEndNewlines (Ljava/lang/String;)Ljava/lang/String;
 	METHOD c wrapStringToList (Ljava/lang/String;I)Ljava/util/List;
-	METHOD d reloadGlyphSizes ()V
-	METHOD d trimEndNewlines (Ljava/lang/String;)Ljava/lang/String;
-	METHOD e resetChatFormatting ()V

@@ -1,4 +1,4 @@
-CLASS aeh net/minecraft/entity/EntityLiving
+CLASS aek net/minecraft/entity/EntityLiving
 	FIELD aA hurtTime I
 	FIELD aD deathCounter I
 	FIELD a LOGGER_LIVING Lorg/apache/logging/log4j/Logger;
@@ -6,52 +6,52 @@ CLASS aeh net/minecraft/entity/EntityLiving
 	FIELD aS prevHeadPitch F
 	FIELD aV playerHitTimer I
 	FIELD aW dead Z
-	FIELD av LIVING_FLAGS Lom;
-	FIELD ax preferredHand Lacr;
+	FIELD av LIVING_FLAGS Loo;
+	FIELD ax preferredHand Lacu;
 	FIELD az stuckArrowTimer I
-	FIELD bD attacker Laeh;
+	FIELD bD attacker Laek;
 	FIELD bE lastAttackedTime I
 	FIELD bJ absorptionAmount F
 	FIELD b ATTR_SPRINTING_SPEED_BOOST_ID Ljava/util/UUID;
-	FIELD bw STUCK_ARROWS Lom;
-	FIELD bx attributeContainer Laex;
-	FIELD by damageTracker Ladg;
+	FIELD bw STUCK_ARROWS Loo;
+	FIELD bx attributeContainer Lafa;
+	FIELD by damageTracker Ladj;
 	FIELD bz activePotionEffects Ljava/util/Map;
-	FIELD c ATTR_SPRINTING_SPEED_BOOST Laev;
-	FIELD f HEALTH Lom;
-	FIELD g POTION_SWIRLS_COLOR Lom;
-	FIELD h POTION_SWIRLS_AMBIENT Lom;
-	METHOD B attackEntity (Lady;)Z
+	FIELD c ATTR_SPRINTING_SPEED_BOOST Laey;
+	FIELD f HEALTH Loo;
+	FIELD g POTION_SWIRLS_COLOR Loo;
+	FIELD h POTION_SWIRLS_AMBIENT Loo;
+	METHOD B attackEntity (Laeb;)Z
 	METHOD C updatePotionVisibility ()V
-	METHOD C pushAway (Lady;)V
-	METHOD D canSee (Lady;)Z
+	METHOD C pushAway (Laeb;)V
+	METHOD D canSee (Laeb;)Z
 	METHOD R_ update ()V
 	METHOD S_ stopRiding ()V
 	METHOD W updateLogic ()V
 	METHOD a setPositionAndRotations (DDDFFIZ)V
-	METHOD a swingHand (Lacr;)V
-	METHOD a setStackInHand (Lacr;Lask;)V
-	METHOD a onDeath (Ladh;)V
-	METHOD a canTakeDamage (Ladh;F)Z
-	METHOD a hasPotionEffect (Ladq;)Z
-	METHOD a isEquippedStackValid (Laed;)Z
-	METHOD a setEquippedStack (Laed;Lask;)V
-	METHOD a setAttacker (Laeh;)V
-	METHOD a getAttributeInstance (Laet;)Laeu;
-	METHOD a deserializeCustomData (Lgx;)V
+	METHOD a swingHand (Lacu;)V
+	METHOD a setStackInHand (Lacu;Lasn;)V
+	METHOD a onDeath (Ladk;)V
+	METHOD a canTakeDamage (Ladk;F)Z
+	METHOD a hasPotionEffect (Ladt;)Z
+	METHOD a isEquippedStackValid (Laeg;)Z
+	METHOD a setEquippedStack (Laeg;Lasn;)V
+	METHOD a setAttacker (Laek;)V
+	METHOD a getAttributeInstance (Laew;)Laex;
+	METHOD a deserializeCustomData (Lgy;)V
 		ARG 0 nbt
-	METHOD a onTrackedDataSet (Lom;)V
+	METHOD a onTrackedDataSet (Loo;)V
 	METHOD a dropEquipment (ZI)V
-	METHOD a dropLoot (ZILadh;)V
+	METHOD a dropLoot (ZILadk;)V
 	METHOD aB doesCollide ()Z
 	METHOD aF isValid ()Z
 	METHOD aT getItemsArmor ()Ljava/lang/Iterable;
 	METHOD aa kill ()V
-	METHOD b getStackInHand (Lacr;)Lask;
-	METHOD b getPotionEffect (Ladq;)Ladr;
-	METHOD b getEquippedStack (Laed;)Lask;
-	METHOD b onEquipStack (Lask;)V
-	METHOD b serializeCustomData (Lgx;)V
+	METHOD b getStackInHand (Lacu;)Lasn;
+	METHOD b getPotionEffect (Ladt;)Ladu;
+	METHOD b getEquippedStack (Laeg;)Lasn;
+	METHOD b onEquipStack (Lasn;)V
+	METHOD b serializeCustomData (Lgy;)V
 		ARG 0 nbt
 	METHOD b dropDefaultLoot (ZI)V
 	METHOD bY initAttributes ()V
@@ -59,22 +59,22 @@ CLASS aeh net/minecraft/entity/EntityLiving
 	METHOD bz shouldRenderName ()Z
 	METHOD c heal (F)V
 	METHOD c handleFallDamage (FF)V
-	METHOD c setCurrentHand (Lacr;)V
-	METHOD c removePotionEffect (Ladq;)Ladr;
-	METHOD c addPotionEffect (Ladr;)Z
+	METHOD c setCurrentHand (Lacu;)V
+	METHOD c removePotionEffect (Ladt;)Ladu;
+	METHOD c addPotionEffect (Ladu;)Z
 	METHOD c containsOnlyAmbientEffects (Ljava/util/Collection;)Z
-	METHOD cA getMainHandStack ()Lask;
-	METHOD cB getOffHandStack ()Lask;
+	METHOD cA getMainHandStack ()Lasn;
+	METHOD cB getOffHandStack ()Lasn;
 	METHOD cC getSoundVolume ()F
 	METHOD cD getSoundPitch ()F
 	METHOD cM isSleeping ()Z
 	METHOD cO doPushLogic ()V
 	METHOD cR getAbsorptionAmount ()F
-	METHOD cT getMainHand ()Laeg;
+	METHOD cT getMainHand ()Laej;
 	METHOD ca updatePostDeath ()V
 	METHOD cb canDropLootAndXp ()Z
 	METHOD cd getRand ()Ljava/util/Random;
-	METHOD ce getAttacker ()Laeh;
+	METHOD ce getAttacker ()Laek;
 	METHOD cf getLastAttackedTime ()I
 	METHOD ck clearPotionSwirls ()V
 	METHOD cl clearPotionEffects ()Z
@@ -82,22 +82,22 @@ CLASS aeh net/minecraft/entity/EntityLiving
 	METHOD cn getActivePotionEffectsMap ()Ljava/util/Map;
 	METHOD co isUndead ()Z
 	METHOD cp getHealth ()F
-	METHOD cr getSoundDeath ()Lwc;
-	METHOD ct getDamageTracker ()Ladg;
+	METHOD cr getSoundDeath ()Lwe;
+	METHOD ct getDamageTracker ()Ladj;
 	METHOD cv getHealthMaximum ()F
 	METHOD cw getStuckArrows ()I
-	METHOD cy getAttributeContainer ()Laex;
-	METHOD cz getEntityAttribute ()Laek;
-	METHOD d getSoundHurt (Ladh;)Lwc;
-	METHOD d damage (Ladh;F)V
-	METHOD d isPotionEffective (Ladr;)Z
+	METHOD cy getAttributeContainer ()Lafa;
+	METHOD cz getEntityAttribute ()Laen;
+	METHOD d getSoundHurt (Ladk;)Lwe;
+	METHOD d damage (Ladk;F)V
+	METHOD d isPotionEffective (Ladu;)Z
 	METHOD dd isFallFlying ()Z
 	METHOD f setSprinting (Z)V
 	METHOD j setHeadPitch (F)V
 	METHOD k updateMovement ()V
 	METHOD k setYaw (F)V
 	METHOD l setHealth (F)V
-	METHOD m getSoundFall (I)Lwc;
+	METHOD m getSoundFall (I)Lwe;
 	METHOD n setStuckArrows (I)V
 	METHOD o doJump (Z)V
 	METHOD q setAbsorptionAmount (F)V

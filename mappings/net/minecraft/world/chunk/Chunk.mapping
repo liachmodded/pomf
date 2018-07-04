@@ -1,43 +1,44 @@
-CLASS bmh net/minecraft/world/chunk/Chunk
-	CLASS bmh$a CreationMode
-		FIELD a IMMEDIATE Lbmh$a;
-		FIELD b QUEUED Lbmh$a;
-		FIELD c CHECK Lbmh$a;
-	FIELD D state Lbmb;
+CLASS bmk net/minecraft/world/chunk/Chunk
+	CLASS bmk$a CreationMode
+		FIELD a IMMEDIATE Lbmk$a;
+		FIELD b QUEUED Lbmk$a;
+		FIELD c CHECK Lbmk$a;
+	FIELD D state Lbme;
 	FIELD E neighborCount I
-	FIELD a EMPTY_SECTION Lbmi;
+	FIELD a EMPTY_SECTION Lbml;
 	FIELD b chunkX I
 	FIELD c chunkZ I
 	FIELD e LOGGER Lorg/apache/logging/log4j/Logger;
-	FIELD f sections [Lbmi;
-	FIELD g biomes [Laxx;
+	FIELD f sections [Lbml;
+	FIELD g biomes [Laya;
 	FIELD j loaded Z
-	FIELD k world Laxc;
+	FIELD k world Laxf;
 	FIELD o blockEntities Ljava/util/Map;
-	FIELD p entitySections [Lwy;
+	FIELD p entitySections [Lxa;
 	FIELD q structures Ljava/util/Map;
 	METHOD B getBlockEntities ()Ljava/util/Map;
-	METHOD C getEntitySections ()[Lwy;
+	METHOD C getEntitySections ()[Lxa;
 	METHOD H addToCache ()V
-	METHOD J removeFromCache ()V
+	METHOD I removeFromCache ()V
 	METHOD K areNeighborsLoaded ()Z
-	METHOD a getBlockState (III)Lbka;
-	METHOD a getLight (Laxl;Lei;)I
-	METHOD a setLight (Laxl;Lei;I)V
-	METHOD a addBlockEntity (Lbig;)V
-	METHOD a getSkyLight (Lei;I)I
-	METHOD a deserialize (Lhx;IZ)V
+	METHOD a getBlockState (III)Lbkd;
+	METHOD a getLight (Laxo;Lej;)I
+	METHOD a setLight (Laxo;Lej;I)V
+	METHOD a addBlockEntity (Lbij;)V
+	METHOD a getSkyLight (Lej;I)I
+	METHOD a setBlockEntity (Lgy;)V
+	METHOD a deserialize (Lhy;IZ)V
 	METHOD a setStructures (Ljava/util/Map;)V
-	METHOD a setSections ([Lbmi;)V
-	METHOD a_ getBlockState (Lei;)Lbka;
-	METHOD b getFluidState (III)Lbxv;
-	METHOD b getFluidState (Lei;)Lbxv;
+	METHOD a setSections ([Lbml;)V
+	METHOD a_ getBlockState (Lej;)Lbkd;
+	METHOD b getFluidState (III)Lbxy;
+	METHOD b getFluidState (Lej;)Lbxy;
 	METHOD c setState (Ljava/lang/String;)V
 	METHOD e setLoaded (Z)V
-	METHOD f getBlockEntity (Lei;)Lbig;
+	METHOD f getBlockEntity (Lej;)Lbij;
 	METHOD g recheckGaps (Z)V
-	METHOD i getBiome (Lei;)Laxx;
+	METHOD i getBiome (Lej;)Laya;
 	METHOD p load ()V
 	METHOD q unload ()V
 	METHOD y isLoaded ()Z
-	METHOD z getWorld ()Laxc;
+	METHOD z getWorld ()Laxf;

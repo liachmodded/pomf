@@ -1,20 +1,20 @@
-CLASS cby net/minecraft/world/loot/function/LootTableFunctionSetAttributes
-	CLASS cby$a Attribute
+CLASS ccb net/minecraft/world/loot/function/LootTableFunctionSetAttributes
+	CLASS ccb$a Attribute
 		FIELD a name Ljava/lang/String;
 		FIELD b attribute Ljava/lang/String;
 		FIELD c operationId I
-		FIELD d amountRange Lcbr;
+		FIELD d amountRange Lcbu;
 		FIELD e id Ljava/util/UUID;
-		FIELD f slots [Laed;
+		FIELD f slots [Laeg;
 		METHOD a getOperationName (I)Ljava/lang/String;
-		METHOD a deserialize (Lcom/google/gson/JsonObject;Lcom/google/gson/JsonDeserializationContext;)Lcby$a;
+		METHOD a deserialize (Lcom/google/gson/JsonObject;Lcom/google/gson/JsonDeserializationContext;)Lccb$a;
 		METHOD a serialize (Lcom/google/gson/JsonSerializationContext;)Lcom/google/gson/JsonObject;
 		METHOD a getOperationId (Ljava/lang/String;)I
-	CLASS cby$b DeSerializer
-		METHOD a serialize (Lcom/google/gson/JsonObject;Lcbv;Lcom/google/gson/JsonSerializationContext;)V
+	CLASS ccb$b DeSerializer
 		METHOD a serialize (Lcom/google/gson/JsonObject;Lcby;Lcom/google/gson/JsonSerializationContext;)V
-		METHOD a deserialize (Lcom/google/gson/JsonObject;Lcom/google/gson/JsonDeserializationContext;[Lcch;)Lcby;
-		METHOD b deserialize (Lcom/google/gson/JsonObject;Lcom/google/gson/JsonDeserializationContext;[Lcch;)Lcbv;
+		METHOD a serialize (Lcom/google/gson/JsonObject;Lccb;Lcom/google/gson/JsonSerializationContext;)V
+		METHOD a deserialize (Lcom/google/gson/JsonObject;Lcom/google/gson/JsonDeserializationContext;[Lcck;)Lccb;
+		METHOD b deserialize (Lcom/google/gson/JsonObject;Lcom/google/gson/JsonDeserializationContext;[Lcck;)Lcby;
 	FIELD a LOGGER Lorg/apache/logging/log4j/Logger;
-	FIELD b attributes [Lcby$a;
-	METHOD a apply (Lask;Ljava/util/Random;Lcbo;)Lask;
+	FIELD b attributes [Lccb$a;
+	METHOD a apply (Lasn;Ljava/util/Random;Lcbr;)Lasn;

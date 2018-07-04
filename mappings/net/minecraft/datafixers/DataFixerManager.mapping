@@ -1,11 +1,19 @@
-CLASS xs net/minecraft/datafixers/DataFixerManager
-	CLASS xs$1
+CLASS xu net/minecraft/datafixers/DataFixerManager
+	CLASS xu$1
 		METHOD <init> (Lcom/mojang/datafixers/schemas/Schema;ZLjava/lang/String;Lcom/mojang/datafixers/DSL$TypeReference;Ljava/lang/String;)V
-			ARG 2 nameIn
+			ARG 0 outputSchema
+			ARG 1 changesType
+			ARG 2 functionNameIn
+			ARG 3 dslType
+			ARG 4 namedChoiceIn
 		METHOD a runFix (Lcom/mojang/datafixers/Typed;)Lcom/mojang/datafixers/Typed;
-	CLASS xs$2
+	CLASS xu$2
 		METHOD <init> (Lcom/mojang/datafixers/schemas/Schema;ZLjava/lang/String;Lcom/mojang/datafixers/DSL$TypeReference;Ljava/lang/String;)V
-			ARG 2 nameIn
+			ARG 0 outputSchema
+			ARG 1 changesType
+			ARG 2 functionNameIn
+			ARG 3 dslType
+			ARG 4 namedChoiceIn
 		METHOD a runFix (Lcom/mojang/datafixers/Typed;)Lcom/mojang/datafixers/Typed;
 	FIELD a LOGGER Lorg/apache/logging/log4j/Logger;
 	FIELD b BLANK_SCHEMA_FACTORY Ljava/util/function/BiFunction;
