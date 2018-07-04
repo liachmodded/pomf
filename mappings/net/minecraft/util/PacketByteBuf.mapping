@@ -20,6 +20,7 @@ CLASS hy net/minecraft/util/PacketByteBuf
 	METHOD b writeVarLong (J)Lhy;
 	METHOD b readLongArray ([J)[J
 	METHOD c readIntArray (I)[I
+	METHOD compareTo (Lio/netty/buffer/ByteBuf;)I
 	METHOD d writeVarInt (I)Lhy;
 	METHOD e readBlockPos ()Lej;
 	METHOD e readString (I)Ljava/lang/String;
@@ -31,3 +32,7 @@ CLASS hy net/minecraft/util/PacketByteBuf
 	METHOD k readItemStack ()Lasn;
 	METHOD l readIdentifier ()Loz;
 	METHOD m readDate ()Ljava/util/Date;
+	METHOD retain ()Lio/netty/buffer/ByteBuf;
+	METHOD retain (I)Lio/netty/buffer/ByteBuf;
+	METHOD touch ()Lio/netty/buffer/ByteBuf;
+	METHOD touch (Ljava/lang/Object;)Lio/netty/buffer/ByteBuf;

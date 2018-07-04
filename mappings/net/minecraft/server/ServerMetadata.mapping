@@ -1,10 +1,19 @@
 CLASS oj net/minecraft/server/ServerMetadata
 	CLASS oj$a PlayerInfo
+		CLASS oj$a$a
+			METHOD a deserialize (Lcom/google/gson/JsonElement;Ljava/lang/reflect/Type;Lcom/google/gson/JsonDeserializationContext;)Loj$a;
+			METHOD a serialize (Loj$a;Ljava/lang/reflect/Type;Lcom/google/gson/JsonSerializationContext;)Lcom/google/gson/JsonElement;
 		FIELD a maxPlayers I
 		FIELD b onlinePlayers I
 		METHOD a getMaxPlayers ()I
 		METHOD b getOnlinePlayers ()I
+	CLASS oj$b
+		METHOD a deserialize (Lcom/google/gson/JsonElement;Ljava/lang/reflect/Type;Lcom/google/gson/JsonDeserializationContext;)Loj;
+		METHOD a serialize (Loj;Ljava/lang/reflect/Type;Lcom/google/gson/JsonSerializationContext;)Lcom/google/gson/JsonElement;
 	CLASS oj$c VersionInfo
+		CLASS oj$c$a
+			METHOD a deserialize (Lcom/google/gson/JsonElement;Ljava/lang/reflect/Type;Lcom/google/gson/JsonDeserializationContext;)Loj$c;
+			METHOD a serialize (Loj$c;Ljava/lang/reflect/Type;Lcom/google/gson/JsonSerializationContext;)Lcom/google/gson/JsonElement;
 		FIELD a name Ljava/lang/String;
 		FIELD b protocolVersion I
 		METHOD a getName ()Ljava/lang/String;
