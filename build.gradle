@@ -376,6 +376,8 @@ task decompMapped(dependsOn: mapJar) {
         "-jvn=1",
         "-sef=1",
         "-log=warn",
+        "-ind=\t",
+        "-rsy=1",
         inputs.files.singleFile.toString(),
         cacheFilesDecomp.toString()
     ])
