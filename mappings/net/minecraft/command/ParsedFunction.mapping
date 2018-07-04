@@ -1,0 +1,24 @@
+CLASS br net/minecraft/command/ParsedFunction
+	CLASS br$a FunctionReference
+		FIELD b identifier Loz;
+		FIELD c loadedReference Z
+		FIELD d referencedFunction Lbr;
+		METHOD a getIdentifier ()Loz;
+		METHOD a getReference (Lpm;)Lbr;
+	CLASS br$b ParsedCommand
+		FIELD a parsed Lcom/mojang/brigadier/ParseResults;
+		METHOD a execute (Lpm;Lbu;Ljava/util/ArrayDeque;I)V
+			ARG 1 sender
+	CLASS br$c Instruction
+		METHOD a execute (Lpm;Lbu;Ljava/util/ArrayDeque;I)V
+			ARG 1 sender
+	CLASS br$d FunctionCallCommand
+		FIELD a reference Lbr$a;
+		METHOD a execute (Lpm;Lbu;Ljava/util/ArrayDeque;I)V
+			ARG 1 sender
+	FIELD a instructions [Lbr$c;
+	FIELD b identifier Loz;
+	METHOD a getIdentifier ()Loz;
+	METHOD a parse (Loz;Lpm;Ljava/util/List;)Lbr;
+		ARG 2 source
+	METHOD b getInstructions ()[Lbr$c;
