@@ -1,6 +1,8 @@
 CLASS bv net/minecraft/command/CommandManager
 	FIELD a LOGGER Lorg/apache/logging/log4j/Logger;
 	FIELD b commandDispatcher Lcom/mojang/brigadier/CommandDispatcher;
+	METHOD <init> (Z)V
+		ARG 0 dedicatedServer
 	METHOD a getDispatcher ()Lcom/mojang/brigadier/CommandDispatcher;
 	METHOD a writeCommandTree (Ljava/io/File;)V
 	METHOD a newArgument (Ljava/lang/String;)Lcom/mojang/brigadier/builder/LiteralArgumentBuilder;
