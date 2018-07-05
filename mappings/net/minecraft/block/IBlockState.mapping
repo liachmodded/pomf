@@ -1,15 +1,25 @@
 CLASS bkd net/minecraft/block/IBlockState
 	METHOD a canEntitySpawn (Laeb;)Z
+	METHOD a isNotSolid (Lawt;Lej;Lcah;)Z
+	METHOD a getWeakRedstonePower (Lawt;Lej;Lep;)I
 	METHOD a getComparatorOutput (Laxf;Lej;)I
 	METHOD a dropItems (Laxf;Lej;FI)V
+	METHOD a dropItems (Laxf;Lej;I)V
 	METHOD a onBlockAction (Laxf;Lej;II)Z
+	METHOD a onEntityCollision (Laxf;Lej;Laeb;)V
 	METHOD a onBlockBreakStart (Laxf;Lej;Lanp;)V
 	METHOD a onActivated (Laxf;Lej;Lanp;Lacu;Lep;FFF)Z
+	METHOD a update (Laxf;Lej;Lbbu;Lej;)V
+	METHOD a onBlockAdded (Laxf;Lej;Lbkd;)V
+	METHOD a onBlockRemoved (Laxf;Lej;Lbkd;Z)V
+	METHOD a canBePlaced (Laxj;Lej;)Z
 	METHOD a withMirror (Lbfa;)Lbkd;
 	METHOD a withRotation (Lbgc;)Lbkd;
+	METHOD a onBlockUpdate (Lep;Lbkd;Laxg;Lej;Lej;)Lbkd;
 	METHOD a hasTag (Lwv;)Z
 	METHOD b getStrongRedstonePower (Lawt;Lej;Lep;)I
 	METHOD c getBlock ()Lbbu;
+	METHOD c getBlockFaceShape (Lawt;Lej;Lep;)Lbkc;
 	METHOD d getMaterial ()Lbyc;
 	METHOD d getMapColor (Lawt;Lej;)Lbyd;
 	METHOD e getLightValue ()I
@@ -21,5 +31,7 @@ CLASS bkd net/minecraft/block/IBlockState
 	METHOD j getAmbientOcclusionLightValue ()F
 	METHOD k isSolidAndFullBlock ()Z
 	METHOD k getOffset (Lawt;Lej;)Lcde;
+	METHOD m canProvidePower ()Z
 	METHOD o getPistonBehavior ()Lbye;
 	METHOD s getFluidState ()Lbxy;
+	METHOD t shouldTickRandomly ()Z
