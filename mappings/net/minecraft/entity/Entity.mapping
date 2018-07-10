@@ -22,7 +22,9 @@ CLASS aeb net/minecraft/entity/Entity
 	FIELD a EMPTY_STACK_LIST Ljava/util/List;
 	FIELD aa dataTracker Lor;
 	FIELD ab ENTITY_FLAGS Loo;
+	FIELD ad chunkX I
 	FIELD ae chunkY I
+	FIELD af chunkZ I
 	FIELD ak velocityDirty Z
 	FIELD al portalCooldown I
 	FIELD am inPortal Z
@@ -50,6 +52,7 @@ CLASS aeb net/minecraft/entity/Entity
 	FIELD y prevYaw F
 	FIELD z prevPitch F
 	METHOD A_ getPistonBehavior ()Lbye;
+	METHOD B_ shouldBroadcastCommandToOps ()Z
 	METHOD E updatePortalCooldown ()V
 	METHOD N_ getNameAsComponent ()Lij;
 	METHOD O getDisplayName ()Lij;
@@ -64,6 +67,7 @@ CLASS aeb net/minecraft/entity/Entity
 	METHOD X getMaxPortalTime ()I
 	METHOD Y setOnFireFromLava ()V
 	METHOD Z extinguish ()V
+	METHOD a wantsCommandFeedback ()Z
 	METHOD a shouldRender (D)Z
 	METHOD a setPositionAnglesAndUpdate (DDDFF)V
 	METHOD a setPositionAndRotations (DDDFFIZ)V
@@ -87,6 +91,7 @@ CLASS aeb net/minecraft/entity/Entity
 	METHOD a playStepSound (Lej;Lbkd;)V
 	METHOD a deserializeCustomData (Lgy;)V
 		ARG 0 nbt
+	METHOD a receiveCommandFeedback (Lij;)V
 	METHOD a addScoreboardTag (Ljava/lang/String;)Z
 	METHOD a setUuid (Ljava/util/UUID;)V
 	METHOD a onTrackedDataSet (Loo;)V
