@@ -1,26 +1,26 @@
 CLASS ab net/minecraft/advancement/criterion/TriggerChangedDimension
 	CLASS ab$a Handler
-		FIELD a manager Lpj;
+		FIELD a manager Lpm;
 		FIELD b conditions Ljava/util/Set;
 		METHOD a isEmpty ()Z
-		METHOD a handle (Lbne;Lbne;)V
+		METHOD a handle (Lbni;Lbni;)V
 		METHOD a addCondition (Ls$a;)V
 		METHOD b removeCondition (Ls$a;)V
 	CLASS ab$b Instance
-		FIELD a from Lbne;
-		FIELD b to Lbne;
-		METHOD <init> (Lbne;Lbne;)V
+		FIELD a from Lbni;
+		FIELD b to Lbni;
+		METHOD <init> (Lbni;Lbni;)V
 			ARG 0 dimFrom
 			ARG 1 dimTo
-		METHOD a createFromAnyTo (Lbne;)Lab$b;
+		METHOD a createFromAnyTo (Lbni;)Lab$b;
 		METHOD b serialize ()Lcom/google/gson/JsonElement;
-		METHOD b create (Lbne;Lbne;)Z
-	FIELD a ID Loz;
+		METHOD b create (Lbni;Lbni;)Z
+	FIELD a ID Lpc;
 	FIELD b handlers Ljava/util/Map;
-	METHOD a getId ()Loz;
+	METHOD a getId ()Lpc;
 	METHOD a deserializeConditions (Lcom/google/gson/JsonObject;Lcom/google/gson/JsonDeserializationContext;)Lt;
-	METHOD a removePlayer (Lpj;)V
-	METHOD a addCondition (Lpj;Ls$a;)V
-	METHOD a handle (Ltb;Lbne;Lbne;)V
+	METHOD a removePlayer (Lpm;)V
+	METHOD a addCondition (Lpm;Ls$a;)V
+	METHOD a handle (Lte;Lbni;Lbni;)V
 	METHOD b deserializeConditions (Lcom/google/gson/JsonObject;Lcom/google/gson/JsonDeserializationContext;)Lab$b;
-	METHOD b removeCondition (Lpj;Ls$a;)V
+	METHOD b removeCondition (Lpm;Ls$a;)V
