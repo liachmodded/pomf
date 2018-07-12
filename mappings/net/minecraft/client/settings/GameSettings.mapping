@@ -1,4 +1,8 @@
 CLASS cfa net/minecraft/client/settings/GameSettings
+	CLASS cfa$1
+		METHOD getActualTypeArguments ()[Ljava/lang/reflect/Type;
+		METHOD getOwnerType ()Ljava/lang/reflect/Type;
+		METHOD getRawType ()Ljava/lang/reflect/Type;
 	CLASS cfa$a Option
 		FIELD A CHAT_WIDTH Lcfa$a;
 		FIELD B CHAT_HEIGHT_FOCUSED Lcfa$a;
@@ -20,6 +24,8 @@ CLASS cfa net/minecraft/client/settings/GameSettings
 		FIELD R slider Z
 		FIELD S toggle Z
 		FIELD T key Ljava/lang/String;
+		FIELD V min D
+		FIELD W max D
 		FIELD a INVERT_MOUSE Lcfa$a;
 		FIELD b SENSITIVITY Lcfa$a;
 		FIELD c FOV Lcfa$a;
@@ -52,49 +58,118 @@ CLASS cfa net/minecraft/client/settings/GameSettings
 		METHOD b isToggle ()Z
 		METHOD c getId ()I
 		METHOD d getTranslationKey ()Ljava/lang/String;
+		METHOD e getMin ()D
+		METHOD f getMax ()D
+	FIELD A pauseOnLostFocus Z
 	FIELD B touchscreen Z
 	FIELD C mainHand Laen;
 	FIELD D overrideWidth I
 	FIELD E overrideHeight I
 	FIELD F heldItemTooltips Z
+	FIELD G chatScale D
+	FIELD H chatWidth D
+	FIELD I chatHeightUnfocused D
+	FIELD J chatHeightFocused D
 	FIELD K mipmapLevels I
 	FIELD L useNativeTransport Z
+	FIELD M entityShadows Z
 	FIELD N attackIndicator I
 	FIELD O enableWeakAttacks Z
 	FIELD P showSubtitles Z
+	FIELD Q realmsNotifications Z
+	FIELD R autoJump Z
 	FIELD S tutorialStep Ldgi;
+	FIELD T autoSuggestions Z
+	FIELD U biomeBlendRadius I
+	FIELD V mouseWheelSensitivity D
+	FIELD W glDebugVerbosity I
+	FIELD X keyForward Lcet;
+	FIELD Y keyLeft Lcet;
+	FIELD Z keyBack Lcet;
 	FIELD aB debugEnabled Z
 	FIELD aE lastServer Ljava/lang/String;
+	FIELD aH fov D
+	FIELD aI gamma D
 	FIELD aJ saturation F
 	FIELD aK guiScale I
 	FIELD aL particles I
 	FIELD a COLON_SPLITTER Lcom/google/common/base/Splitter;
+	FIELD aM narrator I
 	FIELD aN lang Ljava/lang/String;
 	FIELD aO LOGGER Lorg/apache/logging/log4j/Logger;
 	FIELD aP GSON Lcom/google/gson/Gson;
 	FIELD aQ STRING_LIST_TYPE Ljava/lang/reflect/Type;
+	FIELD aR PARTICLE_OPTIONS [Ljava/lang/String;
+	FIELD aS AO_OPTIONS [Ljava/lang/String;
+	FIELD aT CLOUD_OPTIONS [Ljava/lang/String;
+	FIELD aU ATTACK_INDICATOR_OPTIONS [Ljava/lang/String;
 	FIELD aV enabledPlayerModelParts Ljava/util/Set;
 	FIELD aW soundVolumeLevels Ljava/util/Map;
 	FIELD aX optionsFile Ljava/io/File;
+	FIELD aa keyRight Lcet;
+	FIELD ab keyJump Lcet;
+	FIELD ac keySneak Lcet;
+	FIELD ad keySprint Lcet;
+	FIELD ae keyInventory Lcet;
+	FIELD af keySwapHands Lcet;
+	FIELD ag keyDrop Lcet;
+	FIELD ah keyUse Lcet;
+	FIELD ai keyAttack Lcet;
+	FIELD aj keyPickItem Lcet;
+	FIELD ak keyChat Lcet;
+	FIELD al keyPlayerList Lcet;
+	FIELD am keyCommand Lcet;
+	FIELD an keyScreenshot Lcet;
+	FIELD ao keyTogglePerspective Lcet;
+	FIELD ap keySmoothCamera Lcet;
+	FIELD aq keyFullscreen Lcet;
+	FIELD ar keySpectatorOutlines Lcet;
+	FIELD as keyAdvancements Lcet;
 	FIELD at keysHotbar [Lcet;
+	FIELD au keySaveToolbarActivator Lcet;
+	FIELD av keyLoadToolbarActivator Lcet;
 	FIELD aw keysAll [Lcet;
 	FIELD ax game Lcex;
 	FIELD ay difficulty Lacw;
-	FIELD b OPTIONS_NARRATOR_OFF [Ljava/lang/String;
-	FIELD e viewDistance I
-	FIELD h maxFps I
+	FIELD b NARRATOR_OPTIONS [Ljava/lang/String;
+	FIELD c mouseSensitivity D
+	FIELD d invertMouseY Z
+	FIELD e renderDistance I
+	FIELD f bobView Z
+	FIELD g fboEnable Z
+	FIELD h framerateLimit I
+	FIELD i renderCloudsMode I
 	FIELD j fancyGraphics Z
+	FIELD k ambientOcclusion I
+	FIELD l resourcePacksEnabled Ljava/util/List;
+	FIELD m incompatibleResourcePacks Ljava/util/List;
 	FIELD n chatVisibility Lant$b;
+	FIELD o chatColors Z
+	FIELD p chatLinks Z
+	FIELD q chatLinksPrompt Z
+	FIELD r chatOpacity D
+	FIELD s snooperEnabled Z
 	FIELD t fullscreen Z
+	FIELD u fullscreenResolution Ljava/lang/String;
+	FIELD v enableVsync Z
+	FIELD w useVbo Z
+	FIELD x reducedDebugInfo Z
 	FIELD y hideServerAddress Z
 	FIELD z advancedItemTooltips Z
 	METHOD a load ()V
 	METHOD a togglePlayerModelPart (Lanu;)V
 	METHOD a setPlayerModelPart (Lanu;Z)V
+	METHOD a getOption (Lcfa$a;)D
+	METHOD a setOptionDouble (Lcfa$a;D)V
+		ARG 0 optionToSet
 	METHOD a updateOption (Lcfa$a;I)V
+	METHOD a runDataFixers (Lgy;)Lgy;
 	METHOD a parseFloat (Ljava/lang/String;)F
 	METHOD a getSoundVolume (Lwj;)F
 	METHOD a setSoundVolume (Lwj;F)V
+	METHOD a translateFrom ([Ljava/lang/String;I)Ljava/lang/String;
+		ARG 0 translationKeys
+		ARG 1 index
 	METHOD b write ()V
 	METHOD b isEnabled (Lcfa$a;)Z
 	METHOD c onPlayerModelPartChange ()V
