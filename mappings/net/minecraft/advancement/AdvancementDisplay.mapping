@@ -1,8 +1,12 @@
 CLASS u net/minecraft/advancement/AdvancementDisplay
 	FIELD a title Lij;
+	FIELD b description Lij;
 	FIELD c icon Lasr;
 	FIELD d background Lpc;
 	FIELD e frame Lv;
+	FIELD f showToast Z
+	FIELD g announceToChat Z
+	FIELD h hidden Z
 	METHOD a getTitle ()Lij;
 	METHOD a deserialize (Lcom/google/gson/JsonObject;Lcom/google/gson/JsonDeserializationContext;)Lu;
 	METHOD a writeToBuffer (Lhy;)V
@@ -11,3 +15,4 @@ CLASS u net/minecraft/advancement/AdvancementDisplay
 	METHOD d getBackground ()Lpc;
 	METHOD e getFrame ()Lv;
 	METHOD k serialise ()Lcom/google/gson/JsonElement;
+	METHOD l serialiseIcon ()Lcom/google/gson/JsonObject;
