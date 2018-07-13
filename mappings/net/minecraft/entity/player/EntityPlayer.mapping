@@ -17,6 +17,7 @@ CLASS ant net/minecraft/entity/player/EntityPlayer
 		METHOD b getTranslationKey ()Ljava/lang/String;
 	CLASS ant$c
 		METHOD a test (Lamt;)Z
+	FIELD bA RIGHT_SHOULDER_ENTITY_DATA Lor;
 	FIELD bB inventory Lans;
 	FIELD bC enderChestInventory Laqd;
 	FIELD bD containerPlayer Lapi;
@@ -32,6 +33,7 @@ CLASS ant net/minecraft/entity/player/EntityPlayer
 	FIELD bZ enchantmentTableSeed I
 	FIELD bx SKIN_CUSTOMIZATION Lor;
 	FIELD by MAIN_HAND Lor;
+	FIELD bz LEFT_SHOULDER_ENTITY_DATA Lor;
 	FIELD cF renderOffsetY F
 	FIELD c sleepTimer I
 	FIELD cb fishHook Lalt;
@@ -109,6 +111,8 @@ CLASS ant net/minecraft/entity/player/EntityPlayer
 	METHOD d damage (Lado;F)V
 	METHOD dA getScoreboard ()Lceg;
 	METHOD dC getReducedDebugInfo ()Z
+	METHOD dD getLeftShoulderEntityData ()Lgy;
+	METHOD dE getShoulderEntityRightData ()Lgy;
 	METHOD dH getItemCooldownManager ()Laso;
 	METHOD dI getLuck ()F
 	METHOD dh getScore ()I
@@ -127,7 +131,9 @@ CLASS ant net/minecraft/entity/player/EntityPlayer
 	METHOD e canSeePlayer (Lant;)Z
 	METHOD f attackPlayer (Laef;)V
 	METHOD g createCooldownManager ()Laso;
+	METHOD h setLeftShoulderEntityData (Lgy;)V
 	METHOD i pushAwayFrom (Laef;)V
+	METHOD i setRightSHoulderEntityData (Lgy;)V
 	METHOD k updateMovement ()V
 	METHOD n getSoundFall (I)Lwh;
 	METHOD q setAbsorptionAmount (F)V
