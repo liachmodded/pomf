@@ -1,52 +1,52 @@
-CLASS csr net/minecraft/client/render/BufferBuilder
-	CLASS csr$a BufferState
+CLASS ctb net/minecraft/client/render/BufferBuilder
+	CLASS ctb$a BufferState
 		FIELD b rawBuffer [I
-		FIELD c format Ldcy;
+		FIELD c format Lddi;
 		METHOD a getRawBuffer ()[I
 		METHOD b getVertexCount ()I
-		METHOD c getFormat ()Ldcy;
+		METHOD c getFormat ()Lddi;
 	FIELD a LOGGER Lorg/apache/logging/log4j/Logger;
 	FIELD b bufByte Ljava/nio/ByteBuffer;
 	FIELD c bufInt Ljava/nio/IntBuffer;
 	FIELD d bufShort Ljava/nio/ShortBuffer;
 	FIELD e bufFloat Ljava/nio/FloatBuffer;
 	FIELD f vertexes I
-	FIELD g currentElement Ldcz;
+	FIELD g currentElement Lddj;
 	FIELD h currentElementId I
 	FIELD i drawNoColor Z
 	FIELD j drawMode I
-	FIELD n format Ldcy;
+	FIELD n format Lddi;
 	FIELD o building Z
-	METHOD a getState ()Lcsr$a;
-	METHOD a tex (DD)Lcsr;
+	METHOD a getState ()Lctb$a;
+	METHOD a tex (DD)Lctb;
 	METHOD a putPosition (DDD)V
 	METHOD a sortQuads (FFF)V
-	METHOD a color (FFFF)Lcsr;
+	METHOD a color (FFFF)Lctb;
 	METHOD a faceTint (FFFI)V
 	METHOD a fixupQuadColor (I)V
-	METHOD a tex2 (II)Lcsr;
+	METHOD a tex2 (II)Lctb;
 	METHOD a putBrightness (IIII)V
-	METHOD a begin (ILdcy;)V
-	METHOD a restoreState (Lcsr$a;)V
+	METHOD a begin (ILddi;)V
+	METHOD a restoreState (Lctb$a;)V
 	METHOD a getDistanceSq (Ljava/nio/FloatBuffer;FFFII)F
 	METHOD a putBulkData ([I)V
 	METHOD b clear ()V
-	METHOD b vertex (DDD)Lcsr;
+	METHOD b vertex (DDD)Lctb;
 	METHOD b postNormal (FFF)V
 	METHOD b fixupVertexColor (FFFI)V
 	METHOD b growBuffer (I)V
 	METHOD b putColor (II)V
-	METHOD b color (IIII)Lcsr;
+	METHOD b color (IIII)Lctb;
 	METHOD c noColor ()V
 	METHOD c offset (DDD)V
-	METHOD c normal (FFF)Lcsr;
+	METHOD c normal (FFF)Lctb;
 	METHOD c getColorIndex (I)I
 	METHOD c putColor (IIII)V
 	METHOD d endVertex ()V
 	METHOD d fixupQuadColor (FFF)V
 	METHOD e end ()V
 	METHOD f getByteBuffer ()Ljava/nio/ByteBuffer;
-	METHOD g getVertexFormat ()Ldcy;
+	METHOD g getVertexFormat ()Lddi;
 	METHOD h getVertexCount ()I
 	METHOD i getDrawMode ()I
 	METHOD j getCurrentSize ()I

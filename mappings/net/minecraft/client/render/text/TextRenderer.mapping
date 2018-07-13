@@ -1,15 +1,15 @@
-CLASS cfo net/minecraft/client/render/text/TextRenderer
-	CLASS cfo$a Character
+CLASS cfx net/minecraft/client/render/text/TextRenderer
+	CLASS cfx$a Character
 		FIELD e red F
 		FIELD f green F
 		FIELD g blue F
 		FIELD h alpha F
-		METHOD a build (Lcsr;)V
+		METHOD a build (Lctb;)V
 	FIELD a fontHeight I
 	FIELD b rand Ljava/util/Random;
 	FIELD c LOGGER Lorg/apache/logging/log4j/Logger;
-	FIELD d textureManager Ldcp;
-	FIELD e font Lchj;
+	FIELD d textureManager Ldcz;
+	FIELD e font Lcht;
 	FIELD f mirrorText Z
 	METHOD a shouldMirrorText ()Z
 	METHOD a getCharacterWidth (C)F
@@ -20,12 +20,6 @@ CLASS cfo net/minecraft/client/render/text/TextRenderer
 		ARG 1 x
 		ARG 2 y
 		ARG 3 color
-	METHOD a renderText (Ljava/lang/String;FFIZ)I
-		ARG 0 text
-		ARG 1 x
-		ARG 2 y
-		ARG 3 color
-		ARG 4 shadow
 	METHOD b mirrorText (Ljava/lang/String;)Ljava/lang/String;
 		ARG 0 text
 	METHOD b renderText (Ljava/lang/String;FFI)I
@@ -33,6 +27,12 @@ CLASS cfo net/minecraft/client/render/text/TextRenderer
 		ARG 1 x
 		ARG 2 y
 		ARG 3 color
+	METHOD b renderText (Ljava/lang/String;FFIZ)F
+		ARG 0 text
+		ARG 1 x
+		ARG 2 y
+		ARG 3 color
+		ARG 4 shadow
 	METHOD b getStringBoundedHeight (Ljava/lang/String;I)I
 	METHOD b renderStringBounded (Ljava/lang/String;IIII)V
 	METHOD c trimEndNewlines (Ljava/lang/String;)Ljava/lang/String;

@@ -1,35 +1,35 @@
-CLASS cbv net/minecraft/world/loot/LootTableContext
-	CLASS cbv$a Builder
+CLASS cce net/minecraft/world/loot/LootTableContext
+	CLASS cce$a Builder
 		FIELD a world Ltc;
 		FIELD b luck F
-		FIELD c lootedEntity Laef;
-		FIELD d player Lant;
-		FIELD e damageSource Lado;
-		METHOD a build ()Lcbv;
-		METHOD a setLuck (F)Lcbv$a;
-		METHOD a setDamageSource (Lado;)Lcbv$a;
-		METHOD a setLootedEntity (Laef;)Lcbv$a;
-		METHOD a setPlayer (Lant;)Lcbv$a;
-	CLASS cbv$b Target
-		CLASS cbv$b$a DeSerializer
-			METHOD a read (Lcom/google/gson/stream/JsonReader;)Lcbv$b;
-			METHOD a write (Lcom/google/gson/stream/JsonWriter;Lcbv$b;)V
-		FIELD a THIS Lcbv$b;
-		FIELD b KILLER Lcbv$b;
-		FIELD c KILLER_PLAYER Lcbv$b;
+		FIELD c lootedEntity Lael;
+		FIELD d player Lanz;
+		FIELD e damageSource Ladu;
+		METHOD a build ()Lcce;
+		METHOD a setLuck (F)Lcce$a;
+		METHOD a setDamageSource (Ladu;)Lcce$a;
+		METHOD a setLootedEntity (Lael;)Lcce$a;
+		METHOD a setPlayer (Lanz;)Lcce$a;
+	CLASS cce$b Target
+		CLASS cce$b$a DeSerializer
+			METHOD a read (Lcom/google/gson/stream/JsonReader;)Lcce$b;
+			METHOD a write (Lcom/google/gson/stream/JsonWriter;Lcce$b;)V
+		FIELD a THIS Lcce$b;
+		FIELD b KILLER Lcce$b;
+		FIELD c KILLER_PLAYER Lcce$b;
 		FIELD d type Ljava/lang/String;
-		METHOD a fromString (Ljava/lang/String;)Lcbv$b;
+		METHOD a fromString (Ljava/lang/String;)Lcce$b;
 	FIELD a luck F
-	FIELD c lootTableHandler Lcbx;
-	FIELD d lootedEntity Laef;
-	FIELD e player Lant;
-	FIELD f source Lado;
+	FIELD c lootTableHandler Lccg;
+	FIELD d lootedEntity Lael;
+	FIELD e player Lanz;
+	FIELD f source Ladu;
 	FIELD h lootTables Ljava/util/Set;
-	METHOD a getLootedEntity ()Laef;
-	METHOD a addLootTable (Lcbu;)Z
-	METHOD a getTargetEntity (Lcbv$b;)Laef;
-	METHOD b getKillerPlayer ()Laef;
-	METHOD b removeLootTable (Lcbu;)V
-	METHOD c getKiller ()Laef;
-	METHOD f getLootTableHandler ()Lcbx;
+	METHOD a getLootedEntity ()Lael;
+	METHOD a addLootTable (Lccd;)Z
+	METHOD a getTargetEntity (Lcce$b;)Lael;
+	METHOD b getKillerPlayer ()Lael;
+	METHOD b removeLootTable (Lccd;)V
+	METHOD c getKiller ()Lael;
+	METHOD f getLootTableHandler ()Lccg;
 	METHOD g getLuck ()F

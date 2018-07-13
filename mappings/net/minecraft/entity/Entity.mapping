@@ -1,4 +1,4 @@
-CLASS aef net/minecraft/entity/Entity
+CLASS ael net/minecraft/entity/Entity
 	FIELD A onGround Z
 	FIELD F isStuckInWeb Z
 	FIELD G invalid Z
@@ -35,15 +35,15 @@ CLASS aef net/minecraft/entity/Entity
 	FIELD au uuidString Ljava/lang/String;
 	FIELD av glowing Z
 	FIELD aw passengerList Ljava/util/List;
-	FIELD ax riddenEntity Laef;
-	FIELD ay boundingBox Lcde;
-	FIELD b NULL_BOX Lcde;
+	FIELD ax riddenEntity Lael;
+	FIELD ay boundingBox Lcdn;
+	FIELD b NULL_BOX Lcdn;
 	FIELD c renderDistanceMultiplier D
 	FIELD f maxEntityId I
 	FIELD h entityId I
 	FIELD i LOGGER Lorg/apache/logging/log4j/Logger;
 	FIELD k ridingCooldown I
-	FIELD m world Laxj;
+	FIELD m world Laxp;
 	FIELD q x D
 	FIELD r y D
 	FIELD s z D
@@ -51,7 +51,7 @@ CLASS aef net/minecraft/entity/Entity
 	FIELD x pitch F
 	FIELD y prevYaw F
 	FIELD z prevPitch F
-	METHOD A_ getPistonBehavior ()Lbyi;
+	METHOD A_ getPistonBehavior ()Lbyr;
 	METHOD B_ shouldBroadcastCommandToOps ()Z
 	METHOD E updatePortalCooldown ()V
 	METHOD N_ getNameAsComponent ()Lij;
@@ -72,23 +72,23 @@ CLASS aef net/minecraft/entity/Entity
 	METHOD a setPositionAnglesAndUpdate (DDDFF)V
 	METHOD a setPositionAndRotations (DDDFFIZ)V
 	METHOD a setSize (FF)V
-	METHOD a canTakeDamage (Lado;F)Z
-	METHOD a startRiding (Laef;Z)Z
-	METHOD a setEquippedStack (Laek;Lasr;)V
-	METHOD a move (Laes;DDD)V
-	METHOD a onStruckByLightning (Lalw;)V
-	METHOD a interact (Lant;Lcdi;Lacy;)Lada;
-	METHOD a dropStack (Lasr;F)Lalz;
-	METHOD a canExplosionDestroyBlock (Laxd;Lawx;Lej;Lbkh;F)Z
-	METHOD a getEffectiveExplosionResistance (Laxd;Lawx;Lej;Lbkh;Lbyc;F)F
-	METHOD a setWorld (Laxj;)V
-	METHOD a applyMirror (Lbfe;)F
-	METHOD a applyRotation (Lbgg;)F
+	METHOD a canTakeDamage (Ladu;F)Z
+	METHOD a startRiding (Lael;Z)Z
+	METHOD a setEquippedStack (Laeq;Lasx;)V
+	METHOD a move (Laey;DDD)V
+	METHOD a onStruckByLightning (Lamc;)V
+	METHOD a interact (Lanz;Lcdr;Lade;)Ladg;
+	METHOD a dropStack (Lasx;F)Lamf;
+	METHOD a canExplosionDestroyBlock (Laxj;Laxd;Lej;Lbkq;F)Z
+	METHOD a getEffectiveExplosionResistance (Laxj;Laxd;Lej;Lbkq;Lbyl;F)F
+	METHOD a setWorld (Laxp;)V
+	METHOD a applyMirror (Lbfn;)F
+	METHOD a applyRotation (Lbgp;)F
 	METHOD a addCrashReportDetails (Lc;)V
-	METHOD a setBoundingBox (Lcde;)V
-	METHOD a isTeamPlayer (Lcei;)Z
+	METHOD a setBoundingBox (Lcdn;)V
+	METHOD a isTeamPlayer (Lcer;)Z
 	METHOD a setPositionAndAngles (Lej;FF)V
-	METHOD a playStepSound (Lej;Lbkh;)V
+	METHOD a playStepSound (Lej;Lbkq;)V
 	METHOD a deserializeCustomData (Lgy;)V
 		ARG 0 nbt
 	METHOD a receiveCommandFeedback (Lij;)V
@@ -106,8 +106,8 @@ CLASS aef net/minecraft/entity/Entity
 	METHOD aI getHeightOffset ()D
 	METHOD aJ getMountedHeightOffset ()D
 	METHOD aL removeAllPassengers ()V
-	METHOD aO getRotationClient ()Lcdh;
-	METHOD aP getRotationVecClient ()Lcdi;
+	METHOD aO getRotationClient ()Lcdq;
+	METHOD aP getRotationVecClient ()Lcdr;
 	METHOD aQ getDefaultPortalCooldown ()I
 	METHOD aS getItemsHand ()Ljava/lang/Iterable;
 	METHOD aT getItemsArmor ()Ljava/lang/Iterable;
@@ -133,28 +133,28 @@ CLASS aef net/minecraft/entity/Entity
 	METHOD b setPositionAndAngles (DDDFF)V
 	METHOD b setRotation (FF)V
 	METHOD b setEntityFlag (IZ)V
-	METHOD b isInvulnerableTo (Lado;)Z
-	METHOD b interact (Lant;Lacy;)Z
+	METHOD b isInvulnerableTo (Ladu;)Z
+	METHOD b interact (Lanz;Lade;)Z
 	METHOD b serializeCustomData (Lgy;)V
 		ARG 0 nbt
 	METHOD b removeScoreboardTag (Ljava/lang/String;)Z
 	METHOD b setInWorld (Z)V
 	METHOD bA getHorizontalFacing ()Lep;
 	METHOD bC getComponentHoverEvent ()Lil;
-	METHOD bD getBoundingBox ()Lcde;
+	METHOD bD getBoundingBox ()Lcdn;
 	METHOD bF getEyeHeight ()F
 	METHOD bL isImmuneToExplosion ()Z
 	METHOD bP getPassengerList ()Ljava/util/List;
-	METHOD bS getTopmostRiddenEntity ()Laef;
-	METHOD bU getRiddenEntity ()Laef;
+	METHOD bS getTopmostRiddenEntity ()Lael;
+	METHOD bU getRiddenEntity ()Lael;
 	METHOD bV getSoundCategory ()Lwj;
 	METHOD ba isSprinting ()Z
 	METHOD bc isGlowing ()Z
 	METHOD bd isInvisible ()Z
-	METHOD be getScoreboardTeam ()Lcei;
+	METHOD be getScoreboardTeam ()Lcer;
 	METHOD bg getBreath ()I
 	METHOD bh stickInWeb ()V
-	METHOD bi getParts ()[Laef;
+	METHOD bi getParts ()[Lael;
 	METHOD bj getHeadPitch ()F
 	METHOD bl isInvulnerable ()Z
 	METHOD bn getSafeFallDistance ()I
@@ -168,13 +168,13 @@ CLASS aef net/minecraft/entity/Entity
 	METHOD c squaredDistanceTo (Lej;)D
 	METHOD c setSilent (Z)V
 	METHOD d squaredDistanceTo (DDD)D
-	METHOD d getVectorFromPolar (FF)Lcdi;
-	METHOD d changeWorld (I)Laef;
+	METHOD d getVectorFromPolar (FF)Lcdr;
+	METHOD d changeWorld (I)Lael;
 	METHOD d squaredDistanceToCenter (Lej;)D
 	METHOD d setUnaffectedByGravity (Z)V
 	METHOD e getTextComponent ()Lij;
 	METHOD e distanceTo (DDD)D
-	METHOD e canSeePlayer (Lant;)Z
+	METHOD e canSeePlayer (Lanz;)Z
 	METHOD e setInPortal (Lej;)V
 	METHOD e serialize (Lgy;)Lgy;
 	METHOD e setSneaking (Z)V
@@ -184,26 +184,26 @@ CLASS aef net/minecraft/entity/Entity
 	METHOD f setSprinting (Z)V
 	METHOD g shouldRenderFrom (DDD)Z
 	METHOD g setOnFireFor (I)V
-	METHOD g distanceTo (Laef;)F
+	METHOD g distanceTo (Lael;)F
 	METHOD h setVelocityClient (DDD)V
 	METHOD h burn (I)V
-	METHOD h squaredDistanceTo (Laef;)D
+	METHOD h squaredDistanceTo (Lael;)D
 	METHOD h setGlowing (Z)V
 	METHOD i getEntityFlag (I)Z
-	METHOD i pushAwayFrom (Laef;)V
+	METHOD i pushAwayFrom (Lael;)V
 	METHOD i setInvisible (Z)V
 	METHOD j setHeadPitch (F)V
 	METHOD j setBreath (I)V
 	METHOD k setYaw (F)V
 	METHOD l setInvulnerable (Z)V
-	METHOD m startRiding (Laef;)Z
+	METHOD m startRiding (Lael;)Z
 	METHOD m setCustomNameVisible (Z)V
-	METHOD n canStartRiding (Laef;)Z
-	METHOD o addPassenger (Laef;)V
-	METHOD p removePassenger (Laef;)V
-	METHOD q canAddPassenger (Laef;)Z
-	METHOD r isTeammate (Laef;)Z
-	METHOD s isPartOf (Laef;)Z
-	METHOD u setPositionAndAngles (Laef;)V
-	METHOD w hasPassenger (Laef;)Z
+	METHOD n canStartRiding (Lael;)Z
+	METHOD o addPassenger (Lael;)V
+	METHOD p removePassenger (Lael;)V
+	METHOD q canAddPassenger (Lael;)Z
+	METHOD r isTeammate (Lael;)Z
+	METHOD s isPartOf (Lael;)Z
+	METHOD u setPositionAndAngles (Lael;)V
+	METHOD w hasPassenger (Lael;)Z
 	METHOD x_ initDataTracker ()V
