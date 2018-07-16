@@ -9,11 +9,20 @@ CLASS k net/minecraft/util/Util
 		METHOD a openURI (Ljava/lang/String;)V
 		METHOD a openURL (Ljava/net/URI;)V
 		METHOD a openURL (Ljava/net/URL;)V
+	FIELD a timer Ljava/util/function/LongSupplier;
 	FIELD b LOGGER Lorg/apache/logging/log4j/Logger;
-	METHOD a call (Ljava/lang/Object;Ljava/util/function/Consumer;)Ljava/lang/Object;
-	METHOD a getTranslationKey (Ljava/lang/String;Lpc;)Ljava/lang/String;
+	FIELD c INVALID_PATH_PATTERN Ljava/util/regex/Pattern;
+	METHOD a mapEntryCollector ()Ljava/util/stream/Collector;
+	METHOD a initialiseWith (Ljava/lang/Object;Ljava/util/function/Consumer;)Ljava/lang/Object;
+	METHOD a getTranslationKeyForIdentifier (Ljava/lang/String;Lpc;)Ljava/lang/String;
+	METHOD a isNormalisedPath (Ljava/nio/file/Path;)Z
 	METHOD a getLastElement (Ljava/util/List;)Ljava/lang/Object;
 	METHOD a runTask (Ljava/util/concurrent/FutureTask;Lorg/apache/logging/log4j/Logger;)Ljava/lang/Object;
-	METHOD b currentTimeMillis ()J
+	METHOD a get (Ljava/util/function/Supplier;)Ljava/lang/Object;
+	METHOD b timerValueMillis ()J
+	METHOD b isValidPath (Ljava/nio/file/Path;)Z
+	METHOD c getTimerValue ()J
+	METHOD d currentTimeMillis ()J
 	METHOD e getOSType ()Lk$a;
+	METHOD f jvmArgs ()Ljava/util/stream/Stream;
 	METHOD g getLogger ()Lorg/apache/logging/log4j/Logger;

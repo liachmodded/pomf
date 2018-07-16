@@ -1,12 +1,16 @@
 CLASS cm net/minecraft/command/argument/ArgumentTypeRange
-	CLASS cm$a
-		CLASS cm$a$a
+	CLASS cm$a ArgumentTypeFloatRange
+		CLASS cm$a$a ArgumentSerializerFloatRange
+			METHOD a deserialize (Lhy;)Lcm$a;
 			METHOD b deserialize (Lhy;)Lcom/mojang/brigadier/arguments/ArgumentType;
 		METHOD a parse (Lcom/mojang/brigadier/StringReader;)Lba$c;
-	CLASS cm$b
-		CLASS cm$b$a
+	CLASS cm$b ArgumentTypeIntegerRange
+		CLASS cm$b$a ArgumentSerializerIntegerRange
+			METHOD a deserialize (Lhy;)Lcm$b;
 			METHOD b deserialize (Lhy;)Lcom/mojang/brigadier/arguments/ArgumentType;
 		METHOD a parse (Lcom/mojang/brigadier/StringReader;)Lba$d;
-	CLASS cm$c
+	CLASS cm$c ArgumentSerializerNumberRange
+		METHOD a serialize (Lcm;Lcom/google/gson/JsonObject;)V
+		METHOD a serialize (Lcm;Lhy;)V
 		METHOD a serialize (Lcom/mojang/brigadier/arguments/ArgumentType;Lcom/google/gson/JsonObject;)V
 		METHOD a serialize (Lcom/mojang/brigadier/arguments/ArgumentType;Lhy;)V
