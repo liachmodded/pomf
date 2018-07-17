@@ -1,1 +1,23 @@
 CLASS dcu net/minecraft/NativeImage
+	CLASS dcu$a Format
+		FIELD a RGBA Ldcu$a;
+	FIELD b format Ldcu$a;
+	FIELD c width I
+	FIELD d height I
+	METHOD a getWidth ()I
+	METHOD a getPixelRGBA (II)I
+	METHOD a getPixelRGBA (III)V
+	METHOD a loadFrom (Ldcu$a;Ljava/io/InputStream;)Ldcu;
+	METHOD a loadFrom (Ldcu$a;Ljava/nio/ByteBuffer;)Ldcu;
+	METHOD a copyFrom (Ldcu;)V
+	METHOD a writeTo (Ljava/io/File;)V
+	METHOD a loadFrom (Ljava/io/InputStream;)Ldcu;
+	METHOD a writeTo (Ljava/nio/file/Path;)V
+	METHOD b getHeight ()I
+	METHOD b blendPixel (III)V
+	METHOD c getFormat ()Ldcu$a;
+	METHOD d makePixelArray ()[I
+	METHOD e getAlpha (II)B
+		ARG 0 x
+		ARG 1 y
+	METHOD h assertAllocated ()V
