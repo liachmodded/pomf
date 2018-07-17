@@ -1,13 +1,19 @@
 CLASS aml net/minecraft/entity/mob/EntityBlaze
-	CLASS aml$a
+	CLASS aml$a AiAttackFireball
 		METHOD a canStart ()Z
 		METHOD c start ()V
 		METHOD d stop ()V
 		METHOD e tick ()V
+	FIELD a heightOffset F
+	FIELD b updateTime I
 	FIELD c BLAZE_FLAGS Lor;
+	METHOD <init> (Laxq;)V
+		ARG 0 world
 	METHOD D getSoundAmbient ()Lwh;
 	METHOD G getLootTableId ()Lpc;
 	METHOD J mobTick ()V
+	METHOD K_ isValidLightLevel ()Z
+		ARG 0 pos
 	METHOD a setFireActive (Z)V
 	METHOD aV isOnFire ()Z
 	METHOD bZ initAttributes ()V

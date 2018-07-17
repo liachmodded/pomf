@@ -40,6 +40,7 @@ CLASS aem net/minecraft/entity/Entity
 	FIELD b NULL_BOX Lcdn;
 	FIELD c renderDistanceMultiplier D
 	FIELD f maxEntityId I
+	FIELD g type Laeq;
 	FIELD h entityId I
 	FIELD i LOGGER Lorg/apache/logging/log4j/Logger;
 	FIELD k ridingCooldown I
@@ -51,12 +52,16 @@ CLASS aem net/minecraft/entity/Entity
 	FIELD x pitch F
 	FIELD y prevYaw F
 	FIELD z prevPitch F
+	METHOD <init> (Laeq;Laxq;)V
+		ARG 0 type
+		ARG 1 world
 	METHOD A_ getPistonBehavior ()Lbyr;
 	METHOD B_ shouldBroadcastCommandToOps ()Z
 	METHOD E updatePortalCooldown ()V
 	METHOD N_ getNameAsComponent ()Lij;
 	METHOD O getDisplayName ()Lij;
 	METHOD O_ hasCustomName ()Z
+	METHOD P getEntityType ()Laeq;
 	METHOD Q getEntityId ()I
 	METHOD R getScoreboardTags ()Ljava/util/Set;
 	METHOD R_ update ()V
@@ -184,6 +189,7 @@ CLASS aem net/minecraft/entity/Entity
 	METHOD f setSprinting (Z)V
 	METHOD g shouldRenderFrom (DDD)Z
 	METHOD g setOnFireFor (I)V
+		ARG 0 seconds
 	METHOD g distanceTo (Laem;)F
 	METHOD h setVelocityClient (DDD)V
 	METHOD h burn (I)V
