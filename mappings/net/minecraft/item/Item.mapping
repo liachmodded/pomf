@@ -17,42 +17,86 @@ CLASS asu net/minecraft/item/Item
 	FIELD d COOLDOWN_PROPERTY Lasx;
 	FIELD e propertyRegistry Lfb;
 	FIELD f REGISTRY Lex;
+	FIELD g BLOCK_ITEM_MAP Ljava/util/Map;
 	FIELD j tab Lars;
+	FIELD l rarity Latk;
 	FIELD m maxStackSize I
 	FIELD n damage I
 	FIELD o containerItem Lasu;
 	FIELD p item Ljava/lang/String;
+	METHOD <init> (Lasu$a;)V
+		ARG 0 builder
 	METHOD W_ isMap ()Z
 	METHOD a getTranslationKey ()Ljava/lang/String;
 	METHOD a getAttributeModifiers (Laer;)Lcom/google/common/collect/Multimap;
 	METHOD a register (Lard;)V
 	METHOD a isInTab (Lars;)Z
+		ARG 0 itemGroup
 	METHOD a addStacksForDisplay (Lars;Ley;)V
+		ARG 0 itemGroup
+		ARG 1 stacks
+	METHOD a getId (Lasu;)I
+		ARG 0 item
 	METHOD a isTool (Lasy;)Z
+		ARG 0 rstack
 	METHOD a onEntityDamaged (Lasy;Laev;Laev;)Z
 	METHOD a canRepair (Lasy;Lasy;)Z
+		ARG 0 stack
+		ARG 1 repairStack
 	METHOD a onUpdate (Lasy;Laxq;Laem;IZ)V
+		ARG 0 stack
+		ARG 1 world
+		ARG 2 entity
 	METHOD a onItemFinishedUsing (Lasy;Laxq;Laev;)Lasy;
 	METHOD a onItemStopUsing (Lasy;Laxq;Laev;I)V
 	METHOD a onBlockBroken (Lasy;Laxq;Lbkr;Lej;Laev;)Z
 	METHOD a addTooltipLines (Lasy;Laxq;Ljava/util/List;Laug;)V
+	METHOD a getBreakSpeed (Lasy;Lbkr;)F
+		ARG 0 stack
+		ARG 1 state
 	METHOD a onItemUse (Lauj;)Ladh;
+		ARG 0 interaction
 	METHOD a onRightClick (Laxq;Laoa;Ladf;)Ladi;
 	METHOD a rayTrace (Laxq;Laoa;Z)Lcdo;
+		ARG 0 world
+		ARG 1 player
+		ARG 2 hitFluid
 	METHOD a getItemFromBlock (Lbch;)Lasu;
+		ARG 0 block
 	METHOD a register (Lbch;Lars;)V
 	METHOD a register (Lbch;Lasu;)V
+	METHOD a canModifyBlock (Lbkr;Laxq;Lej;Laoa;)Z
+		ARG 0 state
+		ARG 1 world
+		ARG 2 pos
+		ARG 3 player
 	METHOD a register (Ljava/lang/String;Lasu;)V
+	METHOD a getPropertyGetter (Lpc;)Lasx;
+		ARG 0 identifier
 	METHOD a register (Lpc;Lasu;)V
 	METHOD a registerProperty (Lpc;Lasx;)V
+		ARG 0 identifier
+		ARG 1 propertyGetter
+	METHOD b getItemFromId (I)Lasu;
+		ARG 0 id
 	METHOD b hasEnchantmentGlow (Lasy;)Z
+		ARG 0 stack
 	METHOD b onCrafted (Lasy;Laxq;Laoa;)V
+		ARG 0 stack
+		ARG 1 world
+		ARG 2 player
 	METHOD b register (Lbch;)V
 	METHOD c getEnchantability ()I
 	METHOD c getMaxUseTime (Lasy;)I
+		ARG 0 stack
 	METHOD d getUseAction (Lasy;)Laui;
+		ARG 0 stack
 	METHOD h getItem ()Lasu;
+	METHOD i getMaxStackSize ()I
 	METHOD i getTranslatedNameTrimmed (Lasy;)Lij;
+	METHOD j getDamage ()I
+	METHOD j getRarity (Lasy;)Latk;
+		ARG 0 stack
 	METHOD m getUnlocalizedName ()Ljava/lang/String;
 	METHOD o getContainerItem ()Lasu;
 	METHOD p hasContainerItem ()Z
