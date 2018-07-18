@@ -1,18 +1,18 @@
-CLASS bmy net/minecraft/world/chunk/Chunk
-	CLASS bmy$a CreationMode
-		FIELD a IMMEDIATE Lbmy$a;
-		FIELD b QUEUED Lbmy$a;
-		FIELD c CHECK Lbmy$a;
-	FIELD D state Lbms;
+CLASS bna net/minecraft/world/chunk/Chunk
+	CLASS bna$a CreationMode
+		FIELD a IMMEDIATE Lbna$a;
+		FIELD b QUEUED Lbna$a;
+		FIELD c CHECK Lbna$a;
+	FIELD D state Lbmu;
 	FIELD E neighborCount I
-	FIELD a EMPTY_SECTION Lbmz;
+	FIELD a EMPTY_SECTION Lbnb;
 	FIELD b chunkX I
 	FIELD c chunkZ I
 	FIELD e LOGGER Lorg/apache/logging/log4j/Logger;
-	FIELD f sections [Lbmz;
-	FIELD g biomes [Layl;
+	FIELD f sections [Lbnb;
+	FIELD g biomes [Layn;
 	FIELD j loaded Z
-	FIELD k world Laxq;
+	FIELD k world Laxs;
 	FIELD o blockEntities Ljava/util/Map;
 	FIELD p entitySections [Lxd;
 	FIELD q structures Ljava/util/Map;
@@ -21,33 +21,33 @@ CLASS bmy net/minecraft/world/chunk/Chunk
 	METHOD H addToCache ()V
 	METHOD I removeFromCache ()V
 	METHOD K areNeighborsLoaded ()Z
-	METHOD a getBlockState (III)Lbkr;
-	METHOD a addEntity (Laem;)V
-	METHOD a getLight (Laxz;Lej;)I
-	METHOD a setLight (Laxz;Lej;I)V
-	METHOD a addBlockEntity (Lbix;)V
-	METHOD a setChunkState (Lbms;)V
+	METHOD a getBlockState (III)Lbkt;
+	METHOD a addEntity (Laeo;)V
+	METHOD a getLight (Layb;Lej;)I
+	METHOD a setLight (Layb;Lej;I)V
+	METHOD a addBlockEntity (Lbiz;)V
+	METHOD a setChunkState (Lbmu;)V
 	METHOD a getSkyLight (Lej;I)I
 	METHOD a setBlockEntityTag (Lgy;)V
 	METHOD a deserialize (Lhy;IZ)V
 	METHOD a setStructures (Ljava/util/Map;)V
-	METHOD a setSections ([Lbmz;)V
-	METHOD a_ getBlockState (Lej;)Lbkr;
-	METHOD b getFluidState (III)Lbyl;
-	METHOD b getFluidState (Lej;)Lbyl;
-	METHOD c getSections ()[Lbmz;
+	METHOD a setSections ([Lbnb;)V
+	METHOD a_ getBlockState (Lej;)Lbkt;
+	METHOD b getFluidState (III)Lbyn;
+	METHOD b getFluidState (Lej;)Lbyn;
+	METHOD c getSections ()[Lbnb;
 	METHOD c setState (Ljava/lang/String;)V
-	METHOD d getPos ()Laxg;
+	METHOD d getPos ()Laxi;
 	METHOD e getStructureStarts ()Ljava/util/Map;
 	METHOD e setLoaded (Z)V
 	METHOD f getStructureReferences ()Ljava/util/Map;
-	METHOD f getBlockEntity (Lej;)Lbix;
-	METHOD g getBiomes ()[Layl;
+	METHOD f getBlockEntity (Lej;)Lbiz;
+	METHOD g getBiomes ()[Layn;
 	METHOD g recheckGaps (Z)V
-	METHOD i getChunkState ()Lbms;
-	METHOD i getBiome (Lej;)Layl;
+	METHOD i getChunkState ()Lbmu;
+	METHOD i getBiome (Lej;)Layn;
 	METHOD m getInhabitedTime ()J
 	METHOD p load ()V
 	METHOD q unload ()V
 	METHOD y isLoaded ()Z
-	METHOD z getWorld ()Laxq;
+	METHOD z getWorld ()Laxs;
