@@ -1,6 +1,8 @@
 CLASS bdd net/minecraft/block/BlockCommand
 	FIELD a FACING Lblv;
 	FIELD c LOGGER Lorg/apache/logging/log4j/Logger;
+	METHOD <init> (Lbcj$c;)V
+		ARG 0 builder
 	METHOD a getDefaultState (Larg;)Lbkt;
 	METHOD a createBlockEntity (Laxg;)Lbiz;
 	METHOD a onPlaced (Laxs;Lej;Lbkt;Laex;Lata;)V
@@ -9,7 +11,11 @@ CLASS bdd net/minecraft/block/BlockCommand
 	METHOD a update (Lbkt;Laxs;Lej;Lbcj;Lej;)V
 	METHOD a updateTick (Lbkt;Laxs;Lej;Ljava/util/Random;)V
 	METHOD a withMirror (Lbkt;Lbfq;)Lbkt;
+		ARG 0 state
+		ARG 1 mirror
 	METHOD a withRotation (Lbkt;Lbgs;)Lbkt;
+		ARG 0 state
+		ARG 1 rotation
 	METHOD a getDropAmount (Lbkt;Ljava/util/Random;)I
 	METHOD a addStateProperties (Lbkv$a;)V
 	METHOD c getRenderType (Lbkt;)Lbgp;

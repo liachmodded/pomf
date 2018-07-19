@@ -1,4 +1,6 @@
 CLASS bed net/minecraft/block/BlockEnderChest
+	METHOD <init> (Lbcj$c;)V
+		ARG 0 builder
 	METHOD X_ canSilkHarvest ()Z
 	METHOD a getDefaultState (Larg;)Lbkt;
 	METHOD a createBlockEntity (Laxg;)Lbiz;
@@ -12,7 +14,11 @@ CLASS bed net/minecraft/block/BlockEnderChest
 	METHOD a getDroppedItem (Lbkt;Laxs;Lej;I)Laxr;
 	METHOD a onActivated (Lbkt;Laxs;Lej;Laoc;Ladh;Lep;FFF)Z
 	METHOD a withMirror (Lbkt;Lbfq;)Lbkt;
+		ARG 0 state
+		ARG 1 mirror
 	METHOD a withRotation (Lbkt;Lbgs;)Lbkt;
+		ARG 0 state
+		ARG 1 rotation
 	METHOD a onBlockUpdate (Lbkt;Lep;Lbkt;Laxt;Lej;Lej;)Lbkt;
 	METHOD a getDropAmount (Lbkt;Ljava/util/Random;)I
 	METHOD a addStateProperties (Lbkv$a;)V

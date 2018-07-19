@@ -3,6 +3,8 @@ CLASS bdu net/minecraft/block/BlockDoor
 	FIELD b OPEN Lbls;
 	FIELD c HINGE Lbly;
 	FIELD p POWERED Lbls;
+	METHOD <init> (Lbcj$c;)V
+		ARG 0 builder
 	METHOD a getDefaultState (Larg;)Lbkt;
 	METHOD a getBlockFaceShape (Laxg;Lbkt;Lej;Lep;)Lbks;
 	METHOD a afterBreak (Laxs;Laoc;Lej;Lbkt;Lbiz;Lata;)V
@@ -16,7 +18,11 @@ CLASS bdu net/minecraft/block/BlockDoor
 	METHOD a update (Lbkt;Laxs;Lej;Lbcj;Lej;)V
 	METHOD a canBePlaced (Lbkt;Laxw;Lej;)Z
 	METHOD a withMirror (Lbkt;Lbfq;)Lbkt;
+		ARG 0 state
+		ARG 1 mirror
 	METHOD a withRotation (Lbkt;Lbgs;)Lbkt;
+		ARG 0 state
+		ARG 1 rotation
 	METHOD a onBlockUpdate (Lbkt;Lep;Lbkt;Laxt;Lej;Lej;)Lbkt;
 	METHOD a addStateProperties (Lbkv$a;)V
 	METHOD c getRenderLayer ()Laxh;

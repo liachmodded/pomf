@@ -9,6 +9,9 @@ CLASS bcj net/minecraft/block/Block
 		FIELD c hasCollision Z
 		FIELD d soundGroup Lbhi;
 		FIELD e lightValue I
+		FIELD f resistance F
+		FIELD g hardness F
+		FIELD h tickRandomly Z
 		FIELD i slipperiness F
 		METHOD a setNoCollision ()Lbcj$c;
 		METHOD a withSlipperiness (F)Lbcj$c;
@@ -22,6 +25,7 @@ CLASS bcj net/minecraft/block/Block
 		METHOD b setInstantBreak ()Lbcj$c;
 		METHOD b withBreakProperties (F)Lbcj$c;
 	FIELD a AIR_ID Lpc;
+	FIELD b slipperiness F
 	FIELD c defaultState Lbkt;
 	FIELD d LOGGER Lorg/apache/logging/log4j/Logger;
 	FIELD e REGISTRY Len;
@@ -36,6 +40,8 @@ CLASS bcj net/minecraft/block/Block
 	FIELD n stateContainer Lbkv;
 	FIELD o hasCollision Z
 	FIELD q translationKey Ljava/lang/String;
+	METHOD <init> (Lbcj$c;)V
+		ARG 0 builder
 	METHOD X_ canSilkHarvest ()Z
 	METHOD a canEntitiesSpawnInside ()Z
 	METHOD a get (I)Lbcj;
@@ -73,7 +79,11 @@ CLASS bcj net/minecraft/block/Block
 	METHOD a updateTick (Lbkt;Laxs;Lej;Ljava/util/Random;)V
 	METHOD a canBePlaced (Lbkt;Laxw;Lej;)Z
 	METHOD a withMirror (Lbkt;Lbfq;)Lbkt;
+		ARG 0 state
+		ARG 1 mirror
 	METHOD a withRotation (Lbkt;Lbgs;)Lbkt;
+		ARG 0 state
+		ARG 1 rotation
 	METHOD a onBlockUpdate (Lbkt;Lep;Lbkt;Laxt;Lej;Lej;)Lbkt;
 	METHOD a getDropAmount (Lbkt;Ljava/util/Random;)I
 	METHOD a addStateProperties (Lbkv$a;)V
@@ -82,6 +92,8 @@ CLASS bcj net/minecraft/block/Block
 	METHOD a register (Lpc;Lbcj;)V
 	METHOD a hasTag (Lwy;)Z
 	METHOD b getState (I)Lbkt;
+	METHOD b (Lbcj;)Z
+		ARG 0 block
 	METHOD b getStrongRedstonePower (Lbkt;Laxg;Lej;Lep;)I
 	METHOD b randomTick (Lbkt;Laxs;Lej;Ljava/util/Random;)V
 	METHOD c getRenderLayer ()Laxh;

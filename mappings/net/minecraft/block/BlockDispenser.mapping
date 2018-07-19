@@ -1,5 +1,7 @@
 CLASS bdt net/minecraft/block/BlockDispenser
 	FIELD a FACING Lblv;
+	METHOD <init> (Lbcj$c;)V
+		ARG 0 builder
 	METHOD a getDefaultState (Larg;)Lbkt;
 	METHOD a getDispenserBehavior (Lata;)Ler;
 	METHOD a createBlockEntity (Laxg;)Lbiz;
@@ -11,7 +13,11 @@ CLASS bdt net/minecraft/block/BlockDispenser
 	METHOD a onBlockRemoved (Lbkt;Laxs;Lej;Lbkt;Z)V
 	METHOD a updateTick (Lbkt;Laxs;Lej;Ljava/util/Random;)V
 	METHOD a withMirror (Lbkt;Lbfq;)Lbkt;
+		ARG 0 state
+		ARG 1 mirror
 	METHOD a withRotation (Lbkt;Lbgs;)Lbkt;
+		ARG 0 state
+		ARG 1 rotation
 	METHOD a addStateProperties (Lbkv$a;)V
 	METHOD a getDispenseLocation (Lek;)Lez;
 	METHOD c getRenderType (Lbkt;)Lbgp;
