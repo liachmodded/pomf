@@ -12,6 +12,8 @@ CLASS aex net/minecraft/entity/EntityLiving
 	FIELD bA activePotionEffects Ljava/util/Map;
 	FIELD bE attacker Laex;
 	FIELD bF lastAttackedTime I
+	FIELD bG entityLastAttacked Laex;
+	FIELD bH timeOfLastOutgoingAttack I
 	FIELD bK absorptionAmount F
 	FIELD b ATTR_SPRINTING_SPEED_BOOST_ID Ljava/util/UUID;
 	FIELD bx STUCK_ARROWS Lor;
@@ -35,7 +37,7 @@ CLASS aex net/minecraft/entity/EntityLiving
 	METHOD a swingHand (Ladh;)V
 	METHOD a setStackInHand (Ladh;Lata;)V
 	METHOD a onDeath (Ladx;)V
-	METHOD a canTakeDamage (Ladx;F)Z
+	METHOD a applyDamage (Ladx;F)Z
 	METHOD a hasPotionEffect (Laeg;)Z
 	METHOD a isEquippedStackValid (Laet;)Z
 	METHOD a setEquippedStack (Laet;Lata;)V
@@ -81,6 +83,8 @@ CLASS aex net/minecraft/entity/EntityLiving
 	METHOD ce getRand ()Ljava/util/Random;
 	METHOD cf getAttacker ()Laex;
 	METHOD cg getLastAttackedTime ()I
+	METHOD ch getEntityLastAttacked ()Laex;
+	METHOD ci getTimeOfLastOutgoingAttack ()I
 	METHOD cl clearPotionSwirls ()V
 	METHOD cm clearPotionEffects ()Z
 	METHOD cn getPotionEffects ()Ljava/util/Collection;
@@ -107,4 +111,5 @@ CLASS aex net/minecraft/entity/EntityLiving
 	METHOD q setAbsorptionAmount (F)V
 	METHOD x_ initDataTracker ()V
 	METHOD y_ isChild ()Z
+	METHOD z setLastAttacked (Laeo;)V
 	METHOD z_ canClimb ()Z
