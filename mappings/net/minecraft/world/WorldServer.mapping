@@ -5,6 +5,7 @@ CLASS tc net/minecraft/world/WorldServer
 	FIELD a LOGGER Lorg/apache/logging/log4j/Logger;
 	FIELD b autoSaveDisabled Z
 	METHOD A getChunkPlayerTrackerMap ()Ltk;
+	METHOD F getScoreboard ()Lcer;
 	METHOD G getChunkProvider ()Lbmt;
 	METHOD H getFluidTickScheduler ()Layh;
 	METHOD I getBlockTickScheduler ()Layh;
@@ -26,11 +27,13 @@ CLASS tc net/minecraft/world/WorldServer
 	METHOD b getWorld ()Laxt;
 	METHOD b onEntityAdded (Laeo;)V
 	METHOD c onEntityRemoved (Laeo;)V
+	METHOD close ()V
 	METHOD d addGlobalEntity (Laeo;)Z
 	METHOD i_ update ()V
 	METHOD j addEntity (Laeo;)Z
 	METHOD k_ updateSleepingStatus ()V
 	METHOD l tickRandomBlocks ()V
+	METHOD l_ getScoreboard ()Lpr;
 	METHOD m_ setDefaultSpawnClient ()V
 	METHOD o_ updateEntities ()V
 	METHOD q createChunkProvider ()Lbmt;

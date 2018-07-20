@@ -8,6 +8,7 @@ CLASS axs net/minecraft/world/World
 	FIELD H ambientDarkness I
 	FIELD J tickingBlockEntities Z
 	FIELD K border Lbmm;
+	FIELD a FACING_VALUES [Lep;
 	FIELD b seaLevel I
 	FIELD c pendingBlockEntities Ljava/util/List;
 	FIELD d unloadedBlockEntities Ljava/util/List;
@@ -33,6 +34,7 @@ CLASS axs net/minecraft/world/World
 	FIELD x saveHandler Lcbr;
 	FIELD y properties Lcbq;
 	METHOD E getPendingBlockEntity (Lej;)Lbiz;
+	METHOD F getScoreboard ()Lcer;
 	METHOD G getChunkProvider ()Lbmt;
 	METHOD K isDaylight ()Z
 	METHOD M getEntityCountAsString ()Ljava/lang/String;
@@ -113,9 +115,13 @@ CLASS axs net/minecraft/world/World
 	METHOD c updateHorizontalAdjacent (Lej;Lbcj;)V
 	METHOD c getEmittedRedstonePower (Lej;Lep;)I
 	METHOD c unloadEntities (Ljava/util/Collection;)V
+	METHOD close ()V
 	METHOD d getChunk (II)Lbna;
 	METHOD d addGlobalEntity (Laeo;)Z
+	METHOD d getBiomeAt (Lej;)Layn;
+	METHOD e removeEntity (Laeo;)V
 	METHOD f getChunkHeight (II)I
+	METHOD f removeEntityFromChunk (Laeo;)V
 	METHOD f getBlockEntity (Lej;)Lbiz;
 	METHOD g getProperties ()Lcbq;
 	METHOD g getThunderGradient (F)F
