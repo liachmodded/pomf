@@ -1,16 +1,22 @@
 CLASS gy net/minecraft/nbt/NBTCompound
 	FIELD f LOGGER Lorg/apache/logging/log4j/Logger;
+	FIELD g ALPHANUMERIC Ljava/util/regex/Pattern;
 	FIELD h tagMap Ljava/util/Map;
 	METHOD a getType ()B
+	METHOD a loadTag (BLjava/lang/String;Ljava/io/DataInput;ILhh;)Lho;
 	METHOD a read (Ljava/io/DataInput;ILhh;)V
+	METHOD a readByte (Ljava/io/DataInput;Lhh;)B
 	METHOD a write (Ljava/io/DataOutput;)V
 	METHOD a getUniqueId (Ljava/lang/String;)Ljava/util/UUID;
 	METHOD a setByte (Ljava/lang/String;B)V
 	METHOD a setDouble (Ljava/lang/String;D)V
 	METHOD a setFloat (Ljava/lang/String;F)V
 	METHOD a getTextComponent (Ljava/lang/String;I)Lij;
+	METHOD a createCrashReport (Ljava/lang/String;ILjava/lang/ClassCastException;)Lb;
+		ARG 0 tagName
 	METHOD a setLong (Ljava/lang/String;J)V
 	METHOD a setTag (Ljava/lang/String;Lho;)V
+	METHOD a write (Ljava/lang/String;Lho;Ljava/io/DataOutput;)V
 	METHOD a setString (Ljava/lang/String;Ljava/lang/String;)V
 	METHOD a setUniqueId (Ljava/lang/String;Ljava/util/UUID;)V
 	METHOD a setShort (Ljava/lang/String;S)V
@@ -19,6 +25,7 @@ CLASS gy net/minecraft/nbt/NBTCompound
 	METHOD a setIntArray (Ljava/lang/String;[I)V
 	METHOD a setLongArray (Ljava/lang/String;[J)V
 	METHOD b copy ()Lho;
+	METHOD b readUtf (Ljava/io/DataInput;Lhh;)Ljava/lang/String;
 	METHOD b hasUniqueId (Ljava/lang/String;)Z
 	METHOD b setInt (Ljava/lang/String;I)V
 	METHOD b setIntList (Ljava/lang/String;Ljava/util/List;)V
@@ -27,9 +34,22 @@ CLASS gy net/minecraft/nbt/NBTCompound
 	METHOD c hasKey (Ljava/lang/String;I)Z
 	METHOD c setLongList (Ljava/lang/String;Ljava/util/List;)V
 	METHOD d size ()I
-	METHOD d getByte (Ljava/lang/String;)B
+	METHOD d getTagType (Ljava/lang/String;)B
+	METHOD d getList (Ljava/lang/String;I)Lhe;
 	METHOD e hasKey (Ljava/lang/String;)Z
 	METHOD f copy ()Lgy;
+	METHOD f getByte (Ljava/lang/String;)B
+	METHOD g getShort (Ljava/lang/String;)S
+	METHOD h getInt (Ljava/lang/String;)I
 	METHOD i getLong (Ljava/lang/String;)J
+	METHOD isEmpty ()Z
+	METHOD j getFloat (Ljava/lang/String;)F
+	METHOD k getDouble (Ljava/lang/String;)D
+	METHOD l getString (Ljava/lang/String;)Ljava/lang/String;
+	METHOD m getByteArray (Ljava/lang/String;)[B
+	METHOD n getIntArray (Ljava/lang/String;)[I
+	METHOD o getLongArray (Ljava/lang/String;)[J
+	METHOD p getCompound (Ljava/lang/String;)Lgy;
 	METHOD q getBoolean (Ljava/lang/String;)Z
 	METHOD r removeKey (Ljava/lang/String;)V
+	METHOD s sanitiseValue (Ljava/lang/String;)Ljava/lang/String;

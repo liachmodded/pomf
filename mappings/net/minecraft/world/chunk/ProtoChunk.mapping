@@ -10,23 +10,40 @@ CLASS bni net/minecraft/world/chunk/ProtoChunk
 	FIELD p updateData Lbnk;
 	FIELD q scheduledBlockTicks Lbnj;
 	FIELD r scheduledFluidTicks Lbnj;
+	FIELD s inhabitedTime J
 	METHOD a addEntity (Laeo;)V
+	METHOD a getLight (Layb;Lej;Z)I
 	METHOD a setChunkState (Lbmu;)V
+	METHOD a getCarvingMask (Lboh$a;)Ljava/util/BitSet;
 	METHOD a setBlockEntityTag (Lgy;)V
+	METHOD a addStructure (Ljava/lang/String;Lbwt;)V
+	METHOD a setLight (SI)V
 	METHOD a setBiomes ([Layn;)V
 	METHOD a setSections ([Lbnb;)V
+	METHOD a getOrCreateList ([Lit/unimi/dsi/fastutil/shorts/ShortList;I)Lit/unimi/dsi/fastutil/shorts/ShortList;
 	METHOD a_ getBlockState (Lej;)Lbkt;
+	METHOD b setInhabitedTime (J)V
 	METHOD b getFluidState (Lej;)Lbyn;
+	METHOD b loadEntity (Lgy;)V
+	METHOD b setPostProcessing (SI)V
 	METHOD c getSections ()[Lbnb;
-	METHOD c setChunkState (Ljava/lang/String;)V
+	METHOD c setChunkStatus (Ljava/lang/String;)V
 	METHOD d getPos ()Laxi;
+	METHOD d removeBlockEntity (Lej;)V
 	METHOD e getStructureStarts ()Ljava/util/Map;
 	METHOD e markForPostProcessing (Lej;)V
 	METHOD f getStructureReferences ()Ljava/util/Map;
 	METHOD f getBlockEntity (Lej;)Lbiz;
 	METHOD g getBiomes ()[Layn;
+	METHOD g getBlockEntityTag (Lej;)Lgy;
 	METHOD i getChunkState ()Lbmu;
+	METHOD k getBlockTickScheduler ()Layh;
+	METHOD l getFluidTickScheduler ()Layh;
+	METHOD m getInhabitedTime ()J
 	METHOD n getScheduledBlockTicks ()Lbnj;
 	METHOD o getScheduledFluidTicks ()Lbnj;
+	METHOD p getLights ()[Lit/unimi/dsi/fastutil/shorts/ShortList;
 	METHOD t getHeightmaps ()Ljava/util/Set;
+	METHOD u getPostProcessing ()[Lit/unimi/dsi/fastutil/shorts/ShortList;
 	METHOD v getUpdateData ()Lbnk;
+	METHOD w getBlockEntityTags ()Ljava/util/Map;

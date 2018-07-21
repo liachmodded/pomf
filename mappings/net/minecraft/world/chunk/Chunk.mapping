@@ -3,6 +3,7 @@ CLASS bna net/minecraft/world/chunk/Chunk
 		FIELD a IMMEDIATE Lbna$a;
 		FIELD b QUEUED Lbna$a;
 		FIELD c CHECK Lbna$a;
+	FIELD A inhabitedTime J
 	FIELD D state Lbmu;
 	FIELD E neighborCount I
 	FIELD a EMPTY_SECTION Lbnb;
@@ -16,8 +17,15 @@ CLASS bna net/minecraft/world/chunk/Chunk
 	FIELD o blockEntities Ljava/util/Map;
 	FIELD p entitySections [Lxd;
 	FIELD q structures Ljava/util/Map;
+	FIELD t blockTickScheduler Layh;
+	FIELD u fluidTickScheduler Layh;
+	FIELD w hasEntities Z
+	METHOD <init> (Laxs;II[Layn;Lbnk;Layh;Layh;J)V
+		ARG 5 blockTickScheduler
+		ARG 6 fluidTickScheduler
 	METHOD B getBlockEntities ()Ljava/util/Map;
 	METHOD C getEntitySections ()[Lxd;
+	METHOD F getUpgradeData ()Lbnk;
 	METHOD H addToCache ()V
 	METHOD I removeFromCache ()V
 	METHOD K areNeighborsLoaded ()Z
@@ -25,27 +33,36 @@ CLASS bna net/minecraft/world/chunk/Chunk
 	METHOD a addEntity (Laeo;)V
 	METHOD a getLight (Layb;Lej;)I
 	METHOD a setLight (Layb;Lej;I)V
+	METHOD a getLight (Layb;Lej;Z)I
 	METHOD a addBlockEntity (Lbiz;)V
 	METHOD a setChunkState (Lbmu;)V
+	METHOD a getCarvingMask (Lboh$a;)Ljava/util/BitSet;
 	METHOD a getSkyLight (Lej;I)I
 	METHOD a setBlockEntityTag (Lgy;)V
 	METHOD a deserialize (Lhy;IZ)V
+	METHOD a addStructure (Ljava/lang/String;Lbwt;)V
 	METHOD a setStructures (Ljava/util/Map;)V
 	METHOD a setSections ([Lbnb;)V
 	METHOD a_ getBlockState (Lej;)Lbkt;
 	METHOD b getFluidState (III)Lbyn;
+	METHOD b setInhabitedTIme (J)V
 	METHOD b getFluidState (Lej;)Lbyn;
 	METHOD c getSections ()[Lbnb;
 	METHOD c setState (Ljava/lang/String;)V
 	METHOD d getPos ()Laxi;
+	METHOD d removeBlockEntity (Lej;)V
 	METHOD e getStructureStarts ()Ljava/util/Map;
 	METHOD e setLoaded (Z)V
 	METHOD f getStructureReferences ()Ljava/util/Map;
 	METHOD f getBlockEntity (Lej;)Lbiz;
+	METHOD f setHasEntities (Z)V
 	METHOD g getBiomes ()[Layn;
+	METHOD g getBlockEntityTag (Lej;)Lgy;
 	METHOD g recheckGaps (Z)V
 	METHOD i getChunkState ()Lbmu;
 	METHOD i getBiome (Lej;)Layn;
+	METHOD k getBlockTickScheduler ()Layh;
+	METHOD l getFluidTickScheduler ()Layh;
 	METHOD m getInhabitedTime ()J
 	METHOD p load ()V
 	METHOD q unload ()V

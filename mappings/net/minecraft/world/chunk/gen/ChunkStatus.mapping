@@ -1,5 +1,6 @@
-CLASS bmu net/minecraft/world/chunk/gen/ChunkState
-	CLASS bmu$a
+CLASS bmu net/minecraft/world/chunk/gen/ChunkStatus
+	CLASS bmu$1
+	CLASS bmu$a Use
 		FIELD a PROTOCHUNK Lbmu$a;
 		FIELD b LEVELCHUNK Lbmu$a;
 	FIELD a EMPTY Lbmu;
@@ -12,6 +13,10 @@ CLASS bmu net/minecraft/world/chunk/gen/ChunkState
 	FIELD h FINALIZED Lbmu;
 	FIELD i FULLCHUNK Lbmu;
 	FIELD j POST_PROCESSED Lbmu;
+	FIELD l name Ljava/lang/String;
 	FIELD m producer Ltp;
+	FIELD o use Lbmu$a;
 	METHOD a produce (Laxs;Lbmp;Ljava/util/Map;II)Lbni;
+	METHOD b getName ()Ljava/lang/String;
+	METHOD d getUse ()Lbmu$a;
 	METHOD e getPrevious ()Lbmu;

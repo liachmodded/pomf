@@ -1,4 +1,5 @@
 CLASS bcj net/minecraft/block/Block
+	CLASS bcj$a StateStateFacing
 	CLASS bcj$b OffsetType
 		FIELD a NONE Lbcj$b;
 		FIELD b XZ Lbcj$b;
@@ -13,6 +14,7 @@ CLASS bcj net/minecraft/block/Block
 		FIELD g hardness F
 		FIELD h tickRandomly Z
 		FIELD i slipperiness F
+		FIELD j variableOpacity Z
 		METHOD a setNoCollision ()Lbcj$c;
 		METHOD a withSlipperiness (F)Lbcj$c;
 		METHOD a withBreakProperties (FF)Lbcj$c;
@@ -24,6 +26,8 @@ CLASS bcj net/minecraft/block/Block
 		METHOD a of (Lbyr;Lbys;)Lbcj$c;
 		METHOD b setInstantBreak ()Lbcj$c;
 		METHOD b withBreakProperties (F)Lbcj$c;
+		METHOD c ticksRandomly ()Lbcj$c;
+		METHOD d ()Lbcj$c;
 	FIELD a AIR_ID Lpc;
 	FIELD b slipperiness F
 	FIELD c defaultState Lbkt;
