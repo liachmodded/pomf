@@ -62,11 +62,15 @@ CLASS bcj net/minecraft/block/Block
 	METHOD a onSteppedOn (Laxs;Lej;Laeo;)V
 	METHOD a onLandedUpon (Laxs;Lej;Laeo;F)V
 	METHOD a dropItem (Laxs;Lej;Lata;)V
+	METHOD a destroyedByExplosion (Laxs;Lej;Laxm;)V
 	METHOD a onPlaced (Laxs;Lej;Lbkt;Laex;Lata;)V
 	METHOD a onBreak (Laxs;Lej;Lbkt;Laoc;)V
+	METHOD a getTickRate (Laxw;)I
+	METHOD a disallowsRedstoneSwitchPlacing (Lbcj;)Z
 	METHOD a isFullBlock (Lbkt;)Z
 	METHOD a getDropAmount (Lbkt;ILaxs;Lej;Ljava/util/Random;)I
 	METHOD a canEntitySpawn (Lbkt;Laeo;)Z
+	METHOD a getHardnessForPlayer (Lbkt;Laoc;Laxg;Lej;)F
 	METHOD a getBoundingBox (Lbkt;Laxg;Lej;)Lcel;
 	METHOD a isNotSolid (Lbkt;Laxg;Lej;Lcaw;)Z
 	METHOD a getWeakRedstonePower (Lbkt;Laxg;Lej;Lep;)I
@@ -80,14 +84,17 @@ CLASS bcj net/minecraft/block/Block
 	METHOD a update (Lbkt;Laxs;Lej;Lbcj;Lej;)V
 	METHOD a onBlockAdded (Lbkt;Laxs;Lej;Lbkt;)V
 	METHOD a onBlockRemoved (Lbkt;Laxs;Lej;Lbkt;Z)V
+	METHOD a raytraceForCollision (Lbkt;Laxs;Lej;Lcdt;Lcdt;)Lcdq;
 	METHOD a updateTick (Lbkt;Laxs;Lej;Ljava/util/Random;)V
 	METHOD a canBePlaced (Lbkt;Laxw;Lej;)Z
+	METHOD a getLightValuesPacked (Lbkt;Laxy;Lej;)I
 	METHOD a withMirror (Lbkt;Lbfq;)Lbkt;
 		ARG 0 state
 		ARG 1 mirror
 	METHOD a withRotation (Lbkt;Lbgs;)Lbkt;
 		ARG 0 state
 		ARG 1 rotation
+	METHOD a createRandomSeed (Lbkt;Lej;)J
 	METHOD a onBlockUpdate (Lbkt;Lep;Lbkt;Laxt;Lej;Lej;)Lbkt;
 	METHOD a getDropAmount (Lbkt;Ljava/util/Random;)I
 	METHOD a addStateProperties (Lbkv$a;)V
@@ -96,8 +103,10 @@ CLASS bcj net/minecraft/block/Block
 	METHOD a register (Lpc;Lbcj;)V
 	METHOD a hasTag (Lwy;)Z
 	METHOD b getState (I)Lbkt;
-	METHOD b (Lbcj;)Z
+	METHOD b destroyedByPlayer (Laxt;Lej;Lbkt;)V
+	METHOD b disallowsPistonAttach (Lbcj;)Z
 		ARG 0 block
+	METHOD b blockEntityRendererHandlesBreak (Lbkt;)Z
 	METHOD b getStrongRedstonePower (Lbkt;Laxg;Lej;Lep;)I
 	METHOD b randomTick (Lbkt;Laxs;Lej;Ljava/util/Random;)V
 	METHOD c getRenderLayer ()Laxh;
@@ -105,16 +114,20 @@ CLASS bcj net/minecraft/block/Block
 	METHOD c isStone (Lbcj;)Z
 	METHOD c getRenderType (Lbkt;)Lbgp;
 	METHOD c getMapColor (Lbkt;Laxg;Lej;)Lbys;
+	METHOD c shouldRenderSide (Lbkt;Laxg;Lej;Lep;)Z
 	METHOD c randomDisplayTick (Lbkt;Laxs;Lej;Ljava/util/Random;)V
 	METHOD d isDirt (Lbcj;)Z
+	METHOD d canCollide (Lbkt;)Z
 	METHOD d getHardness (Lbkt;Laxg;Lej;)F
 	METHOD e isAir (Lbkt;)Z
 	METHOD f hasCollisionAndSolidRenderLayer (Lbkt;)Z
 	METHOD f getEmptyShape (Lbkt;Laxg;Lej;)Lcel;
-	METHOD g getAmbientOcclusionLightValue (Lbkt;)F
+	METHOD g getAmbientOcclusionLight (Lbkt;)F
 	METHOD h getItem ()Lasw;
 	METHOD h getFluidState (Lbkt;)Lbyn;
+	METHOD i hasBlockEntity ()Z
 	METHOD i canProvidePower (Lbkt;)Z
+	METHOD j canCollide ()Z
 	METHOD j getPistonBehavior (Lbkt;)Lbyt;
 	METHOD k getResistance ()F
 	METHOD l getTranslationName ()Lij;
@@ -122,14 +135,18 @@ CLASS bcj net/minecraft/block/Block
 	METHOD l getOffset (Lbkt;Laxg;Lej;)Lcdt;
 	METHOD m getTranslationKey ()Ljava/lang/String;
 	METHOD m getLightValue (Lbkt;)I
+	METHOD n getSlipperiness ()F
 	METHOD n getMaterial (Lbkt;)Lbyr;
 	METHOD o getStateContainer ()Lbkv;
 	METHOD o isSolidAndFullBlock (Lbkt;)Z
 	METHOD p getDefaultState ()Lbkt;
+	METHOD p isNormalCube (Lbkt;)Z
 	METHOD q getOffsetType ()Lbcj$b;
 	METHOD q isDefaultStateSolidAndFullBlock (Lbkt;)Z
 	METHOD r getSoundGroup ()Lbhi;
+	METHOD r isTopSolid (Lbkt;)Z
 	METHOD s shouldTickRandomly (Lbkt;)Z
 	METHOD t registerBlocks ()V
 	METHOD t getSilkDrop (Lbkt;)Lata;
+	METHOD u hasCustomComparatorOutput (Lbkt;)Z
 	METHOD v setDefaultState (Lbkt;)V
