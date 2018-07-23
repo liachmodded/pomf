@@ -2,9 +2,10 @@ CLASS ej net/minecraft/util/math/BlockPos
 	CLASS ej$1
 		METHOD a computeNext ()Lej;
 	CLASS ej$2
+		FIELD g next Lej$a;
 		METHOD a computeNext ()Lej$a;
 	CLASS ej$a Mutable
-		FIELD b x I
+		FIELD b mutableX I
 		FIELD c y I
 		FIELD d z I
 		METHOD <init> (III)V
@@ -34,11 +35,13 @@ CLASS ej net/minecraft/util/math/BlockPos
 			ARG 1 yIn
 			ARG 2 zIn
 		METHOD a set (Laeo;)Lej$a;
+		METHOD b get (Laeo;)Lej$b;
 		METHOD c set (DDD)Lej$a;
 		METHOD c set (III)Lej$a;
 		METHOD c set (Laeo;)Lej$b;
 		METHOD c setOffset (Lep;)Lej$a;
 		METHOD c setOffset (Lep;I)Lej$a;
+		METHOD close ()V
 		METHOD d get (DDD)Lej$b;
 		METHOD d setOffset (Lep;)Lej$b;
 		METHOD d setOffset (Lep;I)Lej$b;
@@ -51,9 +54,10 @@ CLASS ej net/minecraft/util/math/BlockPos
 	FIELD a ORIGIN Lej;
 	FIELD b LOGGER Lorg/apache/logging/log4j/Logger;
 	METHOD <init> (DDD)V
-		ARG 0 xIn
+		ARG 0 xDouble
 		ARG 1 yIn
-		ARG 2 zIn
+		ARG 2 yDouble
+		ARG 4 zDouble
 	METHOD <init> (III)V
 		ARG 0 xIn
 		ARG 1 yIn

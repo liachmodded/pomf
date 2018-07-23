@@ -1,5 +1,9 @@
 CLASS k net/minecraft/util/Util
 	CLASS k$a OsType
+		CLASS k$a$1
+			METHOD b getCommandFor (Ljava/net/URL;)[Ljava/lang/String;
+		CLASS k$a$2
+			METHOD b getCommandFor (Ljava/net/URL;)[Ljava/lang/String;
 		FIELD a LINUX Lk$a;
 		FIELD b SOLARIS Lk$a;
 		FIELD c WINDOWS Lk$a;
@@ -9,17 +13,22 @@ CLASS k net/minecraft/util/Util
 		METHOD a openURI (Ljava/lang/String;)V
 		METHOD a openURL (Ljava/net/URI;)V
 		METHOD a openURL (Ljava/net/URL;)V
+		METHOD b getCommandFor (Ljava/net/URL;)[Ljava/lang/String;
 	FIELD a timer Ljava/util/function/LongSupplier;
 	FIELD b LOGGER Lorg/apache/logging/log4j/Logger;
 	FIELD c INVALID_PATH_PATTERN Ljava/util/regex/Pattern;
 	METHOD a mapEntryCollector ()Ljava/util/stream/Collector;
+	METHOD a nextOf (Ljava/lang/Iterable;Ljava/lang/Object;)Ljava/lang/Object;
+		ARG 1 target
 	METHOD a initialiseWith (Ljava/lang/Object;Ljava/util/function/Consumer;)Ljava/lang/Object;
 	METHOD a getTranslationKeyForIdentifier (Ljava/lang/String;Lpc;)Ljava/lang/String;
 	METHOD a isNormalisedPath (Ljava/nio/file/Path;)Z
 	METHOD a getLastElement (Ljava/util/List;)Ljava/lang/Object;
 	METHOD a runTask (Ljava/util/concurrent/FutureTask;Lorg/apache/logging/log4j/Logger;)Ljava/lang/Object;
-	METHOD a get (Ljava/util/function/Supplier;)Ljava/lang/Object;
+	METHOD a initialize (Ljava/util/function/Supplier;)Ljava/lang/Object;
 	METHOD b timerValueMillis ()J
+	METHOD b previousOf (Ljava/lang/Iterable;Ljava/lang/Object;)Ljava/lang/Object;
+		ARG 1 target
 	METHOD b isValidPath (Ljava/nio/file/Path;)Z
 	METHOD c getTimerValue ()J
 	METHOD d currentTimeMillis ()J

@@ -1,5 +1,6 @@
 CLASS ajs net/minecraft/entity/passive/EntityIronGolem
 	FIELD a IRON_GOLEM_FLAGS Lor;
+	FIELD bD lookTime I
 	FIELD c villageProperties Lajd;
 	METHOD B attackEntity (Laeo;)Z
 	METHOD C pushAway (Laeo;)V
@@ -9,14 +10,18 @@ CLASS ajs net/minecraft/entity/passive/EntityIronGolem
 	METHOD a playStepSound (Lej;Lbkt;)V
 	METHOD a deserializeCustomData (Lgy;)V
 		ARG 0 nbt
+	METHOD a setLookingAtVillager (Z)V
+		ARG 0 lookingAtVillager
 	METHOD b serializeCustomData (Lgy;)V
 		ARG 0 nbt
 	METHOD b canTrack (Ljava/lang/Class;)Z
 	METHOD bZ initAttributes ()V
 	METHOD cs getSoundDeath ()Lwh;
 	METHOD d getSoundHurt (Ladx;)Lwh;
+	METHOD dA getLookTime ()I
 	METHOD dB isPlayerCreated ()Z
 	METHOD k updateMovement ()V
 	METHOD l getVillageProperties ()Lajd;
+	METHOD n setupAi ()V
 	METHOD s setPlayerCreated (Z)V
 	METHOD x_ initDataTracker ()V

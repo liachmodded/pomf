@@ -6,19 +6,31 @@ CLASS ip net/minecraft/text/Style
 		METHOD a setHoverEvent (Lil;)Lip;
 		METHOD a setParent (Lip;)Lip;
 		METHOD a setBold (Ljava/lang/Boolean;)Lip;
+		METHOD b isBold ()Z
 		METHOD b setItalic (Ljava/lang/Boolean;)Lip;
+		METHOD c isItalic ()Z
+		METHOD c setStrikeThrough (Ljava/lang/Boolean;)Lip;
+		METHOD d isStrikeThrough ()Z
 		METHOD d setUnderline (Ljava/lang/Boolean;)Lip;
+		METHOD e isUnderlined ()Z
+		METHOD e setObfuscated (Ljava/lang/Boolean;)Lip;
+		METHOD f isObfuscated ()Z
 		METHOD h getClickEvent ()Lii;
 		METHOD i getHoverEvent ()Lil;
 		METHOD j getInsertion ()Ljava/lang/String;
 		METHOD k getFormatString ()Ljava/lang/String;
 		METHOD m copy ()Lip;
-		METHOD n getInstance ()Lip;
+		METHOD n deepCopy ()Lip;
 	CLASS ip$a DeSerializer
 		METHOD a deserialize (Lcom/google/gson/JsonElement;Ljava/lang/reflect/Type;Lcom/google/gson/JsonDeserializationContext;)Lip;
 		METHOD a serialize (Lip;Ljava/lang/reflect/Type;Lcom/google/gson/JsonSerializationContext;)Lcom/google/gson/JsonElement;
 	FIELD a parent Lip;
 	FIELD b color La;
+	FIELD c bold Ljava/lang/Boolean;
+	FIELD d italic Ljava/lang/Boolean;
+	FIELD e underlined Ljava/lang/Boolean;
+	FIELD f strikethrough Ljava/lang/Boolean;
+	FIELD g obfuscated Ljava/lang/Boolean;
 	FIELD h clickEvent Lii;
 	FIELD i hoverEvent Lil;
 	FIELD j insertion Ljava/lang/String;
@@ -30,13 +42,20 @@ CLASS ip net/minecraft/text/Style
 	METHOD a setParent (Lip;)Lip;
 	METHOD a setBold (Ljava/lang/Boolean;)Lip;
 	METHOD a setInsertion (Ljava/lang/String;)Lip;
+	METHOD b isBold ()Z
 	METHOD b setItalic (Ljava/lang/Boolean;)Lip;
+	METHOD c isItalic ()Z
+	METHOD c setStrikeThrough (Ljava/lang/Boolean;)Lip;
+	METHOD d isStrikeThrough ()Z
 	METHOD d setUnderline (Ljava/lang/Boolean;)Lip;
+	METHOD e isUnderlined ()Z
+	METHOD e setObfuscated (Ljava/lang/Boolean;)Lip;
+	METHOD f isObfuscated ()Z
 	METHOD g isEmpty ()Z
 	METHOD h getClickEvent ()Lii;
 	METHOD i getHoverEvent ()Lil;
 	METHOD j getInsertion ()Ljava/lang/String;
 	METHOD k getFormatString ()Ljava/lang/String;
 	METHOD m copy ()Lip;
-	METHOD n getInstance ()Lip;
+	METHOD n deepCopy ()Lip;
 	METHOD o getParent ()Lip;

@@ -1,9 +1,16 @@
 CLASS avp net/minecraft/recipe/RecipeFurnace
 	CLASS avp$a Serializer
+		METHOD a getName ()Ljava/lang/String;
+		METHOD a writeToBuf (Lhy;Lavg;)V
 		METHOD a serialize (Lhy;Lavp;)V
+		METHOD a deserialize (Lpc;Lcom/google/gson/JsonObject;)Lavg;
+		METHOD a readFromBuf (Lpc;Lhy;)Lavg;
 		METHOD b deserialize (Lpc;Lcom/google/gson/JsonObject;)Lavp;
 		METHOD b serialize (Lpc;Lhy;)Lavp;
+	METHOD a getSerializer ()Lavi;
+	METHOD a getOutput (Ladb;)Lata;
 	METHOD a matches (Ladb;Laxs;)Z
 	METHOD b getIdentifier ()Lpc;
 	METHOD d getOutput ()Lata;
 	METHOD e getPreviewInputs ()Ley;
+	METHOD f getGroup ()Ljava/lang/String;

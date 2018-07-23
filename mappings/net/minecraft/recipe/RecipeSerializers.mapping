@@ -1,5 +1,13 @@
 CLASS avj net/minecraft/recipe/RecipeSerializers
-	CLASS avj$a SpecialSerializer
+	CLASS avj$a BuiltInSerializer
+		FIELD a name Ljava/lang/String;
+		FIELD b factory Ljava/util/function/Function;
+		METHOD a getName ()Ljava/lang/String;
+		METHOD a writeToBuf (Lhy;Lavg;)V
+		METHOD a deserialize (Lpc;Lcom/google/gson/JsonObject;)Lavg;
+		METHOD a readFromBuf (Lpc;Lhy;)Lavg;
+	FIELD a CRAFTING_SHAPED Lavi;
+	FIELD b CRAFTING_SHAPELESS Lavi;
 	FIELD c CRAFTING_ARMOR_DYE Lavj$a;
 	FIELD d CRAFTING_BOOK_CLONE Lavj$a;
 	FIELD e CRAFTING_MAP_CLONE Lavj$a;
@@ -13,3 +21,11 @@ CLASS avj net/minecraft/recipe/RecipeSerializers
 	FIELD m CRAFTING_ADD_BANNER_PATTERN Lavj$a;
 	FIELD n CRAFTING_ADD_SHEILD_PATTERN Lavj$a;
 	FIELD o CRAFTING_COLOR_SHULKER_BOX Lavj$a;
+	FIELD p FURNACE Lavi;
+	FIELD q registration Ljava/util/Map;
+	METHOD a write (Lavg;Lhy;)V
+		ARG 1 buf
+	METHOD a register (Lavi;)Lavi;
+		ARG 0 serializer
+	METHOD a read (Lhy;)Lavg;
+	METHOD a deserialize (Lpc;Lcom/google/gson/JsonObject;)Lavg;

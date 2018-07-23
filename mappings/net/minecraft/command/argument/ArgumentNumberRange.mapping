@@ -1,10 +1,39 @@
 CLASS ba net/minecraft/command/argument/ArgumentNumberRange
+	CLASS ba$a
+		METHOD create (Ljava/lang/Number;Ljava/lang/Number;)Lba;
+	CLASS ba$b
+		METHOD create (Lcom/mojang/brigadier/StringReader;Ljava/lang/Number;Ljava/lang/Number;)Lba;
 	CLASS ba$c FloatNumberRange
+		FIELD e ANY Lba$c;
+		FIELD f squareMin Ljava/lang/Double;
+		FIELD g squareMax Ljava/lang/Double;
+		METHOD a containsSqrt (D)Z
+		METHOD a from (Lcom/google/gson/JsonElement;)Lba$c;
+		METHOD a from (Lcom/mojang/brigadier/StringReader;)Lba$c;
+		METHOD a from (Lcom/mojang/brigadier/StringReader;Ljava/util/function/Function;)Lba$c;
+		METHOD a square (Ljava/lang/Float;)Ljava/lang/Double;
+		METHOD b largerThan (F)Lba$c;
+		METHOD d contains (F)Z
 	CLASS ba$d IntegerNumberRange
+		FIELD e ANY Lba$d;
+		FIELD f squareMin Ljava/lang/Long;
+		FIELD g squareMax Ljava/lang/Long;
+		METHOD a exact (I)Lba$d;
+		METHOD a from (Lcom/google/gson/JsonElement;)Lba$d;
+		METHOD a from (Lcom/mojang/brigadier/StringReader;)Lba$d;
+		METHOD a from (Lcom/mojang/brigadier/StringReader;Ljava/util/function/Function;)Lba$d;
+		METHOD a square (Ljava/lang/Integer;)Ljava/lang/Long;
+		METHOD b largerThan (I)Lba$d;
+		METHOD d contains (I)Z
 	FIELD a RANGE_EMPTY_EXCEPTION Lcom/mojang/brigadier/exceptions/SimpleCommandExceptionType;
 	FIELD b RANGE_SWAPPED_EXCEPTION Lcom/mojang/brigadier/exceptions/SimpleCommandExceptionType;
 	FIELD c min Ljava/lang/Number;
 	FIELD d max Ljava/lang/Number;
 	METHOD a getMin ()Ljava/lang/Number;
+	METHOD a fillBounds (Lcom/google/gson/JsonElement;Lba;Ljava/util/function/BiFunction;Lba$a;)Lba;
+	METHOD a isNextCharacterValid (Lcom/mojang/brigadier/StringReader;)Z
+	METHOD a fillBounds (Lcom/mojang/brigadier/StringReader;Lba$b;Ljava/util/function/Function;Ljava/util/function/Supplier;Ljava/util/function/Function;)Lba;
+	METHOD a transform (Ljava/lang/Object;Ljava/util/function/Function;)Ljava/lang/Object;
 	METHOD b getMax ()Ljava/lang/Number;
 	METHOD c isEmpty ()Z
+	METHOD d toJsonElement ()Lcom/google/gson/JsonElement;
