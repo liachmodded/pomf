@@ -1,10 +1,18 @@
 CLASS gv net/minecraft/nbt/NBTByteArray
+	FIELD f values [B
 	METHOD a getType ()B
-	METHOD a set (ILho;)V
+	METHOD a getUnsafe (I)Lgw;
+	METHOD a setFromValue (ILho;)V
+		ARG 0 index
+		ARG 1 sourceValue
 	METHOD a read (Ljava/io/DataInput;ILhh;)V
 	METHOD a write (Ljava/io/DataOutput;)V
 	METHOD a getTextComponent (Ljava/lang/String;I)Lij;
+	METHOD a makeArray (Ljava/util/List;)[B
 	METHOD b copy ()Lho;
 	METHOD b remove (I)V
-	METHOD c getUnsafe (I)Lho;
+		ARG 0 index
+	METHOD c getRawArray ()[B
+	METHOD c getWrappedPrimitive (I)Lho;
+		ARG 0 index
 	METHOD size ()I

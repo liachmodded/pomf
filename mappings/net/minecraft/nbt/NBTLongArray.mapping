@@ -1,12 +1,19 @@
 CLASS hf net/minecraft/nbt/NBTLongArray
 	FIELD f longValues [J
 	METHOD a getType ()B
-	METHOD a set (ILho;)V
+	METHOD a getWrappedPrimitive (I)Lhg;
+	METHOD a setFromValue (ILho;)V
+		ARG 0 index
+		ARG 1 sourceValue
 	METHOD a read (Ljava/io/DataInput;ILhh;)V
 	METHOD a write (Ljava/io/DataOutput;)V
 	METHOD a getTextComponent (Ljava/lang/String;I)Lij;
+	METHOD a makeArray (Ljava/util/List;)[J
 	METHOD b copy ()Lho;
 	METHOD b remove (I)V
+		ARG 0 index
 	METHOD c copy ()Lhf;
-	METHOD c getUnsafe (I)Lho;
+	METHOD c getWrappedPrimitive (I)Lho;
+		ARG 0 index
+	METHOD d getRawArray ()[J
 	METHOD size ()I

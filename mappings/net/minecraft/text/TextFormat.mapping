@@ -1,6 +1,8 @@
 CLASS a net/minecraft/text/TextFormat
+	FIELD A isFontStyle Z
 	FIELD B code Ljava/lang/String;
 	FIELD C id I
+	FIELD D colorValue Ljava/lang/Integer;
 	FIELD a BLACK La;
 	FIELD b DARK_BLUE La;
 	FIELD c DARK_GREEN La;
@@ -23,11 +25,20 @@ CLASS a net/minecraft/text/TextFormat
 	FIELD t UNDERLINE La;
 	FIELD u ITALIC La;
 	FIELD v RESET La;
+	FIELD w NAME_TO_VALUE Ljava/util/Map;
 	FIELD x FORMAT_PATTERN Ljava/util/regex/Pattern;
+	FIELD y name Ljava/lang/String;
 	FIELD z formatChar C
+	METHOD a getByFormatCharacter (C)La;
 	METHOD a byId (I)La;
+	METHOD a getNames (ZZ)Ljava/util/Collection;
+		ARG 0 includeColours
+		ARG 1 includeFontStyles
 	METHOD b getId ()I
 	METHOD b stripFormatting (Ljava/lang/String;)Ljava/lang/String;
+	METHOD c isFontStyle ()Z
 	METHOD c getFormatByName (Ljava/lang/String;)La;
+	METHOD d isColour ()Z
 	METHOD d sanitizeName (Ljava/lang/String;)Ljava/lang/String;
+	METHOD f isNotFontStyle ()Z
 	METHOD g getFormatName ()Ljava/lang/String;
