@@ -18,16 +18,16 @@ CLASS bcj net/minecraft/block/Block
 		METHOD a setNoCollision ()Lbcj$c;
 		METHOD a withSlipperiness (F)Lbcj$c;
 		METHOD a withBreakProperties (FF)Lbcj$c;
-		METHOD a withLightValue (I)Lbcj$c;
+		METHOD a withLightValue (I)Lbcj$c; ACC:PUBLIC
 		METHOD a from (Lbcj;)Lbcj$c;
-		METHOD a withSoundGroup (Lbhi;)Lbcj$c;
+		METHOD a withSoundGroup (Lbhi;)Lbcj$c; ACC:PUBLIC
 		METHOD a of (Lbyr;)Lbcj$c;
 		METHOD a of (Lbyr;Lary;)Lbcj$c;
 		METHOD a of (Lbyr;Lbys;)Lbcj$c;
-		METHOD b setInstantBreak ()Lbcj$c;
-		METHOD b withBreakProperties (F)Lbcj$c;
-		METHOD c ticksRandomly ()Lbcj$c;
-		METHOD d ()Lbcj$c;
+		METHOD b setInstantBreak ()Lbcj$c; ACC:PUBLIC
+		METHOD b withBreakProperties (F)Lbcj$c; ACC:PUBLIC
+		METHOD c ticksRandomly ()Lbcj$c; ACC:PUBLIC
+		METHOD d withVariableOpacity ()Lbcj$c; ACC:PUBLIC
 	FIELD a AIR_ID Lpc;
 	FIELD b slipperiness F
 	FIELD c defaultState Lbkt;
@@ -66,7 +66,7 @@ CLASS bcj net/minecraft/block/Block
 	METHOD a onPlaced (Laxs;Lej;Lbkt;Laex;Lata;)V
 	METHOD a onBreak (Laxs;Lej;Lbkt;Laoc;)V
 	METHOD a getTickRate (Laxw;)I
-	METHOD a disallowsRedstoneSwitchPlacing (Lbcj;)Z
+	METHOD a disallowsRedstoneSwitchPlacing (Lbcj;)Z ACC:PUBLIC
 	METHOD a isFullBlock (Lbkt;)Z
 	METHOD a getDropAmount (Lbkt;ILaxs;Lej;Ljava/util/Random;)I
 	METHOD a canEntitySpawn (Lbkt;Laeo;)Z
@@ -94,6 +94,10 @@ CLASS bcj net/minecraft/block/Block
 	METHOD a withRotation (Lbkt;Lbgs;)Lbkt;
 		ARG 0 state
 		ARG 1 rotation
+	METHOD a shouldSideCull (Lbkt;Lbkt;Lep;)Z
+		ARG 0 state
+		ARG 1 otherState
+		ARG 2 side
 	METHOD a createRandomSeed (Lbkt;Lej;)J
 	METHOD a onBlockUpdate (Lbkt;Lep;Lbkt;Laxt;Lej;Lej;)Lbkt;
 	METHOD a getDropAmount (Lbkt;Ljava/util/Random;)I
