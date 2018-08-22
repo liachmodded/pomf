@@ -1,48 +1,43 @@
-CLASS tc net/minecraft/world/WorldServer
-	FIELD G server Lnet/minecraft/server/MinecraftServer;
-	FIELD H entityTrackingManager Lsy;
-	FIELD I chunkPlayerTrackerMap Ltk;
-	FIELD M portalForcer Layd;
+CLASS td net/minecraft/world/WorldServer
+	FIELD F server Lnet/minecraft/server/MinecraftServer;
+	FIELD G entityTrackingManager Lsz;
+	FIELD H chunkPlayerTrackerMap Ltl;
+	FIELD L portalForcer Layj;
 	FIELD a LOGGER Lorg/apache/logging/log4j/Logger;
 	FIELD b autoSaveDisabled Z
-	METHOD A getChunkPlayerTrackerMap ()Ltk;
-	METHOD F getScoreboard ()Lcer;
-	METHOD G getChunkProvider ()Lbmt;
-	METHOD H getFluidTickScheduler ()Layh;
-	METHOD I getBlockTickScheduler ()Layh;
+	METHOD A getEntityTrackingManager ()Lsz;
+	METHOD B getChunkPlayerTrackerMap ()Ltl;
+	METHOD G getScoreboard ()Lcfb;
+	METHOD H getChunkProvider ()Lbnb;
+	METHOD I getFluidTickScheduler ()Layn;
+	METHOD J getBlockTickScheduler ()Layn;
 	METHOD a saveLevel ()V
 	METHOD a isChunkLoaded (II)Z
-	METHOD a isChunkLoaded (IIZ)Z
-	METHOD a spawnEntity (Laeo;)Z
-	METHOD a createExplosion (Laeo;Ladx;DDDFZZ)Laxm;
-	METHOD a init (Laxx;)V
-	METHOD a addBlockAction (Lej;Lbcj;II)V
+	METHOD a spawnEntity (Laer;)Z
+	METHOD a createExplosion (Laer;Laea;DDDFZZ)Laxq;
+	METHOD a init (Layc;)V
+	METHOD a addBlockAction (Lel;Lbcr;II)V
 	METHOD a scheduleOnMainThread (Ljava/lang/Runnable;)Lcom/google/common/util/concurrent/ListenableFuture;
-	METHOD a addEntities (Ljava/util/Collection;)V
-	METHOD a getEntityByUuid (Ljava/util/UUID;)Laeo;
-	METHOD a save (ZLxr;)V
-	METHOD aj shouldSpawnNpcs ()Z
-	METHOD ak shouldSpawnAnimals ()Z
-	METHOD al initDebugWorldProperties ()V
-	METHOD ax isMainThread ()Z
-	METHOD b getWorld ()Laxt;
-	METHOD b onEntityAdded (Laeo;)V
-	METHOD c onEntityRemoved (Laeo;)V
-	METHOD close ()V
-	METHOD d addGlobalEntity (Laeo;)Z
-	METHOD i_ update ()V
-	METHOD j addEntity (Laeo;)Z
+	METHOD a getEntityByUuid (Ljava/util/UUID;)Laer;
+	METHOD a save (ZLxs;)V
+	METHOD ak shouldSpawnNpcs ()Z
+	METHOD al shouldSpawnAnimals ()Z
+	METHOD am initDebugWorldProperties ()V
+	METHOD av isMainThread ()Z
+	METHOD b onEntityAdded (Laer;)V
+	METHOD c onEntityRemoved (Laer;)V
+	METHOD d addGlobalEntity (Laer;)Z
+	METHOD j addEntity (Laer;)Z
 	METHOD k_ updateSleepingStatus ()V
-	METHOD l tickRandomBlocks ()V
 	METHOD l_ getScoreboard ()Lpr;
 	METHOD m_ setDefaultSpawnClient ()V
+	METHOD n_ tickRandomBlocks ()V
 	METHOD o_ updateEntities ()V
-	METHOD q createChunkProvider ()Lbmt;
-	METHOD r generateBonusChest ()V
-	METHOD t flushChunks ()V
-	METHOD u getChunkProvider ()Ltb;
-	METHOD v updateWeather ()V
-	METHOD w getBlockTickScheduler ()Layf;
-	METHOD x getFluidTickScheduler ()Layf;
-	METHOD y getServer ()Lnet/minecraft/server/MinecraftServer;
-	METHOD z getEntityTrackingManager ()Lsy;
+	METHOD r createChunkProvider ()Lbnb;
+	METHOD s generateBonusChest ()V
+	METHOD u flushChunks ()V
+	METHOD v getChunkProvider ()Ltc;
+	METHOD w updateWeather ()V
+	METHOD x getBlockTickScheduler ()Layl;
+	METHOD y getFluidTickScheduler ()Layl;
+	METHOD z getServer ()Lnet/minecraft/server/MinecraftServer;

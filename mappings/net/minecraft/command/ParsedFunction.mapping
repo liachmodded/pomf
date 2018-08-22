@@ -8,17 +8,13 @@ CLASS br net/minecraft/command/ParsedFunction
 	CLASS br$b ParsedCommand
 		FIELD a parsed Lcom/mojang/brigadier/ParseResults;
 		METHOD a execute (Lpp;Lbu;Ljava/util/ArrayDeque;I)V
-			ARG 1 sender
 	CLASS br$c Instruction
 		METHOD a execute (Lpp;Lbu;Ljava/util/ArrayDeque;I)V
-			ARG 1 sender
 	CLASS br$d FunctionCallCommand
 		FIELD a reference Lbr$a;
 		METHOD a execute (Lpp;Lbu;Ljava/util/ArrayDeque;I)V
-			ARG 1 sender
 	FIELD a instructions [Lbr$c;
 	FIELD b identifier Lpc;
 	METHOD a getIdentifier ()Lpc;
 	METHOD a parse (Lpc;Lpp;Ljava/util/List;)Lbr;
-		ARG 2 source
 	METHOD b getInstructions ()[Lbr$c;

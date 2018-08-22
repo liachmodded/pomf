@@ -1,23 +1,17 @@
-CLASS tb net/minecraft/world/chunk/ChunkProviderServer
+CLASS tc net/minecraft/world/chunk/ChunkProviderServer
 	FIELD a LOGGER Lorg/apache/logging/log4j/Logger;
-	FIELD c generator Lbmp;
-	FIELD d saveHandler Lbnn;
+	FIELD c generator Lbmx;
+	FIELD d saveHandler Lbnv;
 	FIELD e chunkByIdMap Lit/unimi/dsi/fastutil/longs/Long2ObjectMap;
-	FIELD f scheduler Ltw;
-	FIELD h world Ltc;
+	FIELD g scheduler Ltx;
+	FIELD i world Ltd;
 	METHOD a getChunks ()Ljava/util/Collection;
-	METHOD a getAlreadyLoadedChunk (II)Lbna;
 	METHOD a createCrashException (IILjava/lang/Throwable;)Lh;
-	METHOD a dropChunk (Lbna;)V
+	METHOD a dropChunk (Lbni;)V
 	METHOD a saveChunks (Z)Z
 	METHOD b dropAll ()V
-	METHOD b getOrLoadChunk (II)Lbna;
-	METHOD b saveChunk (Lbmo;)V
-	METHOD b saveEntities (Lbna;)V
+	METHOD b hasLoadedChunk (II)Z
+	METHOD b saveChunk (Lbmw;)V
 	METHOD c flushChunks ()V
-	METHOD c getChunk (II)Lbna;
-	METHOD d generate (II)Lbmo;
-	METHOD e canAutoSave ()Z
-	METHOD e hasLoadedChunk (II)Z
-	METHOD g loadChunk (II)Lbna;
-	METHOD h getChunkCount ()I
+	METHOD d canAutoSave ()Z
+	METHOD g getChunkCount ()I

@@ -1,36 +1,34 @@
-CLASS apf net/minecraft/entity/vehicle/EntityBoat
-	CLASS apf$a
-		FIELD a IN_WATER Lapf$a;
-		FIELD b UNDER_WATER Lapf$a;
-		FIELD c UNDER_FLOWING_WATER Lapf$a;
-		FIELD d ON_LAND Lapf$a;
-		FIELD e IN_AIR Lapf$a;
-	CLASS apf$b BoatType
-		FIELD a OAK Lapf$b;
-		FIELD b SPRUCE Lapf$b;
-		FIELD c BIRCH Lapf$b;
-		FIELD d JUNGLE Lapf$b;
-		FIELD e ACACIA Lapf$b;
-		FIELD f DARK_OAK Lapf$b;
+CLASS api net/minecraft/entity/vehicle/EntityBoat
+	CLASS api$a
+		FIELD a IN_WATER Lapi$a;
+		FIELD b UNDER_WATER Lapi$a;
+		FIELD c UNDER_FLOWING_WATER Lapi$a;
+		FIELD d ON_LAND Lapi$a;
+		FIELD e IN_AIR Lapi$a;
+	CLASS api$b BoatType
+		FIELD a OAK Lapi$b;
+		FIELD b SPRUCE Lapi$b;
+		FIELD c BIRCH Lapi$b;
+		FIELD d JUNGLE Lapi$b;
+		FIELD e ACACIA Lapi$b;
+		FIELD f DARK_OAK Lapi$b;
 		FIELD g name Ljava/lang/String;
 		METHOD a getName ()Ljava/lang/String;
-		METHOD a getType (I)Lapf$b;
-		METHOD a getType (Ljava/lang/String;)Lapf$b;
+		METHOD a getType (I)Lapi$b;
+		METHOD a getType (Ljava/lang/String;)Lapi$b;
 	FIELD d BOAT_TYPE Lor;
 	METHOD R_ update ()V
 	METHOD a setPositionAndRotations (DDDFFIZ)V
-	METHOD a applyDamage (Ladx;F)Z
-	METHOD a copyEntityData (Laeo;)V
-	METHOD a setBoatType (Lapf$b;)V
+	METHOD a applyDamage (Laea;F)Z
+	METHOD a copyEntityData (Laer;)V
+	METHOD a setBoatType (Lapi$b;)V
 	METHOD a deserializeCustomData (Lgy;)V
-		ARG 0 nbt
 	METHOD aB doesCollide ()Z
 	METHOD aJ getMountedHeightOffset ()D
-	METHOD b interact (Laoc;Ladh;)Z
+	METHOD b interact (Laof;Ladk;)Z
 	METHOD b serializeCustomData (Lgy;)V
-		ARG 0 nbt
-	METHOD f asItem ()Lasw;
-	METHOD i pushAwayFrom (Laeo;)V
-	METHOD p getBoatType ()Lapf$b;
-	METHOD q canAddPassenger (Laeo;)Z
+	METHOD f asItem ()Lasz;
+	METHOD i pushAwayFrom (Laer;)V
+	METHOD p getBoatType ()Lapi$b;
+	METHOD q canAddPassenger (Laer;)Z
 	METHOD x_ initDataTracker ()V

@@ -1,104 +1,66 @@
-CLASS asw net/minecraft/item/Item
-	CLASS asw$a Builder
+CLASS asz net/minecraft/item/Item
+	CLASS asz$a Builder
 		FIELD a maxStackSize I
 		FIELD b maxDamage I
-		FIELD c emptiedItem Lasw;
-		FIELD d itemGroup Laru;
-		FIELD e rarity Latm;
-		METHOD a withMaxStackSize (I)Lasw$a;
-		METHOD a withItemGroup (Laru;)Lasw$a;
-		METHOD a withEmptiedItem (Lasw;)Lasw$a;
-		METHOD a withRarity (Latm;)Lasw$a;
-		METHOD b withDamage (I)Lasw$a;
-		METHOD c setMaxDamage (I)Lasw$a;
-	FIELD a DAMAGED_PROPERTY Lasz;
-	FIELD b DAMAGE_PROPERTY Lasz;
-	FIELD c LEFTHANDED_PROPERTY Lasz;
-	FIELD d COOLDOWN_PROPERTY Lasz;
-	FIELD e propertyRegistry Lfb;
-	FIELD f REGISTRY Lex;
-	FIELD g BLOCK_ITEM_MAP Ljava/util/Map;
-	FIELD j tab Laru;
-	FIELD l rarity Latm;
-	FIELD m maxStackSize I
-	FIELD n damage I
-	FIELD o containerItem Lasw;
-	FIELD p item Ljava/lang/String;
-	METHOD <init> (Lasw$a;)V
-		ARG 0 builder
+		FIELD c emptiedItem Lasz;
+		FIELD d itemGroup Larx;
+		FIELD e rarity Latp;
+		METHOD a withMaxStackSize (I)Lasz$a;
+		METHOD a withItemGroup (Larx;)Lasz$a;
+		METHOD a withEmptiedItem (Lasz;)Lasz$a;
+		METHOD a withRarity (Latp;)Lasz$a;
+		METHOD b withDamage (I)Lasz$a;
+		METHOD c setMaxDamage (I)Lasz$a;
+	FIELD a DAMAGED_PROPERTY Latc;
+	FIELD b DAMAGE_PROPERTY Latc;
+	FIELD c LEFTHANDED_PROPERTY Latc;
+	FIELD d COOLDOWN_PROPERTY Latc;
+	FIELD f BLOCK_ITEM_MAP Ljava/util/Map;
+	FIELD j tab Larx;
+	FIELD k rarity Latp;
+	FIELD l maxStackSize I
+	FIELD m damage I
+	FIELD n containerItem Lasz;
+	FIELD o item Ljava/lang/String;
 	METHOD W_ isMap ()Z
 	METHOD a getTranslationKey ()Ljava/lang/String;
-	METHOD a getAttributeModifiers (Laet;)Lcom/google/common/collect/Multimap;
-	METHOD a register (Larf;)V
-	METHOD a isInTab (Laru;)Z
-		ARG 0 itemGroup
-	METHOD a addStacksForDisplay (Laru;Ley;)V
-		ARG 0 itemGroup
-		ARG 1 stacks
-	METHOD a getId (Lasw;)I
-		ARG 0 item
-	METHOD a isTool (Lata;)Z
-		ARG 0 rstack
-	METHOD a onEntityDamaged (Lata;Laex;Laex;)Z
-	METHOD a canRepair (Lata;Lata;)Z
-		ARG 0 stack
-		ARG 1 repairStack
-	METHOD a onUpdate (Lata;Laxs;Laeo;IZ)V
-		ARG 0 stack
-		ARG 1 world
-		ARG 2 entity
-	METHOD a onItemFinishedUsing (Lata;Laxs;Laex;)Lata;
-	METHOD a onItemStopUsing (Lata;Laxs;Laex;I)V
-	METHOD a onBlockBroken (Lata;Laxs;Lbkt;Lej;Laex;)Z
-	METHOD a addTooltipLines (Lata;Laxs;Ljava/util/List;Laui;)V
-	METHOD a getBreakSpeed (Lata;Lbkt;)F
-		ARG 0 stack
-		ARG 1 state
-	METHOD a onItemUse (Laul;)Ladj;
-		ARG 0 interaction
-	METHOD a onRightClick (Laxs;Laoc;Ladh;)Ladk;
-	METHOD a rayTrace (Laxs;Laoc;Z)Lcdq;
-		ARG 0 world
-		ARG 1 player
-		ARG 2 hitFluid
-	METHOD a getItemFromBlock (Lbcj;)Lasw;
-		ARG 0 block
-	METHOD a register (Lbcj;Laru;)V
-	METHOD a register (Lbcj;Lasw;)V
-	METHOD a canModifyBlock (Lbkt;Laxs;Lej;Laoc;)Z
-		ARG 0 state
-		ARG 1 world
-		ARG 2 pos
-		ARG 3 player
-	METHOD a register (Ljava/lang/String;Lasw;)V
-	METHOD a getPropertyGetter (Lpc;)Lasz;
-		ARG 0 identifier
-	METHOD a register (Lpc;Lasw;)V
-	METHOD a registerProperty (Lpc;Lasz;)V
-		ARG 0 identifier
-		ARG 1 propertyGetter
-	METHOD b getItemFromId (I)Lasw;
-		ARG 0 id
-	METHOD b hasEnchantmentGlow (Lata;)Z
-		ARG 0 stack
-	METHOD b onCrafted (Lata;Laxs;Laoc;)V
-		ARG 0 stack
-		ARG 1 world
-		ARG 2 player
-	METHOD b register (Lbcj;)V
+	METHOD a getAttributeModifiers (Laew;)Lcom/google/common/collect/Multimap;
+	METHOD a register (Lari;)V
+	METHOD a isInTab (Larx;)Z
+	METHOD a addStacksForDisplay (Larx;Lez;)V
+	METHOD a getId (Lasz;)I
+	METHOD a isTool (Latd;)Z
+	METHOD a onEntityDamaged (Latd;Lafa;Lafa;)Z
+	METHOD a canRepair (Latd;Latd;)Z
+	METHOD a onUpdate (Latd;Laxx;Laer;IZ)V
+	METHOD a onItemFinishedUsing (Latd;Laxx;Lafa;)Latd;
+	METHOD a onItemStopUsing (Latd;Laxx;Lafa;I)V
+	METHOD a onBlockBroken (Latd;Laxx;Lblb;Lel;Lafa;)Z
+	METHOD a addTooltipLines (Latd;Laxx;Ljava/util/List;Laul;)V
+	METHOD a getBreakSpeed (Latd;Lblb;)F
+	METHOD a onItemUse (Lauo;)Ladm;
+	METHOD a onRightClick (Laxx;Laof;Ladk;)Ladn;
+	METHOD a rayTrace (Laxx;Laof;Z)Lcea;
+	METHOD a getItemFromBlock (Lbcr;)Lasz;
+	METHOD a register (Lbcr;Larx;)V
+	METHOD a register (Lbcr;Lasz;)V
+	METHOD a canModifyBlock (Lblb;Laxx;Lel;Laof;)Z
+	METHOD a register (Ljava/lang/String;Lasz;)V
+	METHOD a register (Lpc;Lasz;)V
+	METHOD b getItemFromId (I)Lasz;
+	METHOD b hasEnchantmentGlow (Latd;)Z
+	METHOD b onCrafted (Latd;Laxx;Laof;)V
+	METHOD b register (Lbcr;)V
 	METHOD c getEnchantability ()I
-	METHOD c getMaxUseTime (Lata;)I
-		ARG 0 stack
-	METHOD d getUseAction (Lata;)Lauk;
-		ARG 0 stack
-	METHOD h getItem ()Lasw;
+	METHOD c getMaxUseTime (Latd;)I
+	METHOD d getUseAction (Latd;)Laun;
+	METHOD h getItem ()Lasz;
 	METHOD i getMaxStackSize ()I
-	METHOD i getTranslatedNameTrimmed (Lata;)Lij;
+	METHOD i getTranslatedNameTrimmed (Latd;)Lij;
 	METHOD j getDamage ()I
-	METHOD j getRarity (Lata;)Latm;
-		ARG 0 stack
+	METHOD j getRarity (Latd;)Latp;
 	METHOD m getUnlocalizedName ()Ljava/lang/String;
-	METHOD o getContainerItem ()Lasw;
+	METHOD o getContainerItem ()Lasz;
 	METHOD p hasContainerItem ()Z
-	METHOD q getCreativeTab ()Laru;
+	METHOD q getCreativeTab ()Larx;
 	METHOD r registerItems ()V

@@ -1,4 +1,4 @@
-CLASS aeo net/minecraft/entity/Entity
+CLASS aer net/minecraft/entity/Entity
 	FIELD A onGround Z
 	FIELD F isStuckInWeb Z
 	FIELD G invalid Z
@@ -29,22 +29,21 @@ CLASS aeo net/minecraft/entity/Entity
 	FIELD am portalCooldown I
 	FIELD an inPortal Z
 	FIELD ao portalTime I
-	FIELD ap worldId I
-	FIELD aq lastPortalPosition Lej;
+	FIELD aq lastPortalPosition Lel;
 	FIELD at uuid Ljava/util/UUID;
 	FIELD au uuidString Ljava/lang/String;
 	FIELD av glowing Z
 	FIELD aw passengerList Ljava/util/List;
-	FIELD ax riddenEntity Laeo;
-	FIELD ay boundingBox Lcdp;
-	FIELD b NULL_BOX Lcdp;
+	FIELD ax riddenEntity Laer;
+	FIELD ay boundingBox Lcdz;
+	FIELD b NULL_BOX Lcdz;
 	FIELD c renderDistanceMultiplier D
 	FIELD f maxEntityId I
-	FIELD g type Laes;
+	FIELD g type Laev;
 	FIELD h entityId I
 	FIELD i LOGGER Lorg/apache/logging/log4j/Logger;
 	FIELD k ridingCooldown I
-	FIELD m world Laxs;
+	FIELD m world Laxx;
 	FIELD q x D
 	FIELD r y D
 	FIELD s z D
@@ -52,16 +51,13 @@ CLASS aeo net/minecraft/entity/Entity
 	FIELD x pitch F
 	FIELD y prevYaw F
 	FIELD z prevPitch F
-	METHOD <init> (Laes;Laxs;)V
-		ARG 0 type
-		ARG 1 world
-	METHOD A_ getPistonBehavior ()Lbyt;
+	METHOD A_ getPistonBehavior ()Lbzb;
 	METHOD B_ shouldBroadcastCommandToOps ()Z
 	METHOD E updatePortalCooldown ()V
 	METHOD N_ getNameAsComponent ()Lij;
 	METHOD O getDisplayName ()Lij;
 	METHOD O_ hasCustomName ()Z
-	METHOD P getEntityType ()Laes;
+	METHOD P getEntityType ()Laev;
 	METHOD Q getEntityId ()I
 	METHOD R getScoreboardTags ()Ljava/util/Set;
 	METHOD R_ update ()V
@@ -77,30 +73,29 @@ CLASS aeo net/minecraft/entity/Entity
 	METHOD a setPositionAnglesAndUpdate (DDDFF)V
 	METHOD a setPositionAndRotations (DDDFFIZ)V
 	METHOD a setSize (FF)V
-	METHOD a applyDamage (Ladx;F)Z
-	METHOD a startRiding (Laeo;Z)Z
-	METHOD a setEquippedStack (Laet;Lata;)V
-	METHOD a move (Lafb;DDD)V
-	METHOD a onStruckByLightning (Lamf;)V
-	METHOD a interact (Laoc;Lcdt;Ladh;)Ladj;
-	METHOD a dropStack (Lata;F)Lami;
-	METHOD a canExplosionDestroyBlock (Laxm;Laxg;Lej;Lbkt;F)Z
-	METHOD a getEffectiveExplosionResistance (Laxm;Laxg;Lej;Lbkt;Lbyn;F)F
-	METHOD a setWorld (Laxs;)V
-	METHOD a applyMirror (Lbfq;)F
-	METHOD a applyRotation (Lbgs;)F
+	METHOD a applyDamage (Laea;F)Z
+	METHOD a startRiding (Laer;Z)Z
+	METHOD a setEquippedStack (Laew;Latd;)V
+	METHOD a move (Lafe;DDD)V
+	METHOD a onStruckByLightning (Lami;)V
+	METHOD a interact (Laof;Lced;Ladk;)Ladm;
+	METHOD a dropStack (Latd;F)Laml;
+	METHOD a canExplosionDestroyBlock (Laxq;Laxj;Lel;Lblb;F)Z
+	METHOD a getEffectiveExplosionResistance (Laxq;Laxj;Lel;Lblb;Lbyv;F)F
+	METHOD a setWorld (Laxx;)V
+	METHOD a applyMirror (Lbfy;)F
+	METHOD a applyRotation (Lbha;)F
 	METHOD a addCrashReportDetails (Lc;)V
-	METHOD a setBoundingBox (Lcdp;)V
-	METHOD a isTeamPlayer (Lcet;)Z
-	METHOD a setPositionAndAngles (Lej;FF)V
-	METHOD a playStepSound (Lej;Lbkt;)V
+	METHOD a setBoundingBox (Lcdz;)V
+	METHOD a isTeamPlayer (Lcfd;)Z
+	METHOD a setPositionAndAngles (Lel;FF)V
+	METHOD a playStepSound (Lel;Lblb;)V
 	METHOD a deserializeCustomData (Lgy;)V
-		ARG 0 nbt
 	METHOD a receiveCommandFeedback (Lij;)V
 	METHOD a addScoreboardTag (Ljava/lang/String;)Z
 	METHOD a setUuid (Ljava/util/UUID;)V
 	METHOD a onTrackedDataSet (Lor;)V
-	METHOD a playSoundAtEntity (Lwh;FF)V
+	METHOD a playSoundAtEntity (Lwi;FF)V
 	METHOD a toTagList ([D)Lhe;
 	METHOD a toTagList ([F)Lhe;
 	METHOD aB doesCollide ()Z
@@ -111,8 +106,8 @@ CLASS aeo net/minecraft/entity/Entity
 	METHOD aI getHeightOffset ()D
 	METHOD aJ getMountedHeightOffset ()D
 	METHOD aL removeAllPassengers ()V
-	METHOD aO getRotationClient ()Lcds;
-	METHOD aP getRotationVecClient ()Lcdt;
+	METHOD aO getRotationClient ()Lcec;
+	METHOD aP getRotationVecClient ()Lced;
 	METHOD aQ getDefaultPortalCooldown ()I
 	METHOD aS getItemsHand ()Ljava/lang/Iterable;
 	METHOD aT getItemsArmor ()Ljava/lang/Iterable;
@@ -122,8 +117,8 @@ CLASS aeo net/minecraft/entity/Entity
 	METHOD aX hasPassengers ()Z
 	METHOD aZ isSneaking ()Z
 	METHOD aa kill ()V
-	METHOD ad getSoundSwim ()Lwh;
-	METHOD ae getSoundSplash ()Lwh;
+	METHOD ad getSoundSwim ()Lwi;
+	METHOD ae getSoundSplash ()Lwi;
 	METHOD ag checkBlockCollision ()V
 	METHOD ai isSilent ()Z
 	METHOD aj isUnaffectedByGravity ()Z
@@ -138,28 +133,27 @@ CLASS aeo net/minecraft/entity/Entity
 	METHOD b setPositionAndAngles (DDDFF)V
 	METHOD b setRotation (FF)V
 	METHOD b setEntityFlag (IZ)V
-	METHOD b isInvulnerableTo (Ladx;)Z
-	METHOD b interact (Laoc;Ladh;)Z
+	METHOD b isInvulnerableTo (Laea;)Z
+	METHOD b interact (Laof;Ladk;)Z
 	METHOD b serializeCustomData (Lgy;)V
-		ARG 0 nbt
 	METHOD b removeScoreboardTag (Ljava/lang/String;)Z
 	METHOD b setInWorld (Z)V
-	METHOD bA getHorizontalFacing ()Lep;
+	METHOD bA getHorizontalFacing ()Leq;
 	METHOD bC getComponentHoverEvent ()Lil;
-	METHOD bD getBoundingBox ()Lcdp;
+	METHOD bD getBoundingBox ()Lcdz;
 	METHOD bF getEyeHeight ()F
 	METHOD bL isImmuneToExplosion ()Z
 	METHOD bP getPassengerList ()Ljava/util/List;
-	METHOD bS getTopmostRiddenEntity ()Laeo;
-	METHOD bU getRiddenEntity ()Laeo;
-	METHOD bV getSoundCategory ()Lwj;
+	METHOD bS getTopmostRiddenEntity ()Laer;
+	METHOD bU getRiddenEntity ()Laer;
+	METHOD bV getSoundCategory ()Lwk;
 	METHOD ba isSprinting ()Z
 	METHOD bc isGlowing ()Z
 	METHOD bd isInvisible ()Z
-	METHOD be getScoreboardTeam ()Lcet;
+	METHOD be getScoreboardTeam ()Lcfd;
 	METHOD bg getBreath ()I
 	METHOD bh stickInWeb ()V
-	METHOD bi getParts ()[Laeo;
+	METHOD bi getParts ()[Laer;
 	METHOD bj getHeadPitch ()F
 	METHOD bl isInvulnerable ()Z
 	METHOD bn getSafeFallDistance ()I
@@ -170,49 +164,47 @@ CLASS aeo net/minecraft/entity/Entity
 	METHOD by isCustomNameVisible ()Z
 	METHOD bz shouldRenderName ()Z
 	METHOD c handleFallDamage (FF)V
-	METHOD c squaredDistanceTo (Lej;)D
+	METHOD c squaredDistanceTo (Lel;)D
 	METHOD c serialiseWithId (Lgy;)Z
 	METHOD c setSilent (Z)V
 	METHOD d squaredDistanceTo (DDD)D
-	METHOD d getVectorFromPolar (FF)Lcdt;
-	METHOD d changeWorld (I)Laeo;
-	METHOD d squaredDistanceToCenter (Lej;)D
+	METHOD d getVectorFromPolar (FF)Lced;
+	METHOD d squaredDistanceToCenter (Lel;)D
 	METHOD d serialiseIfNoVehicle (Lgy;)Z
 	METHOD d setUnaffectedByGravity (Z)V
 	METHOD e getTextComponent ()Lij;
 	METHOD e distanceTo (DDD)D
-	METHOD e canSeePlayer (Laoc;)Z
-	METHOD e setInPortal (Lej;)V
+	METHOD e setEntityId (I)V
+	METHOD e canSeePlayer (Laof;)Z
+	METHOD e setInPortal (Lel;)V
 	METHOD e serialize (Lgy;)Lgy;
 	METHOD e setSneaking (Z)V
 	METHOD f addVelocity (DDD)V
-	METHOD f setEntityId (I)V
+	METHOD f setOnFireFor (I)V
 	METHOD f deserialize (Lgy;)V
 	METHOD f setSprinting (Z)V
 	METHOD g shouldRenderFrom (DDD)Z
-	METHOD g setOnFireFor (I)V
-		ARG 0 seconds
-	METHOD g distanceTo (Laeo;)F
+	METHOD g burn (I)V
+	METHOD g distanceTo (Laer;)F
 	METHOD h setVelocityClient (DDD)V
-	METHOD h burn (I)V
-	METHOD h squaredDistanceTo (Laeo;)D
+	METHOD h getEntityFlag (I)Z
+	METHOD h squaredDistanceTo (Laer;)D
 	METHOD h setGlowing (Z)V
-	METHOD i getEntityFlag (I)Z
-	METHOD i pushAwayFrom (Laeo;)V
+	METHOD i setBreath (I)V
+	METHOD i pushAwayFrom (Laer;)V
 	METHOD i setInvisible (Z)V
 	METHOD j setHeadPitch (F)V
-	METHOD j setBreath (I)V
 	METHOD k setYaw (F)V
 	METHOD l setInvulnerable (Z)V
-	METHOD m startRiding (Laeo;)Z
+	METHOD m startRiding (Laer;)Z
 	METHOD m setCustomNameVisible (Z)V
-	METHOD n canStartRiding (Laeo;)Z
-	METHOD o addPassenger (Laeo;)V
-	METHOD p removePassenger (Laeo;)V
+	METHOD n canStartRiding (Laer;)Z
+	METHOD o addPassenger (Laer;)V
+	METHOD p removePassenger (Laer;)V
 	METHOD q isInBubbleColumn ()Z
-	METHOD q canAddPassenger (Laeo;)Z
-	METHOD r isTeammate (Laeo;)Z
-	METHOD s isPartOf (Laeo;)Z
-	METHOD u setPositionAndAngles (Laeo;)V
-	METHOD w hasPassenger (Laeo;)Z
+	METHOD q canAddPassenger (Laer;)Z
+	METHOD r isTeammate (Laer;)Z
+	METHOD s isPartOf (Laer;)Z
+	METHOD u setPositionAndAngles (Laer;)V
+	METHOD w hasPassenger (Laer;)Z
 	METHOD x_ initDataTracker ()V

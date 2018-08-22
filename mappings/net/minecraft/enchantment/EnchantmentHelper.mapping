@@ -1,51 +1,21 @@
-CLASS awc net/minecraft/enchantment/EnchantmentHelper
-	CLASS awc$a DamageTargetHandler
-		FIELD a user Laex;
-		FIELD b target Laeo;
-		METHOD a handleEnchantment (Lawa;I)V
-			ARG 0 enchantment
-	CLASS awc$b DamageUserHandler
-		FIELD a user Laex;
-		METHOD a handleEnchantment (Lawa;I)V
-			ARG 0 enchantment
-	CLASS awc$c EnchantmentHandler
-		METHOD a handleEnchantment (Lawa;I)V
-			ARG 0 enchantment
-	CLASS awc$d AdditionalDamgeHandler
-		FIELD a additionalDamge F
-		FIELD b entityType Lafa;
-		METHOD a handleEnchantment (Lawa;I)V
-			ARG 0 enchantment
-	CLASS awc$e ProtectionHandler
-		FIELD a protectionAmount I
-		FIELD b source Ladx;
-		METHOD a handleEnchantment (Lawa;I)V
-			ARG 0 enchantment
-	FIELD a protectionHandler Lawc$e;
-	FIELD b additionalDamgeHandler Lawc$d;
-	FIELD c damageUserHandler Lawc$b;
-	FIELD d damageTargetHandler Lawc$a;
-	METHOD a handleDamageUser (Laex;Laeo;)V
-	METHOD a getEnchantments (Lata;)Ljava/util/Map;
-	METHOD a getAdditionalDamge (Lata;Lafa;)F
-		ARG 0 stack
-		ARG 1 category
-	METHOD a getEquipmentLevel (Lawa;Laex;)I
-	METHOD a handleEnchantmentArray (Lawc$c;Ljava/lang/Iterable;)V
-	METHOD a getProtectionAmount (Ljava/lang/Iterable;Ladx;)I
-	METHOD a removeInvalidEnchantments (Ljava/util/List;Lawd;)V
-	METHOD a setEnchantments (Ljava/util/Map;Lata;)V
-	METHOD a geExperienceLevel (Ljava/util/Random;IILata;)I
-	METHOD b getKnockback (Laex;)I
-	METHOD b handleDamageTarget (Laex;Laeo;)V
-	METHOD b getLuckOfTheSea (Lata;)I
-	METHOD b getHighestEnchantmentLevel (Lawa;Laex;)Lata;
-	METHOD b getEnchantmentList (Ljava/util/Random;Lata;IZ)Ljava/util/List;
-	METHOD c getFireAspect (Laex;)I
-	METHOD c getLure (Lata;)I
-	METHOD d getRespiration (Laex;)I
-	METHOD e getDepthStrider (Laex;)I
-	METHOD f getEfficiency (Laex;)I
-	METHOD g getLooting (Laex;)I
-	METHOD h hasAquaAffinity (Laex;)Z
-	METHOD i hasFrostWalker (Laex;)Z
+CLASS awf net/minecraft/enchantment/EnchantmentHelper
+	CLASS awf$a EnchantmentHandler
+		METHOD accept handleEnchantment (Lawd;I)V
+	METHOD a getEnchantments (Latd;)Ljava/util/Map;
+	METHOD a getEquipmentLevel (Lawd;Lafa;)I
+	METHOD a handleEnchantmentArray (Lawf$a;Ljava/lang/Iterable;)V
+	METHOD a removeInvalidEnchantments (Ljava/util/List;Lawg;)V
+	METHOD a setEnchantments (Ljava/util/Map;Latd;)V
+	METHOD a geExperienceLevel (Ljava/util/Random;IILatd;)I
+	METHOD b getKnockback (Lafa;)I
+	METHOD b getLuckOfTheSea (Latd;)I
+	METHOD b getHighestEnchantmentLevel (Lawd;Lafa;)Latd;
+	METHOD b getEnchantmentList (Ljava/util/Random;Latd;IZ)Ljava/util/List;
+	METHOD c getFireAspect (Lafa;)I
+	METHOD c getLure (Latd;)I
+	METHOD d getRespiration (Lafa;)I
+	METHOD e getDepthStrider (Lafa;)I
+	METHOD f getEfficiency (Lafa;)I
+	METHOD g getLooting (Lafa;)I
+	METHOD h hasAquaAffinity (Lafa;)Z
+	METHOD i hasFrostWalker (Lafa;)Z

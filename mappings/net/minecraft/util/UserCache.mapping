@@ -1,12 +1,12 @@
-CLASS vk net/minecraft/util/UserCache
-	CLASS vk$a Entry
+CLASS vl net/minecraft/util/UserCache
+	CLASS vl$a Entry
 		FIELD b profile Lcom/mojang/authlib/GameProfile;
 		FIELD c expirationDate Ljava/util/Date;
 		METHOD a getProfile ()Lcom/mojang/authlib/GameProfile;
 		METHOD b getExpirationDate ()Ljava/util/Date;
-	CLASS vk$b JsonConverter
-		METHOD a deserialize (Lcom/google/gson/JsonElement;Ljava/lang/reflect/Type;Lcom/google/gson/JsonDeserializationContext;)Lvk$a;
-		METHOD a serialize (Lvk$a;Ljava/lang/reflect/Type;Lcom/google/gson/JsonSerializationContext;)Lcom/google/gson/JsonElement;
+	CLASS vl$b JsonConverter
+		METHOD a deserialize (Lcom/google/gson/JsonElement;Ljava/lang/reflect/Type;Lcom/google/gson/JsonDeserializationContext;)Lvl$a;
+		METHOD a serialize (Lvl$a;Ljava/lang/reflect/Type;Lcom/google/gson/JsonSerializationContext;)Lcom/google/gson/JsonElement;
 	FIELD a EXPIRATION_DATE_FORMAT Ljava/text/SimpleDateFormat;
 	FIELD b gson Lcom/google/gson/Gson;
 	FIELD c useRemote Z
@@ -24,6 +24,6 @@ CLASS vk net/minecraft/util/UserCache
 	METHOD a getByUuid (Ljava/util/UUID;)Lcom/mojang/authlib/GameProfile;
 	METHOD a setUseRemote (Z)V
 	METHOD b load ()V
-	METHOD b getEntry (Ljava/util/UUID;)Lvk$a;
+	METHOD b getEntry (Ljava/util/UUID;)Lvl$a;
 	METHOD c save ()V
 	METHOD d shouldUseRemote ()Z

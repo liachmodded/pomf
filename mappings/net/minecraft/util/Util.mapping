@@ -1,10 +1,12 @@
 CLASS k net/minecraft/util/Util
-	CLASS k$a OsType
-		FIELD a LINUX Lk$a;
-		FIELD b SOLARIS Lk$a;
-		FIELD c WINDOWS Lk$a;
-		FIELD d MAC Lk$a;
-		FIELD e UNKNOWN Lk$a;
+	CLASS k$a
+		FIELD a INSTANCE Lk$a;
+	CLASS k$b OsType
+		FIELD a LINUX Lk$b;
+		FIELD b SOLARIS Lk$b;
+		FIELD c WINDOWS Lk$b;
+		FIELD d MAC Lk$b;
+		FIELD e UNKNOWN Lk$b;
 		METHOD a openFile (Ljava/io/File;)V
 		METHOD a openURI (Ljava/lang/String;)V
 		METHOD a openURL (Ljava/net/URI;)V
@@ -23,6 +25,6 @@ CLASS k net/minecraft/util/Util
 	METHOD b isValidPath (Ljava/nio/file/Path;)Z
 	METHOD c getTimerValue ()J
 	METHOD d currentTimeMillis ()J
-	METHOD e getOSType ()Lk$a;
+	METHOD e getOSType ()Lk$b;
 	METHOD f jvmArgs ()Ljava/util/stream/Stream;
-	METHOD g getLogger ()Lorg/apache/logging/log4j/Logger;
+	METHOD h getLogger ()Lorg/apache/logging/log4j/Logger;

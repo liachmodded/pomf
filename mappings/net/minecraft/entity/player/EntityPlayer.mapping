@@ -1,32 +1,32 @@
-CLASS aoc net/minecraft/entity/player/EntityPlayer
-	CLASS aoc$a SleepResult
-		FIELD a OK Laoc$a;
-		FIELD b NOT_POSSIBLE_HERE Laoc$a;
-		FIELD c NOT_POSSIBLE_NOW Laoc$a;
-		FIELD d TOO_FAR_AWAY Laoc$a;
-		FIELD e OTHER_PROBLEM Laoc$a;
-		FIELD f NOT_SAFE Laoc$a;
-	CLASS aoc$b ChatVisibility
-		FIELD a FULL Laoc$b;
-		FIELD b SYSTEM Laoc$b;
-		FIELD c HIDDEN Laoc$b;
+CLASS aof net/minecraft/entity/player/EntityPlayer
+	CLASS aof$a SleepResult
+		FIELD a OK Laof$a;
+		FIELD b NOT_POSSIBLE_HERE Laof$a;
+		FIELD c NOT_POSSIBLE_NOW Laof$a;
+		FIELD d TOO_FAR_AWAY Laof$a;
+		FIELD e OTHER_PROBLEM Laof$a;
+		FIELD f NOT_SAFE Laof$a;
+	CLASS aof$b ChatVisibility
+		FIELD a FULL Laof$b;
+		FIELD b SYSTEM Laof$b;
+		FIELD c HIDDEN Laof$b;
 		FIELD e id I
 		FIELD f key Ljava/lang/String;
 		METHOD a getId ()I
-		METHOD a byId (I)Laoc$b;
+		METHOD a byId (I)Laof$b;
 		METHOD b getTranslationKey ()Ljava/lang/String;
-	CLASS aoc$c
-		METHOD a test (Lanc;)Z
+	CLASS aof$c
+		METHOD a test (Lanf;)Z
 	FIELD bA RIGHT_SHOULDER_ENTITY_DATA Lor;
-	FIELD bB inventory Laob;
-	FIELD bC enderChestInventory Laqm;
-	FIELD bD containerPlayer Lapr;
-	FIELD bE container Lapr;
-	FIELD bF hungerManager Lapp;
+	FIELD bB inventory Laoe;
+	FIELD bC enderChestInventory Laqp;
+	FIELD bD containerPlayer Lapu;
+	FIELD bE container Lapu;
+	FIELD bF hungerManager Laps;
 	FIELD b SCORE Lor;
 	FIELD bQ sleeping Z
-	FIELD bR sleepingPos Lej;
-	FIELD bV abilities Laoa;
+	FIELD bR sleepingPos Lel;
+	FIELD bV abilities Laod;
 	FIELD bW experience I
 	FIELD bX experienceLevel I
 	FIELD bY experienceBarProgress F
@@ -34,13 +34,13 @@ CLASS aoc net/minecraft/entity/player/EntityPlayer
 	FIELD bx SKIN_CUSTOMIZATION Lor;
 	FIELD by MAIN_HAND Lor;
 	FIELD bz LEFT_SHOULDER_ENTITY_DATA Lor;
-	FIELD cF renderOffsetY F
+	FIELD cE renderOffsetY F
 	FIELD c sleepTimer I
-	FIELD cb fishHook Lamc;
+	FIELD cb fishHook Lamf;
 	FIELD cc reducedDebugInfo Z
-	FIELD ce itemCooldownManager Lasx;
+	FIELD ce itemCooldownManager Lata;
 	FIELD d selectedItemSlot Z
-	FIELD e spawnPosition Lej;
+	FIELD e spawnPosition Lel;
 	FIELD f spawnForced Z
 	FIELD h gameProfile Lcom/mojang/authlib/GameProfile;
 	METHOD N_ getNameAsComponent ()Lij;
@@ -50,54 +50,52 @@ CLASS aoc net/minecraft/entity/player/EntityPlayer
 	METHOD V invalidate ()V
 	METHOD X getMaxPortalTime ()I
 	METHOD a addExhaustion (F)V
-	METHOD a openInventory (Ladb;)V
-	METHOD a openContainer (Ladi;)V
-	METHOD a canUnlock (Ladm;)Z
-	METHOD a onDeath (Ladx;)V
-	METHOD a applyDamage (Ladx;F)Z
-	METHOD a copyEntityData (Laeo;)V
-	METHOD a interactWith (Laeo;Ladh;)Ladj;
-	METHOD a setEquippedStack (Laet;Lata;)V
-	METHOD a setMainHand (Laew;)V
-	METHOD a openHorseInventory (Lakk;Ladb;)V
-	METHOD a spawnEntityItem (Lami;)Lata;
-	METHOD a shouldDamagePlayer (Laoc;)Z
-	METHOD a isSkinOverlayVisible (Laod;)Z
-	METHOD a openBookEditor (Lata;Ladh;)V
-	METHOD a dropItem (Lata;Z)Lami;
-	METHOD a dropItem (Lata;ZZ)Lami;
-	METHOD a openVillagerGui (Lawz;)V
-	METHOD a openCommandBlockMinecart (Laxd;)V
-	METHOD a setGameMode (Laxp;)V
-	METHOD a openCommandBlock (Lbjd;)V
-	METHOD a openSignEditor (Lbjt;)V
-	METHOD a openStructureBlock (Lbjw;)V
+	METHOD a openInventory (Lade;)V
+	METHOD a openContainer (Ladl;)V
+	METHOD a canUnlock (Ladp;)Z
+	METHOD a onDeath (Laea;)V
+	METHOD a applyDamage (Laea;F)Z
+	METHOD a copyEntityData (Laer;)V
+	METHOD a interactWith (Laer;Ladk;)Ladm;
+	METHOD a setEquippedStack (Laew;Latd;)V
+	METHOD a setMainHand (Laez;)V
+	METHOD a openHorseInventory (Lakn;Lade;)V
+	METHOD a spawnEntityItem (Laml;)Latd;
+	METHOD a shouldDamagePlayer (Laof;)Z
+	METHOD a isSkinOverlayVisible (Laog;)Z
+	METHOD a openBookEditor (Latd;Ladk;)V
+	METHOD a dropItem (Latd;Z)Laml;
+	METHOD a dropItem (Latd;ZZ)Laml;
+	METHOD a openVillagerGui (Laxc;)V
+	METHOD a openCommandBlockMinecart (Laxg;)V
+	METHOD a setGameMode (Laxu;)V
+	METHOD a openCommandBlock (Lbjl;)V
+	METHOD a openSignEditor (Lbkb;)V
+	METHOD a openStructureBlock (Lbke;)V
 	METHOD a getUuidFromProfile (Lcom/mojang/authlib/GameProfile;)Ljava/util/UUID;
-	METHOD a trySleep (Lej;)Laoc$a;
-	METHOD a isWithinSleepingRange (Lej;Lep;)Z
-	METHOD a canPlaceBlock (Lej;Lep;Lata;)Z
+	METHOD a trySleep (Lel;)Laof$a;
+	METHOD a isWithinSleepingRange (Lel;Leq;)Z
+	METHOD a canPlaceBlock (Lel;Leq;Latd;)Z
 	METHOD a deserializeCustomData (Lgy;)V
-		ARG 0 nbt
 	METHOD a addChatMessage (Lij;Z)V
-	METHOD a playSoundAtEntity (Lwh;FF)V
-	METHOD a resetStat (Lwo;)V
-	METHOD a incrementStat (Lwo;I)V
-	METHOD a dropSelectedItem (Z)Lami;
+	METHOD a playSoundAtEntity (Lwi;FF)V
+	METHOD a resetStat (Lwp;)V
+	METHOD a incrementStat (Lwp;I)V
+	METHOD a dropSelectedItem (Z)Laml;
 	METHOD aG isInsideWall ()Z
 	METHOD aI getHeightOffset ()D
 	METHOD aQ getDefaultPortalCooldown ()I
 	METHOD aS getItemsHand ()Ljava/lang/Iterable;
 	METHOD aT getItemsArmor ()Ljava/lang/Iterable;
-	METHOD ad getSoundSwim ()Lwh;
-	METHOD ae getSoundSplash ()Lwh;
+	METHOD ad getSoundSwim ()Lwi;
+	METHOD ae getSoundSplash ()Lwi;
 	METHOD au onSwimmingStart ()V
-	METHOD b getEquippedStack (Laet;)Lata;
-	METHOD b setPlayerSpawn (Lej;Z)V
+	METHOD b getEquippedStack (Laew;)Latd;
+	METHOD b setPlayerSpawn (Lel;Z)V
 	METHOD b serializeCustomData (Lgy;)V
-		ARG 0 nbt
-	METHOD b incrementStat (Lwo;)V
+	METHOD b incrementStat (Lwp;)V
 	METHOD bF getEyeHeight ()F
-	METHOD bV getSoundCategory ()Lwj;
+	METHOD bV getSoundCategory ()Lwk;
 	METHOD bZ initAttributes ()V
 	METHOD bh stickInWeb ()V
 	METHOD bz shouldRenderName ()Z
@@ -106,41 +104,41 @@ CLASS aoc net/minecraft/entity/player/EntityPlayer
 	METHOD cF healthDepleted ()Z
 	METHOD cL isSleeping ()Z
 	METHOD cQ getAbsorptionAmount ()F
-	METHOD cS getMainHand ()Laew;
-	METHOD cs getSoundDeath ()Lwh;
-	METHOD d getSoundHurt (Ladx;)Lwh;
-	METHOD d damage (Ladx;F)V
-	METHOD dB getScoreboard ()Lcer;
+	METHOD cS getMainHand ()Laez;
+	METHOD cs getSoundDeath ()Lwi;
+	METHOD d addExperience (I)V
+	METHOD d getSoundHurt (Laea;)Lwi;
+	METHOD d damage (Laea;F)V
+	METHOD dB getScoreboard ()Lcfb;
 	METHOD dD getReducedDebugInfo ()Z
 	METHOD dE getLeftShoulderEntityData ()Lgy;
 	METHOD dF getShoulderEntityRightData ()Lgy;
-	METHOD dI getItemCooldownManager ()Lasx;
+	METHOD dI getItemCooldownManager ()Lata;
 	METHOD dJ getLuck ()F
 	METHOD di getScore ()I
 	METHOD dn isClient ()Z
 	METHOD do getGameProfile ()Lcom/mojang/authlib/GameProfile;
 	METHOD dp rotationFromSleepingPos ()F
 	METHOD dr getSleepTimer ()I
-	METHOD ds getSpawnPosition ()Lej;
+	METHOD ds getSpawnPosition ()Lel;
 	METHOD dt isSpawnForced ()Z
 	METHOD du getEnchantmentTableSeed ()I
-	METHOD dw getHungerManager ()Lapp;
+	METHOD dw getHungerManager ()Laps;
 	METHOD dx canFoodHeal ()Z
 	METHOD dy canModifyWorld ()Z
-	METHOD dz getEnderChestInventory ()Laqm;
-	METHOD e addExperience (I)V
-	METHOD e canSeePlayer (Laoc;)Z
-	METHOD f attackPlayer (Laeo;)V
-	METHOD g createCooldownManager ()Lasx;
+	METHOD dz getEnderChestInventory ()Laqp;
+	METHOD e canSeePlayer (Laof;)Z
+	METHOD f attackPlayer (Laer;)V
+	METHOD g createCooldownManager ()Lata;
 	METHOD h setLeftShoulderEntityData (Lgy;)V
-	METHOD i pushAwayFrom (Laeo;)V
+	METHOD i pushAwayFrom (Laer;)V
 	METHOD i setRightSHoulderEntityData (Lgy;)V
 	METHOD k updateMovement ()V
-	METHOD n getSoundFall (I)Lwh;
+	METHOD m getSoundFall (I)Lwi;
+	METHOD p setScore (I)V
 	METHOD q setAbsorptionAmount (F)V
-	METHOD q setScore (I)V
+	METHOD q addScore (I)V
 	METHOD q canConsume (Z)Z
-	METHOD r addScore (I)V
 	METHOD r setReducedDebugInfo (Z)V
 	METHOD t isSpectator ()Z
 	METHOD u isCreative ()Z

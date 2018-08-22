@@ -1,52 +1,51 @@
-CLASS sn net/minecraft/server/dedicated/DedicatedServer
-	FIELD h LOGGER Lorg/apache/logging/log4j/Logger;
-	FIELD i SHA1_PATTERN Ljava/util/regex/Pattern;
-	FIELD j commandQueue Ljava/util/List;
-	FIELD k queryHandler Lwd;
-	FIELD l commandSender Lwa;
-	FIELD m rconServer Lwf;
-	FIELD n properties Lps;
-	FIELD o eulaReader Lpk;
-	FIELD p generateStructures Z
-	FIELD q gameMode Laxp;
-	FIELD r guiPresent Z
+CLASS so net/minecraft/server/dedicated/DedicatedServer
+	FIELD g LOGGER Lorg/apache/logging/log4j/Logger;
+	FIELD h SHA1_PATTERN Ljava/util/regex/Pattern;
+	FIELD i commandQueue Ljava/util/List;
+	FIELD j queryHandler Lwe;
+	FIELD k commandSender Lwb;
+	FIELD l rconServer Lwg;
+	FIELD m properties Lps;
+	FIELD n eulaReader Lpk;
+	FIELD o generateStructures Z
+	FIELD p gameMode Laxu;
+	FIELD q guiPresent Z
 	METHOD B_ shouldBroadcastCommandToOps ()Z
-	METHOD M isMonsterSpawningEnabled ()Z
-	METHOD X isUsingNativeTransport ()Z
-	METHOD a addSnooperInfo (Ladr;)V
-	METHOD a setDefaultGameMode (Laxp;)V
+	METHOD K isMonsterSpawningEnabled ()Z
+	METHOD V isUsingNativeTransport ()Z
+	METHOD Y areCommandBlocksEnabled ()Z
+	METHOD a addSnooperInfo (Ladu;)V
+	METHOD a setDefaultGameMode (Laxu;)V
 	METHOD a getInt (Ljava/lang/String;I)I
 	METHOD a queueCommand (Ljava/lang/String;Lbu;)V
 	METHOD a setProperty (Ljava/lang/String;Ljava/lang/Object;)V
 	METHOD a getString (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 	METHOD a getBoolean (Ljava/lang/String;Z)Z
-	METHOD aW executeServerCommands ()V
-	METHOD aX getConfigurationManager ()Lsm;
-	METHOD aY startGui ()V
-	METHOD aZ upgradePlayerFiles ()Z
+	METHOD aU executeServerCommands ()V
+	METHOD aV getConfigurationManager ()Lsn;
+	METHOD aW startGui ()V
+	METHOD aX upgradePlayerFiles ()Z
+	METHOD aY getMaximumTickTime ()J
 	METHOD a_ executeCommand (Ljava/lang/String;)Ljava/lang/String;
-	METHOD aa areCommandBlocksEnabled ()Z
-	METHOD ae getConfigurationManager ()Lvo;
-	METHOD ai hasGui ()Z
-	METHOD an getSpawnProtectionRadius ()I
-	METHOD aw getMaxWorldBorderRadius ()I
-	METHOD ay getNetworkCompressionThreshold ()I
+	METHOD ac getConfigurationManager ()Lvp;
+	METHOD ag hasGui ()Z
+	METHOD al getSpawnProtectionRadius ()I
+	METHOD au getMaxWorldBorderRadius ()I
+	METHOD aw getNetworkCompressionThreshold ()I
 	METHOD b addServerInfoToCrashReport (Lb;)Lb;
-	METHOD ba getMaximumTickTime ()J
-	METHOD bc sleepFiveSeconds ()V
+	METHOD ba sleepFiveSeconds ()V
+	METHOD c setPlayerIdleTimeout (I)V
 	METHOD c_ saveProperties ()V
 	METHOD d setupServer ()Z
-	METHOD d setPlayerIdleTimeout (I)V
 	METHOD d_ getPropertiesFilename ()Ljava/lang/String;
 	METHOD e getHostname ()Ljava/lang/String;
-	METHOD e_ getMotd ()Ljava/lang/String;
-	METHOD f getPort ()I
-	METHOD g shouldGenerateStructures ()Z
-	METHOD h getDefaultGameMode ()Laxp;
-	METHOD i getDefaultDifficulty ()Ladf;
-	METHOD j isHardcore ()Z
-	METHOD k getOpPermissionLevel ()I
-	METHOD l shouldBroadcastRconToOps ()Z
-	METHOD u exit ()V
-	METHOD w doLevelTick ()V
-	METHOD x isNetherAllowed ()Z
+	METHOD e_ getPort ()I
+	METHOD f shouldGenerateStructures ()Z
+	METHOD g getDefaultGameMode ()Laxu;
+	METHOD h getDefaultDifficulty ()Ladi;
+	METHOD i isHardcore ()Z
+	METHOD j getOpPermissionLevel ()I
+	METHOD k shouldBroadcastRconToOps ()Z
+	METHOD m getMotd ()Ljava/lang/String;
+	METHOD t exit ()V
+	METHOD u isNetherAllowed ()Z

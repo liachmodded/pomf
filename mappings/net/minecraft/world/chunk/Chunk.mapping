@@ -1,70 +1,67 @@
-CLASS bna net/minecraft/world/chunk/Chunk
-	CLASS bna$a CreationMode
-		FIELD a IMMEDIATE Lbna$a;
-		FIELD b QUEUED Lbna$a;
-		FIELD c CHECK Lbna$a;
-	FIELD A inhabitedTime J
-	FIELD D state Lbmu;
-	FIELD E neighborCount I
-	FIELD a EMPTY_SECTION Lbnb;
+CLASS bni net/minecraft/world/chunk/Chunk
+	CLASS bni$a CreationMode
+		FIELD a IMMEDIATE Lbni$a;
+		FIELD b QUEUED Lbni$a;
+		FIELD c CHECK Lbni$a;
+	FIELD C state Lbnc;
+	FIELD D neighborCount I
+	FIELD a EMPTY_SECTION Lbnj;
 	FIELD b chunkX I
 	FIELD c chunkZ I
-	FIELD e LOGGER Lorg/apache/logging/log4j/Logger;
-	FIELD f sections [Lbnb;
-	FIELD g biomes [Layn;
-	FIELD j loaded Z
-	FIELD k world Laxs;
-	FIELD o blockEntities Ljava/util/Map;
-	FIELD p entitySections [Lxd;
-	FIELD q structures Ljava/util/Map;
-	FIELD t blockTickScheduler Layh;
-	FIELD u fluidTickScheduler Layh;
-	FIELD w hasEntities Z
-	METHOD <init> (Laxs;II[Layn;Lbnk;Layh;Layh;J)V
-		ARG 5 blockTickScheduler
-		ARG 6 fluidTickScheduler
+	FIELD d LOGGER Lorg/apache/logging/log4j/Logger;
+	FIELD e sections [Lbnj;
+	FIELD f biomes [Layt;
+	FIELD i loaded Z
+	FIELD j world Laxx;
+	FIELD n blockEntities Ljava/util/Map;
+	FIELD o entitySections [Lxe;
+	FIELD p structures Ljava/util/Map;
+	FIELD s blockTickScheduler Layn;
+	FIELD t fluidTickScheduler Layn;
+	FIELD v hasEntities Z
+	FIELD z inhabitedTime J
 	METHOD B getBlockEntities ()Ljava/util/Map;
-	METHOD C getEntitySections ()[Lxd;
-	METHOD F getUpgradeData ()Lbnk;
+	METHOD C getEntitySections ()[Lxe;
+	METHOD F getUpgradeData ()Lbns;
 	METHOD H addToCache ()V
 	METHOD I removeFromCache ()V
-	METHOD K areNeighborsLoaded ()Z
-	METHOD a getBlockState (III)Lbkt;
-	METHOD a addEntity (Laeo;)V
-	METHOD a getLight (Layb;Lej;)I
-	METHOD a setLight (Layb;Lej;I)V
-	METHOD a getLight (Layb;Lej;Z)I
-	METHOD a addBlockEntity (Lbiz;)V
-	METHOD a setChunkState (Lbmu;)V
-	METHOD a getCarvingMask (Lboh$a;)Ljava/util/BitSet;
-	METHOD a getSkyLight (Lej;I)I
+	METHOD J areNeighborsLoaded ()Z
+	METHOD a getBlockState (III)Lblb;
+	METHOD a addEntity (Laer;)V
+	METHOD a getLight (Layh;Lel;)I
+	METHOD a setLight (Layh;Lel;I)V
+	METHOD a getLight (Layh;Lel;Z)I
+	METHOD a addBlockEntity (Lbjh;)V
+	METHOD a setChunkState (Lbnc;)V
+	METHOD a getCarvingMask (Lbop$a;)Ljava/util/BitSet;
+	METHOD a getSkyLight (Lel;I)I
 	METHOD a setBlockEntityTag (Lgy;)V
 	METHOD a deserialize (Lhy;IZ)V
-	METHOD a addStructure (Ljava/lang/String;Lbwt;)V
+	METHOD a addStructure (Ljava/lang/String;Lbxb;)V
 	METHOD a setStructures (Ljava/util/Map;)V
-	METHOD a setSections ([Lbnb;)V
-	METHOD a_ getBlockState (Lej;)Lbkt;
-	METHOD b getFluidState (III)Lbyn;
+	METHOD a setSections ([Lbnj;)V
+	METHOD a_ getBlockState (Lel;)Lblb;
+	METHOD b getFluidState (III)Lbyv;
 	METHOD b setInhabitedTIme (J)V
-	METHOD b getFluidState (Lej;)Lbyn;
-	METHOD c getSections ()[Lbnb;
+	METHOD b getFluidState (Lel;)Lbyv;
+	METHOD c getSections ()[Lbnj;
 	METHOD c setState (Ljava/lang/String;)V
-	METHOD d getPos ()Laxi;
-	METHOD d removeBlockEntity (Lej;)V
+	METHOD d getPos ()Laxl;
+	METHOD d removeBlockEntity (Lel;)V
 	METHOD e getStructureStarts ()Ljava/util/Map;
 	METHOD e setLoaded (Z)V
 	METHOD f getStructureReferences ()Ljava/util/Map;
-	METHOD f getBlockEntity (Lej;)Lbiz;
+	METHOD f getBlockEntity (Lel;)Lbjh;
 	METHOD f setHasEntities (Z)V
-	METHOD g getBiomes ()[Layn;
-	METHOD g getBlockEntityTag (Lej;)Lgy;
+	METHOD g getBiomes ()[Layt;
+	METHOD g getBlockEntityTag (Lel;)Lgy;
 	METHOD g recheckGaps (Z)V
-	METHOD i getChunkState ()Lbmu;
-	METHOD i getBiome (Lej;)Layn;
-	METHOD k getBlockTickScheduler ()Layh;
-	METHOD l getFluidTickScheduler ()Layh;
+	METHOD i getChunkState ()Lbnc;
+	METHOD i getBiome (Lel;)Layt;
+	METHOD k getBlockTickScheduler ()Layn;
+	METHOD l getFluidTickScheduler ()Layn;
 	METHOD m getInhabitedTime ()J
 	METHOD p load ()V
 	METHOD q unload ()V
 	METHOD y isLoaded ()Z
-	METHOD z getWorld ()Laxs;
+	METHOD z getWorld ()Laxx;
