@@ -35,15 +35,15 @@ CLASS aer net/minecraft/entity/Entity
 	FIELD av glowing Z
 	FIELD aw passengerList Ljava/util/List;
 	FIELD ax riddenEntity Laer;
-	FIELD ay boundingBox Lcdz;
-	FIELD b NULL_BOX Lcdz;
+	FIELD ay boundingBox Lcea;
+	FIELD b NULL_BOX Lcea;
 	FIELD c renderDistanceMultiplier D
 	FIELD f maxEntityId I
 	FIELD g type Laev;
 	FIELD h entityId I
 	FIELD i LOGGER Lorg/apache/logging/log4j/Logger;
 	FIELD k ridingCooldown I
-	FIELD m world Laxx;
+	FIELD m world Laxy;
 	FIELD q x D
 	FIELD r y D
 	FIELD s z D
@@ -51,7 +51,7 @@ CLASS aer net/minecraft/entity/Entity
 	FIELD x pitch F
 	FIELD y prevYaw F
 	FIELD z prevPitch F
-	METHOD A_ getPistonBehavior ()Lbzb;
+	METHOD A_ getPistonBehavior ()Lbzc;
 	METHOD B_ shouldBroadcastCommandToOps ()Z
 	METHOD E updatePortalCooldown ()V
 	METHOD N_ getNameAsComponent ()Lij;
@@ -75,21 +75,21 @@ CLASS aer net/minecraft/entity/Entity
 	METHOD a setSize (FF)V
 	METHOD a applyDamage (Laea;F)Z
 	METHOD a startRiding (Laer;Z)Z
-	METHOD a setEquippedStack (Laew;Latd;)V
+	METHOD a setEquippedStack (Laew;Late;)V
 	METHOD a move (Lafe;DDD)V
-	METHOD a onStruckByLightning (Lami;)V
-	METHOD a interact (Laof;Lced;Ladk;)Ladm;
-	METHOD a dropStack (Latd;F)Laml;
-	METHOD a canExplosionDestroyBlock (Laxq;Laxj;Lel;Lblb;F)Z
-	METHOD a getEffectiveExplosionResistance (Laxq;Laxj;Lel;Lblb;Lbyv;F)F
-	METHOD a setWorld (Laxx;)V
-	METHOD a applyMirror (Lbfy;)F
-	METHOD a applyRotation (Lbha;)F
+	METHOD a onStruckByLightning (Lamj;)V
+	METHOD a interact (Laog;Lcee;Ladk;)Ladm;
+	METHOD a dropStack (Late;F)Lamm;
+	METHOD a canExplosionDestroyBlock (Laxr;Laxk;Lel;Lblc;F)Z
+	METHOD a getEffectiveExplosionResistance (Laxr;Laxk;Lel;Lblc;Lbyw;F)F
+	METHOD a setWorld (Laxy;)V
+	METHOD a applyMirror (Lbfz;)F
+	METHOD a applyRotation (Lbhb;)F
 	METHOD a addCrashReportDetails (Lc;)V
-	METHOD a setBoundingBox (Lcdz;)V
-	METHOD a isTeamPlayer (Lcfd;)Z
+	METHOD a setBoundingBox (Lcea;)V
+	METHOD a isTeamPlayer (Lcfe;)Z
 	METHOD a setPositionAndAngles (Lel;FF)V
-	METHOD a playStepSound (Lel;Lblb;)V
+	METHOD a playStepSound (Lel;Lblc;)V
 	METHOD a deserializeCustomData (Lgy;)V
 	METHOD a receiveCommandFeedback (Lij;)V
 	METHOD a addScoreboardTag (Ljava/lang/String;)Z
@@ -106,8 +106,8 @@ CLASS aer net/minecraft/entity/Entity
 	METHOD aI getHeightOffset ()D
 	METHOD aJ getMountedHeightOffset ()D
 	METHOD aL removeAllPassengers ()V
-	METHOD aO getRotationClient ()Lcec;
-	METHOD aP getRotationVecClient ()Lced;
+	METHOD aO getRotationClient ()Lced;
+	METHOD aP getRotationVecClient ()Lcee;
 	METHOD aQ getDefaultPortalCooldown ()I
 	METHOD aS getItemsHand ()Ljava/lang/Iterable;
 	METHOD aT getItemsArmor ()Ljava/lang/Iterable;
@@ -134,13 +134,13 @@ CLASS aer net/minecraft/entity/Entity
 	METHOD b setRotation (FF)V
 	METHOD b setEntityFlag (IZ)V
 	METHOD b isInvulnerableTo (Laea;)Z
-	METHOD b interact (Laof;Ladk;)Z
+	METHOD b interact (Laog;Ladk;)Z
 	METHOD b serializeCustomData (Lgy;)V
 	METHOD b removeScoreboardTag (Ljava/lang/String;)Z
 	METHOD b setInWorld (Z)V
 	METHOD bA getHorizontalFacing ()Leq;
 	METHOD bC getComponentHoverEvent ()Lil;
-	METHOD bD getBoundingBox ()Lcdz;
+	METHOD bD getBoundingBox ()Lcea;
 	METHOD bF getEyeHeight ()F
 	METHOD bL isImmuneToExplosion ()Z
 	METHOD bP getPassengerList ()Ljava/util/List;
@@ -150,7 +150,7 @@ CLASS aer net/minecraft/entity/Entity
 	METHOD ba isSprinting ()Z
 	METHOD bc isGlowing ()Z
 	METHOD bd isInvisible ()Z
-	METHOD be getScoreboardTeam ()Lcfd;
+	METHOD be getScoreboardTeam ()Lcfe;
 	METHOD bg getBreath ()I
 	METHOD bh stickInWeb ()V
 	METHOD bi getParts ()[Laer;
@@ -168,14 +168,14 @@ CLASS aer net/minecraft/entity/Entity
 	METHOD c serialiseWithId (Lgy;)Z
 	METHOD c setSilent (Z)V
 	METHOD d squaredDistanceTo (DDD)D
-	METHOD d getVectorFromPolar (FF)Lced;
+	METHOD d getVectorFromPolar (FF)Lcee;
 	METHOD d squaredDistanceToCenter (Lel;)D
 	METHOD d serialiseIfNoVehicle (Lgy;)Z
 	METHOD d setUnaffectedByGravity (Z)V
 	METHOD e getTextComponent ()Lij;
 	METHOD e distanceTo (DDD)D
 	METHOD e setEntityId (I)V
-	METHOD e canSeePlayer (Laof;)Z
+	METHOD e canSeePlayer (Laog;)Z
 	METHOD e setInPortal (Lel;)V
 	METHOD e serialize (Lgy;)Lgy;
 	METHOD e setSneaking (Z)V

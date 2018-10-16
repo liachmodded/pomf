@@ -1,35 +1,35 @@
-CLASS ccq net/minecraft/world/loot/LootTableContext
-	CLASS ccq$a Builder
+CLASS ccr net/minecraft/world/loot/LootTableContext
+	CLASS ccr$a Builder
 		FIELD a world Ltd;
 		FIELD b luck F
 		FIELD c lootedEntity Laer;
-		FIELD d player Laof;
+		FIELD d player Laog;
 		FIELD e damageSource Laea;
-		METHOD a build ()Lccq;
-		METHOD a setLuck (F)Lccq$a;
-		METHOD a setDamageSource (Laea;)Lccq$a;
-		METHOD a setLootedEntity (Laer;)Lccq$a;
-		METHOD a setPlayer (Laof;)Lccq$a;
-	CLASS ccq$b Target
-		CLASS ccq$b$a DeSerializer
-			METHOD a read (Lcom/google/gson/stream/JsonReader;)Lccq$b;
-			METHOD a write (Lcom/google/gson/stream/JsonWriter;Lccq$b;)V
-		FIELD a THIS Lccq$b;
-		FIELD b KILLER Lccq$b;
-		FIELD c KILLER_PLAYER Lccq$b;
+		METHOD a build ()Lccr;
+		METHOD a setLuck (F)Lccr$a;
+		METHOD a setDamageSource (Laea;)Lccr$a;
+		METHOD a setLootedEntity (Laer;)Lccr$a;
+		METHOD a setPlayer (Laog;)Lccr$a;
+	CLASS ccr$b Target
+		CLASS ccr$b$a DeSerializer
+			METHOD a read (Lcom/google/gson/stream/JsonReader;)Lccr$b;
+			METHOD a write (Lcom/google/gson/stream/JsonWriter;Lccr$b;)V
+		FIELD a THIS Lccr$b;
+		FIELD b KILLER Lccr$b;
+		FIELD c KILLER_PLAYER Lccr$b;
 		FIELD d type Ljava/lang/String;
-		METHOD a fromString (Ljava/lang/String;)Lccq$b;
+		METHOD a fromString (Ljava/lang/String;)Lccr$b;
 	FIELD a luck F
-	FIELD c lootTableHandler Lccs;
+	FIELD c lootTableHandler Lcct;
 	FIELD d lootedEntity Laer;
-	FIELD e player Laof;
+	FIELD e player Laog;
 	FIELD f source Laea;
 	FIELD h lootTables Ljava/util/Set;
 	METHOD a getLootedEntity ()Laer;
-	METHOD a addLootTable (Lccp;)Z
-	METHOD a getTargetEntity (Lccq$b;)Laer;
+	METHOD a addLootTable (Lccq;)Z
+	METHOD a getTargetEntity (Lccr$b;)Laer;
 	METHOD b getKillerPlayer ()Laer;
-	METHOD b removeLootTable (Lccp;)V
+	METHOD b removeLootTable (Lccq;)V
 	METHOD c getKiller ()Laer;
-	METHOD f getLootTableHandler ()Lccs;
+	METHOD f getLootTableHandler ()Lcct;
 	METHOD g getLuck ()F

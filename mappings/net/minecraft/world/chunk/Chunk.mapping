@@ -1,67 +1,67 @@
-CLASS bni net/minecraft/world/chunk/Chunk
-	CLASS bni$a CreationMode
-		FIELD a IMMEDIATE Lbni$a;
-		FIELD b QUEUED Lbni$a;
-		FIELD c CHECK Lbni$a;
-	FIELD C state Lbnc;
+CLASS bnj net/minecraft/world/chunk/Chunk
+	CLASS bnj$a CreationMode
+		FIELD a IMMEDIATE Lbnj$a;
+		FIELD b QUEUED Lbnj$a;
+		FIELD c CHECK Lbnj$a;
+	FIELD C state Lbnd;
 	FIELD D neighborCount I
-	FIELD a EMPTY_SECTION Lbnj;
+	FIELD a EMPTY_SECTION Lbnk;
 	FIELD b chunkX I
 	FIELD c chunkZ I
 	FIELD d LOGGER Lorg/apache/logging/log4j/Logger;
-	FIELD e sections [Lbnj;
-	FIELD f biomes [Layt;
+	FIELD e sections [Lbnk;
+	FIELD f biomes [Layu;
 	FIELD i loaded Z
-	FIELD j world Laxx;
+	FIELD j world Laxy;
 	FIELD n blockEntities Ljava/util/Map;
 	FIELD o entitySections [Lxe;
 	FIELD p structures Ljava/util/Map;
-	FIELD s blockTickScheduler Layn;
-	FIELD t fluidTickScheduler Layn;
+	FIELD s blockTickScheduler Layo;
+	FIELD t fluidTickScheduler Layo;
 	FIELD v hasEntities Z
 	FIELD z inhabitedTime J
 	METHOD B getBlockEntities ()Ljava/util/Map;
 	METHOD C getEntitySections ()[Lxe;
-	METHOD F getUpgradeData ()Lbns;
+	METHOD F getUpgradeData ()Lbnt;
 	METHOD H addToCache ()V
 	METHOD I removeFromCache ()V
 	METHOD J areNeighborsLoaded ()Z
-	METHOD a getBlockState (III)Lblb;
+	METHOD a getBlockState (III)Lblc;
 	METHOD a addEntity (Laer;)V
-	METHOD a getLight (Layh;Lel;)I
-	METHOD a setLight (Layh;Lel;I)V
-	METHOD a getLight (Layh;Lel;Z)I
-	METHOD a addBlockEntity (Lbjh;)V
-	METHOD a setChunkState (Lbnc;)V
-	METHOD a getCarvingMask (Lbop$a;)Ljava/util/BitSet;
+	METHOD a getLight (Layi;Lel;)I
+	METHOD a setLight (Layi;Lel;I)V
+	METHOD a getLight (Layi;Lel;Z)I
+	METHOD a addBlockEntity (Lbji;)V
+	METHOD a setChunkState (Lbnd;)V
+	METHOD a getCarvingMask (Lboq$a;)Ljava/util/BitSet;
 	METHOD a getSkyLight (Lel;I)I
 	METHOD a setBlockEntityTag (Lgy;)V
 	METHOD a deserialize (Lhy;IZ)V
-	METHOD a addStructure (Ljava/lang/String;Lbxb;)V
+	METHOD a addStructure (Ljava/lang/String;Lbxc;)V
 	METHOD a setStructures (Ljava/util/Map;)V
-	METHOD a setSections ([Lbnj;)V
-	METHOD a_ getBlockState (Lel;)Lblb;
-	METHOD b getFluidState (III)Lbyv;
+	METHOD a setSections ([Lbnk;)V
+	METHOD a_ getBlockState (Lel;)Lblc;
+	METHOD b getFluidState (III)Lbyw;
 	METHOD b setInhabitedTIme (J)V
-	METHOD b getFluidState (Lel;)Lbyv;
-	METHOD c getSections ()[Lbnj;
+	METHOD b getFluidState (Lel;)Lbyw;
+	METHOD c getSections ()[Lbnk;
 	METHOD c setState (Ljava/lang/String;)V
-	METHOD d getPos ()Laxl;
+	METHOD d getPos ()Laxm;
 	METHOD d removeBlockEntity (Lel;)V
 	METHOD e getStructureStarts ()Ljava/util/Map;
 	METHOD e setLoaded (Z)V
 	METHOD f getStructureReferences ()Ljava/util/Map;
-	METHOD f getBlockEntity (Lel;)Lbjh;
+	METHOD f getBlockEntity (Lel;)Lbji;
 	METHOD f setHasEntities (Z)V
-	METHOD g getBiomes ()[Layt;
+	METHOD g getBiomes ()[Layu;
 	METHOD g getBlockEntityTag (Lel;)Lgy;
 	METHOD g recheckGaps (Z)V
-	METHOD i getChunkState ()Lbnc;
-	METHOD i getBiome (Lel;)Layt;
-	METHOD k getBlockTickScheduler ()Layn;
-	METHOD l getFluidTickScheduler ()Layn;
+	METHOD i getChunkState ()Lbnd;
+	METHOD i getBiome (Lel;)Layu;
+	METHOD k getBlockTickScheduler ()Layo;
+	METHOD l getFluidTickScheduler ()Layo;
 	METHOD m getInhabitedTime ()J
 	METHOD p load ()V
 	METHOD q unload ()V
 	METHOD y isLoaded ()Z
-	METHOD z getWorld ()Laxx;
+	METHOD z getWorld ()Laxy;

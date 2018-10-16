@@ -1,141 +1,141 @@
-CLASS bcr net/minecraft/block/Block
-	CLASS bcr$a StateStateFacing
-	CLASS bcr$b OffsetType
-		FIELD a NONE Lbcr$b;
-		FIELD b XZ Lbcr$b;
-		FIELD c XYZ Lbcr$b;
-	CLASS bcr$c Builder
-		FIELD a material Lbyz;
-		FIELD b mapColor Lbza;
+CLASS bcs net/minecraft/block/Block
+	CLASS bcs$a StateStateFacing
+	CLASS bcs$b OffsetType
+		FIELD a NONE Lbcs$b;
+		FIELD b XZ Lbcs$b;
+		FIELD c XYZ Lbcs$b;
+	CLASS bcs$c Builder
+		FIELD a material Lbza;
+		FIELD b mapColor Lbzb;
 		FIELD c hasCollision Z
-		FIELD d soundGroup Lbhq;
+		FIELD d soundGroup Lbhr;
 		FIELD e lightValue I
 		FIELD f resistance F
 		FIELD g hardness F
 		FIELD h tickRandomly Z
 		FIELD i slipperiness F
 		FIELD j variableOpacity Z
-		METHOD a setNoCollision ()Lbcr$c;
-		METHOD a withSlipperiness (F)Lbcr$c;
-		METHOD a withBreakProperties (FF)Lbcr$c;
-		METHOD a withLightValue (I)Lbcr$c;
-		METHOD a from (Lbcr;)Lbcr$c;
-		METHOD a withSoundGroup (Lbhq;)Lbcr$c;
-		METHOD a of (Lbyz;)Lbcr$c;
-		METHOD a of (Lbyz;Lasb;)Lbcr$c;
-		METHOD a of (Lbyz;Lbza;)Lbcr$c;
-		METHOD b setInstantBreak ()Lbcr$c;
-		METHOD b withBreakProperties (F)Lbcr$c;
-		METHOD c ticksRandomly ()Lbcr$c;
-		METHOD d withVariableOpacity ()Lbcr$c;
+		METHOD a setNoCollision ()Lbcs$c;
+		METHOD a withSlipperiness (F)Lbcs$c;
+		METHOD a withBreakProperties (FF)Lbcs$c;
+		METHOD a withLightValue (I)Lbcs$c;
+		METHOD a from (Lbcs;)Lbcs$c;
+		METHOD a withSoundGroup (Lbhr;)Lbcs$c;
+		METHOD a of (Lbza;)Lbcs$c;
+		METHOD a of (Lbza;Lasc;)Lbcs$c;
+		METHOD a of (Lbza;Lbzb;)Lbcs$c;
+		METHOD b setInstantBreak ()Lbcs$c;
+		METHOD b withBreakProperties (F)Lbcs$c;
+		METHOD c ticksRandomly ()Lbcs$c;
+		METHOD d withVariableOpacity ()Lbcs$c;
 	FIELD b slipperiness F
-	FIELD c defaultState Lblb;
+	FIELD c defaultState Lblc;
 	FIELD e STATE_IDS Leu;
 	FIELD f lightValue I
 	FIELD g hardness F
 	FIELD h resistance F
 	FIELD i tickRandomly Z
-	FIELD j soundGroup Lbhq;
-	FIELD k material Lbyz;
-	FIELD l mapColor Lbza;
-	FIELD m stateContainer Lbld;
+	FIELD j soundGroup Lbhr;
+	FIELD k material Lbza;
+	FIELD l mapColor Lbzb;
+	FIELD m stateContainer Lble;
 	FIELD n hasCollision Z
 	FIELD p translationKey Ljava/lang/String;
 	METHOD X_ canSilkHarvest ()Z
 	METHOD a canEntitiesSpawnInside ()Z
-	METHOD a getState (I)Lblb;
-	METHOD a getDefaultState (Larj;)Lblb;
-	METHOD a addSubBlocks (Larx;Lez;)V
-	METHOD a getBlockFromItem (Lasz;)Lbcr;
-	METHOD a addTooltip (Latd;Laxj;Ljava/util/List;Laul;)V
-	METHOD a onEntityLand (Laxj;Laer;)V
-	METHOD a getBlockFaceShape (Laxj;Lblb;Lel;Leq;)Lbla;
-	METHOD a getPickItemStack (Laxj;Lel;Lblb;)Latd;
-	METHOD a canDropFromExplosion (Laxq;)Z
-	METHOD a afterBreak (Laxx;Laof;Lel;Lblb;Lbjh;Latd;)V
-	METHOD a dropExperience (Laxx;Lel;I)V
-	METHOD a onSteppedOn (Laxx;Lel;Laer;)V
-	METHOD a onLandedUpon (Laxx;Lel;Laer;F)V
-	METHOD a dropItem (Laxx;Lel;Latd;)V
-	METHOD a destroyedByExplosion (Laxx;Lel;Laxq;)V
-	METHOD a onPlaced (Laxx;Lel;Lblb;Lafa;Latd;)V
-	METHOD a onBreak (Laxx;Lel;Lblb;Laof;)V
-	METHOD a getTickRate (Layb;)I
-	METHOD a disallowsRedstoneSwitchPlacing (Lbcr;)Z
-	METHOD a isFullBlock (Lblb;)Z
-	METHOD a getDropAmount (Lblb;ILaxx;Lel;Ljava/util/Random;)I
-	METHOD a canEntitySpawn (Lblb;Laer;)Z
-	METHOD a getHardnessForPlayer (Lblb;Laof;Laxj;Lel;)F
-	METHOD a getBoundingBox (Lblb;Laxj;Lel;)Lcev;
-	METHOD a isNotSolid (Lblb;Laxj;Lel;Lcbe;)Z
-	METHOD a getWeakRedstonePower (Lblb;Laxj;Lel;Leq;)I
-	METHOD a getComparatorOutput (Lblb;Laxx;Lel;)I
-	METHOD a dropItems (Lblb;Laxx;Lel;FI)V
-	METHOD a getDroppedItem (Lblb;Laxx;Lel;I)Laxw;
-	METHOD a onBlockAction (Lblb;Laxx;Lel;II)Z
-	METHOD a onEntityCollision (Lblb;Laxx;Lel;Laer;)V
-	METHOD a onBlockBreakStart (Lblb;Laxx;Lel;Laof;)V
-	METHOD a onActivated (Lblb;Laxx;Lel;Laof;Ladk;Leq;FFF)Z
-	METHOD a update (Lblb;Laxx;Lel;Lbcr;Lel;)V
-	METHOD a onBlockAdded (Lblb;Laxx;Lel;Lblb;)V
-	METHOD a onBlockRemoved (Lblb;Laxx;Lel;Lblb;Z)V
-	METHOD a raytraceForCollision (Lblb;Laxx;Lel;Lced;Lced;)Lcea;
-	METHOD a updateTick (Lblb;Laxx;Lel;Ljava/util/Random;)V
-	METHOD a canBePlaced (Lblb;Layb;Lel;)Z
-	METHOD a getLightValuesPacked (Lblb;Layd;Lel;)I
-	METHOD a withMirror (Lblb;Lbfy;)Lblb;
-	METHOD a withRotation (Lblb;Lbha;)Lblb;
-	METHOD a shouldSideCull (Lblb;Lblb;Leq;)Z
-	METHOD a createRandomSeed (Lblb;Lel;)J
-	METHOD a onBlockUpdate (Lblb;Leq;Lblb;Laxy;Lel;Lel;)Lblb;
-	METHOD a getDropAmount (Lblb;Ljava/util/Random;)I
-	METHOD a addStateProperties (Lbld$a;)V
-	METHOD a register (Ljava/lang/String;Lbcr;)V
-	METHOD a register (Lpc;Lbcr;)V
+	METHOD a getState (I)Lblc;
+	METHOD a getDefaultState (Lark;)Lblc;
+	METHOD a addSubBlocks (Lary;Lez;)V
+	METHOD a getBlockFromItem (Lata;)Lbcs;
+	METHOD a addTooltip (Late;Laxk;Ljava/util/List;Laum;)V
+	METHOD a onEntityLand (Laxk;Laer;)V
+	METHOD a getBlockFaceShape (Laxk;Lblc;Lel;Leq;)Lblb;
+	METHOD a getPickItemStack (Laxk;Lel;Lblc;)Late;
+	METHOD a canDropFromExplosion (Laxr;)Z
+	METHOD a afterBreak (Laxy;Laog;Lel;Lblc;Lbji;Late;)V
+	METHOD a dropExperience (Laxy;Lel;I)V
+	METHOD a onSteppedOn (Laxy;Lel;Laer;)V
+	METHOD a onLandedUpon (Laxy;Lel;Laer;F)V
+	METHOD a dropItem (Laxy;Lel;Late;)V
+	METHOD a destroyedByExplosion (Laxy;Lel;Laxr;)V
+	METHOD a onPlaced (Laxy;Lel;Lblc;Lafa;Late;)V
+	METHOD a onBreak (Laxy;Lel;Lblc;Laog;)V
+	METHOD a getTickRate (Layc;)I
+	METHOD a disallowsRedstoneSwitchPlacing (Lbcs;)Z
+	METHOD a isFullBlock (Lblc;)Z
+	METHOD a getDropAmount (Lblc;ILaxy;Lel;Ljava/util/Random;)I
+	METHOD a canEntitySpawn (Lblc;Laer;)Z
+	METHOD a getHardnessForPlayer (Lblc;Laog;Laxk;Lel;)F
+	METHOD a getBoundingBox (Lblc;Laxk;Lel;)Lcew;
+	METHOD a isNotSolid (Lblc;Laxk;Lel;Lcbf;)Z
+	METHOD a getWeakRedstonePower (Lblc;Laxk;Lel;Leq;)I
+	METHOD a getComparatorOutput (Lblc;Laxy;Lel;)I
+	METHOD a dropItems (Lblc;Laxy;Lel;FI)V
+	METHOD a getDroppedItem (Lblc;Laxy;Lel;I)Laxx;
+	METHOD a onBlockAction (Lblc;Laxy;Lel;II)Z
+	METHOD a onEntityCollision (Lblc;Laxy;Lel;Laer;)V
+	METHOD a onBlockBreakStart (Lblc;Laxy;Lel;Laog;)V
+	METHOD a onActivated (Lblc;Laxy;Lel;Laog;Ladk;Leq;FFF)Z
+	METHOD a update (Lblc;Laxy;Lel;Lbcs;Lel;)V
+	METHOD a onBlockAdded (Lblc;Laxy;Lel;Lblc;)V
+	METHOD a onBlockRemoved (Lblc;Laxy;Lel;Lblc;Z)V
+	METHOD a raytraceForCollision (Lblc;Laxy;Lel;Lcee;Lcee;)Lceb;
+	METHOD a updateTick (Lblc;Laxy;Lel;Ljava/util/Random;)V
+	METHOD a canBePlaced (Lblc;Layc;Lel;)Z
+	METHOD a getLightValuesPacked (Lblc;Laye;Lel;)I
+	METHOD a withMirror (Lblc;Lbfz;)Lblc;
+	METHOD a withRotation (Lblc;Lbhb;)Lblc;
+	METHOD a shouldSideCull (Lblc;Lblc;Leq;)Z
+	METHOD a createRandomSeed (Lblc;Lel;)J
+	METHOD a onBlockUpdate (Lblc;Leq;Lblc;Laxz;Lel;Lel;)Lblc;
+	METHOD a getDropAmount (Lblc;Ljava/util/Random;)I
+	METHOD a addStateProperties (Lble$a;)V
+	METHOD a register (Ljava/lang/String;Lbcs;)V
+	METHOD a register (Lpc;Lbcs;)V
 	METHOD a hasTag (Lwz;)Z
-	METHOD b destroyedByPlayer (Laxy;Lel;Lblb;)V
-	METHOD b disallowsPistonAttach (Lbcr;)Z
-	METHOD b blockEntityRendererHandlesBreak (Lblb;)Z
-	METHOD b getStrongRedstonePower (Lblb;Laxj;Lel;Leq;)I
-	METHOD b randomTick (Lblb;Laxx;Lel;Ljava/util/Random;)V
-	METHOD c getRenderLayer ()Laxk;
-	METHOD c onRainTick (Laxx;Lel;)V
-	METHOD c isStone (Lbcr;)Z
-	METHOD c getRenderType (Lblb;)Lbgx;
-	METHOD c getMapColor (Lblb;Laxj;Lel;)Lbza;
-	METHOD c shouldRenderSide (Lblb;Laxj;Lel;Leq;)Z
-	METHOD c randomDisplayTick (Lblb;Laxx;Lel;Ljava/util/Random;)V
-	METHOD d isDirt (Lbcr;)Z
-	METHOD d canCollide (Lblb;)Z
-	METHOD d getHardness (Lblb;Laxj;Lel;)F
-	METHOD e isAir (Lblb;)Z
-	METHOD f hasCollisionAndSolidRenderLayer (Lblb;)Z
-	METHOD f getEmptyShape (Lblb;Laxj;Lel;)Lcev;
-	METHOD g getAmbientOcclusionLight (Lblb;)F
-	METHOD h getItem ()Lasz;
-	METHOD h getFluidState (Lblb;)Lbyv;
+	METHOD b destroyedByPlayer (Laxz;Lel;Lblc;)V
+	METHOD b disallowsPistonAttach (Lbcs;)Z
+	METHOD b blockEntityRendererHandlesBreak (Lblc;)Z
+	METHOD b getStrongRedstonePower (Lblc;Laxk;Lel;Leq;)I
+	METHOD b randomTick (Lblc;Laxy;Lel;Ljava/util/Random;)V
+	METHOD c getRenderLayer ()Laxl;
+	METHOD c onRainTick (Laxy;Lel;)V
+	METHOD c isStone (Lbcs;)Z
+	METHOD c getRenderType (Lblc;)Lbgy;
+	METHOD c getMapColor (Lblc;Laxk;Lel;)Lbzb;
+	METHOD c shouldRenderSide (Lblc;Laxk;Lel;Leq;)Z
+	METHOD c randomDisplayTick (Lblc;Laxy;Lel;Ljava/util/Random;)V
+	METHOD d isDirt (Lbcs;)Z
+	METHOD d canCollide (Lblc;)Z
+	METHOD d getHardness (Lblc;Laxk;Lel;)F
+	METHOD e isAir (Lblc;)Z
+	METHOD f hasCollisionAndSolidRenderLayer (Lblc;)Z
+	METHOD f getEmptyShape (Lblc;Laxk;Lel;)Lcew;
+	METHOD g getAmbientOcclusionLight (Lblc;)F
+	METHOD h getItem ()Lata;
+	METHOD h getFluidState (Lblc;)Lbyw;
 	METHOD i hasBlockEntity ()Z
-	METHOD i canProvidePower (Lblb;)Z
+	METHOD i canProvidePower (Lblc;)Z
 	METHOD j canCollide ()Z
-	METHOD j getPistonBehavior (Lblb;)Lbzb;
+	METHOD j getPistonBehavior (Lblc;)Lbzc;
 	METHOD k getResistance ()F
 	METHOD l getTranslationName ()Lij;
-	METHOD l getStateId (Lblb;)I
-	METHOD l getOffset (Lblb;Laxj;Lel;)Lced;
+	METHOD l getStateId (Lblc;)I
+	METHOD l getOffset (Lblc;Laxk;Lel;)Lcee;
 	METHOD m getTranslationKey ()Ljava/lang/String;
-	METHOD m getLightValue (Lblb;)I
+	METHOD m getLightValue (Lblc;)I
 	METHOD n getSlipperiness ()F
-	METHOD n getMaterial (Lblb;)Lbyz;
-	METHOD o getStateContainer ()Lbld;
-	METHOD o isSolidAndFullBlock (Lblb;)Z
-	METHOD p getDefaultState ()Lblb;
-	METHOD p isNormalCube (Lblb;)Z
-	METHOD q getOffsetType ()Lbcr$b;
-	METHOD q isDefaultStateSolidAndFullBlock (Lblb;)Z
-	METHOD r getSoundGroup ()Lbhq;
-	METHOD r isTopSolid (Lblb;)Z
-	METHOD s shouldTickRandomly (Lblb;)Z
+	METHOD n getMaterial (Lblc;)Lbza;
+	METHOD o getStateContainer ()Lble;
+	METHOD o isSolidAndFullBlock (Lblc;)Z
+	METHOD p getDefaultState ()Lblc;
+	METHOD p isNormalCube (Lblc;)Z
+	METHOD q getOffsetType ()Lbcs$b;
+	METHOD q isDefaultStateSolidAndFullBlock (Lblc;)Z
+	METHOD r getSoundGroup ()Lbhr;
+	METHOD r isTopSolid (Lblc;)Z
+	METHOD s shouldTickRandomly (Lblc;)Z
 	METHOD t registerBlocks ()V
-	METHOD t getSilkDrop (Lblb;)Latd;
-	METHOD u hasCustomComparatorOutput (Lblb;)Z
-	METHOD v setDefaultState (Lblb;)V
+	METHOD t getSilkDrop (Lblc;)Late;
+	METHOD u hasCustomComparatorOutput (Lblc;)Z
+	METHOD v setDefaultState (Lblc;)V
