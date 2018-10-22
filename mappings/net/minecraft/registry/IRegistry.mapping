@@ -1,0 +1,49 @@
+CLASS fc net/minecraft/registry/IRegistry
+	FIELD e LOGGER Lorg/apache/logging/log4j/Logger;
+	FIELD f REGISTRIES Lfc;
+	FIELD g BLOCKS Lfc;
+	FIELD h FLUIDS Lfc;
+	FIELD i MOTIVES Lfc;
+	FIELD j POTIONS Lfc;
+	FIELD k DIMENSION_TYPES Lfc;
+	FIELD l CUSTOM_STATS Lfc;
+	FIELD m BIOMES Lfc;
+	FIELD n BIOME_SOURCE_TYPES Lfc;
+	FIELD o BLOCK_ENTITIES Lfc;
+	FIELD p CHUNK_GENERATOR_TYPES Lfc;
+	FIELD q ENCHANTMENTS Lfc;
+	FIELD r ENTITY_TYPES Lfc;
+	FIELD s ITEMS Lfc;
+	FIELD t MOB_EFFECTS Lfc;
+	FIELD u PARTICLES Lfc;
+	FIELD v SOUNDS Lfc;
+	FIELD w STATS Lfc;
+	METHOD a get (I)Ljava/lang/Object;
+		ARG 0 id
+	METHOD a add (ILpc;Ljava/lang/Object;)V
+		ARG 0 intId
+		ARG 1 id
+		ARG 2 obj
+	METHOD a getIntId (Ljava/lang/Object;)I
+		ARG 0 obj
+	METHOD a addRegistry (Ljava/lang/String;Lfc;)Lfc;
+		ARG 0 id
+		ARG 1 registry
+	METHOD a getRandom (Ljava/util/Random;)Ljava/lang/Object;
+		ARG 0 random
+	METHOD a getOrDefault (Lpc;)Ljava/lang/Object;
+		ARG 0 id
+	METHOD a add (Lpc;Ljava/lang/Object;)V
+		ARG 0 id
+		ARG 1 obj
+	METHOD b getDefaultKey ()Lpc;
+	METHOD b getId (Ljava/lang/Object;)Lpc;
+		ARG 0 obj
+	METHOD b get (Lpc;)Ljava/lang/Object;
+		ARG 0 id
+	METHOD c valueSet ()Ljava/util/Set;
+	METHOD c contains (Lpc;)Z
+		ARG 0 id
+	METHOD d isEmpty ()Z
+	METHOD f stream ()Ljava/util/stream/Stream;
+	METHOD iterator ()Ljava/util/Iterator;

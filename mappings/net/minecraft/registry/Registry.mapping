@@ -1,0 +1,31 @@
+CLASS ey net/minecraft/registry/Registry
+	FIELD a LOGGER Lorg/apache/logging/log4j/Logger;
+	FIELD b idStore Lxg;
+	FIELD c valueMap Lcom/google/common/collect/BiMap;
+	FIELD d values [Ljava/lang/Object;
+	FIELD x nextID I
+	METHOD a get (I)Ljava/lang/Object;
+		ARG 0 id
+	METHOD a add (ILpc;Ljava/lang/Object;)V
+		ARG 0 intId
+		ARG 1 id
+		ARG 2 obj
+	METHOD a getIntId (Ljava/lang/Object;)I
+		ARG 0 obj
+	METHOD a getRandom (Ljava/util/Random;)Ljava/lang/Object;
+		ARG 0 random
+	METHOD a getOrDefault (Lpc;)Ljava/lang/Object;
+		ARG 0 id
+	METHOD a add (Lpc;Ljava/lang/Object;)V
+		ARG 0 id
+		ARG 1 obj
+	METHOD b getDefaultKey ()Lpc;
+	METHOD b getId (Ljava/lang/Object;)Lpc;
+		ARG 0 obj
+	METHOD b get (Lpc;)Ljava/lang/Object;
+		ARG 0 id
+	METHOD c valueSet ()Ljava/util/Set;
+	METHOD c contains (Lpc;)Z
+		ARG 0 id
+	METHOD d isEmpty ()Z
+	METHOD iterator ()Ljava/util/Iterator;
