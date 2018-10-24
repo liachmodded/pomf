@@ -11,13 +11,49 @@ CLASS atx net/minecraft/item/Item
 		METHOD a withRarity (Laup;)Latx$a;
 		METHOD b withDamage (I)Latx$a;
 		METHOD c setMaxDamage (I)Latx$a;
+	FIELD a DAMAGED_PROPERTY Laub;
+	FIELD b DAMAGE_PROPERTY Laub;
+	FIELD c LEFTHANDED_PROPERTY Laub;
+	FIELD d COOLDOWN_PROPERTY Laub;
 	FIELD f BLOCK_ITEM_MAP Ljava/util/Map;
-	FIELD j group Lasu;
+	FIELD j tab Lasu;
+	FIELD l rarity Laup;
 	FIELD m maxStackSize I
 	FIELD n damage I
 	FIELD o containerItem Latx;
 	FIELD p item Ljava/lang/String;
+	METHOD X_ isMap ()Z
+	METHOD a getTranslationKey ()Ljava/lang/String;
+	METHOD a getAttributeModifiers (Lafm;)Lcom/google/common/collect/Multimap;
+	METHOD a isInTab (Lasu;)Z
+	METHOD a addStacksForDisplay (Lasu;Lfe;)V
 	METHOD a getId (Latx;)I
+	METHOD a isTool (Lauc;)Z
+	METHOD a onEntityDamaged (Lauc;Lafq;Lafq;)Z
+	METHOD a canRepair (Lauc;Lauc;)Z
+	METHOD a onUpdate (Lauc;Laza;Lafh;IZ)V
+	METHOD a onItemFinishedUsing (Lauc;Laza;Lafq;)Lauc;
+	METHOD a onItemStopUsing (Lauc;Laza;Lafq;I)V
+	METHOD a onBlockBroken (Lauc;Laza;Lblz;Leq;Lafq;)Z
+	METHOD a addTooltipLines (Lauc;Laza;Ljava/util/List;Lavm;)V
+	METHOD a getBreakSpeed (Lauc;Lblz;)F
+	METHOD a onItemUse (Lavp;)Laec;
+	METHOD a onRightClick (Laza;Lapb;Laea;)Laed;
+	METHOD a rayTrace (Laza;Lapb;Z)Lcgz;
 	METHOD a getItemFromBlock (Lbdx;)Latx;
+	METHOD a canModifyBlock (Lblz;Laza;Leq;Lapb;)Z
 	METHOD b getItemFromId (I)Latx;
+	METHOD b getMaxUseTime (Lauc;)I
+	METHOD b onCrafted (Lauc;Laza;Lapb;)V
+	METHOD c getEnchantability ()I
+	METHOD c getUseAction (Lauc;)Lavo;
+	METHOD e_ hasEnchantmentGlow (Lauc;)Z
 	METHOD h getItem ()Latx;
+	METHOD i getMaxStackSize ()I
+	METHOD i getTranslatedNameTrimmed (Lauc;)Liw;
+	METHOD j getDamage ()I
+	METHOD j getRarity (Lauc;)Laup;
+	METHOD m getUnlocalizedName ()Ljava/lang/String;
+	METHOD o getContainerItem ()Latx;
+	METHOD p hasContainerItem ()Z
+	METHOD q getCreativeTab ()Lasu;

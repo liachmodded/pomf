@@ -1,5 +1,6 @@
 CLASS bop net/minecraft/world/chunk/ProtoChunk
 	FIELD b pos Layp;
+	FIELD d biomes [Lazx;
 	FIELD f heightmaps Ljava/util/Map;
 	FIELD g state Lboa;
 	FIELD h blockEntities Ljava/util/Map;
@@ -9,12 +10,14 @@ CLASS bop net/minecraft/world/chunk/ProtoChunk
 	FIELD s inhabitedTime J
 	METHOD A getStructureReferences ()Ljava/util/Map;
 	METHOD C getBlockEntityTags ()Ljava/util/Map;
+	METHOD a getBlockState (III)Lblz;
 	METHOD a addEntity (Lafh;)V
 	METHOD a setChunkState (Lboa;)V
 	METHOD a getCarvingMask (Lbpo$a;)Ljava/util/BitSet;
 	METHOD a getFluidState (Leq;)Lcac;
 	METHOD a setBlockEntityTag (Lhl;)V
 	METHOD a addStructure (Ljava/lang/String;Lbyc;)V
+	METHOD a setBiomes ([Lazx;)V
 	METHOD b removeBlockEntity (Leq;)V
 	METHOD b loadEntity (Lhl;)V
 	METHOD b setLight (SI)V
@@ -24,6 +27,7 @@ CLASS bop net/minecraft/world/chunk/ProtoChunk
 	METHOD e getBlockEntityTag (Leq;)Lhl;
 	METHOD g getPos ()Layp;
 	METHOD h getStructureStarts ()Ljava/util/Map;
+	METHOD i getBiomes ()[Lazx;
 	METHOD k getChunkState ()Lboa;
 	METHOD n getBlockTickScheduler ()Lazp;
 	METHOD o getFluidTickScheduler ()Lazp;

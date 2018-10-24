@@ -1,15 +1,18 @@
 CLASS fd net/minecraft/registry/Registry
+	FIELD B nextID I
+	FIELD a LOGGER Lorg/apache/logging/log4j/Logger;
 	FIELD b idStore Lxu;
 	FIELD c valueMap Lcom/google/common/collect/BiMap;
 	FIELD d values [Ljava/lang/Object;
 	METHOD a get (I)Ljava/lang/Object;
-	METHOD a add (ILpt;Ljava/lang/Object;)Ljava/lang/Object;
 	METHOD a getIntId (Ljava/lang/Object;)I
+		ARG 0 obj
 	METHOD a getRandom (Ljava/util/Random;)Ljava/lang/Object;
+		ARG 0 random
 	METHOD a get (Lpt;)Ljava/lang/Object;
-	METHOD a add (Lpt;Ljava/lang/Object;)Ljava/lang/Object;
+		ARG 0 id
 	METHOD b valueSet ()Ljava/util/Set;
 	METHOD b getId (Ljava/lang/Object;)Lpt;
+		ARG 0 obj
 	METHOD b contains (Lpt;)Z
-	METHOD c isEmpty ()Z
-	METHOD iterator ()Ljava/util/Iterator;
+		ARG 0 id

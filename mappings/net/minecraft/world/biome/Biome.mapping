@@ -13,12 +13,59 @@ CLASS azx net/minecraft/world/biome/Biome
 		METHOD a withWaterColor (I)Lazx$a;
 		METHOD a withCategory (Lazx$b;)Lazx$a;
 		METHOD a withPrecipitation (Lazx$d;)Lazx$a;
+		METHOD a withSurface (Lbyp;)Lazx$a;
 		METHOD a withParent (Ljava/lang/String;)Lazx$a;
 		METHOD b withScale (F)Lazx$a;
 		METHOD b withWaterFogColor (I)Lazx$a;
 		METHOD c withTemperature (F)Lazx$a;
 		METHOD d withDownfall (F)Lazx$a;
+	CLASS azx$b Category
+	CLASS azx$c TemperatureGroup
+	CLASS azx$d Precipitation
 	CLASS azx$e EntitySpawnEntry
 		FIELD b entityEntry Lafl;
 		FIELD c minGroupSize I
 		FIELD d maxGroupSize I
+	FIELD a LOGGER Lorg/apache/logging/log4j/Logger;
+	FIELD c MUTATION_TO_BASE_ID_MAP Lez;
+	FIELD d TEMPERATURE_NOISE Lbzh;
+	FIELD e GRASS_COLOR_NOISE Lbzh;
+	FIELD f translationKey Ljava/lang/String;
+	FIELD g depth F
+	FIELD h scale F
+	FIELD i temperature F
+	FIELD j downfall F
+	FIELD k waterColor I
+	FIELD l waterFogColor I
+	FIELD m parent Ljava/lang/String;
+	FIELD n surface Lbyp;
+	FIELD o category Lazx$b;
+	FIELD p precipitation Lazx$d;
+	FIELD q carverFeatures Ljava/util/Map;
+	FIELD r decorationFeatures Ljava/util/Map;
+	FIELD s flowerFeatures Ljava/util/List;
+	FIELD t structureFeatures Ljava/util/Map;
+	FIELD u entitySpawns Ljava/util/Map;
+	METHOD a addDefaultFeatures ()V
+	METHOD a addEntitySpawn (Lafs;Lazx$e;)V
+	METHOD a getParentBiome (Lazx;)Lazx;
+	METHOD a addCarvingFeature (Lbpo$a;Lbqb;)V
+	METHOD a addDecorationFeature (Lbpo$b;Lbqw;)V
+	METHOD a makeCarverWrapper (Lbqg;Lbpz;)Lbqb;
+	METHOD a makeCompositeFeature (Lbrw;Lbrx;Lbwl;Lbrh;)Lbqw;
+	METHOD a addStructureFeature (Lbuo;Lbrx;)V
+	METHOD a getFoliageColor (Leq;)I
+	METHOD b hasParent ()Z
+	METHOD b getGrassColor (Leq;)I
+	METHOD c getPrecipitation ()Lazx$d;
+	METHOD c getTemperatureAtPos (Leq;)F
+	METHOD g getTemperatureGroup ()Lazx$c;
+	METHOD h getDepth ()F
+	METHOD i getDownfall ()F
+	METHOD l getScale ()F
+	METHOD m getTemperature ()F
+	METHOD n getWaterColor ()I
+	METHOD o getWaterFogColor ()I
+	METHOD p getCategory ()Lazx$b;
+	METHOD q getSurface ()Lbyp;
+	METHOD s getParent ()Ljava/lang/String;

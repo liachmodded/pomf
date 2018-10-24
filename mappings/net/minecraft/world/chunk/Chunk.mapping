@@ -8,9 +8,11 @@ CLASS boh net/minecraft/world/chunk/Chunk
 	FIELD c chunkZ I
 	FIELD d LOGGER Lorg/apache/logging/log4j/Logger;
 	FIELD e sections [Lboi;
+	FIELD f biomes [Lazx;
 	FIELD h loaded Z
 	FIELD i world Laza;
 	FIELD l blockEntities Ljava/util/Map;
+	FIELD m entitySections [Lxs;
 	FIELD n structures Ljava/util/Map;
 	FIELD q blockTickScheduler Lazp;
 	FIELD r fluidTickScheduler Lazp;
@@ -21,6 +23,7 @@ CLASS boh net/minecraft/world/chunk/Chunk
 	METHOD C getWorld ()Laza;
 	METHOD D getBlockEntities ()Ljava/util/Map;
 	METHOD E getEntitySections ()[Lxs;
+	METHOD a getBlockState (III)Lblz;
 	METHOD a addEntity (Lafh;)V
 	METHOD a addBlockEntity (Lbkf;)V
 	METHOD a getFluidState (Leq;)Lcac;
@@ -38,6 +41,7 @@ CLASS boh net/minecraft/world/chunk/Chunk
 	METHOD f getBiome (Leq;)Lazx;
 	METHOD g getPos ()Layp;
 	METHOD h getStructureStarts ()Ljava/util/Map;
+	METHOD i getBiomes ()[Lazx;
 	METHOD k getChunkState ()Lboa;
 	METHOD n getBlockTickScheduler ()Lazp;
 	METHOD o getFluidTickScheduler ()Lazp;

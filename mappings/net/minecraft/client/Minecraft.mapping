@@ -1,13 +1,22 @@
 CLASS cjj net/minecraft/client/Minecraft
+	FIELD A fpsDebugString Ljava/lang/String;
 	FIELD F LOGGER Lorg/apache/logging/log4j/Logger;
+	FIELD H resourcePacksFolder Ljava/io/File;
+	FIELD I sessionPropertyMap Lcom/mojang/authlib/properties/PropertyMap;
+	FIELD K currentServerEntry Lcvc;
 	FIELD L textureManager Ldha;
 	FIELD M instance Lcjj;
 	FIELD O virtualScreen Lcjs;
+	FIELD P crashed Z
+	FIELD Q crashReport Lb;
 	FIELD R connectedToRealms Z
+	FIELD S renderTickCounter Lcjp;
+	FIELD T snooper Laek;
 	FIELD U entityRenderManager Ldca;
 	FIELD V itemRenderer Ldcu;
 	FIELD W firstPersonRenderer Lcxr;
 	FIELD X cameraEntity Lafh;
+	FIELD Z session Lcjq;
 	FIELD aA spriteAtlas Ldgy;
 	FIELD aB soundLoader Ldkd;
 	FIELD aC musicTracker Ldka;
@@ -16,24 +25,60 @@ CLASS cjj net/minecraft/client/Minecraft
 	FIELD aG thread Ljava/lang/Thread;
 	FIELD aH bakedModelManager Ldik;
 	FIELD aI blockRenderManager Lcyf;
+	FIELD aJ guiToast Lclq;
 	FIELD aK isRunning Z
+	FIELD aM fpsCounter I
 	FIELD aN tutorial Ldko;
+	FIELD aP root Ljava/lang/String;
+	FIELD a isSystemMac Z
+	FIELD aa paused Z
 	FIELD ac server Ldjr;
 	FIELD ae assetDirectory Ljava/io/File;
+	FIELD af gameVersion Ljava/lang/String;
+	FIELD ag versionType Ljava/lang/String;
+	FIELD ah netProxy Ljava/net/Proxy;
+	FIELD ai saves Lcdl;
+	FIELD aj currentFps I
+	FIELD al autoConnectServerIp Ljava/lang/String;
+	FIELD am autoConnectServerPort I
+	FIELD ap is64Bit Z
+	FIELD aq isDemo Z
+	FIELD at resourceManager Lvq;
+	FIELD au downloadingPackFinder Ldhh;
+	FIELD av resourcePacks Lvk;
+	FIELD aw languageManager Ldhs;
+	FIELD ax blockColorMap Lcju;
+	FIELD ay itemColorMap Lcjx;
+	FIELD az framebuffer Lcig;
+	FIELD d memoryReserve [B
+	FIELD e playerCapabilities Lcuy;
 	FIELD f mainWindow Ldgn;
 	FIELD h world Lcuz;
 	FIELD i renderer Lcxt;
 	FIELD j player Lcxc;
+	FIELD l particleManager Lcwg;
 	FIELD m textRenderer Lcjz;
 	FIELD n currentGui Lcns;
-	FIELD o rworldRenderer Lcxp;
+	FIELD o worldRenderer Lcxp;
+	FIELD p debugRenderer Ldat;
+	FIELD r hudInGame Lcka;
+	FIELD t hitResult Lcgz;
 	FIELD u settings Lcjm;
 	FIELD x runDirectory Ljava/io/File;
+	FIELD z profiler Lyf;
+	METHOD A getSnooper ()Laek;
+	METHOD B getSession ()Lcjq;
+	METHOD C getSessionProperties ()Lcom/mojang/authlib/properties/PropertyMap;
+	METHOD D getNetworkProxy ()Ljava/net/Proxy;
 	METHOD E getTextureManager ()Ldha;
 	METHOD F getResourceManager ()Lvs;
 	METHOD G getResourcePacks ()Lvk;
 	METHOD H getDownloadingResourcePackFinder ()Ldhh;
 	METHOD I getResourcePacksFolder ()Ljava/io/File;
+	METHOD J getLanguageManager ()Ldhs;
+	METHOD K getSpriteAtlas ()Ldgy;
+	METHOD L is64Bit ()Z
+	METHOD M isGamePaused ()Z
 	METHOD N getSoundLoader ()Ldkd;
 	METHOD O getMusicType ()Ldka$a;
 	METHOD Q getSessionService ()Lcom/mojang/authlib/minecraft/MinecraftSessionService;
@@ -43,28 +88,48 @@ CLASS cjj net/minecraft/client/Minecraft
 	METHOD U getEntityRenderManager ()Ldca;
 	METHOD V getItemRenderer ()Ldcu;
 	METHOD W getFirstPersonRenderer ()Lcxr;
+	METHOD X getCurrentFps ()I
 	METHOD Z isConnectedToRealms ()Z
 	METHOD a start ()V
 	METHOD a addSnooperInfo (Laek;)V
 	METHOD a setCameraEntity (Lafh;)V
+	METHOD a serializeBlockEntityTag (Lauc;Lbkf;)Lauc;
+	METHOD a setCrashReport (Lb;)V
 	METHOD a openGui (Lcns;)V
+	METHOD a setCurrentServerEntry (Lcvc;)V
+	METHOD a startIntegratedServer (Ljava/lang/String;Ljava/lang/String;Lazf;)V
 	METHOD a setConnectedToRealms (Z)V
+	METHOD aa getMigrationHandler ()Lcom/mojang/datafixers/DataFixer;
+	METHOD ab getTickDelta ()F
+	METHOD ad getBlockColorMap ()Lcju;
+	METHOD af hasReducedDebugInfo ()Z
+	METHOD ag getToastGui ()Lclq;
 	METHOD ah getTutorial ()Ldko;
+	METHOD ai isFullscreen ()Z
 	METHOD am init ()V
+	METHOD ao checkIs64Bit ()Z
+	METHOD aq registerMetadataDeserializers ()V
 	METHOD as doAttack ()V
+	METHOD at doItemUse ()V
 	METHOD aw isMainThread ()Z
+	METHOD ax doItemPick ()V
 	METHOD ay getCurrentAction ()Ljava/lang/String;
 	METHOD b getFramebuffer ()Lcig;
+	METHOD b addCrashReportDetails (Lb;)Lb;
+	METHOD c getGameVersion ()Ljava/lang/String;
+	METHOD c printCrashReport (Lb;)V
+	METHOD d getVersionType ()Ljava/lang/String;
 	METHOD f reloadResources ()V
+	METHOD h stop ()V
 	METHOD j stopThread ()V
 	METHOD k openInGameMenu ()V
-	METHOD l rgetMusicTracker ()Ldka;
+	METHOD l getMusicTracker ()Ldka;
 	METHOD m tick ()V
 	METHOD n isDemo ()Z
 	METHOD o getNetworkHandler ()Lcuw;
 	METHOD q isFancyGraphicsEnabled ()Z
 	METHOD r isAmbientOcclusionEnabled ()Z
 	METHOD s getInstance ()Lcjj;
-	METHOD t scheduleReloadResources ()Ljava/util/concurrent/CompletableFuture;
+	METHOD v getCurrentServerEntry ()Lcvc;
 	METHOD y getServer ()Ldjr;
 	METHOD z onShutdown ()V

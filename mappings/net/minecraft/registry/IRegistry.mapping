@@ -1,14 +1,9 @@
 CLASS fh net/minecraft/registry/IRegistry
 	FIELD A STATS Lfh;
-	FIELD a REGISTRIES Ljava/util/Map;
 	FIELD e LOGGER Lorg/apache/logging/log4j/Logger;
-	FIELD g SOUNDS Lfh;
-	FIELD h FLUIDS Leu;
 	FIELD i MOB_EFFECTS Lfh;
-	FIELD j BLOCKS Leu;
 	FIELD k ENCHANTMENTS Lfh;
-	FIELD l rENTITY_TYPES Lfh;
-	FIELD m ITEMS Leu;
+	FIELD l ENTITY_TYPES Lfh;
 	FIELD n POTIONS Lfh;
 	FIELD s BIOMES Lfh;
 	FIELD t PARTICLES Lfh;
@@ -16,14 +11,16 @@ CLASS fh net/minecraft/registry/IRegistry
 	FIELD v BLOCK_ENTITIES Lfh;
 	FIELD w CHUNK_GENERATOR_TYPES Lfh;
 	FIELD x DIMENSION_TYPES Lfh;
-	FIELD y MOTIVES Leu;
 	FIELD z CUSTOM_STATS Lfh;
 	METHOD a getIntId (Ljava/lang/Object;)I
-	METHOD a add (Ljava/lang/String;Lfl;)Lfh;
-	METHOD a addRegistry (Ljava/lang/String;Ljava/util/function/Supplier;)V
+		ARG 0 obj
 	METHOD a getRandom (Ljava/util/Random;)Ljava/lang/Object;
+		ARG 0 random
 	METHOD a get (Lpt;)Ljava/lang/Object;
+		ARG 0 id
 	METHOD b valueSet ()Ljava/util/Set;
 	METHOD b getId (Ljava/lang/Object;)Lpt;
+		ARG 0 obj
 	METHOD b contains (Lpt;)Z
+		ARG 0 id
 	METHOD d stream ()Ljava/util/stream/Stream;
