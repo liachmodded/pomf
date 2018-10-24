@@ -1,0 +1,26 @@
+CLASS ty net/minecraft/world/chunk/ServerChunkCache
+	FIELD b LOGGER Lorg/apache/logging/log4j/Logger;
+	FIELD d CHUNK_STATUSES [Lboa;
+	FIELD g generator Lbnv;
+	FIELD i world Laza;
+	FIELD n loadedChunks Lit/unimi/dsi/fastutil/longs/Long2ObjectLinkedOpenHashMap;
+	FIELD q viewRadius I
+	FIELD r lastUpdateTime J
+	FIELD s generationService Ljava/util/concurrent/ExecutorService;
+	METHOD <init> (Laza;Lbou;Lbnv;II)V
+		ARG 3 viewDistance
+	METHOD a getLightEngine ()Lbzt;
+	METHOD a getHolder (J)Ltp;
+		ARG 0 key
+	METHOD a saveChunk (Lbnu;Z)V
+	METHOD b setViewDistance (I)V
+		ARG 0 viewDistance
+		ARG 1 viewRadius
+	METHOD e getGenerator ()Lbnv;
+	METHOD f getLoadedChunkCount ()I
+	METHOD j ()V
+		ARG 0 time
+		ARG 2 deltaTime
+		ARG 5 debugWorld
+		ARG 6 doMobSpawning
+		ARG 8 tickSpeed
