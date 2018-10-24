@@ -1,110 +1,110 @@
-CLASS afa net/minecraft/entity/EntityLiving
-	FIELD aA stuckArrowTimer I
-	FIELD aB hurtTime I
-	FIELD aE deathCounter I
+CLASS afq net/minecraft/entity/EntityLiving
+	FIELD aC deathCounter I
 	FIELD a LOGGER_LIVING Lorg/apache/logging/log4j/Logger;
-	FIELD aS headPitch F
-	FIELD aT prevHeadPitch F
-	FIELD aW playerHitTimer I
-	FIELD aX dead Z
-	FIELD aw LIVING_FLAGS Lor;
-	FIELD ay preferredHand Ladk;
+	FIELD aQ headPitch F
+	FIELD aR prevHeadPitch F
+	FIELD aU playerHitTimer I
+	FIELD aV dead Z
+	FIELD au LIVING_FLAGS Lpi;
+	FIELD aw preferredHand Laea;
+	FIELD ay stuckArrowTimer I
+	FIELD az hurtTime I
 	FIELD bA activePotionEffects Ljava/util/Map;
-	FIELD bE attacker Lafa;
+	FIELD bE attacker Lafq;
 	FIELD bF lastAttackedTime I
-	FIELD bG entityLastAttacked Lafa;
+	FIELD bG entityLastAttacked Lafq;
 	FIELD bH timeOfLastOutgoingAttack I
 	FIELD bK absorptionAmount F
 	FIELD b ATTR_SPRINTING_SPEED_BOOST_ID Ljava/util/UUID;
-	FIELD bx STUCK_ARROWS Lor;
-	FIELD by attributeContainer Lafq;
-	FIELD bz damageTracker Ladz;
-	FIELD c ATTR_SPRINTING_SPEED_BOOST Lafo;
-	FIELD f HEALTH Lor;
-	FIELD g POTION_SWIRLS_COLOR Lor;
-	FIELD h POTION_SWIRLS_AMBIENT Lor;
-	METHOD B attackEntity (Laer;)Z
+	FIELD bv POTION_SWIRLS_COLOR Lpi;
+	FIELD bw POTION_SWIRLS_AMBIENT Lpi;
+	FIELD bx STUCK_ARROWS Lpi;
+	FIELD by attributeContainer Lagg;
+	FIELD bz damageTracker Laep;
+	FIELD c ATTR_SPRINTING_SPEED_BOOST Lage;
+	FIELD f HEALTH Lpi;
+	METHOD A_ canClimb ()Z
+	METHOD B attackEntity (Lafh;)Z
 	METHOD C updatePotionVisibility ()V
-	METHOD C pushAway (Laer;)V
-	METHOD D canSee (Laer;)Z
-	METHOD R_ update ()V
-	METHOD S_ stopRiding ()V
-	METHOD W updateLogic ()V
+	METHOD C pushAway (Lafh;)V
+	METHOD D canSee (Lafh;)Z
+	METHOD S_ update ()V
+	METHOD T_ stopRiding ()V
+	METHOD Y updateLogic ()V
 	METHOD a setPositionAndRotations (DDDFFIZ)V
-	METHOD a swingHand (Ladk;)V
-	METHOD a setStackInHand (Ladk;Late;)V
-	METHOD a onDeath (Laea;)V
-	METHOD a applyDamage (Laea;F)Z
-	METHOD a hasPotionEffect (Laej;)Z
-	METHOD a isEquippedStackValid (Laew;)Z
-	METHOD a setEquippedStack (Laew;Late;)V
-	METHOD a setAttacker (Lafa;)V
-	METHOD a getAttributeInstance (Lafm;)Lafn;
-	METHOD a deserializeCustomData (Lgy;)V
-	METHOD a onTrackedDataSet (Lor;)V
+	METHOD a swingHand (Laea;)V
+	METHOD a setStackInHand (Laea;Lauc;)V
+	METHOD a onDeath (Laeq;)V
+	METHOD a applyDamage (Laeq;F)Z
+	METHOD a hasPotionEffect (Laez;)Z
+	METHOD a isEquippedStackValid (Lafm;)Z
+	METHOD a setEquippedStack (Lafm;Lauc;)V
+	METHOD a setAttacker (Lafq;)V
+	METHOD a getAttributeInstance (Lagc;)Lagd;
+	METHOD a deserializeCustomData (Lhl;)V
+	METHOD a onTrackedDataSet (Lpi;)V
 	METHOD a dropEquipment (ZI)V
-	METHOD a dropLoot (ZILaea;)V
-	METHOD aB doesCollide ()Z
-	METHOD aF isValid ()Z
-	METHOD aT getItemsArmor ()Ljava/lang/Iterable;
-	METHOD aa kill ()V
-	METHOD b getStackInHand (Ladk;)Late;
-	METHOD b getPotionEffect (Laej;)Laek;
-	METHOD b getEquippedStack (Laew;)Late;
-	METHOD b onEquipStack (Late;)V
-	METHOD b serializeCustomData (Lgy;)V
+	METHOD a dropLoot (ZILaeq;)V
+	METHOD aD doesCollide ()Z
+	METHOD aH isValid ()Z
+	METHOD aV getItemsArmor ()Ljava/lang/Iterable;
+	METHOD ac kill ()V
+	METHOD b getStackInHand (Laea;)Lauc;
+	METHOD b getPotionEffect (Laez;)Lafa;
+	METHOD b getEquippedStack (Lafm;)Lauc;
+	METHOD b onEquipStack (Lauc;)V
+	METHOD b serializeCustomData (Lhl;)V
 	METHOD b dropDefaultLoot (ZI)V
-	METHOD bZ initAttributes ()V
-	METHOD bj getHeadPitch ()F
-	METHOD bz shouldRenderName ()Z
+	METHOD bB shouldRenderName ()Z
+	METHOD bl getHeadPitch ()F
 	METHOD c heal (F)V
 	METHOD c handleFallDamage (FF)V
-	METHOD c setCurrentHand (Ladk;)V
-	METHOD c removePotionEffect (Laej;)Laek;
-	METHOD c addPotionEffect (Laek;)Z
+	METHOD c setCurrentHand (Laea;)V
+	METHOD c removePotionEffect (Laez;)Lafa;
+	METHOD c addPotionEffect (Lafa;)Z
 	METHOD c containsOnlyAmbientEffects (Ljava/util/Collection;)Z
-	METHOD cA getEntityAttribute ()Lafd;
-	METHOD cB getMainHandStack ()Late;
-	METHOD cC getOffHandStack ()Late;
-	METHOD cD getSoundVolume ()F
-	METHOD cE getSoundPitch ()F
-	METHOD cF healthDepleted ()Z
-	METHOD cL isSleeping ()Z
-	METHOD cN doPushLogic ()V
-	METHOD cQ getAbsorptionAmount ()F
-	METHOD cS getMainHand ()Laez;
-	METHOD cb updatePostDeath ()V
-	METHOD cc canDropLootAndXp ()Z
-	METHOD ce getRand ()Ljava/util/Random;
-	METHOD cf getAttacker ()Lafa;
-	METHOD cg getLastAttackedTime ()I
-	METHOD ch getEntityLastAttacked ()Lafa;
-	METHOD ci getTimeOfLastOutgoingAttack ()I
-	METHOD cl clearPotionSwirls ()V
-	METHOD cm clearPotionEffects ()Z
-	METHOD cn getPotionEffects ()Ljava/util/Collection;
-	METHOD co getActivePotionEffectsMap ()Ljava/util/Map;
-	METHOD cp isUndead ()Z
-	METHOD cq getHealth ()F
-	METHOD cs getSoundDeath ()Lwi;
-	METHOD cu getDamageTracker ()Ladz;
-	METHOD cw getHealthMaximum ()F
-	METHOD cx getStuckArrows ()I
-	METHOD cz getAttributeContainer ()Lafq;
-	METHOD d getSoundHurt (Laea;)Lwi;
-	METHOD d damage (Laea;F)V
-	METHOD d isPotionEffective (Laek;)Z
-	METHOD dc isFallFlying ()Z
+	METHOD cB getAttributeContainer ()Lagg;
+	METHOD cC getEntityAttribute ()Laft;
+	METHOD cD getMainHandStack ()Lauc;
+	METHOD cE getOffHandStack ()Lauc;
+	METHOD cF getSoundVolume ()F
+	METHOD cG getSoundPitch ()F
+	METHOD cH healthDepleted ()Z
+	METHOD cN isSleeping ()Z
+	METHOD cP doPushLogic ()V
+	METHOD cS getAbsorptionAmount ()F
+	METHOD cU getMainHand ()Lafp;
+	METHOD cb initAttributes ()V
+	METHOD cd updatePostDeath ()V
+	METHOD ce canDropLootAndXp ()Z
+	METHOD cg getRand ()Ljava/util/Random;
+	METHOD ch getAttacker ()Lafq;
+	METHOD ci getLastAttackedTime ()I
+	METHOD cj getEntityLastAttacked ()Lafq;
+	METHOD ck getTimeOfLastOutgoingAttack ()I
+	METHOD cn clearPotionSwirls ()V
+	METHOD co clearPotionEffects ()Z
+	METHOD cp getPotionEffects ()Ljava/util/Collection;
+	METHOD cq getActivePotionEffectsMap ()Ljava/util/Map;
+	METHOD cr isUndead ()Z
+	METHOD cs getHealth ()F
+	METHOD cu getSoundDeath ()Lwv;
+	METHOD cw getDamageTracker ()Laep;
+	METHOD cy getHealthMaximum ()F
+	METHOD cz getStuckArrows ()I
+	METHOD d getSoundHurt (Laeq;)Lwv;
+	METHOD d damage (Laeq;F)V
+	METHOD d isPotionEffective (Lafa;)Z
+	METHOD de isFallFlying ()Z
 	METHOD f setSprinting (Z)V
 	METHOD j setHeadPitch (F)V
 	METHOD k updateMovement ()V
 	METHOD k setYaw (F)V
 	METHOD l setHealth (F)V
-	METHOD m getSoundFall (I)Lwi;
+	METHOD m getSoundFall (I)Lwv;
 	METHOD n setStuckArrows (I)V
 	METHOD o doJump (Z)V
 	METHOD q setAbsorptionAmount (F)V
-	METHOD x_ initDataTracker ()V
-	METHOD y_ isChild ()Z
-	METHOD z setLastAttacked (Laer;)V
-	METHOD z_ canClimb ()Z
+	METHOD y_ initDataTracker ()V
+	METHOD z setLastAttacked (Lafh;)V
+	METHOD z_ isChild ()Z

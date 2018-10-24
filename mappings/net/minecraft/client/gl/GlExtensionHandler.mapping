@@ -1,20 +1,20 @@
-CLASS dhq net/minecraft/client/gl/GlExtensionHandler
-	CLASS dhq$a FBOMode
-		FIELD a BASE Ldhq$a;
-		FIELD b ARB Ldhq$a;
-		FIELD c EXT Ldhq$a;
+CLASS dgi net/minecraft/client/gl/GlExtensionHandler
+	CLASS dgi$a FBOMode
+		FIELD a BASE Ldgi$a;
+		FIELD b ARB Ldgi$a;
+		FIELD c EXT Ldgi$a;
 	FIELD M extVersionBlendFuncSeparate Z
 	FIELD O supportsShaderPipeline Z
 	FIELD P supportsVertexBufferObject Z
 	FIELD R GL_ARRAY_BUFFER I
-	FIELD T fboMode Ldhq$a;
-	FIELD V arbVersionGLSL Z
-	FIELD W arbVersionMultiTexture Z
-	FIELD Y supportsBlendFuncSeparate Z
-	FIELD Z initInfoLog Ljava/lang/String;
-	FIELD aa cpuInfoString Ljava/lang/String;
-	FIELD ab arbVersionVertexBufferObject Z
-	FIELD ac GL_ERROR_CODES Ljava/util/Map;
+	FIELD U fboMode Ldgi$a;
+	FIELD W arbVersionGLSL Z
+	FIELD X arbVersionMultiTexture Z
+	FIELD Z supportsBlendFuncSeparate Z
+	FIELD aa initInfoLog Ljava/lang/String;
+	FIELD ab cpuInfoString Ljava/lang/String;
+	FIELD ac arbVersionVertexBufferObject Z
+	FIELD ad GL_ERROR_CODES Ljava/util/Map;
 	FIELD c GL_FRAMEBUFFER I
 	FIELD l supportsFramebufferObject Z
 	FIELD m GL_LINK_STATUS I
@@ -23,43 +23,43 @@ CLASS dhq net/minecraft/client/gl/GlExtensionHandler
 	FIELD p GL_FRAGMENT_SHADER I
 	FIELD q GL_TEXTURE0 I
 	FIELD r GL_TEXTURE1 I
-	METHOD a init ()V
 	METHOD a deleteShader (I)V
 	METHOD a multiTexCoord2f (IFF)V
 	METHOD a getProgrami (II)I
 	METHOD a renderbufferStorage (IIII)V
 	METHOD a framebufferTexture2D (IIIII)V
 	METHOD a bufferData (ILjava/nio/ByteBuffer;I)V
-	METHOD b canUseShaders ()Z
 	METHOD b createShader (I)I
 	METHOD b attachShader (II)V
 	METHOD b framebufferRenderbuffer (IIII)V
 	METHOD b getUniformLocation (ILjava/lang/CharSequence;)I
-	METHOD c getInitInfoLog ()Ljava/lang/String;
 	METHOD c compileShader (I)V
 	METHOD c getShader (II)I
 	METHOD c blendFuncSeparate (IIII)V
 	METHOD c getAttribLocation (ILjava/lang/CharSequence;)I
-	METHOD d createProgram ()I
 	METHOD d useProgram (I)V
 	METHOD d getShaderInfoLog (II)Ljava/lang/String;
-	METHOD e genBuffers ()I
 	METHOD e deleteProgram (I)V
 	METHOD e getProgramInfoLog (II)Ljava/lang/String;
-	METHOD f useVertexBufferObjects ()Z
 	METHOD f linkProgram (I)V
 	METHOD f uniform1i (II)V
-	METHOD g genFramebuffers ()I
 	METHOD g deleteBuffers (I)V
 	METHOD g bindBuffer (II)V
-	METHOD h genRenderbuffers ()I
 	METHOD h deleteRenderbuffers (I)V
 	METHOD h bindFramebuffer (II)V
 	METHOD i deleteFramebuffers (I)V
 	METHOD i bindRenderbuffer (II)V
-	METHOD j useFramebufferObjects ()Z
+	METHOD j init ()V
 	METHOD j checkFramebufferStatus (I)I
-	METHOD k getCpuInfoString ()Ljava/lang/String;
+	METHOD k canUseShaders ()Z
 	METHOD k activeTexture (I)V
+	METHOD l getInitInfoLog ()Ljava/lang/String;
 	METHOD l clientActiveTexture (I)V
+	METHOD m createProgram ()I
+	METHOD n genBuffers ()I
 	METHOD n glErrorToString (I)Ljava/lang/String;
+	METHOD o useVertexBufferObjects ()Z
+	METHOD p genFramebuffers ()I
+	METHOD q genRenderbuffers ()I
+	METHOD s useFramebufferObjects ()Z
+	METHOD t getCpuInfoString ()Ljava/lang/String;

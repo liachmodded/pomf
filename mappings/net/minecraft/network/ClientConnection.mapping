@@ -1,30 +1,30 @@
-CLASS hw net/minecraft/network/ClientConnection
+CLASS ik net/minecraft/network/ClientConnection
 	FIELD a NETWORK Lorg/apache/logging/log4j/Marker;
 	FIELD b NETWORK_PACKETS Lorg/apache/logging/log4j/Marker;
 	FIELD c ATTR_KEY_PROTOCOL Lio/netty/util/AttributeKey;
 	FIELD g LOGGER Lorg/apache/logging/log4j/Logger;
-	FIELD h side Liw;
+	FIELD h side Ljl;
 	FIELD j lock Ljava/util/concurrent/locks/ReentrantReadWriteLock;
 	FIELD k channel Lio/netty/channel/Channel;
 	FIELD l address Ljava/net/SocketAddress;
-	FIELD m packetListener Lib;
-	FIELD n disconnectReason Lij;
+	FIELD m packetListener Lip;
+	FIELD n disconnectReason Liw;
 	FIELD o encrypted Z
 	FIELD p disconnected Z
 	METHOD a setMinCompressedSize (I)V
-	METHOD a setState (Lhx;)V
-	METHOD a setPacketListener (Lib;)V
-	METHOD a disconnect (Lij;)V
-	METHOD a channelRead0 (Lio/netty/channel/ChannelHandlerContext;Liv;)V
-	METHOD a sendPacket (Liv;Lio/netty/util/concurrent/GenericFutureListener;)V
-	METHOD a connect (Ljava/net/InetAddress;IZ)Lhw;
-	METHOD a connect (Ljava/net/SocketAddress;)Lhw;
+	METHOD a setState (Lil;)V
+	METHOD a channelRead0 (Lio/netty/channel/ChannelHandlerContext;Ljk;)V
+	METHOD a setPacketListener (Lip;)V
+	METHOD a disconnect (Liw;)V
+	METHOD a connect (Ljava/net/InetAddress;IZ)Lik;
+	METHOD a connect (Ljava/net/SocketAddress;)Lik;
 	METHOD a setupEncryption (Ljavax/crypto/SecretKey;)V
+	METHOD a sendPacket (Ljk;Lio/netty/util/concurrent/GenericFutureListener;)V
 	METHOD b getAddress ()Ljava/net/SocketAddress;
 	METHOD c isLocal ()Z
 	METHOD f isEncrypted ()Z
 	METHOD g isOpen ()Z
 	METHOD h hasChannel ()Z
-	METHOD i getPacketListener ()Lib;
-	METHOD j getDisconnectReason ()Lij;
+	METHOD i getPacketListener ()Lip;
+	METHOD j getDisconnectReason ()Liw;
 	METHOD l handleDisconnection ()V

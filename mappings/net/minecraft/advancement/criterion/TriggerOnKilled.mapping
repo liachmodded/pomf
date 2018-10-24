@@ -1,19 +1,21 @@
-CLASS aw net/minecraft/advancement/criterion/TriggerOnKilled
-	CLASS aw$a Handler
-		FIELD a manager Lpm;
+CLASS ay net/minecraft/advancement/criterion/TriggerOnKilled
+	CLASS ay$a
+		METHOD b serialize ()Lcom/google/gson/JsonElement;
+	CLASS ay$b Handler
+		FIELD a manager Lqd;
 		FIELD b conditions Ljava/util/Set;
 		METHOD a isEmpty ()Z
 		METHOD a addCondition (Ls$a;)V
-		METHOD a handle (Ltf;Laer;Laea;)V
+		METHOD a handle (Lub;Lafh;Laeq;)V
 		METHOD b removeCondition (Ls$a;)V
-	CLASS aw$b Builder
+	CLASS ay$c Builder
 		METHOD b serialize ()Lcom/google/gson/JsonElement;
 	FIELD a handlers Ljava/util/Map;
-	FIELD b id Lpc;
-	METHOD a getId ()Lpc;
+	FIELD b id Lpt;
+	METHOD a getId ()Lpt;
 	METHOD a deserializeConditions (Lcom/google/gson/JsonObject;Lcom/google/gson/JsonDeserializationContext;)Lt;
-	METHOD a removePlayer (Lpm;)V
-	METHOD a addCondition (Lpm;Ls$a;)V
-	METHOD a handle (Ltf;Laer;Laea;)V
-	METHOD b deserializeConditions (Lcom/google/gson/JsonObject;Lcom/google/gson/JsonDeserializationContext;)Law$b;
-	METHOD b removeCondition (Lpm;Ls$a;)V
+	METHOD a removePlayer (Lqd;)V
+	METHOD a addCondition (Lqd;Ls$a;)V
+	METHOD a handle (Lub;Lafh;Laeq;)V
+	METHOD b deserializeConditions (Lcom/google/gson/JsonObject;Lcom/google/gson/JsonDeserializationContext;)Lay$c;
+	METHOD b removeCondition (Lqd;Ls$a;)V

@@ -1,34 +1,31 @@
-CLASS bkb net/minecraft/block/entity/BlockEntityShulkerBox
-	CLASS bkb$a AnimationStage
-		FIELD a CLOSED Lbkb$a;
-		FIELD b OPENING Lbkb$a;
-		FIELD c OPENED Lbkb$a;
-		FIELD d CLOSING Lbkb$a;
-	FIELD e inv Lez;
-	FIELD f cleared Z
-	FIELD k animationStage Lbkb$a;
-	FIELD l animationProgress F
-	FIELD m prevAnimationProgress F
-	FIELD n color Lasc;
-	METHOD D getColor ()Lasc;
-	METHOD N_ getNameAsComponent ()Lij;
-	METHOD P_ isInvEmpty ()Z
-	METHOD T_ getInvSize ()I
-	METHOD Y_ update ()V
-	METHOD Z_ getUpdatePacket ()Lji;
+CLASS bky net/minecraft/block/entity/BlockEntityShulkerBox
+	CLASS bky$a AnimationStage
+		FIELD a CLOSED Lbky$a;
+		FIELD b OPENING Lbky$a;
+		FIELD c OPENED Lbky$a;
+		FIELD d CLOSING Lbky$a;
+	FIELD e inv Lfe;
+	FIELD j animationStage Lbky$a;
+	FIELD k animationProgress F
+	FIELD l prevAnimationProgress F
+	FIELD m color Lasz;
+	METHOD O_ getNameAsComponent ()Liw;
+	METHOD Q_ isInvEmpty ()Z
+	METHOD U_ getInvSize ()I
+	METHOD Z_ update ()V
 	METHOD a getAnimationProgress (F)F
-	METHOD a canInsertInvStack (ILate;Leq;)Z
-	METHOD a createContainer (Laof;Laog;)Lapv;
-	METHOD a getInvAvailableSlots (Leq;)[I
-	METHOD a serialize (Lgy;)Lgy;
-	METHOD b canExtractInvStack (ILate;Leq;)Z
-	METHOD b onInvOpen (Laog;)V
-	METHOD b deserialize (Lgy;)V
-	METHOD c onInvClose (Laog;)V
+	METHOD a canInsertInvStack (ILauc;Lev;)Z
+	METHOD a createContainer (Lapa;Lapb;)Laqq;
+	METHOD a getInvAvailableSlots (Lev;)[I
+	METHOD a serialize (Lhl;)Lhl;
+	METHOD aa_ getUpdatePacket ()Ljx;
+	METHOD b canExtractInvStack (ILauc;Lev;)Z
+	METHOD b onInvOpen (Lapb;)V
+	METHOD b deserialize (Lhl;)V
+	METHOD c onInvClose (Lapb;)V
 	METHOD f getInvMaxStackAmount ()I
 	METHOD l getContainerId ()Ljava/lang/String;
-	METHOD m clearInv ()V
 	METHOD p updateAnimation ()V
-	METHOD q getInvStackList ()Lez;
-	METHOD r getAnimationStage ()Lbkb$a;
-	METHOD s hasBeenCleared ()Z
+	METHOD q getInvStackList ()Lfe;
+	METHOD r getAnimationStage ()Lbky$a;
+	METHOD s getColor ()Lasz;
