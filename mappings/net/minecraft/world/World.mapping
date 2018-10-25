@@ -1,6 +1,6 @@
 CLASS aza net/minecraft/world/World
 	FIELD A profiler Lyf;
-	FIELD B isRemote Z
+	FIELD B isClient Z
 	FIELD C unusedWhite J
 	FIELD D ambientDarkness I
 	FIELD G blockEntityTickingInProgress Z
@@ -94,6 +94,7 @@ CLASS aza net/minecraft/world/World
 	METHOD b getPlayers (Ljava/lang/Class;Ljava/util/function/Predicate;)Ljava/util/List;
 	METHOD b unloadEntities (Ljava/util/Collection;)V
 	METHOD b getPlayerByUuid (Ljava/util/UUID;)Lapb;
+	METHOD c getAmbientDarkness ()I
 	METHOD c setSeaLevel (I)V
 	METHOD c setBlockBreakingProgress (ILeq;I)V
 	METHOD c onEntityRemoved (Lafh;)V
@@ -104,7 +105,7 @@ CLASS aza net/minecraft/world/World
 	METHOD d setAmbientDarkness (I)V
 	METHOD d addGlobalEntity (Lafh;)Z
 	METHOD d getBlockEntity (Leq;)Lbkf;
-	METHOD e isRemote ()Z
+	METHOD e isClient ()Z
 	METHOD e removeEntity (Lafh;)V
 	METHOD e setBlockToAir (Leq;)Z
 	METHOD f removeEntityFromChunk (Lafh;)V
@@ -125,6 +126,7 @@ CLASS aza net/minecraft/world/World
 	METHOD n removeBlockEntity (Leq;)V
 	METHOD n_ updateEntities ()V
 	METHOD o getProvider ()Lbpa;
+	METHOD r_ getSeaLevel ()I
 	METHOD s getReceivedStrongRedstonePower (Leq;)I
 	METHOD s_ getSeed ()J
 	METHOD t updateWeather ()V

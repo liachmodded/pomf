@@ -181,7 +181,7 @@ task pomf(dependsOn: setupPomf) {
     def localEnigmaVersion = mavenMetadata.exists() ? new XmlSlurper().parseText(FileUtils.readFileToString(mavenMetadata)).versioning.release : ""
 
     logger.lifecycle(":downloading enigma metadata")
-    FileUtils.copyURLToFile(new URL("http://maven.modmuss50.me/enigma-asm/enigma/maven-metadata.xml"), mavenMetadata)
+    FileUtils.copyURLToFile(new URL("http://maven.modmuss50.me/cuchaz/enigma/maven-metadata.xml"), mavenMetadata)
 
     def metadata = new XmlSlurper().parseText(FileUtils.readFileToString(mavenMetadata))
     def enigmaVersion = metadata.versioning.release
@@ -190,7 +190,7 @@ task pomf(dependsOn: setupPomf) {
 
     if (localEnigmaVersion != enigmaVersion || !enigma.exists()) {
       logger.lifecycle(":downloading enigma")
-      FileUtils.copyURLToFile(new URL("http://maven.modmuss50.me/enigma-asm/enigma/${enigmaVersion}/enigma-${enigmaVersion}-fat.jar"), enigma)
+      FileUtils.copyURLToFile(new URL("http://maven.modmuss50.me/cuchaz/enigma/${enigmaVersion}/enigma-${enigmaVersion}-all.jar"), enigma)
     } else {
       logger.lifecycle(":skipping enigma download")
     }
