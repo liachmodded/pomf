@@ -14,6 +14,7 @@ CLASS bdx net/minecraft/block/Block
 		FIELD g hardness F
 		FIELD h tickRandomly Z
 		FIELD i slipperiness F
+		FIELD j lootTable Lpt;
 		FIELD k variableOpacity Z
 		METHOD a setNoCollision ()Lbdx$c;
 		METHOD a withSlipperiness (F)Lbdx$c;
@@ -24,11 +25,14 @@ CLASS bdx net/minecraft/block/Block
 		METHOD a of (Lcag;)Lbdx$c;
 		METHOD a of (Lcag;Lasz;)Lbdx$c;
 		METHOD a of (Lcag;Lcah;)Lbdx$c;
+		METHOD a withLootTable (Lpt;)Lbdx$c;
 		METHOD b setInstantBreak ()Lbdx$c;
 		METHOD b withBreakProperties (F)Lbdx$c;
 		METHOD c ticksRandomly ()Lbdx$c;
 	FIELD b slipperiness F
 	FIELD c defaultState Lblz;
+	FIELD d opacity Z
+	FIELD e lootTable Lpt;
 	FIELD f translationKey Ljava/lang/String;
 	FIELD h STATE_IDS Lez;
 	FIELD i lightValue I
@@ -44,13 +48,22 @@ CLASS bdx net/minecraft/block/Block
 		ARG 0 builder
 	METHOD Y_ getOffsetType ()Lbdx$b;
 	METHOD a canEntitiesSpawnInside ()Z
+	METHOD a makeShape (DDDDDD)Lchu;
+		ARG 0 minX
+		ARG 2 minY
+		ARG 4 minZ
+		ARG 6 maxX
+		ARG 8 maxY
+		ARG 10 maxZ
 	METHOD a getState (I)Lblz;
+		ARG 0 id
 	METHOD a getDefaultState (Lash;)Lblz;
 	METHOD a addSubBlocks (Lasu;Lfe;)V
 	METHOD a getBlockFromItem (Latx;)Lbdx;
+		ARG 0 item
 	METHOD a addTooltip (Lauc;Layn;Ljava/util/List;Lavm;)V
 	METHOD a onEntityLand (Layn;Lafh;)V
-	METHOD a getBlockFaceShape (Layn;Lblz;Leq;Lev;)Lbly;
+	METHOD a getFaceShape (Layn;Lblz;Leq;Lev;)Lbly;
 	METHOD a getPickItemStack (Layn;Leq;Lblz;)Lauc;
 	METHOD a canDropFromExplosion (Layt;)Z
 	METHOD a afterBreak (Laza;Lapb;Leq;Lblz;Lbkf;Lauc;)V
@@ -114,10 +127,12 @@ CLASS bdx net/minecraft/block/Block
 	METHOD h getFluidState (Lblz;)Lcac;
 	METHOD i canCollide ()Z
 	METHOD i canProvidePower (Lblz;)Z
+	METHOD j getLootTable ()Lpt;
 	METHOD j getPistonBehavior (Lblz;)Lcai;
 	METHOD k getResistance ()F
 	METHOD l getTranslationName ()Liw;
 	METHOD l getStateId (Lblz;)I
+		ARG 0 state
 	METHOD l getOffset (Lblz;Layn;Leq;)Lchc;
 	METHOD m getTranslationKey ()Ljava/lang/String;
 	METHOD m getLightValue (Lblz;)I
@@ -132,3 +147,4 @@ CLASS bdx net/minecraft/block/Block
 	METHOD s shouldTickRandomly (Lblz;)Z
 	METHOD t hasCustomComparatorOutput (Lblz;)Z
 	METHOD u setDefaultState (Lblz;)V
+	METHOD v getSoundGroup (Lblz;)Lbio;

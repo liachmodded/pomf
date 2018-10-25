@@ -1,18 +1,54 @@
 CLASS cgy net/minecraft/util/math/BoundingBox
+	FIELD a minX D
 	FIELD b minY D
+	FIELD c minZ D
+	FIELD d maxX D
+	FIELD e maxY D
+	FIELD f maxZ D
+	METHOD <init> (DDDDDD)V
+		ARG 0 minX
+		ARG 2 minY
+		ARG 4 minZ
+		ARG 6 maxX
+		ARG 8 maxY
+		ARG 10 maxZ
+	METHOD <init> (Lchc;Lchc;)V
+		ARG 0 min
+		ARG 1 max
+	METHOD <init> (Leq;)V
+		ARG 0 pos
+	METHOD <init> (Leq;Leq;)V
+		ARG 0 min
+		ARG 1 max
 	METHOD a averageDimension ()D
+	METHOD a stretchNegative (DDD)Lcgy;
+		ARG 0 x
+		ARG 2 y
+		ARG 4 z
 	METHOD a intersects (DDDDDD)Z
+	METHOD a intersection (Lcgy;)Lcgy;
 	METHOD a offset (Lchc;)Lcgy;
 	METHOD a intersects (Lchc;Lchc;)Z
 	METHOD a offset (Leq;)Lcgy;
+		ARG 0 pos
 	METHOD a getMinOnAxis (Lev$a;)D
+		ARG 0 axis
 	METHOD b isInvalid ()Z
-	METHOD b stretch (DDD)Lcgy;
+	METHOD b stretchPositive (DDD)Lcgy;
+		ARG 0 x
+		ARG 2 y
+		ARG 4 z
 	METHOD b union (Lcgy;)Lcgy;
 	METHOD b getMaxOnAxis (Lev$a;)D
+		ARG 0 axis
 	METHOD c getCenter ()Lchc;
 	METHOD c expand (DDD)Lcgy;
+		ARG 0 x
+		ARG 2 y
+		ARG 4 z
 	METHOD c intersects (Lcgy;)Z
 	METHOD d offset (DDD)Lcgy;
+	METHOD f contract (DDD)Lcgy;
 	METHOD g expand (D)Lcgy;
+		ARG 0 amount
 	METHOD h contract (D)Lcgy;
