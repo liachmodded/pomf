@@ -1,0 +1,26 @@
+CLASS fd net/minecraft/registry/SimpleIdRegistry
+	FIELD B nextID I
+	FIELD a LOGGER Lorg/apache/logging/log4j/Logger;
+	FIELD b idStore Lxu;
+	FIELD c valueMap Lcom/google/common/collect/BiMap;
+	FIELD d values [Ljava/lang/Object;
+	METHOD a get (I)Ljava/lang/Object;
+	METHOD a register (ILpt;Ljava/lang/Object;)Ljava/lang/Object;
+		ARG 0 id
+		ARG 1 key
+		ARG 2 value
+	METHOD a getId (Ljava/lang/Object;)I
+		ARG 0 value
+	METHOD a getRandom (Ljava/util/Random;)Ljava/lang/Object;
+		ARG 0 random
+	METHOD a get (Lpt;)Ljava/lang/Object;
+		ARG 0 key
+	METHOD a register (Lpt;Ljava/lang/Object;)Ljava/lang/Object;
+		ARG 0 key
+		ARG 1 value
+	METHOD b valueSet ()Ljava/util/Set;
+	METHOD b getKey (Ljava/lang/Object;)Lpt;
+		ARG 0 value
+	METHOD b contains (Lpt;)Z
+		ARG 0 id
+	METHOD c isEmpty ()Z
