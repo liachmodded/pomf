@@ -1,17 +1,20 @@
 CLASS adu net/minecraft/inventory/IInventory
 	METHOD Q_ isInvEmpty ()Z
-	METHOD U_ getInvSize ()I
-	METHOD a getInvStack (I)Lauc;
-	METHOD a takeInvStack (II)Lauc;
-	METHOD a setInvStack (ILauc;)V
-	METHOD a canPlayerUseInv (Lapb;)Z
-	METHOD b removeInvStack (I)Lauc;
-	METHOD b setInvProperty (II)V
+	METHOD U_ getSize ()I
+	METHOD a getStack (I)Lauc;
+	METHOD a takeStack (II)Lauc;
+	METHOD a setStack (ILauc;)V
+	METHOD a canPlayerUse (Lapb;)Z
+	METHOD b removeStack (I)Lauc;
+	METHOD b setProperty (II)V
+		ARG 0 id
+		ARG 1 value
 	METHOD b isValidInvStack (ILauc;)Z
-	METHOD b onInvOpen (Lapb;)V
-	METHOD c getInvProperty (I)I
-	METHOD c onInvClose (Lapb;)V
-	METHOD f getInvMaxStackAmount ()I
+	METHOD b onOpen (Lapb;)V
+	METHOD c getProperty (I)I
+		ARG 0 id
+	METHOD c onClose (Lapb;)V
+	METHOD f getMaxStackAmount ()I
 	METHOD g markDirty ()V
-	METHOD h getInvPropertyCount ()I
-	METHOD m clearInv ()V
+	METHOD h getPropertyCount ()I
+	METHOD m clear ()V

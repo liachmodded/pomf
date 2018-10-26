@@ -6,25 +6,28 @@ CLASS aqd net/minecraft/entity/vehicle/EntityStorageMinecart
 	METHOD R_ getLootTable ()Lpt;
 	METHOD W_ hasContainerLock ()Z
 	METHOD X invalidate ()V
-	METHOD a getInvStack (I)Lauc;
-	METHOD a takeInvStack (II)Lauc;
-	METHOD a setInvStack (ILauc;)V
+	METHOD a getStack (I)Lauc;
+	METHOD a takeStack (II)Lauc;
+	METHOD a setStack (ILauc;)V
 	METHOD a setContainerLock (Laef;)V
 	METHOD a dropItems (Laeq;)V
-	METHOD a canPlayerUseInv (Lapb;)Z
+	METHOD a canPlayerUse (Lapb;)Z
 	METHOD a deserializeCustomData (Lhl;)V
 	METHOD a setLootTable (Lpt;J)V
-	METHOD b removeInvStack (I)Lauc;
-	METHOD b setInvProperty (II)V
+	METHOD b removeStack (I)Lauc;
+	METHOD b setProperty (II)V
+		ARG 0 id
+		ARG 1 value
 	METHOD b isValidInvStack (ILauc;)Z
-	METHOD b onInvOpen (Lapb;)V
+	METHOD b onOpen (Lapb;)V
 	METHOD b interact (Lapb;Laea;)Z
 	METHOD b serializeCustomData (Lhl;)V
 	METHOD b setInWorld (Z)V
-	METHOD c getInvProperty (I)I
-	METHOD c onInvClose (Lapb;)V
-	METHOD f getInvMaxStackAmount ()I
+	METHOD c getProperty (I)I
+		ARG 0 id
+	METHOD c onClose (Lapb;)V
+	METHOD f getMaxStackAmount ()I
 	METHOD g markDirty ()V
-	METHOD h getInvPropertyCount ()I
+	METHOD h getPropertyCount ()I
 	METHOD j getContainerLock ()Laef;
-	METHOD m clearInv ()V
+	METHOD m clear ()V

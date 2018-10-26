@@ -7,27 +7,30 @@ CLASS bkh net/minecraft/block/entity/BlockEntityBrewingStand
 	METHOD O_ getNameAsComponent ()Liw;
 	METHOD P_ hasCustomName ()Z
 	METHOD Q_ isInvEmpty ()Z
-	METHOD U_ getInvSize ()I
+	METHOD U_ getSize ()I
 	METHOD Z_ update ()V
-	METHOD a getInvStack (I)Lauc;
-	METHOD a takeInvStack (II)Lauc;
-	METHOD a setInvStack (ILauc;)V
+	METHOD a getStack (I)Lauc;
+	METHOD a takeStack (II)Lauc;
+	METHOD a setStack (ILauc;)V
 	METHOD a canInsertInvStack (ILauc;Lev;)Z
 	METHOD a createContainer (Lapa;Lapb;)Laqq;
-	METHOD a canPlayerUseInv (Lapb;)Z
+	METHOD a canPlayerUse (Lapb;)Z
 	METHOD a getInvAvailableSlots (Lev;)[I
 	METHOD a serialize (Lhl;)Lhl;
-	METHOD b removeInvStack (I)Lauc;
-	METHOD b setInvProperty (II)V
+	METHOD b removeStack (I)Lauc;
+	METHOD b setProperty (II)V
+		ARG 0 id
+		ARG 1 value
 	METHOD b isValidInvStack (ILauc;)Z
 	METHOD b canExtractInvStack (ILauc;Lev;)Z
-	METHOD b onInvOpen (Lapb;)V
+	METHOD b onOpen (Lapb;)V
 	METHOD b deserialize (Lhl;)V
-	METHOD c getInvProperty (I)I
-	METHOD c onInvClose (Lapb;)V
-	METHOD f getInvMaxStackAmount ()I
-	METHOD h getInvPropertyCount ()I
+	METHOD c getProperty (I)I
+		ARG 0 id
+	METHOD c onClose (Lapb;)V
+	METHOD f getMaxStackAmount ()I
+	METHOD h getPropertyCount ()I
 	METHOD l getContainerId ()Ljava/lang/String;
-	METHOD m clearInv ()V
+	METHOD m clear ()V
 	METHOD q canCraft ()Z
 	METHOD r craft ()V
