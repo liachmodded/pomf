@@ -1,0 +1,21 @@
+CLASS qg net/minecraft/resource/FunctionManager
+	CLASS qg$a QueuedCommand
+		FIELD a manager Lqg;
+		FIELD b sender Lbx;
+		FIELD c instruction Lbu$c;
+		METHOD a execute (Ljava/util/ArrayDeque;I)V
+	FIELD a FUNCTIONS_PATH_LENGTH I
+	FIELD b MCFUNCTION_EXTENSION_LENGTH I
+	FIELD c LOGGER Lorg/apache/logging/log4j/Logger;
+	FIELD d TICK Lpt;
+	FIELD e LOAD Lpt;
+	FIELD f server Lnet/minecraft/server/MinecraftServer;
+	FIELD g functions Ljava/util/Map;
+	FIELD h commandChain Ljava/util/ArrayDeque;
+	FIELD j function Lxo;
+	METHOD Z_ update ()V
+	METHOD a getServer ()Lnet/minecraft/server/MinecraftServer;
+	METHOD a getFunction (Lpt;)Lbu;
+	METHOD a onResourceReload (Lvs;)V
+	METHOD b getMaxChainLength ()I
+	METHOD d getDispatcher ()Lcom/mojang/brigadier/CommandDispatcher;
