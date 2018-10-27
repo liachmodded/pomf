@@ -1,0 +1,49 @@
+CLASS cdx net/minecraft/world/loot/LootContext
+	CLASS cdx$a Builder
+		FIELD a world Ltz;
+		FIELD b parameters Ljava/util/Map;
+		FIELD c dynamicDrops Ljava/util/Map;
+		FIELD d random Ljava/util/Random;
+		FIELD e luck F
+		METHOD a world ()Ltz;
+		METHOD a luck (F)Lcdx$a;
+		METHOD a seed (J)Lcdx$a;
+		METHOD a random (JLjava/util/Random;)Lcdx$a;
+		METHOD a require (Lcfs;)Ljava/lang/Object;
+		METHOD a put (Lcfs;Ljava/lang/Object;)Lcdx$a;
+		METHOD a build (Lcft;)Lcdx;
+		METHOD a random (Ljava/util/Random;)Lcdx$a;
+		METHOD a dynamicDrop (Lpt;Lcdx$b;)Lcdx$a;
+		METHOD b get (Lcfs;)Ljava/lang/Object;
+		METHOD b override (Lcfs;Ljava/lang/Object;)Lcdx$a;
+	CLASS cdx$b DynamicDrop
+		METHOD add (Lcdx;Ljava/util/function/Consumer;)V
+	CLASS cdx$c Target
+		CLASS cdx$c$a Deserializer
+			METHOD a read (Lcom/google/gson/stream/JsonReader;)Lcdx$c;
+			METHOD a write (Lcom/google/gson/stream/JsonWriter;Lcdx$c;)V
+		FIELD a THIS Lcdx$c;
+		FIELD b KILLER Lcdx$c;
+		FIELD c DIRECT_KILLER Lcdx$c;
+		FIELD d KILLER_PLAYER Lcdx$c;
+		FIELD e type Ljava/lang/String;
+		FIELD f parameter Lcfs;
+		METHOD a getParameter ()Lcfs;
+		METHOD a fromString (Ljava/lang/String;)Lcdx$c;
+		METHOD values ()[Lcdx$c;
+	FIELD a rand Ljava/util/Random;
+	FIELD b luck F
+	FIELD c world Ltz;
+	FIELD d listener Lcec;
+	FIELD e tables Ljava/util/Set;
+	FIELD f contextMap Ljava/util/Map;
+	FIELD g dynamicDrops Ljava/util/Map;
+	METHOD a getListener ()Lcec;
+	METHOD a add (Lcea;)Z
+	METHOD a has (Lcfs;)Z
+	METHOD a addDynamicDrop (Lpt;Ljava/util/function/Consumer;)V
+	METHOD b getRandom ()Ljava/util/Random;
+	METHOD b remove (Lcea;)V
+	METHOD c getLuck ()F
+	METHOD c get (Lcfs;)Ljava/lang/Object;
+	METHOD d world ()Ltz;
