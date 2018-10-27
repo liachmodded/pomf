@@ -5,8 +5,8 @@ CLASS bdx net/minecraft/block/Block
 		FIELD b XZ Lbdx$b;
 		FIELD c XYZ Lbdx$b;
 	CLASS bdx$c Builder
-		FIELD a material Lcag;
-		FIELD b mapColor Lcah;
+		FIELD a material Lcah;
+		FIELD b mapColor Lcai;
 		FIELD c hasCollision Z
 		FIELD d soundGroup Lbio;
 		FIELD e lightValue I
@@ -21,14 +21,13 @@ CLASS bdx net/minecraft/block/Block
 		METHOD a withLightValue (I)Lbdx$c;
 		METHOD a from (Lbdx;)Lbdx$c;
 		METHOD a withSoundGroup (Lbio;)Lbdx$c;
-		METHOD a of (Lcag;)Lbdx$c;
-		METHOD a of (Lcag;Lasz;)Lbdx$c;
-		METHOD a of (Lcag;Lcah;)Lbdx$c;
+		METHOD a of (Lcah;)Lbdx$c;
+		METHOD a of (Lcah;Lasz;)Lbdx$c;
+		METHOD a of (Lcah;Lcai;)Lbdx$c;
 		METHOD a withLootTable (Lpt;)Lbdx$c;
 		METHOD b setInstantBreak ()Lbdx$c;
 		METHOD b withBreakProperties (F)Lbdx$c;
 		METHOD c ticksRandomly ()Lbdx$c;
-		METHOD d ()Lbdx$c;
 	FIELD b slipperiness F
 	FIELD c defaultState Lblz;
 	FIELD e lootTable Lpt;
@@ -40,21 +39,18 @@ CLASS bdx net/minecraft/block/Block
 	FIELD k resistance F
 	FIELD l tickRandomly Z
 	FIELD m soundGroup Lbio;
-	FIELD n material Lcag;
-	FIELD o mapColor Lcah;
+	FIELD n material Lcah;
+	FIELD o mapColor Lcai;
 	FIELD p stateContainer Lbma;
 	FIELD q hasCollision Z
 	METHOD <init> (Lbdx$c;)V
 		ARG 0 builder
 	METHOD Y_ getOffsetType ()Lbdx$b;
 	METHOD a canEntitiesSpawnInside ()Z
-	METHOD a makeShape (DDDDDD)Lchu;
+	METHOD a makeShape (DDDDDD)Lchv;
 		ARG 0 minX
 		ARG 2 minY
 		ARG 4 minZ
-		ARG 6 maxX
-		ARG 8 maxY
-		ARG 10 maxZ
 	METHOD a getState (I)Lblz;
 		ARG 0 id
 	METHOD a getDefaultState (Lash;)Lblz;
@@ -81,8 +77,8 @@ CLASS bdx net/minecraft/block/Block
 	METHOD a canEntitySpawn (Lblz;Lafh;)Z
 	METHOD a getHardnessForPlayer (Lblz;Lapb;Layn;Leq;)F
 	METHOD a getLightValuesPacked (Lblz;Layl;Leq;)I
-	METHOD a getBoundingBox (Lblz;Layn;Leq;)Lchu;
-	METHOD a isNotSolid (Lblz;Layn;Leq;Lccm;)Z
+	METHOD a getBoundingBox (Lblz;Layn;Leq;)Lchv;
+	METHOD a isNotSolid (Lblz;Layn;Leq;Lccn;)Z
 	METHOD a getWeakRedstonePower (Lblz;Layn;Leq;Lev;)I
 	METHOD a onBlockAction (Lblz;Laza;Leq;II)Z
 	METHOD a onEntityCollision (Lblz;Laza;Leq;Lafh;)V
@@ -92,7 +88,7 @@ CLASS bdx net/minecraft/block/Block
 	METHOD a update (Lblz;Laza;Leq;Lbdx;Leq;)V
 	METHOD a onBlockAdded (Lblz;Laza;Leq;Lblz;)V
 	METHOD a onBlockRemoved (Lblz;Laza;Leq;Lblz;Z)V
-	METHOD a raytraceForCollision (Lblz;Laza;Leq;Lchc;Lchc;)Lcgz;
+	METHOD a raytraceForCollision (Lblz;Laza;Leq;Lchd;Lchd;)Lcha;
 	METHOD a updateTick (Lblz;Laza;Leq;Ljava/util/Random;)V
 	METHOD a canBePlaced (Lblz;Laze;Leq;)Z
 	METHOD a withMirror (Lblz;Lbha;)Lblz;
@@ -112,37 +108,36 @@ CLASS bdx net/minecraft/block/Block
 	METHOD c onRainTick (Laza;Leq;)V
 	METHOD c isStone (Lbdx;)Z
 	METHOD c getRenderType (Lblz;)Lbhx;
-	METHOD c getEmptyShape (Lblz;Layn;Leq;)Lchu;
+	METHOD c getEmptyShape (Lblz;Layn;Leq;)Lchv;
 	METHOD c shouldRenderSide (Lblz;Layn;Leq;Lev;)Z
 	METHOD c randomDisplayTick (Lblz;Laza;Leq;Ljava/util/Random;)V
 	METHOD d isDirt (Lbdx;)Z
 	METHOD d canCollide (Lblz;)Z
-	METHOD d getMapColor (Lblz;Layn;Leq;)Lcah;
+	METHOD d getMapColor (Lblz;Layn;Leq;)Lcai;
 	METHOD e isAir (Lblz;)Z
 	METHOD e getHardness (Lblz;Layn;Leq;)F
 	METHOD f hasCollisionAndSolidRenderLayer (Lblz;)Z
 	METHOD g hasBlockEntity ()Z
 	METHOD g getAmbientOcclusionLight (Lblz;)F
 	METHOD h getItem ()Latx;
-	METHOD h getFluidState (Lblz;)Lcac;
+	METHOD h getFluidState (Lblz;)Lcad;
 	METHOD i canCollide ()Z
 	METHOD i canProvidePower (Lblz;)Z
 	METHOD j getLootTable ()Lpt;
-	METHOD j getPistonBehavior (Lblz;)Lcai;
+	METHOD j getPistonBehavior (Lblz;)Lcaj;
 	METHOD k getResistance ()F
 	METHOD l getTranslationName ()Liw;
 	METHOD l getStateId (Lblz;)I
 		ARG 0 state
-	METHOD l getOffset (Lblz;Layn;Leq;)Lchc;
+	METHOD l getOffset (Lblz;Layn;Leq;)Lchd;
 	METHOD m getTranslationKey ()Ljava/lang/String;
 	METHOD m getLightValue (Lblz;)I
 	METHOD n getSlipperiness ()F
-	METHOD n getMaterial (Lblz;)Lcag;
+	METHOD n getMaterial (Lblz;)Lcah;
 	METHOD o getStateContainer ()Lbma;
 	METHOD o isSolidAndFullBlock (Lblz;)Z
 	METHOD p getDefaultState ()Lblz;
 	METHOD p isNormalCube (Lblz;)Z
-	METHOD q ()Z
 	METHOD q isDefaultStateSolidAndFullBlock (Lblz;)Z
 	METHOD r isTopSolid (Lblz;)Z
 	METHOD s shouldTickRandomly (Lblz;)Z

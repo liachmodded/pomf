@@ -1,12 +1,12 @@
-CLASS dgu net/minecraft/client/render/stb/ImageInfo
-	CLASS dgu$a STBCallbackProxy
+CLASS dgs net/minecraft/client/render/stb/ImageInfo
+	CLASS dgs$a STBCallbackProxy
 		FIELD a atEof Z
 		METHOD a skip (I)V
 		METHOD a eofCallback (J)I
 		METHOD a skipCallback (JI)V
 		METHOD a readCallback (JJI)I
 		METHOD b read (JI)I
-	CLASS dgu$b NativeBufferedByteChannel
+	CLASS dgs$b NativeBufferedByteChannel
 		FIELD b channelSource Ljava/nio/channels/ReadableByteChannel;
 		FIELD c bufferAddress J
 		FIELD d bufferSize I
@@ -15,11 +15,11 @@ CLASS dgu net/minecraft/client/render/stb/ImageInfo
 		METHOD a skip (I)V
 		METHOD b readIntoBuffer (I)V
 		METHOD b read (JI)I
-	CLASS dgu$c ByteChannelPassthrough
+	CLASS dgs$c ByteChannelPassthrough
 		FIELD b channel Ljava/nio/channels/SeekableByteChannel;
 		METHOD a skip (I)V
 		METHOD a eofCallback (J)I
 		METHOD b read (JI)I
 	FIELD a width I
 	FIELD b height I
-	METHOD a getProxy (Ljava/io/InputStream;)Ldgu$a;
+	METHOD a getProxy (Ljava/io/InputStream;)Ldgs$a;

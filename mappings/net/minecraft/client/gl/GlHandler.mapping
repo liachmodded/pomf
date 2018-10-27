@@ -1,246 +1,245 @@
-CLASS dgk net/minecraft/client/gl/GlHandler
-	CLASS dgk$a AlphaTestState
-		FIELD a capState Ldgk$c;
+CLASS net/minecraft/client/renderer/system/GlStateManager net/minecraft/client/gl/GlHandler
+	CLASS net/minecraft/client/renderer/system/GlStateManager$a AlphaTestState
+		FIELD a capState Lnet/minecraft/client/renderer/system/GlStateManager$c;
 		FIELD b func I
 		FIELD c ref F
-	CLASS dgk$b BlendFuncState
-		FIELD a capState Ldgk$c;
-	CLASS dgk$c CapabilityTracker
+	CLASS net/minecraft/client/renderer/system/GlStateManager$b BlendFuncState
+		FIELD a capState Lnet/minecraft/client/renderer/system/GlStateManager$c;
+	CLASS net/minecraft/client/renderer/system/GlStateManager$c CapabilityTracker
 		FIELD a cap I
 		FIELD b state Z
 		METHOD a disable ()V
 		METHOD a setState (Z)V
 		METHOD b enable ()V
-	CLASS dgk$d ClearState
+	CLASS net/minecraft/client/renderer/system/GlStateManager$d ClearState
 		FIELD a clearDepth D
-		FIELD b clearColor Ldgk$e;
-	CLASS dgk$e Color4
-	CLASS dgk$f LogicOpState
-		FIELD a capState Ldgk$c;
+		FIELD b clearColor Lnet/minecraft/client/renderer/system/GlStateManager$e;
+	CLASS net/minecraft/client/renderer/system/GlStateManager$e Color4
+	CLASS net/minecraft/client/renderer/system/GlStateManager$f LogicOpState
+		FIELD a capState Lnet/minecraft/client/renderer/system/GlStateManager$c;
 		FIELD b opcode I
-	CLASS dgk$g ColorMask
-	CLASS dgk$h ColorMaterialState
-		FIELD a capState Ldgk$c;
+	CLASS net/minecraft/client/renderer/system/GlStateManager$g ColorMask
+	CLASS net/minecraft/client/renderer/system/GlStateManager$h ColorMaterialState
+		FIELD a capState Lnet/minecraft/client/renderer/system/GlStateManager$c;
 		FIELD b face I
 		FIELD c mode I
-	CLASS dgk$i FaceSides
-		FIELD a FRONT Ldgk$i;
-		FIELD b BACK Ldgk$i;
-		FIELD c FRONT_AND_BACK Ldgk$i;
+	CLASS net/minecraft/client/renderer/system/GlStateManager$i FaceSides
+		FIELD a FRONT Lnet/minecraft/client/renderer/system/GlStateManager$i;
+		FIELD b BACK Lnet/minecraft/client/renderer/system/GlStateManager$i;
+		FIELD c FRONT_AND_BACK Lnet/minecraft/client/renderer/system/GlStateManager$i;
 		FIELD d glConstant I
-	CLASS dgk$j CullFaceState
-		FIELD a capState Ldgk$c;
+	CLASS net/minecraft/client/renderer/system/GlStateManager$j CullFaceState
+		FIELD a capState Lnet/minecraft/client/renderer/system/GlStateManager$c;
 		FIELD b mode I
-	CLASS dgk$k DepthTestState
-		FIELD a capState Ldgk$c;
+	CLASS net/minecraft/client/renderer/system/GlStateManager$k DepthTestState
+		FIELD a capState Lnet/minecraft/client/renderer/system/GlStateManager$c;
 		FIELD b mask Z
 		FIELD c func I
-	CLASS dgk$m FogMode
-		FIELD a LINEAR Ldgk$m;
-		FIELD b EXP Ldgk$m;
-		FIELD c EXP2 Ldgk$m;
+	CLASS net/minecraft/client/renderer/system/GlStateManager$m FogMode
+		FIELD a LINEAR Lnet/minecraft/client/renderer/system/GlStateManager$m;
+		FIELD b EXP Lnet/minecraft/client/renderer/system/GlStateManager$m;
+		FIELD c EXP2 Lnet/minecraft/client/renderer/system/GlStateManager$m;
 		FIELD d glConstant I
-	CLASS dgk$n FogState
-		FIELD a capState Ldgk$c;
+	CLASS net/minecraft/client/renderer/system/GlStateManager$n FogState
+		FIELD a capState Lnet/minecraft/client/renderer/system/GlStateManager$c;
 		FIELD b mode I
 		FIELD c density F
 		FIELD d start F
 		FIELD e end F
-	CLASS dgk$o LogicOp
-		FIELD a AND Ldgk$o;
-		FIELD b AND_INVERTED Ldgk$o;
-		FIELD c AND_REVERSE Ldgk$o;
-		FIELD d CLEAR Ldgk$o;
-		FIELD e COPY Ldgk$o;
-		FIELD f COPY_INVERTED Ldgk$o;
-		FIELD g EQUIV Ldgk$o;
-		FIELD h INVERT Ldgk$o;
-		FIELD i NAND Ldgk$o;
-		FIELD j NOOP Ldgk$o;
-		FIELD k NOR Ldgk$o;
-		FIELD l OR Ldgk$o;
-		FIELD m OR_INVERTED Ldgk$o;
-		FIELD n OR_REVERSE Ldgk$o;
-		FIELD o SET Ldgk$o;
-		FIELD p XOR Ldgk$o;
+	CLASS net/minecraft/client/renderer/system/GlStateManager$o LogicOp
+		FIELD a AND Lnet/minecraft/client/renderer/system/GlStateManager$o;
+		FIELD b AND_INVERTED Lnet/minecraft/client/renderer/system/GlStateManager$o;
+		FIELD c AND_REVERSE Lnet/minecraft/client/renderer/system/GlStateManager$o;
+		FIELD d CLEAR Lnet/minecraft/client/renderer/system/GlStateManager$o;
+		FIELD e COPY Lnet/minecraft/client/renderer/system/GlStateManager$o;
+		FIELD f COPY_INVERTED Lnet/minecraft/client/renderer/system/GlStateManager$o;
+		FIELD g EQUIV Lnet/minecraft/client/renderer/system/GlStateManager$o;
+		FIELD h INVERT Lnet/minecraft/client/renderer/system/GlStateManager$o;
+		FIELD i NAND Lnet/minecraft/client/renderer/system/GlStateManager$o;
+		FIELD j NOOP Lnet/minecraft/client/renderer/system/GlStateManager$o;
+		FIELD k NOR Lnet/minecraft/client/renderer/system/GlStateManager$o;
+		FIELD l OR Lnet/minecraft/client/renderer/system/GlStateManager$o;
+		FIELD m OR_INVERTED Lnet/minecraft/client/renderer/system/GlStateManager$o;
+		FIELD n OR_REVERSE Lnet/minecraft/client/renderer/system/GlStateManager$o;
+		FIELD o SET Lnet/minecraft/client/renderer/system/GlStateManager$o;
+		FIELD p XOR Lnet/minecraft/client/renderer/system/GlStateManager$o;
 		FIELD q glConstant I
-	CLASS dgk$p PolygonOffsetState
-		FIELD a capFill Ldgk$c;
-		FIELD b capLine Ldgk$c;
+	CLASS net/minecraft/client/renderer/system/GlStateManager$p PolygonOffsetState
+		FIELD a capFill Lnet/minecraft/client/renderer/system/GlStateManager$c;
+		FIELD b capLine Lnet/minecraft/client/renderer/system/GlStateManager$c;
 		FIELD c factor F
 		FIELD d units F
-	CLASS dgk$q RenderMode
-		CLASS dgk$q$1
+	CLASS net/minecraft/client/renderer/system/GlStateManager$q RenderMode
+		CLASS net/minecraft/client/renderer/system/GlStateManager$q$1
 			METHOD a begin ()V
 			METHOD b end ()V
-		CLASS dgk$q$2
+		CLASS net/minecraft/client/renderer/system/GlStateManager$q$2
 			METHOD a begin ()V
 			METHOD b end ()V
-		CLASS dgk$q$3
+		CLASS net/minecraft/client/renderer/system/GlStateManager$q$3
 			METHOD a begin ()V
 			METHOD b end ()V
-		FIELD a DEFAULT Ldgk$q;
-		FIELD b PLAYER_SKIN Ldgk$q;
-		FIELD c TRANSPARENT_MODEL Ldgk$q;
+		FIELD a DEFAULT Lnet/minecraft/client/renderer/system/GlStateManager$q;
+		FIELD b PLAYER_SKIN Lnet/minecraft/client/renderer/system/GlStateManager$q;
+		FIELD c TRANSPARENT_MODEL Lnet/minecraft/client/renderer/system/GlStateManager$q;
 		METHOD a begin ()V
 		METHOD b end ()V
-	CLASS dgk$s StencilSubState
+	CLASS net/minecraft/client/renderer/system/GlStateManager$s StencilSubState
 		FIELD a func I
-	CLASS dgk$t StencilState
-		FIELD a subState Ldgk$s;
-	CLASS dgk$u TexCoord
-		FIELD a S Ldgk$u;
-		FIELD b T Ldgk$u;
-		FIELD c R Ldgk$u;
-		FIELD d Q Ldgk$u;
-	CLASS dgk$v TexGenCoordState
-		FIELD a capState Ldgk$c;
+	CLASS net/minecraft/client/renderer/system/GlStateManager$t StencilState
+		FIELD a subState Lnet/minecraft/client/renderer/system/GlStateManager$s;
+	CLASS net/minecraft/client/renderer/system/GlStateManager$u TexCoord
+		FIELD a S Lnet/minecraft/client/renderer/system/GlStateManager$u;
+		FIELD b T Lnet/minecraft/client/renderer/system/GlStateManager$u;
+		FIELD c R Lnet/minecraft/client/renderer/system/GlStateManager$u;
+		FIELD d Q Lnet/minecraft/client/renderer/system/GlStateManager$u;
+	CLASS net/minecraft/client/renderer/system/GlStateManager$v TexGenCoordState
+		FIELD a capState Lnet/minecraft/client/renderer/system/GlStateManager$c;
 		FIELD b coord I
 		FIELD c mode I
-	CLASS dgk$w TexGenState
-		FIELD a s Ldgk$v;
-		FIELD b t Ldgk$v;
-		FIELD c r Ldgk$v;
-		FIELD d q Ldgk$v;
-	CLASS dgk$x Texture2DState
-		FIELD a capState Ldgk$c;
+	CLASS net/minecraft/client/renderer/system/GlStateManager$w TexGenState
+		FIELD a s Lnet/minecraft/client/renderer/system/GlStateManager$v;
+		FIELD b t Lnet/minecraft/client/renderer/system/GlStateManager$v;
+		FIELD c r Lnet/minecraft/client/renderer/system/GlStateManager$v;
+		FIELD d q Lnet/minecraft/client/renderer/system/GlStateManager$v;
+	CLASS net/minecraft/client/renderer/system/GlStateManager$x Texture2DState
+		FIELD a capState Lnet/minecraft/client/renderer/system/GlStateManager$c;
 		FIELD b boundTexture I
-	CLASS dgk$y
-		FIELD a INSTANCE Ldgk$y;
-	FIELD c alphaTestState Ldgk$a;
-	FIELD d lightSystemEnabled Ldgk$c;
-	FIELD e glLights [Ldgk$c;
-	FIELD f colorMaterial Ldgk$h;
-	FIELD g blendFunc Ldgk$b;
-	FIELD h depth Ldgk$k;
-	FIELD i fogState Ldgk$n;
-	FIELD j cullFaceState Ldgk$j;
-	FIELD k polygonOffset Ldgk$p;
-	FIELD l logicOpState Ldgk$f;
-	FIELD m texGenState Ldgk$w;
-	FIELD n clearState Ldgk$d;
-	FIELD o stencilState Ldgk$t;
-	FIELD p normalizeEnabled Ldgk$c;
-	FIELD q activeTexture I
-	FIELD r textureStates [Ldgk$x;
-	FIELD s shadeModel I
-	FIELD t rescaleNormalEnabled Ldgk$c;
-	FIELD u colorMask Ldgk$g;
-	FIELD v color Ldgk$e;
-	METHOD A genTextures ()I
-	METHOD B enableNormalize ()V
-	METHOD C disableNormalize ()V
-	METHOD D enableRescaleNormal ()V
-	METHOD E disableRescaleNormal ()V
-	METHOD F loadIdentity ()V
-	METHOD G pushMatrix ()V
-	METHOD H popMatrix ()V
-	METHOD I invalidateColorState ()V
-	METHOD K endList ()V
-	METHOD L getError ()I
-	METHOD a pushAttrib ()V
-	METHOD a clearDepth (D)V
-	METHOD a scale (DDD)V
-	METHOD a ortho (DDDDDD)V
-	METHOD a fogDensity (F)V
-	METHOD a polygonOffset (FF)V
-	METHOD a normal (FFF)V
-	METHOD a clearColor (FFFF)V
-	METHOD a enableLight (I)V
-	METHOD a alphaFunc (IF)V
-	METHOD a colorMaterial (II)V
-	METHOD a texEnv (IIF)V
-	METHOD a texEnv (III)V
-	METHOD a blendFuncSeparate (IIII)V
-	METHOD a texSubImage2D (IIIIIIIIJ)V
-	METHOD a texImage2D (IIIIIIIILjava/nio/IntBuffer;)V
-	METHOD a readPixels (IIIIIIJ)V
-	METHOD a getTexImage (IIIIJ)V
-	METHOD a texCoordPointer (IIILjava/nio/ByteBuffer;)V
-	METHOD a normalPointer (IILjava/nio/ByteBuffer;)V
-	METHOD a light (IILjava/nio/FloatBuffer;)V
-	METHOD a lightModel (ILjava/nio/FloatBuffer;)V
-	METHOD a cullFace (Ldgk$i;)V
-	METHOD a fogMode (Ldgk$m;)V
-	METHOD a logicOp (Ldgk$o;)V
-	METHOD a beginRenderMode (Ldgk$q;)V
-	METHOD a blendFunc (Ldgk$r;Ldgk$l;)V
-	METHOD a blendFuncSeparate (Ldgk$r;Ldgk$l;Ldgk$r;Ldgk$l;)V
-	METHOD a enableTextureGen (Ldgk$u;)V
-	METHOD a texGenMode (Ldgk$u;I)V
-	METHOD a texGen (Ldgk$u;ILjava/nio/FloatBuffer;)V
-	METHOD a multMatrix (Ldks;)V
-	METHOD a multMatrix (Ljava/nio/FloatBuffer;)V
-	METHOD a depthMask (Z)V
-	METHOD a colorMask (ZZZZ)V
-	METHOD b translate (DDD)V
-	METHOD b fogStart (F)V
-	METHOD b scale (FFF)V
-	METHOD b rotate (FFFF)V
-	METHOD b disableLight (I)V
-	METHOD b pixelTransfer (IF)V
-	METHOD b blendFunc (II)V
-	METHOD b texParameter (IIF)V
-	METHOD b texParameter (III)V
-	METHOD b viewport (IIII)V
-	METHOD b vertexPointer (IIILjava/nio/ByteBuffer;)V
-	METHOD b texEnv (IILjava/nio/FloatBuffer;)V
-	METHOD b fogfv (ILjava/nio/FloatBuffer;)V
-	METHOD b endRenderMode (Ldgk$q;)V
-	METHOD b disableTextureGen (Ldgk$u;)V
-	METHOD c popAttrib ()V
-	METHOD c fogEnd (F)V
-	METHOD c translate (FFF)V
-	METHOD c color (FFFF)V
-	METHOD c depthFunc (I)V
-	METHOD c fog (II)V
-	METHOD c getTexLevelParameter (III)I
-	METHOD c texCoordPointer (IIII)V
-	METHOD c colorPointer (IIILjava/nio/ByteBuffer;)V
-	METHOD c getFloat (ILjava/nio/FloatBuffer;)V
-	METHOD c getTexGenCoordState (Ldgk$u;)Ldgk$v;
-	METHOD d disableAlphaTest ()V
-	METHOD d lineWidth (F)V
-	METHOD d color (FFF)V
-	METHOD d blendEquation (I)V
-	METHOD d polygonMode (II)V
-	METHOD d vertexPointer (IIII)V
-	METHOD e enableAlphaTest ()V
-	METHOD e deleteLists (II)V
-	METHOD e colorPointer (IIII)V
-	METHOD f enableLightSystem ()V
-	METHOD f logicOp (I)V
-	METHOD f newList (II)V
-	METHOD f normalPointer (III)V
-	METHOD g disableLightSystem ()V
-	METHOD g activeTexture (I)V
-	METHOD g pixelStore (II)V
-	METHOD g drawArrays (III)V
-	METHOD h enableColorMaterial ()V
-	METHOD h deleteTextures (I)V
-	METHOD i disableColorMaterial ()V
-	METHOD i bindTexture (I)V
-	METHOD j disableDepthTest ()V
-	METHOD j shadeModel (I)V
-	METHOD k enableDepthTest ()V
-	METHOD l disableBlend ()V
-	METHOD m enableBlend ()V
-	METHOD m clear (I)V
-	METHOD n matrixMode (I)V
-	METHOD o enableFog ()V
-	METHOD p disableFog ()V
-	METHOD p disableClientState (I)V
-	METHOD q enableCullFace ()V
-	METHOD q enableClientState (I)V
-	METHOD r disableCullFace ()V
-	METHOD s enablePolygonOffsetFill ()V
-	METHOD s callList (I)V
-	METHOD t disablePolygonOffsetFill ()V
-	METHOD t genLists (I)I
-	METHOD u getString (I)Ljava/lang/String;
-	METHOD w enableColorLogicOp ()V
-	METHOD w fogMode (I)V
-	METHOD x disableColorLogicOp ()V
-	METHOD x cullFace (I)V
-	METHOD y enableTexture2D ()V
-	METHOD z disableTexture2D ()V
+	CLASS net/minecraft/client/renderer/system/GlStateManager$y
+		FIELD a INSTANCE Lnet/minecraft/client/renderer/system/GlStateManager$y;
+	FIELD ALPHA_TEST alphaTestState Lnet/minecraft/client/renderer/system/GlStateManager$a;
+	FIELD BLEND blendFunc Lnet/minecraft/client/renderer/system/GlStateManager$b;
+	FIELD CLEAR clearState Lnet/minecraft/client/renderer/system/GlStateManager$d;
+	FIELD COLOR color Lnet/minecraft/client/renderer/system/GlStateManager$e;
+	FIELD COLOR_LOGIC logicOpState Lnet/minecraft/client/renderer/system/GlStateManager$f;
+	FIELD COLOR_MASK colorMask Lnet/minecraft/client/renderer/system/GlStateManager$g;
+	FIELD COLOR_MATERIAL colorMaterial Lnet/minecraft/client/renderer/system/GlStateManager$h;
+	FIELD CULL cullFaceState Lnet/minecraft/client/renderer/system/GlStateManager$j;
+	FIELD DEPTH depth Lnet/minecraft/client/renderer/system/GlStateManager$k;
+	FIELD FOG fogState Lnet/minecraft/client/renderer/system/GlStateManager$n;
+	FIELD LIGHTING lightSystemEnabled Lnet/minecraft/client/renderer/system/GlStateManager$c;
+	FIELD LIGHT_ENABLE glLights [Lnet/minecraft/client/renderer/system/GlStateManager$c;
+	FIELD NORMALIZE normalizeEnabled Lnet/minecraft/client/renderer/system/GlStateManager$c;
+	FIELD POLY_OFFSET polygonOffset Lnet/minecraft/client/renderer/system/GlStateManager$p;
+	FIELD RESCALE_NORMAL rescaleNormalEnabled Lnet/minecraft/client/renderer/system/GlStateManager$c;
+	FIELD TEXTURES textureStates [Lnet/minecraft/client/renderer/system/GlStateManager$x;
+	FIELD TEX_GEN texGenState Lnet/minecraft/client/renderer/system/GlStateManager$w;
+	FIELD activeTexture activeTexture I
+	FIELD shadeModel shadeModel I
+	METHOD activeTexture (I)V
+	METHOD alphaFunc (IF)V
+	METHOD bindTexture (I)V
+	METHOD blendEquation (I)V
+	METHOD blendFunc (II)V
+	METHOD blendFunc (Lnet/minecraft/client/renderer/system/GlStateManager$r;Lnet/minecraft/client/renderer/system/GlStateManager$l;)V
+	METHOD blendFuncSeparate (IIII)V
+	METHOD blendFuncSeparate (Lnet/minecraft/client/renderer/system/GlStateManager$r;Lnet/minecraft/client/renderer/system/GlStateManager$l;Lnet/minecraft/client/renderer/system/GlStateManager$r;Lnet/minecraft/client/renderer/system/GlStateManager$l;)V
+	METHOD callList (I)V
+	METHOD clear (I)V
+	METHOD clearColor (FFFF)V
+	METHOD clearCurrentColor invalidateColorState ()V
+	METHOD clearDepth (D)V
+	METHOD color3f color (FFF)V
+	METHOD color4f color (FFFF)V
+	METHOD colorMask (ZZZZ)V
+	METHOD colorMaterial (II)V
+	METHOD colorPointer (IIII)V
+	METHOD colorPointer (IIILjava/nio/ByteBuffer;)V
+	METHOD cullFace (I)V
+	METHOD cullFace (Lnet/minecraft/client/renderer/system/GlStateManager$i;)V
+	METHOD deleteLists (II)V
+	METHOD deleteTexture deleteTextures (I)V
+	METHOD depthFunc (I)V
+	METHOD depthMask (Z)V
+	METHOD disableAlphaTest ()V
+	METHOD disableBlend ()V
+	METHOD disableClientState (I)V
+	METHOD disableColorLogicOp ()V
+	METHOD disableColorMaterial ()V
+	METHOD disableCull disableCullFace ()V
+	METHOD disableDepthTest ()V
+	METHOD disableFog ()V
+	METHOD disableLight (I)V
+	METHOD disableLighting disableLightSystem ()V
+	METHOD disableNormalize ()V
+	METHOD disablePolygonOffset disablePolygonOffsetFill ()V
+	METHOD disableRescaleNormal ()V
+	METHOD disableTexGen disableTextureGen (Lnet/minecraft/client/renderer/system/GlStateManager$u;)V
+	METHOD disableTexture disableTexture2D ()V
+	METHOD drawArrays (III)V
+	METHOD enableAlphaTest ()V
+	METHOD enableBlend ()V
+	METHOD enableClientState (I)V
+	METHOD enableColorLogicOp ()V
+	METHOD enableColorMaterial ()V
+	METHOD enableCull enableCullFace ()V
+	METHOD enableDepthTest ()V
+	METHOD enableFog ()V
+	METHOD enableLight (I)V
+	METHOD enableLighting enableLightSystem ()V
+	METHOD enableNormalize ()V
+	METHOD enablePolygonOffset enablePolygonOffsetFill ()V
+	METHOD enableRescaleNormal ()V
+	METHOD enableTexGen enableTextureGen (Lnet/minecraft/client/renderer/system/GlStateManager$u;)V
+	METHOD enableTexture enableTexture2D ()V
+	METHOD endList ()V
+	METHOD fog fogfv (ILjava/nio/FloatBuffer;)V
+	METHOD fogDensity (F)V
+	METHOD fogEnd (F)V
+	METHOD fogMode (I)V
+	METHOD fogMode (Lnet/minecraft/client/renderer/system/GlStateManager$m;)V
+	METHOD fogStart (F)V
+	METHOD fogi fog (II)V
+	METHOD genLists (I)I
+	METHOD genTexture genTextures ()I
+	METHOD getError ()I
+	METHOD getMatrix getFloat (ILjava/nio/FloatBuffer;)V
+	METHOD getString (I)Ljava/lang/String;
+	METHOD getTexGen getTexGenCoordState (Lnet/minecraft/client/renderer/system/GlStateManager$u;)Lnet/minecraft/client/renderer/system/GlStateManager$v;
+	METHOD getTexImage (IIIIJ)V
+	METHOD getTexLevelParameter (III)I
+	METHOD light (IILjava/nio/FloatBuffer;)V
+	METHOD lightModel (ILjava/nio/FloatBuffer;)V
+	METHOD lineWidth (F)V
+	METHOD loadIdentity ()V
+	METHOD logicOp (I)V
+	METHOD logicOp (Lnet/minecraft/client/renderer/system/GlStateManager$o;)V
+	METHOD matrixMode (I)V
+	METHOD multMatrix (Ldkr;)V
+	METHOD multMatrix (Ljava/nio/FloatBuffer;)V
+	METHOD newList (II)V
+	METHOD normal3f normal (FFF)V
+	METHOD normalPointer (III)V
+	METHOD normalPointer (IILjava/nio/ByteBuffer;)V
+	METHOD ortho (DDDDDD)V
+	METHOD pixelStore (II)V
+	METHOD pixelTransfer (IF)V
+	METHOD polygonMode (II)V
+	METHOD polygonOffset (FF)V
+	METHOD popAttributes popAttrib ()V
+	METHOD popMatrix ()V
+	METHOD pushLightingAttributes pushAttrib ()V
+	METHOD pushMatrix ()V
+	METHOD readPixels (IIIIIIJ)V
+	METHOD rotatef rotate (FFFF)V
+	METHOD scaled scale (DDD)V
+	METHOD scalef scale (FFF)V
+	METHOD setProfile beginRenderMode (Lnet/minecraft/client/renderer/system/GlStateManager$q;)V
+	METHOD shadeModel (I)V
+	METHOD texCoordPointer (IIII)V
+	METHOD texCoordPointer (IIILjava/nio/ByteBuffer;)V
+	METHOD texEnv (IIF)V
+	METHOD texEnv (III)V
+	METHOD texEnv (IILjava/nio/FloatBuffer;)V
+	METHOD texGenMode (Lnet/minecraft/client/renderer/system/GlStateManager$u;I)V
+	METHOD texGenParam texGen (Lnet/minecraft/client/renderer/system/GlStateManager$u;ILjava/nio/FloatBuffer;)V
+	METHOD texImage2D (IIIIIIIILjava/nio/IntBuffer;)V
+	METHOD texParameter (IIF)V
+	METHOD texParameter (III)V
+	METHOD texSubImage2D (IIIIIIIIJ)V
+	METHOD translated translate (DDD)V
+	METHOD translatef translate (FFF)V
+	METHOD unsetProfile endRenderMode (Lnet/minecraft/client/renderer/system/GlStateManager$q;)V
+	METHOD vertexPointer (IIII)V
+	METHOD vertexPointer (IIILjava/nio/ByteBuffer;)V
+	METHOD viewport (IIII)V
