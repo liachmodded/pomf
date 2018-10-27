@@ -4,9 +4,9 @@ CLASS eq net/minecraft/util/math/BlockPos
 	CLASS eq$2
 		METHOD a computeNext ()Leq$a;
 	CLASS eq$a Mutable
-		FIELD b x I
-		FIELD c y I
-		FIELD d z I
+		FIELD b mutableX I
+		FIELD c mutableY I
+		FIELD d mutableZ I
 		METHOD a add (DDD)Leq;
 		METHOD a set (Lafh;)Leq$a;
 		METHOD a offset (Lev;I)Leq;
@@ -42,8 +42,18 @@ CLASS eq net/minecraft/util/math/BlockPos
 		METHOD r get ()Leq$b;
 	FIELD a ORIGIN Leq;
 	FIELD b LOGGER Lorg/apache/logging/log4j/Logger;
+	FIELD g X_PACK_MASK J
+	FIELD h Y_PACK_MASK J
+	FIELD i Z_PACK_MASK J
+	FIELD j Z_PACK_SHIFT I
+	FIELD k X_PACK_SHIFT I
+	METHOD a pack ()J
 	METHOD a add (DDD)Leq;
 	METHOD a pack (III)J
+		ARG 0 x
+		ARG 1 y
+		ARG 2 z
+		ARG 3 packed
 	METHOD a iterateBoxPositions (IIIIII)Ljava/lang/Iterable;
 	METHOD a iterateBoxPositions (Leq;Leq;)Ljava/lang/Iterable;
 	METHOD a offset (Lev;)Leq;
@@ -53,19 +63,23 @@ CLASS eq net/minecraft/util/math/BlockPos
 	METHOD b up (I)Leq;
 	METHOD b add (III)Leq;
 	METHOD b iterateBoxPositionsMutable (IIIIII)Ljava/lang/Iterable;
+	METHOD b isPackedInvalid (J)Z
 	METHOD b iterateBoxPositionsMutable (Leq;Leq;)Ljava/lang/Iterable;
 	METHOD b subtract (Lfk;)Leq;
 	METHOD c down ()Leq;
 	METHOD c down (I)Leq;
 	METHOD c unpackX (J)I
+		ARG 0 packed
 	METHOD c crossProduct (Lfk;)Leq;
 	METHOD d north ()Leq;
 	METHOD d north (I)Leq;
 	METHOD d unpackY (J)I
+		ARG 0 packed
 	METHOD d crossProduct (Lfk;)Lfk;
 	METHOD e south ()Leq;
 	METHOD e south (I)Leq;
 	METHOD e unpackZ (J)I
+		ARG 0 packed
 	METHOD f west ()Leq;
 	METHOD f west (I)Leq;
 	METHOD f unpack (J)Leq;

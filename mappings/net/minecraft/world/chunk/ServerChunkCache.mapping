@@ -1,4 +1,5 @@
 CLASS ty net/minecraft/world/chunk/ServerChunkCache
+	CLASS ty$a
 	FIELD b LOGGER Lorg/apache/logging/log4j/Logger;
 	FIELD d CHUNK_STATUSES [Lboa;
 	FIELD g generator Lbnv;
@@ -7,6 +8,7 @@ CLASS ty net/minecraft/world/chunk/ServerChunkCache
 	FIELD q viewRadius I
 	FIELD r lastUpdateTime J
 	FIELD s generationService Ljava/util/concurrent/ExecutorService;
+	FIELD w lightEngine Lud;
 	METHOD <init> (Laza;Lbou;Lbnv;II)V
 		ARG 3 viewDistance
 	METHOD a getLightEngine ()Lbzt;
@@ -16,6 +18,9 @@ CLASS ty net/minecraft/world/chunk/ServerChunkCache
 	METHOD b setViewDistance (I)V
 		ARG 0 viewDistance
 		ARG 1 viewRadius
+	METHOD b getChunk (II)Layn;
+		ARG 0 chunkX
+		ARG 1 chunkZ
 	METHOD e getGenerator ()Lbnv;
 	METHOD f getLoadedChunkCount ()I
 	METHOD j ()V

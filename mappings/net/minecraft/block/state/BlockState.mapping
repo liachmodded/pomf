@@ -1,4 +1,5 @@
 CLASS blz net/minecraft/block/state/BlockState
+	CLASS blz$a Cached
 	CLASS blz$b
 		METHOD a getBlockState (III)Lblz;
 			ARG 0 x
@@ -8,13 +9,48 @@ CLASS blz net/minecraft/block/state/BlockState
 			ARG 0 pos
 		METHOD d getBlockEntity (Leq;)Lbkf;
 			ARG 0 pos
+	FIELD c cached Lblz$a;
 	METHOD a canEntitySpawn (Lafh;)Z
+	METHOD a getHardnessForPlayer (Lapb;Layn;Leq;)F
+	METHOD a getLightValuesPacked (Layl;Leq;)I
+	METHOD a isNotSolid (Layn;Leq;Lccm;)Z
+	METHOD a getWeakRedstonePower (Layn;Leq;Lev;)I
+	METHOD a getComparatorOutput (Laza;Leq;)I
+	METHOD a onBlockAction (Laza;Leq;II)Z
+	METHOD a onEntityCollision (Laza;Leq;Lafh;)V
+	METHOD a dropItems (Laza;Leq;Lauc;)V
+	METHOD a update (Laza;Leq;Lbdx;Leq;)V
+	METHOD a onBlockAdded (Laza;Leq;Lblz;)V
+	METHOD a onBlockRemoved (Laza;Leq;Lblz;Z)V
+	METHOD a updateTick (Laza;Leq;Ljava/util/Random;)V
+	METHOD a canBePlaced (Laze;Leq;)Z
+	METHOD a withMirror (Lbha;)Lblz;
 	METHOD a withRotation (Lbia;)Lblz;
+	METHOD a shouldSideCull (Lblz;Lev;)Z
+	METHOD a createRandomSeed (Leq;)J
+	METHOD a hasTag (Lxn;)Z
+	METHOD b getStrongRedstonePower (Layn;Leq;Lev;)I
+	METHOD b randomTick (Laza;Leq;Ljava/util/Random;)V
+	METHOD c getFaceShape (Layn;Leq;Lev;)Lbly;
 	METHOD d getBlock ()Lbdx;
 	METHOD d getMapColor (Layn;Leq;)Lcah;
 	METHOD e getMaterial ()Lcag;
+	METHOD e getHardness (Layn;Leq;)F
 	METHOD f getLightValue ()I
 	METHOD g isAir ()Z
 	METHOD h isFullBlock ()Z
+	METHOD i blockEntityRendererHandlesBreak ()Z
+	METHOD j getRenderType ()Lbhx;
+	METHOD k getAmbientOcclusionLight ()F
+	METHOD k getOffset (Layn;Leq;)Lchc;
+	METHOD l isSolidAndFullBlock ()Z
+	METHOD m isNormalCube ()Z
 	METHOD n canProvidePower ()Z
+	METHOD o hasCustomComparatorOutput ()Z
+	METHOD p getPistonBehaviour ()Lcai;
+	METHOD q hasCollisionAndSolidRenderLayer ()Z
 	METHOD r isTopSolid ()Z
+	METHOD s isDefaultStateSolidAndFullBlock ()Z
+	METHOD t getFluidState ()Lcac;
+	METHOD u shouldTickRandomly ()Z
+	METHOD v getSoundGroup ()Lbio;
