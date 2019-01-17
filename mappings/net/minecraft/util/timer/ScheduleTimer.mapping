@@ -1,0 +1,27 @@
+CLASS cmp net/minecraft/util/timer/ScheduleTimer
+	CLASS cmp$a Task
+		FIELD a triggerTime J
+		FIELD b count Lcom/google/common/primitives/UnsignedLong;
+		FIELD c name Ljava/lang/String;
+		FIELD d callback Lcmn;
+	FIELD a LOGGER Lorg/apache/logging/log4j/Logger;
+	FIELD b registry Lcmo;
+	FIELD c taskQueue Ljava/util/Queue;
+	FIELD d counter Lcom/google/common/primitives/UnsignedLong;
+	FIELD e nameToTask Ljava/util/Map;
+	METHOD a entryToTag (Lcmp$a;)Lhq;
+	METHOD a entryFromTag (Lhq;)V
+	METHOD a fromTag (Lhw;)V
+	METHOD a executeTasks (Ljava/lang/Object;J)V
+		ARG 2 time
+	METHOD a schedule (Ljava/lang/String;JLcmn;)Z
+		ARG 1 name
+		ARG 2 time
+		ARG 4 callback
+	METHOD b toTag ()Lhw;
+	METHOD b forceSchedule (Ljava/lang/String;JLcmn;)V
+		ARG 1 name
+		ARG 2 time
+		ARG 4 callback
+	METHOD c timedComparator ()Ljava/util/Comparator;
+	METHOD c addScheduledTask (Ljava/lang/String;JLcmn;)V
