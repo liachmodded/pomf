@@ -97,7 +97,8 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="FlyingItemEntity.html" title="interface in net.minecraft.entity">FlyingItemEntity</a></code>, <code><a href="../server/command/CommandOutput.html" title="interface in net.minecraft.server.command">CommandOutput</a></code>, <code><a href="../util/Nameable.html" title="interface in net.minecraft.util">Nameable</a></code></dd>
 </dl>
 <hr>
-<pre>public class <span class="typeNameLabel">EyeOfEnderEntity</span>
+<pre>@EnvironmentInterfaces(@EnvironmentInterface(value=CLIENT,itf=<a href="FlyingItemEntity.html" title="interface in net.minecraft.entity">FlyingItemEntity.class</a>))
+public class <span class="typeNameLabel">EyeOfEnderEntity</span>
 extends <a href="Entity.html" title="class in net.minecraft.entity">Entity</a>
 implements <a href="FlyingItemEntity.html" title="interface in net.minecraft.entity">FlyingItemEntity</a></pre>
 </section>
@@ -329,7 +330,8 @@ double&nbsp;z)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="shouldRender(double)">shouldRender</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">shouldRender</span>&#8203;(<span class="arguments">double&nbsp;distance)</span></div>
+<div class="memberSignature"><span class="annotations">@Environment(CLIENT)
+</span><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">shouldRender</span>&#8203;(<span class="arguments">double&nbsp;distance)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="Entity.html#shouldRender(double)">shouldRender</a></code>&nbsp;in class&nbsp;<code><a href="Entity.html" title="class in net.minecraft.entity">Entity</a></code></dd>
@@ -345,7 +347,8 @@ double&nbsp;z)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="setVelocityClient(double,double,double)">setVelocityClient</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setVelocityClient</span>&#8203;(<span class="arguments">double&nbsp;x,
+<div class="memberSignature"><span class="annotations">@Environment(CLIENT)
+</span><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setVelocityClient</span>&#8203;(<span class="arguments">double&nbsp;x,
 double&nbsp;y,
 double&nbsp;z)</span></div>
 <dl>

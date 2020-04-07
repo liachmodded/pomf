@@ -105,7 +105,8 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../client/render/entity/feature/SkinOverlayOwner.html" title="interface in net.minecraft.client.render.entity.feature">SkinOverlayOwner</a></code>, <code><a href="../ai/RangedAttackMob.html" title="interface in net.minecraft.entity.ai">RangedAttackMob</a></code>, <code><a href="../mob/Monster.html" title="interface in net.minecraft.entity.mob">Monster</a></code>, <code><a href="../../server/command/CommandOutput.html" title="interface in net.minecraft.server.command">CommandOutput</a></code>, <code><a href="../../util/Nameable.html" title="interface in net.minecraft.util">Nameable</a></code></dd>
 </dl>
 <hr>
-<pre>public class <span class="typeNameLabel">WitherEntity</span>
+<pre>@EnvironmentInterfaces(@EnvironmentInterface(value=CLIENT,itf=<a href="../../client/render/entity/feature/SkinOverlayOwner.html" title="interface in net.minecraft.client.render.entity.feature">SkinOverlayOwner.class</a>))
+public class <span class="typeNameLabel">WitherEntity</span>
 extends <a href="../mob/HostileEntity.html" title="class in net.minecraft.entity.mob">HostileEntity</a>
 implements <a href="../../client/render/entity/feature/SkinOverlayOwner.html" title="interface in net.minecraft.client.render.entity.feature">SkinOverlayOwner</a>, <a href="../ai/RangedAttackMob.html" title="interface in net.minecraft.entity.ai">RangedAttackMob</a></pre>
 </section>
@@ -494,7 +495,8 @@ int&nbsp;id)</code></th>
 <li class="blockList">
 <section class="detail">
 <h3><a id="setCustomName(net.minecraft.text.Text)">setCustomName</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setCustomName</span>&#8203;(<span class="arguments"><a href="../../text/Text.html" title="interface in net.minecraft.text">Text</a>&nbsp;name)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setCustomName</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<a href="../../text/Text.html" title="interface in net.minecraft.text">Text</a>&nbsp;name)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../Entity.html#setCustomName(net.minecraft.text.Text)">setCustomName</a></code>&nbsp;in class&nbsp;<code><a href="../Entity.html" title="class in net.minecraft.entity">Entity</a></code></dd>
@@ -668,13 +670,15 @@ float&nbsp;damageMultiplier)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getHeadYaw(int)">getHeadYaw</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">float</span>&nbsp;<span class="memberName">getHeadYaw</span>&#8203;(<span class="arguments">int&nbsp;headIndex)</span></div>
+<div class="memberSignature"><span class="annotations">@Environment(CLIENT)
+</span><span class="modifiers">public</span>&nbsp;<span class="returnType">float</span>&nbsp;<span class="memberName">getHeadYaw</span>&#8203;(<span class="arguments">int&nbsp;headIndex)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getHeadPitch(int)">getHeadPitch</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">float</span>&nbsp;<span class="memberName">getHeadPitch</span>&#8203;(<span class="arguments">int&nbsp;headIndex)</span></div>
+<div class="memberSignature"><span class="annotations">@Environment(CLIENT)
+</span><span class="modifiers">public</span>&nbsp;<span class="returnType">float</span>&nbsp;<span class="memberName">getHeadPitch</span>&#8203;(<span class="arguments">int&nbsp;headIndex)</span></div>
 </section>
 </li>
 <li class="blockList">

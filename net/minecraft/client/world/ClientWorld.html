@@ -97,7 +97,8 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseable.html?is-external=true" title="class or interface in java.lang" class="externalLink">AutoCloseable</a></code>, <code><a href="../../world/biome/source/BiomeAccess.Storage.html" title="interface in net.minecraft.world.biome.source">BiomeAccess.Storage</a></code>, <code><a href="../../world/BlockRenderView.html" title="interface in net.minecraft.world">BlockRenderView</a></code>, <code><a href="../../world/BlockView.html" title="interface in net.minecraft.world">BlockView</a></code>, <code><a href="../../world/CollisionView.html" title="interface in net.minecraft.world">CollisionView</a></code>, <code><a href="../../world/EntityView.html" title="interface in net.minecraft.world">EntityView</a></code>, <code><a href="../../world/IWorld.html" title="interface in net.minecraft.world">IWorld</a></code>, <code><a href="../../world/ModifiableTestableWorld.html" title="interface in net.minecraft.world">ModifiableTestableWorld</a></code>, <code><a href="../../world/ModifiableWorld.html" title="interface in net.minecraft.world">ModifiableWorld</a></code>, <code><a href="../../world/TestableWorld.html" title="interface in net.minecraft.world">TestableWorld</a></code>, <code><a href="../../world/WorldView.html" title="interface in net.minecraft.world">WorldView</a></code></dd>
 </dl>
 <hr>
-<pre>public class <span class="typeNameLabel">ClientWorld</span>
+<pre>@Environment(CLIENT)
+public class <span class="typeNameLabel">ClientWorld</span>
 extends <a href="../../world/World.html" title="class in net.minecraft.world">World</a></pre>
 </section>
 <section class="summary">
@@ -750,7 +751,8 @@ int&nbsp;chunkZ)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getEntityById(int)">getEntityById</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../entity/Entity.html" title="class in net.minecraft.entity">Entity</a></span>&nbsp;<span class="memberName">getEntityById</span>&#8203;(<span class="arguments">int&nbsp;id)</span></div>
+<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../entity/Entity.html" title="class in net.minecraft.entity">Entity</a></span>&nbsp;<span class="memberName">getEntityById</span>&#8203;(<span class="arguments">int&nbsp;id)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../world/World.html#getEntityById(int)">getEntityById</a></code>&nbsp;in class&nbsp;<code><a href="../../world/World.html" title="class in net.minecraft.world">World</a></code></dd>
@@ -813,7 +815,8 @@ boolean&nbsp;spawnBarrierParticles,
 <li class="blockList">
 <section class="detail">
 <h3><a id="playSound(net.minecraft.entity.player.PlayerEntity,double,double,double,net.minecraft.sound.SoundEvent,net.minecraft.sound.SoundCategory,float,float)">playSound</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">playSound</span>&#8203;(<span class="arguments"><a href="../../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;player,
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">playSound</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<a href="../../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;player,
 double&nbsp;x,
 double&nbsp;y,
 double&nbsp;z,
@@ -830,7 +833,8 @@ float&nbsp;pitch)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="playSoundFromEntity(net.minecraft.entity.player.PlayerEntity,net.minecraft.entity.Entity,net.minecraft.sound.SoundEvent,net.minecraft.sound.SoundCategory,float,float)">playSoundFromEntity</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">playSoundFromEntity</span>&#8203;(<span class="arguments"><a href="../../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;player,
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">playSoundFromEntity</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<a href="../../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;player,
 <a href="../../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&nbsp;entity,
 <a href="../../sound/SoundEvent.html" title="class in net.minecraft.sound">SoundEvent</a>&nbsp;sound,
 <a href="../../sound/SoundCategory.html" title="enum in net.minecraft.sound">SoundCategory</a>&nbsp;category,
@@ -879,6 +883,7 @@ double&nbsp;z,
 double&nbsp;velocityX,
 double&nbsp;velocityY,
 double&nbsp;velocityZ,
+<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 <a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;tag)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
@@ -949,7 +954,8 @@ double&nbsp;velocityZ,
 <li class="blockList">
 <section class="detail">
 <h3><a id="getMapState(java.lang.String)">getMapState</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../item/map/MapState.html" title="class in net.minecraft.item.map">MapState</a></span>&nbsp;<span class="memberName">getMapState</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;id)</span></div>
+<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../item/map/MapState.html" title="class in net.minecraft.item.map">MapState</a></span>&nbsp;<span class="memberName">getMapState</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;id)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../world/World.html#getMapState(java.lang.String)">getMapState</a></code>&nbsp;in class&nbsp;<code><a href="../../world/World.html" title="class in net.minecraft.world">World</a></code></dd>
@@ -1056,7 +1062,8 @@ int&nbsp;data)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="playLevelEvent(net.minecraft.entity.player.PlayerEntity,int,net.minecraft.util.math.BlockPos,int)">playLevelEvent</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">playLevelEvent</span>&#8203;(<span class="arguments"><a href="../../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;player,
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">playLevelEvent</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<a href="../../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;player,
 int&nbsp;eventId,
 <a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
 int&nbsp;data)</span></div>

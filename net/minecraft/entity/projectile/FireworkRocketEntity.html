@@ -99,7 +99,8 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../FlyingItemEntity.html" title="interface in net.minecraft.entity">FlyingItemEntity</a></code>, <code><a href="../../server/command/CommandOutput.html" title="interface in net.minecraft.server.command">CommandOutput</a></code>, <code><a href="../../util/Nameable.html" title="interface in net.minecraft.util">Nameable</a></code></dd>
 </dl>
 <hr>
-<pre>public class <span class="typeNameLabel">FireworkRocketEntity</span>
+<pre>@EnvironmentInterfaces(@EnvironmentInterface(value=CLIENT,itf=<a href="../FlyingItemEntity.html" title="interface in net.minecraft.entity">FlyingItemEntity.class</a>))
+public class <span class="typeNameLabel">FireworkRocketEntity</span>
 extends <a href="ProjectileEntity.html" title="class in net.minecraft.entity.projectile">ProjectileEntity</a>
 implements <a href="../FlyingItemEntity.html" title="interface in net.minecraft.entity">FlyingItemEntity</a></pre>
 </section>
@@ -403,7 +404,8 @@ boolean&nbsp;shotAtAngle)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="shouldRender(double)">shouldRender</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">shouldRender</span>&#8203;(<span class="arguments">double&nbsp;distance)</span></div>
+<div class="memberSignature"><span class="annotations">@Environment(CLIENT)
+</span><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">shouldRender</span>&#8203;(<span class="arguments">double&nbsp;distance)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../Entity.html#shouldRender(double)">shouldRender</a></code>&nbsp;in class&nbsp;<code><a href="../Entity.html" title="class in net.minecraft.entity">Entity</a></code></dd>
@@ -413,7 +415,8 @@ boolean&nbsp;shotAtAngle)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="shouldRender(double,double,double)">shouldRender</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">shouldRender</span>&#8203;(<span class="arguments">double&nbsp;cameraX,
+<div class="memberSignature"><span class="annotations">@Environment(CLIENT)
+</span><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">shouldRender</span>&#8203;(<span class="arguments">double&nbsp;cameraX,
 double&nbsp;cameraY,
 double&nbsp;cameraZ)</span></div>
 <dl>
@@ -461,7 +464,8 @@ double&nbsp;cameraZ)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="handleStatus(byte)">handleStatus</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">handleStatus</span>&#8203;(<span class="arguments">byte&nbsp;status)</span></div>
+<div class="memberSignature"><span class="annotations">@Environment(CLIENT)
+</span><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">handleStatus</span>&#8203;(<span class="arguments">byte&nbsp;status)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../Entity.html#handleStatus(byte)">handleStatus</a></code>&nbsp;in class&nbsp;<code><a href="../Entity.html" title="class in net.minecraft.entity">Entity</a></code></dd>
@@ -491,7 +495,8 @@ double&nbsp;cameraZ)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getStack()">getStack</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a></span>&nbsp;<span class="memberName">getStack</span>()</div>
+<div class="memberSignature"><span class="annotations">@Environment(CLIENT)
+</span><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a></span>&nbsp;<span class="memberName">getStack</span>()</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../FlyingItemEntity.html#getStack()">getStack</a></code>&nbsp;in interface&nbsp;<code><a href="../FlyingItemEntity.html" title="interface in net.minecraft.entity">FlyingItemEntity</a></code></dd>

@@ -545,6 +545,7 @@ io.netty.util.concurrent.GenericFutureListener&lt;? extends io.netty.util.concur
 <section class="detail">
 <h3><a id="send(net.minecraft.network.Packet,io.netty.util.concurrent.GenericFutureListener)">send</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">send</span>&#8203;(<span class="arguments"><a href="Packet.html" title="interface in net.minecraft.network">Packet</a>&lt;?&gt;&nbsp;packet,
+<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 io.netty.util.concurrent.GenericFutureListener&lt;? extends io.netty.util.concurrent.Future&lt;? super <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html?is-external=true" title="class or interface in java.lang" class="externalLink">Void</a>&gt;&gt;&nbsp;callback)</span></div>
 </section>
 </li>
@@ -575,7 +576,8 @@ io.netty.util.concurrent.GenericFutureListener&lt;? extends io.netty.util.concur
 <li class="blockList">
 <section class="detail">
 <h3><a id="connect(java.net.InetAddress,int,boolean)">connect</a></h3>
-<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType"><a href="ClientConnection.html" title="class in net.minecraft.network">ClientConnection</a></span>&nbsp;<span class="memberName">connect</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/net/InetAddress.html?is-external=true" title="class or interface in java.net" class="externalLink">InetAddress</a>&nbsp;address,
+<div class="memberSignature"><span class="annotations">@Environment(CLIENT)
+</span><span class="modifiers">public static</span>&nbsp;<span class="returnType"><a href="ClientConnection.html" title="class in net.minecraft.network">ClientConnection</a></span>&nbsp;<span class="memberName">connect</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/net/InetAddress.html?is-external=true" title="class or interface in java.net" class="externalLink">InetAddress</a>&nbsp;address,
 int&nbsp;port,
 boolean&nbsp;shouldUseNativeTransport)</span></div>
 </section>
@@ -583,7 +585,8 @@ boolean&nbsp;shouldUseNativeTransport)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="connectLocal(java.net.SocketAddress)">connectLocal</a></h3>
-<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType"><a href="ClientConnection.html" title="class in net.minecraft.network">ClientConnection</a></span>&nbsp;<span class="memberName">connectLocal</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/net/SocketAddress.html?is-external=true" title="class or interface in java.net" class="externalLink">SocketAddress</a>&nbsp;address)</span></div>
+<div class="memberSignature"><span class="annotations">@Environment(CLIENT)
+</span><span class="modifiers">public static</span>&nbsp;<span class="returnType"><a href="ClientConnection.html" title="class in net.minecraft.network">ClientConnection</a></span>&nbsp;<span class="memberName">connectLocal</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/net/SocketAddress.html?is-external=true" title="class or interface in java.net" class="externalLink">SocketAddress</a>&nbsp;address)</span></div>
 </section>
 </li>
 <li class="blockList">
@@ -595,7 +598,8 @@ boolean&nbsp;shouldUseNativeTransport)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="isEncrypted()">isEncrypted</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isEncrypted</span>()</div>
+<div class="memberSignature"><span class="annotations">@Environment(CLIENT)
+</span><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isEncrypted</span>()</div>
 </section>
 </li>
 <li class="blockList">
@@ -619,7 +623,8 @@ boolean&nbsp;shouldUseNativeTransport)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getDisconnectReason()">getDisconnectReason</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../text/Text.html" title="interface in net.minecraft.text">Text</a></span>&nbsp;<span class="memberName">getDisconnectReason</span>()</div>
+<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../text/Text.html" title="interface in net.minecraft.text">Text</a></span>&nbsp;<span class="memberName">getDisconnectReason</span>()</div>
 </section>
 </li>
 <li class="blockList">
@@ -643,13 +648,15 @@ boolean&nbsp;shouldUseNativeTransport)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getAveragePacketsReceived()">getAveragePacketsReceived</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">float</span>&nbsp;<span class="memberName">getAveragePacketsReceived</span>()</div>
+<div class="memberSignature"><span class="annotations">@Environment(CLIENT)
+</span><span class="modifiers">public</span>&nbsp;<span class="returnType">float</span>&nbsp;<span class="memberName">getAveragePacketsReceived</span>()</div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getAveragePacketsSent()">getAveragePacketsSent</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">float</span>&nbsp;<span class="memberName">getAveragePacketsSent</span>()</div>
+<div class="memberSignature"><span class="annotations">@Environment(CLIENT)
+</span><span class="modifiers">public</span>&nbsp;<span class="returnType">float</span>&nbsp;<span class="memberName">getAveragePacketsSent</span>()</div>
 </section>
 </li>
 </ul>

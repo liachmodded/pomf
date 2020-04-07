@@ -497,7 +497,8 @@ com.google.gson.JsonObject&nbsp;defaultObject)</code></th>
 <li class="blockList">
 <section class="detail">
 <h3><a id="isString(com.google.gson.JsonElement)">isString</a></h3>
-<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isString</span>&#8203;(<span class="arguments">com.google.gson.JsonElement&nbsp;element)</span></div>
+<div class="memberSignature"><span class="annotations">@Environment(CLIENT)
+</span><span class="modifiers">public static</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isString</span>&#8203;(<span class="arguments">com.google.gson.JsonElement&nbsp;element)</span></div>
 </section>
 </li>
 <li class="blockList">
@@ -509,7 +510,8 @@ com.google.gson.JsonObject&nbsp;defaultObject)</code></th>
 <li class="blockList">
 <section class="detail">
 <h3><a id="hasBoolean(com.google.gson.JsonObject,java.lang.String)">hasBoolean</a></h3>
-<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">hasBoolean</span>&#8203;(<span class="arguments">com.google.gson.JsonObject&nbsp;object,
+<div class="memberSignature"><span class="annotations">@Environment(CLIENT)
+</span><span class="modifiers">public static</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">hasBoolean</span>&#8203;(<span class="arguments">com.google.gson.JsonObject&nbsp;object,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;element)</span></div>
 </section>
 </li>
@@ -712,15 +714,18 @@ com.google.gson.JsonObject&nbsp;defaultObject)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getArray(com.google.gson.JsonObject,java.lang.String,com.google.gson.JsonArray)">getArray</a></h3>
-<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType">com.google.gson.JsonArray</span>&nbsp;<span class="memberName">getArray</span>&#8203;(<span class="arguments">com.google.gson.JsonObject&nbsp;object,
+<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">public static</span>&nbsp;<span class="returnType">com.google.gson.JsonArray</span>&nbsp;<span class="memberName">getArray</span>&#8203;(<span class="arguments">com.google.gson.JsonObject&nbsp;object,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name,
+<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 com.google.gson.JsonArray&nbsp;defaultArray)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="deserialize(com.google.gson.JsonElement,java.lang.String,com.google.gson.JsonDeserializationContext,java.lang.Class)">deserialize</a></h3>
-<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="typeParameters">&lt;T&gt;</span>&nbsp;<span class="returnType">T</span>&nbsp;<span class="memberName">deserialize</span>&#8203;(<span class="arguments">com.google.gson.JsonElement&nbsp;element,
+<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="typeParameters">&lt;T&gt;</span>&nbsp;<span class="returnType">T</span>&nbsp;<span class="memberName">deserialize</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+com.google.gson.JsonElement&nbsp;element,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name,
 com.google.gson.JsonDeserializationContext&nbsp;context,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang" class="externalLink">Class</a>&lt;? extends T&gt;&nbsp;type)</span></div>
@@ -756,7 +761,8 @@ com.google.gson.JsonDeserializationContext&nbsp;context,
 <li class="blockList">
 <section class="detail">
 <h3><a id="deserialize(com.google.gson.Gson,java.io.Reader,java.lang.Class,boolean)">deserialize</a></h3>
-<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="typeParameters">&lt;T&gt;</span>&nbsp;<span class="returnType">T</span>&nbsp;<span class="memberName">deserialize</span>&#8203;(<span class="arguments">com.google.gson.Gson&nbsp;gson,
+<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">public static</span>&nbsp;<span class="typeParameters">&lt;T&gt;</span>&nbsp;<span class="returnType">T</span>&nbsp;<span class="memberName">deserialize</span>&#8203;(<span class="arguments">com.google.gson.Gson&nbsp;gson,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Reader.html?is-external=true" title="class or interface in java.io" class="externalLink">Reader</a>&nbsp;reader,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang" class="externalLink">Class</a>&lt;T&gt;&nbsp;type,
 boolean&nbsp;lenient)</span></div>
@@ -765,7 +771,8 @@ boolean&nbsp;lenient)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="deserialize(com.google.gson.Gson,java.io.Reader,com.google.gson.reflect.TypeToken,boolean)">deserialize</a></h3>
-<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="typeParameters">&lt;T&gt;</span>&nbsp;<span class="returnType">T</span>&nbsp;<span class="memberName">deserialize</span>&#8203;(<span class="arguments">com.google.gson.Gson&nbsp;gson,
+<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">public static</span>&nbsp;<span class="typeParameters">&lt;T&gt;</span>&nbsp;<span class="returnType">T</span>&nbsp;<span class="memberName">deserialize</span>&#8203;(<span class="arguments">com.google.gson.Gson&nbsp;gson,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Reader.html?is-external=true" title="class or interface in java.io" class="externalLink">Reader</a>&nbsp;reader,
 com.google.gson.reflect.TypeToken&lt;T&gt;&nbsp;typeToken,
 boolean&nbsp;lenient)</span></div>
@@ -774,7 +781,9 @@ boolean&nbsp;lenient)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="deserialize(com.google.gson.Gson,java.lang.String,com.google.gson.reflect.TypeToken,boolean)">deserialize</a></h3>
-<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="typeParameters">&lt;T&gt;</span>&nbsp;<span class="returnType">T</span>&nbsp;<span class="memberName">deserialize</span>&#8203;(<span class="arguments">com.google.gson.Gson&nbsp;gson,
+<div class="memberSignature"><span class="annotations">@Environment(CLIENT)
+<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">public static</span>&nbsp;<span class="typeParameters">&lt;T&gt;</span>&nbsp;<span class="returnType">T</span>&nbsp;<span class="memberName">deserialize</span>&#8203;(<span class="arguments">com.google.gson.Gson&nbsp;gson,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;content,
 com.google.gson.reflect.TypeToken&lt;T&gt;&nbsp;typeToken,
 boolean&nbsp;lenient)</span></div>
@@ -783,7 +792,8 @@ boolean&nbsp;lenient)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="deserialize(com.google.gson.Gson,java.lang.String,java.lang.Class,boolean)">deserialize</a></h3>
-<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="typeParameters">&lt;T&gt;</span>&nbsp;<span class="returnType">T</span>&nbsp;<span class="memberName">deserialize</span>&#8203;(<span class="arguments">com.google.gson.Gson&nbsp;gson,
+<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">public static</span>&nbsp;<span class="typeParameters">&lt;T&gt;</span>&nbsp;<span class="returnType">T</span>&nbsp;<span class="memberName">deserialize</span>&#8203;(<span class="arguments">com.google.gson.Gson&nbsp;gson,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;content,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang" class="externalLink">Class</a>&lt;T&gt;&nbsp;class2,
 boolean&nbsp;lenient)</span></div>
@@ -792,7 +802,8 @@ boolean&nbsp;lenient)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="deserialize(com.google.gson.Gson,java.io.Reader,com.google.gson.reflect.TypeToken)">deserialize</a></h3>
-<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="typeParameters">&lt;T&gt;</span>&nbsp;<span class="returnType">T</span>&nbsp;<span class="memberName">deserialize</span>&#8203;(<span class="arguments">com.google.gson.Gson&nbsp;gson,
+<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">public static</span>&nbsp;<span class="typeParameters">&lt;T&gt;</span>&nbsp;<span class="returnType">T</span>&nbsp;<span class="memberName">deserialize</span>&#8203;(<span class="arguments">com.google.gson.Gson&nbsp;gson,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Reader.html?is-external=true" title="class or interface in java.io" class="externalLink">Reader</a>&nbsp;reader,
 com.google.gson.reflect.TypeToken&lt;T&gt;&nbsp;typeToken)</span></div>
 </section>
@@ -800,7 +811,9 @@ com.google.gson.reflect.TypeToken&lt;T&gt;&nbsp;typeToken)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="deserialize(com.google.gson.Gson,java.lang.String,com.google.gson.reflect.TypeToken)">deserialize</a></h3>
-<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="typeParameters">&lt;T&gt;</span>&nbsp;<span class="returnType">T</span>&nbsp;<span class="memberName">deserialize</span>&#8203;(<span class="arguments">com.google.gson.Gson&nbsp;gson,
+<div class="memberSignature"><span class="annotations">@Environment(CLIENT)
+<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">public static</span>&nbsp;<span class="typeParameters">&lt;T&gt;</span>&nbsp;<span class="returnType">T</span>&nbsp;<span class="memberName">deserialize</span>&#8203;(<span class="arguments">com.google.gson.Gson&nbsp;gson,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;content,
 com.google.gson.reflect.TypeToken&lt;T&gt;&nbsp;typeToken)</span></div>
 </section>
@@ -808,7 +821,8 @@ com.google.gson.reflect.TypeToken&lt;T&gt;&nbsp;typeToken)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="deserialize(com.google.gson.Gson,java.io.Reader,java.lang.Class)">deserialize</a></h3>
-<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="typeParameters">&lt;T&gt;</span>&nbsp;<span class="returnType">T</span>&nbsp;<span class="memberName">deserialize</span>&#8203;(<span class="arguments">com.google.gson.Gson&nbsp;gson,
+<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">public static</span>&nbsp;<span class="typeParameters">&lt;T&gt;</span>&nbsp;<span class="returnType">T</span>&nbsp;<span class="memberName">deserialize</span>&#8203;(<span class="arguments">com.google.gson.Gson&nbsp;gson,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Reader.html?is-external=true" title="class or interface in java.io" class="externalLink">Reader</a>&nbsp;reader,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang" class="externalLink">Class</a>&lt;T&gt;&nbsp;class2)</span></div>
 </section>
@@ -816,7 +830,8 @@ com.google.gson.reflect.TypeToken&lt;T&gt;&nbsp;typeToken)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="deserialize(com.google.gson.Gson,java.lang.String,java.lang.Class)">deserialize</a></h3>
-<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="typeParameters">&lt;T&gt;</span>&nbsp;<span class="returnType">T</span>&nbsp;<span class="memberName">deserialize</span>&#8203;(<span class="arguments">com.google.gson.Gson&nbsp;gson,
+<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">public static</span>&nbsp;<span class="typeParameters">&lt;T&gt;</span>&nbsp;<span class="returnType">T</span>&nbsp;<span class="memberName">deserialize</span>&#8203;(<span class="arguments">com.google.gson.Gson&nbsp;gson,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;content,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang" class="externalLink">Class</a>&lt;T&gt;&nbsp;class2)</span></div>
 </section>

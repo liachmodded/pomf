@@ -99,7 +99,8 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseable.html?is-external=true" title="class or interface in java.lang" class="externalLink">AutoCloseable</a></code>, <code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executor.html?is-external=true" title="class or interface in java.util.concurrent" class="externalLink">Executor</a></code>, <code><a href="WindowEventHandler.html" title="interface in net.minecraft.client">WindowEventHandler</a></code>, <code><a href="../util/snooper/SnooperListener.html" title="interface in net.minecraft.util.snooper">SnooperListener</a></code>, <code><a href="../util/thread/MessageListener.html" title="interface in net.minecraft.util.thread">MessageListener</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang" class="externalLink">Runnable</a>&gt;</code></dd>
 </dl>
 <hr>
-<pre>public class <span class="typeNameLabel">MinecraftClient</span>
+<pre>@Environment(CLIENT)
+public class <span class="typeNameLabel">MinecraftClient</span>
 extends <a href="../util/thread/ReentrantThreadExecutor.html" title="class in net.minecraft.util.thread">ReentrantThreadExecutor</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang" class="externalLink">Runnable</a>&gt;
 implements <a href="../util/snooper/SnooperListener.html" title="interface in net.minecraft.util.snooper">SnooperListener</a>, <a href="WindowEventHandler.html" title="interface in net.minecraft.client">WindowEventHandler</a></pre>
 </section>
@@ -929,37 +930,43 @@ implements <a href="../util/snooper/SnooperListener.html" title="interface in ne
 <li class="blockList">
 <section class="detail">
 <h3><a id="interactionManager">interactionManager</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="network/ClientPlayerInteractionManager.html" title="class in net.minecraft.client.network">ClientPlayerInteractionManager</a></span>&nbsp;<span class="memberName">interactionManager</span></div>
+<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="network/ClientPlayerInteractionManager.html" title="class in net.minecraft.client.network">ClientPlayerInteractionManager</a></span>&nbsp;<span class="memberName">interactionManager</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="world">world</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="world/ClientWorld.html" title="class in net.minecraft.client.world">ClientWorld</a></span>&nbsp;<span class="memberName">world</span></div>
+<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="world/ClientWorld.html" title="class in net.minecraft.client.world">ClientWorld</a></span>&nbsp;<span class="memberName">world</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="player">player</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="network/ClientPlayerEntity.html" title="class in net.minecraft.client.network">ClientPlayerEntity</a></span>&nbsp;<span class="memberName">player</span></div>
+<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="network/ClientPlayerEntity.html" title="class in net.minecraft.client.network">ClientPlayerEntity</a></span>&nbsp;<span class="memberName">player</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="cameraEntity">cameraEntity</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../entity/Entity.html" title="class in net.minecraft.entity">Entity</a></span>&nbsp;<span class="memberName">cameraEntity</span></div>
+<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../entity/Entity.html" title="class in net.minecraft.entity">Entity</a></span>&nbsp;<span class="memberName">cameraEntity</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="targetedEntity">targetedEntity</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../entity/Entity.html" title="class in net.minecraft.entity">Entity</a></span>&nbsp;<span class="memberName">targetedEntity</span></div>
+<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../entity/Entity.html" title="class in net.minecraft.entity">Entity</a></span>&nbsp;<span class="memberName">targetedEntity</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="crosshairTarget">crosshairTarget</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../util/hit/HitResult.html" title="class in net.minecraft.util.hit">HitResult</a></span>&nbsp;<span class="memberName">crosshairTarget</span></div>
+<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../util/hit/HitResult.html" title="class in net.minecraft.util.hit">HitResult</a></span>&nbsp;<span class="memberName">crosshairTarget</span></div>
 </section>
 </li>
 <li class="blockList">
@@ -977,13 +984,15 @@ implements <a href="../util/snooper/SnooperListener.html" title="interface in ne
 <li class="blockList">
 <section class="detail">
 <h3><a id="currentScreen">currentScreen</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="gui/screen/Screen.html" title="class in net.minecraft.client.gui.screen">Screen</a></span>&nbsp;<span class="memberName">currentScreen</span></div>
+<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="gui/screen/Screen.html" title="class in net.minecraft.client.gui.screen">Screen</a></span>&nbsp;<span class="memberName">currentScreen</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="overlay">overlay</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="gui/screen/Overlay.html" title="class in net.minecraft.client.gui.screen">Overlay</a></span>&nbsp;<span class="memberName">overlay</span></div>
+<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="gui/screen/Overlay.html" title="class in net.minecraft.client.gui.screen">Overlay</a></span>&nbsp;<span class="memberName">overlay</span></div>
 </section>
 </li>
 <li class="blockList">
@@ -1108,13 +1117,15 @@ implements <a href="../util/snooper/SnooperListener.html" title="interface in ne
 <li class="blockList">
 <section class="detail">
 <h3><a id="openScreen(net.minecraft.client.gui.screen.Screen)">openScreen</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">openScreen</span>&#8203;(<span class="arguments"><a href="gui/screen/Screen.html" title="class in net.minecraft.client.gui.screen">Screen</a>&nbsp;screen)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">openScreen</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<a href="gui/screen/Screen.html" title="class in net.minecraft.client.gui.screen">Screen</a>&nbsp;screen)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="setOverlay(net.minecraft.client.gui.screen.Overlay)">setOverlay</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setOverlay</span>&#8203;(<span class="arguments"><a href="gui/screen/Overlay.html" title="class in net.minecraft.client.gui.screen">Overlay</a>&nbsp;overlay)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setOverlay</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<a href="gui/screen/Overlay.html" title="class in net.minecraft.client.gui.screen">Overlay</a>&nbsp;overlay)</span></div>
 </section>
 </li>
 <li class="blockList">
@@ -1192,6 +1203,7 @@ implements <a href="../util/snooper/SnooperListener.html" title="interface in ne
 <h3><a id="startIntegratedServer(java.lang.String,java.lang.String,net.minecraft.world.level.LevelInfo)">startIntegratedServer</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">startIntegratedServer</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;displayName,
+<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 <a href="../world/level/LevelInfo.html" title="class in net.minecraft.world.level">LevelInfo</a>&nbsp;levelInfo)</span></div>
 </section>
 </li>
@@ -1222,7 +1234,8 @@ implements <a href="../util/snooper/SnooperListener.html" title="interface in ne
 <li class="blockList">
 <section class="detail">
 <h3><a id="getNetworkHandler()">getNetworkHandler</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="network/ClientPlayNetworkHandler.html" title="class in net.minecraft.client.network">ClientPlayNetworkHandler</a></span>&nbsp;<span class="memberName">getNetworkHandler</span>()</div>
+<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="network/ClientPlayNetworkHandler.html" title="class in net.minecraft.client.network">ClientPlayNetworkHandler</a></span>&nbsp;<span class="memberName">getNetworkHandler</span>()</div>
 </section>
 </li>
 <li class="blockList">
@@ -1252,8 +1265,10 @@ implements <a href="../util/snooper/SnooperListener.html" title="interface in ne
 <li class="blockList">
 <section class="detail">
 <h3><a id="addSystemDetailsToCrashReport(net.minecraft.client.resource.language.LanguageManager,java.lang.String,net.minecraft.client.options.GameOptions,net.minecraft.util.crash.CrashReport)">addSystemDetailsToCrashReport</a></h3>
-<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">addSystemDetailsToCrashReport</span>&#8203;(<span class="arguments"><a href="resource/language/LanguageManager.html" title="class in net.minecraft.client.resource.language">LanguageManager</a>&nbsp;languageManager,
+<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">addSystemDetailsToCrashReport</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<a href="resource/language/LanguageManager.html" title="class in net.minecraft.client.resource.language">LanguageManager</a>&nbsp;languageManager,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;version,
+<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 <a href="options/GameOptions.html" title="class in net.minecraft.client.options">GameOptions</a>&nbsp;options,
 <a href="../util/crash/CrashReport.html" title="class in net.minecraft.util.crash">CrashReport</a>&nbsp;report)</span></div>
 </section>
@@ -1283,13 +1298,15 @@ implements <a href="../util/snooper/SnooperListener.html" title="interface in ne
 <li class="blockList">
 <section class="detail">
 <h3><a id="setCurrentServerEntry(net.minecraft.client.network.ServerInfo)">setCurrentServerEntry</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setCurrentServerEntry</span>&#8203;(<span class="arguments"><a href="network/ServerInfo.html" title="class in net.minecraft.client.network">ServerInfo</a>&nbsp;serverInfo)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setCurrentServerEntry</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<a href="network/ServerInfo.html" title="class in net.minecraft.client.network">ServerInfo</a>&nbsp;serverInfo)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getCurrentServerEntry()">getCurrentServerEntry</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="network/ServerInfo.html" title="class in net.minecraft.client.network">ServerInfo</a></span>&nbsp;<span class="memberName">getCurrentServerEntry</span>()</div>
+<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="network/ServerInfo.html" title="class in net.minecraft.client.network">ServerInfo</a></span>&nbsp;<span class="memberName">getCurrentServerEntry</span>()</div>
 </section>
 </li>
 <li class="blockList">
@@ -1307,7 +1324,8 @@ implements <a href="../util/snooper/SnooperListener.html" title="interface in ne
 <li class="blockList">
 <section class="detail">
 <h3><a id="getServer()">getServer</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../server/integrated/IntegratedServer.html" title="class in net.minecraft.server.integrated">IntegratedServer</a></span>&nbsp;<span class="memberName">getServer</span>()</div>
+<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../server/integrated/IntegratedServer.html" title="class in net.minecraft.server.integrated">IntegratedServer</a></span>&nbsp;<span class="memberName">getServer</span>()</div>
 <div class="block">Gets this client's own integrated server.
 
  <p>The integrated server is only present when a local single player world is open.</div>
@@ -1418,7 +1436,8 @@ implements <a href="../util/snooper/SnooperListener.html" title="interface in ne
 <li class="blockList">
 <section class="detail">
 <h3><a id="getCameraEntity()">getCameraEntity</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../entity/Entity.html" title="class in net.minecraft.entity">Entity</a></span>&nbsp;<span class="memberName">getCameraEntity</span>()</div>
+<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../entity/Entity.html" title="class in net.minecraft.entity">Entity</a></span>&nbsp;<span class="memberName">getCameraEntity</span>()</div>
 </section>
 </li>
 <li class="blockList">
@@ -1620,7 +1639,8 @@ implements <a href="../util/snooper/SnooperListener.html" title="interface in ne
 <li class="blockList">
 <section class="detail">
 <h3><a id="getOverlay()">getOverlay</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="gui/screen/Overlay.html" title="class in net.minecraft.client.gui.screen">Overlay</a></span>&nbsp;<span class="memberName">getOverlay</span>()</div>
+<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="gui/screen/Overlay.html" title="class in net.minecraft.client.gui.screen">Overlay</a></span>&nbsp;<span class="memberName">getOverlay</span>()</div>
 </section>
 </li>
 <li class="blockList">

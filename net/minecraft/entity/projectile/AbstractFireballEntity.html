@@ -105,7 +105,8 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="FireballEntity.html" title="class in net.minecraft.entity.projectile">FireballEntity</a></code>, <code><a href="SmallFireballEntity.html" title="class in net.minecraft.entity.projectile">SmallFireballEntity</a></code></dd>
 </dl>
 <hr>
-<pre>public abstract class <span class="typeNameLabel">AbstractFireballEntity</span>
+<pre>@EnvironmentInterfaces(@EnvironmentInterface(value=CLIENT,itf=<a href="../FlyingItemEntity.html" title="interface in net.minecraft.entity">FlyingItemEntity.class</a>))
+public abstract class <span class="typeNameLabel">AbstractFireballEntity</span>
 extends <a href="ExplosiveProjectileEntity.html" title="class in net.minecraft.entity.projectile">ExplosiveProjectileEntity</a>
 implements <a href="../FlyingItemEntity.html" title="interface in net.minecraft.entity">FlyingItemEntity</a></pre>
 </section>
@@ -334,7 +335,8 @@ double&nbsp;directionZ,
 <li class="blockList">
 <section class="detail">
 <h3><a id="getStack()">getStack</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a></span>&nbsp;<span class="memberName">getStack</span>()</div>
+<div class="memberSignature"><span class="annotations">@Environment(CLIENT)
+</span><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a></span>&nbsp;<span class="memberName">getStack</span>()</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../FlyingItemEntity.html#getStack()">getStack</a></code>&nbsp;in interface&nbsp;<code><a href="../FlyingItemEntity.html" title="interface in net.minecraft.entity">FlyingItemEntity</a></code></dd>

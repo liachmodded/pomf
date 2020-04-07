@@ -93,7 +93,8 @@ loadScripts(document, 'script');</script>
 <dd><a href="RealmsPersistence.html" title="class in com.mojang.realmsclient.util">RealmsPersistence</a></dd>
 </dl>
 <hr>
-<pre>public static class <span class="typeNameLabel">RealmsPersistence.RealmsPersistenceData</span>
+<pre>@Environment(CLIENT)
+public static class <span class="typeNameLabel">RealmsPersistence.RealmsPersistenceData</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>
 implements <a href="../../../../net/minecraft/realms/RealmsSerializable.html" title="interface in net.minecraft.realms">RealmsSerializable</a></pre>
 </section>
@@ -183,13 +184,15 @@ implements <a href="../../../../net/minecraft/realms/RealmsSerializable.html" ti
 <li class="blockList">
 <section class="detail">
 <h3><a id="newsLink">newsLink</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></span>&nbsp;<span class="memberName">newsLink</span></div>
+<div class="memberSignature"><span class="annotations">@SerializedName("newsLink")
+</span><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></span>&nbsp;<span class="memberName">newsLink</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="hasUnreadNews">hasUnreadNews</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">hasUnreadNews</span></div>
+<div class="memberSignature"><span class="annotations">@SerializedName("hasUnreadNews")
+</span><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">hasUnreadNews</span></div>
 </section>
 </li>
 </ul>

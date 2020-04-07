@@ -105,7 +105,8 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../client/render/entity/feature/SkinOverlayOwner.html" title="interface in net.minecraft.client.render.entity.feature">SkinOverlayOwner</a></code>, <code><a href="Monster.html" title="interface in net.minecraft.entity.mob">Monster</a></code>, <code><a href="../../server/command/CommandOutput.html" title="interface in net.minecraft.server.command">CommandOutput</a></code>, <code><a href="../../util/Nameable.html" title="interface in net.minecraft.util">Nameable</a></code></dd>
 </dl>
 <hr>
-<pre>public class <span class="typeNameLabel">CreeperEntity</span>
+<pre>@EnvironmentInterfaces(@EnvironmentInterface(value=CLIENT,itf=<a href="../../client/render/entity/feature/SkinOverlayOwner.html" title="interface in net.minecraft.client.render.entity.feature">SkinOverlayOwner.class</a>))
+public class <span class="typeNameLabel">CreeperEntity</span>
 extends <a href="HostileEntity.html" title="class in net.minecraft.entity.mob">HostileEntity</a>
 implements <a href="../../client/render/entity/feature/SkinOverlayOwner.html" title="interface in net.minecraft.client.render.entity.feature">SkinOverlayOwner</a></pre>
 </section>
@@ -506,7 +507,8 @@ boolean&nbsp;allowDrops)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getClientFuseTime(float)">getClientFuseTime</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">float</span>&nbsp;<span class="memberName">getClientFuseTime</span>&#8203;(<span class="arguments">float&nbsp;timeDelta)</span></div>
+<div class="memberSignature"><span class="annotations">@Environment(CLIENT)
+</span><span class="modifiers">public</span>&nbsp;<span class="returnType">float</span>&nbsp;<span class="memberName">getClientFuseTime</span>&#8203;(<span class="arguments">float&nbsp;timeDelta)</span></div>
 </section>
 </li>
 <li class="blockList">
