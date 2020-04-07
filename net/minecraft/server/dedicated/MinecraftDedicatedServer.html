@@ -317,7 +317,7 @@ com.mojang.authlib.GameProfileRepository&nbsp;gameProfileRepository,
 </tr>
 <tr class="altColor" id="i28">
 <td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isHost(com.mojang.authlib.GameProfile)">isHost</a></span>&#8203;(com.mojang.authlib.GameProfile&nbsp;gameProfile)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isHost(com.mojang.authlib.GameProfile)">isHost</a></span>&#8203;(com.mojang.authlib.GameProfile&nbsp;profile)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i29">
@@ -338,8 +338,8 @@ com.mojang.authlib.GameProfileRepository&nbsp;gameProfileRepository,
 <tr class="altColor" id="i32">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isSpawnProtected(net.minecraft.world.World,net.minecraft.util.math.BlockPos,net.minecraft.entity.player.PlayerEntity)">isSpawnProtected</a></span>&#8203;(<a href="../../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world,
-<a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
-<a href="../../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;playerEntity)</code></th>
+<a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<a href="../../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;player)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i33">
@@ -350,8 +350,8 @@ com.mojang.authlib.GameProfileRepository&nbsp;gameProfileRepository,
 <tr class="altColor" id="i34">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#openToLan(net.minecraft.world.GameMode,boolean,int)">openToLan</a></span>&#8203;(<a href="../../world/GameMode.html" title="enum in net.minecraft.world">GameMode</a>&nbsp;gameMode,
-boolean&nbsp;bool,
-int&nbsp;int2)</code></th>
+boolean&nbsp;cheatsAllowed,
+int&nbsp;port)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i35">
@@ -366,7 +366,7 @@ int&nbsp;int2)</code></th>
 </tr>
 <tr class="rowColor" id="i37">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setPlayerIdleTimeout(int)">setPlayerIdleTimeout</a></span>&#8203;(int&nbsp;int2)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setPlayerIdleTimeout(int)">setPlayerIdleTimeout</a></span>&#8203;(int&nbsp;playerIdleTimeout)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i38">
@@ -406,7 +406,7 @@ int&nbsp;int2)</code></th>
 </tr>
 <tr class="rowColor" id="i45">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#tickWorlds(java.util.function.BooleanSupplier)">tickWorlds</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/BooleanSupplier.html?is-external=true" title="class or interface in java.util.function" class="externalLink">BooleanSupplier</a>&nbsp;booleanSupplier)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#tickWorlds(java.util.function.BooleanSupplier)">tickWorlds</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/BooleanSupplier.html?is-external=true" title="class or interface in java.util.function" class="externalLink">BooleanSupplier</a>&nbsp;shouldKeepTicking)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -590,7 +590,7 @@ com.mojang.authlib.GameProfileRepository&nbsp;gameProfileRepository,
 <li class="blockList">
 <section class="detail">
 <h3><a id="tickWorlds(java.util.function.BooleanSupplier)">tickWorlds</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">tickWorlds</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/BooleanSupplier.html?is-external=true" title="class or interface in java.util.function" class="externalLink">BooleanSupplier</a>&nbsp;booleanSupplier)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">tickWorlds</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/BooleanSupplier.html?is-external=true" title="class or interface in java.util.function" class="externalLink">BooleanSupplier</a>&nbsp;shouldKeepTicking)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../MinecraftServer.html#tickWorlds(java.util.function.BooleanSupplier)">tickWorlds</a></code>&nbsp;in class&nbsp;<code><a href="../MinecraftServer.html" title="class in net.minecraft.server">MinecraftServer</a></code></dd>
@@ -732,8 +732,8 @@ com.mojang.authlib.GameProfileRepository&nbsp;gameProfileRepository,
 <section class="detail">
 <h3><a id="openToLan(net.minecraft.world.GameMode,boolean,int)">openToLan</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">openToLan</span>&#8203;(<span class="arguments"><a href="../../world/GameMode.html" title="enum in net.minecraft.world">GameMode</a>&nbsp;gameMode,
-boolean&nbsp;bool,
-int&nbsp;int2)</span></div>
+boolean&nbsp;cheatsAllowed,
+int&nbsp;port)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../MinecraftServer.html#openToLan(net.minecraft.world.GameMode,boolean,int)">openToLan</a></code>&nbsp;in class&nbsp;<code><a href="../MinecraftServer.html" title="class in net.minecraft.server">MinecraftServer</a></code></dd>
@@ -764,8 +764,8 @@ int&nbsp;int2)</span></div>
 <section class="detail">
 <h3><a id="isSpawnProtected(net.minecraft.world.World,net.minecraft.util.math.BlockPos,net.minecraft.entity.player.PlayerEntity)">isSpawnProtected</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isSpawnProtected</span>&#8203;(<span class="arguments"><a href="../../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world,
-<a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
-<a href="../../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;playerEntity)</span></div>
+<a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<a href="../../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;player)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../MinecraftServer.html#isSpawnProtected(net.minecraft.world.World,net.minecraft.util.math.BlockPos,net.minecraft.entity.player.PlayerEntity)">isSpawnProtected</a></code>&nbsp;in class&nbsp;<code><a href="../MinecraftServer.html" title="class in net.minecraft.server">MinecraftServer</a></code></dd>
@@ -795,7 +795,7 @@ int&nbsp;int2)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="setPlayerIdleTimeout(int)">setPlayerIdleTimeout</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setPlayerIdleTimeout</span>&#8203;(<span class="arguments">int&nbsp;int2)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setPlayerIdleTimeout</span>&#8203;(<span class="arguments">int&nbsp;playerIdleTimeout)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../MinecraftServer.html#setPlayerIdleTimeout(int)">setPlayerIdleTimeout</a></code>&nbsp;in class&nbsp;<code><a href="../MinecraftServer.html" title="class in net.minecraft.server">MinecraftServer</a></code></dd>
@@ -893,7 +893,7 @@ int&nbsp;int2)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="isHost(com.mojang.authlib.GameProfile)">isHost</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isHost</span>&#8203;(<span class="arguments">com.mojang.authlib.GameProfile&nbsp;gameProfile)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isHost</span>&#8203;(<span class="arguments">com.mojang.authlib.GameProfile&nbsp;profile)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../MinecraftServer.html#isHost(com.mojang.authlib.GameProfile)">isHost</a></code>&nbsp;in class&nbsp;<code><a href="../MinecraftServer.html" title="class in net.minecraft.server">MinecraftServer</a></code></dd>

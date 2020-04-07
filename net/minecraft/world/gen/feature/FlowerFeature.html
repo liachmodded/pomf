@@ -132,7 +132,7 @@ extends <a href="Feature.html" title="class in net.minecraft.world.gen.feature">
 </thead>
 <tbody>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.util.function.Function)">FlowerFeature</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;com.mojang.datafixers.Dynamic&lt;?&gt;,&#8203;? extends <a href="FlowerFeature.html" title="type parameter in FlowerFeature">U</a>&gt;&nbsp;function)</code></th>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.util.function.Function)">FlowerFeature</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;com.mojang.datafixers.Dynamic&lt;?&gt;,&#8203;? extends <a href="FlowerFeature.html" title="type parameter in FlowerFeature">U</a>&gt;&nbsp;configDeserializer)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -160,12 +160,12 @@ extends <a href="Feature.html" title="class in net.minecraft.world.gen.feature">
 <tbody>
 <tr class="altColor" id="i0">
 <td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#generate(net.minecraft.world.IWorld,net.minecraft.world.gen.StructureAccessor,net.minecraft.world.gen.chunk.ChunkGenerator,java.util.Random,net.minecraft.util.math.BlockPos,U)">generate</a></span>&#8203;(<a href="../../IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;iWorld,
-<a href="../StructureAccessor.html" title="class in net.minecraft.world.gen">StructureAccessor</a>&nbsp;structureAccessor,
-<a href="../chunk/ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">ChunkGenerator</a>&lt;? extends <a href="../chunk/ChunkGeneratorConfig.html" title="class in net.minecraft.world.gen.chunk">ChunkGeneratorConfig</a>&gt;&nbsp;chunkGenerator,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#generate(net.minecraft.world.IWorld,net.minecraft.world.gen.StructureAccessor,net.minecraft.world.gen.chunk.ChunkGenerator,java.util.Random,net.minecraft.util.math.BlockPos,U)">generate</a></span>&#8203;(<a href="../../IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;world,
+<a href="../StructureAccessor.html" title="class in net.minecraft.world.gen">StructureAccessor</a>&nbsp;accessor,
+<a href="../chunk/ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">ChunkGenerator</a>&lt;? extends <a href="../chunk/ChunkGeneratorConfig.html" title="class in net.minecraft.world.gen.chunk">ChunkGeneratorConfig</a>&gt;&nbsp;generator,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random,
-<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
-<a href="FlowerFeature.html" title="type parameter in FlowerFeature">U</a>&nbsp;u)</code></th>
+<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<a href="FlowerFeature.html" title="type parameter in FlowerFeature">U</a>&nbsp;config)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
@@ -224,7 +224,7 @@ extends <a href="Feature.html" title="class in net.minecraft.world.gen.feature">
 <li class="blockList">
 <section class="detail">
 <h3><a id="&lt;init&gt;(java.util.function.Function)">FlowerFeature</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">FlowerFeature</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;com.mojang.datafixers.Dynamic&lt;?&gt;,&#8203;? extends <a href="FlowerFeature.html" title="type parameter in FlowerFeature">U</a>&gt;&nbsp;function)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">FlowerFeature</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;com.mojang.datafixers.Dynamic&lt;?&gt;,&#8203;? extends <a href="FlowerFeature.html" title="type parameter in FlowerFeature">U</a>&gt;&nbsp;configDeserializer)</span></div>
 </section>
 </li>
 </ul>
@@ -242,12 +242,12 @@ extends <a href="Feature.html" title="class in net.minecraft.world.gen.feature">
 <h3><a id="generate(net.minecraft.world.IWorld,net.minecraft.world.gen.StructureAccessor,net.minecraft.world.gen.chunk.ChunkGenerator,java.util.Random,net.minecraft.util.math.BlockPos,net.minecraft.world.gen.feature.FeatureConfig)">
 <!--   -->
 </a><a id="generate(net.minecraft.world.IWorld,net.minecraft.world.gen.StructureAccessor,net.minecraft.world.gen.chunk.ChunkGenerator,java.util.Random,net.minecraft.util.math.BlockPos,U)">generate</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">generate</span>&#8203;(<span class="arguments"><a href="../../IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;iWorld,
-<a href="../StructureAccessor.html" title="class in net.minecraft.world.gen">StructureAccessor</a>&nbsp;structureAccessor,
-<a href="../chunk/ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">ChunkGenerator</a>&lt;? extends <a href="../chunk/ChunkGeneratorConfig.html" title="class in net.minecraft.world.gen.chunk">ChunkGeneratorConfig</a>&gt;&nbsp;chunkGenerator,
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">generate</span>&#8203;(<span class="arguments"><a href="../../IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;world,
+<a href="../StructureAccessor.html" title="class in net.minecraft.world.gen">StructureAccessor</a>&nbsp;accessor,
+<a href="../chunk/ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">ChunkGenerator</a>&lt;? extends <a href="../chunk/ChunkGeneratorConfig.html" title="class in net.minecraft.world.gen.chunk">ChunkGeneratorConfig</a>&gt;&nbsp;generator,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random,
-<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
-<a href="FlowerFeature.html" title="type parameter in FlowerFeature">U</a>&nbsp;u)</span></div>
+<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<a href="FlowerFeature.html" title="type parameter in FlowerFeature">U</a>&nbsp;config)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="Feature.html#generate(net.minecraft.world.IWorld,net.minecraft.world.gen.StructureAccessor,net.minecraft.world.gen.chunk.ChunkGenerator,java.util.Random,net.minecraft.util.math.BlockPos,FC)">generate</a></code>&nbsp;in class&nbsp;<code><a href="Feature.html" title="class in net.minecraft.world.gen.feature">Feature</a>&lt;<a href="FlowerFeature.html" title="type parameter in FlowerFeature">U</a> extends <a href="FeatureConfig.html" title="interface in net.minecraft.world.gen.feature">FeatureConfig</a>&gt;</code></dd>

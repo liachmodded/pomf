@@ -238,31 +238,31 @@ extends <a href="AbstractPressurePlateBlock.html" title="class in net.minecraft.
 </tr>
 <tr class="rowColor" id="i1">
 <td class="colFirst"><code>protected int</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getRedstoneOutput(net.minecraft.block.BlockState)">getRedstoneOutput</a></span>&#8203;(<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getRedstoneOutput(net.minecraft.block.BlockState)">getRedstoneOutput</a></span>&#8203;(<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i2">
 <td class="colFirst"><code>protected int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getRedstoneOutput(net.minecraft.world.World,net.minecraft.util.math.BlockPos)">getRedstoneOutput</a></span>&#8203;(<a href="../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world,
-<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos)</code></th>
+<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i3">
 <td class="colFirst"><code>protected void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#playDepressSound(net.minecraft.world.IWorld,net.minecraft.util.math.BlockPos)">playDepressSound</a></span>&#8203;(<a href="../world/IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;iWorld,
-<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#playDepressSound(net.minecraft.world.IWorld,net.minecraft.util.math.BlockPos)">playDepressSound</a></span>&#8203;(<a href="../world/IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;world,
+<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i4">
 <td class="colFirst"><code>protected void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#playPressSound(net.minecraft.world.IWorld,net.minecraft.util.math.BlockPos)">playPressSound</a></span>&#8203;(<a href="../world/IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;iWorld,
-<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#playPressSound(net.minecraft.world.IWorld,net.minecraft.util.math.BlockPos)">playPressSound</a></span>&#8203;(<a href="../world/IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;world,
+<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i5">
 <td class="colFirst"><code>protected <a href="BlockState.html" title="class in net.minecraft.block">BlockState</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setRedstoneOutput(net.minecraft.block.BlockState,int)">setRedstoneOutput</a></span>&#8203;(<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState,
-int&nbsp;int2)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setRedstoneOutput(net.minecraft.block.BlockState,int)">setRedstoneOutput</a></span>&#8203;(<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state,
+int&nbsp;rsOut)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -338,7 +338,7 @@ int&nbsp;int2)</code></th>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getRedstoneOutput(net.minecraft.block.BlockState)">getRedstoneOutput</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getRedstoneOutput</span>&#8203;(<span class="arguments"><a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState)</span></div>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getRedstoneOutput</span>&#8203;(<span class="arguments"><a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="AbstractPressurePlateBlock.html#getRedstoneOutput(net.minecraft.block.BlockState)">getRedstoneOutput</a></code>&nbsp;in class&nbsp;<code><a href="AbstractPressurePlateBlock.html" title="class in net.minecraft.block">AbstractPressurePlateBlock</a></code></dd>
@@ -348,8 +348,8 @@ int&nbsp;int2)</code></th>
 <li class="blockList">
 <section class="detail">
 <h3><a id="setRedstoneOutput(net.minecraft.block.BlockState,int)">setRedstoneOutput</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType"><a href="BlockState.html" title="class in net.minecraft.block">BlockState</a></span>&nbsp;<span class="memberName">setRedstoneOutput</span>&#8203;(<span class="arguments"><a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState,
-int&nbsp;int2)</span></div>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType"><a href="BlockState.html" title="class in net.minecraft.block">BlockState</a></span>&nbsp;<span class="memberName">setRedstoneOutput</span>&#8203;(<span class="arguments"><a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state,
+int&nbsp;rsOut)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="AbstractPressurePlateBlock.html#setRedstoneOutput(net.minecraft.block.BlockState,int)">setRedstoneOutput</a></code>&nbsp;in class&nbsp;<code><a href="AbstractPressurePlateBlock.html" title="class in net.minecraft.block">AbstractPressurePlateBlock</a></code></dd>
@@ -359,8 +359,8 @@ int&nbsp;int2)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="playPressSound(net.minecraft.world.IWorld,net.minecraft.util.math.BlockPos)">playPressSound</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">playPressSound</span>&#8203;(<span class="arguments"><a href="../world/IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;iWorld,
-<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos)</span></div>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">playPressSound</span>&#8203;(<span class="arguments"><a href="../world/IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;world,
+<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="AbstractPressurePlateBlock.html#playPressSound(net.minecraft.world.IWorld,net.minecraft.util.math.BlockPos)">playPressSound</a></code>&nbsp;in class&nbsp;<code><a href="AbstractPressurePlateBlock.html" title="class in net.minecraft.block">AbstractPressurePlateBlock</a></code></dd>
@@ -370,8 +370,8 @@ int&nbsp;int2)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="playDepressSound(net.minecraft.world.IWorld,net.minecraft.util.math.BlockPos)">playDepressSound</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">playDepressSound</span>&#8203;(<span class="arguments"><a href="../world/IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;iWorld,
-<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos)</span></div>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">playDepressSound</span>&#8203;(<span class="arguments"><a href="../world/IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;world,
+<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="AbstractPressurePlateBlock.html#playDepressSound(net.minecraft.world.IWorld,net.minecraft.util.math.BlockPos)">playDepressSound</a></code>&nbsp;in class&nbsp;<code><a href="AbstractPressurePlateBlock.html" title="class in net.minecraft.block">AbstractPressurePlateBlock</a></code></dd>
@@ -382,7 +382,7 @@ int&nbsp;int2)</span></div>
 <section class="detail">
 <h3><a id="getRedstoneOutput(net.minecraft.world.World,net.minecraft.util.math.BlockPos)">getRedstoneOutput</a></h3>
 <div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getRedstoneOutput</span>&#8203;(<span class="arguments"><a href="../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world,
-<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos)</span></div>
+<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="AbstractPressurePlateBlock.html#getRedstoneOutput(net.minecraft.world.World,net.minecraft.util.math.BlockPos)">getRedstoneOutput</a></code>&nbsp;in class&nbsp;<code><a href="AbstractPressurePlateBlock.html" title="class in net.minecraft.block">AbstractPressurePlateBlock</a></code></dd>

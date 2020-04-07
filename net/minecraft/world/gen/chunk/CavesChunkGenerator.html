@@ -165,15 +165,15 @@ extends <a href="SurfaceChunkGenerator.html" title="class in net.minecraft.world
 <tbody>
 <tr class="altColor" id="i0">
 <td class="colFirst"><code>protected double</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#computeNoiseFalloff(double,double,int)">computeNoiseFalloff</a></span>&#8203;(double&nbsp;double2,
-double&nbsp;double3,
-int&nbsp;int2)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#computeNoiseFalloff(double,double,int)">computeNoiseFalloff</a></span>&#8203;(double&nbsp;depth,
+double&nbsp;scale,
+int&nbsp;y)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
 <td class="colFirst"><code>protected double[]</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#computeNoiseRange(int,int)">computeNoiseRange</a></span>&#8203;(int&nbsp;int2,
-int&nbsp;int3)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#computeNoiseRange(int,int)">computeNoiseRange</a></span>&#8203;(int&nbsp;x,
+int&nbsp;z)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i2">
@@ -185,9 +185,9 @@ int&nbsp;int3)</code></th>
 </tr>
 <tr class="rowColor" id="i3">
 <td class="colFirst"><code>int</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getHeight(int,int,net.minecraft.world.Heightmap.Type)">getHeight</a></span>&#8203;(int&nbsp;int2,
-int&nbsp;int3,
-<a href="../../Heightmap.Type.html" title="enum in net.minecraft.world">Heightmap.Type</a>&nbsp;type)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getHeight(int,int,net.minecraft.world.Heightmap.Type)">getHeight</a></span>&#8203;(int&nbsp;x,
+int&nbsp;z,
+<a href="../../Heightmap.Type.html" title="enum in net.minecraft.world">Heightmap.Type</a>&nbsp;heightmapType)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i4">
@@ -207,9 +207,9 @@ int&nbsp;int3,
 </tr>
 <tr class="rowColor" id="i7">
 <td class="colFirst"><code>protected void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#sampleNoiseColumn(double%5B%5D,int,int)">sampleNoiseColumn</a></span>&#8203;(double[]&nbsp;double2,
-int&nbsp;int2,
-int&nbsp;int3)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#sampleNoiseColumn(double%5B%5D,int,int)">sampleNoiseColumn</a></span>&#8203;(double[]&nbsp;buffer,
+int&nbsp;x,
+int&nbsp;z)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -265,9 +265,9 @@ int&nbsp;int3)</code></th>
 <li class="blockList">
 <section class="detail">
 <h3><a id="sampleNoiseColumn(double[],int,int)">sampleNoiseColumn</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">sampleNoiseColumn</span>&#8203;(<span class="arguments">double[]&nbsp;double2,
-int&nbsp;int2,
-int&nbsp;int3)</span></div>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">sampleNoiseColumn</span>&#8203;(<span class="arguments">double[]&nbsp;buffer,
+int&nbsp;x,
+int&nbsp;z)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="SurfaceChunkGenerator.html#sampleNoiseColumn(double%5B%5D,int,int)">sampleNoiseColumn</a></code>&nbsp;in class&nbsp;<code><a href="SurfaceChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">SurfaceChunkGenerator</a>&lt;<a href="CavesChunkGeneratorConfig.html" title="class in net.minecraft.world.gen.chunk">CavesChunkGeneratorConfig</a>&gt;</code></dd>
@@ -277,8 +277,8 @@ int&nbsp;int3)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="computeNoiseRange(int,int)">computeNoiseRange</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">double[]</span>&nbsp;<span class="memberName">computeNoiseRange</span>&#8203;(<span class="arguments">int&nbsp;int2,
-int&nbsp;int3)</span></div>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">double[]</span>&nbsp;<span class="memberName">computeNoiseRange</span>&#8203;(<span class="arguments">int&nbsp;x,
+int&nbsp;z)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="SurfaceChunkGenerator.html#computeNoiseRange(int,int)">computeNoiseRange</a></code>&nbsp;in class&nbsp;<code><a href="SurfaceChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">SurfaceChunkGenerator</a>&lt;<a href="CavesChunkGeneratorConfig.html" title="class in net.minecraft.world.gen.chunk">CavesChunkGeneratorConfig</a>&gt;</code></dd>
@@ -288,9 +288,9 @@ int&nbsp;int3)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="computeNoiseFalloff(double,double,int)">computeNoiseFalloff</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">double</span>&nbsp;<span class="memberName">computeNoiseFalloff</span>&#8203;(<span class="arguments">double&nbsp;double2,
-double&nbsp;double3,
-int&nbsp;int2)</span></div>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">double</span>&nbsp;<span class="memberName">computeNoiseFalloff</span>&#8203;(<span class="arguments">double&nbsp;depth,
+double&nbsp;scale,
+int&nbsp;y)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="SurfaceChunkGenerator.html#computeNoiseFalloff(double,double,int)">computeNoiseFalloff</a></code>&nbsp;in class&nbsp;<code><a href="SurfaceChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">SurfaceChunkGenerator</a>&lt;<a href="CavesChunkGeneratorConfig.html" title="class in net.minecraft.world.gen.chunk">CavesChunkGeneratorConfig</a>&gt;</code></dd>
@@ -342,9 +342,9 @@ int&nbsp;int2)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getHeight(int,int,net.minecraft.world.Heightmap.Type)">getHeight</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getHeight</span>&#8203;(<span class="arguments">int&nbsp;int2,
-int&nbsp;int3,
-<a href="../../Heightmap.Type.html" title="enum in net.minecraft.world">Heightmap.Type</a>&nbsp;type)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getHeight</span>&#8203;(<span class="arguments">int&nbsp;x,
+int&nbsp;z,
+<a href="../../Heightmap.Type.html" title="enum in net.minecraft.world">Heightmap.Type</a>&nbsp;heightmapType)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="SurfaceChunkGenerator.html#getHeight(int,int,net.minecraft.world.Heightmap.Type)">getHeight</a></code>&nbsp;in class&nbsp;<code><a href="SurfaceChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">SurfaceChunkGenerator</a>&lt;<a href="CavesChunkGeneratorConfig.html" title="class in net.minecraft.world.gen.chunk">CavesChunkGeneratorConfig</a>&gt;</code></dd>

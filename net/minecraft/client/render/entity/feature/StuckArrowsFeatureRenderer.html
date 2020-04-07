@@ -117,7 +117,7 @@ extends <a href="StuckObjectsFeatureRenderer.html" title="class in net.minecraft
 </thead>
 <tbody>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.client.render.entity.LivingEntityRenderer)">StuckArrowsFeatureRenderer</a></span>&#8203;(<a href="../LivingEntityRenderer.html" title="class in net.minecraft.client.render.entity">LivingEntityRenderer</a>&lt;<a href="StuckArrowsFeatureRenderer.html" title="type parameter in StuckArrowsFeatureRenderer">T</a>,&#8203;<a href="StuckArrowsFeatureRenderer.html" title="type parameter in StuckArrowsFeatureRenderer">M</a>&gt;&nbsp;livingEntityRenderer)</code></th>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.client.render.entity.LivingEntityRenderer)">StuckArrowsFeatureRenderer</a></span>&#8203;(<a href="../LivingEntityRenderer.html" title="class in net.minecraft.client.render.entity">LivingEntityRenderer</a>&lt;<a href="StuckArrowsFeatureRenderer.html" title="type parameter in StuckArrowsFeatureRenderer">T</a>,&#8203;<a href="StuckArrowsFeatureRenderer.html" title="type parameter in StuckArrowsFeatureRenderer">M</a>&gt;&nbsp;entityRenderer)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -145,19 +145,19 @@ extends <a href="StuckObjectsFeatureRenderer.html" title="class in net.minecraft
 <tbody>
 <tr class="altColor" id="i0">
 <td class="colFirst"><code>protected int</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getObjectCount(T)">getObjectCount</a></span>&#8203;(<a href="StuckArrowsFeatureRenderer.html" title="type parameter in StuckArrowsFeatureRenderer">T</a>&nbsp;t)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getObjectCount(T)">getObjectCount</a></span>&#8203;(<a href="StuckArrowsFeatureRenderer.html" title="type parameter in StuckArrowsFeatureRenderer">T</a>&nbsp;entity)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
 <td class="colFirst"><code>protected void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#renderObject(net.minecraft.client.util.math.MatrixStack,net.minecraft.client.render.VertexConsumerProvider,int,net.minecraft.entity.Entity,float,float,float,float)">renderObject</a></span>&#8203;(<a href="../../../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrixStack,
-<a href="../../VertexConsumerProvider.html" title="interface in net.minecraft.client.render">VertexConsumerProvider</a>&nbsp;vertexConsumerProvider,
-int&nbsp;int2,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#renderObject(net.minecraft.client.util.math.MatrixStack,net.minecraft.client.render.VertexConsumerProvider,int,net.minecraft.entity.Entity,float,float,float,float)">renderObject</a></span>&#8203;(<a href="../../../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
+<a href="../../VertexConsumerProvider.html" title="interface in net.minecraft.client.render">VertexConsumerProvider</a>&nbsp;vertexConsumers,
+int&nbsp;light,
 <a href="../../../../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&nbsp;entity,
-float&nbsp;float2,
-float&nbsp;float3,
-float&nbsp;float4,
-float&nbsp;float5)</code></th>
+float&nbsp;directionX,
+float&nbsp;directionY,
+float&nbsp;directionZ,
+float&nbsp;tickDelta)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -195,7 +195,7 @@ float&nbsp;float5)</code></th>
 <li class="blockList">
 <section class="detail">
 <h3><a id="&lt;init&gt;(net.minecraft.client.render.entity.LivingEntityRenderer)">StuckArrowsFeatureRenderer</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">StuckArrowsFeatureRenderer</span>&#8203;(<span class="arguments"><a href="../LivingEntityRenderer.html" title="class in net.minecraft.client.render.entity">LivingEntityRenderer</a>&lt;<a href="StuckArrowsFeatureRenderer.html" title="type parameter in StuckArrowsFeatureRenderer">T</a>,&#8203;<a href="StuckArrowsFeatureRenderer.html" title="type parameter in StuckArrowsFeatureRenderer">M</a>&gt;&nbsp;livingEntityRenderer)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">StuckArrowsFeatureRenderer</span>&#8203;(<span class="arguments"><a href="../LivingEntityRenderer.html" title="class in net.minecraft.client.render.entity">LivingEntityRenderer</a>&lt;<a href="StuckArrowsFeatureRenderer.html" title="type parameter in StuckArrowsFeatureRenderer">T</a>,&#8203;<a href="StuckArrowsFeatureRenderer.html" title="type parameter in StuckArrowsFeatureRenderer">M</a>&gt;&nbsp;entityRenderer)</span></div>
 </section>
 </li>
 </ul>
@@ -213,7 +213,7 @@ float&nbsp;float5)</code></th>
 <h3><a id="getObjectCount(net.minecraft.entity.LivingEntity)">
 <!--   -->
 </a><a id="getObjectCount(T)">getObjectCount</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getObjectCount</span>&#8203;(<span class="arguments"><a href="StuckArrowsFeatureRenderer.html" title="type parameter in StuckArrowsFeatureRenderer">T</a>&nbsp;t)</span></div>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getObjectCount</span>&#8203;(<span class="arguments"><a href="StuckArrowsFeatureRenderer.html" title="type parameter in StuckArrowsFeatureRenderer">T</a>&nbsp;entity)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="StuckObjectsFeatureRenderer.html#getObjectCount(T)">getObjectCount</a></code>&nbsp;in class&nbsp;<code><a href="StuckObjectsFeatureRenderer.html" title="class in net.minecraft.client.render.entity.feature">StuckObjectsFeatureRenderer</a>&lt;<a href="StuckArrowsFeatureRenderer.html" title="type parameter in StuckArrowsFeatureRenderer">T</a> extends <a href="../../../../entity/LivingEntity.html" title="class in net.minecraft.entity">LivingEntity</a>,&#8203;<a href="StuckArrowsFeatureRenderer.html" title="type parameter in StuckArrowsFeatureRenderer">M</a> extends <a href="../model/PlayerEntityModel.html" title="class in net.minecraft.client.render.entity.model">PlayerEntityModel</a>&lt;<a href="StuckArrowsFeatureRenderer.html" title="type parameter in StuckArrowsFeatureRenderer">T</a>&gt;&gt;</code></dd>
@@ -223,14 +223,14 @@ float&nbsp;float5)</code></th>
 <li class="blockList">
 <section class="detail">
 <h3><a id="renderObject(net.minecraft.client.util.math.MatrixStack,net.minecraft.client.render.VertexConsumerProvider,int,net.minecraft.entity.Entity,float,float,float,float)">renderObject</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">renderObject</span>&#8203;(<span class="arguments"><a href="../../../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrixStack,
-<a href="../../VertexConsumerProvider.html" title="interface in net.minecraft.client.render">VertexConsumerProvider</a>&nbsp;vertexConsumerProvider,
-int&nbsp;int2,
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">renderObject</span>&#8203;(<span class="arguments"><a href="../../../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
+<a href="../../VertexConsumerProvider.html" title="interface in net.minecraft.client.render">VertexConsumerProvider</a>&nbsp;vertexConsumers,
+int&nbsp;light,
 <a href="../../../../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&nbsp;entity,
-float&nbsp;float2,
-float&nbsp;float3,
-float&nbsp;float4,
-float&nbsp;float5)</span></div>
+float&nbsp;directionX,
+float&nbsp;directionY,
+float&nbsp;directionZ,
+float&nbsp;tickDelta)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="StuckObjectsFeatureRenderer.html#renderObject(net.minecraft.client.util.math.MatrixStack,net.minecraft.client.render.VertexConsumerProvider,int,net.minecraft.entity.Entity,float,float,float,float)">renderObject</a></code>&nbsp;in class&nbsp;<code><a href="StuckObjectsFeatureRenderer.html" title="class in net.minecraft.client.render.entity.feature">StuckObjectsFeatureRenderer</a>&lt;<a href="StuckArrowsFeatureRenderer.html" title="type parameter in StuckArrowsFeatureRenderer">T</a> extends <a href="../../../../entity/LivingEntity.html" title="class in net.minecraft.entity">LivingEntity</a>,&#8203;<a href="StuckArrowsFeatureRenderer.html" title="type parameter in StuckArrowsFeatureRenderer">M</a> extends <a href="../model/PlayerEntityModel.html" title="class in net.minecraft.client.render.entity.model">PlayerEntityModel</a>&lt;<a href="StuckArrowsFeatureRenderer.html" title="type parameter in StuckArrowsFeatureRenderer">T</a>&gt;&gt;</code></dd>

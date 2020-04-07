@@ -162,14 +162,14 @@ int&nbsp;secondRandomHeight)</code></th>
 <tbody>
 <tr class="altColor" id="i0">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util" class="externalLink">Map</a>&lt;<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang" class="externalLink">Integer</a>&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#generate(net.minecraft.world.ModifiableTestableWorld,java.util.Random,int,net.minecraft.util.math.BlockPos,int,java.util.Set,net.minecraft.util.math.BlockBox,net.minecraft.world.gen.feature.BranchedTreeFeatureConfig)">generate</a></span>&#8203;(<a href="../../ModifiableTestableWorld.html" title="interface in net.minecraft.world">ModifiableTestableWorld</a>&nbsp;modifiableTestableWorld,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#generate(net.minecraft.world.ModifiableTestableWorld,java.util.Random,int,net.minecraft.util.math.BlockPos,int,java.util.Set,net.minecraft.util.math.BlockBox,net.minecraft.world.gen.feature.BranchedTreeFeatureConfig)">generate</a></span>&#8203;(<a href="../../ModifiableTestableWorld.html" title="interface in net.minecraft.world">ModifiableTestableWorld</a>&nbsp;world,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random,
-int&nbsp;int2,
-<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
-int&nbsp;int3,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;&nbsp;set,
-<a href="../../../util/math/BlockBox.html" title="class in net.minecraft.util.math">BlockBox</a>&nbsp;blockBox,
-<a href="../feature/BranchedTreeFeatureConfig.html" title="class in net.minecraft.world.gen.feature">BranchedTreeFeatureConfig</a>&nbsp;branchedTreeFeatureConfig)</code></th>
+int&nbsp;trunkHeight,
+<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+int&nbsp;foliageRadius,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;&nbsp;logs,
+<a href="../../../util/math/BlockBox.html" title="class in net.minecraft.util.math">BlockBox</a>&nbsp;box,
+<a href="../feature/BranchedTreeFeatureConfig.html" title="class in net.minecraft.world.gen.feature">BranchedTreeFeatureConfig</a>&nbsp;config)</code></th>
 <td class="colLast">
 <div class="block">Generates the trunk blocks and return a map from branch tops to the
  radius allowed for foliage generation on that branch top.</div>
@@ -229,15 +229,14 @@ int&nbsp;secondRandomHeight)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="generate(net.minecraft.world.ModifiableTestableWorld,java.util.Random,int,net.minecraft.util.math.BlockPos,int,java.util.Set,net.minecraft.util.math.BlockBox,net.minecraft.world.gen.feature.BranchedTreeFeatureConfig)">generate</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util" class="externalLink">Map</a>&lt;<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang" class="externalLink">Integer</a>&gt;</span>&nbsp;<span class="memberName">generate</span>&#8203;(<span class="arguments"><a href="../../ModifiableTestableWorld.html" title="interface in net.minecraft.world">ModifiableTestableWorld</a>&nbsp;modifiableTestableWorld,
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util" class="externalLink">Map</a>&lt;<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang" class="externalLink">Integer</a>&gt;</span>&nbsp;<span class="memberName">generate</span>&#8203;(<span class="arguments"><a href="../../ModifiableTestableWorld.html" title="interface in net.minecraft.world">ModifiableTestableWorld</a>&nbsp;world,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random,
-int&nbsp;int2,
-<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
-int&nbsp;int3,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;&nbsp;set,
-<a href="../../../util/math/BlockBox.html" title="class in net.minecraft.util.math">BlockBox</a>&nbsp;blockBox,
-<a href="../feature/BranchedTreeFeatureConfig.html" title="class in net.minecraft.world.gen.feature">BranchedTreeFeatureConfig</a>&nbsp;branchedTreeFeatureConfig)</span></div>
-<div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="TrunkPlacer.html#generate(net.minecraft.world.ModifiableTestableWorld,java.util.Random,int,net.minecraft.util.math.BlockPos,int,java.util.Set,net.minecraft.util.math.BlockBox,net.minecraft.world.gen.feature.BranchedTreeFeatureConfig)">TrunkPlacer</a></code></span></div>
+int&nbsp;trunkHeight,
+<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+int&nbsp;foliageRadius,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;&nbsp;logs,
+<a href="../../../util/math/BlockBox.html" title="class in net.minecraft.util.math">BlockBox</a>&nbsp;box,
+<a href="../feature/BranchedTreeFeatureConfig.html" title="class in net.minecraft.world.gen.feature">BranchedTreeFeatureConfig</a>&nbsp;config)</span></div>
 <div class="block">Generates the trunk blocks and return a map from branch tops to the
  radius allowed for foliage generation on that branch top.</div>
 <dl>

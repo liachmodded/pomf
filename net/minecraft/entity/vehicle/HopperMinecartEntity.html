@@ -165,7 +165,7 @@ implements <a href="../../block/entity/Hopper.html" title="interface in net.mine
 </thead>
 <tbody>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.entity.EntityType,net.minecraft.world.World)">HopperMinecartEntity</a></span>&#8203;(<a href="../EntityType.html" title="class in net.minecraft.entity">EntityType</a>&lt;? extends <a href="HopperMinecartEntity.html" title="class in net.minecraft.entity.vehicle">HopperMinecartEntity</a>&gt;&nbsp;entityType,
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.entity.EntityType,net.minecraft.world.World)">HopperMinecartEntity</a></span>&#8203;(<a href="../EntityType.html" title="class in net.minecraft.entity">EntityType</a>&lt;? extends <a href="HopperMinecartEntity.html" title="class in net.minecraft.entity.vehicle">HopperMinecartEntity</a>&gt;&nbsp;type,
 <a href="../../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -241,7 +241,7 @@ double&nbsp;z)</code></th>
 </tr>
 <tr class="altColor" id="i8">
 <td class="colFirst"><code><a href="../../screen/ScreenHandler.html" title="class in net.minecraft.screen">ScreenHandler</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getScreenHandler(int,net.minecraft.entity.player.PlayerInventory)">getScreenHandler</a></span>&#8203;(int&nbsp;int2,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getScreenHandler(int,net.minecraft.entity.player.PlayerInventory)">getScreenHandler</a></span>&#8203;(int&nbsp;syncId,
 <a href="../player/PlayerInventory.html" title="class in net.minecraft.entity.player">PlayerInventory</a>&nbsp;playerInventory)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -262,15 +262,15 @@ double&nbsp;z)</code></th>
 </tr>
 <tr class="altColor" id="i12">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#onActivatorRail(int,int,int,boolean)">onActivatorRail</a></span>&#8203;(int&nbsp;int2,
-int&nbsp;int3,
-int&nbsp;int4,
-boolean&nbsp;bool)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#onActivatorRail(int,int,int,boolean)">onActivatorRail</a></span>&#8203;(int&nbsp;x,
+int&nbsp;y,
+int&nbsp;z,
+boolean&nbsp;powered)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i13">
 <td class="colFirst"><code>protected void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#readCustomDataFromTag(net.minecraft.nbt.CompoundTag)">readCustomDataFromTag</a></span>&#8203;(<a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;compoundTag)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#readCustomDataFromTag(net.minecraft.nbt.CompoundTag)">readCustomDataFromTag</a></span>&#8203;(<a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;tag)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i14">
@@ -295,7 +295,7 @@ boolean&nbsp;bool)</code></th>
 </tr>
 <tr class="altColor" id="i18">
 <td class="colFirst"><code>protected void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#writeCustomDataToTag(net.minecraft.nbt.CompoundTag)">writeCustomDataToTag</a></span>&#8203;(<a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;compoundTag)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#writeCustomDataToTag(net.minecraft.nbt.CompoundTag)">writeCustomDataToTag</a></span>&#8203;(<a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;tag)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -358,7 +358,7 @@ boolean&nbsp;bool)</code></th>
 <li class="blockList">
 <section class="detail">
 <h3><a id="&lt;init&gt;(net.minecraft.entity.EntityType,net.minecraft.world.World)">HopperMinecartEntity</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">HopperMinecartEntity</span>&#8203;(<span class="arguments"><a href="../EntityType.html" title="class in net.minecraft.entity">EntityType</a>&lt;? extends <a href="HopperMinecartEntity.html" title="class in net.minecraft.entity.vehicle">HopperMinecartEntity</a>&gt;&nbsp;entityType,
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">HopperMinecartEntity</span>&#8203;(<span class="arguments"><a href="../EntityType.html" title="class in net.minecraft.entity">EntityType</a>&lt;? extends <a href="HopperMinecartEntity.html" title="class in net.minecraft.entity.vehicle">HopperMinecartEntity</a>&gt;&nbsp;type,
 <a href="../../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world)</span></div>
 </section>
 </li>
@@ -424,10 +424,10 @@ double&nbsp;z)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="onActivatorRail(int,int,int,boolean)">onActivatorRail</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">onActivatorRail</span>&#8203;(<span class="arguments">int&nbsp;int2,
-int&nbsp;int3,
-int&nbsp;int4,
-boolean&nbsp;bool)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">onActivatorRail</span>&#8203;(<span class="arguments">int&nbsp;x,
+int&nbsp;y,
+int&nbsp;z,
+boolean&nbsp;powered)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="AbstractMinecartEntity.html#onActivatorRail(int,int,int,boolean)">onActivatorRail</a></code>&nbsp;in class&nbsp;<code><a href="AbstractMinecartEntity.html" title="class in net.minecraft.entity.vehicle">AbstractMinecartEntity</a></code></dd>
@@ -515,7 +515,7 @@ boolean&nbsp;bool)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="writeCustomDataToTag(net.minecraft.nbt.CompoundTag)">writeCustomDataToTag</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">writeCustomDataToTag</span>&#8203;(<span class="arguments"><a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;compoundTag)</span></div>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">writeCustomDataToTag</span>&#8203;(<span class="arguments"><a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;tag)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="StorageMinecartEntity.html#writeCustomDataToTag(net.minecraft.nbt.CompoundTag)">writeCustomDataToTag</a></code>&nbsp;in class&nbsp;<code><a href="StorageMinecartEntity.html" title="class in net.minecraft.entity.vehicle">StorageMinecartEntity</a></code></dd>
@@ -525,7 +525,7 @@ boolean&nbsp;bool)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="readCustomDataFromTag(net.minecraft.nbt.CompoundTag)">readCustomDataFromTag</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">readCustomDataFromTag</span>&#8203;(<span class="arguments"><a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;compoundTag)</span></div>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">readCustomDataFromTag</span>&#8203;(<span class="arguments"><a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;tag)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="StorageMinecartEntity.html#readCustomDataFromTag(net.minecraft.nbt.CompoundTag)">readCustomDataFromTag</a></code>&nbsp;in class&nbsp;<code><a href="StorageMinecartEntity.html" title="class in net.minecraft.entity.vehicle">StorageMinecartEntity</a></code></dd>
@@ -547,7 +547,7 @@ boolean&nbsp;bool)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getScreenHandler(int,net.minecraft.entity.player.PlayerInventory)">getScreenHandler</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../screen/ScreenHandler.html" title="class in net.minecraft.screen">ScreenHandler</a></span>&nbsp;<span class="memberName">getScreenHandler</span>&#8203;(<span class="arguments">int&nbsp;int2,
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../screen/ScreenHandler.html" title="class in net.minecraft.screen">ScreenHandler</a></span>&nbsp;<span class="memberName">getScreenHandler</span>&#8203;(<span class="arguments">int&nbsp;syncId,
 <a href="../player/PlayerInventory.html" title="class in net.minecraft.entity.player">PlayerInventory</a>&nbsp;playerInventory)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>

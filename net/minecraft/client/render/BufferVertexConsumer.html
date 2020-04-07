@@ -134,10 +134,10 @@ extends <a href="VertexConsumer.html" title="interface in net.minecraft.client.r
 <tbody>
 <tr class="altColor" id="i0">
 <td class="colFirst"><code>default <a href="VertexConsumer.html" title="interface in net.minecraft.client.render">VertexConsumer</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#color(int,int,int,int)">color</a></span>&#8203;(int&nbsp;int2,
-int&nbsp;int3,
-int&nbsp;int4,
-int&nbsp;int5)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#color(int,int,int,int)">color</a></span>&#8203;(int&nbsp;red,
+int&nbsp;green,
+int&nbsp;blue,
+int&nbsp;alpha)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
@@ -147,8 +147,8 @@ int&nbsp;int5)</code></th>
 </tr>
 <tr class="altColor" id="i2">
 <td class="colFirst"><code>default <a href="VertexConsumer.html" title="interface in net.minecraft.client.render">VertexConsumer</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#light(int,int)">light</a></span>&#8203;(int&nbsp;int2,
-int&nbsp;int3)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#light(int,int)">light</a></span>&#8203;(int&nbsp;u,
+int&nbsp;v)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i3">
@@ -163,15 +163,15 @@ int&nbsp;int3)</code></th>
 </tr>
 <tr class="rowColor" id="i5">
 <td class="colFirst"><code>default <a href="VertexConsumer.html" title="interface in net.minecraft.client.render">VertexConsumer</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#normal(float,float,float)">normal</a></span>&#8203;(float&nbsp;float2,
-float&nbsp;float3,
-float&nbsp;float4)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#normal(float,float,float)">normal</a></span>&#8203;(float&nbsp;x,
+float&nbsp;y,
+float&nbsp;z)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i6">
 <td class="colFirst"><code>default <a href="VertexConsumer.html" title="interface in net.minecraft.client.render">VertexConsumer</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#overlay(int,int)">overlay</a></span>&#8203;(int&nbsp;int2,
-int&nbsp;int3)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#overlay(int,int)">overlay</a></span>&#8203;(int&nbsp;u,
+int&nbsp;v)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i7">
@@ -194,8 +194,8 @@ short&nbsp;value)</code></th>
 </tr>
 <tr class="altColor" id="i10">
 <td class="colFirst"><code>default <a href="VertexConsumer.html" title="interface in net.minecraft.client.render">VertexConsumer</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#texture(float,float)">texture</a></span>&#8203;(float&nbsp;float2,
-float&nbsp;float3)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#texture(float,float)">texture</a></span>&#8203;(float&nbsp;u,
+float&nbsp;v)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i11">
@@ -207,9 +207,9 @@ int&nbsp;index)</code></th>
 </tr>
 <tr class="altColor" id="i12">
 <td class="colFirst"><code>default <a href="VertexConsumer.html" title="interface in net.minecraft.client.render">VertexConsumer</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#vertex(double,double,double)">vertex</a></span>&#8203;(double&nbsp;double2,
-double&nbsp;double3,
-double&nbsp;double4)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#vertex(double,double,double)">vertex</a></span>&#8203;(double&nbsp;x,
+double&nbsp;y,
+double&nbsp;z)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -270,9 +270,9 @@ float&nbsp;value)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="vertex(double,double,double)">vertex</a></h3>
-<div class="memberSignature"><span class="modifiers">default</span>&nbsp;<span class="returnType"><a href="VertexConsumer.html" title="interface in net.minecraft.client.render">VertexConsumer</a></span>&nbsp;<span class="memberName">vertex</span>&#8203;(<span class="arguments">double&nbsp;double2,
-double&nbsp;double3,
-double&nbsp;double4)</span></div>
+<div class="memberSignature"><span class="modifiers">default</span>&nbsp;<span class="returnType"><a href="VertexConsumer.html" title="interface in net.minecraft.client.render">VertexConsumer</a></span>&nbsp;<span class="memberName">vertex</span>&#8203;(<span class="arguments">double&nbsp;x,
+double&nbsp;y,
+double&nbsp;z)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="VertexConsumer.html#vertex(double,double,double)">vertex</a></code>&nbsp;in interface&nbsp;<code><a href="VertexConsumer.html" title="interface in net.minecraft.client.render">VertexConsumer</a></code></dd>
@@ -282,10 +282,10 @@ double&nbsp;double4)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="color(int,int,int,int)">color</a></h3>
-<div class="memberSignature"><span class="modifiers">default</span>&nbsp;<span class="returnType"><a href="VertexConsumer.html" title="interface in net.minecraft.client.render">VertexConsumer</a></span>&nbsp;<span class="memberName">color</span>&#8203;(<span class="arguments">int&nbsp;int2,
-int&nbsp;int3,
-int&nbsp;int4,
-int&nbsp;int5)</span></div>
+<div class="memberSignature"><span class="modifiers">default</span>&nbsp;<span class="returnType"><a href="VertexConsumer.html" title="interface in net.minecraft.client.render">VertexConsumer</a></span>&nbsp;<span class="memberName">color</span>&#8203;(<span class="arguments">int&nbsp;red,
+int&nbsp;green,
+int&nbsp;blue,
+int&nbsp;alpha)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="VertexConsumer.html#color(int,int,int,int)">color</a></code>&nbsp;in interface&nbsp;<code><a href="VertexConsumer.html" title="interface in net.minecraft.client.render">VertexConsumer</a></code></dd>
@@ -295,8 +295,8 @@ int&nbsp;int5)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="texture(float,float)">texture</a></h3>
-<div class="memberSignature"><span class="modifiers">default</span>&nbsp;<span class="returnType"><a href="VertexConsumer.html" title="interface in net.minecraft.client.render">VertexConsumer</a></span>&nbsp;<span class="memberName">texture</span>&#8203;(<span class="arguments">float&nbsp;float2,
-float&nbsp;float3)</span></div>
+<div class="memberSignature"><span class="modifiers">default</span>&nbsp;<span class="returnType"><a href="VertexConsumer.html" title="interface in net.minecraft.client.render">VertexConsumer</a></span>&nbsp;<span class="memberName">texture</span>&#8203;(<span class="arguments">float&nbsp;u,
+float&nbsp;v)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="VertexConsumer.html#texture(float,float)">texture</a></code>&nbsp;in interface&nbsp;<code><a href="VertexConsumer.html" title="interface in net.minecraft.client.render">VertexConsumer</a></code></dd>
@@ -306,8 +306,8 @@ float&nbsp;float3)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="overlay(int,int)">overlay</a></h3>
-<div class="memberSignature"><span class="modifiers">default</span>&nbsp;<span class="returnType"><a href="VertexConsumer.html" title="interface in net.minecraft.client.render">VertexConsumer</a></span>&nbsp;<span class="memberName">overlay</span>&#8203;(<span class="arguments">int&nbsp;int2,
-int&nbsp;int3)</span></div>
+<div class="memberSignature"><span class="modifiers">default</span>&nbsp;<span class="returnType"><a href="VertexConsumer.html" title="interface in net.minecraft.client.render">VertexConsumer</a></span>&nbsp;<span class="memberName">overlay</span>&#8203;(<span class="arguments">int&nbsp;u,
+int&nbsp;v)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="VertexConsumer.html#overlay(int,int)">overlay</a></code>&nbsp;in interface&nbsp;<code><a href="VertexConsumer.html" title="interface in net.minecraft.client.render">VertexConsumer</a></code></dd>
@@ -317,8 +317,8 @@ int&nbsp;int3)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="light(int,int)">light</a></h3>
-<div class="memberSignature"><span class="modifiers">default</span>&nbsp;<span class="returnType"><a href="VertexConsumer.html" title="interface in net.minecraft.client.render">VertexConsumer</a></span>&nbsp;<span class="memberName">light</span>&#8203;(<span class="arguments">int&nbsp;int2,
-int&nbsp;int3)</span></div>
+<div class="memberSignature"><span class="modifiers">default</span>&nbsp;<span class="returnType"><a href="VertexConsumer.html" title="interface in net.minecraft.client.render">VertexConsumer</a></span>&nbsp;<span class="memberName">light</span>&#8203;(<span class="arguments">int&nbsp;u,
+int&nbsp;v)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="VertexConsumer.html#light(int,int)">light</a></code>&nbsp;in interface&nbsp;<code><a href="VertexConsumer.html" title="interface in net.minecraft.client.render">VertexConsumer</a></code></dd>
@@ -336,9 +336,9 @@ int&nbsp;index)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="normal(float,float,float)">normal</a></h3>
-<div class="memberSignature"><span class="modifiers">default</span>&nbsp;<span class="returnType"><a href="VertexConsumer.html" title="interface in net.minecraft.client.render">VertexConsumer</a></span>&nbsp;<span class="memberName">normal</span>&#8203;(<span class="arguments">float&nbsp;float2,
-float&nbsp;float3,
-float&nbsp;float4)</span></div>
+<div class="memberSignature"><span class="modifiers">default</span>&nbsp;<span class="returnType"><a href="VertexConsumer.html" title="interface in net.minecraft.client.render">VertexConsumer</a></span>&nbsp;<span class="memberName">normal</span>&#8203;(<span class="arguments">float&nbsp;x,
+float&nbsp;y,
+float&nbsp;z)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="VertexConsumer.html#normal(float,float,float)">normal</a></code>&nbsp;in interface&nbsp;<code><a href="VertexConsumer.html" title="interface in net.minecraft.client.render">VertexConsumer</a></code></dd>

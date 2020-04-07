@@ -201,7 +201,7 @@ extends <a href="CowEntity.html" title="class in net.minecraft.entity.passive">C
 </thead>
 <tbody>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.entity.EntityType,net.minecraft.world.World)">MooshroomEntity</a></span>&#8203;(<a href="../EntityType.html" title="class in net.minecraft.entity">EntityType</a>&lt;? extends <a href="MooshroomEntity.html" title="class in net.minecraft.entity.passive">MooshroomEntity</a>&gt;&nbsp;entityType,
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.entity.EntityType,net.minecraft.world.World)">MooshroomEntity</a></span>&#8203;(<a href="../EntityType.html" title="class in net.minecraft.entity">EntityType</a>&lt;? extends <a href="MooshroomEntity.html" title="class in net.minecraft.entity.passive">MooshroomEntity</a>&gt;&nbsp;type,
 <a href="../../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -249,8 +249,8 @@ extends <a href="CowEntity.html" title="class in net.minecraft.entity.passive">C
 </tr>
 <tr class="rowColor" id="i3">
 <td class="colFirst"><code>float</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPathfindingFavor(net.minecraft.util.math.BlockPos,net.minecraft.world.WorldView)">getPathfindingFavor</a></span>&#8203;(<a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
-<a href="../../world/WorldView.html" title="interface in net.minecraft.world">WorldView</a>&nbsp;worldView)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPathfindingFavor(net.minecraft.util.math.BlockPos,net.minecraft.world.WorldView)">getPathfindingFavor</a></span>&#8203;(<a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<a href="../../world/WorldView.html" title="interface in net.minecraft.world">WorldView</a>&nbsp;world)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i4">
@@ -260,23 +260,23 @@ extends <a href="CowEntity.html" title="class in net.minecraft.entity.passive">C
 </tr>
 <tr class="rowColor" id="i5">
 <td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#interactMob(net.minecraft.entity.player.PlayerEntity,net.minecraft.util.Hand)">interactMob</a></span>&#8203;(<a href="../player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;playerEntity,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#interactMob(net.minecraft.entity.player.PlayerEntity,net.minecraft.util.Hand)">interactMob</a></span>&#8203;(<a href="../player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;player,
 <a href="../../util/Hand.html" title="enum in net.minecraft.util">Hand</a>&nbsp;hand)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i6">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#onStruckByLightning(net.minecraft.entity.LightningEntity)">onStruckByLightning</a></span>&#8203;(<a href="../LightningEntity.html" title="class in net.minecraft.entity">LightningEntity</a>&nbsp;lightningEntity)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#onStruckByLightning(net.minecraft.entity.LightningEntity)">onStruckByLightning</a></span>&#8203;(<a href="../LightningEntity.html" title="class in net.minecraft.entity">LightningEntity</a>&nbsp;lightning)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i7">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#readCustomDataFromTag(net.minecraft.nbt.CompoundTag)">readCustomDataFromTag</a></span>&#8203;(<a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;compoundTag)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#readCustomDataFromTag(net.minecraft.nbt.CompoundTag)">readCustomDataFromTag</a></span>&#8203;(<a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;tag)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i8">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#writeCustomDataToTag(net.minecraft.nbt.CompoundTag)">writeCustomDataToTag</a></span>&#8203;(<a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;compoundTag)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#writeCustomDataToTag(net.minecraft.nbt.CompoundTag)">writeCustomDataToTag</a></span>&#8203;(<a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;tag)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -339,7 +339,7 @@ extends <a href="CowEntity.html" title="class in net.minecraft.entity.passive">C
 <li class="blockList">
 <section class="detail">
 <h3><a id="&lt;init&gt;(net.minecraft.entity.EntityType,net.minecraft.world.World)">MooshroomEntity</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">MooshroomEntity</span>&#8203;(<span class="arguments"><a href="../EntityType.html" title="class in net.minecraft.entity">EntityType</a>&lt;? extends <a href="MooshroomEntity.html" title="class in net.minecraft.entity.passive">MooshroomEntity</a>&gt;&nbsp;entityType,
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">MooshroomEntity</span>&#8203;(<span class="arguments"><a href="../EntityType.html" title="class in net.minecraft.entity">EntityType</a>&lt;? extends <a href="MooshroomEntity.html" title="class in net.minecraft.entity.passive">MooshroomEntity</a>&gt;&nbsp;type,
 <a href="../../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world)</span></div>
 </section>
 </li>
@@ -356,8 +356,8 @@ extends <a href="CowEntity.html" title="class in net.minecraft.entity.passive">C
 <li class="blockList">
 <section class="detail">
 <h3><a id="getPathfindingFavor(net.minecraft.util.math.BlockPos,net.minecraft.world.WorldView)">getPathfindingFavor</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">float</span>&nbsp;<span class="memberName">getPathfindingFavor</span>&#8203;(<span class="arguments"><a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
-<a href="../../world/WorldView.html" title="interface in net.minecraft.world">WorldView</a>&nbsp;worldView)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">float</span>&nbsp;<span class="memberName">getPathfindingFavor</span>&#8203;(<span class="arguments"><a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<a href="../../world/WorldView.html" title="interface in net.minecraft.world">WorldView</a>&nbsp;world)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="AnimalEntity.html#getPathfindingFavor(net.minecraft.util.math.BlockPos,net.minecraft.world.WorldView)">getPathfindingFavor</a></code>&nbsp;in class&nbsp;<code><a href="AnimalEntity.html" title="class in net.minecraft.entity.passive">AnimalEntity</a></code></dd>
@@ -377,7 +377,7 @@ extends <a href="CowEntity.html" title="class in net.minecraft.entity.passive">C
 <li class="blockList">
 <section class="detail">
 <h3><a id="onStruckByLightning(net.minecraft.entity.LightningEntity)">onStruckByLightning</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">onStruckByLightning</span>&#8203;(<span class="arguments"><a href="../LightningEntity.html" title="class in net.minecraft.entity">LightningEntity</a>&nbsp;lightningEntity)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">onStruckByLightning</span>&#8203;(<span class="arguments"><a href="../LightningEntity.html" title="class in net.minecraft.entity">LightningEntity</a>&nbsp;lightning)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../Entity.html#onStruckByLightning(net.minecraft.entity.LightningEntity)">onStruckByLightning</a></code>&nbsp;in class&nbsp;<code><a href="../Entity.html" title="class in net.minecraft.entity">Entity</a></code></dd>
@@ -397,7 +397,7 @@ extends <a href="CowEntity.html" title="class in net.minecraft.entity.passive">C
 <li class="blockList">
 <section class="detail">
 <h3><a id="interactMob(net.minecraft.entity.player.PlayerEntity,net.minecraft.util.Hand)">interactMob</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">interactMob</span>&#8203;(<span class="arguments"><a href="../player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;playerEntity,
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">interactMob</span>&#8203;(<span class="arguments"><a href="../player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;player,
 <a href="../../util/Hand.html" title="enum in net.minecraft.util">Hand</a>&nbsp;hand)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
@@ -408,7 +408,7 @@ extends <a href="CowEntity.html" title="class in net.minecraft.entity.passive">C
 <li class="blockList">
 <section class="detail">
 <h3><a id="writeCustomDataToTag(net.minecraft.nbt.CompoundTag)">writeCustomDataToTag</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">writeCustomDataToTag</span>&#8203;(<span class="arguments"><a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;compoundTag)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">writeCustomDataToTag</span>&#8203;(<span class="arguments"><a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;tag)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="AnimalEntity.html#writeCustomDataToTag(net.minecraft.nbt.CompoundTag)">writeCustomDataToTag</a></code>&nbsp;in class&nbsp;<code><a href="AnimalEntity.html" title="class in net.minecraft.entity.passive">AnimalEntity</a></code></dd>
@@ -418,7 +418,7 @@ extends <a href="CowEntity.html" title="class in net.minecraft.entity.passive">C
 <li class="blockList">
 <section class="detail">
 <h3><a id="readCustomDataFromTag(net.minecraft.nbt.CompoundTag)">readCustomDataFromTag</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">readCustomDataFromTag</span>&#8203;(<span class="arguments"><a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;compoundTag)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">readCustomDataFromTag</span>&#8203;(<span class="arguments"><a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;tag)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="AnimalEntity.html#readCustomDataFromTag(net.minecraft.nbt.CompoundTag)">readCustomDataFromTag</a></code>&nbsp;in class&nbsp;<code><a href="AnimalEntity.html" title="class in net.minecraft.entity.passive">AnimalEntity</a></code></dd>

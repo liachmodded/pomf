@@ -211,8 +211,8 @@ implements <a href="Fertilizable.html" title="interface in net.minecraft.block">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#canGrow(net.minecraft.world.World,java.util.Random,net.minecraft.util.math.BlockPos,net.minecraft.block.BlockState)">canGrow</a></span>&#8203;(<a href="../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random,
-<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
-<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState)</code></th>
+<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
@@ -222,26 +222,26 @@ implements <a href="Fertilizable.html" title="interface in net.minecraft.block">
 </tr>
 <tr class="altColor" id="i2">
 <td class="colFirst"><code><a href="../util/shape/VoxelShape.html" title="class in net.minecraft.util.shape">VoxelShape</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getOutlineShape(net.minecraft.block.BlockState,net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos,net.minecraft.block.ShapeContext)">getOutlineShape</a></span>&#8203;(<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState,
-<a href="../world/BlockView.html" title="interface in net.minecraft.world">BlockView</a>&nbsp;blockView,
-<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
-<a href="ShapeContext.html" title="interface in net.minecraft.block">ShapeContext</a>&nbsp;shapeContext)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getOutlineShape(net.minecraft.block.BlockState,net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos,net.minecraft.block.ShapeContext)">getOutlineShape</a></span>&#8203;(<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state,
+<a href="../world/BlockView.html" title="interface in net.minecraft.world">BlockView</a>&nbsp;world,
+<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<a href="ShapeContext.html" title="interface in net.minecraft.block">ShapeContext</a>&nbsp;context)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i3">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#grow(net.minecraft.server.world.ServerWorld,java.util.Random,net.minecraft.util.math.BlockPos,net.minecraft.block.BlockState)">grow</a></span>&#8203;(<a href="../server/world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a>&nbsp;serverWorld,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#grow(net.minecraft.server.world.ServerWorld,java.util.Random,net.minecraft.util.math.BlockPos,net.minecraft.block.BlockState)">grow</a></span>&#8203;(<a href="../server/world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a>&nbsp;world,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random,
-<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
-<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState)</code></th>
+<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i4">
 <td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isFertilizable(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos,net.minecraft.block.BlockState,boolean)">isFertilizable</a></span>&#8203;(<a href="../world/BlockView.html" title="interface in net.minecraft.world">BlockView</a>&nbsp;blockView,
-<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
-<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState,
-boolean&nbsp;bool)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isFertilizable(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos,net.minecraft.block.BlockState,boolean)">isFertilizable</a></span>&#8203;(<a href="../world/BlockView.html" title="interface in net.minecraft.world">BlockView</a>&nbsp;world,
+<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state,
+boolean&nbsp;isClient)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -316,10 +316,10 @@ boolean&nbsp;bool)</code></th>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getOutlineShape(net.minecraft.block.BlockState,net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos,net.minecraft.block.ShapeContext)">getOutlineShape</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../util/shape/VoxelShape.html" title="class in net.minecraft.util.shape">VoxelShape</a></span>&nbsp;<span class="memberName">getOutlineShape</span>&#8203;(<span class="arguments"><a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState,
-<a href="../world/BlockView.html" title="interface in net.minecraft.world">BlockView</a>&nbsp;blockView,
-<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
-<a href="ShapeContext.html" title="interface in net.minecraft.block">ShapeContext</a>&nbsp;shapeContext)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../util/shape/VoxelShape.html" title="class in net.minecraft.util.shape">VoxelShape</a></span>&nbsp;<span class="memberName">getOutlineShape</span>&#8203;(<span class="arguments"><a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state,
+<a href="../world/BlockView.html" title="interface in net.minecraft.world">BlockView</a>&nbsp;world,
+<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<a href="ShapeContext.html" title="interface in net.minecraft.block">ShapeContext</a>&nbsp;context)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="AbstractBlock.html#getOutlineShape(net.minecraft.block.BlockState,net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos,net.minecraft.block.ShapeContext)">getOutlineShape</a></code>&nbsp;in class&nbsp;<code><a href="AbstractBlock.html" title="class in net.minecraft.block">AbstractBlock</a></code></dd>
@@ -329,10 +329,10 @@ boolean&nbsp;bool)</code></th>
 <li class="blockList">
 <section class="detail">
 <h3><a id="isFertilizable(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos,net.minecraft.block.BlockState,boolean)">isFertilizable</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isFertilizable</span>&#8203;(<span class="arguments"><a href="../world/BlockView.html" title="interface in net.minecraft.world">BlockView</a>&nbsp;blockView,
-<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
-<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState,
-boolean&nbsp;bool)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isFertilizable</span>&#8203;(<span class="arguments"><a href="../world/BlockView.html" title="interface in net.minecraft.world">BlockView</a>&nbsp;world,
+<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state,
+boolean&nbsp;isClient)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="Fertilizable.html#isFertilizable(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos,net.minecraft.block.BlockState,boolean)">isFertilizable</a></code>&nbsp;in interface&nbsp;<code><a href="Fertilizable.html" title="interface in net.minecraft.block">Fertilizable</a></code></dd>
@@ -344,8 +344,8 @@ boolean&nbsp;bool)</span></div>
 <h3><a id="canGrow(net.minecraft.world.World,java.util.Random,net.minecraft.util.math.BlockPos,net.minecraft.block.BlockState)">canGrow</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">canGrow</span>&#8203;(<span class="arguments"><a href="../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random,
-<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
-<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState)</span></div>
+<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="Fertilizable.html#canGrow(net.minecraft.world.World,java.util.Random,net.minecraft.util.math.BlockPos,net.minecraft.block.BlockState)">canGrow</a></code>&nbsp;in interface&nbsp;<code><a href="Fertilizable.html" title="interface in net.minecraft.block">Fertilizable</a></code></dd>
@@ -355,10 +355,10 @@ boolean&nbsp;bool)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="grow(net.minecraft.server.world.ServerWorld,java.util.Random,net.minecraft.util.math.BlockPos,net.minecraft.block.BlockState)">grow</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">grow</span>&#8203;(<span class="arguments"><a href="../server/world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a>&nbsp;serverWorld,
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">grow</span>&#8203;(<span class="arguments"><a href="../server/world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a>&nbsp;world,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random,
-<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
-<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState)</span></div>
+<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="Fertilizable.html#grow(net.minecraft.server.world.ServerWorld,java.util.Random,net.minecraft.util.math.BlockPos,net.minecraft.block.BlockState)">grow</a></code>&nbsp;in interface&nbsp;<code><a href="Fertilizable.html" title="interface in net.minecraft.block">Fertilizable</a></code></dd>

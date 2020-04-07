@@ -223,22 +223,22 @@ extends <a href="AbstractRailBlock.html" title="class in net.minecraft.block">Ab
 </tr>
 <tr class="altColor" id="i2">
 <td class="colFirst"><code><a href="BlockState.html" title="class in net.minecraft.block">BlockState</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#mirror(net.minecraft.block.BlockState,net.minecraft.util.BlockMirror)">mirror</a></span>&#8203;(<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState,
-<a href="../util/BlockMirror.html" title="enum in net.minecraft.util">BlockMirror</a>&nbsp;blockMirror)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#mirror(net.minecraft.block.BlockState,net.minecraft.util.BlockMirror)">mirror</a></span>&#8203;(<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state,
+<a href="../util/BlockMirror.html" title="enum in net.minecraft.util">BlockMirror</a>&nbsp;mirror)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i3">
 <td class="colFirst"><code><a href="BlockState.html" title="class in net.minecraft.block">BlockState</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#rotate(net.minecraft.block.BlockState,net.minecraft.util.BlockRotation)">rotate</a></span>&#8203;(<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState,
-<a href="../util/BlockRotation.html" title="enum in net.minecraft.util">BlockRotation</a>&nbsp;blockRotation)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#rotate(net.minecraft.block.BlockState,net.minecraft.util.BlockRotation)">rotate</a></span>&#8203;(<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state,
+<a href="../util/BlockRotation.html" title="enum in net.minecraft.util">BlockRotation</a>&nbsp;rotation)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i4">
 <td class="colFirst"><code>protected void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#updateBlockState(net.minecraft.block.BlockState,net.minecraft.world.World,net.minecraft.util.math.BlockPos,net.minecraft.block.Block)">updateBlockState</a></span>&#8203;(<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#updateBlockState(net.minecraft.block.BlockState,net.minecraft.world.World,net.minecraft.util.math.BlockPos,net.minecraft.block.Block)">updateBlockState</a></span>&#8203;(<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state,
 <a href="../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world,
-<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
-<a href="Block.html" title="class in net.minecraft.block">Block</a>&nbsp;block)</code></th>
+<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<a href="Block.html" title="class in net.minecraft.block">Block</a>&nbsp;neighbor)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -313,10 +313,10 @@ extends <a href="AbstractRailBlock.html" title="class in net.minecraft.block">Ab
 <li class="blockList">
 <section class="detail">
 <h3><a id="updateBlockState(net.minecraft.block.BlockState,net.minecraft.world.World,net.minecraft.util.math.BlockPos,net.minecraft.block.Block)">updateBlockState</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">updateBlockState</span>&#8203;(<span class="arguments"><a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState,
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">updateBlockState</span>&#8203;(<span class="arguments"><a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state,
 <a href="../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world,
-<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
-<a href="Block.html" title="class in net.minecraft.block">Block</a>&nbsp;block)</span></div>
+<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<a href="Block.html" title="class in net.minecraft.block">Block</a>&nbsp;neighbor)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="AbstractRailBlock.html#updateBlockState(net.minecraft.block.BlockState,net.minecraft.world.World,net.minecraft.util.math.BlockPos,net.minecraft.block.Block)">updateBlockState</a></code>&nbsp;in class&nbsp;<code><a href="AbstractRailBlock.html" title="class in net.minecraft.block">AbstractRailBlock</a></code></dd>
@@ -336,8 +336,8 @@ extends <a href="AbstractRailBlock.html" title="class in net.minecraft.block">Ab
 <li class="blockList">
 <section class="detail">
 <h3><a id="rotate(net.minecraft.block.BlockState,net.minecraft.util.BlockRotation)">rotate</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="BlockState.html" title="class in net.minecraft.block">BlockState</a></span>&nbsp;<span class="memberName">rotate</span>&#8203;(<span class="arguments"><a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState,
-<a href="../util/BlockRotation.html" title="enum in net.minecraft.util">BlockRotation</a>&nbsp;blockRotation)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="BlockState.html" title="class in net.minecraft.block">BlockState</a></span>&nbsp;<span class="memberName">rotate</span>&#8203;(<span class="arguments"><a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state,
+<a href="../util/BlockRotation.html" title="enum in net.minecraft.util">BlockRotation</a>&nbsp;rotation)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="AbstractBlock.html#rotate(net.minecraft.block.BlockState,net.minecraft.util.BlockRotation)">rotate</a></code>&nbsp;in class&nbsp;<code><a href="AbstractBlock.html" title="class in net.minecraft.block">AbstractBlock</a></code></dd>
@@ -347,8 +347,8 @@ extends <a href="AbstractRailBlock.html" title="class in net.minecraft.block">Ab
 <li class="blockList">
 <section class="detail">
 <h3><a id="mirror(net.minecraft.block.BlockState,net.minecraft.util.BlockMirror)">mirror</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="BlockState.html" title="class in net.minecraft.block">BlockState</a></span>&nbsp;<span class="memberName">mirror</span>&#8203;(<span class="arguments"><a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState,
-<a href="../util/BlockMirror.html" title="enum in net.minecraft.util">BlockMirror</a>&nbsp;blockMirror)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="BlockState.html" title="class in net.minecraft.block">BlockState</a></span>&nbsp;<span class="memberName">mirror</span>&#8203;(<span class="arguments"><a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state,
+<a href="../util/BlockMirror.html" title="enum in net.minecraft.util">BlockMirror</a>&nbsp;mirror)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="AbstractBlock.html#mirror(net.minecraft.block.BlockState,net.minecraft.util.BlockMirror)">mirror</a></code>&nbsp;in class&nbsp;<code><a href="AbstractBlock.html" title="class in net.minecraft.block">AbstractBlock</a></code></dd>

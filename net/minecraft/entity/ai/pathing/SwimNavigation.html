@@ -132,7 +132,7 @@ extends <a href="EntityNavigation.html" title="class in net.minecraft.entity.ai.
 </thead>
 <tbody>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.entity.mob.MobEntity,net.minecraft.world.World)">SwimNavigation</a></span>&#8203;(<a href="../../mob/MobEntity.html" title="class in net.minecraft.entity.mob">MobEntity</a>&nbsp;mobEntity,
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.entity.mob.MobEntity,net.minecraft.world.World)">SwimNavigation</a></span>&#8203;(<a href="../../mob/MobEntity.html" title="class in net.minecraft.entity.mob">MobEntity</a>&nbsp;mob,
 <a href="../../../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -161,16 +161,16 @@ extends <a href="EntityNavigation.html" title="class in net.minecraft.entity.ai.
 <tbody>
 <tr class="altColor" id="i0">
 <td class="colFirst"><code>protected boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#canPathDirectlyThrough(net.minecraft.util.math.Vec3d,net.minecraft.util.math.Vec3d,int,int,int)">canPathDirectlyThrough</a></span>&#8203;(<a href="../../../util/math/Vec3d.html" title="class in net.minecraft.util.math">Vec3d</a>&nbsp;vec3d,
-<a href="../../../util/math/Vec3d.html" title="class in net.minecraft.util.math">Vec3d</a>&nbsp;vec3d2,
-int&nbsp;int2,
-int&nbsp;int3,
-int&nbsp;int4)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#canPathDirectlyThrough(net.minecraft.util.math.Vec3d,net.minecraft.util.math.Vec3d,int,int,int)">canPathDirectlyThrough</a></span>&#8203;(<a href="../../../util/math/Vec3d.html" title="class in net.minecraft.util.math">Vec3d</a>&nbsp;origin,
+<a href="../../../util/math/Vec3d.html" title="class in net.minecraft.util.math">Vec3d</a>&nbsp;target,
+int&nbsp;sizeX,
+int&nbsp;sizeY,
+int&nbsp;sizeZ)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
 <td class="colFirst"><code>protected void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#checkTimeouts(net.minecraft.util.math.Vec3d)">checkTimeouts</a></span>&#8203;(<a href="../../../util/math/Vec3d.html" title="class in net.minecraft.util.math">Vec3d</a>&nbsp;vec3d)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#checkTimeouts(net.minecraft.util.math.Vec3d)">checkTimeouts</a></span>&#8203;(<a href="../../../util/math/Vec3d.html" title="class in net.minecraft.util.math">Vec3d</a>&nbsp;currentPos)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i2">
@@ -180,7 +180,7 @@ int&nbsp;int4)</code></th>
 </tr>
 <tr class="rowColor" id="i3">
 <td class="colFirst"><code>protected <a href="PathNodeNavigator.html" title="class in net.minecraft.entity.ai.pathing">PathNodeNavigator</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createPathNodeNavigator(int)">createPathNodeNavigator</a></span>&#8203;(int&nbsp;int2)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createPathNodeNavigator(int)">createPathNodeNavigator</a></span>&#8203;(int&nbsp;range)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i4">
@@ -197,12 +197,12 @@ int&nbsp;int4)</code></th>
 </tr>
 <tr class="altColor" id="i6">
 <td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isValidPosition(net.minecraft.util.math.BlockPos)">isValidPosition</a></span>&#8203;(<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isValidPosition(net.minecraft.util.math.BlockPos)">isValidPosition</a></span>&#8203;(<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i7">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setCanSwim(boolean)">setCanSwim</a></span>&#8203;(boolean&nbsp;bool)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setCanSwim(boolean)">setCanSwim</a></span>&#8203;(boolean&nbsp;canSwim)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i8">
@@ -240,7 +240,7 @@ int&nbsp;int4)</code></th>
 <li class="blockList">
 <section class="detail">
 <h3><a id="&lt;init&gt;(net.minecraft.entity.mob.MobEntity,net.minecraft.world.World)">SwimNavigation</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">SwimNavigation</span>&#8203;(<span class="arguments"><a href="../../mob/MobEntity.html" title="class in net.minecraft.entity.mob">MobEntity</a>&nbsp;mobEntity,
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">SwimNavigation</span>&#8203;(<span class="arguments"><a href="../../mob/MobEntity.html" title="class in net.minecraft.entity.mob">MobEntity</a>&nbsp;mob,
 <a href="../../../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world)</span></div>
 </section>
 </li>
@@ -257,7 +257,7 @@ int&nbsp;int4)</code></th>
 <li class="blockList">
 <section class="detail">
 <h3><a id="createPathNodeNavigator(int)">createPathNodeNavigator</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType"><a href="PathNodeNavigator.html" title="class in net.minecraft.entity.ai.pathing">PathNodeNavigator</a></span>&nbsp;<span class="memberName">createPathNodeNavigator</span>&#8203;(<span class="arguments">int&nbsp;int2)</span></div>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType"><a href="PathNodeNavigator.html" title="class in net.minecraft.entity.ai.pathing">PathNodeNavigator</a></span>&nbsp;<span class="memberName">createPathNodeNavigator</span>&#8203;(<span class="arguments">int&nbsp;range)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="EntityNavigation.html#createPathNodeNavigator(int)">createPathNodeNavigator</a></code>&nbsp;in class&nbsp;<code><a href="EntityNavigation.html" title="class in net.minecraft.entity.ai.pathing">EntityNavigation</a></code></dd>
@@ -278,7 +278,6 @@ int&nbsp;int4)</code></th>
 <section class="detail">
 <h3><a id="getPos()">getPos</a></h3>
 <div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType"><a href="../../../util/math/Vec3d.html" title="class in net.minecraft.util.math">Vec3d</a></span>&nbsp;<span class="memberName">getPos</span>()</div>
-<div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="EntityNavigation.html#getPos()">EntityNavigation</a></code></span></div>
 <div class="block">The position to act as if the entity is at for pathfinding purposes</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
@@ -309,7 +308,7 @@ int&nbsp;int4)</code></th>
 <li class="blockList">
 <section class="detail">
 <h3><a id="checkTimeouts(net.minecraft.util.math.Vec3d)">checkTimeouts</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">checkTimeouts</span>&#8203;(<span class="arguments"><a href="../../../util/math/Vec3d.html" title="class in net.minecraft.util.math">Vec3d</a>&nbsp;vec3d)</span></div>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">checkTimeouts</span>&#8203;(<span class="arguments"><a href="../../../util/math/Vec3d.html" title="class in net.minecraft.util.math">Vec3d</a>&nbsp;currentPos)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="EntityNavigation.html#checkTimeouts(net.minecraft.util.math.Vec3d)">checkTimeouts</a></code>&nbsp;in class&nbsp;<code><a href="EntityNavigation.html" title="class in net.minecraft.entity.ai.pathing">EntityNavigation</a></code></dd>
@@ -319,11 +318,11 @@ int&nbsp;int4)</code></th>
 <li class="blockList">
 <section class="detail">
 <h3><a id="canPathDirectlyThrough(net.minecraft.util.math.Vec3d,net.minecraft.util.math.Vec3d,int,int,int)">canPathDirectlyThrough</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">canPathDirectlyThrough</span>&#8203;(<span class="arguments"><a href="../../../util/math/Vec3d.html" title="class in net.minecraft.util.math">Vec3d</a>&nbsp;vec3d,
-<a href="../../../util/math/Vec3d.html" title="class in net.minecraft.util.math">Vec3d</a>&nbsp;vec3d2,
-int&nbsp;int2,
-int&nbsp;int3,
-int&nbsp;int4)</span></div>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">canPathDirectlyThrough</span>&#8203;(<span class="arguments"><a href="../../../util/math/Vec3d.html" title="class in net.minecraft.util.math">Vec3d</a>&nbsp;origin,
+<a href="../../../util/math/Vec3d.html" title="class in net.minecraft.util.math">Vec3d</a>&nbsp;target,
+int&nbsp;sizeX,
+int&nbsp;sizeY,
+int&nbsp;sizeZ)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="EntityNavigation.html#canPathDirectlyThrough(net.minecraft.util.math.Vec3d,net.minecraft.util.math.Vec3d,int,int,int)">canPathDirectlyThrough</a></code>&nbsp;in class&nbsp;<code><a href="EntityNavigation.html" title="class in net.minecraft.entity.ai.pathing">EntityNavigation</a></code></dd>
@@ -333,7 +332,7 @@ int&nbsp;int4)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="isValidPosition(net.minecraft.util.math.BlockPos)">isValidPosition</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isValidPosition</span>&#8203;(<span class="arguments"><a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isValidPosition</span>&#8203;(<span class="arguments"><a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="EntityNavigation.html#isValidPosition(net.minecraft.util.math.BlockPos)">isValidPosition</a></code>&nbsp;in class&nbsp;<code><a href="EntityNavigation.html" title="class in net.minecraft.entity.ai.pathing">EntityNavigation</a></code></dd>
@@ -343,7 +342,7 @@ int&nbsp;int4)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="setCanSwim(boolean)">setCanSwim</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setCanSwim</span>&#8203;(<span class="arguments">boolean&nbsp;bool)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setCanSwim</span>&#8203;(<span class="arguments">boolean&nbsp;canSwim)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="EntityNavigation.html#setCanSwim(boolean)">setCanSwim</a></code>&nbsp;in class&nbsp;<code><a href="EntityNavigation.html" title="class in net.minecraft.entity.ai.pathing">EntityNavigation</a></code></dd>

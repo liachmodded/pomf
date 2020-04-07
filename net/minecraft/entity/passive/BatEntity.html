@@ -166,7 +166,7 @@ extends <a href="../mob/AmbientEntity.html" title="class in net.minecraft.entity
 </thead>
 <tbody>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.entity.EntityType,net.minecraft.world.World)">BatEntity</a></span>&#8203;(<a href="../EntityType.html" title="class in net.minecraft.entity">EntityType</a>&lt;? extends <a href="BatEntity.html" title="class in net.minecraft.entity.passive">BatEntity</a>&gt;&nbsp;entityType,
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.entity.EntityType,net.minecraft.world.World)">BatEntity</a></span>&#8203;(<a href="../EntityType.html" title="class in net.minecraft.entity">EntityType</a>&lt;? extends <a href="BatEntity.html" title="class in net.minecraft.entity.passive">BatEntity</a>&gt;&nbsp;type,
 <a href="../../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -219,22 +219,22 @@ extends <a href="../mob/AmbientEntity.html" title="class in net.minecraft.entity
 </tr>
 <tr class="altColor" id="i4">
 <td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#damage(net.minecraft.entity.damage.DamageSource,float)">damage</a></span>&#8203;(<a href="../damage/DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a>&nbsp;damageSource,
-float&nbsp;float2)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#damage(net.minecraft.entity.damage.DamageSource,float)">damage</a></span>&#8203;(<a href="../damage/DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a>&nbsp;source,
+float&nbsp;amount)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i5">
 <td class="colFirst"><code>protected void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#fall(double,boolean,net.minecraft.block.BlockState,net.minecraft.util.math.BlockPos)">fall</a></span>&#8203;(double&nbsp;double2,
-boolean&nbsp;bool,
-<a href="../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState,
-<a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#fall(double,boolean,net.minecraft.block.BlockState,net.minecraft.util.math.BlockPos)">fall</a></span>&#8203;(double&nbsp;heightDifference,
+boolean&nbsp;onGround,
+<a href="../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;landedState,
+<a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;landedPosition)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i6">
 <td class="colFirst"><code>protected float</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getActiveEyeHeight(net.minecraft.entity.EntityPose,net.minecraft.entity.EntityDimensions)">getActiveEyeHeight</a></span>&#8203;(<a href="../EntityPose.html" title="enum in net.minecraft.entity">EntityPose</a>&nbsp;entityPose,
-<a href="../EntityDimensions.html" title="class in net.minecraft.entity">EntityDimensions</a>&nbsp;entityDimensions)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getActiveEyeHeight(net.minecraft.entity.EntityPose,net.minecraft.entity.EntityDimensions)">getActiveEyeHeight</a></span>&#8203;(<a href="../EntityPose.html" title="enum in net.minecraft.entity">EntityPose</a>&nbsp;pose,
+<a href="../EntityDimensions.html" title="class in net.minecraft.entity">EntityDimensions</a>&nbsp;dimensions)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i7">
@@ -249,7 +249,7 @@ boolean&nbsp;bool,
 </tr>
 <tr class="rowColor" id="i9">
 <td class="colFirst"><code>protected <a href="../../sound/SoundEvent.html" title="class in net.minecraft.sound">SoundEvent</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getHurtSound(net.minecraft.entity.damage.DamageSource)">getHurtSound</a></span>&#8203;(<a href="../damage/DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a>&nbsp;damageSource)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getHurtSound(net.minecraft.entity.damage.DamageSource)">getHurtSound</a></span>&#8203;(<a href="../damage/DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a>&nbsp;source)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i10">
@@ -264,8 +264,8 @@ boolean&nbsp;bool,
 </tr>
 <tr class="altColor" id="i12">
 <td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#handleFallDamage(float,float)">handleFallDamage</a></span>&#8203;(float&nbsp;float2,
-float&nbsp;float3)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#handleFallDamage(float,float)">handleFallDamage</a></span>&#8203;(float&nbsp;fallDistance,
+float&nbsp;damageMultiplier)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i13">
@@ -295,7 +295,7 @@ float&nbsp;float3)</code></th>
 </tr>
 <tr class="altColor" id="i18">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#readCustomDataFromTag(net.minecraft.nbt.CompoundTag)">readCustomDataFromTag</a></span>&#8203;(<a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;compoundTag)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#readCustomDataFromTag(net.minecraft.nbt.CompoundTag)">readCustomDataFromTag</a></span>&#8203;(<a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;tag)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i19">
@@ -315,7 +315,7 @@ float&nbsp;float3)</code></th>
 </tr>
 <tr class="altColor" id="i22">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#writeCustomDataToTag(net.minecraft.nbt.CompoundTag)">writeCustomDataToTag</a></span>&#8203;(<a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;compoundTag)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#writeCustomDataToTag(net.minecraft.nbt.CompoundTag)">writeCustomDataToTag</a></span>&#8203;(<a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;tag)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -363,7 +363,7 @@ float&nbsp;float3)</code></th>
 <li class="blockList">
 <section class="detail">
 <h3><a id="&lt;init&gt;(net.minecraft.entity.EntityType,net.minecraft.world.World)">BatEntity</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">BatEntity</span>&#8203;(<span class="arguments"><a href="../EntityType.html" title="class in net.minecraft.entity">EntityType</a>&lt;? extends <a href="BatEntity.html" title="class in net.minecraft.entity.passive">BatEntity</a>&gt;&nbsp;entityType,
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">BatEntity</span>&#8203;(<span class="arguments"><a href="../EntityType.html" title="class in net.minecraft.entity">EntityType</a>&lt;? extends <a href="BatEntity.html" title="class in net.minecraft.entity.passive">BatEntity</a>&gt;&nbsp;type,
 <a href="../../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world)</span></div>
 </section>
 </li>
@@ -420,7 +420,7 @@ float&nbsp;float3)</code></th>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getHurtSound(net.minecraft.entity.damage.DamageSource)">getHurtSound</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType"><a href="../../sound/SoundEvent.html" title="class in net.minecraft.sound">SoundEvent</a></span>&nbsp;<span class="memberName">getHurtSound</span>&#8203;(<span class="arguments"><a href="../damage/DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a>&nbsp;damageSource)</span></div>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType"><a href="../../sound/SoundEvent.html" title="class in net.minecraft.sound">SoundEvent</a></span>&nbsp;<span class="memberName">getHurtSound</span>&#8203;(<span class="arguments"><a href="../damage/DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a>&nbsp;source)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../LivingEntity.html#getHurtSound(net.minecraft.entity.damage.DamageSource)">getHurtSound</a></code>&nbsp;in class&nbsp;<code><a href="../LivingEntity.html" title="class in net.minecraft.entity">LivingEntity</a></code></dd>
@@ -518,8 +518,8 @@ float&nbsp;float3)</code></th>
 <li class="blockList">
 <section class="detail">
 <h3><a id="handleFallDamage(float,float)">handleFallDamage</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">handleFallDamage</span>&#8203;(<span class="arguments">float&nbsp;float2,
-float&nbsp;float3)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">handleFallDamage</span>&#8203;(<span class="arguments">float&nbsp;fallDistance,
+float&nbsp;damageMultiplier)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../LivingEntity.html#handleFallDamage(float,float)">handleFallDamage</a></code>&nbsp;in class&nbsp;<code><a href="../LivingEntity.html" title="class in net.minecraft.entity">LivingEntity</a></code></dd>
@@ -529,10 +529,10 @@ float&nbsp;float3)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="fall(double,boolean,net.minecraft.block.BlockState,net.minecraft.util.math.BlockPos)">fall</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">fall</span>&#8203;(<span class="arguments">double&nbsp;double2,
-boolean&nbsp;bool,
-<a href="../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState,
-<a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos)</span></div>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">fall</span>&#8203;(<span class="arguments">double&nbsp;heightDifference,
+boolean&nbsp;onGround,
+<a href="../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;landedState,
+<a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;landedPosition)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../LivingEntity.html#fall(double,boolean,net.minecraft.block.BlockState,net.minecraft.util.math.BlockPos)">fall</a></code>&nbsp;in class&nbsp;<code><a href="../LivingEntity.html" title="class in net.minecraft.entity">LivingEntity</a></code></dd>
@@ -552,8 +552,8 @@ boolean&nbsp;bool,
 <li class="blockList">
 <section class="detail">
 <h3><a id="damage(net.minecraft.entity.damage.DamageSource,float)">damage</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">damage</span>&#8203;(<span class="arguments"><a href="../damage/DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a>&nbsp;damageSource,
-float&nbsp;float2)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">damage</span>&#8203;(<span class="arguments"><a href="../damage/DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a>&nbsp;source,
+float&nbsp;amount)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../LivingEntity.html#damage(net.minecraft.entity.damage.DamageSource,float)">damage</a></code>&nbsp;in class&nbsp;<code><a href="../LivingEntity.html" title="class in net.minecraft.entity">LivingEntity</a></code></dd>
@@ -563,7 +563,7 @@ float&nbsp;float2)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="readCustomDataFromTag(net.minecraft.nbt.CompoundTag)">readCustomDataFromTag</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">readCustomDataFromTag</span>&#8203;(<span class="arguments"><a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;compoundTag)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">readCustomDataFromTag</span>&#8203;(<span class="arguments"><a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;tag)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../mob/MobEntity.html#readCustomDataFromTag(net.minecraft.nbt.CompoundTag)">readCustomDataFromTag</a></code>&nbsp;in class&nbsp;<code><a href="../mob/MobEntity.html" title="class in net.minecraft.entity.mob">MobEntity</a></code></dd>
@@ -573,7 +573,7 @@ float&nbsp;float2)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="writeCustomDataToTag(net.minecraft.nbt.CompoundTag)">writeCustomDataToTag</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">writeCustomDataToTag</span>&#8203;(<span class="arguments"><a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;compoundTag)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">writeCustomDataToTag</span>&#8203;(<span class="arguments"><a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;tag)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../mob/MobEntity.html#writeCustomDataToTag(net.minecraft.nbt.CompoundTag)">writeCustomDataToTag</a></code>&nbsp;in class&nbsp;<code><a href="../mob/MobEntity.html" title="class in net.minecraft.entity.mob">MobEntity</a></code></dd>
@@ -593,8 +593,8 @@ float&nbsp;float2)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getActiveEyeHeight(net.minecraft.entity.EntityPose,net.minecraft.entity.EntityDimensions)">getActiveEyeHeight</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">float</span>&nbsp;<span class="memberName">getActiveEyeHeight</span>&#8203;(<span class="arguments"><a href="../EntityPose.html" title="enum in net.minecraft.entity">EntityPose</a>&nbsp;entityPose,
-<a href="../EntityDimensions.html" title="class in net.minecraft.entity">EntityDimensions</a>&nbsp;entityDimensions)</span></div>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">float</span>&nbsp;<span class="memberName">getActiveEyeHeight</span>&#8203;(<span class="arguments"><a href="../EntityPose.html" title="enum in net.minecraft.entity">EntityPose</a>&nbsp;pose,
+<a href="../EntityDimensions.html" title="class in net.minecraft.entity">EntityDimensions</a>&nbsp;dimensions)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../LivingEntity.html#getActiveEyeHeight(net.minecraft.entity.EntityPose,net.minecraft.entity.EntityDimensions)">getActiveEyeHeight</a></code>&nbsp;in class&nbsp;<code><a href="../LivingEntity.html" title="class in net.minecraft.entity">LivingEntity</a></code></dd>

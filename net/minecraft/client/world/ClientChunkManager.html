@@ -214,7 +214,7 @@ boolean&nbsp;bool)</code></th>
 </tr>
 <tr class="altColor" id="i6">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#onLightUpdate(net.minecraft.world.LightType,net.minecraft.util.math.ChunkSectionPos)">onLightUpdate</a></span>&#8203;(<a href="../../world/LightType.html" title="enum in net.minecraft.world">LightType</a>&nbsp;lightType,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#onLightUpdate(net.minecraft.world.LightType,net.minecraft.util.math.ChunkSectionPos)">onLightUpdate</a></span>&#8203;(<a href="../../world/LightType.html" title="enum in net.minecraft.world">LightType</a>&nbsp;type,
 <a href="../../util/math/ChunkSectionPos.html" title="class in net.minecraft.util.math">ChunkSectionPos</a>&nbsp;chunkSectionPos)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -226,12 +226,12 @@ int&nbsp;z)</code></th>
 </tr>
 <tr class="altColor" id="i8">
 <td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#shouldTickBlock(net.minecraft.util.math.BlockPos)">shouldTickBlock</a></span>&#8203;(<a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#shouldTickBlock(net.minecraft.util.math.BlockPos)">shouldTickBlock</a></span>&#8203;(<a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i9">
 <td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#shouldTickChunk(net.minecraft.util.math.ChunkPos)">shouldTickChunk</a></span>&#8203;(<a href="../../util/math/ChunkPos.html" title="class in net.minecraft.util.math">ChunkPos</a>&nbsp;chunkPos)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#shouldTickChunk(net.minecraft.util.math.ChunkPos)">shouldTickChunk</a></span>&#8203;(<a href="../../util/math/ChunkPos.html" title="class in net.minecraft.util.math">ChunkPos</a>&nbsp;pos)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i10">
@@ -241,7 +241,7 @@ int&nbsp;z)</code></th>
 </tr>
 <tr class="rowColor" id="i11">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#tick(java.util.function.BooleanSupplier)">tick</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/BooleanSupplier.html?is-external=true" title="class or interface in java.util.function" class="externalLink">BooleanSupplier</a>&nbsp;booleanSupplier)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#tick(java.util.function.BooleanSupplier)">tick</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/BooleanSupplier.html?is-external=true" title="class or interface in java.util.function" class="externalLink">BooleanSupplier</a>&nbsp;shouldKeepTicking)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i12">
@@ -350,7 +350,7 @@ boolean&nbsp;bool)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="tick(java.util.function.BooleanSupplier)">tick</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">tick</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/BooleanSupplier.html?is-external=true" title="class or interface in java.util.function" class="externalLink">BooleanSupplier</a>&nbsp;booleanSupplier)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">tick</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/BooleanSupplier.html?is-external=true" title="class or interface in java.util.function" class="externalLink">BooleanSupplier</a>&nbsp;shouldKeepTicking)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../world/chunk/ChunkManager.html#tick(java.util.function.BooleanSupplier)">tick</a></code>&nbsp;in class&nbsp;<code><a href="../../world/chunk/ChunkManager.html" title="class in net.minecraft.world.chunk">ChunkManager</a></code></dd>
@@ -389,14 +389,14 @@ int&nbsp;z)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="onLightUpdate(net.minecraft.world.LightType,net.minecraft.util.math.ChunkSectionPos)">onLightUpdate</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">onLightUpdate</span>&#8203;(<span class="arguments"><a href="../../world/LightType.html" title="enum in net.minecraft.world">LightType</a>&nbsp;lightType,
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">onLightUpdate</span>&#8203;(<span class="arguments"><a href="../../world/LightType.html" title="enum in net.minecraft.world">LightType</a>&nbsp;type,
 <a href="../../util/math/ChunkSectionPos.html" title="class in net.minecraft.util.math">ChunkSectionPos</a>&nbsp;chunkSectionPos)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="shouldTickBlock(net.minecraft.util.math.BlockPos)">shouldTickBlock</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">shouldTickBlock</span>&#8203;(<span class="arguments"><a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">shouldTickBlock</span>&#8203;(<span class="arguments"><a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../world/chunk/ChunkManager.html#shouldTickBlock(net.minecraft.util.math.BlockPos)">shouldTickBlock</a></code>&nbsp;in class&nbsp;<code><a href="../../world/chunk/ChunkManager.html" title="class in net.minecraft.world.chunk">ChunkManager</a></code></dd>
@@ -406,7 +406,7 @@ int&nbsp;z)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="shouldTickChunk(net.minecraft.util.math.ChunkPos)">shouldTickChunk</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">shouldTickChunk</span>&#8203;(<span class="arguments"><a href="../../util/math/ChunkPos.html" title="class in net.minecraft.util.math">ChunkPos</a>&nbsp;chunkPos)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">shouldTickChunk</span>&#8203;(<span class="arguments"><a href="../../util/math/ChunkPos.html" title="class in net.minecraft.util.math">ChunkPos</a>&nbsp;pos)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../world/chunk/ChunkManager.html#shouldTickChunk(net.minecraft.util.math.ChunkPos)">shouldTickChunk</a></code>&nbsp;in class&nbsp;<code><a href="../../world/chunk/ChunkManager.html" title="class in net.minecraft.world.chunk">ChunkManager</a></code></dd>

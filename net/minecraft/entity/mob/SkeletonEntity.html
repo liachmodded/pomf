@@ -170,7 +170,7 @@ extends <a href="AbstractSkeletonEntity.html" title="class in net.minecraft.enti
 </thead>
 <tbody>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.entity.EntityType,net.minecraft.world.World)">SkeletonEntity</a></span>&#8203;(<a href="../EntityType.html" title="class in net.minecraft.entity">EntityType</a>&lt;? extends <a href="SkeletonEntity.html" title="class in net.minecraft.entity.mob">SkeletonEntity</a>&gt;&nbsp;entityType,
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.entity.EntityType,net.minecraft.world.World)">SkeletonEntity</a></span>&#8203;(<a href="../EntityType.html" title="class in net.minecraft.entity">EntityType</a>&lt;? extends <a href="SkeletonEntity.html" title="class in net.minecraft.entity.mob">SkeletonEntity</a>&gt;&nbsp;type,
 <a href="../../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -199,9 +199,9 @@ extends <a href="AbstractSkeletonEntity.html" title="class in net.minecraft.enti
 <tbody>
 <tr class="altColor" id="i0">
 <td class="colFirst"><code>protected void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#dropEquipment(net.minecraft.entity.damage.DamageSource,int,boolean)">dropEquipment</a></span>&#8203;(<a href="../damage/DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a>&nbsp;damageSource,
-int&nbsp;int2,
-boolean&nbsp;bool)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#dropEquipment(net.minecraft.entity.damage.DamageSource,int,boolean)">dropEquipment</a></span>&#8203;(<a href="../damage/DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a>&nbsp;source,
+int&nbsp;lootingMultiplier,
+boolean&nbsp;allowDrops)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
@@ -216,7 +216,7 @@ boolean&nbsp;bool)</code></th>
 </tr>
 <tr class="rowColor" id="i3">
 <td class="colFirst"><code>protected <a href="../../sound/SoundEvent.html" title="class in net.minecraft.sound">SoundEvent</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getHurtSound(net.minecraft.entity.damage.DamageSource)">getHurtSound</a></span>&#8203;(<a href="../damage/DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a>&nbsp;damageSource)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getHurtSound(net.minecraft.entity.damage.DamageSource)">getHurtSound</a></span>&#8203;(<a href="../damage/DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a>&nbsp;source)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i4">
@@ -279,7 +279,7 @@ boolean&nbsp;bool)</code></th>
 <li class="blockList">
 <section class="detail">
 <h3><a id="&lt;init&gt;(net.minecraft.entity.EntityType,net.minecraft.world.World)">SkeletonEntity</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">SkeletonEntity</span>&#8203;(<span class="arguments"><a href="../EntityType.html" title="class in net.minecraft.entity">EntityType</a>&lt;? extends <a href="SkeletonEntity.html" title="class in net.minecraft.entity.mob">SkeletonEntity</a>&gt;&nbsp;entityType,
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">SkeletonEntity</span>&#8203;(<span class="arguments"><a href="../EntityType.html" title="class in net.minecraft.entity">EntityType</a>&lt;? extends <a href="SkeletonEntity.html" title="class in net.minecraft.entity.mob">SkeletonEntity</a>&gt;&nbsp;type,
 <a href="../../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world)</span></div>
 </section>
 </li>
@@ -306,7 +306,7 @@ boolean&nbsp;bool)</code></th>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getHurtSound(net.minecraft.entity.damage.DamageSource)">getHurtSound</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType"><a href="../../sound/SoundEvent.html" title="class in net.minecraft.sound">SoundEvent</a></span>&nbsp;<span class="memberName">getHurtSound</span>&#8203;(<span class="arguments"><a href="../damage/DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a>&nbsp;damageSource)</span></div>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType"><a href="../../sound/SoundEvent.html" title="class in net.minecraft.sound">SoundEvent</a></span>&nbsp;<span class="memberName">getHurtSound</span>&#8203;(<span class="arguments"><a href="../damage/DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a>&nbsp;source)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="HostileEntity.html#getHurtSound(net.minecraft.entity.damage.DamageSource)">getHurtSound</a></code>&nbsp;in class&nbsp;<code><a href="HostileEntity.html" title="class in net.minecraft.entity.mob">HostileEntity</a></code></dd>
@@ -336,9 +336,9 @@ boolean&nbsp;bool)</code></th>
 <li class="blockList">
 <section class="detail">
 <h3><a id="dropEquipment(net.minecraft.entity.damage.DamageSource,int,boolean)">dropEquipment</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">dropEquipment</span>&#8203;(<span class="arguments"><a href="../damage/DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a>&nbsp;damageSource,
-int&nbsp;int2,
-boolean&nbsp;bool)</span></div>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">dropEquipment</span>&#8203;(<span class="arguments"><a href="../damage/DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a>&nbsp;source,
+int&nbsp;lootingMultiplier,
+boolean&nbsp;allowDrops)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="MobEntity.html#dropEquipment(net.minecraft.entity.damage.DamageSource,int,boolean)">dropEquipment</a></code>&nbsp;in class&nbsp;<code><a href="MobEntity.html" title="class in net.minecraft.entity.mob">MobEntity</a></code></dd>

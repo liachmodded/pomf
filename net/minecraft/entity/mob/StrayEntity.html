@@ -170,7 +170,7 @@ extends <a href="AbstractSkeletonEntity.html" title="class in net.minecraft.enti
 </thead>
 <tbody>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.entity.EntityType,net.minecraft.world.World)">StrayEntity</a></span>&#8203;(<a href="../EntityType.html" title="class in net.minecraft.entity">EntityType</a>&lt;? extends <a href="StrayEntity.html" title="class in net.minecraft.entity.mob">StrayEntity</a>&gt;&nbsp;entityType,
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.entity.EntityType,net.minecraft.world.World)">StrayEntity</a></span>&#8203;(<a href="../EntityType.html" title="class in net.minecraft.entity">EntityType</a>&lt;? extends <a href="StrayEntity.html" title="class in net.minecraft.entity.mob">StrayEntity</a>&gt;&nbsp;type,
 <a href="../../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -208,8 +208,8 @@ extends <a href="AbstractSkeletonEntity.html" title="class in net.minecraft.enti
 </tr>
 <tr class="rowColor" id="i1">
 <td class="colFirst"><code>protected <a href="../projectile/PersistentProjectileEntity.html" title="class in net.minecraft.entity.projectile">PersistentProjectileEntity</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createArrowProjectile(net.minecraft.item.ItemStack,float)">createArrowProjectile</a></span>&#8203;(<a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;itemStack,
-float&nbsp;float2)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createArrowProjectile(net.minecraft.item.ItemStack,float)">createArrowProjectile</a></span>&#8203;(<a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;arrow,
+float&nbsp;damageModifier)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i2">
@@ -224,7 +224,7 @@ float&nbsp;float2)</code></th>
 </tr>
 <tr class="altColor" id="i4">
 <td class="colFirst"><code>protected <a href="../../sound/SoundEvent.html" title="class in net.minecraft.sound">SoundEvent</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getHurtSound(net.minecraft.entity.damage.DamageSource)">getHurtSound</a></span>&#8203;(<a href="../damage/DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a>&nbsp;damageSource)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getHurtSound(net.minecraft.entity.damage.DamageSource)">getHurtSound</a></span>&#8203;(<a href="../damage/DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a>&nbsp;source)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i5">
@@ -287,7 +287,7 @@ float&nbsp;float2)</code></th>
 <li class="blockList">
 <section class="detail">
 <h3><a id="&lt;init&gt;(net.minecraft.entity.EntityType,net.minecraft.world.World)">StrayEntity</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">StrayEntity</span>&#8203;(<span class="arguments"><a href="../EntityType.html" title="class in net.minecraft.entity">EntityType</a>&lt;? extends <a href="StrayEntity.html" title="class in net.minecraft.entity.mob">StrayEntity</a>&gt;&nbsp;entityType,
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">StrayEntity</span>&#8203;(<span class="arguments"><a href="../EntityType.html" title="class in net.minecraft.entity">EntityType</a>&lt;? extends <a href="StrayEntity.html" title="class in net.minecraft.entity.mob">StrayEntity</a>&gt;&nbsp;type,
 <a href="../../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world)</span></div>
 </section>
 </li>
@@ -324,7 +324,7 @@ float&nbsp;float2)</code></th>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getHurtSound(net.minecraft.entity.damage.DamageSource)">getHurtSound</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType"><a href="../../sound/SoundEvent.html" title="class in net.minecraft.sound">SoundEvent</a></span>&nbsp;<span class="memberName">getHurtSound</span>&#8203;(<span class="arguments"><a href="../damage/DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a>&nbsp;damageSource)</span></div>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType"><a href="../../sound/SoundEvent.html" title="class in net.minecraft.sound">SoundEvent</a></span>&nbsp;<span class="memberName">getHurtSound</span>&#8203;(<span class="arguments"><a href="../damage/DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a>&nbsp;source)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="HostileEntity.html#getHurtSound(net.minecraft.entity.damage.DamageSource)">getHurtSound</a></code>&nbsp;in class&nbsp;<code><a href="HostileEntity.html" title="class in net.minecraft.entity.mob">HostileEntity</a></code></dd>
@@ -354,8 +354,8 @@ float&nbsp;float2)</code></th>
 <li class="blockList">
 <section class="detail">
 <h3><a id="createArrowProjectile(net.minecraft.item.ItemStack,float)">createArrowProjectile</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType"><a href="../projectile/PersistentProjectileEntity.html" title="class in net.minecraft.entity.projectile">PersistentProjectileEntity</a></span>&nbsp;<span class="memberName">createArrowProjectile</span>&#8203;(<span class="arguments"><a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;itemStack,
-float&nbsp;float2)</span></div>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType"><a href="../projectile/PersistentProjectileEntity.html" title="class in net.minecraft.entity.projectile">PersistentProjectileEntity</a></span>&nbsp;<span class="memberName">createArrowProjectile</span>&#8203;(<span class="arguments"><a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;arrow,
+float&nbsp;damageModifier)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="AbstractSkeletonEntity.html#createArrowProjectile(net.minecraft.item.ItemStack,float)">createArrowProjectile</a></code>&nbsp;in class&nbsp;<code><a href="AbstractSkeletonEntity.html" title="class in net.minecraft.entity.mob">AbstractSkeletonEntity</a></code></dd>

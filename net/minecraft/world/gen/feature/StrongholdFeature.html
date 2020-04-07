@@ -162,7 +162,7 @@ extends <a href="StructureFeature.html" title="class in net.minecraft.world.gen.
 </thead>
 <tbody>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.util.function.Function)">StrongholdFeature</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;com.mojang.datafixers.Dynamic&lt;?&gt;,&#8203;? extends <a href="DefaultFeatureConfig.html" title="class in net.minecraft.world.gen.feature">DefaultFeatureConfig</a>&gt;&nbsp;function)</code></th>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.util.function.Function)">StrongholdFeature</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;com.mojang.datafixers.Dynamic&lt;?&gt;,&#8203;? extends <a href="DefaultFeatureConfig.html" title="class in net.minecraft.world.gen.feature">DefaultFeatureConfig</a>&gt;&nbsp;configDeserializer)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -209,7 +209,7 @@ extends <a href="StructureFeature.html" title="class in net.minecraft.world.gen.
 <a href="../chunk/ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">ChunkGenerator</a>&lt;? extends <a href="../chunk/ChunkGeneratorConfig.html" title="class in net.minecraft.world.gen.chunk">ChunkGeneratorConfig</a>&gt;&nbsp;chunkGenerator,
 <a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
 int&nbsp;int2,
-boolean&nbsp;bool)</code></th>
+boolean&nbsp;skipExistingChunks)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i4">
@@ -217,8 +217,8 @@ boolean&nbsp;bool)</code></th>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#shouldStartAt(net.minecraft.world.biome.source.BiomeAccess,net.minecraft.world.gen.chunk.ChunkGenerator,java.util.Random,int,int,net.minecraft.world.biome.Biome)">shouldStartAt</a></span>&#8203;(<a href="../../biome/source/BiomeAccess.html" title="class in net.minecraft.world.biome.source">BiomeAccess</a>&nbsp;biomeAccess,
 <a href="../chunk/ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">ChunkGenerator</a>&lt;?&gt;&nbsp;chunkGenerator,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random,
-int&nbsp;int2,
-int&nbsp;int3,
+int&nbsp;chunkX,
+int&nbsp;chunkZ,
 <a href="../../biome/Biome.html" title="class in net.minecraft.world.biome">Biome</a>&nbsp;biome)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -257,7 +257,7 @@ int&nbsp;int3,
 <li class="blockList">
 <section class="detail">
 <h3><a id="&lt;init&gt;(java.util.function.Function)">StrongholdFeature</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">StrongholdFeature</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;com.mojang.datafixers.Dynamic&lt;?&gt;,&#8203;? extends <a href="DefaultFeatureConfig.html" title="class in net.minecraft.world.gen.feature">DefaultFeatureConfig</a>&gt;&nbsp;function)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">StrongholdFeature</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;com.mojang.datafixers.Dynamic&lt;?&gt;,&#8203;? extends <a href="DefaultFeatureConfig.html" title="class in net.minecraft.world.gen.feature">DefaultFeatureConfig</a>&gt;&nbsp;configDeserializer)</span></div>
 </section>
 </li>
 </ul>
@@ -276,8 +276,8 @@ int&nbsp;int3,
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">shouldStartAt</span>&#8203;(<span class="arguments"><a href="../../biome/source/BiomeAccess.html" title="class in net.minecraft.world.biome.source">BiomeAccess</a>&nbsp;biomeAccess,
 <a href="../chunk/ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">ChunkGenerator</a>&lt;?&gt;&nbsp;chunkGenerator,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random,
-int&nbsp;int2,
-int&nbsp;int3,
+int&nbsp;chunkX,
+int&nbsp;chunkZ,
 <a href="../../biome/Biome.html" title="class in net.minecraft.world.biome">Biome</a>&nbsp;biome)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
@@ -322,7 +322,7 @@ int&nbsp;int3,
 <a href="../chunk/ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">ChunkGenerator</a>&lt;? extends <a href="../chunk/ChunkGeneratorConfig.html" title="class in net.minecraft.world.gen.chunk">ChunkGeneratorConfig</a>&gt;&nbsp;chunkGenerator,
 <a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
 int&nbsp;int2,
-boolean&nbsp;bool)</span></div>
+boolean&nbsp;skipExistingChunks)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="StructureFeature.html#locateStructure(net.minecraft.server.world.ServerWorld,net.minecraft.world.gen.chunk.ChunkGenerator,net.minecraft.util.math.BlockPos,int,boolean)">locateStructure</a></code>&nbsp;in class&nbsp;<code><a href="StructureFeature.html" title="class in net.minecraft.world.gen.feature">StructureFeature</a>&lt;<a href="DefaultFeatureConfig.html" title="class in net.minecraft.world.gen.feature">DefaultFeatureConfig</a>&gt;</code></dd>

@@ -179,13 +179,13 @@ boolean&nbsp;hasBlockLight,
 <tbody>
 <tr class="altColor" id="i0">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addLightSource(net.minecraft.util.math.BlockPos,int)">addLightSource</a></span>&#8203;(<a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
-int&nbsp;int2)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addLightSource(net.minecraft.util.math.BlockPos,int)">addLightSource</a></span>&#8203;(<a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+int&nbsp;level)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#checkBlock(net.minecraft.util.math.BlockPos)">checkBlock</a></span>&#8203;(<a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#checkBlock(net.minecraft.util.math.BlockPos)">checkBlock</a></span>&#8203;(<a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i2">
@@ -195,9 +195,9 @@ int&nbsp;int2)</code></th>
 </tr>
 <tr class="rowColor" id="i3">
 <td class="colFirst"><code>int</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#doLightUpdates(int,boolean,boolean)">doLightUpdates</a></span>&#8203;(int&nbsp;int2,
-boolean&nbsp;bool,
-boolean&nbsp;bool2)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#doLightUpdates(int,boolean,boolean)">doLightUpdates</a></span>&#8203;(int&nbsp;maxUpdateCount,
+boolean&nbsp;doSkylight,
+boolean&nbsp;skipEdgeLightPropagation)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i4">
@@ -209,20 +209,20 @@ boolean&nbsp;excludeBlocks)</code></th>
 <tr class="rowColor" id="i5">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#queueData(net.minecraft.world.LightType,net.minecraft.util.math.ChunkSectionPos,net.minecraft.world.chunk.ChunkNibbleArray)">queueData</a></span>&#8203;(<a href="../../world/LightType.html" title="enum in net.minecraft.world">LightType</a>&nbsp;lightType,
-<a href="../../util/math/ChunkSectionPos.html" title="class in net.minecraft.util.math">ChunkSectionPos</a>&nbsp;chunkSectionPos,
-<a href="../../world/chunk/ChunkNibbleArray.html" title="class in net.minecraft.world.chunk">ChunkNibbleArray</a>&nbsp;chunkNibbleArray)</code></th>
+<a href="../../util/math/ChunkSectionPos.html" title="class in net.minecraft.util.math">ChunkSectionPos</a>&nbsp;pos,
+<a href="../../world/chunk/ChunkNibbleArray.html" title="class in net.minecraft.world.chunk">ChunkNibbleArray</a>&nbsp;nibbles)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i6">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setLightEnabled(net.minecraft.util.math.ChunkPos,boolean)">setLightEnabled</a></span>&#8203;(<a href="../../util/math/ChunkPos.html" title="class in net.minecraft.util.math">ChunkPos</a>&nbsp;chunkPos,
-boolean&nbsp;bool)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setLightEnabled(net.minecraft.util.math.ChunkPos,boolean)">setLightEnabled</a></span>&#8203;(<a href="../../util/math/ChunkPos.html" title="class in net.minecraft.util.math">ChunkPos</a>&nbsp;pos,
+boolean&nbsp;lightEnabled)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i7">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setRetainData(net.minecraft.util.math.ChunkPos,boolean)">setRetainData</a></span>&#8203;(<a href="../../util/math/ChunkPos.html" title="class in net.minecraft.util.math">ChunkPos</a>&nbsp;chunkPos,
-boolean&nbsp;bool)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setRetainData(net.minecraft.util.math.ChunkPos,boolean)">setRetainData</a></span>&#8203;(<a href="../../util/math/ChunkPos.html" title="class in net.minecraft.util.math">ChunkPos</a>&nbsp;pos,
+boolean&nbsp;retainData)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i8">
@@ -242,8 +242,8 @@ boolean&nbsp;bool)</code></th>
 </tr>
 <tr class="rowColor" id="i11">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#updateSectionStatus(net.minecraft.util.math.ChunkSectionPos,boolean)">updateSectionStatus</a></span>&#8203;(<a href="../../util/math/ChunkSectionPos.html" title="class in net.minecraft.util.math">ChunkSectionPos</a>&nbsp;chunkSectionPos,
-boolean&nbsp;bool)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#updateSectionStatus(net.minecraft.util.math.ChunkSectionPos,boolean)">updateSectionStatus</a></span>&#8203;(<a href="../../util/math/ChunkSectionPos.html" title="class in net.minecraft.util.math">ChunkSectionPos</a>&nbsp;pos,
+boolean&nbsp;status)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -311,9 +311,9 @@ boolean&nbsp;hasBlockLight,
 <li class="blockList">
 <section class="detail">
 <h3><a id="doLightUpdates(int,boolean,boolean)">doLightUpdates</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">doLightUpdates</span>&#8203;(<span class="arguments">int&nbsp;int2,
-boolean&nbsp;bool,
-boolean&nbsp;bool2)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">doLightUpdates</span>&#8203;(<span class="arguments">int&nbsp;maxUpdateCount,
+boolean&nbsp;doSkylight,
+boolean&nbsp;skipEdgeLightPropagation)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../world/chunk/light/LightingProvider.html#doLightUpdates(int,boolean,boolean)">doLightUpdates</a></code>&nbsp;in class&nbsp;<code><a href="../../world/chunk/light/LightingProvider.html" title="class in net.minecraft.world.chunk.light">LightingProvider</a></code></dd>
@@ -323,8 +323,8 @@ boolean&nbsp;bool2)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="addLightSource(net.minecraft.util.math.BlockPos,int)">addLightSource</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">addLightSource</span>&#8203;(<span class="arguments"><a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
-int&nbsp;int2)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">addLightSource</span>&#8203;(<span class="arguments"><a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+int&nbsp;level)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../world/chunk/light/LightingProvider.html#addLightSource(net.minecraft.util.math.BlockPos,int)">addLightSource</a></code>&nbsp;in class&nbsp;<code><a href="../../world/chunk/light/LightingProvider.html" title="class in net.minecraft.world.chunk.light">LightingProvider</a></code></dd>
@@ -334,7 +334,7 @@ int&nbsp;int2)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="checkBlock(net.minecraft.util.math.BlockPos)">checkBlock</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">checkBlock</span>&#8203;(<span class="arguments"><a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">checkBlock</span>&#8203;(<span class="arguments"><a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../world/chunk/light/LightingProvider.html#checkBlock(net.minecraft.util.math.BlockPos)">checkBlock</a></code>&nbsp;in class&nbsp;<code><a href="../../world/chunk/light/LightingProvider.html" title="class in net.minecraft.world.chunk.light">LightingProvider</a></code></dd>
@@ -350,8 +350,8 @@ int&nbsp;int2)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="updateSectionStatus(net.minecraft.util.math.ChunkSectionPos,boolean)">updateSectionStatus</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">updateSectionStatus</span>&#8203;(<span class="arguments"><a href="../../util/math/ChunkSectionPos.html" title="class in net.minecraft.util.math">ChunkSectionPos</a>&nbsp;chunkSectionPos,
-boolean&nbsp;bool)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">updateSectionStatus</span>&#8203;(<span class="arguments"><a href="../../util/math/ChunkSectionPos.html" title="class in net.minecraft.util.math">ChunkSectionPos</a>&nbsp;pos,
+boolean&nbsp;status)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../world/chunk/light/LightingView.html#updateSectionStatus(net.minecraft.util.math.ChunkSectionPos,boolean)">updateSectionStatus</a></code>&nbsp;in interface&nbsp;<code><a href="../../world/chunk/light/LightingView.html" title="interface in net.minecraft.world.chunk.light">LightingView</a></code></dd>
@@ -363,8 +363,8 @@ boolean&nbsp;bool)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="setLightEnabled(net.minecraft.util.math.ChunkPos,boolean)">setLightEnabled</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setLightEnabled</span>&#8203;(<span class="arguments"><a href="../../util/math/ChunkPos.html" title="class in net.minecraft.util.math">ChunkPos</a>&nbsp;chunkPos,
-boolean&nbsp;bool)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setLightEnabled</span>&#8203;(<span class="arguments"><a href="../../util/math/ChunkPos.html" title="class in net.minecraft.util.math">ChunkPos</a>&nbsp;pos,
+boolean&nbsp;lightEnabled)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../world/chunk/light/LightingProvider.html#setLightEnabled(net.minecraft.util.math.ChunkPos,boolean)">setLightEnabled</a></code>&nbsp;in class&nbsp;<code><a href="../../world/chunk/light/LightingProvider.html" title="class in net.minecraft.world.chunk.light">LightingProvider</a></code></dd>
@@ -375,8 +375,8 @@ boolean&nbsp;bool)</span></div>
 <section class="detail">
 <h3><a id="queueData(net.minecraft.world.LightType,net.minecraft.util.math.ChunkSectionPos,net.minecraft.world.chunk.ChunkNibbleArray)">queueData</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">queueData</span>&#8203;(<span class="arguments"><a href="../../world/LightType.html" title="enum in net.minecraft.world">LightType</a>&nbsp;lightType,
-<a href="../../util/math/ChunkSectionPos.html" title="class in net.minecraft.util.math">ChunkSectionPos</a>&nbsp;chunkSectionPos,
-<a href="../../world/chunk/ChunkNibbleArray.html" title="class in net.minecraft.world.chunk">ChunkNibbleArray</a>&nbsp;chunkNibbleArray)</span></div>
+<a href="../../util/math/ChunkSectionPos.html" title="class in net.minecraft.util.math">ChunkSectionPos</a>&nbsp;pos,
+<a href="../../world/chunk/ChunkNibbleArray.html" title="class in net.minecraft.world.chunk">ChunkNibbleArray</a>&nbsp;nibbles)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../world/chunk/light/LightingProvider.html#queueData(net.minecraft.world.LightType,net.minecraft.util.math.ChunkSectionPos,net.minecraft.world.chunk.ChunkNibbleArray)">queueData</a></code>&nbsp;in class&nbsp;<code><a href="../../world/chunk/light/LightingProvider.html" title="class in net.minecraft.world.chunk.light">LightingProvider</a></code></dd>
@@ -386,8 +386,8 @@ boolean&nbsp;bool)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="setRetainData(net.minecraft.util.math.ChunkPos,boolean)">setRetainData</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setRetainData</span>&#8203;(<span class="arguments"><a href="../../util/math/ChunkPos.html" title="class in net.minecraft.util.math">ChunkPos</a>&nbsp;chunkPos,
-boolean&nbsp;bool)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setRetainData</span>&#8203;(<span class="arguments"><a href="../../util/math/ChunkPos.html" title="class in net.minecraft.util.math">ChunkPos</a>&nbsp;pos,
+boolean&nbsp;retainData)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../world/chunk/light/LightingProvider.html#setRetainData(net.minecraft.util.math.ChunkPos,boolean)">setRetainData</a></code>&nbsp;in class&nbsp;<code><a href="../../world/chunk/light/LightingProvider.html" title="class in net.minecraft.world.chunk.light">LightingProvider</a></code></dd>

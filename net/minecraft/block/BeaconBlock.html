@@ -188,7 +188,7 @@ implements <a href="Stainable.html" title="interface in net.minecraft.block">Sta
 <tbody>
 <tr class="altColor" id="i0">
 <td class="colFirst"><code><a href="entity/BlockEntity.html" title="class in net.minecraft.block.entity">BlockEntity</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createBlockEntity(net.minecraft.world.BlockView)">createBlockEntity</a></span>&#8203;(<a href="../world/BlockView.html" title="interface in net.minecraft.world">BlockView</a>&nbsp;blockView)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createBlockEntity(net.minecraft.world.BlockView)">createBlockEntity</a></span>&#8203;(<a href="../world/BlockView.html" title="interface in net.minecraft.world">BlockView</a>&nbsp;world)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
@@ -198,26 +198,26 @@ implements <a href="Stainable.html" title="interface in net.minecraft.block">Sta
 </tr>
 <tr class="altColor" id="i2">
 <td class="colFirst"><code><a href="BlockRenderType.html" title="enum in net.minecraft.block">BlockRenderType</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getRenderType(net.minecraft.block.BlockState)">getRenderType</a></span>&#8203;(<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getRenderType(net.minecraft.block.BlockState)">getRenderType</a></span>&#8203;(<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i3">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#onPlaced(net.minecraft.world.World,net.minecraft.util.math.BlockPos,net.minecraft.block.BlockState,net.minecraft.entity.LivingEntity,net.minecraft.item.ItemStack)">onPlaced</a></span>&#8203;(<a href="../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world,
-<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
-<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState,
-<a href="../entity/LivingEntity.html" title="class in net.minecraft.entity">LivingEntity</a>&nbsp;livingEntity,
+<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state,
+<a href="../entity/LivingEntity.html" title="class in net.minecraft.entity">LivingEntity</a>&nbsp;placer,
 <a href="../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;itemStack)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i4">
 <td class="colFirst"><code><a href="../util/ActionResult.html" title="enum in net.minecraft.util">ActionResult</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#onUse(net.minecraft.block.BlockState,net.minecraft.world.World,net.minecraft.util.math.BlockPos,net.minecraft.entity.player.PlayerEntity,net.minecraft.util.Hand,net.minecraft.util.hit.BlockHitResult)">onUse</a></span>&#8203;(<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#onUse(net.minecraft.block.BlockState,net.minecraft.world.World,net.minecraft.util.math.BlockPos,net.minecraft.entity.player.PlayerEntity,net.minecraft.util.Hand,net.minecraft.util.hit.BlockHitResult)">onUse</a></span>&#8203;(<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state,
 <a href="../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world,
-<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
-<a href="../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;playerEntity,
+<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<a href="../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;player,
 <a href="../util/Hand.html" title="enum in net.minecraft.util">Hand</a>&nbsp;hand,
-<a href="../util/hit/BlockHitResult.html" title="class in net.minecraft.util.hit">BlockHitResult</a>&nbsp;blockHitResult)</code></th>
+<a href="../util/hit/BlockHitResult.html" title="class in net.minecraft.util.hit">BlockHitResult</a>&nbsp;hit)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -286,7 +286,7 @@ implements <a href="Stainable.html" title="interface in net.minecraft.block">Sta
 <li class="blockList">
 <section class="detail">
 <h3><a id="createBlockEntity(net.minecraft.world.BlockView)">createBlockEntity</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="entity/BlockEntity.html" title="class in net.minecraft.block.entity">BlockEntity</a></span>&nbsp;<span class="memberName">createBlockEntity</span>&#8203;(<span class="arguments"><a href="../world/BlockView.html" title="interface in net.minecraft.world">BlockView</a>&nbsp;blockView)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="entity/BlockEntity.html" title="class in net.minecraft.block.entity">BlockEntity</a></span>&nbsp;<span class="memberName">createBlockEntity</span>&#8203;(<span class="arguments"><a href="../world/BlockView.html" title="interface in net.minecraft.world">BlockView</a>&nbsp;world)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="BlockEntityProvider.html#createBlockEntity(net.minecraft.world.BlockView)">createBlockEntity</a></code>&nbsp;in interface&nbsp;<code><a href="BlockEntityProvider.html" title="interface in net.minecraft.block">BlockEntityProvider</a></code></dd>
@@ -296,12 +296,12 @@ implements <a href="Stainable.html" title="interface in net.minecraft.block">Sta
 <li class="blockList">
 <section class="detail">
 <h3><a id="onUse(net.minecraft.block.BlockState,net.minecraft.world.World,net.minecraft.util.math.BlockPos,net.minecraft.entity.player.PlayerEntity,net.minecraft.util.Hand,net.minecraft.util.hit.BlockHitResult)">onUse</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../util/ActionResult.html" title="enum in net.minecraft.util">ActionResult</a></span>&nbsp;<span class="memberName">onUse</span>&#8203;(<span class="arguments"><a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState,
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../util/ActionResult.html" title="enum in net.minecraft.util">ActionResult</a></span>&nbsp;<span class="memberName">onUse</span>&#8203;(<span class="arguments"><a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state,
 <a href="../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world,
-<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
-<a href="../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;playerEntity,
+<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<a href="../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;player,
 <a href="../util/Hand.html" title="enum in net.minecraft.util">Hand</a>&nbsp;hand,
-<a href="../util/hit/BlockHitResult.html" title="class in net.minecraft.util.hit">BlockHitResult</a>&nbsp;blockHitResult)</span></div>
+<a href="../util/hit/BlockHitResult.html" title="class in net.minecraft.util.hit">BlockHitResult</a>&nbsp;hit)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="AbstractBlock.html#onUse(net.minecraft.block.BlockState,net.minecraft.world.World,net.minecraft.util.math.BlockPos,net.minecraft.entity.player.PlayerEntity,net.minecraft.util.Hand,net.minecraft.util.hit.BlockHitResult)">onUse</a></code>&nbsp;in class&nbsp;<code><a href="AbstractBlock.html" title="class in net.minecraft.block">AbstractBlock</a></code></dd>
@@ -311,7 +311,7 @@ implements <a href="Stainable.html" title="interface in net.minecraft.block">Sta
 <li class="blockList">
 <section class="detail">
 <h3><a id="getRenderType(net.minecraft.block.BlockState)">getRenderType</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="BlockRenderType.html" title="enum in net.minecraft.block">BlockRenderType</a></span>&nbsp;<span class="memberName">getRenderType</span>&#8203;(<span class="arguments"><a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="BlockRenderType.html" title="enum in net.minecraft.block">BlockRenderType</a></span>&nbsp;<span class="memberName">getRenderType</span>&#8203;(<span class="arguments"><a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="BlockWithEntity.html#getRenderType(net.minecraft.block.BlockState)">getRenderType</a></code>&nbsp;in class&nbsp;<code><a href="BlockWithEntity.html" title="class in net.minecraft.block">BlockWithEntity</a></code></dd>
@@ -322,9 +322,9 @@ implements <a href="Stainable.html" title="interface in net.minecraft.block">Sta
 <section class="detail">
 <h3><a id="onPlaced(net.minecraft.world.World,net.minecraft.util.math.BlockPos,net.minecraft.block.BlockState,net.minecraft.entity.LivingEntity,net.minecraft.item.ItemStack)">onPlaced</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">onPlaced</span>&#8203;(<span class="arguments"><a href="../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world,
-<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
-<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState,
-<a href="../entity/LivingEntity.html" title="class in net.minecraft.entity">LivingEntity</a>&nbsp;livingEntity,
+<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state,
+<a href="../entity/LivingEntity.html" title="class in net.minecraft.entity">LivingEntity</a>&nbsp;placer,
 <a href="../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;itemStack)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>

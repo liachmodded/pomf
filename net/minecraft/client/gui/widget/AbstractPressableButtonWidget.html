@@ -143,11 +143,11 @@ extends <a href="AbstractButtonWidget.html" title="class in net.minecraft.client
 </thead>
 <tbody>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(int,int,int,int,java.lang.String)">AbstractPressableButtonWidget</a></span>&#8203;(int&nbsp;int2,
-int&nbsp;int3,
-int&nbsp;int4,
-int&nbsp;int5,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;string)</code></th>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(int,int,int,int,java.lang.String)">AbstractPressableButtonWidget</a></span>&#8203;(int&nbsp;x,
+int&nbsp;y,
+int&nbsp;width,
+int&nbsp;height,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;message)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -175,15 +175,15 @@ int&nbsp;int5,
 <tbody>
 <tr class="altColor" id="i0">
 <td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#keyPressed(int,int,int)">keyPressed</a></span>&#8203;(int&nbsp;int2,
-int&nbsp;int3,
-int&nbsp;int4)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#keyPressed(int,int,int)">keyPressed</a></span>&#8203;(int&nbsp;keyCode,
+int&nbsp;scanCode,
+int&nbsp;modifiers)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#onClick(double,double)">onClick</a></span>&#8203;(double&nbsp;double2,
-double&nbsp;double3)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#onClick(double,double)">onClick</a></span>&#8203;(double&nbsp;mouseX,
+double&nbsp;mouseY)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i2">
@@ -231,11 +231,11 @@ double&nbsp;double3)</code></th>
 <li class="blockList">
 <section class="detail">
 <h3><a id="&lt;init&gt;(int,int,int,int,java.lang.String)">AbstractPressableButtonWidget</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">AbstractPressableButtonWidget</span>&#8203;(<span class="arguments">int&nbsp;int2,
-int&nbsp;int3,
-int&nbsp;int4,
-int&nbsp;int5,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;string)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">AbstractPressableButtonWidget</span>&#8203;(<span class="arguments">int&nbsp;x,
+int&nbsp;y,
+int&nbsp;width,
+int&nbsp;height,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;message)</span></div>
 </section>
 </li>
 </ul>
@@ -257,8 +257,8 @@ int&nbsp;int5,
 <li class="blockList">
 <section class="detail">
 <h3><a id="onClick(double,double)">onClick</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">onClick</span>&#8203;(<span class="arguments">double&nbsp;double2,
-double&nbsp;double3)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">onClick</span>&#8203;(<span class="arguments">double&nbsp;mouseX,
+double&nbsp;mouseY)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="AbstractButtonWidget.html#onClick(double,double)">onClick</a></code>&nbsp;in class&nbsp;<code><a href="AbstractButtonWidget.html" title="class in net.minecraft.client.gui.widget">AbstractButtonWidget</a></code></dd>
@@ -268,9 +268,9 @@ double&nbsp;double3)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="keyPressed(int,int,int)">keyPressed</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">keyPressed</span>&#8203;(<span class="arguments">int&nbsp;int2,
-int&nbsp;int3,
-int&nbsp;int4)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">keyPressed</span>&#8203;(<span class="arguments">int&nbsp;keyCode,
+int&nbsp;scanCode,
+int&nbsp;modifiers)</span></div>
 </section>
 </li>
 </ul>

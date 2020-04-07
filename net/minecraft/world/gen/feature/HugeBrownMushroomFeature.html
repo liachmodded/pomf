@@ -130,7 +130,7 @@ extends <a href="HugeMushroomFeature.html" title="class in net.minecraft.world.g
 </thead>
 <tbody>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.util.function.Function)">HugeBrownMushroomFeature</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;com.mojang.datafixers.Dynamic&lt;?&gt;,&#8203;? extends <a href="HugeMushroomFeatureConfig.html" title="class in net.minecraft.world.gen.feature">HugeMushroomFeatureConfig</a>&gt;&nbsp;function)</code></th>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.util.function.Function)">HugeBrownMushroomFeature</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;com.mojang.datafixers.Dynamic&lt;?&gt;,&#8203;? extends <a href="HugeMushroomFeatureConfig.html" title="class in net.minecraft.world.gen.feature">HugeMushroomFeatureConfig</a>&gt;&nbsp;configDeserializer)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -158,20 +158,20 @@ extends <a href="HugeMushroomFeature.html" title="class in net.minecraft.world.g
 <tbody>
 <tr class="altColor" id="i0">
 <td class="colFirst"><code>protected void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#generateCap(net.minecraft.world.IWorld,java.util.Random,net.minecraft.util.math.BlockPos,int,net.minecraft.util.math.BlockPos.Mutable,net.minecraft.world.gen.feature.HugeMushroomFeatureConfig)">generateCap</a></span>&#8203;(<a href="../../IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;iWorld,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#generateCap(net.minecraft.world.IWorld,java.util.Random,net.minecraft.util.math.BlockPos,int,net.minecraft.util.math.BlockPos.Mutable,net.minecraft.world.gen.feature.HugeMushroomFeatureConfig)">generateCap</a></span>&#8203;(<a href="../../IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;world,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random,
-<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
-int&nbsp;int2,
+<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;start,
+int&nbsp;y,
 <a href="../../../util/math/BlockPos.Mutable.html" title="class in net.minecraft.util.math">BlockPos.Mutable</a>&nbsp;mutable,
-<a href="HugeMushroomFeatureConfig.html" title="class in net.minecraft.world.gen.feature">HugeMushroomFeatureConfig</a>&nbsp;hugeMushroomFeatureConfig)</code></th>
+<a href="HugeMushroomFeatureConfig.html" title="class in net.minecraft.world.gen.feature">HugeMushroomFeatureConfig</a>&nbsp;config)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
 <td class="colFirst"><code>protected int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getCapSize(int,int,int,int)">getCapSize</a></span>&#8203;(int&nbsp;int2,
 int&nbsp;int3,
-int&nbsp;int4,
-int&nbsp;int5)</code></th>
+int&nbsp;capSize,
+int&nbsp;y)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -209,7 +209,7 @@ int&nbsp;int5)</code></th>
 <li class="blockList">
 <section class="detail">
 <h3><a id="&lt;init&gt;(java.util.function.Function)">HugeBrownMushroomFeature</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">HugeBrownMushroomFeature</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;com.mojang.datafixers.Dynamic&lt;?&gt;,&#8203;? extends <a href="HugeMushroomFeatureConfig.html" title="class in net.minecraft.world.gen.feature">HugeMushroomFeatureConfig</a>&gt;&nbsp;function)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">HugeBrownMushroomFeature</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;com.mojang.datafixers.Dynamic&lt;?&gt;,&#8203;? extends <a href="HugeMushroomFeatureConfig.html" title="class in net.minecraft.world.gen.feature">HugeMushroomFeatureConfig</a>&gt;&nbsp;configDeserializer)</span></div>
 </section>
 </li>
 </ul>
@@ -225,12 +225,12 @@ int&nbsp;int5)</code></th>
 <li class="blockList">
 <section class="detail">
 <h3><a id="generateCap(net.minecraft.world.IWorld,java.util.Random,net.minecraft.util.math.BlockPos,int,net.minecraft.util.math.BlockPos.Mutable,net.minecraft.world.gen.feature.HugeMushroomFeatureConfig)">generateCap</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">generateCap</span>&#8203;(<span class="arguments"><a href="../../IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;iWorld,
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">generateCap</span>&#8203;(<span class="arguments"><a href="../../IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;world,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random,
-<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
-int&nbsp;int2,
+<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;start,
+int&nbsp;y,
 <a href="../../../util/math/BlockPos.Mutable.html" title="class in net.minecraft.util.math">BlockPos.Mutable</a>&nbsp;mutable,
-<a href="HugeMushroomFeatureConfig.html" title="class in net.minecraft.world.gen.feature">HugeMushroomFeatureConfig</a>&nbsp;hugeMushroomFeatureConfig)</span></div>
+<a href="HugeMushroomFeatureConfig.html" title="class in net.minecraft.world.gen.feature">HugeMushroomFeatureConfig</a>&nbsp;config)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="HugeMushroomFeature.html#generateCap(net.minecraft.world.IWorld,java.util.Random,net.minecraft.util.math.BlockPos,int,net.minecraft.util.math.BlockPos.Mutable,net.minecraft.world.gen.feature.HugeMushroomFeatureConfig)">generateCap</a></code>&nbsp;in class&nbsp;<code><a href="HugeMushroomFeature.html" title="class in net.minecraft.world.gen.feature">HugeMushroomFeature</a></code></dd>
@@ -242,8 +242,8 @@ int&nbsp;int2,
 <h3><a id="getCapSize(int,int,int,int)">getCapSize</a></h3>
 <div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getCapSize</span>&#8203;(<span class="arguments">int&nbsp;int2,
 int&nbsp;int3,
-int&nbsp;int4,
-int&nbsp;int5)</span></div>
+int&nbsp;capSize,
+int&nbsp;y)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="HugeMushroomFeature.html#getCapSize(int,int,int,int)">getCapSize</a></code>&nbsp;in class&nbsp;<code><a href="HugeMushroomFeature.html" title="class in net.minecraft.world.gen.feature">HugeMushroomFeature</a></code></dd>

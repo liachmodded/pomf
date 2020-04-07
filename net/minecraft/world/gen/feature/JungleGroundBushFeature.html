@@ -130,7 +130,7 @@ extends <a href="AbstractTreeFeature.html" title="class in net.minecraft.world.g
 </thead>
 <tbody>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.util.function.Function)">JungleGroundBushFeature</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;com.mojang.datafixers.Dynamic&lt;?&gt;,&#8203;? extends <a href="TreeFeatureConfig.html" title="class in net.minecraft.world.gen.feature">TreeFeatureConfig</a>&gt;&nbsp;function)</code></th>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.util.function.Function)">JungleGroundBushFeature</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;com.mojang.datafixers.Dynamic&lt;?&gt;,&#8203;? extends <a href="TreeFeatureConfig.html" title="class in net.minecraft.world.gen.feature">TreeFeatureConfig</a>&gt;&nbsp;configDeserializer)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -158,13 +158,13 @@ extends <a href="AbstractTreeFeature.html" title="class in net.minecraft.world.g
 <tbody>
 <tr class="altColor" id="i0">
 <td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#generate(net.minecraft.world.ModifiableTestableWorld,java.util.Random,net.minecraft.util.math.BlockPos,java.util.Set,java.util.Set,net.minecraft.util.math.BlockBox,net.minecraft.world.gen.feature.TreeFeatureConfig)">generate</a></span>&#8203;(<a href="../../ModifiableTestableWorld.html" title="interface in net.minecraft.world">ModifiableTestableWorld</a>&nbsp;modifiableTestableWorld,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#generate(net.minecraft.world.ModifiableTestableWorld,java.util.Random,net.minecraft.util.math.BlockPos,java.util.Set,java.util.Set,net.minecraft.util.math.BlockBox,net.minecraft.world.gen.feature.TreeFeatureConfig)">generate</a></span>&#8203;(<a href="../../ModifiableTestableWorld.html" title="interface in net.minecraft.world">ModifiableTestableWorld</a>&nbsp;world,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random,
-<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;&nbsp;set,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;&nbsp;set2,
-<a href="../../../util/math/BlockBox.html" title="class in net.minecraft.util.math">BlockBox</a>&nbsp;blockBox,
-<a href="TreeFeatureConfig.html" title="class in net.minecraft.world.gen.feature">TreeFeatureConfig</a>&nbsp;treeFeatureConfig)</code></th>
+<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;&nbsp;logPositions,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;&nbsp;leavesPositions,
+<a href="../../../util/math/BlockBox.html" title="class in net.minecraft.util.math">BlockBox</a>&nbsp;box,
+<a href="TreeFeatureConfig.html" title="class in net.minecraft.world.gen.feature">TreeFeatureConfig</a>&nbsp;config)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -202,7 +202,7 @@ extends <a href="AbstractTreeFeature.html" title="class in net.minecraft.world.g
 <li class="blockList">
 <section class="detail">
 <h3><a id="&lt;init&gt;(java.util.function.Function)">JungleGroundBushFeature</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">JungleGroundBushFeature</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;com.mojang.datafixers.Dynamic&lt;?&gt;,&#8203;? extends <a href="TreeFeatureConfig.html" title="class in net.minecraft.world.gen.feature">TreeFeatureConfig</a>&gt;&nbsp;function)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">JungleGroundBushFeature</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;com.mojang.datafixers.Dynamic&lt;?&gt;,&#8203;? extends <a href="TreeFeatureConfig.html" title="class in net.minecraft.world.gen.feature">TreeFeatureConfig</a>&gt;&nbsp;configDeserializer)</span></div>
 </section>
 </li>
 </ul>
@@ -218,13 +218,13 @@ extends <a href="AbstractTreeFeature.html" title="class in net.minecraft.world.g
 <li class="blockList">
 <section class="detail">
 <h3><a id="generate(net.minecraft.world.ModifiableTestableWorld,java.util.Random,net.minecraft.util.math.BlockPos,java.util.Set,java.util.Set,net.minecraft.util.math.BlockBox,net.minecraft.world.gen.feature.TreeFeatureConfig)">generate</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">generate</span>&#8203;(<span class="arguments"><a href="../../ModifiableTestableWorld.html" title="interface in net.minecraft.world">ModifiableTestableWorld</a>&nbsp;modifiableTestableWorld,
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">generate</span>&#8203;(<span class="arguments"><a href="../../ModifiableTestableWorld.html" title="interface in net.minecraft.world">ModifiableTestableWorld</a>&nbsp;world,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random,
-<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;&nbsp;set,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;&nbsp;set2,
-<a href="../../../util/math/BlockBox.html" title="class in net.minecraft.util.math">BlockBox</a>&nbsp;blockBox,
-<a href="TreeFeatureConfig.html" title="class in net.minecraft.world.gen.feature">TreeFeatureConfig</a>&nbsp;treeFeatureConfig)</span></div>
+<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;&nbsp;logPositions,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;&nbsp;leavesPositions,
+<a href="../../../util/math/BlockBox.html" title="class in net.minecraft.util.math">BlockBox</a>&nbsp;box,
+<a href="TreeFeatureConfig.html" title="class in net.minecraft.world.gen.feature">TreeFeatureConfig</a>&nbsp;config)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="AbstractTreeFeature.html#generate(net.minecraft.world.ModifiableTestableWorld,java.util.Random,net.minecraft.util.math.BlockPos,java.util.Set,java.util.Set,net.minecraft.util.math.BlockBox,T)">generate</a></code>&nbsp;in class&nbsp;<code><a href="AbstractTreeFeature.html" title="class in net.minecraft.world.gen.feature">AbstractTreeFeature</a>&lt;<a href="TreeFeatureConfig.html" title="class in net.minecraft.world.gen.feature">TreeFeatureConfig</a>&gt;</code></dd>

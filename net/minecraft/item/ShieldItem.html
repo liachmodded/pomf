@@ -173,16 +173,16 @@ extends <a href="Item.html" title="class in net.minecraft.item">Item</a></pre>
 <tbody>
 <tr class="altColor" id="i0">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#appendTooltip(net.minecraft.item.ItemStack,net.minecraft.world.World,java.util.List,net.minecraft.client.item.TooltipContext)">appendTooltip</a></span>&#8203;(<a href="ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;itemStack,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#appendTooltip(net.minecraft.item.ItemStack,net.minecraft.world.World,java.util.List,net.minecraft.client.item.TooltipContext)">appendTooltip</a></span>&#8203;(<a href="ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;stack,
 <a href="../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../text/Text.html" title="interface in net.minecraft.text">Text</a>&gt;&nbsp;list,
-<a href="../client/item/TooltipContext.html" title="interface in net.minecraft.client.item">TooltipContext</a>&nbsp;tooltipContext)</code></th>
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../text/Text.html" title="interface in net.minecraft.text">Text</a>&gt;&nbsp;tooltip,
+<a href="../client/item/TooltipContext.html" title="interface in net.minecraft.client.item">TooltipContext</a>&nbsp;context)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
 <td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#canRepair(net.minecraft.item.ItemStack,net.minecraft.item.ItemStack)">canRepair</a></span>&#8203;(<a href="ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;itemStack,
-<a href="ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;itemStack2)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#canRepair(net.minecraft.item.ItemStack,net.minecraft.item.ItemStack)">canRepair</a></span>&#8203;(<a href="ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;stack,
+<a href="ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;ingredient)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i2">
@@ -192,23 +192,23 @@ extends <a href="Item.html" title="class in net.minecraft.item">Item</a></pre>
 </tr>
 <tr class="rowColor" id="i3">
 <td class="colFirst"><code>int</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getMaxUseTime(net.minecraft.item.ItemStack)">getMaxUseTime</a></span>&#8203;(<a href="ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;itemStack)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getMaxUseTime(net.minecraft.item.ItemStack)">getMaxUseTime</a></span>&#8203;(<a href="ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;stack)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i4">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getTranslationKey(net.minecraft.item.ItemStack)">getTranslationKey</a></span>&#8203;(<a href="ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;itemStack)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getTranslationKey(net.minecraft.item.ItemStack)">getTranslationKey</a></span>&#8203;(<a href="ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;stack)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i5">
 <td class="colFirst"><code><a href="../util/UseAction.html" title="enum in net.minecraft.util">UseAction</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getUseAction(net.minecraft.item.ItemStack)">getUseAction</a></span>&#8203;(<a href="ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;itemStack)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getUseAction(net.minecraft.item.ItemStack)">getUseAction</a></span>&#8203;(<a href="ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;stack)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i6">
 <td class="colFirst"><code><a href="../util/TypedActionResult.html" title="class in net.minecraft.util">TypedActionResult</a>&lt;<a href="ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#use(net.minecraft.world.World,net.minecraft.entity.player.PlayerEntity,net.minecraft.util.Hand)">use</a></span>&#8203;(<a href="../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world,
-<a href="../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;playerEntity,
+<a href="../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;user,
 <a href="../util/Hand.html" title="enum in net.minecraft.util">Hand</a>&nbsp;hand)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -258,7 +258,7 @@ extends <a href="Item.html" title="class in net.minecraft.item">Item</a></pre>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getTranslationKey(net.minecraft.item.ItemStack)">getTranslationKey</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></span>&nbsp;<span class="memberName">getTranslationKey</span>&#8203;(<span class="arguments"><a href="ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;itemStack)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></span>&nbsp;<span class="memberName">getTranslationKey</span>&#8203;(<span class="arguments"><a href="ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;stack)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="Item.html#getTranslationKey(net.minecraft.item.ItemStack)">getTranslationKey</a></code>&nbsp;in class&nbsp;<code><a href="Item.html" title="class in net.minecraft.item">Item</a></code></dd>
@@ -268,10 +268,10 @@ extends <a href="Item.html" title="class in net.minecraft.item">Item</a></pre>
 <li class="blockList">
 <section class="detail">
 <h3><a id="appendTooltip(net.minecraft.item.ItemStack,net.minecraft.world.World,java.util.List,net.minecraft.client.item.TooltipContext)">appendTooltip</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">appendTooltip</span>&#8203;(<span class="arguments"><a href="ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;itemStack,
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">appendTooltip</span>&#8203;(<span class="arguments"><a href="ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;stack,
 <a href="../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../text/Text.html" title="interface in net.minecraft.text">Text</a>&gt;&nbsp;list,
-<a href="../client/item/TooltipContext.html" title="interface in net.minecraft.client.item">TooltipContext</a>&nbsp;tooltipContext)</span></div>
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../text/Text.html" title="interface in net.minecraft.text">Text</a>&gt;&nbsp;tooltip,
+<a href="../client/item/TooltipContext.html" title="interface in net.minecraft.client.item">TooltipContext</a>&nbsp;context)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="Item.html#appendTooltip(net.minecraft.item.ItemStack,net.minecraft.world.World,java.util.List,net.minecraft.client.item.TooltipContext)">appendTooltip</a></code>&nbsp;in class&nbsp;<code><a href="Item.html" title="class in net.minecraft.item">Item</a></code></dd>
@@ -281,7 +281,7 @@ extends <a href="Item.html" title="class in net.minecraft.item">Item</a></pre>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getUseAction(net.minecraft.item.ItemStack)">getUseAction</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../util/UseAction.html" title="enum in net.minecraft.util">UseAction</a></span>&nbsp;<span class="memberName">getUseAction</span>&#8203;(<span class="arguments"><a href="ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;itemStack)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../util/UseAction.html" title="enum in net.minecraft.util">UseAction</a></span>&nbsp;<span class="memberName">getUseAction</span>&#8203;(<span class="arguments"><a href="ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;stack)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="Item.html#getUseAction(net.minecraft.item.ItemStack)">getUseAction</a></code>&nbsp;in class&nbsp;<code><a href="Item.html" title="class in net.minecraft.item">Item</a></code></dd>
@@ -291,7 +291,7 @@ extends <a href="Item.html" title="class in net.minecraft.item">Item</a></pre>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getMaxUseTime(net.minecraft.item.ItemStack)">getMaxUseTime</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getMaxUseTime</span>&#8203;(<span class="arguments"><a href="ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;itemStack)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getMaxUseTime</span>&#8203;(<span class="arguments"><a href="ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;stack)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="Item.html#getMaxUseTime(net.minecraft.item.ItemStack)">getMaxUseTime</a></code>&nbsp;in class&nbsp;<code><a href="Item.html" title="class in net.minecraft.item">Item</a></code></dd>
@@ -302,7 +302,7 @@ extends <a href="Item.html" title="class in net.minecraft.item">Item</a></pre>
 <section class="detail">
 <h3><a id="use(net.minecraft.world.World,net.minecraft.entity.player.PlayerEntity,net.minecraft.util.Hand)">use</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../util/TypedActionResult.html" title="class in net.minecraft.util">TypedActionResult</a>&lt;<a href="ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&gt;</span>&nbsp;<span class="memberName">use</span>&#8203;(<span class="arguments"><a href="../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world,
-<a href="../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;playerEntity,
+<a href="../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;user,
 <a href="../util/Hand.html" title="enum in net.minecraft.util">Hand</a>&nbsp;hand)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
@@ -313,8 +313,8 @@ extends <a href="Item.html" title="class in net.minecraft.item">Item</a></pre>
 <li class="blockList">
 <section class="detail">
 <h3><a id="canRepair(net.minecraft.item.ItemStack,net.minecraft.item.ItemStack)">canRepair</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">canRepair</span>&#8203;(<span class="arguments"><a href="ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;itemStack,
-<a href="ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;itemStack2)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">canRepair</span>&#8203;(<span class="arguments"><a href="ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;stack,
+<a href="ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;ingredient)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="Item.html#canRepair(net.minecraft.item.ItemStack,net.minecraft.item.ItemStack)">canRepair</a></code>&nbsp;in class&nbsp;<code><a href="Item.html" title="class in net.minecraft.item">Item</a></code></dd>

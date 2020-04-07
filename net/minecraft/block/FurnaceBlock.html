@@ -196,21 +196,21 @@ extends <a href="AbstractFurnaceBlock.html" title="class in net.minecraft.block"
 <tbody>
 <tr class="altColor" id="i0">
 <td class="colFirst"><code><a href="entity/BlockEntity.html" title="class in net.minecraft.block.entity">BlockEntity</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createBlockEntity(net.minecraft.world.BlockView)">createBlockEntity</a></span>&#8203;(<a href="../world/BlockView.html" title="interface in net.minecraft.world">BlockView</a>&nbsp;blockView)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createBlockEntity(net.minecraft.world.BlockView)">createBlockEntity</a></span>&#8203;(<a href="../world/BlockView.html" title="interface in net.minecraft.world">BlockView</a>&nbsp;world)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
 <td class="colFirst"><code>protected void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#openScreen(net.minecraft.world.World,net.minecraft.util.math.BlockPos,net.minecraft.entity.player.PlayerEntity)">openScreen</a></span>&#8203;(<a href="../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world,
-<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
-<a href="../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;playerEntity)</code></th>
+<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<a href="../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;player)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i2">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#randomDisplayTick(net.minecraft.block.BlockState,net.minecraft.world.World,net.minecraft.util.math.BlockPos,java.util.Random)">randomDisplayTick</a></span>&#8203;(<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#randomDisplayTick(net.minecraft.block.BlockState,net.minecraft.world.World,net.minecraft.util.math.BlockPos,java.util.Random)">randomDisplayTick</a></span>&#8203;(<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state,
 <a href="../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world,
-<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
+<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -275,15 +275,15 @@ extends <a href="AbstractFurnaceBlock.html" title="class in net.minecraft.block"
 <li class="blockList">
 <section class="detail">
 <h3><a id="createBlockEntity(net.minecraft.world.BlockView)">createBlockEntity</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="entity/BlockEntity.html" title="class in net.minecraft.block.entity">BlockEntity</a></span>&nbsp;<span class="memberName">createBlockEntity</span>&#8203;(<span class="arguments"><a href="../world/BlockView.html" title="interface in net.minecraft.world">BlockView</a>&nbsp;blockView)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="entity/BlockEntity.html" title="class in net.minecraft.block.entity">BlockEntity</a></span>&nbsp;<span class="memberName">createBlockEntity</span>&#8203;(<span class="arguments"><a href="../world/BlockView.html" title="interface in net.minecraft.world">BlockView</a>&nbsp;world)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="openScreen(net.minecraft.world.World,net.minecraft.util.math.BlockPos,net.minecraft.entity.player.PlayerEntity)">openScreen</a></h3>
 <div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">openScreen</span>&#8203;(<span class="arguments"><a href="../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world,
-<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
-<a href="../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;playerEntity)</span></div>
+<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<a href="../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;player)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="AbstractFurnaceBlock.html#openScreen(net.minecraft.world.World,net.minecraft.util.math.BlockPos,net.minecraft.entity.player.PlayerEntity)">openScreen</a></code>&nbsp;in class&nbsp;<code><a href="AbstractFurnaceBlock.html" title="class in net.minecraft.block">AbstractFurnaceBlock</a></code></dd>
@@ -293,9 +293,9 @@ extends <a href="AbstractFurnaceBlock.html" title="class in net.minecraft.block"
 <li class="blockList">
 <section class="detail">
 <h3><a id="randomDisplayTick(net.minecraft.block.BlockState,net.minecraft.world.World,net.minecraft.util.math.BlockPos,java.util.Random)">randomDisplayTick</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">randomDisplayTick</span>&#8203;(<span class="arguments"><a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState,
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">randomDisplayTick</span>&#8203;(<span class="arguments"><a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state,
 <a href="../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world,
-<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
+<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>

@@ -121,13 +121,13 @@ extends <a href="Element.html" title="interface in net.minecraft.client.gui">Ele
 <tbody>
 <tr class="altColor" id="i0">
 <td class="colFirst"><code>default boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#changeFocus(boolean)">changeFocus</a></span>&#8203;(boolean&nbsp;bool)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#changeFocus(boolean)">changeFocus</a></span>&#8203;(boolean&nbsp;lookForwards)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
 <td class="colFirst"><code>default boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#charTyped(char,int)">charTyped</a></span>&#8203;(char&nbsp;char2,
-int&nbsp;int2)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#charTyped(char,int)">charTyped</a></span>&#8203;(char&nbsp;chr,
+int&nbsp;keyCode)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i2">
@@ -158,46 +158,46 @@ double&nbsp;mouseY)</code></th>
 </tr>
 <tr class="rowColor" id="i7">
 <td class="colFirst"><code>default boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#keyPressed(int,int,int)">keyPressed</a></span>&#8203;(int&nbsp;int2,
-int&nbsp;int3,
-int&nbsp;int4)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#keyPressed(int,int,int)">keyPressed</a></span>&#8203;(int&nbsp;keyCode,
+int&nbsp;scanCode,
+int&nbsp;modifiers)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i8">
 <td class="colFirst"><code>default boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#keyReleased(int,int,int)">keyReleased</a></span>&#8203;(int&nbsp;int2,
-int&nbsp;int3,
-int&nbsp;int4)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#keyReleased(int,int,int)">keyReleased</a></span>&#8203;(int&nbsp;keyCode,
+int&nbsp;scanCode,
+int&nbsp;modifiers)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i9">
 <td class="colFirst"><code>default boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#mouseClicked(double,double,int)">mouseClicked</a></span>&#8203;(double&nbsp;double2,
-double&nbsp;double3,
-int&nbsp;int2)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#mouseClicked(double,double,int)">mouseClicked</a></span>&#8203;(double&nbsp;mouseX,
+double&nbsp;mouseY,
+int&nbsp;button)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i10">
 <td class="colFirst"><code>default boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#mouseDragged(double,double,int,double,double)">mouseDragged</a></span>&#8203;(double&nbsp;double2,
-double&nbsp;double3,
-int&nbsp;int2,
-double&nbsp;double4,
-double&nbsp;double5)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#mouseDragged(double,double,int,double,double)">mouseDragged</a></span>&#8203;(double&nbsp;mouseX,
+double&nbsp;mouseY,
+int&nbsp;button,
+double&nbsp;deltaX,
+double&nbsp;deltaY)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i11">
 <td class="colFirst"><code>default boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#mouseReleased(double,double,int)">mouseReleased</a></span>&#8203;(double&nbsp;double2,
-double&nbsp;double3,
-int&nbsp;int2)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#mouseReleased(double,double,int)">mouseReleased</a></span>&#8203;(double&nbsp;mouseX,
+double&nbsp;mouseY,
+int&nbsp;button)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i12">
 <td class="colFirst"><code>default boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#mouseScrolled(double,double,double)">mouseScrolled</a></span>&#8203;(double&nbsp;double2,
-double&nbsp;double3,
-double&nbsp;double4)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#mouseScrolled(double,double,double)">mouseScrolled</a></span>&#8203;(double&nbsp;mouseX,
+double&nbsp;mouseY,
+double&nbsp;amount)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i13">
@@ -253,9 +253,9 @@ double&nbsp;mouseY)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="mouseClicked(double,double,int)">mouseClicked</a></h3>
-<div class="memberSignature"><span class="modifiers">default</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">mouseClicked</span>&#8203;(<span class="arguments">double&nbsp;double2,
-double&nbsp;double3,
-int&nbsp;int2)</span></div>
+<div class="memberSignature"><span class="modifiers">default</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">mouseClicked</span>&#8203;(<span class="arguments">double&nbsp;mouseX,
+double&nbsp;mouseY,
+int&nbsp;button)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="Element.html#mouseClicked(double,double,int)">mouseClicked</a></code>&nbsp;in interface&nbsp;<code><a href="Element.html" title="interface in net.minecraft.client.gui">Element</a></code></dd>
@@ -265,9 +265,9 @@ int&nbsp;int2)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="mouseReleased(double,double,int)">mouseReleased</a></h3>
-<div class="memberSignature"><span class="modifiers">default</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">mouseReleased</span>&#8203;(<span class="arguments">double&nbsp;double2,
-double&nbsp;double3,
-int&nbsp;int2)</span></div>
+<div class="memberSignature"><span class="modifiers">default</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">mouseReleased</span>&#8203;(<span class="arguments">double&nbsp;mouseX,
+double&nbsp;mouseY,
+int&nbsp;button)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="Element.html#mouseReleased(double,double,int)">mouseReleased</a></code>&nbsp;in interface&nbsp;<code><a href="Element.html" title="interface in net.minecraft.client.gui">Element</a></code></dd>
@@ -277,11 +277,11 @@ int&nbsp;int2)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="mouseDragged(double,double,int,double,double)">mouseDragged</a></h3>
-<div class="memberSignature"><span class="modifiers">default</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">mouseDragged</span>&#8203;(<span class="arguments">double&nbsp;double2,
-double&nbsp;double3,
-int&nbsp;int2,
-double&nbsp;double4,
-double&nbsp;double5)</span></div>
+<div class="memberSignature"><span class="modifiers">default</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">mouseDragged</span>&#8203;(<span class="arguments">double&nbsp;mouseX,
+double&nbsp;mouseY,
+int&nbsp;button,
+double&nbsp;deltaX,
+double&nbsp;deltaY)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="Element.html#mouseDragged(double,double,int,double,double)">mouseDragged</a></code>&nbsp;in interface&nbsp;<code><a href="Element.html" title="interface in net.minecraft.client.gui">Element</a></code></dd>
@@ -303,9 +303,9 @@ double&nbsp;double5)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="mouseScrolled(double,double,double)">mouseScrolled</a></h3>
-<div class="memberSignature"><span class="modifiers">default</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">mouseScrolled</span>&#8203;(<span class="arguments">double&nbsp;double2,
-double&nbsp;double3,
-double&nbsp;double4)</span></div>
+<div class="memberSignature"><span class="modifiers">default</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">mouseScrolled</span>&#8203;(<span class="arguments">double&nbsp;mouseX,
+double&nbsp;mouseY,
+double&nbsp;amount)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="Element.html#mouseScrolled(double,double,double)">mouseScrolled</a></code>&nbsp;in interface&nbsp;<code><a href="Element.html" title="interface in net.minecraft.client.gui">Element</a></code></dd>
@@ -315,9 +315,9 @@ double&nbsp;double4)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="keyPressed(int,int,int)">keyPressed</a></h3>
-<div class="memberSignature"><span class="modifiers">default</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">keyPressed</span>&#8203;(<span class="arguments">int&nbsp;int2,
-int&nbsp;int3,
-int&nbsp;int4)</span></div>
+<div class="memberSignature"><span class="modifiers">default</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">keyPressed</span>&#8203;(<span class="arguments">int&nbsp;keyCode,
+int&nbsp;scanCode,
+int&nbsp;modifiers)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="Element.html#keyPressed(int,int,int)">keyPressed</a></code>&nbsp;in interface&nbsp;<code><a href="Element.html" title="interface in net.minecraft.client.gui">Element</a></code></dd>
@@ -327,9 +327,9 @@ int&nbsp;int4)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="keyReleased(int,int,int)">keyReleased</a></h3>
-<div class="memberSignature"><span class="modifiers">default</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">keyReleased</span>&#8203;(<span class="arguments">int&nbsp;int2,
-int&nbsp;int3,
-int&nbsp;int4)</span></div>
+<div class="memberSignature"><span class="modifiers">default</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">keyReleased</span>&#8203;(<span class="arguments">int&nbsp;keyCode,
+int&nbsp;scanCode,
+int&nbsp;modifiers)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="Element.html#keyReleased(int,int,int)">keyReleased</a></code>&nbsp;in interface&nbsp;<code><a href="Element.html" title="interface in net.minecraft.client.gui">Element</a></code></dd>
@@ -339,8 +339,8 @@ int&nbsp;int4)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="charTyped(char,int)">charTyped</a></h3>
-<div class="memberSignature"><span class="modifiers">default</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">charTyped</span>&#8203;(<span class="arguments">char&nbsp;char2,
-int&nbsp;int2)</span></div>
+<div class="memberSignature"><span class="modifiers">default</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">charTyped</span>&#8203;(<span class="arguments">char&nbsp;chr,
+int&nbsp;keyCode)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="Element.html#charTyped(char,int)">charTyped</a></code>&nbsp;in interface&nbsp;<code><a href="Element.html" title="interface in net.minecraft.client.gui">Element</a></code></dd>
@@ -374,7 +374,7 @@ int&nbsp;int2)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="changeFocus(boolean)">changeFocus</a></h3>
-<div class="memberSignature"><span class="modifiers">default</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">changeFocus</span>&#8203;(<span class="arguments">boolean&nbsp;bool)</span></div>
+<div class="memberSignature"><span class="modifiers">default</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">changeFocus</span>&#8203;(<span class="arguments">boolean&nbsp;lookForwards)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="Element.html#changeFocus(boolean)">changeFocus</a></code>&nbsp;in interface&nbsp;<code><a href="Element.html" title="interface in net.minecraft.client.gui">Element</a></code></dd>

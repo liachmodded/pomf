@@ -153,7 +153,7 @@ extends <a href="StructurePoolElement.html" title="class in net.minecraft.struct
 <tr class="altColor" id="i0">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#generate(net.minecraft.structure.StructureManager,net.minecraft.world.IWorld,net.minecraft.world.gen.StructureAccessor,net.minecraft.world.gen.chunk.ChunkGenerator,net.minecraft.util.math.BlockPos,net.minecraft.util.math.BlockPos,net.minecraft.util.BlockRotation,net.minecraft.util.math.BlockBox,java.util.Random)">generate</a></span>&#8203;(<a href="../StructureManager.html" title="class in net.minecraft.structure">StructureManager</a>&nbsp;structureManager,
-<a href="../../world/IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;iWorld,
+<a href="../../world/IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;world,
 <a href="../../world/gen/StructureAccessor.html" title="class in net.minecraft.world.gen">StructureAccessor</a>&nbsp;structureAccessor,
 <a href="../../world/gen/chunk/ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">ChunkGenerator</a>&lt;?&gt;&nbsp;chunkGenerator,
 <a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
@@ -166,15 +166,15 @@ extends <a href="StructurePoolElement.html" title="class in net.minecraft.struct
 <tr class="rowColor" id="i1">
 <td class="colFirst"><code><a href="../../util/math/BlockBox.html" title="class in net.minecraft.util.math">BlockBox</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getBoundingBox(net.minecraft.structure.StructureManager,net.minecraft.util.math.BlockPos,net.minecraft.util.BlockRotation)">getBoundingBox</a></span>&#8203;(<a href="../StructureManager.html" title="class in net.minecraft.structure">StructureManager</a>&nbsp;structureManager,
-<a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
-<a href="../../util/BlockRotation.html" title="enum in net.minecraft.util">BlockRotation</a>&nbsp;blockRotation)</code></th>
+<a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<a href="../../util/BlockRotation.html" title="enum in net.minecraft.util">BlockRotation</a>&nbsp;rotation)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i2">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../Structure.StructureBlockInfo.html" title="class in net.minecraft.structure">Structure.StructureBlockInfo</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getStructureBlockInfos(net.minecraft.structure.StructureManager,net.minecraft.util.math.BlockPos,net.minecraft.util.BlockRotation,java.util.Random)">getStructureBlockInfos</a></span>&#8203;(<a href="../StructureManager.html" title="class in net.minecraft.structure">StructureManager</a>&nbsp;structureManager,
-<a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
-<a href="../../util/BlockRotation.html" title="enum in net.minecraft.util">BlockRotation</a>&nbsp;blockRotation,
+<a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<a href="../../util/BlockRotation.html" title="enum in net.minecraft.util">BlockRotation</a>&nbsp;rotation,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -258,8 +258,8 @@ extends <a href="StructurePoolElement.html" title="class in net.minecraft.struct
 <section class="detail">
 <h3><a id="getStructureBlockInfos(net.minecraft.structure.StructureManager,net.minecraft.util.math.BlockPos,net.minecraft.util.BlockRotation,java.util.Random)">getStructureBlockInfos</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../Structure.StructureBlockInfo.html" title="class in net.minecraft.structure">Structure.StructureBlockInfo</a>&gt;</span>&nbsp;<span class="memberName">getStructureBlockInfos</span>&#8203;(<span class="arguments"><a href="../StructureManager.html" title="class in net.minecraft.structure">StructureManager</a>&nbsp;structureManager,
-<a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
-<a href="../../util/BlockRotation.html" title="enum in net.minecraft.util">BlockRotation</a>&nbsp;blockRotation,
+<a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<a href="../../util/BlockRotation.html" title="enum in net.minecraft.util">BlockRotation</a>&nbsp;rotation,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
@@ -271,8 +271,8 @@ extends <a href="StructurePoolElement.html" title="class in net.minecraft.struct
 <section class="detail">
 <h3><a id="getBoundingBox(net.minecraft.structure.StructureManager,net.minecraft.util.math.BlockPos,net.minecraft.util.BlockRotation)">getBoundingBox</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../util/math/BlockBox.html" title="class in net.minecraft.util.math">BlockBox</a></span>&nbsp;<span class="memberName">getBoundingBox</span>&#8203;(<span class="arguments"><a href="../StructureManager.html" title="class in net.minecraft.structure">StructureManager</a>&nbsp;structureManager,
-<a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
-<a href="../../util/BlockRotation.html" title="enum in net.minecraft.util">BlockRotation</a>&nbsp;blockRotation)</span></div>
+<a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<a href="../../util/BlockRotation.html" title="enum in net.minecraft.util">BlockRotation</a>&nbsp;rotation)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="StructurePoolElement.html#getBoundingBox(net.minecraft.structure.StructureManager,net.minecraft.util.math.BlockPos,net.minecraft.util.BlockRotation)">getBoundingBox</a></code>&nbsp;in class&nbsp;<code><a href="StructurePoolElement.html" title="class in net.minecraft.structure.pool">StructurePoolElement</a></code></dd>
@@ -283,7 +283,7 @@ extends <a href="StructurePoolElement.html" title="class in net.minecraft.struct
 <section class="detail">
 <h3><a id="generate(net.minecraft.structure.StructureManager,net.minecraft.world.IWorld,net.minecraft.world.gen.StructureAccessor,net.minecraft.world.gen.chunk.ChunkGenerator,net.minecraft.util.math.BlockPos,net.minecraft.util.math.BlockPos,net.minecraft.util.BlockRotation,net.minecraft.util.math.BlockBox,java.util.Random)">generate</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">generate</span>&#8203;(<span class="arguments"><a href="../StructureManager.html" title="class in net.minecraft.structure">StructureManager</a>&nbsp;structureManager,
-<a href="../../world/IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;iWorld,
+<a href="../../world/IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;world,
 <a href="../../world/gen/StructureAccessor.html" title="class in net.minecraft.world.gen">StructureAccessor</a>&nbsp;structureAccessor,
 <a href="../../world/gen/chunk/ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">ChunkGenerator</a>&lt;?&gt;&nbsp;chunkGenerator,
 <a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,

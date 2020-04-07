@@ -176,7 +176,7 @@ extends <a href="SlimeEntity.html" title="class in net.minecraft.entity.mob">Sli
 </thead>
 <tbody>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.entity.EntityType,net.minecraft.world.World)">MagmaCubeEntity</a></span>&#8203;(<a href="../EntityType.html" title="class in net.minecraft.entity">EntityType</a>&lt;? extends <a href="MagmaCubeEntity.html" title="class in net.minecraft.entity.mob">MagmaCubeEntity</a>&gt;&nbsp;entityType,
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.entity.EntityType,net.minecraft.world.World)">MagmaCubeEntity</a></span>&#8203;(<a href="../EntityType.html" title="class in net.minecraft.entity">EntityType</a>&lt;? extends <a href="MagmaCubeEntity.html" title="class in net.minecraft.entity.mob">MagmaCubeEntity</a>&gt;&nbsp;type,
 <a href="../../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -219,7 +219,7 @@ extends <a href="SlimeEntity.html" title="class in net.minecraft.entity.mob">Sli
 </tr>
 <tr class="altColor" id="i2">
 <td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#canSpawn(net.minecraft.world.WorldView)">canSpawn</a></span>&#8203;(<a href="../../world/WorldView.html" title="interface in net.minecraft.world">WorldView</a>&nbsp;worldView)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#canSpawn(net.minecraft.world.WorldView)">canSpawn</a></span>&#8203;(<a href="../../world/WorldView.html" title="interface in net.minecraft.world">WorldView</a>&nbsp;world)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i3">
@@ -244,7 +244,7 @@ extends <a href="SlimeEntity.html" title="class in net.minecraft.entity.mob">Sli
 </tr>
 <tr class="rowColor" id="i7">
 <td class="colFirst"><code>protected <a href="../../sound/SoundEvent.html" title="class in net.minecraft.sound">SoundEvent</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getHurtSound(net.minecraft.entity.damage.DamageSource)">getHurtSound</a></span>&#8203;(<a href="../damage/DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a>&nbsp;damageSource)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getHurtSound(net.minecraft.entity.damage.DamageSource)">getHurtSound</a></span>&#8203;(<a href="../damage/DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a>&nbsp;source)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i8">
@@ -274,8 +274,8 @@ extends <a href="SlimeEntity.html" title="class in net.minecraft.entity.mob">Sli
 </tr>
 <tr class="rowColor" id="i13">
 <td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#handleFallDamage(float,float)">handleFallDamage</a></span>&#8203;(float&nbsp;float2,
-float&nbsp;float3)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#handleFallDamage(float,float)">handleFallDamage</a></span>&#8203;(float&nbsp;fallDistance,
+float&nbsp;damageMultiplier)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i14">
@@ -290,13 +290,13 @@ float&nbsp;float3)</code></th>
 </tr>
 <tr class="altColor" id="i16">
 <td class="colFirst"><code>protected void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setSize(int,boolean)">setSize</a></span>&#8203;(int&nbsp;int2,
-boolean&nbsp;bool)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setSize(int,boolean)">setSize</a></span>&#8203;(int&nbsp;size,
+boolean&nbsp;heal)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i17">
 <td class="colFirst"><code>protected void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#swimUpward(net.minecraft.tag.Tag)">swimUpward</a></span>&#8203;(<a href="../../tag/Tag.html" title="interface in net.minecraft.tag">Tag</a>&lt;<a href="../../fluid/Fluid.html" title="class in net.minecraft.fluid">Fluid</a>&gt;&nbsp;tag)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#swimUpward(net.minecraft.tag.Tag)">swimUpward</a></span>&#8203;(<a href="../../tag/Tag.html" title="interface in net.minecraft.tag">Tag</a>&lt;<a href="../../fluid/Fluid.html" title="class in net.minecraft.fluid">Fluid</a>&gt;&nbsp;fluid)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i18">
@@ -349,7 +349,7 @@ boolean&nbsp;bool)</code></th>
 <li class="blockList">
 <section class="detail">
 <h3><a id="&lt;init&gt;(net.minecraft.entity.EntityType,net.minecraft.world.World)">MagmaCubeEntity</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">MagmaCubeEntity</span>&#8203;(<span class="arguments"><a href="../EntityType.html" title="class in net.minecraft.entity">EntityType</a>&lt;? extends <a href="MagmaCubeEntity.html" title="class in net.minecraft.entity.mob">MagmaCubeEntity</a>&gt;&nbsp;entityType,
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">MagmaCubeEntity</span>&#8203;(<span class="arguments"><a href="../EntityType.html" title="class in net.minecraft.entity">EntityType</a>&lt;? extends <a href="MagmaCubeEntity.html" title="class in net.minecraft.entity.mob">MagmaCubeEntity</a>&gt;&nbsp;type,
 <a href="../../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world)</span></div>
 </section>
 </li>
@@ -382,7 +382,7 @@ boolean&nbsp;bool)</code></th>
 <li class="blockList">
 <section class="detail">
 <h3><a id="canSpawn(net.minecraft.world.WorldView)">canSpawn</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">canSpawn</span>&#8203;(<span class="arguments"><a href="../../world/WorldView.html" title="interface in net.minecraft.world">WorldView</a>&nbsp;worldView)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">canSpawn</span>&#8203;(<span class="arguments"><a href="../../world/WorldView.html" title="interface in net.minecraft.world">WorldView</a>&nbsp;world)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="MobEntity.html#canSpawn(net.minecraft.world.WorldView)">canSpawn</a></code>&nbsp;in class&nbsp;<code><a href="MobEntity.html" title="class in net.minecraft.entity.mob">MobEntity</a></code></dd>
@@ -392,8 +392,8 @@ boolean&nbsp;bool)</code></th>
 <li class="blockList">
 <section class="detail">
 <h3><a id="setSize(int,boolean)">setSize</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setSize</span>&#8203;(<span class="arguments">int&nbsp;int2,
-boolean&nbsp;bool)</span></div>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setSize</span>&#8203;(<span class="arguments">int&nbsp;size,
+boolean&nbsp;heal)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="SlimeEntity.html#setSize(int,boolean)">setSize</a></code>&nbsp;in class&nbsp;<code><a href="SlimeEntity.html" title="class in net.minecraft.entity.mob">SlimeEntity</a></code></dd>
@@ -473,7 +473,7 @@ boolean&nbsp;bool)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="swimUpward(net.minecraft.tag.Tag)">swimUpward</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">swimUpward</span>&#8203;(<span class="arguments"><a href="../../tag/Tag.html" title="interface in net.minecraft.tag">Tag</a>&lt;<a href="../../fluid/Fluid.html" title="class in net.minecraft.fluid">Fluid</a>&gt;&nbsp;tag)</span></div>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">swimUpward</span>&#8203;(<span class="arguments"><a href="../../tag/Tag.html" title="interface in net.minecraft.tag">Tag</a>&lt;<a href="../../fluid/Fluid.html" title="class in net.minecraft.fluid">Fluid</a>&gt;&nbsp;fluid)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="MobEntity.html#swimUpward(net.minecraft.tag.Tag)">swimUpward</a></code>&nbsp;in class&nbsp;<code><a href="MobEntity.html" title="class in net.minecraft.entity.mob">MobEntity</a></code></dd>
@@ -483,8 +483,8 @@ boolean&nbsp;bool)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="handleFallDamage(float,float)">handleFallDamage</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">handleFallDamage</span>&#8203;(<span class="arguments">float&nbsp;float2,
-float&nbsp;float3)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">handleFallDamage</span>&#8203;(<span class="arguments">float&nbsp;fallDistance,
+float&nbsp;damageMultiplier)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../LivingEntity.html#handleFallDamage(float,float)">handleFallDamage</a></code>&nbsp;in class&nbsp;<code><a href="../LivingEntity.html" title="class in net.minecraft.entity">LivingEntity</a></code></dd>
@@ -514,7 +514,7 @@ float&nbsp;float3)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getHurtSound(net.minecraft.entity.damage.DamageSource)">getHurtSound</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType"><a href="../../sound/SoundEvent.html" title="class in net.minecraft.sound">SoundEvent</a></span>&nbsp;<span class="memberName">getHurtSound</span>&#8203;(<span class="arguments"><a href="../damage/DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a>&nbsp;damageSource)</span></div>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType"><a href="../../sound/SoundEvent.html" title="class in net.minecraft.sound">SoundEvent</a></span>&nbsp;<span class="memberName">getHurtSound</span>&#8203;(<span class="arguments"><a href="../damage/DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a>&nbsp;source)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="SlimeEntity.html#getHurtSound(net.minecraft.entity.damage.DamageSource)">getHurtSound</a></code>&nbsp;in class&nbsp;<code><a href="SlimeEntity.html" title="class in net.minecraft.entity.mob">SlimeEntity</a></code></dd>

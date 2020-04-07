@@ -154,20 +154,20 @@ extends <a href="Particle.html" title="class in net.minecraft.client.particle">P
 <tr class="altColor">
 <td class="colFirst"><code>protected </code></td>
 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.world.World,double,double,double)">BillboardParticle</a></span>&#8203;(<a href="../../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world,
-double&nbsp;double2,
-double&nbsp;double3,
-double&nbsp;double4)</code></th>
+double&nbsp;x,
+double&nbsp;y,
+double&nbsp;z)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>protected </code></td>
 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.world.World,double,double,double,double,double,double)">BillboardParticle</a></span>&#8203;(<a href="../../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world,
-double&nbsp;double2,
-double&nbsp;double3,
-double&nbsp;double4,
-double&nbsp;double5,
-double&nbsp;double6,
-double&nbsp;double7)</code></th>
+double&nbsp;x,
+double&nbsp;y,
+double&nbsp;z,
+double&nbsp;velocityX,
+double&nbsp;velocityY,
+double&nbsp;velocityZ)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -197,7 +197,7 @@ double&nbsp;double7)</code></th>
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#buildGeometry(net.minecraft.client.render.VertexConsumer,net.minecraft.client.render.Camera,float)">buildGeometry</a></span>&#8203;(<a href="../render/VertexConsumer.html" title="interface in net.minecraft.client.render">VertexConsumer</a>&nbsp;vertexConsumer,
 <a href="../render/Camera.html" title="class in net.minecraft.client.render">Camera</a>&nbsp;camera,
-float&nbsp;float2)</code></th>
+float&nbsp;tickDelta)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
@@ -227,7 +227,7 @@ float&nbsp;float2)</code></th>
 </tr>
 <tr class="altColor" id="i6">
 <td class="colFirst"><code><a href="Particle.html" title="class in net.minecraft.client.particle">Particle</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#scale(float)">scale</a></span>&#8203;(float&nbsp;float2)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#scale(float)">scale</a></span>&#8203;(float&nbsp;scale)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -277,21 +277,21 @@ float&nbsp;float2)</code></th>
 <section class="detail">
 <h3><a id="&lt;init&gt;(net.minecraft.world.World,double,double,double)">BillboardParticle</a></h3>
 <div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="memberName">BillboardParticle</span>&#8203;(<span class="arguments"><a href="../../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world,
-double&nbsp;double2,
-double&nbsp;double3,
-double&nbsp;double4)</span></div>
+double&nbsp;x,
+double&nbsp;y,
+double&nbsp;z)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="&lt;init&gt;(net.minecraft.world.World,double,double,double,double,double,double)">BillboardParticle</a></h3>
 <div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="memberName">BillboardParticle</span>&#8203;(<span class="arguments"><a href="../../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world,
-double&nbsp;double2,
-double&nbsp;double3,
-double&nbsp;double4,
-double&nbsp;double5,
-double&nbsp;double6,
-double&nbsp;double7)</span></div>
+double&nbsp;x,
+double&nbsp;y,
+double&nbsp;z,
+double&nbsp;velocityX,
+double&nbsp;velocityY,
+double&nbsp;velocityZ)</span></div>
 </section>
 </li>
 </ul>
@@ -309,7 +309,7 @@ double&nbsp;double7)</span></div>
 <h3><a id="buildGeometry(net.minecraft.client.render.VertexConsumer,net.minecraft.client.render.Camera,float)">buildGeometry</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">buildGeometry</span>&#8203;(<span class="arguments"><a href="../render/VertexConsumer.html" title="interface in net.minecraft.client.render">VertexConsumer</a>&nbsp;vertexConsumer,
 <a href="../render/Camera.html" title="class in net.minecraft.client.render">Camera</a>&nbsp;camera,
-float&nbsp;float2)</span></div>
+float&nbsp;tickDelta)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="Particle.html#buildGeometry(net.minecraft.client.render.VertexConsumer,net.minecraft.client.render.Camera,float)">buildGeometry</a></code>&nbsp;in class&nbsp;<code><a href="Particle.html" title="class in net.minecraft.client.particle">Particle</a></code></dd>
@@ -325,7 +325,7 @@ float&nbsp;float2)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="scale(float)">scale</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="Particle.html" title="class in net.minecraft.client.particle">Particle</a></span>&nbsp;<span class="memberName">scale</span>&#8203;(<span class="arguments">float&nbsp;float2)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="Particle.html" title="class in net.minecraft.client.particle">Particle</a></span>&nbsp;<span class="memberName">scale</span>&#8203;(<span class="arguments">float&nbsp;scale)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="Particle.html#scale(float)">scale</a></code>&nbsp;in class&nbsp;<code><a href="Particle.html" title="class in net.minecraft.client.particle">Particle</a></code></dd>

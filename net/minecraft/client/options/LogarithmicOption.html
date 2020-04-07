@@ -135,13 +135,13 @@ extends <a href="DoubleOption.html" title="class in net.minecraft.client.options
 </thead>
 <tbody>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.lang.String,double,double,float,java.util.function.Function,java.util.function.BiConsumer,java.util.function.BiFunction)">LogarithmicOption</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;string,
-double&nbsp;double2,
-double&nbsp;double3,
-float&nbsp;float2,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;<a href="GameOptions.html" title="class in net.minecraft.client.options">GameOptions</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang" class="externalLink">Double</a>&gt;&nbsp;function,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/BiConsumer.html?is-external=true" title="class or interface in java.util.function" class="externalLink">BiConsumer</a>&lt;<a href="GameOptions.html" title="class in net.minecraft.client.options">GameOptions</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang" class="externalLink">Double</a>&gt;&nbsp;biConsumer,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/BiFunction.html?is-external=true" title="class or interface in java.util.function" class="externalLink">BiFunction</a>&lt;<a href="GameOptions.html" title="class in net.minecraft.client.options">GameOptions</a>,&#8203;<a href="DoubleOption.html" title="class in net.minecraft.client.options">DoubleOption</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&gt;&nbsp;biFunction)</code></th>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.lang.String,double,double,float,java.util.function.Function,java.util.function.BiConsumer,java.util.function.BiFunction)">LogarithmicOption</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;key,
+double&nbsp;min,
+double&nbsp;max,
+float&nbsp;step,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;<a href="GameOptions.html" title="class in net.minecraft.client.options">GameOptions</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang" class="externalLink">Double</a>&gt;&nbsp;getter,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/BiConsumer.html?is-external=true" title="class or interface in java.util.function" class="externalLink">BiConsumer</a>&lt;<a href="GameOptions.html" title="class in net.minecraft.client.options">GameOptions</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang" class="externalLink">Double</a>&gt;&nbsp;setter,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/BiFunction.html?is-external=true" title="class or interface in java.util.function" class="externalLink">BiFunction</a>&lt;<a href="GameOptions.html" title="class in net.minecraft.client.options">GameOptions</a>,&#8203;<a href="DoubleOption.html" title="class in net.minecraft.client.options">DoubleOption</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&gt;&nbsp;displayStringGetter)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -169,12 +169,12 @@ float&nbsp;float2,
 <tbody>
 <tr class="altColor" id="i0">
 <td class="colFirst"><code>double</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getRatio(double)">getRatio</a></span>&#8203;(double&nbsp;double2)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getRatio(double)">getRatio</a></span>&#8203;(double&nbsp;value)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
 <td class="colFirst"><code>double</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getValue(double)">getValue</a></span>&#8203;(double&nbsp;double2)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getValue(double)">getValue</a></span>&#8203;(double&nbsp;ratio)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -212,13 +212,13 @@ float&nbsp;float2,
 <li class="blockList">
 <section class="detail">
 <h3><a id="&lt;init&gt;(java.lang.String,double,double,float,java.util.function.Function,java.util.function.BiConsumer,java.util.function.BiFunction)">LogarithmicOption</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">LogarithmicOption</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;string,
-double&nbsp;double2,
-double&nbsp;double3,
-float&nbsp;float2,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;<a href="GameOptions.html" title="class in net.minecraft.client.options">GameOptions</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang" class="externalLink">Double</a>&gt;&nbsp;function,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/BiConsumer.html?is-external=true" title="class or interface in java.util.function" class="externalLink">BiConsumer</a>&lt;<a href="GameOptions.html" title="class in net.minecraft.client.options">GameOptions</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang" class="externalLink">Double</a>&gt;&nbsp;biConsumer,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/BiFunction.html?is-external=true" title="class or interface in java.util.function" class="externalLink">BiFunction</a>&lt;<a href="GameOptions.html" title="class in net.minecraft.client.options">GameOptions</a>,&#8203;<a href="DoubleOption.html" title="class in net.minecraft.client.options">DoubleOption</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&gt;&nbsp;biFunction)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">LogarithmicOption</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;key,
+double&nbsp;min,
+double&nbsp;max,
+float&nbsp;step,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;<a href="GameOptions.html" title="class in net.minecraft.client.options">GameOptions</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang" class="externalLink">Double</a>&gt;&nbsp;getter,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/BiConsumer.html?is-external=true" title="class or interface in java.util.function" class="externalLink">BiConsumer</a>&lt;<a href="GameOptions.html" title="class in net.minecraft.client.options">GameOptions</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang" class="externalLink">Double</a>&gt;&nbsp;setter,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/BiFunction.html?is-external=true" title="class or interface in java.util.function" class="externalLink">BiFunction</a>&lt;<a href="GameOptions.html" title="class in net.minecraft.client.options">GameOptions</a>,&#8203;<a href="DoubleOption.html" title="class in net.minecraft.client.options">DoubleOption</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&gt;&nbsp;displayStringGetter)</span></div>
 </section>
 </li>
 </ul>
@@ -234,7 +234,7 @@ float&nbsp;float2,
 <li class="blockList">
 <section class="detail">
 <h3><a id="getRatio(double)">getRatio</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">double</span>&nbsp;<span class="memberName">getRatio</span>&#8203;(<span class="arguments">double&nbsp;double2)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">double</span>&nbsp;<span class="memberName">getRatio</span>&#8203;(<span class="arguments">double&nbsp;value)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="DoubleOption.html#getRatio(double)">getRatio</a></code>&nbsp;in class&nbsp;<code><a href="DoubleOption.html" title="class in net.minecraft.client.options">DoubleOption</a></code></dd>
@@ -244,7 +244,7 @@ float&nbsp;float2,
 <li class="blockList">
 <section class="detail">
 <h3><a id="getValue(double)">getValue</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">double</span>&nbsp;<span class="memberName">getValue</span>&#8203;(<span class="arguments">double&nbsp;double2)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">double</span>&nbsp;<span class="memberName">getValue</span>&#8203;(<span class="arguments">double&nbsp;ratio)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="DoubleOption.html#getValue(double)">getValue</a></code>&nbsp;in class&nbsp;<code><a href="DoubleOption.html" title="class in net.minecraft.client.options">DoubleOption</a></code></dd>

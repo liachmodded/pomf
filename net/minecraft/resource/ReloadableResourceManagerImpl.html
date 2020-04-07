@@ -184,18 +184,18 @@ implements <a href="ReloadableResourceManager.html" title="interface in net.mine
 </tr>
 <tr class="rowColor" id="i1">
 <td class="colFirst"><code><a href="ResourceReloadMonitor.html" title="interface in net.minecraft.resource">ResourceReloadMonitor</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#beginMonitoredReload(java.util.concurrent.Executor,java.util.concurrent.Executor,java.util.concurrent.CompletableFuture,java.util.List)">beginMonitoredReload</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executor.html?is-external=true" title="class or interface in java.util.concurrent" class="externalLink">Executor</a>&nbsp;executor,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executor.html?is-external=true" title="class or interface in java.util.concurrent" class="externalLink">Executor</a>&nbsp;executor2,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html?is-external=true" title="class or interface in java.util.concurrent" class="externalLink">CompletableFuture</a>&lt;<a href="../util/Unit.html" title="enum in net.minecraft.util">Unit</a>&gt;&nbsp;completableFuture,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="ResourcePack.html" title="interface in net.minecraft.resource">ResourcePack</a>&gt;&nbsp;list)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#beginMonitoredReload(java.util.concurrent.Executor,java.util.concurrent.Executor,java.util.concurrent.CompletableFuture,java.util.List)">beginMonitoredReload</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executor.html?is-external=true" title="class or interface in java.util.concurrent" class="externalLink">Executor</a>&nbsp;prepareExecutor,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executor.html?is-external=true" title="class or interface in java.util.concurrent" class="externalLink">Executor</a>&nbsp;applyExecutor,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html?is-external=true" title="class or interface in java.util.concurrent" class="externalLink">CompletableFuture</a>&lt;<a href="../util/Unit.html" title="enum in net.minecraft.util">Unit</a>&gt;&nbsp;initialStage,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="ResourcePack.html" title="interface in net.minecraft.resource">ResourcePack</a>&gt;&nbsp;packs)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i2">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html?is-external=true" title="class or interface in java.util.concurrent" class="externalLink">CompletableFuture</a>&lt;<a href="../util/Unit.html" title="enum in net.minecraft.util">Unit</a>&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#beginReload(java.util.concurrent.Executor,java.util.concurrent.Executor,java.util.List,java.util.concurrent.CompletableFuture)">beginReload</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executor.html?is-external=true" title="class or interface in java.util.concurrent" class="externalLink">Executor</a>&nbsp;executor,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executor.html?is-external=true" title="class or interface in java.util.concurrent" class="externalLink">Executor</a>&nbsp;executor2,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="ResourcePack.html" title="interface in net.minecraft.resource">ResourcePack</a>&gt;&nbsp;list,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html?is-external=true" title="class or interface in java.util.concurrent" class="externalLink">CompletableFuture</a>&lt;<a href="../util/Unit.html" title="enum in net.minecraft.util">Unit</a>&gt;&nbsp;completableFuture)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#beginReload(java.util.concurrent.Executor,java.util.concurrent.Executor,java.util.List,java.util.concurrent.CompletableFuture)">beginReload</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executor.html?is-external=true" title="class or interface in java.util.concurrent" class="externalLink">Executor</a>&nbsp;prepareExecutor,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executor.html?is-external=true" title="class or interface in java.util.concurrent" class="externalLink">Executor</a>&nbsp;applyExecutor,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="ResourcePack.html" title="interface in net.minecraft.resource">ResourcePack</a>&gt;&nbsp;packs,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html?is-external=true" title="class or interface in java.util.concurrent" class="externalLink">CompletableFuture</a>&lt;<a href="../util/Unit.html" title="enum in net.minecraft.util">Unit</a>&gt;&nbsp;initialStage)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i3">
@@ -208,13 +208,13 @@ implements <a href="ReloadableResourceManager.html" title="interface in net.mine
 </tr>
 <tr class="altColor" id="i4">
 <td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#containsResource(net.minecraft.util.Identifier)">containsResource</a></span>&#8203;(<a href="../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;identifier)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#containsResource(net.minecraft.util.Identifier)">containsResource</a></span>&#8203;(<a href="../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;id)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i5">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util" class="externalLink">Collection</a>&lt;<a href="../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#findResources(java.lang.String,java.util.function.Predicate)">findResources</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;string,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Predicate</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&gt;&nbsp;predicate)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#findResources(java.lang.String,java.util.function.Predicate)">findResources</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;resourceType,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Predicate</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&gt;&nbsp;pathPredicate)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i6">
@@ -224,17 +224,17 @@ implements <a href="ReloadableResourceManager.html" title="interface in net.mine
 </tr>
 <tr class="rowColor" id="i7">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="Resource.html" title="interface in net.minecraft.resource">Resource</a>&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getAllResources(net.minecraft.util.Identifier)">getAllResources</a></span>&#8203;(<a href="../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;identifier)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getAllResources(net.minecraft.util.Identifier)">getAllResources</a></span>&#8203;(<a href="../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;id)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i8">
 <td class="colFirst"><code><a href="Resource.html" title="interface in net.minecraft.resource">Resource</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getResource(net.minecraft.util.Identifier)">getResource</a></span>&#8203;(<a href="../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;identifier)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getResource(net.minecraft.util.Identifier)">getResource</a></span>&#8203;(<a href="../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;id)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i9">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#registerListener(net.minecraft.resource.ResourceReloadListener)">registerListener</a></span>&#8203;(<a href="ResourceReloadListener.html" title="interface in net.minecraft.resource">ResourceReloadListener</a>&nbsp;resourceReloadListener)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#registerListener(net.minecraft.resource.ResourceReloadListener)">registerListener</a></span>&#8203;(<a href="ResourceReloadListener.html" title="interface in net.minecraft.resource">ResourceReloadListener</a>&nbsp;listener)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -295,7 +295,7 @@ implements <a href="ReloadableResourceManager.html" title="interface in net.mine
 <li class="blockList">
 <section class="detail">
 <h3><a id="getResource(net.minecraft.util.Identifier)">getResource</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="Resource.html" title="interface in net.minecraft.resource">Resource</a></span>&nbsp;<span class="memberName">getResource</span>&#8203;(<span class="arguments"><a href="../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;identifier)</span>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="Resource.html" title="interface in net.minecraft.resource">Resource</a></span>&nbsp;<span class="memberName">getResource</span>&#8203;(<span class="arguments"><a href="../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;id)</span>
                      throws <span class="exceptions"><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
@@ -308,7 +308,7 @@ implements <a href="ReloadableResourceManager.html" title="interface in net.mine
 <li class="blockList">
 <section class="detail">
 <h3><a id="containsResource(net.minecraft.util.Identifier)">containsResource</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">containsResource</span>&#8203;(<span class="arguments"><a href="../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;identifier)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">containsResource</span>&#8203;(<span class="arguments"><a href="../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;id)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="ResourceManager.html#containsResource(net.minecraft.util.Identifier)">containsResource</a></code>&nbsp;in interface&nbsp;<code><a href="ResourceManager.html" title="interface in net.minecraft.resource">ResourceManager</a></code></dd>
@@ -318,7 +318,7 @@ implements <a href="ReloadableResourceManager.html" title="interface in net.mine
 <li class="blockList">
 <section class="detail">
 <h3><a id="getAllResources(net.minecraft.util.Identifier)">getAllResources</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="Resource.html" title="interface in net.minecraft.resource">Resource</a>&gt;</span>&nbsp;<span class="memberName">getAllResources</span>&#8203;(<span class="arguments"><a href="../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;identifier)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="Resource.html" title="interface in net.minecraft.resource">Resource</a>&gt;</span>&nbsp;<span class="memberName">getAllResources</span>&#8203;(<span class="arguments"><a href="../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;id)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="ResourceManager.html#getAllResources(net.minecraft.util.Identifier)">getAllResources</a></code>&nbsp;in interface&nbsp;<code><a href="ResourceManager.html" title="interface in net.minecraft.resource">ResourceManager</a></code></dd>
@@ -328,8 +328,8 @@ implements <a href="ReloadableResourceManager.html" title="interface in net.mine
 <li class="blockList">
 <section class="detail">
 <h3><a id="findResources(java.lang.String,java.util.function.Predicate)">findResources</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util" class="externalLink">Collection</a>&lt;<a href="../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&gt;</span>&nbsp;<span class="memberName">findResources</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;string,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Predicate</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&gt;&nbsp;predicate)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util" class="externalLink">Collection</a>&lt;<a href="../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&gt;</span>&nbsp;<span class="memberName">findResources</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;resourceType,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Predicate</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&gt;&nbsp;pathPredicate)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="ResourceManager.html#findResources(java.lang.String,java.util.function.Predicate)">findResources</a></code>&nbsp;in interface&nbsp;<code><a href="ResourceManager.html" title="interface in net.minecraft.resource">ResourceManager</a></code></dd>
@@ -339,10 +339,10 @@ implements <a href="ReloadableResourceManager.html" title="interface in net.mine
 <li class="blockList">
 <section class="detail">
 <h3><a id="beginReload(java.util.concurrent.Executor,java.util.concurrent.Executor,java.util.List,java.util.concurrent.CompletableFuture)">beginReload</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html?is-external=true" title="class or interface in java.util.concurrent" class="externalLink">CompletableFuture</a>&lt;<a href="../util/Unit.html" title="enum in net.minecraft.util">Unit</a>&gt;</span>&nbsp;<span class="memberName">beginReload</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executor.html?is-external=true" title="class or interface in java.util.concurrent" class="externalLink">Executor</a>&nbsp;executor,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executor.html?is-external=true" title="class or interface in java.util.concurrent" class="externalLink">Executor</a>&nbsp;executor2,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="ResourcePack.html" title="interface in net.minecraft.resource">ResourcePack</a>&gt;&nbsp;list,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html?is-external=true" title="class or interface in java.util.concurrent" class="externalLink">CompletableFuture</a>&lt;<a href="../util/Unit.html" title="enum in net.minecraft.util">Unit</a>&gt;&nbsp;completableFuture)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html?is-external=true" title="class or interface in java.util.concurrent" class="externalLink">CompletableFuture</a>&lt;<a href="../util/Unit.html" title="enum in net.minecraft.util">Unit</a>&gt;</span>&nbsp;<span class="memberName">beginReload</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executor.html?is-external=true" title="class or interface in java.util.concurrent" class="externalLink">Executor</a>&nbsp;prepareExecutor,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executor.html?is-external=true" title="class or interface in java.util.concurrent" class="externalLink">Executor</a>&nbsp;applyExecutor,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="ResourcePack.html" title="interface in net.minecraft.resource">ResourcePack</a>&gt;&nbsp;packs,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html?is-external=true" title="class or interface in java.util.concurrent" class="externalLink">CompletableFuture</a>&lt;<a href="../util/Unit.html" title="enum in net.minecraft.util">Unit</a>&gt;&nbsp;initialStage)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="ReloadableResourceManager.html#beginReload(java.util.concurrent.Executor,java.util.concurrent.Executor,java.util.List,java.util.concurrent.CompletableFuture)">beginReload</a></code>&nbsp;in interface&nbsp;<code><a href="ReloadableResourceManager.html" title="interface in net.minecraft.resource">ReloadableResourceManager</a></code></dd>
@@ -352,7 +352,7 @@ implements <a href="ReloadableResourceManager.html" title="interface in net.mine
 <li class="blockList">
 <section class="detail">
 <h3><a id="registerListener(net.minecraft.resource.ResourceReloadListener)">registerListener</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">registerListener</span>&#8203;(<span class="arguments"><a href="ResourceReloadListener.html" title="interface in net.minecraft.resource">ResourceReloadListener</a>&nbsp;resourceReloadListener)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">registerListener</span>&#8203;(<span class="arguments"><a href="ResourceReloadListener.html" title="interface in net.minecraft.resource">ResourceReloadListener</a>&nbsp;listener)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="ReloadableResourceManager.html#registerListener(net.minecraft.resource.ResourceReloadListener)">registerListener</a></code>&nbsp;in interface&nbsp;<code><a href="ReloadableResourceManager.html" title="interface in net.minecraft.resource">ReloadableResourceManager</a></code></dd>
@@ -371,10 +371,10 @@ implements <a href="ReloadableResourceManager.html" title="interface in net.mine
 <li class="blockList">
 <section class="detail">
 <h3><a id="beginMonitoredReload(java.util.concurrent.Executor,java.util.concurrent.Executor,java.util.concurrent.CompletableFuture,java.util.List)">beginMonitoredReload</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="ResourceReloadMonitor.html" title="interface in net.minecraft.resource">ResourceReloadMonitor</a></span>&nbsp;<span class="memberName">beginMonitoredReload</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executor.html?is-external=true" title="class or interface in java.util.concurrent" class="externalLink">Executor</a>&nbsp;executor,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executor.html?is-external=true" title="class or interface in java.util.concurrent" class="externalLink">Executor</a>&nbsp;executor2,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html?is-external=true" title="class or interface in java.util.concurrent" class="externalLink">CompletableFuture</a>&lt;<a href="../util/Unit.html" title="enum in net.minecraft.util">Unit</a>&gt;&nbsp;completableFuture,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="ResourcePack.html" title="interface in net.minecraft.resource">ResourcePack</a>&gt;&nbsp;list)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="ResourceReloadMonitor.html" title="interface in net.minecraft.resource">ResourceReloadMonitor</a></span>&nbsp;<span class="memberName">beginMonitoredReload</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executor.html?is-external=true" title="class or interface in java.util.concurrent" class="externalLink">Executor</a>&nbsp;prepareExecutor,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executor.html?is-external=true" title="class or interface in java.util.concurrent" class="externalLink">Executor</a>&nbsp;applyExecutor,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html?is-external=true" title="class or interface in java.util.concurrent" class="externalLink">CompletableFuture</a>&lt;<a href="../util/Unit.html" title="enum in net.minecraft.util">Unit</a>&gt;&nbsp;initialStage,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="ResourcePack.html" title="interface in net.minecraft.resource">ResourcePack</a>&gt;&nbsp;packs)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="ReloadableResourceManager.html#beginMonitoredReload(java.util.concurrent.Executor,java.util.concurrent.Executor,java.util.concurrent.CompletableFuture,java.util.List)">beginMonitoredReload</a></code>&nbsp;in interface&nbsp;<code><a href="ReloadableResourceManager.html" title="interface in net.minecraft.resource">ReloadableResourceManager</a></code></dd>

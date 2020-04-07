@@ -170,7 +170,7 @@ extends <a href="AbstractSkeletonEntity.html" title="class in net.minecraft.enti
 </thead>
 <tbody>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.entity.EntityType,net.minecraft.world.World)">WitherSkeletonEntity</a></span>&#8203;(<a href="../EntityType.html" title="class in net.minecraft.entity">EntityType</a>&lt;? extends <a href="WitherSkeletonEntity.html" title="class in net.minecraft.entity.mob">WitherSkeletonEntity</a>&gt;&nbsp;entityType,
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.entity.EntityType,net.minecraft.world.World)">WitherSkeletonEntity</a></span>&#8203;(<a href="../EntityType.html" title="class in net.minecraft.entity">EntityType</a>&lt;? extends <a href="WitherSkeletonEntity.html" title="class in net.minecraft.entity.mob">WitherSkeletonEntity</a>&gt;&nbsp;type,
 <a href="../../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -199,26 +199,26 @@ extends <a href="AbstractSkeletonEntity.html" title="class in net.minecraft.enti
 <tbody>
 <tr class="altColor" id="i0">
 <td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#canHaveStatusEffect(net.minecraft.entity.effect.StatusEffectInstance)">canHaveStatusEffect</a></span>&#8203;(<a href="../effect/StatusEffectInstance.html" title="class in net.minecraft.entity.effect">StatusEffectInstance</a>&nbsp;statusEffectInstance)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#canHaveStatusEffect(net.minecraft.entity.effect.StatusEffectInstance)">canHaveStatusEffect</a></span>&#8203;(<a href="../effect/StatusEffectInstance.html" title="class in net.minecraft.entity.effect">StatusEffectInstance</a>&nbsp;effect)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
 <td class="colFirst"><code>protected <a href="../projectile/PersistentProjectileEntity.html" title="class in net.minecraft.entity.projectile">PersistentProjectileEntity</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createArrowProjectile(net.minecraft.item.ItemStack,float)">createArrowProjectile</a></span>&#8203;(<a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;itemStack,
-float&nbsp;float2)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createArrowProjectile(net.minecraft.item.ItemStack,float)">createArrowProjectile</a></span>&#8203;(<a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;arrow,
+float&nbsp;damageModifier)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i2">
 <td class="colFirst"><code>protected void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#dropEquipment(net.minecraft.entity.damage.DamageSource,int,boolean)">dropEquipment</a></span>&#8203;(<a href="../damage/DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a>&nbsp;damageSource,
-int&nbsp;int2,
-boolean&nbsp;bool)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#dropEquipment(net.minecraft.entity.damage.DamageSource,int,boolean)">dropEquipment</a></span>&#8203;(<a href="../damage/DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a>&nbsp;source,
+int&nbsp;lootingMultiplier,
+boolean&nbsp;allowDrops)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i3">
 <td class="colFirst"><code>protected float</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getActiveEyeHeight(net.minecraft.entity.EntityPose,net.minecraft.entity.EntityDimensions)">getActiveEyeHeight</a></span>&#8203;(<a href="../EntityPose.html" title="enum in net.minecraft.entity">EntityPose</a>&nbsp;entityPose,
-<a href="../EntityDimensions.html" title="class in net.minecraft.entity">EntityDimensions</a>&nbsp;entityDimensions)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getActiveEyeHeight(net.minecraft.entity.EntityPose,net.minecraft.entity.EntityDimensions)">getActiveEyeHeight</a></span>&#8203;(<a href="../EntityPose.html" title="enum in net.minecraft.entity">EntityPose</a>&nbsp;pose,
+<a href="../EntityDimensions.html" title="class in net.minecraft.entity">EntityDimensions</a>&nbsp;dimensions)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i4">
@@ -233,7 +233,7 @@ boolean&nbsp;bool)</code></th>
 </tr>
 <tr class="altColor" id="i6">
 <td class="colFirst"><code>protected <a href="../../sound/SoundEvent.html" title="class in net.minecraft.sound">SoundEvent</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getHurtSound(net.minecraft.entity.damage.DamageSource)">getHurtSound</a></span>&#8203;(<a href="../damage/DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a>&nbsp;damageSource)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getHurtSound(net.minecraft.entity.damage.DamageSource)">getHurtSound</a></span>&#8203;(<a href="../damage/DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a>&nbsp;source)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i7">
@@ -243,7 +243,7 @@ boolean&nbsp;bool)</code></th>
 </tr>
 <tr class="altColor" id="i8">
 <td class="colFirst"><code>protected void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#initEquipment(net.minecraft.world.LocalDifficulty)">initEquipment</a></span>&#8203;(<a href="../../world/LocalDifficulty.html" title="class in net.minecraft.world">LocalDifficulty</a>&nbsp;localDifficulty)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#initEquipment(net.minecraft.world.LocalDifficulty)">initEquipment</a></span>&#8203;(<a href="../../world/LocalDifficulty.html" title="class in net.minecraft.world">LocalDifficulty</a>&nbsp;difficulty)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i9">
@@ -253,21 +253,21 @@ boolean&nbsp;bool)</code></th>
 </tr>
 <tr class="altColor" id="i10">
 <td class="colFirst"><code><a href="../EntityData.html" title="interface in net.minecraft.entity">EntityData</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#initialize(net.minecraft.world.IWorld,net.minecraft.world.LocalDifficulty,net.minecraft.entity.SpawnType,net.minecraft.entity.EntityData,net.minecraft.nbt.CompoundTag)">initialize</a></span>&#8203;(<a href="../../world/IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;iWorld,
-<a href="../../world/LocalDifficulty.html" title="class in net.minecraft.world">LocalDifficulty</a>&nbsp;localDifficulty,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#initialize(net.minecraft.world.IWorld,net.minecraft.world.LocalDifficulty,net.minecraft.entity.SpawnType,net.minecraft.entity.EntityData,net.minecraft.nbt.CompoundTag)">initialize</a></span>&#8203;(<a href="../../world/IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;world,
+<a href="../../world/LocalDifficulty.html" title="class in net.minecraft.world">LocalDifficulty</a>&nbsp;difficulty,
 <a href="../SpawnType.html" title="enum in net.minecraft.entity">SpawnType</a>&nbsp;spawnType,
 <a href="../EntityData.html" title="interface in net.minecraft.entity">EntityData</a>&nbsp;entityData,
-<a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;compoundTag)</code></th>
+<a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;entityTag)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i11">
 <td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#tryAttack(net.minecraft.entity.Entity)">tryAttack</a></span>&#8203;(<a href="../Entity.html" title="class in net.minecraft.entity">Entity</a>&nbsp;entity)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#tryAttack(net.minecraft.entity.Entity)">tryAttack</a></span>&#8203;(<a href="../Entity.html" title="class in net.minecraft.entity">Entity</a>&nbsp;target)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i12">
 <td class="colFirst"><code>protected void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#updateEnchantments(net.minecraft.world.LocalDifficulty)">updateEnchantments</a></span>&#8203;(<a href="../../world/LocalDifficulty.html" title="class in net.minecraft.world">LocalDifficulty</a>&nbsp;localDifficulty)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#updateEnchantments(net.minecraft.world.LocalDifficulty)">updateEnchantments</a></span>&#8203;(<a href="../../world/LocalDifficulty.html" title="class in net.minecraft.world">LocalDifficulty</a>&nbsp;difficulty)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -325,7 +325,7 @@ boolean&nbsp;bool)</code></th>
 <li class="blockList">
 <section class="detail">
 <h3><a id="&lt;init&gt;(net.minecraft.entity.EntityType,net.minecraft.world.World)">WitherSkeletonEntity</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">WitherSkeletonEntity</span>&#8203;(<span class="arguments"><a href="../EntityType.html" title="class in net.minecraft.entity">EntityType</a>&lt;? extends <a href="WitherSkeletonEntity.html" title="class in net.minecraft.entity.mob">WitherSkeletonEntity</a>&gt;&nbsp;entityType,
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">WitherSkeletonEntity</span>&#8203;(<span class="arguments"><a href="../EntityType.html" title="class in net.minecraft.entity">EntityType</a>&lt;? extends <a href="WitherSkeletonEntity.html" title="class in net.minecraft.entity.mob">WitherSkeletonEntity</a>&gt;&nbsp;type,
 <a href="../../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world)</span></div>
 </section>
 </li>
@@ -362,7 +362,7 @@ boolean&nbsp;bool)</code></th>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getHurtSound(net.minecraft.entity.damage.DamageSource)">getHurtSound</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType"><a href="../../sound/SoundEvent.html" title="class in net.minecraft.sound">SoundEvent</a></span>&nbsp;<span class="memberName">getHurtSound</span>&#8203;(<span class="arguments"><a href="../damage/DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a>&nbsp;damageSource)</span></div>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType"><a href="../../sound/SoundEvent.html" title="class in net.minecraft.sound">SoundEvent</a></span>&nbsp;<span class="memberName">getHurtSound</span>&#8203;(<span class="arguments"><a href="../damage/DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a>&nbsp;source)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="HostileEntity.html#getHurtSound(net.minecraft.entity.damage.DamageSource)">getHurtSound</a></code>&nbsp;in class&nbsp;<code><a href="HostileEntity.html" title="class in net.minecraft.entity.mob">HostileEntity</a></code></dd>
@@ -392,9 +392,9 @@ boolean&nbsp;bool)</code></th>
 <li class="blockList">
 <section class="detail">
 <h3><a id="dropEquipment(net.minecraft.entity.damage.DamageSource,int,boolean)">dropEquipment</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">dropEquipment</span>&#8203;(<span class="arguments"><a href="../damage/DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a>&nbsp;damageSource,
-int&nbsp;int2,
-boolean&nbsp;bool)</span></div>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">dropEquipment</span>&#8203;(<span class="arguments"><a href="../damage/DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a>&nbsp;source,
+int&nbsp;lootingMultiplier,
+boolean&nbsp;allowDrops)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="MobEntity.html#dropEquipment(net.minecraft.entity.damage.DamageSource,int,boolean)">dropEquipment</a></code>&nbsp;in class&nbsp;<code><a href="MobEntity.html" title="class in net.minecraft.entity.mob">MobEntity</a></code></dd>
@@ -404,7 +404,7 @@ boolean&nbsp;bool)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="initEquipment(net.minecraft.world.LocalDifficulty)">initEquipment</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">initEquipment</span>&#8203;(<span class="arguments"><a href="../../world/LocalDifficulty.html" title="class in net.minecraft.world">LocalDifficulty</a>&nbsp;localDifficulty)</span></div>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">initEquipment</span>&#8203;(<span class="arguments"><a href="../../world/LocalDifficulty.html" title="class in net.minecraft.world">LocalDifficulty</a>&nbsp;difficulty)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="AbstractSkeletonEntity.html#initEquipment(net.minecraft.world.LocalDifficulty)">initEquipment</a></code>&nbsp;in class&nbsp;<code><a href="AbstractSkeletonEntity.html" title="class in net.minecraft.entity.mob">AbstractSkeletonEntity</a></code></dd>
@@ -414,7 +414,7 @@ boolean&nbsp;bool)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="updateEnchantments(net.minecraft.world.LocalDifficulty)">updateEnchantments</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">updateEnchantments</span>&#8203;(<span class="arguments"><a href="../../world/LocalDifficulty.html" title="class in net.minecraft.world">LocalDifficulty</a>&nbsp;localDifficulty)</span></div>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">updateEnchantments</span>&#8203;(<span class="arguments"><a href="../../world/LocalDifficulty.html" title="class in net.minecraft.world">LocalDifficulty</a>&nbsp;difficulty)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="MobEntity.html#updateEnchantments(net.minecraft.world.LocalDifficulty)">updateEnchantments</a></code>&nbsp;in class&nbsp;<code><a href="MobEntity.html" title="class in net.minecraft.entity.mob">MobEntity</a></code></dd>
@@ -424,11 +424,11 @@ boolean&nbsp;bool)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="initialize(net.minecraft.world.IWorld,net.minecraft.world.LocalDifficulty,net.minecraft.entity.SpawnType,net.minecraft.entity.EntityData,net.minecraft.nbt.CompoundTag)">initialize</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../EntityData.html" title="interface in net.minecraft.entity">EntityData</a></span>&nbsp;<span class="memberName">initialize</span>&#8203;(<span class="arguments"><a href="../../world/IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;iWorld,
-<a href="../../world/LocalDifficulty.html" title="class in net.minecraft.world">LocalDifficulty</a>&nbsp;localDifficulty,
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../EntityData.html" title="interface in net.minecraft.entity">EntityData</a></span>&nbsp;<span class="memberName">initialize</span>&#8203;(<span class="arguments"><a href="../../world/IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;world,
+<a href="../../world/LocalDifficulty.html" title="class in net.minecraft.world">LocalDifficulty</a>&nbsp;difficulty,
 <a href="../SpawnType.html" title="enum in net.minecraft.entity">SpawnType</a>&nbsp;spawnType,
 <a href="../EntityData.html" title="interface in net.minecraft.entity">EntityData</a>&nbsp;entityData,
-<a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;compoundTag)</span></div>
+<a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;entityTag)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="AbstractSkeletonEntity.html#initialize(net.minecraft.world.IWorld,net.minecraft.world.LocalDifficulty,net.minecraft.entity.SpawnType,net.minecraft.entity.EntityData,net.minecraft.nbt.CompoundTag)">initialize</a></code>&nbsp;in class&nbsp;<code><a href="AbstractSkeletonEntity.html" title="class in net.minecraft.entity.mob">AbstractSkeletonEntity</a></code></dd>
@@ -438,8 +438,8 @@ boolean&nbsp;bool)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getActiveEyeHeight(net.minecraft.entity.EntityPose,net.minecraft.entity.EntityDimensions)">getActiveEyeHeight</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">float</span>&nbsp;<span class="memberName">getActiveEyeHeight</span>&#8203;(<span class="arguments"><a href="../EntityPose.html" title="enum in net.minecraft.entity">EntityPose</a>&nbsp;entityPose,
-<a href="../EntityDimensions.html" title="class in net.minecraft.entity">EntityDimensions</a>&nbsp;entityDimensions)</span></div>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">float</span>&nbsp;<span class="memberName">getActiveEyeHeight</span>&#8203;(<span class="arguments"><a href="../EntityPose.html" title="enum in net.minecraft.entity">EntityPose</a>&nbsp;pose,
+<a href="../EntityDimensions.html" title="class in net.minecraft.entity">EntityDimensions</a>&nbsp;dimensions)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="AbstractSkeletonEntity.html#getActiveEyeHeight(net.minecraft.entity.EntityPose,net.minecraft.entity.EntityDimensions)">getActiveEyeHeight</a></code>&nbsp;in class&nbsp;<code><a href="AbstractSkeletonEntity.html" title="class in net.minecraft.entity.mob">AbstractSkeletonEntity</a></code></dd>
@@ -449,7 +449,7 @@ boolean&nbsp;bool)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="tryAttack(net.minecraft.entity.Entity)">tryAttack</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">tryAttack</span>&#8203;(<span class="arguments"><a href="../Entity.html" title="class in net.minecraft.entity">Entity</a>&nbsp;entity)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">tryAttack</span>&#8203;(<span class="arguments"><a href="../Entity.html" title="class in net.minecraft.entity">Entity</a>&nbsp;target)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="MobEntity.html#tryAttack(net.minecraft.entity.Entity)">tryAttack</a></code>&nbsp;in class&nbsp;<code><a href="MobEntity.html" title="class in net.minecraft.entity.mob">MobEntity</a></code></dd>
@@ -459,8 +459,8 @@ boolean&nbsp;bool)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="createArrowProjectile(net.minecraft.item.ItemStack,float)">createArrowProjectile</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType"><a href="../projectile/PersistentProjectileEntity.html" title="class in net.minecraft.entity.projectile">PersistentProjectileEntity</a></span>&nbsp;<span class="memberName">createArrowProjectile</span>&#8203;(<span class="arguments"><a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;itemStack,
-float&nbsp;float2)</span></div>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType"><a href="../projectile/PersistentProjectileEntity.html" title="class in net.minecraft.entity.projectile">PersistentProjectileEntity</a></span>&nbsp;<span class="memberName">createArrowProjectile</span>&#8203;(<span class="arguments"><a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;arrow,
+float&nbsp;damageModifier)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="AbstractSkeletonEntity.html#createArrowProjectile(net.minecraft.item.ItemStack,float)">createArrowProjectile</a></code>&nbsp;in class&nbsp;<code><a href="AbstractSkeletonEntity.html" title="class in net.minecraft.entity.mob">AbstractSkeletonEntity</a></code></dd>
@@ -470,7 +470,7 @@ float&nbsp;float2)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="canHaveStatusEffect(net.minecraft.entity.effect.StatusEffectInstance)">canHaveStatusEffect</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">canHaveStatusEffect</span>&#8203;(<span class="arguments"><a href="../effect/StatusEffectInstance.html" title="class in net.minecraft.entity.effect">StatusEffectInstance</a>&nbsp;statusEffectInstance)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">canHaveStatusEffect</span>&#8203;(<span class="arguments"><a href="../effect/StatusEffectInstance.html" title="class in net.minecraft.entity.effect">StatusEffectInstance</a>&nbsp;effect)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../LivingEntity.html#canHaveStatusEffect(net.minecraft.entity.effect.StatusEffectInstance)">canHaveStatusEffect</a></code>&nbsp;in class&nbsp;<code><a href="../LivingEntity.html" title="class in net.minecraft.entity">LivingEntity</a></code></dd>

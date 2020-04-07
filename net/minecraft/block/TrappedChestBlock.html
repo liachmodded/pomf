@@ -201,12 +201,12 @@ extends <a href="ChestBlock.html" title="class in net.minecraft.block">ChestBloc
 <tbody>
 <tr class="altColor" id="i0">
 <td class="colFirst"><code><a href="entity/BlockEntity.html" title="class in net.minecraft.block.entity">BlockEntity</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createBlockEntity(net.minecraft.world.BlockView)">createBlockEntity</a></span>&#8203;(<a href="../world/BlockView.html" title="interface in net.minecraft.world">BlockView</a>&nbsp;blockView)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createBlockEntity(net.minecraft.world.BlockView)">createBlockEntity</a></span>&#8203;(<a href="../world/BlockView.html" title="interface in net.minecraft.world">BlockView</a>&nbsp;world)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
 <td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#emitsRedstonePower(net.minecraft.block.BlockState)">emitsRedstonePower</a></span>&#8203;(<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#emitsRedstonePower(net.minecraft.block.BlockState)">emitsRedstonePower</a></span>&#8203;(<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i2">
@@ -216,17 +216,17 @@ extends <a href="ChestBlock.html" title="class in net.minecraft.block">ChestBloc
 </tr>
 <tr class="rowColor" id="i3">
 <td class="colFirst"><code>int</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getStrongRedstonePower(net.minecraft.block.BlockState,net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos,net.minecraft.util.math.Direction)">getStrongRedstonePower</a></span>&#8203;(<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState,
-<a href="../world/BlockView.html" title="interface in net.minecraft.world">BlockView</a>&nbsp;blockView,
-<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getStrongRedstonePower(net.minecraft.block.BlockState,net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos,net.minecraft.util.math.Direction)">getStrongRedstonePower</a></span>&#8203;(<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state,
+<a href="../world/BlockView.html" title="interface in net.minecraft.world">BlockView</a>&nbsp;world,
+<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
 <a href="../util/math/Direction.html" title="enum in net.minecraft.util.math">Direction</a>&nbsp;direction)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i4">
 <td class="colFirst"><code>int</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getWeakRedstonePower(net.minecraft.block.BlockState,net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos,net.minecraft.util.math.Direction)">getWeakRedstonePower</a></span>&#8203;(<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState,
-<a href="../world/BlockView.html" title="interface in net.minecraft.world">BlockView</a>&nbsp;blockView,
-<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getWeakRedstonePower(net.minecraft.block.BlockState,net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos,net.minecraft.util.math.Direction)">getWeakRedstonePower</a></span>&#8203;(<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state,
+<a href="../world/BlockView.html" title="interface in net.minecraft.world">BlockView</a>&nbsp;world,
+<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
 <a href="../util/math/Direction.html" title="enum in net.minecraft.util.math">Direction</a>&nbsp;direction)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -296,7 +296,7 @@ extends <a href="ChestBlock.html" title="class in net.minecraft.block">ChestBloc
 <li class="blockList">
 <section class="detail">
 <h3><a id="createBlockEntity(net.minecraft.world.BlockView)">createBlockEntity</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="entity/BlockEntity.html" title="class in net.minecraft.block.entity">BlockEntity</a></span>&nbsp;<span class="memberName">createBlockEntity</span>&#8203;(<span class="arguments"><a href="../world/BlockView.html" title="interface in net.minecraft.world">BlockView</a>&nbsp;blockView)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="entity/BlockEntity.html" title="class in net.minecraft.block.entity">BlockEntity</a></span>&nbsp;<span class="memberName">createBlockEntity</span>&#8203;(<span class="arguments"><a href="../world/BlockView.html" title="interface in net.minecraft.world">BlockView</a>&nbsp;world)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="BlockEntityProvider.html#createBlockEntity(net.minecraft.world.BlockView)">createBlockEntity</a></code>&nbsp;in interface&nbsp;<code><a href="BlockEntityProvider.html" title="interface in net.minecraft.block">BlockEntityProvider</a></code></dd>
@@ -318,7 +318,7 @@ extends <a href="ChestBlock.html" title="class in net.minecraft.block">ChestBloc
 <li class="blockList">
 <section class="detail">
 <h3><a id="emitsRedstonePower(net.minecraft.block.BlockState)">emitsRedstonePower</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">emitsRedstonePower</span>&#8203;(<span class="arguments"><a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">emitsRedstonePower</span>&#8203;(<span class="arguments"><a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="AbstractBlock.html#emitsRedstonePower(net.minecraft.block.BlockState)">emitsRedstonePower</a></code>&nbsp;in class&nbsp;<code><a href="AbstractBlock.html" title="class in net.minecraft.block">AbstractBlock</a></code></dd>
@@ -328,9 +328,9 @@ extends <a href="ChestBlock.html" title="class in net.minecraft.block">ChestBloc
 <li class="blockList">
 <section class="detail">
 <h3><a id="getWeakRedstonePower(net.minecraft.block.BlockState,net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos,net.minecraft.util.math.Direction)">getWeakRedstonePower</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getWeakRedstonePower</span>&#8203;(<span class="arguments"><a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState,
-<a href="../world/BlockView.html" title="interface in net.minecraft.world">BlockView</a>&nbsp;blockView,
-<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getWeakRedstonePower</span>&#8203;(<span class="arguments"><a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state,
+<a href="../world/BlockView.html" title="interface in net.minecraft.world">BlockView</a>&nbsp;world,
+<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
 <a href="../util/math/Direction.html" title="enum in net.minecraft.util.math">Direction</a>&nbsp;direction)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
@@ -341,9 +341,9 @@ extends <a href="ChestBlock.html" title="class in net.minecraft.block">ChestBloc
 <li class="blockList">
 <section class="detail">
 <h3><a id="getStrongRedstonePower(net.minecraft.block.BlockState,net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos,net.minecraft.util.math.Direction)">getStrongRedstonePower</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getStrongRedstonePower</span>&#8203;(<span class="arguments"><a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState,
-<a href="../world/BlockView.html" title="interface in net.minecraft.world">BlockView</a>&nbsp;blockView,
-<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getStrongRedstonePower</span>&#8203;(<span class="arguments"><a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state,
+<a href="../world/BlockView.html" title="interface in net.minecraft.world">BlockView</a>&nbsp;world,
+<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
 <a href="../util/math/Direction.html" title="enum in net.minecraft.util.math">Direction</a>&nbsp;direction)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>

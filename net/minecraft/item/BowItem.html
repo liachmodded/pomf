@@ -180,7 +180,7 @@ extends <a href="RangedWeaponItem.html" title="class in net.minecraft.item">Rang
 <tbody>
 <tr class="altColor" id="i0">
 <td class="colFirst"><code>int</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getMaxUseTime(net.minecraft.item.ItemStack)">getMaxUseTime</a></span>&#8203;(<a href="ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;itemStack)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getMaxUseTime(net.minecraft.item.ItemStack)">getMaxUseTime</a></span>&#8203;(<a href="ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;stack)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
@@ -200,21 +200,21 @@ extends <a href="RangedWeaponItem.html" title="class in net.minecraft.item">Rang
 </tr>
 <tr class="altColor" id="i4">
 <td class="colFirst"><code><a href="../util/UseAction.html" title="enum in net.minecraft.util">UseAction</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getUseAction(net.minecraft.item.ItemStack)">getUseAction</a></span>&#8203;(<a href="ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;itemStack)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getUseAction(net.minecraft.item.ItemStack)">getUseAction</a></span>&#8203;(<a href="ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;stack)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i5">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#onStoppedUsing(net.minecraft.item.ItemStack,net.minecraft.world.World,net.minecraft.entity.LivingEntity,int)">onStoppedUsing</a></span>&#8203;(<a href="ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;itemStack,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#onStoppedUsing(net.minecraft.item.ItemStack,net.minecraft.world.World,net.minecraft.entity.LivingEntity,int)">onStoppedUsing</a></span>&#8203;(<a href="ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;stack,
 <a href="../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world,
-<a href="../entity/LivingEntity.html" title="class in net.minecraft.entity">LivingEntity</a>&nbsp;livingEntity,
-int&nbsp;int2)</code></th>
+<a href="../entity/LivingEntity.html" title="class in net.minecraft.entity">LivingEntity</a>&nbsp;user,
+int&nbsp;remainingUseTicks)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i6">
 <td class="colFirst"><code><a href="../util/TypedActionResult.html" title="class in net.minecraft.util">TypedActionResult</a>&lt;<a href="ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#use(net.minecraft.world.World,net.minecraft.entity.player.PlayerEntity,net.minecraft.util.Hand)">use</a></span>&#8203;(<a href="../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world,
-<a href="../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;playerEntity,
+<a href="../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;user,
 <a href="../util/Hand.html" title="enum in net.minecraft.util">Hand</a>&nbsp;hand)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -269,10 +269,10 @@ int&nbsp;int2)</code></th>
 <li class="blockList">
 <section class="detail">
 <h3><a id="onStoppedUsing(net.minecraft.item.ItemStack,net.minecraft.world.World,net.minecraft.entity.LivingEntity,int)">onStoppedUsing</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">onStoppedUsing</span>&#8203;(<span class="arguments"><a href="ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;itemStack,
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">onStoppedUsing</span>&#8203;(<span class="arguments"><a href="ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;stack,
 <a href="../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world,
-<a href="../entity/LivingEntity.html" title="class in net.minecraft.entity">LivingEntity</a>&nbsp;livingEntity,
-int&nbsp;int2)</span></div>
+<a href="../entity/LivingEntity.html" title="class in net.minecraft.entity">LivingEntity</a>&nbsp;user,
+int&nbsp;remainingUseTicks)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="Item.html#onStoppedUsing(net.minecraft.item.ItemStack,net.minecraft.world.World,net.minecraft.entity.LivingEntity,int)">onStoppedUsing</a></code>&nbsp;in class&nbsp;<code><a href="Item.html" title="class in net.minecraft.item">Item</a></code></dd>
@@ -288,7 +288,7 @@ int&nbsp;int2)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getMaxUseTime(net.minecraft.item.ItemStack)">getMaxUseTime</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getMaxUseTime</span>&#8203;(<span class="arguments"><a href="ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;itemStack)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getMaxUseTime</span>&#8203;(<span class="arguments"><a href="ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;stack)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="Item.html#getMaxUseTime(net.minecraft.item.ItemStack)">getMaxUseTime</a></code>&nbsp;in class&nbsp;<code><a href="Item.html" title="class in net.minecraft.item">Item</a></code></dd>
@@ -298,7 +298,7 @@ int&nbsp;int2)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getUseAction(net.minecraft.item.ItemStack)">getUseAction</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../util/UseAction.html" title="enum in net.minecraft.util">UseAction</a></span>&nbsp;<span class="memberName">getUseAction</span>&#8203;(<span class="arguments"><a href="ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;itemStack)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../util/UseAction.html" title="enum in net.minecraft.util">UseAction</a></span>&nbsp;<span class="memberName">getUseAction</span>&#8203;(<span class="arguments"><a href="ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;stack)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="Item.html#getUseAction(net.minecraft.item.ItemStack)">getUseAction</a></code>&nbsp;in class&nbsp;<code><a href="Item.html" title="class in net.minecraft.item">Item</a></code></dd>
@@ -309,7 +309,7 @@ int&nbsp;int2)</span></div>
 <section class="detail">
 <h3><a id="use(net.minecraft.world.World,net.minecraft.entity.player.PlayerEntity,net.minecraft.util.Hand)">use</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../util/TypedActionResult.html" title="class in net.minecraft.util">TypedActionResult</a>&lt;<a href="ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&gt;</span>&nbsp;<span class="memberName">use</span>&#8203;(<span class="arguments"><a href="../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world,
-<a href="../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;playerEntity,
+<a href="../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;user,
 <a href="../util/Hand.html" title="enum in net.minecraft.util">Hand</a>&nbsp;hand)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>

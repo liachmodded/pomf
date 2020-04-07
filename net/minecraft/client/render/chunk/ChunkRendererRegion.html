@@ -231,7 +231,7 @@ int&nbsp;chunkRadius)</code></th>
 </tr>
 <tr class="rowColor" id="i1">
 <td class="colFirst"><code><a href="../../../block/entity/BlockEntity.html" title="class in net.minecraft.block.entity">BlockEntity</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getBlockEntity(net.minecraft.util.math.BlockPos)">getBlockEntity</a></span>&#8203;(<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getBlockEntity(net.minecraft.util.math.BlockPos)">getBlockEntity</a></span>&#8203;(<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i2">
@@ -242,24 +242,24 @@ int&nbsp;chunkRadius)</code></th>
 </tr>
 <tr class="rowColor" id="i3">
 <td class="colFirst"><code><a href="../../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getBlockState(net.minecraft.util.math.BlockPos)">getBlockState</a></span>&#8203;(<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getBlockState(net.minecraft.util.math.BlockPos)">getBlockState</a></span>&#8203;(<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i4">
 <td class="colFirst"><code>float</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getBrightness(net.minecraft.util.math.Direction,boolean)">getBrightness</a></span>&#8203;(<a href="../../../util/math/Direction.html" title="enum in net.minecraft.util.math">Direction</a>&nbsp;direction,
-boolean&nbsp;bool)</code></th>
+boolean&nbsp;shaded)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i5">
 <td class="colFirst"><code>int</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getColor(net.minecraft.util.math.BlockPos,net.minecraft.world.level.ColorResolver)">getColor</a></span>&#8203;(<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getColor(net.minecraft.util.math.BlockPos,net.minecraft.world.level.ColorResolver)">getColor</a></span>&#8203;(<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
 <a href="../../../world/level/ColorResolver.html" title="interface in net.minecraft.world.level">ColorResolver</a>&nbsp;colorResolver)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i6">
 <td class="colFirst"><code><a href="../../../fluid/FluidState.html" title="interface in net.minecraft.fluid">FluidState</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getFluidState(net.minecraft.util.math.BlockPos)">getFluidState</a></span>&#8203;(<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getFluidState(net.minecraft.util.math.BlockPos)">getFluidState</a></span>&#8203;(<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i7">
@@ -428,7 +428,7 @@ int&nbsp;z)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getBlockState(net.minecraft.util.math.BlockPos)">getBlockState</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a></span>&nbsp;<span class="memberName">getBlockState</span>&#8203;(<span class="arguments"><a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a></span>&nbsp;<span class="memberName">getBlockState</span>&#8203;(<span class="arguments"><a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../world/BlockView.html#getBlockState(net.minecraft.util.math.BlockPos)">getBlockState</a></code>&nbsp;in interface&nbsp;<code><a href="../../../world/BlockView.html" title="interface in net.minecraft.world">BlockView</a></code></dd>
@@ -438,7 +438,7 @@ int&nbsp;z)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getFluidState(net.minecraft.util.math.BlockPos)">getFluidState</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../../fluid/FluidState.html" title="interface in net.minecraft.fluid">FluidState</a></span>&nbsp;<span class="memberName">getFluidState</span>&#8203;(<span class="arguments"><a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../../fluid/FluidState.html" title="interface in net.minecraft.fluid">FluidState</a></span>&nbsp;<span class="memberName">getFluidState</span>&#8203;(<span class="arguments"><a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../world/BlockView.html#getFluidState(net.minecraft.util.math.BlockPos)">getFluidState</a></code>&nbsp;in interface&nbsp;<code><a href="../../../world/BlockView.html" title="interface in net.minecraft.world">BlockView</a></code></dd>
@@ -449,7 +449,7 @@ int&nbsp;z)</span></div>
 <section class="detail">
 <h3><a id="getBrightness(net.minecraft.util.math.Direction,boolean)">getBrightness</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">float</span>&nbsp;<span class="memberName">getBrightness</span>&#8203;(<span class="arguments"><a href="../../../util/math/Direction.html" title="enum in net.minecraft.util.math">Direction</a>&nbsp;direction,
-boolean&nbsp;bool)</span></div>
+boolean&nbsp;shaded)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../world/BlockRenderView.html#getBrightness(net.minecraft.util.math.Direction,boolean)">getBrightness</a></code>&nbsp;in interface&nbsp;<code><a href="../../../world/BlockRenderView.html" title="interface in net.minecraft.world">BlockRenderView</a></code></dd>
@@ -469,7 +469,7 @@ boolean&nbsp;bool)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getBlockEntity(net.minecraft.util.math.BlockPos)">getBlockEntity</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../../block/entity/BlockEntity.html" title="class in net.minecraft.block.entity">BlockEntity</a></span>&nbsp;<span class="memberName">getBlockEntity</span>&#8203;(<span class="arguments"><a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../../block/entity/BlockEntity.html" title="class in net.minecraft.block.entity">BlockEntity</a></span>&nbsp;<span class="memberName">getBlockEntity</span>&#8203;(<span class="arguments"><a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../world/BlockView.html#getBlockEntity(net.minecraft.util.math.BlockPos)">getBlockEntity</a></code>&nbsp;in interface&nbsp;<code><a href="../../../world/BlockView.html" title="interface in net.minecraft.world">BlockView</a></code></dd>
@@ -486,7 +486,7 @@ boolean&nbsp;bool)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getColor(net.minecraft.util.math.BlockPos,net.minecraft.world.level.ColorResolver)">getColor</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getColor</span>&#8203;(<span class="arguments"><a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getColor</span>&#8203;(<span class="arguments"><a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
 <a href="../../../world/level/ColorResolver.html" title="interface in net.minecraft.world.level">ColorResolver</a>&nbsp;colorResolver)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>

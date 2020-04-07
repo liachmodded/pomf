@@ -164,8 +164,8 @@ boolean&nbsp;lit)</code></th>
 <tbody>
 <tr class="altColor" id="i0">
 <td class="colFirst"><code>protected int</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getBlockLight(T,float)">getBlockLight</a></span>&#8203;(<a href="FlyingItemEntityRenderer.html" title="type parameter in FlyingItemEntityRenderer">T</a>&nbsp;t,
-float&nbsp;float2)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getBlockLight(T,float)">getBlockLight</a></span>&#8203;(<a href="FlyingItemEntityRenderer.html" title="type parameter in FlyingItemEntityRenderer">T</a>&nbsp;entity,
+float&nbsp;tickDelta)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
@@ -175,12 +175,12 @@ float&nbsp;float2)</code></th>
 </tr>
 <tr class="altColor" id="i2">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#render(T,float,float,net.minecraft.client.util.math.MatrixStack,net.minecraft.client.render.VertexConsumerProvider,int)">render</a></span>&#8203;(<a href="FlyingItemEntityRenderer.html" title="type parameter in FlyingItemEntityRenderer">T</a>&nbsp;t,
-float&nbsp;float2,
-float&nbsp;float3,
-<a href="../../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrixStack,
-<a href="../VertexConsumerProvider.html" title="interface in net.minecraft.client.render">VertexConsumerProvider</a>&nbsp;vertexConsumerProvider,
-int&nbsp;int2)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#render(T,float,float,net.minecraft.client.util.math.MatrixStack,net.minecraft.client.render.VertexConsumerProvider,int)">render</a></span>&#8203;(<a href="FlyingItemEntityRenderer.html" title="type parameter in FlyingItemEntityRenderer">T</a>&nbsp;entity,
+float&nbsp;yaw,
+float&nbsp;tickDelta,
+<a href="../../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
+<a href="../VertexConsumerProvider.html" title="interface in net.minecraft.client.render">VertexConsumerProvider</a>&nbsp;vertexConsumers,
+int&nbsp;light)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -241,8 +241,8 @@ boolean&nbsp;lit)</span></div>
 <h3><a id="getBlockLight(net.minecraft.entity.Entity,float)">
 <!--   -->
 </a><a id="getBlockLight(T,float)">getBlockLight</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getBlockLight</span>&#8203;(<span class="arguments"><a href="FlyingItemEntityRenderer.html" title="type parameter in FlyingItemEntityRenderer">T</a>&nbsp;t,
-float&nbsp;float2)</span></div>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getBlockLight</span>&#8203;(<span class="arguments"><a href="FlyingItemEntityRenderer.html" title="type parameter in FlyingItemEntityRenderer">T</a>&nbsp;entity,
+float&nbsp;tickDelta)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="EntityRenderer.html#getBlockLight(T,float)">getBlockLight</a></code>&nbsp;in class&nbsp;<code><a href="EntityRenderer.html" title="class in net.minecraft.client.render.entity">EntityRenderer</a>&lt;<a href="FlyingItemEntityRenderer.html" title="type parameter in FlyingItemEntityRenderer">T</a> extends <a href="../../../entity/Entity.html" title="class in net.minecraft.entity">Entity</a> &amp; <a href="../../../entity/FlyingItemEntity.html" title="interface in net.minecraft.entity">FlyingItemEntity</a>&gt;</code></dd>
@@ -254,12 +254,12 @@ float&nbsp;float2)</span></div>
 <h3><a id="render(net.minecraft.entity.Entity,float,float,net.minecraft.client.util.math.MatrixStack,net.minecraft.client.render.VertexConsumerProvider,int)">
 <!--   -->
 </a><a id="render(T,float,float,net.minecraft.client.util.math.MatrixStack,net.minecraft.client.render.VertexConsumerProvider,int)">render</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">render</span>&#8203;(<span class="arguments"><a href="FlyingItemEntityRenderer.html" title="type parameter in FlyingItemEntityRenderer">T</a>&nbsp;t,
-float&nbsp;float2,
-float&nbsp;float3,
-<a href="../../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrixStack,
-<a href="../VertexConsumerProvider.html" title="interface in net.minecraft.client.render">VertexConsumerProvider</a>&nbsp;vertexConsumerProvider,
-int&nbsp;int2)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">render</span>&#8203;(<span class="arguments"><a href="FlyingItemEntityRenderer.html" title="type parameter in FlyingItemEntityRenderer">T</a>&nbsp;entity,
+float&nbsp;yaw,
+float&nbsp;tickDelta,
+<a href="../../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
+<a href="../VertexConsumerProvider.html" title="interface in net.minecraft.client.render">VertexConsumerProvider</a>&nbsp;vertexConsumers,
+int&nbsp;light)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="EntityRenderer.html#render(T,float,float,net.minecraft.client.util.math.MatrixStack,net.minecraft.client.render.VertexConsumerProvider,int)">render</a></code>&nbsp;in class&nbsp;<code><a href="EntityRenderer.html" title="class in net.minecraft.client.render.entity">EntityRenderer</a>&lt;<a href="FlyingItemEntityRenderer.html" title="type parameter in FlyingItemEntityRenderer">T</a> extends <a href="../../../entity/Entity.html" title="class in net.minecraft.entity">Entity</a> &amp; <a href="../../../entity/FlyingItemEntity.html" title="interface in net.minecraft.entity">FlyingItemEntity</a>&gt;</code></dd>

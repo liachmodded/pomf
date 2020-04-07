@@ -176,12 +176,12 @@ extends <a href="SpriteBillboardParticle.html" title="class in net.minecraft.cli
 <tr class="altColor">
 <td class="colFirst"><code>protected </code></td>
 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.world.World,double,double,double,double,double,double)">PortalParticle</a></span>&#8203;(<a href="../../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world,
-double&nbsp;double2,
-double&nbsp;double3,
-double&nbsp;double4,
-double&nbsp;double5,
-double&nbsp;double6,
-double&nbsp;double7)</code></th>
+double&nbsp;x,
+double&nbsp;y,
+double&nbsp;z,
+double&nbsp;velocityX,
+double&nbsp;velocityY,
+double&nbsp;velocityZ)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -209,12 +209,12 @@ double&nbsp;double7)</code></th>
 <tbody>
 <tr class="altColor" id="i0">
 <td class="colFirst"><code>int</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getColorMultiplier(float)">getColorMultiplier</a></span>&#8203;(float&nbsp;float2)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getColorMultiplier(float)">getColorMultiplier</a></span>&#8203;(float&nbsp;tint)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
 <td class="colFirst"><code>float</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getSize(float)">getSize</a></span>&#8203;(float&nbsp;float2)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getSize(float)">getSize</a></span>&#8203;(float&nbsp;tickDelta)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i2">
@@ -224,9 +224,9 @@ double&nbsp;double7)</code></th>
 </tr>
 <tr class="rowColor" id="i3">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#move(double,double,double)">move</a></span>&#8203;(double&nbsp;double2,
-double&nbsp;double3,
-double&nbsp;double4)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#move(double,double,double)">move</a></span>&#8203;(double&nbsp;dx,
+double&nbsp;dy,
+double&nbsp;dz)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i4">
@@ -275,12 +275,12 @@ double&nbsp;double4)</code></th>
 <section class="detail">
 <h3><a id="&lt;init&gt;(net.minecraft.world.World,double,double,double,double,double,double)">PortalParticle</a></h3>
 <div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="memberName">PortalParticle</span>&#8203;(<span class="arguments"><a href="../../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world,
-double&nbsp;double2,
-double&nbsp;double3,
-double&nbsp;double4,
-double&nbsp;double5,
-double&nbsp;double6,
-double&nbsp;double7)</span></div>
+double&nbsp;x,
+double&nbsp;y,
+double&nbsp;z,
+double&nbsp;velocityX,
+double&nbsp;velocityY,
+double&nbsp;velocityZ)</span></div>
 </section>
 </li>
 </ul>
@@ -306,9 +306,9 @@ double&nbsp;double7)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="move(double,double,double)">move</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">move</span>&#8203;(<span class="arguments">double&nbsp;double2,
-double&nbsp;double3,
-double&nbsp;double4)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">move</span>&#8203;(<span class="arguments">double&nbsp;dx,
+double&nbsp;dy,
+double&nbsp;dz)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="Particle.html#move(double,double,double)">move</a></code>&nbsp;in class&nbsp;<code><a href="Particle.html" title="class in net.minecraft.client.particle">Particle</a></code></dd>
@@ -318,7 +318,7 @@ double&nbsp;double4)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getSize(float)">getSize</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">float</span>&nbsp;<span class="memberName">getSize</span>&#8203;(<span class="arguments">float&nbsp;float2)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">float</span>&nbsp;<span class="memberName">getSize</span>&#8203;(<span class="arguments">float&nbsp;tickDelta)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="BillboardParticle.html#getSize(float)">getSize</a></code>&nbsp;in class&nbsp;<code><a href="BillboardParticle.html" title="class in net.minecraft.client.particle">BillboardParticle</a></code></dd>
@@ -328,7 +328,7 @@ double&nbsp;double4)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getColorMultiplier(float)">getColorMultiplier</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getColorMultiplier</span>&#8203;(<span class="arguments">float&nbsp;float2)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getColorMultiplier</span>&#8203;(<span class="arguments">float&nbsp;tint)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="Particle.html#getColorMultiplier(float)">getColorMultiplier</a></code>&nbsp;in class&nbsp;<code><a href="Particle.html" title="class in net.minecraft.client.particle">Particle</a></code></dd>

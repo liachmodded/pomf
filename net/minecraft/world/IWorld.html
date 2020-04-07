@@ -199,8 +199,8 @@ double&nbsp;velocityZ)</code></th>
 </tr>
 <tr class="altColor" id="i14">
 <td class="colFirst"><code>default <a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getTopPosition(net.minecraft.world.Heightmap.Type,net.minecraft.util.math.BlockPos)">getTopPosition</a></span>&#8203;(<a href="Heightmap.Type.html" title="enum in net.minecraft.world">Heightmap.Type</a>&nbsp;type,
-<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getTopPosition(net.minecraft.world.Heightmap.Type,net.minecraft.util.math.BlockPos)">getTopPosition</a></span>&#8203;(<a href="Heightmap.Type.html" title="enum in net.minecraft.world">Heightmap.Type</a>&nbsp;heightmap,
+<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i15">
@@ -210,14 +210,14 @@ double&nbsp;velocityZ)</code></th>
 </tr>
 <tr class="altColor" id="i16">
 <td class="colFirst"><code>default boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#intersectsEntities(net.minecraft.entity.Entity,net.minecraft.util.shape.VoxelShape)">intersectsEntities</a></span>&#8203;(<a href="../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&nbsp;entity,
-<a href="../util/shape/VoxelShape.html" title="class in net.minecraft.util.shape">VoxelShape</a>&nbsp;voxelShape)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#intersectsEntities(net.minecraft.entity.Entity,net.minecraft.util.shape.VoxelShape)">intersectsEntities</a></span>&#8203;(<a href="../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&nbsp;except,
+<a href="../util/shape/VoxelShape.html" title="class in net.minecraft.util.shape">VoxelShape</a>&nbsp;shape)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i17">
 <td class="colFirst"><code>default boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isChunkLoaded(int,int)">isChunkLoaded</a></span>&#8203;(int&nbsp;int2,
-int&nbsp;int3)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isChunkLoaded(int,int)">isChunkLoaded</a></span>&#8203;(int&nbsp;chunkX,
+int&nbsp;chunkZ)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i18">
@@ -372,8 +372,8 @@ float&nbsp;pitch)</code></th>
 <li class="blockList">
 <section class="detail">
 <h3><a id="isChunkLoaded(int,int)">isChunkLoaded</a></h3>
-<div class="memberSignature"><span class="modifiers">default</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isChunkLoaded</span>&#8203;(<span class="arguments">int&nbsp;int2,
-int&nbsp;int3)</span></div>
+<div class="memberSignature"><span class="modifiers">default</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isChunkLoaded</span>&#8203;(<span class="arguments">int&nbsp;chunkX,
+int&nbsp;chunkZ)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="WorldView.html#isChunkLoaded(int,int)">isChunkLoaded</a></code>&nbsp;in interface&nbsp;<code><a href="WorldView.html" title="interface in net.minecraft.world">WorldView</a></code></dd>
@@ -456,8 +456,8 @@ int&nbsp;data)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="intersectsEntities(net.minecraft.entity.Entity,net.minecraft.util.shape.VoxelShape)">intersectsEntities</a></h3>
-<div class="memberSignature"><span class="modifiers">default</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">intersectsEntities</span>&#8203;(<span class="arguments"><a href="../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&nbsp;entity,
-<a href="../util/shape/VoxelShape.html" title="class in net.minecraft.util.shape">VoxelShape</a>&nbsp;voxelShape)</span></div>
+<div class="memberSignature"><span class="modifiers">default</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">intersectsEntities</span>&#8203;(<span class="arguments"><a href="../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&nbsp;except,
+<a href="../util/shape/VoxelShape.html" title="class in net.minecraft.util.shape">VoxelShape</a>&nbsp;shape)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="CollisionView.html#intersectsEntities(net.minecraft.entity.Entity,net.minecraft.util.shape.VoxelShape)">intersectsEntities</a></code>&nbsp;in interface&nbsp;<code><a href="CollisionView.html" title="interface in net.minecraft.world">CollisionView</a></code></dd>
@@ -469,8 +469,8 @@ int&nbsp;data)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getTopPosition(net.minecraft.world.Heightmap.Type,net.minecraft.util.math.BlockPos)">getTopPosition</a></h3>
-<div class="memberSignature"><span class="modifiers">default</span>&nbsp;<span class="returnType"><a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a></span>&nbsp;<span class="memberName">getTopPosition</span>&#8203;(<span class="arguments"><a href="Heightmap.Type.html" title="enum in net.minecraft.world">Heightmap.Type</a>&nbsp;type,
-<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos)</span></div>
+<div class="memberSignature"><span class="modifiers">default</span>&nbsp;<span class="returnType"><a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a></span>&nbsp;<span class="memberName">getTopPosition</span>&#8203;(<span class="arguments"><a href="Heightmap.Type.html" title="enum in net.minecraft.world">Heightmap.Type</a>&nbsp;heightmap,
+<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="TestableWorld.html#getTopPosition(net.minecraft.world.Heightmap.Type,net.minecraft.util.math.BlockPos)">getTopPosition</a></code>&nbsp;in interface&nbsp;<code><a href="TestableWorld.html" title="interface in net.minecraft.world">TestableWorld</a></code></dd>

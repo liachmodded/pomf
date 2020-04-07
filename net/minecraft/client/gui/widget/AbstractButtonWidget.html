@@ -233,7 +233,7 @@ int&nbsp;height,
 <tbody>
 <tr class="altColor" id="i0">
 <td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#changeFocus(boolean)">changeFocus</a></span>&#8203;(boolean&nbsp;bool)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#changeFocus(boolean)">changeFocus</a></span>&#8203;(boolean&nbsp;lookForwards)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
@@ -279,8 +279,8 @@ double&nbsp;mouseY)</code></th>
 </tr>
 <tr class="rowColor" id="i9">
 <td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isMouseOver(double,double)">isMouseOver</a></span>&#8203;(double&nbsp;double2,
-double&nbsp;double3)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isMouseOver(double,double)">isMouseOver</a></span>&#8203;(double&nbsp;mouseX,
+double&nbsp;mouseY)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i10">
@@ -290,25 +290,25 @@ double&nbsp;double3)</code></th>
 </tr>
 <tr class="rowColor" id="i11">
 <td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#mouseClicked(double,double,int)">mouseClicked</a></span>&#8203;(double&nbsp;double2,
-double&nbsp;double3,
-int&nbsp;int2)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#mouseClicked(double,double,int)">mouseClicked</a></span>&#8203;(double&nbsp;mouseX,
+double&nbsp;mouseY,
+int&nbsp;button)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i12">
 <td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#mouseDragged(double,double,int,double,double)">mouseDragged</a></span>&#8203;(double&nbsp;double2,
-double&nbsp;double3,
-int&nbsp;int2,
-double&nbsp;double4,
-double&nbsp;double5)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#mouseDragged(double,double,int,double,double)">mouseDragged</a></span>&#8203;(double&nbsp;mouseX,
+double&nbsp;mouseY,
+int&nbsp;button,
+double&nbsp;deltaX,
+double&nbsp;deltaY)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i13">
 <td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#mouseReleased(double,double,int)">mouseReleased</a></span>&#8203;(double&nbsp;double2,
-double&nbsp;double3,
-int&nbsp;int2)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#mouseReleased(double,double,int)">mouseReleased</a></span>&#8203;(double&nbsp;mouseX,
+double&nbsp;mouseY,
+int&nbsp;button)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i14">
@@ -353,9 +353,9 @@ double&nbsp;mouseY)</code></th>
 </tr>
 <tr class="rowColor" id="i21">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#render(int,int,float)">render</a></span>&#8203;(int&nbsp;int2,
-int&nbsp;int3,
-float&nbsp;float2)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#render(int,int,float)">render</a></span>&#8203;(int&nbsp;mouseX,
+int&nbsp;mouseY,
+float&nbsp;delta)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i22">
@@ -535,9 +535,9 @@ int&nbsp;height,
 <li class="blockList">
 <section class="detail">
 <h3><a id="render(int,int,float)">render</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">render</span>&#8203;(<span class="arguments">int&nbsp;int2,
-int&nbsp;int3,
-float&nbsp;float2)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">render</span>&#8203;(<span class="arguments">int&nbsp;mouseX,
+int&nbsp;mouseY,
+float&nbsp;delta)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../Drawable.html#render(int,int,float)">render</a></code>&nbsp;in interface&nbsp;<code><a href="../Drawable.html" title="interface in net.minecraft.client.gui">Drawable</a></code></dd>
@@ -598,9 +598,9 @@ double&nbsp;deltaY)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="mouseClicked(double,double,int)">mouseClicked</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">mouseClicked</span>&#8203;(<span class="arguments">double&nbsp;double2,
-double&nbsp;double3,
-int&nbsp;int2)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">mouseClicked</span>&#8203;(<span class="arguments">double&nbsp;mouseX,
+double&nbsp;mouseY,
+int&nbsp;button)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../Element.html#mouseClicked(double,double,int)">mouseClicked</a></code>&nbsp;in interface&nbsp;<code><a href="../Element.html" title="interface in net.minecraft.client.gui">Element</a></code></dd>
@@ -610,9 +610,9 @@ int&nbsp;int2)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="mouseReleased(double,double,int)">mouseReleased</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">mouseReleased</span>&#8203;(<span class="arguments">double&nbsp;double2,
-double&nbsp;double3,
-int&nbsp;int2)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">mouseReleased</span>&#8203;(<span class="arguments">double&nbsp;mouseX,
+double&nbsp;mouseY,
+int&nbsp;button)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../Element.html#mouseReleased(double,double,int)">mouseReleased</a></code>&nbsp;in interface&nbsp;<code><a href="../Element.html" title="interface in net.minecraft.client.gui">Element</a></code></dd>
@@ -628,11 +628,11 @@ int&nbsp;int2)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="mouseDragged(double,double,int,double,double)">mouseDragged</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">mouseDragged</span>&#8203;(<span class="arguments">double&nbsp;double2,
-double&nbsp;double3,
-int&nbsp;int2,
-double&nbsp;double4,
-double&nbsp;double5)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">mouseDragged</span>&#8203;(<span class="arguments">double&nbsp;mouseX,
+double&nbsp;mouseY,
+int&nbsp;button,
+double&nbsp;deltaX,
+double&nbsp;deltaY)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../Element.html#mouseDragged(double,double,int,double,double)">mouseDragged</a></code>&nbsp;in interface&nbsp;<code><a href="../Element.html" title="interface in net.minecraft.client.gui">Element</a></code></dd>
@@ -655,7 +655,7 @@ double&nbsp;mouseY)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="changeFocus(boolean)">changeFocus</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">changeFocus</span>&#8203;(<span class="arguments">boolean&nbsp;bool)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">changeFocus</span>&#8203;(<span class="arguments">boolean&nbsp;lookForwards)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../Element.html#changeFocus(boolean)">changeFocus</a></code>&nbsp;in interface&nbsp;<code><a href="../Element.html" title="interface in net.minecraft.client.gui">Element</a></code></dd>
@@ -671,8 +671,8 @@ double&nbsp;mouseY)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="isMouseOver(double,double)">isMouseOver</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isMouseOver</span>&#8203;(<span class="arguments">double&nbsp;double2,
-double&nbsp;double3)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isMouseOver</span>&#8203;(<span class="arguments">double&nbsp;mouseX,
+double&nbsp;mouseY)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../Element.html#isMouseOver(double,double)">isMouseOver</a></code>&nbsp;in interface&nbsp;<code><a href="../Element.html" title="interface in net.minecraft.client.gui">Element</a></code></dd>

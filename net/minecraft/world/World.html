@@ -332,20 +332,20 @@ double&nbsp;velocityZ)</code></th>
 </tr>
 <tr class="altColor" id="i8">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addParticle(net.minecraft.particle.ParticleEffect,double,double,double,double,double,double)">addParticle</a></span>&#8203;(<a href="../particle/ParticleEffect.html" title="interface in net.minecraft.particle">ParticleEffect</a>&nbsp;particleEffect,
-double&nbsp;double2,
-double&nbsp;double3,
-double&nbsp;double4,
-double&nbsp;double5,
-double&nbsp;double6,
-double&nbsp;double7)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addParticle(net.minecraft.particle.ParticleEffect,double,double,double,double,double,double)">addParticle</a></span>&#8203;(<a href="../particle/ParticleEffect.html" title="interface in net.minecraft.particle">ParticleEffect</a>&nbsp;parameters,
+double&nbsp;x,
+double&nbsp;y,
+double&nbsp;z,
+double&nbsp;velocityX,
+double&nbsp;velocityY,
+double&nbsp;velocityZ)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i9">
 <td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#breakBlock(net.minecraft.util.math.BlockPos,boolean,net.minecraft.entity.Entity)">breakBlock</a></span>&#8203;(<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
-boolean&nbsp;bool,
-<a href="../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&nbsp;entity)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#breakBlock(net.minecraft.util.math.BlockPos,boolean,net.minecraft.entity.Entity)">breakBlock</a></span>&#8203;(<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+boolean&nbsp;drop,
+<a href="../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&nbsp;breakingEntity)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i10">
@@ -437,12 +437,12 @@ boolean&nbsp;createFire,
 </tr>
 <tr class="rowColor" id="i23">
 <td class="colFirst"><code><a href="../block/entity/BlockEntity.html" title="class in net.minecraft.block.entity">BlockEntity</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getBlockEntity(net.minecraft.util.math.BlockPos)">getBlockEntity</a></span>&#8203;(<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getBlockEntity(net.minecraft.util.math.BlockPos)">getBlockEntity</a></span>&#8203;(<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i24">
 <td class="colFirst"><code><a href="../block/BlockState.html" title="class in net.minecraft.block">BlockState</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getBlockState(net.minecraft.util.math.BlockPos)">getBlockState</a></span>&#8203;(<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getBlockState(net.minecraft.util.math.BlockPos)">getBlockState</a></span>&#8203;(<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i25">
@@ -459,10 +459,10 @@ int&nbsp;int3)</code></th>
 </tr>
 <tr class="rowColor" id="i27">
 <td class="colFirst"><code><a href="chunk/Chunk.html" title="interface in net.minecraft.world.chunk">Chunk</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getChunk(int,int,net.minecraft.world.chunk.ChunkStatus,boolean)">getChunk</a></span>&#8203;(int&nbsp;int2,
-int&nbsp;int3,
-<a href="chunk/ChunkStatus.html" title="class in net.minecraft.world.chunk">ChunkStatus</a>&nbsp;chunkStatus,
-boolean&nbsp;bool)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getChunk(int,int,net.minecraft.world.chunk.ChunkStatus,boolean)">getChunk</a></span>&#8203;(int&nbsp;chunkX,
+int&nbsp;chunkZ,
+<a href="chunk/ChunkStatus.html" title="class in net.minecraft.world.chunk">ChunkStatus</a>&nbsp;leastStatus,
+boolean&nbsp;create)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i28">
@@ -488,14 +488,14 @@ boolean&nbsp;bool)</code></th>
 </tr>
 <tr class="altColor" id="i32">
 <td class="colFirst"><code>&lt;T extends <a href="../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&gt;<br><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;T&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getEntities(java.lang.Class,net.minecraft.util.math.Box,java.util.function.Predicate)">getEntities</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang" class="externalLink">Class</a>&lt;? extends T&gt;&nbsp;class2,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getEntities(java.lang.Class,net.minecraft.util.math.Box,java.util.function.Predicate)">getEntities</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang" class="externalLink">Class</a>&lt;? extends T&gt;&nbsp;entityClass,
 <a href="../util/math/Box.html" title="class in net.minecraft.util.math">Box</a>&nbsp;box,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Predicate</a>&lt;? super T&gt;&nbsp;predicate)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i33">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getEntities(net.minecraft.entity.Entity,net.minecraft.util.math.Box,java.util.function.Predicate)">getEntities</a></span>&#8203;(<a href="../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&nbsp;entity,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getEntities(net.minecraft.entity.Entity,net.minecraft.util.math.Box,java.util.function.Predicate)">getEntities</a></span>&#8203;(<a href="../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&nbsp;except,
 <a href="../util/math/Box.html" title="class in net.minecraft.util.math">Box</a>&nbsp;box,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Predicate</a>&lt;? super <a href="../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&gt;&nbsp;predicate)</code></th>
 <td class="colLast">&nbsp;</td>
@@ -509,7 +509,7 @@ boolean&nbsp;bool)</code></th>
 </tr>
 <tr class="rowColor" id="i35">
 <td class="colFirst"><code>&lt;T extends <a href="../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&gt;<br><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;T&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getEntitiesIncludingUngeneratedChunks(java.lang.Class,net.minecraft.util.math.Box,java.util.function.Predicate)">getEntitiesIncludingUngeneratedChunks</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang" class="externalLink">Class</a>&lt;? extends T&gt;&nbsp;class2,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getEntitiesIncludingUngeneratedChunks(java.lang.Class,net.minecraft.util.math.Box,java.util.function.Predicate)">getEntitiesIncludingUngeneratedChunks</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang" class="externalLink">Class</a>&lt;? extends T&gt;&nbsp;entityClass,
 <a href="../util/math/Box.html" title="class in net.minecraft.util.math">Box</a>&nbsp;box,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Predicate</a>&lt;? super T&gt;&nbsp;predicate)</code></th>
 <td class="colLast">&nbsp;</td>
@@ -521,13 +521,13 @@ boolean&nbsp;bool)</code></th>
 </tr>
 <tr class="rowColor" id="i37">
 <td class="colFirst"><code><a href="BlockView.html" title="interface in net.minecraft.world">BlockView</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getExistingChunk(int,int)">getExistingChunk</a></span>&#8203;(int&nbsp;int2,
-int&nbsp;int3)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getExistingChunk(int,int)">getExistingChunk</a></span>&#8203;(int&nbsp;chunkX,
+int&nbsp;chunkZ)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i38">
 <td class="colFirst"><code><a href="../fluid/FluidState.html" title="interface in net.minecraft.fluid">FluidState</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getFluidState(net.minecraft.util.math.BlockPos)">getFluidState</a></span>&#8203;(<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getFluidState(net.minecraft.util.math.BlockPos)">getFluidState</a></span>&#8203;(<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i39">
@@ -552,7 +552,7 @@ int&nbsp;int3)</code></th>
 </tr>
 <tr class="rowColor" id="i43">
 <td class="colFirst"><code><a href="LocalDifficulty.html" title="class in net.minecraft.world">LocalDifficulty</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getLocalDifficulty(net.minecraft.util.math.BlockPos)">getLocalDifficulty</a></span>&#8203;(<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getLocalDifficulty(net.minecraft.util.math.BlockPos)">getLocalDifficulty</a></span>&#8203;(<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i44">
@@ -665,9 +665,9 @@ int&nbsp;int2)</code></th>
 </tr>
 <tr class="rowColor" id="i65">
 <td class="colFirst"><code>int</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getTopY(net.minecraft.world.Heightmap.Type,int,int)">getTopY</a></span>&#8203;(<a href="Heightmap.Type.html" title="enum in net.minecraft.world">Heightmap.Type</a>&nbsp;type,
-int&nbsp;int2,
-int&nbsp;int3)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getTopY(net.minecraft.world.Heightmap.Type,int,int)">getTopY</a></span>&#8203;(<a href="Heightmap.Type.html" title="enum in net.minecraft.world">Heightmap.Type</a>&nbsp;heightmap,
+int&nbsp;x,
+int&nbsp;z)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i66">
@@ -842,12 +842,12 @@ float&nbsp;pitch)</code></th>
 </tr>
 <tr class="rowColor" id="i95">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#playSound(net.minecraft.entity.player.PlayerEntity,net.minecraft.util.math.BlockPos,net.minecraft.sound.SoundEvent,net.minecraft.sound.SoundCategory,float,float)">playSound</a></span>&#8203;(<a href="../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;playerEntity,
-<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
-<a href="../sound/SoundEvent.html" title="class in net.minecraft.sound">SoundEvent</a>&nbsp;soundEvent,
-<a href="../sound/SoundCategory.html" title="enum in net.minecraft.sound">SoundCategory</a>&nbsp;soundCategory,
-float&nbsp;float2,
-float&nbsp;float3)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#playSound(net.minecraft.entity.player.PlayerEntity,net.minecraft.util.math.BlockPos,net.minecraft.sound.SoundEvent,net.minecraft.sound.SoundCategory,float,float)">playSound</a></span>&#8203;(<a href="../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;player,
+<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<a href="../sound/SoundEvent.html" title="class in net.minecraft.sound">SoundEvent</a>&nbsp;sound,
+<a href="../sound/SoundCategory.html" title="enum in net.minecraft.sound">SoundCategory</a>&nbsp;category,
+float&nbsp;volume,
+float&nbsp;pitch)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i96">
@@ -867,8 +867,8 @@ float&nbsp;pitch)</code></th>
 </tr>
 <tr class="altColor" id="i98">
 <td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#removeBlock(net.minecraft.util.math.BlockPos,boolean)">removeBlock</a></span>&#8203;(<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
-boolean&nbsp;bool)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#removeBlock(net.minecraft.util.math.BlockPos,boolean)">removeBlock</a></span>&#8203;(<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+boolean&nbsp;move)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i99">
@@ -908,9 +908,9 @@ int&nbsp;progress)</code></th>
 </tr>
 <tr class="rowColor" id="i105">
 <td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setBlockState(net.minecraft.util.math.BlockPos,net.minecraft.block.BlockState,int)">setBlockState</a></span>&#8203;(<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
-<a href="../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState,
-int&nbsp;int2)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setBlockState(net.minecraft.util.math.BlockPos,net.minecraft.block.BlockState,int)">setBlockState</a></span>&#8203;(<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<a href="../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state,
+int&nbsp;flags)</code></th>
 <td class="colLast">
 <div class="block">Updates the block state at a position, calling appropriate callbacks.</div>
 </td>
@@ -953,8 +953,8 @@ boolean&nbsp;spawnAnimals)</code></th>
 </tr>
 <tr class="rowColor" id="i113">
 <td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#testBlockState(net.minecraft.util.math.BlockPos,java.util.function.Predicate)">testBlockState</a></span>&#8203;(<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Predicate</a>&lt;<a href="../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&gt;&nbsp;predicate)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#testBlockState(net.minecraft.util.math.BlockPos,java.util.function.Predicate)">testBlockState</a></span>&#8203;(<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Predicate</a>&lt;<a href="../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&gt;&nbsp;state)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i114">
@@ -1286,10 +1286,10 @@ int&nbsp;int3)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getChunk(int,int,net.minecraft.world.chunk.ChunkStatus,boolean)">getChunk</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="chunk/Chunk.html" title="interface in net.minecraft.world.chunk">Chunk</a></span>&nbsp;<span class="memberName">getChunk</span>&#8203;(<span class="arguments">int&nbsp;int2,
-int&nbsp;int3,
-<a href="chunk/ChunkStatus.html" title="class in net.minecraft.world.chunk">ChunkStatus</a>&nbsp;chunkStatus,
-boolean&nbsp;bool)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="chunk/Chunk.html" title="interface in net.minecraft.world.chunk">Chunk</a></span>&nbsp;<span class="memberName">getChunk</span>&#8203;(<span class="arguments">int&nbsp;chunkX,
+int&nbsp;chunkZ,
+<a href="chunk/ChunkStatus.html" title="class in net.minecraft.world.chunk">ChunkStatus</a>&nbsp;leastStatus,
+boolean&nbsp;create)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="WorldView.html#getChunk(int,int,net.minecraft.world.chunk.ChunkStatus,boolean)">getChunk</a></code>&nbsp;in interface&nbsp;<code><a href="WorldView.html" title="interface in net.minecraft.world">WorldView</a></code></dd>
@@ -1299,10 +1299,9 @@ boolean&nbsp;bool)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="setBlockState(net.minecraft.util.math.BlockPos,net.minecraft.block.BlockState,int)">setBlockState</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">setBlockState</span>&#8203;(<span class="arguments"><a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
-<a href="../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState,
-int&nbsp;int2)</span></div>
-<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="ModifiableWorld.html#setBlockState(net.minecraft.util.math.BlockPos,net.minecraft.block.BlockState,int)">ModifiableWorld</a></code></span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">setBlockState</span>&#8203;(<span class="arguments"><a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<a href="../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state,
+int&nbsp;flags)</span></div>
 <div class="block">Updates the block state at a position, calling appropriate callbacks.
 
  <p>When called on the server, the new block state is stored and propagated to clients and listeners as dictated
@@ -1324,9 +1323,9 @@ int&nbsp;int2)</span></div>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="ModifiableWorld.html#setBlockState(net.minecraft.util.math.BlockPos,net.minecraft.block.BlockState,int)">setBlockState</a></code>&nbsp;in interface&nbsp;<code><a href="ModifiableWorld.html" title="interface in net.minecraft.world">ModifiableWorld</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>blockPos</code> - the target position</dd>
-<dd><code>blockState</code> - the block state to set</dd>
-<dd><code>int2</code> - the bitwise flag combination, as described above</dd>
+<dd><code>pos</code> - the target position</dd>
+<dd><code>state</code> - the block state to set</dd>
+<dd><code>flags</code> - the bitwise flag combination, as described above</dd>
 </dl>
 </section>
 </li>
@@ -1341,8 +1340,8 @@ int&nbsp;int2)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="removeBlock(net.minecraft.util.math.BlockPos,boolean)">removeBlock</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">removeBlock</span>&#8203;(<span class="arguments"><a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
-boolean&nbsp;bool)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">removeBlock</span>&#8203;(<span class="arguments"><a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+boolean&nbsp;move)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="ModifiableWorld.html#removeBlock(net.minecraft.util.math.BlockPos,boolean)">removeBlock</a></code>&nbsp;in interface&nbsp;<code><a href="ModifiableWorld.html" title="interface in net.minecraft.world">ModifiableWorld</a></code></dd>
@@ -1352,9 +1351,9 @@ boolean&nbsp;bool)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="breakBlock(net.minecraft.util.math.BlockPos,boolean,net.minecraft.entity.Entity)">breakBlock</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">breakBlock</span>&#8203;(<span class="arguments"><a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
-boolean&nbsp;bool,
-<a href="../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&nbsp;entity)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">breakBlock</span>&#8203;(<span class="arguments"><a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+boolean&nbsp;drop,
+<a href="../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&nbsp;breakingEntity)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="ModifiableWorld.html#breakBlock(net.minecraft.util.math.BlockPos,boolean,net.minecraft.entity.Entity)">breakBlock</a></code>&nbsp;in interface&nbsp;<code><a href="ModifiableWorld.html" title="interface in net.minecraft.world">ModifiableWorld</a></code></dd>
@@ -1411,9 +1410,9 @@ int&nbsp;flags)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getTopY(net.minecraft.world.Heightmap.Type,int,int)">getTopY</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getTopY</span>&#8203;(<span class="arguments"><a href="Heightmap.Type.html" title="enum in net.minecraft.world">Heightmap.Type</a>&nbsp;type,
-int&nbsp;int2,
-int&nbsp;int3)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getTopY</span>&#8203;(<span class="arguments"><a href="Heightmap.Type.html" title="enum in net.minecraft.world">Heightmap.Type</a>&nbsp;heightmap,
+int&nbsp;x,
+int&nbsp;z)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="WorldView.html#getTopY(net.minecraft.world.Heightmap.Type,int,int)">getTopY</a></code>&nbsp;in interface&nbsp;<code><a href="WorldView.html" title="interface in net.minecraft.world">WorldView</a></code></dd>
@@ -1433,7 +1432,7 @@ int&nbsp;int3)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getBlockState(net.minecraft.util.math.BlockPos)">getBlockState</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../block/BlockState.html" title="class in net.minecraft.block">BlockState</a></span>&nbsp;<span class="memberName">getBlockState</span>&#8203;(<span class="arguments"><a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../block/BlockState.html" title="class in net.minecraft.block">BlockState</a></span>&nbsp;<span class="memberName">getBlockState</span>&#8203;(<span class="arguments"><a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="BlockView.html#getBlockState(net.minecraft.util.math.BlockPos)">getBlockState</a></code>&nbsp;in interface&nbsp;<code><a href="BlockView.html" title="interface in net.minecraft.world">BlockView</a></code></dd>
@@ -1443,7 +1442,7 @@ int&nbsp;int3)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getFluidState(net.minecraft.util.math.BlockPos)">getFluidState</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../fluid/FluidState.html" title="interface in net.minecraft.fluid">FluidState</a></span>&nbsp;<span class="memberName">getFluidState</span>&#8203;(<span class="arguments"><a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../fluid/FluidState.html" title="interface in net.minecraft.fluid">FluidState</a></span>&nbsp;<span class="memberName">getFluidState</span>&#8203;(<span class="arguments"><a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="BlockView.html#getFluidState(net.minecraft.util.math.BlockPos)">getFluidState</a></code>&nbsp;in interface&nbsp;<code><a href="BlockView.html" title="interface in net.minecraft.world">BlockView</a></code></dd>
@@ -1465,12 +1464,12 @@ int&nbsp;int3)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="playSound(net.minecraft.entity.player.PlayerEntity,net.minecraft.util.math.BlockPos,net.minecraft.sound.SoundEvent,net.minecraft.sound.SoundCategory,float,float)">playSound</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">playSound</span>&#8203;(<span class="arguments"><a href="../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;playerEntity,
-<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
-<a href="../sound/SoundEvent.html" title="class in net.minecraft.sound">SoundEvent</a>&nbsp;soundEvent,
-<a href="../sound/SoundCategory.html" title="enum in net.minecraft.sound">SoundCategory</a>&nbsp;soundCategory,
-float&nbsp;float2,
-float&nbsp;float3)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">playSound</span>&#8203;(<span class="arguments"><a href="../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;player,
+<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<a href="../sound/SoundEvent.html" title="class in net.minecraft.sound">SoundEvent</a>&nbsp;sound,
+<a href="../sound/SoundCategory.html" title="enum in net.minecraft.sound">SoundCategory</a>&nbsp;category,
+float&nbsp;volume,
+float&nbsp;pitch)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="IWorld.html#playSound(net.minecraft.entity.player.PlayerEntity,net.minecraft.util.math.BlockPos,net.minecraft.sound.SoundEvent,net.minecraft.sound.SoundCategory,float,float)">playSound</a></code>&nbsp;in interface&nbsp;<code><a href="IWorld.html" title="interface in net.minecraft.world">IWorld</a></code></dd>
@@ -1517,13 +1516,13 @@ boolean&nbsp;bool)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="addParticle(net.minecraft.particle.ParticleEffect,double,double,double,double,double,double)">addParticle</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">addParticle</span>&#8203;(<span class="arguments"><a href="../particle/ParticleEffect.html" title="interface in net.minecraft.particle">ParticleEffect</a>&nbsp;particleEffect,
-double&nbsp;double2,
-double&nbsp;double3,
-double&nbsp;double4,
-double&nbsp;double5,
-double&nbsp;double6,
-double&nbsp;double7)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">addParticle</span>&#8203;(<span class="arguments"><a href="../particle/ParticleEffect.html" title="interface in net.minecraft.particle">ParticleEffect</a>&nbsp;parameters,
+double&nbsp;x,
+double&nbsp;y,
+double&nbsp;z,
+double&nbsp;velocityX,
+double&nbsp;velocityY,
+double&nbsp;velocityZ)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="IWorld.html#addParticle(net.minecraft.particle.ParticleEffect,double,double,double,double,double,double)">addParticle</a></code>&nbsp;in interface&nbsp;<code><a href="IWorld.html" title="interface in net.minecraft.world">IWorld</a></code></dd>
@@ -1670,7 +1669,7 @@ boolean&nbsp;createFire,
 <li class="blockList">
 <section class="detail">
 <h3><a id="getBlockEntity(net.minecraft.util.math.BlockPos)">getBlockEntity</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../block/entity/BlockEntity.html" title="class in net.minecraft.block.entity">BlockEntity</a></span>&nbsp;<span class="memberName">getBlockEntity</span>&#8203;(<span class="arguments"><a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../block/entity/BlockEntity.html" title="class in net.minecraft.block.entity">BlockEntity</a></span>&nbsp;<span class="memberName">getBlockEntity</span>&#8203;(<span class="arguments"><a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="BlockView.html#getBlockEntity(net.minecraft.util.math.BlockPos)">getBlockEntity</a></code>&nbsp;in interface&nbsp;<code><a href="BlockView.html" title="interface in net.minecraft.world">BlockView</a></code></dd>
@@ -1746,8 +1745,8 @@ boolean&nbsp;spawnAnimals)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getExistingChunk(int,int)">getExistingChunk</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="BlockView.html" title="interface in net.minecraft.world">BlockView</a></span>&nbsp;<span class="memberName">getExistingChunk</span>&#8203;(<span class="arguments">int&nbsp;int2,
-int&nbsp;int3)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="BlockView.html" title="interface in net.minecraft.world">BlockView</a></span>&nbsp;<span class="memberName">getExistingChunk</span>&#8203;(<span class="arguments">int&nbsp;chunkX,
+int&nbsp;chunkZ)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="CollisionView.html#getExistingChunk(int,int)">getExistingChunk</a></code>&nbsp;in interface&nbsp;<code><a href="CollisionView.html" title="interface in net.minecraft.world">CollisionView</a></code></dd>
@@ -1759,7 +1758,7 @@ int&nbsp;int3)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getEntities(net.minecraft.entity.Entity,net.minecraft.util.math.Box,java.util.function.Predicate)">getEntities</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&gt;</span>&nbsp;<span class="memberName">getEntities</span>&#8203;(<span class="arguments"><a href="../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&nbsp;entity,
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&gt;</span>&nbsp;<span class="memberName">getEntities</span>&#8203;(<span class="arguments"><a href="../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&nbsp;except,
 <a href="../util/math/Box.html" title="class in net.minecraft.util.math">Box</a>&nbsp;box,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Predicate</a>&lt;? super <a href="../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&gt;&nbsp;predicate)</span></div>
 <dl>
@@ -1779,7 +1778,7 @@ int&nbsp;int3)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getEntities(java.lang.Class,net.minecraft.util.math.Box,java.util.function.Predicate)">getEntities</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="typeParameters">&lt;T extends <a href="../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&gt;</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;T&gt;</span>&nbsp;<span class="memberName">getEntities</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang" class="externalLink">Class</a>&lt;? extends T&gt;&nbsp;class2,
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="typeParameters">&lt;T extends <a href="../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&gt;</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;T&gt;</span>&nbsp;<span class="memberName">getEntities</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang" class="externalLink">Class</a>&lt;? extends T&gt;&nbsp;entityClass,
 <a href="../util/math/Box.html" title="class in net.minecraft.util.math">Box</a>&nbsp;box,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Predicate</a>&lt;? super T&gt;&nbsp;predicate)</span></div>
 <dl>
@@ -1791,7 +1790,7 @@ int&nbsp;int3)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getEntitiesIncludingUngeneratedChunks(java.lang.Class,net.minecraft.util.math.Box,java.util.function.Predicate)">getEntitiesIncludingUngeneratedChunks</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="typeParameters">&lt;T extends <a href="../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&gt;</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;T&gt;</span>&nbsp;<span class="memberName">getEntitiesIncludingUngeneratedChunks</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang" class="externalLink">Class</a>&lt;? extends T&gt;&nbsp;class2,
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="typeParameters">&lt;T extends <a href="../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&gt;</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;T&gt;</span>&nbsp;<span class="memberName">getEntitiesIncludingUngeneratedChunks</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang" class="externalLink">Class</a>&lt;? extends T&gt;&nbsp;entityClass,
 <a href="../util/math/Box.html" title="class in net.minecraft.util.math">Box</a>&nbsp;box,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Predicate</a>&lt;? super T&gt;&nbsp;predicate)</span></div>
 <dl>
@@ -2094,7 +2093,7 @@ double&nbsp;velocityZ,
 <li class="blockList">
 <section class="detail">
 <h3><a id="getLocalDifficulty(net.minecraft.util.math.BlockPos)">getLocalDifficulty</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="LocalDifficulty.html" title="class in net.minecraft.world">LocalDifficulty</a></span>&nbsp;<span class="memberName">getLocalDifficulty</span>&#8203;(<span class="arguments"><a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="LocalDifficulty.html" title="class in net.minecraft.world">LocalDifficulty</a></span>&nbsp;<span class="memberName">getLocalDifficulty</span>&#8203;(<span class="arguments"><a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="IWorld.html#getLocalDifficulty(net.minecraft.util.math.BlockPos)">getLocalDifficulty</a></code>&nbsp;in interface&nbsp;<code><a href="IWorld.html" title="interface in net.minecraft.world">IWorld</a></code></dd>
@@ -2156,8 +2155,8 @@ double&nbsp;velocityZ,
 <li class="blockList">
 <section class="detail">
 <h3><a id="testBlockState(net.minecraft.util.math.BlockPos,java.util.function.Predicate)">testBlockState</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">testBlockState</span>&#8203;(<span class="arguments"><a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Predicate</a>&lt;<a href="../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&gt;&nbsp;predicate)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">testBlockState</span>&#8203;(<span class="arguments"><a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Predicate</a>&lt;<a href="../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&gt;&nbsp;state)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="TestableWorld.html#testBlockState(net.minecraft.util.math.BlockPos,java.util.function.Predicate)">testBlockState</a></code>&nbsp;in interface&nbsp;<code><a href="TestableWorld.html" title="interface in net.minecraft.world">TestableWorld</a></code></dd>

@@ -167,14 +167,14 @@ int&nbsp;randomOffset)</code></th>
 <tbody>
 <tr class="altColor" id="i0">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#generate(net.minecraft.world.ModifiableTestableWorld,java.util.Random,net.minecraft.world.gen.feature.BranchedTreeFeatureConfig,int,net.minecraft.util.math.BlockPos,int,int,java.util.Set)">generate</a></span>&#8203;(<a href="../../ModifiableTestableWorld.html" title="interface in net.minecraft.world">ModifiableTestableWorld</a>&nbsp;modifiableTestableWorld,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#generate(net.minecraft.world.ModifiableTestableWorld,java.util.Random,net.minecraft.world.gen.feature.BranchedTreeFeatureConfig,int,net.minecraft.util.math.BlockPos,int,int,java.util.Set)">generate</a></span>&#8203;(<a href="../../ModifiableTestableWorld.html" title="interface in net.minecraft.world">ModifiableTestableWorld</a>&nbsp;world,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random,
-<a href="../feature/BranchedTreeFeatureConfig.html" title="class in net.minecraft.world.gen.feature">BranchedTreeFeatureConfig</a>&nbsp;branchedTreeFeatureConfig,
-int&nbsp;int2,
-<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
-int&nbsp;int3,
-int&nbsp;int4,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;&nbsp;set)</code></th>
+<a href="../feature/BranchedTreeFeatureConfig.html" title="class in net.minecraft.world.gen.feature">BranchedTreeFeatureConfig</a>&nbsp;config,
+int&nbsp;trunkHeight,
+<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+int&nbsp;foliageHeight,
+int&nbsp;radius,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;&nbsp;leaves)</code></th>
 <td class="colLast">
 <div class="block">This is the main method used to generate foliage.</div>
 </td>
@@ -182,21 +182,21 @@ int&nbsp;int4,
 <tr class="rowColor" id="i1">
 <td class="colFirst"><code>int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getHeight(java.util.Random,int)">getHeight</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random,
-int&nbsp;int2)</code></th>
+int&nbsp;trunkHeight)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i2">
 <td class="colFirst"><code>int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getRadius(java.util.Random,int,net.minecraft.world.gen.feature.BranchedTreeFeatureConfig)">getRadius</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random,
-int&nbsp;int2,
-<a href="../feature/BranchedTreeFeatureConfig.html" title="class in net.minecraft.world.gen.feature">BranchedTreeFeatureConfig</a>&nbsp;branchedTreeFeatureConfig)</code></th>
+int&nbsp;baseHeight,
+<a href="../feature/BranchedTreeFeatureConfig.html" title="class in net.minecraft.world.gen.feature">BranchedTreeFeatureConfig</a>&nbsp;config)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i3">
 <td class="colFirst"><code>int</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getRadiusForPlacement(int,int,int)">getRadiusForPlacement</a></span>&#8203;(int&nbsp;int2,
-int&nbsp;int3,
-int&nbsp;int4)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getRadiusForPlacement(int,int,int)">getRadiusForPlacement</a></span>&#8203;(int&nbsp;trunkHeight,
+int&nbsp;baseHeight,
+int&nbsp;radius)</code></th>
 <td class="colLast">
 <div class="block">This method is used to ensure that a tree can place foliage when it generates.</div>
 </td>
@@ -204,11 +204,11 @@ int&nbsp;int4)</code></th>
 <tr class="altColor" id="i4">
 <td class="colFirst"><code>protected boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isInvalidForLeaves(java.util.Random,int,int,int,int,int)">isInvalidForLeaves</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random,
-int&nbsp;int2,
-int&nbsp;int3,
-int&nbsp;int4,
-int&nbsp;int5,
-int&nbsp;int6)</code></th>
+int&nbsp;baseHeight,
+int&nbsp;dx,
+int&nbsp;dy,
+int&nbsp;dz,
+int&nbsp;radius)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -266,15 +266,14 @@ int&nbsp;randomOffset)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="generate(net.minecraft.world.ModifiableTestableWorld,java.util.Random,net.minecraft.world.gen.feature.BranchedTreeFeatureConfig,int,net.minecraft.util.math.BlockPos,int,int,java.util.Set)">generate</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">generate</span>&#8203;(<span class="arguments"><a href="../../ModifiableTestableWorld.html" title="interface in net.minecraft.world">ModifiableTestableWorld</a>&nbsp;modifiableTestableWorld,
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">generate</span>&#8203;(<span class="arguments"><a href="../../ModifiableTestableWorld.html" title="interface in net.minecraft.world">ModifiableTestableWorld</a>&nbsp;world,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random,
-<a href="../feature/BranchedTreeFeatureConfig.html" title="class in net.minecraft.world.gen.feature">BranchedTreeFeatureConfig</a>&nbsp;branchedTreeFeatureConfig,
-int&nbsp;int2,
-<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
-int&nbsp;int3,
-int&nbsp;int4,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;&nbsp;set)</span></div>
-<div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="FoliagePlacer.html#generate(net.minecraft.world.ModifiableTestableWorld,java.util.Random,net.minecraft.world.gen.feature.BranchedTreeFeatureConfig,int,net.minecraft.util.math.BlockPos,int,int,java.util.Set)">FoliagePlacer</a></code></span></div>
+<a href="../feature/BranchedTreeFeatureConfig.html" title="class in net.minecraft.world.gen.feature">BranchedTreeFeatureConfig</a>&nbsp;config,
+int&nbsp;trunkHeight,
+<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+int&nbsp;foliageHeight,
+int&nbsp;radius,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;&nbsp;leaves)</span></div>
 <div class="block">This is the main method used to generate foliage.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
@@ -286,8 +285,8 @@ int&nbsp;int4,
 <section class="detail">
 <h3><a id="getRadius(java.util.Random,int,net.minecraft.world.gen.feature.BranchedTreeFeatureConfig)">getRadius</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getRadius</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random,
-int&nbsp;int2,
-<a href="../feature/BranchedTreeFeatureConfig.html" title="class in net.minecraft.world.gen.feature">BranchedTreeFeatureConfig</a>&nbsp;branchedTreeFeatureConfig)</span></div>
+int&nbsp;baseHeight,
+<a href="../feature/BranchedTreeFeatureConfig.html" title="class in net.minecraft.world.gen.feature">BranchedTreeFeatureConfig</a>&nbsp;config)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="FoliagePlacer.html#getRadius(java.util.Random,int,net.minecraft.world.gen.feature.BranchedTreeFeatureConfig)">getRadius</a></code>&nbsp;in class&nbsp;<code><a href="FoliagePlacer.html" title="class in net.minecraft.world.gen.foliage">FoliagePlacer</a></code></dd>
@@ -298,7 +297,7 @@ int&nbsp;int2,
 <section class="detail">
 <h3><a id="getHeight(java.util.Random,int)">getHeight</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getHeight</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random,
-int&nbsp;int2)</span></div>
+int&nbsp;trunkHeight)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="FoliagePlacer.html#getHeight(java.util.Random,int)">getHeight</a></code>&nbsp;in class&nbsp;<code><a href="FoliagePlacer.html" title="class in net.minecraft.world.gen.foliage">FoliagePlacer</a></code></dd>
@@ -309,11 +308,11 @@ int&nbsp;int2)</span></div>
 <section class="detail">
 <h3><a id="isInvalidForLeaves(java.util.Random,int,int,int,int,int)">isInvalidForLeaves</a></h3>
 <div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isInvalidForLeaves</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random,
-int&nbsp;int2,
-int&nbsp;int3,
-int&nbsp;int4,
-int&nbsp;int5,
-int&nbsp;int6)</span></div>
+int&nbsp;baseHeight,
+int&nbsp;dx,
+int&nbsp;dy,
+int&nbsp;dz,
+int&nbsp;radius)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="FoliagePlacer.html#isInvalidForLeaves(java.util.Random,int,int,int,int,int)">isInvalidForLeaves</a></code>&nbsp;in class&nbsp;<code><a href="FoliagePlacer.html" title="class in net.minecraft.world.gen.foliage">FoliagePlacer</a></code></dd>
@@ -323,10 +322,9 @@ int&nbsp;int6)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getRadiusForPlacement(int,int,int)">getRadiusForPlacement</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getRadiusForPlacement</span>&#8203;(<span class="arguments">int&nbsp;int2,
-int&nbsp;int3,
-int&nbsp;int4)</span></div>
-<div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="FoliagePlacer.html#getRadiusForPlacement(int,int,int)">FoliagePlacer</a></code></span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getRadiusForPlacement</span>&#8203;(<span class="arguments">int&nbsp;trunkHeight,
+int&nbsp;baseHeight,
+int&nbsp;radius)</span></div>
 <div class="block">This method is used to ensure that a tree can place foliage when it generates.
 
  <p>It runs for every y-level of the tree being generated.</div>
@@ -334,9 +332,9 @@ int&nbsp;int4)</span></div>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="FoliagePlacer.html#getRadiusForPlacement(int,int,int)">getRadiusForPlacement</a></code>&nbsp;in class&nbsp;<code><a href="FoliagePlacer.html" title="class in net.minecraft.world.gen.foliage">FoliagePlacer</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>int2</code> - the height of the trunk</dd>
-<dd><code>int3</code> - the height of the full tree</dd>
-<dd><code>int4</code> - the radius of the foliage</dd>
+<dd><code>trunkHeight</code> - the height of the trunk</dd>
+<dd><code>baseHeight</code> - the height of the full tree</dd>
+<dd><code>radius</code> - the radius of the foliage</dd>
 </dl>
 </section>
 </li>

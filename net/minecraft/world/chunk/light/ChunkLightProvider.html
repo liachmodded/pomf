@@ -233,12 +233,12 @@ long&nbsp;blockPos)</code></th>
 </tr>
 <tr class="altColor" id="i4">
 <td class="colFirst"><code>protected int</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getLevel(long)">getLevel</a></span>&#8203;(long&nbsp;long2)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getLevel(long)">getLevel</a></span>&#8203;(long&nbsp;id)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i5">
 <td class="colFirst"><code><a href="../ChunkNibbleArray.html" title="class in net.minecraft.world.chunk">ChunkNibbleArray</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getLightArray(net.minecraft.util.math.ChunkSectionPos)">getLightArray</a></span>&#8203;(<a href="../../../util/math/ChunkSectionPos.html" title="class in net.minecraft.util.math">ChunkSectionPos</a>&nbsp;chunkSectionPos)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getLightArray(net.minecraft.util.math.ChunkSectionPos)">getLightArray</a></span>&#8203;(<a href="../../../util/math/ChunkSectionPos.html" title="class in net.minecraft.util.math">ChunkSectionPos</a>&nbsp;pos)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i6">
@@ -255,9 +255,9 @@ long&nbsp;pos,
 </tr>
 <tr class="altColor" id="i8">
 <td class="colFirst"><code>protected int</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPropagatedLevel(long,long,int)">getPropagatedLevel</a></span>&#8203;(long&nbsp;long2,
-long&nbsp;long3,
-int&nbsp;int2)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPropagatedLevel(long,long,int)">getPropagatedLevel</a></span>&#8203;(long&nbsp;sourceId,
+long&nbsp;targetId,
+int&nbsp;level)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i9">
@@ -284,7 +284,7 @@ org.apache.commons.lang3.mutable.MutableInt&nbsp;mutableInt)</code></th>
 </tr>
 <tr class="altColor" id="i12">
 <td class="colFirst"><code>protected boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isMarker(long)">isMarker</a></span>&#8203;(long&nbsp;long2)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isMarker(long)">isMarker</a></span>&#8203;(long&nbsp;id)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i13">
@@ -294,20 +294,20 @@ org.apache.commons.lang3.mutable.MutableInt&nbsp;mutableInt)</code></th>
 </tr>
 <tr class="altColor" id="i14">
 <td class="colFirst"><code>protected int</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#recalculateLevel(long,long,int)">recalculateLevel</a></span>&#8203;(long&nbsp;long2,
-long&nbsp;long3,
-int&nbsp;int2)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#recalculateLevel(long,long,int)">recalculateLevel</a></span>&#8203;(long&nbsp;id,
+long&nbsp;excludedId,
+int&nbsp;maxLevel)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i15">
 <td class="colFirst"><code>protected void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#resetLevel(long)">resetLevel</a></span>&#8203;(long&nbsp;long2)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#resetLevel(long)">resetLevel</a></span>&#8203;(long&nbsp;id)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i16">
 <td class="colFirst"><code>protected void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setLevel(long,int)">setLevel</a></span>&#8203;(long&nbsp;long2,
-int&nbsp;int2)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setLevel(long,int)">setLevel</a></span>&#8203;(long&nbsp;id,
+int&nbsp;level)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i17">
@@ -330,8 +330,8 @@ boolean&nbsp;retainData)</code></th>
 </tr>
 <tr class="altColor" id="i20">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#updateSectionStatus(net.minecraft.util.math.ChunkSectionPos,boolean)">updateSectionStatus</a></span>&#8203;(<a href="../../../util/math/ChunkSectionPos.html" title="class in net.minecraft.util.math">ChunkSectionPos</a>&nbsp;chunkSectionPos,
-boolean&nbsp;bool)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#updateSectionStatus(net.minecraft.util.math.ChunkSectionPos,boolean)">updateSectionStatus</a></span>&#8203;(<a href="../../../util/math/ChunkSectionPos.html" title="class in net.minecraft.util.math">ChunkSectionPos</a>&nbsp;pos,
+boolean&nbsp;status)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -423,7 +423,7 @@ boolean&nbsp;bool)</code></th>
 <li class="blockList">
 <section class="detail">
 <h3><a id="resetLevel(long)">resetLevel</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">resetLevel</span>&#8203;(<span class="arguments">long&nbsp;long2)</span></div>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">resetLevel</span>&#8203;(<span class="arguments">long&nbsp;id)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="LevelPropagator.html#resetLevel(long)">resetLevel</a></code>&nbsp;in class&nbsp;<code><a href="LevelPropagator.html" title="class in net.minecraft.world.chunk.light">LevelPropagator</a></code></dd>
@@ -460,7 +460,7 @@ int&nbsp;opacity2)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="isMarker(long)">isMarker</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isMarker</span>&#8203;(<span class="arguments">long&nbsp;long2)</span></div>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isMarker</span>&#8203;(<span class="arguments">long&nbsp;id)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="LevelPropagator.html#isMarker(long)">isMarker</a></code>&nbsp;in class&nbsp;<code><a href="LevelPropagator.html" title="class in net.minecraft.world.chunk.light">LevelPropagator</a></code></dd>
@@ -470,9 +470,9 @@ int&nbsp;opacity2)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="recalculateLevel(long,long,int)">recalculateLevel</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">recalculateLevel</span>&#8203;(<span class="arguments">long&nbsp;long2,
-long&nbsp;long3,
-int&nbsp;int2)</span></div>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">recalculateLevel</span>&#8203;(<span class="arguments">long&nbsp;id,
+long&nbsp;excludedId,
+int&nbsp;maxLevel)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="LevelPropagator.html#recalculateLevel(long,long,int)">recalculateLevel</a></code>&nbsp;in class&nbsp;<code><a href="LevelPropagator.html" title="class in net.minecraft.world.chunk.light">LevelPropagator</a></code></dd>
@@ -482,7 +482,7 @@ int&nbsp;int2)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getLevel(long)">getLevel</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getLevel</span>&#8203;(<span class="arguments">long&nbsp;long2)</span></div>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getLevel</span>&#8203;(<span class="arguments">long&nbsp;id)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="LevelPropagator.html#getLevel(long)">getLevel</a></code>&nbsp;in class&nbsp;<code><a href="LevelPropagator.html" title="class in net.minecraft.world.chunk.light">LevelPropagator</a></code></dd>
@@ -499,8 +499,8 @@ long&nbsp;blockPos)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="setLevel(long,int)">setLevel</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setLevel</span>&#8203;(<span class="arguments">long&nbsp;long2,
-int&nbsp;int2)</span></div>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setLevel</span>&#8203;(<span class="arguments">long&nbsp;id,
+int&nbsp;level)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="LevelPropagator.html#setLevel(long,int)">setLevel</a></code>&nbsp;in class&nbsp;<code><a href="LevelPropagator.html" title="class in net.minecraft.world.chunk.light">LevelPropagator</a></code></dd>
@@ -510,9 +510,9 @@ int&nbsp;int2)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getPropagatedLevel(long,long,int)">getPropagatedLevel</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getPropagatedLevel</span>&#8203;(<span class="arguments">long&nbsp;long2,
-long&nbsp;long3,
-int&nbsp;int2)</span></div>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getPropagatedLevel</span>&#8203;(<span class="arguments">long&nbsp;sourceId,
+long&nbsp;targetId,
+int&nbsp;level)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="LevelPropagator.html#getPropagatedLevel(long,long,int)">getPropagatedLevel</a></code>&nbsp;in class&nbsp;<code><a href="LevelPropagator.html" title="class in net.minecraft.world.chunk.light">LevelPropagator</a></code></dd>
@@ -543,7 +543,7 @@ boolean&nbsp;skipEdgeLightPropagation)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getLightArray(net.minecraft.util.math.ChunkSectionPos)">getLightArray</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../ChunkNibbleArray.html" title="class in net.minecraft.world.chunk">ChunkNibbleArray</a></span>&nbsp;<span class="memberName">getLightArray</span>&#8203;(<span class="arguments"><a href="../../../util/math/ChunkSectionPos.html" title="class in net.minecraft.util.math">ChunkSectionPos</a>&nbsp;chunkSectionPos)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../ChunkNibbleArray.html" title="class in net.minecraft.world.chunk">ChunkNibbleArray</a></span>&nbsp;<span class="memberName">getLightArray</span>&#8203;(<span class="arguments"><a href="../../../util/math/ChunkSectionPos.html" title="class in net.minecraft.util.math">ChunkSectionPos</a>&nbsp;pos)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="ChunkLightingView.html#getLightArray(net.minecraft.util.math.ChunkSectionPos)">getLightArray</a></code>&nbsp;in interface&nbsp;<code><a href="ChunkLightingView.html" title="interface in net.minecraft.world.chunk.light">ChunkLightingView</a></code></dd>
@@ -582,8 +582,8 @@ int&nbsp;level)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="updateSectionStatus(net.minecraft.util.math.ChunkSectionPos,boolean)">updateSectionStatus</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">updateSectionStatus</span>&#8203;(<span class="arguments"><a href="../../../util/math/ChunkSectionPos.html" title="class in net.minecraft.util.math">ChunkSectionPos</a>&nbsp;chunkSectionPos,
-boolean&nbsp;bool)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">updateSectionStatus</span>&#8203;(<span class="arguments"><a href="../../../util/math/ChunkSectionPos.html" title="class in net.minecraft.util.math">ChunkSectionPos</a>&nbsp;pos,
+boolean&nbsp;status)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="LightingView.html#updateSectionStatus(net.minecraft.util.math.ChunkSectionPos,boolean)">updateSectionStatus</a></code>&nbsp;in interface&nbsp;<code><a href="LightingView.html" title="interface in net.minecraft.world.chunk.light">LightingView</a></code></dd>

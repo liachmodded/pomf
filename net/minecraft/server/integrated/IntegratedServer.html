@@ -231,7 +231,7 @@ com.mojang.authlib.GameProfileRepository&nbsp;gameProfileRepository,
 </tr>
 <tr class="rowColor" id="i11">
 <td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isHost(com.mojang.authlib.GameProfile)">isHost</a></span>&#8203;(com.mojang.authlib.GameProfile&nbsp;gameProfile)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isHost(com.mojang.authlib.GameProfile)">isHost</a></span>&#8203;(com.mojang.authlib.GameProfile&nbsp;profile)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i12">
@@ -254,8 +254,8 @@ long&nbsp;long2,
 <tr class="rowColor" id="i15">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#openToLan(net.minecraft.world.GameMode,boolean,int)">openToLan</a></span>&#8203;(<a href="../../world/GameMode.html" title="enum in net.minecraft.world">GameMode</a>&nbsp;gameMode,
-boolean&nbsp;bool,
-int&nbsp;int2)</code></th>
+boolean&nbsp;cheatsAllowed,
+int&nbsp;port)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i16">
@@ -265,7 +265,7 @@ int&nbsp;int2)</code></th>
 </tr>
 <tr class="rowColor" id="i17">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setCrashReport(net.minecraft.util.crash.CrashReport)">setCrashReport</a></span>&#8203;(<a href="../../util/crash/CrashReport.html" title="class in net.minecraft.util.crash">CrashReport</a>&nbsp;crashReport)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setCrashReport(net.minecraft.util.crash.CrashReport)">setCrashReport</a></span>&#8203;(<a href="../../util/crash/CrashReport.html" title="class in net.minecraft.util.crash">CrashReport</a>&nbsp;report)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i18">
@@ -310,7 +310,7 @@ int&nbsp;int2)</code></th>
 </tr>
 <tr class="altColor" id="i26">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#tick(java.util.function.BooleanSupplier)">tick</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/BooleanSupplier.html?is-external=true" title="class or interface in java.util.function" class="externalLink">BooleanSupplier</a>&nbsp;booleanSupplier)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#tick(java.util.function.BooleanSupplier)">tick</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/BooleanSupplier.html?is-external=true" title="class or interface in java.util.function" class="externalLink">BooleanSupplier</a>&nbsp;shouldKeepTicking)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -403,7 +403,7 @@ long&nbsp;long2,
 <li class="blockList">
 <section class="detail">
 <h3><a id="tick(java.util.function.BooleanSupplier)">tick</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">tick</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/BooleanSupplier.html?is-external=true" title="class or interface in java.util.function" class="externalLink">BooleanSupplier</a>&nbsp;booleanSupplier)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">tick</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/BooleanSupplier.html?is-external=true" title="class or interface in java.util.function" class="externalLink">BooleanSupplier</a>&nbsp;shouldKeepTicking)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../MinecraftServer.html#tick(java.util.function.BooleanSupplier)">tick</a></code>&nbsp;in class&nbsp;<code><a href="../MinecraftServer.html" title="class in net.minecraft.server">MinecraftServer</a></code></dd>
@@ -499,7 +499,7 @@ long&nbsp;long2,
 <li class="blockList">
 <section class="detail">
 <h3><a id="setCrashReport(net.minecraft.util.crash.CrashReport)">setCrashReport</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setCrashReport</span>&#8203;(<span class="arguments"><a href="../../util/crash/CrashReport.html" title="class in net.minecraft.util.crash">CrashReport</a>&nbsp;crashReport)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setCrashReport</span>&#8203;(<span class="arguments"><a href="../../util/crash/CrashReport.html" title="class in net.minecraft.util.crash">CrashReport</a>&nbsp;report)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../MinecraftServer.html#setCrashReport(net.minecraft.util.crash.CrashReport)">setCrashReport</a></code>&nbsp;in class&nbsp;<code><a href="../MinecraftServer.html" title="class in net.minecraft.server">MinecraftServer</a></code></dd>
@@ -542,8 +542,8 @@ long&nbsp;long2,
 <section class="detail">
 <h3><a id="openToLan(net.minecraft.world.GameMode,boolean,int)">openToLan</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">openToLan</span>&#8203;(<span class="arguments"><a href="../../world/GameMode.html" title="enum in net.minecraft.world">GameMode</a>&nbsp;gameMode,
-boolean&nbsp;bool,
-int&nbsp;int2)</span></div>
+boolean&nbsp;cheatsAllowed,
+int&nbsp;port)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../MinecraftServer.html#openToLan(net.minecraft.world.GameMode,boolean,int)">openToLan</a></code>&nbsp;in class&nbsp;<code><a href="../MinecraftServer.html" title="class in net.minecraft.server">MinecraftServer</a></code></dd>
@@ -639,7 +639,7 @@ int&nbsp;int2)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="isHost(com.mojang.authlib.GameProfile)">isHost</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isHost</span>&#8203;(<span class="arguments">com.mojang.authlib.GameProfile&nbsp;gameProfile)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isHost</span>&#8203;(<span class="arguments">com.mojang.authlib.GameProfile&nbsp;profile)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../MinecraftServer.html#isHost(com.mojang.authlib.GameProfile)">isHost</a></code>&nbsp;in class&nbsp;<code><a href="../MinecraftServer.html" title="class in net.minecraft.server">MinecraftServer</a></code></dd>

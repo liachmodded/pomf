@@ -175,9 +175,9 @@ extends <a href="ChunkLightProvider.html" title="class in net.minecraft.world.ch
 <tbody>
 <tr class="altColor" id="i0">
 <td class="colFirst"><code>protected int</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPropagatedLevel(long,long,int)">getPropagatedLevel</a></span>&#8203;(long&nbsp;long2,
-long&nbsp;long3,
-int&nbsp;int2)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPropagatedLevel(long,long,int)">getPropagatedLevel</a></span>&#8203;(long&nbsp;sourceId,
+long&nbsp;targetId,
+int&nbsp;level)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
@@ -187,21 +187,21 @@ int&nbsp;int2)</code></th>
 </tr>
 <tr class="altColor" id="i2">
 <td class="colFirst"><code>protected void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#propagateLevel(long,int,boolean)">propagateLevel</a></span>&#8203;(long&nbsp;long2,
-int&nbsp;int2,
-boolean&nbsp;bool)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#propagateLevel(long,int,boolean)">propagateLevel</a></span>&#8203;(long&nbsp;id,
+int&nbsp;level,
+boolean&nbsp;decrease)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i3">
 <td class="colFirst"><code>protected int</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#recalculateLevel(long,long,int)">recalculateLevel</a></span>&#8203;(long&nbsp;long2,
-long&nbsp;long3,
-int&nbsp;int2)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#recalculateLevel(long,long,int)">recalculateLevel</a></span>&#8203;(long&nbsp;id,
+long&nbsp;excludedId,
+int&nbsp;maxLevel)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i4">
 <td class="colFirst"><code>protected void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#resetLevel(long)">resetLevel</a></span>&#8203;(long&nbsp;long2)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#resetLevel(long)">resetLevel</a></span>&#8203;(long&nbsp;id)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -260,9 +260,9 @@ int&nbsp;int2)</code></th>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getPropagatedLevel(long,long,int)">getPropagatedLevel</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getPropagatedLevel</span>&#8203;(<span class="arguments">long&nbsp;long2,
-long&nbsp;long3,
-int&nbsp;int2)</span></div>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getPropagatedLevel</span>&#8203;(<span class="arguments">long&nbsp;sourceId,
+long&nbsp;targetId,
+int&nbsp;level)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="ChunkLightProvider.html#getPropagatedLevel(long,long,int)">getPropagatedLevel</a></code>&nbsp;in class&nbsp;<code><a href="ChunkLightProvider.html" title="class in net.minecraft.world.chunk.light">ChunkLightProvider</a>&lt;<a href="SkyLightStorage.Data.html" title="class in net.minecraft.world.chunk.light">SkyLightStorage.Data</a>,&#8203;<a href="SkyLightStorage.html" title="class in net.minecraft.world.chunk.light">SkyLightStorage</a>&gt;</code></dd>
@@ -272,9 +272,9 @@ int&nbsp;int2)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="propagateLevel(long,int,boolean)">propagateLevel</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">propagateLevel</span>&#8203;(<span class="arguments">long&nbsp;long2,
-int&nbsp;int2,
-boolean&nbsp;bool)</span></div>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">propagateLevel</span>&#8203;(<span class="arguments">long&nbsp;id,
+int&nbsp;level,
+boolean&nbsp;decrease)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="LevelPropagator.html#propagateLevel(long,int,boolean)">propagateLevel</a></code>&nbsp;in class&nbsp;<code><a href="LevelPropagator.html" title="class in net.minecraft.world.chunk.light">LevelPropagator</a></code></dd>
@@ -284,9 +284,9 @@ boolean&nbsp;bool)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="recalculateLevel(long,long,int)">recalculateLevel</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">recalculateLevel</span>&#8203;(<span class="arguments">long&nbsp;long2,
-long&nbsp;long3,
-int&nbsp;int2)</span></div>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">recalculateLevel</span>&#8203;(<span class="arguments">long&nbsp;id,
+long&nbsp;excludedId,
+int&nbsp;maxLevel)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="ChunkLightProvider.html#recalculateLevel(long,long,int)">recalculateLevel</a></code>&nbsp;in class&nbsp;<code><a href="ChunkLightProvider.html" title="class in net.minecraft.world.chunk.light">ChunkLightProvider</a>&lt;<a href="SkyLightStorage.Data.html" title="class in net.minecraft.world.chunk.light">SkyLightStorage.Data</a>,&#8203;<a href="SkyLightStorage.html" title="class in net.minecraft.world.chunk.light">SkyLightStorage</a>&gt;</code></dd>
@@ -296,7 +296,7 @@ int&nbsp;int2)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="resetLevel(long)">resetLevel</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">resetLevel</span>&#8203;(<span class="arguments">long&nbsp;long2)</span></div>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">resetLevel</span>&#8203;(<span class="arguments">long&nbsp;id)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="ChunkLightProvider.html#resetLevel(long)">resetLevel</a></code>&nbsp;in class&nbsp;<code><a href="ChunkLightProvider.html" title="class in net.minecraft.world.chunk.light">ChunkLightProvider</a>&lt;<a href="SkyLightStorage.Data.html" title="class in net.minecraft.world.chunk.light">SkyLightStorage.Data</a>,&#8203;<a href="SkyLightStorage.html" title="class in net.minecraft.world.chunk.light">SkyLightStorage</a>&gt;</code></dd>

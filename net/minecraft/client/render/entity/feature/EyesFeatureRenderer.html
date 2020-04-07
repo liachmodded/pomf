@@ -119,7 +119,7 @@ extends <a href="FeatureRenderer.html" title="class in net.minecraft.client.rend
 </thead>
 <tbody>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.client.render.entity.feature.FeatureRendererContext)">EyesFeatureRenderer</a></span>&#8203;(<a href="FeatureRendererContext.html" title="interface in net.minecraft.client.render.entity.feature">FeatureRendererContext</a>&lt;<a href="EyesFeatureRenderer.html" title="type parameter in EyesFeatureRenderer">T</a>,&#8203;<a href="EyesFeatureRenderer.html" title="type parameter in EyesFeatureRenderer">M</a>&gt;&nbsp;featureRendererContext)</code></th>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.client.render.entity.feature.FeatureRendererContext)">EyesFeatureRenderer</a></span>&#8203;(<a href="FeatureRendererContext.html" title="interface in net.minecraft.client.render.entity.feature">FeatureRendererContext</a>&lt;<a href="EyesFeatureRenderer.html" title="type parameter in EyesFeatureRenderer">T</a>,&#8203;<a href="EyesFeatureRenderer.html" title="type parameter in EyesFeatureRenderer">M</a>&gt;&nbsp;context)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -152,16 +152,16 @@ extends <a href="FeatureRenderer.html" title="class in net.minecraft.client.rend
 </tr>
 <tr class="rowColor" id="i1">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#render(net.minecraft.client.util.math.MatrixStack,net.minecraft.client.render.VertexConsumerProvider,int,T,float,float,float,float,float,float)">render</a></span>&#8203;(<a href="../../../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrixStack,
-<a href="../../VertexConsumerProvider.html" title="interface in net.minecraft.client.render">VertexConsumerProvider</a>&nbsp;vertexConsumerProvider,
-int&nbsp;int2,
-<a href="EyesFeatureRenderer.html" title="type parameter in EyesFeatureRenderer">T</a>&nbsp;t,
-float&nbsp;float2,
-float&nbsp;float3,
-float&nbsp;float4,
-float&nbsp;float5,
-float&nbsp;float6,
-float&nbsp;float7)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#render(net.minecraft.client.util.math.MatrixStack,net.minecraft.client.render.VertexConsumerProvider,int,T,float,float,float,float,float,float)">render</a></span>&#8203;(<a href="../../../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
+<a href="../../VertexConsumerProvider.html" title="interface in net.minecraft.client.render">VertexConsumerProvider</a>&nbsp;vertexConsumers,
+int&nbsp;light,
+<a href="EyesFeatureRenderer.html" title="type parameter in EyesFeatureRenderer">T</a>&nbsp;entity,
+float&nbsp;limbAngle,
+float&nbsp;limbDistance,
+float&nbsp;tickDelta,
+float&nbsp;customAngle,
+float&nbsp;headYaw,
+float&nbsp;headPitch)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -194,7 +194,7 @@ float&nbsp;float7)</code></th>
 <li class="blockList">
 <section class="detail">
 <h3><a id="&lt;init&gt;(net.minecraft.client.render.entity.feature.FeatureRendererContext)">EyesFeatureRenderer</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">EyesFeatureRenderer</span>&#8203;(<span class="arguments"><a href="FeatureRendererContext.html" title="interface in net.minecraft.client.render.entity.feature">FeatureRendererContext</a>&lt;<a href="EyesFeatureRenderer.html" title="type parameter in EyesFeatureRenderer">T</a>,&#8203;<a href="EyesFeatureRenderer.html" title="type parameter in EyesFeatureRenderer">M</a>&gt;&nbsp;featureRendererContext)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">EyesFeatureRenderer</span>&#8203;(<span class="arguments"><a href="FeatureRendererContext.html" title="interface in net.minecraft.client.render.entity.feature">FeatureRendererContext</a>&lt;<a href="EyesFeatureRenderer.html" title="type parameter in EyesFeatureRenderer">T</a>,&#8203;<a href="EyesFeatureRenderer.html" title="type parameter in EyesFeatureRenderer">M</a>&gt;&nbsp;context)</span></div>
 </section>
 </li>
 </ul>
@@ -212,16 +212,16 @@ float&nbsp;float7)</code></th>
 <h3><a id="render(net.minecraft.client.util.math.MatrixStack,net.minecraft.client.render.VertexConsumerProvider,int,net.minecraft.entity.Entity,float,float,float,float,float,float)">
 <!--   -->
 </a><a id="render(net.minecraft.client.util.math.MatrixStack,net.minecraft.client.render.VertexConsumerProvider,int,T,float,float,float,float,float,float)">render</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">render</span>&#8203;(<span class="arguments"><a href="../../../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrixStack,
-<a href="../../VertexConsumerProvider.html" title="interface in net.minecraft.client.render">VertexConsumerProvider</a>&nbsp;vertexConsumerProvider,
-int&nbsp;int2,
-<a href="EyesFeatureRenderer.html" title="type parameter in EyesFeatureRenderer">T</a>&nbsp;t,
-float&nbsp;float2,
-float&nbsp;float3,
-float&nbsp;float4,
-float&nbsp;float5,
-float&nbsp;float6,
-float&nbsp;float7)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">render</span>&#8203;(<span class="arguments"><a href="../../../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
+<a href="../../VertexConsumerProvider.html" title="interface in net.minecraft.client.render">VertexConsumerProvider</a>&nbsp;vertexConsumers,
+int&nbsp;light,
+<a href="EyesFeatureRenderer.html" title="type parameter in EyesFeatureRenderer">T</a>&nbsp;entity,
+float&nbsp;limbAngle,
+float&nbsp;limbDistance,
+float&nbsp;tickDelta,
+float&nbsp;customAngle,
+float&nbsp;headYaw,
+float&nbsp;headPitch)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="FeatureRenderer.html#render(net.minecraft.client.util.math.MatrixStack,net.minecraft.client.render.VertexConsumerProvider,int,T,float,float,float,float,float,float)">render</a></code>&nbsp;in class&nbsp;<code><a href="FeatureRenderer.html" title="class in net.minecraft.client.render.entity.feature">FeatureRenderer</a>&lt;<a href="EyesFeatureRenderer.html" title="type parameter in EyesFeatureRenderer">T</a> extends <a href="../../../../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>,&#8203;<a href="EyesFeatureRenderer.html" title="type parameter in EyesFeatureRenderer">M</a> extends <a href="../model/EntityModel.html" title="class in net.minecraft.client.render.entity.model">EntityModel</a>&lt;<a href="EyesFeatureRenderer.html" title="type parameter in EyesFeatureRenderer">T</a>&gt;&gt;</code></dd>

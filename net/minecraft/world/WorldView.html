@@ -145,9 +145,9 @@ extends <a href="BlockRenderView.html" title="interface in net.minecraft.world">
 </tr>
 <tr class="altColor" id="i4">
 <td class="colFirst"><code>default <a href="biome/Biome.html" title="class in net.minecraft.world.biome">Biome</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getBiomeForNoiseGen(int,int,int)">getBiomeForNoiseGen</a></span>&#8203;(int&nbsp;int2,
-int&nbsp;int3,
-int&nbsp;int4)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getBiomeForNoiseGen(int,int,int)">getBiomeForNoiseGen</a></span>&#8203;(int&nbsp;biomeX,
+int&nbsp;biomeY,
+int&nbsp;biomeZ)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i5">
@@ -183,7 +183,7 @@ boolean&nbsp;create)</code></th>
 </tr>
 <tr class="altColor" id="i10">
 <td class="colFirst"><code>default int</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getColor(net.minecraft.util.math.BlockPos,net.minecraft.world.level.ColorResolver)">getColor</a></span>&#8203;(<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getColor(net.minecraft.util.math.BlockPos,net.minecraft.world.level.ColorResolver)">getColor</a></span>&#8203;(<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
 <a href="level/ColorResolver.html" title="interface in net.minecraft.world.level">ColorResolver</a>&nbsp;colorResolver)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -194,8 +194,8 @@ boolean&nbsp;create)</code></th>
 </tr>
 <tr class="altColor" id="i12">
 <td class="colFirst"><code>default <a href="BlockView.html" title="interface in net.minecraft.world">BlockView</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getExistingChunk(int,int)">getExistingChunk</a></span>&#8203;(int&nbsp;int2,
-int&nbsp;int3)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getExistingChunk(int,int)">getExistingChunk</a></span>&#8203;(int&nbsp;chunkX,
+int&nbsp;chunkZ)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i13">
@@ -364,7 +364,7 @@ int&nbsp;z)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getColor(net.minecraft.util.math.BlockPos,net.minecraft.world.level.ColorResolver)">getColor</a></h3>
-<div class="memberSignature"><span class="modifiers">default</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getColor</span>&#8203;(<span class="arguments"><a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
+<div class="memberSignature"><span class="modifiers">default</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getColor</span>&#8203;(<span class="arguments"><a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
 <a href="level/ColorResolver.html" title="interface in net.minecraft.world.level">ColorResolver</a>&nbsp;colorResolver)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
@@ -375,9 +375,9 @@ int&nbsp;z)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getBiomeForNoiseGen(int,int,int)">getBiomeForNoiseGen</a></h3>
-<div class="memberSignature"><span class="modifiers">default</span>&nbsp;<span class="returnType"><a href="biome/Biome.html" title="class in net.minecraft.world.biome">Biome</a></span>&nbsp;<span class="memberName">getBiomeForNoiseGen</span>&#8203;(<span class="arguments">int&nbsp;int2,
-int&nbsp;int3,
-int&nbsp;int4)</span></div>
+<div class="memberSignature"><span class="modifiers">default</span>&nbsp;<span class="returnType"><a href="biome/Biome.html" title="class in net.minecraft.world.biome">Biome</a></span>&nbsp;<span class="memberName">getBiomeForNoiseGen</span>&#8203;(<span class="arguments">int&nbsp;biomeX,
+int&nbsp;biomeY,
+int&nbsp;biomeZ)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="biome/source/BiomeAccess.Storage.html#getBiomeForNoiseGen(int,int,int)">getBiomeForNoiseGen</a></code>&nbsp;in interface&nbsp;<code><a href="biome/source/BiomeAccess.Storage.html" title="interface in net.minecraft.world.biome.source">BiomeAccess.Storage</a></code></dd>
@@ -466,8 +466,8 @@ int&nbsp;chunkZ,
 <li class="blockList">
 <section class="detail">
 <h3><a id="getExistingChunk(int,int)">getExistingChunk</a></h3>
-<div class="memberSignature"><span class="modifiers">default</span>&nbsp;<span class="returnType"><a href="BlockView.html" title="interface in net.minecraft.world">BlockView</a></span>&nbsp;<span class="memberName">getExistingChunk</span>&#8203;(<span class="arguments">int&nbsp;int2,
-int&nbsp;int3)</span></div>
+<div class="memberSignature"><span class="modifiers">default</span>&nbsp;<span class="returnType"><a href="BlockView.html" title="interface in net.minecraft.world">BlockView</a></span>&nbsp;<span class="memberName">getExistingChunk</span>&#8203;(<span class="arguments">int&nbsp;chunkX,
+int&nbsp;chunkZ)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="CollisionView.html#getExistingChunk(int,int)">getExistingChunk</a></code>&nbsp;in interface&nbsp;<code><a href="CollisionView.html" title="interface in net.minecraft.world">CollisionView</a></code></dd>

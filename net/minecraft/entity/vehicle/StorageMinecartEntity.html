@@ -173,7 +173,7 @@ double&nbsp;z,
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>protected </code></td>
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.entity.EntityType,net.minecraft.world.World)">StorageMinecartEntity</a></span>&#8203;(<a href="../EntityType.html" title="class in net.minecraft.entity">EntityType</a>&lt;?&gt;&nbsp;entityType,
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.entity.EntityType,net.minecraft.world.World)">StorageMinecartEntity</a></span>&#8203;(<a href="../EntityType.html" title="class in net.minecraft.entity">EntityType</a>&lt;?&gt;&nbsp;type,
 <a href="../../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -207,12 +207,12 @@ double&nbsp;z,
 </tr>
 <tr class="rowColor" id="i1">
 <td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#canPlayerUse(net.minecraft.entity.player.PlayerEntity)">canPlayerUse</a></span>&#8203;(<a href="../player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;playerEntity)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#canPlayerUse(net.minecraft.entity.player.PlayerEntity)">canPlayerUse</a></span>&#8203;(<a href="../player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;player)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i2">
 <td class="colFirst"><code><a href="../Entity.html" title="class in net.minecraft.entity">Entity</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#changeDimension(net.minecraft.world.dimension.DimensionType)">changeDimension</a></span>&#8203;(<a href="../../world/dimension/DimensionType.html" title="class in net.minecraft.world.dimension">DimensionType</a>&nbsp;dimensionType)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#changeDimension(net.minecraft.world.dimension.DimensionType)">changeDimension</a></span>&#8203;(<a href="../../world/dimension/DimensionType.html" title="class in net.minecraft.world.dimension">DimensionType</a>&nbsp;newDimension)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i3">
@@ -222,9 +222,9 @@ double&nbsp;z,
 </tr>
 <tr class="altColor" id="i4">
 <td class="colFirst"><code><a href="../../screen/ScreenHandler.html" title="class in net.minecraft.screen">ScreenHandler</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createMenu(int,net.minecraft.entity.player.PlayerInventory,net.minecraft.entity.player.PlayerEntity)">createMenu</a></span>&#8203;(int&nbsp;int2,
-<a href="../player/PlayerInventory.html" title="class in net.minecraft.entity.player">PlayerInventory</a>&nbsp;playerInventory,
-<a href="../player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;playerEntity)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createMenu(int,net.minecraft.entity.player.PlayerInventory,net.minecraft.entity.player.PlayerEntity)">createMenu</a></span>&#8203;(int&nbsp;syncId,
+<a href="../player/PlayerInventory.html" title="class in net.minecraft.entity.player">PlayerInventory</a>&nbsp;inv,
+<a href="../player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;player)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i5">
@@ -234,8 +234,8 @@ double&nbsp;z,
 </tr>
 <tr class="altColor" id="i6">
 <td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#equip(int,net.minecraft.item.ItemStack)">equip</a></span>&#8203;(int&nbsp;int2,
-<a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;itemStack)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#equip(int,net.minecraft.item.ItemStack)">equip</a></span>&#8203;(int&nbsp;slot,
+<a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;item)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i7">
@@ -251,14 +251,14 @@ double&nbsp;z,
 </tr>
 <tr class="rowColor" id="i9">
 <td class="colFirst"><code><a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getStack(int)">getStack</a></span>&#8203;(int&nbsp;int2)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getStack(int)">getStack</a></span>&#8203;(int&nbsp;slot)</code></th>
 <td class="colLast">
 <div class="block">Fetches the stack currently stored at the given slot.</div>
 </td>
 </tr>
 <tr class="altColor" id="i10">
 <td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#interact(net.minecraft.entity.player.PlayerEntity,net.minecraft.util.Hand)">interact</a></span>&#8203;(<a href="../player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;playerEntity,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#interact(net.minecraft.entity.player.PlayerEntity,net.minecraft.util.Hand)">interact</a></span>&#8203;(<a href="../player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;player,
 <a href="../../util/Hand.html" title="enum in net.minecraft.util">Hand</a>&nbsp;hand)</code></th>
 <td class="colLast">
 <div class="block">Called when a player interacts with this entity.</div>
@@ -276,7 +276,7 @@ double&nbsp;z,
 </tr>
 <tr class="rowColor" id="i13">
 <td class="colFirst"><code>protected void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#readCustomDataFromTag(net.minecraft.nbt.CompoundTag)">readCustomDataFromTag</a></span>&#8203;(<a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;compoundTag)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#readCustomDataFromTag(net.minecraft.nbt.CompoundTag)">readCustomDataFromTag</a></span>&#8203;(<a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;tag)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i14">
@@ -286,15 +286,15 @@ double&nbsp;z,
 </tr>
 <tr class="rowColor" id="i15">
 <td class="colFirst"><code><a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#removeStack(int)">removeStack</a></span>&#8203;(int&nbsp;int2)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#removeStack(int)">removeStack</a></span>&#8203;(int&nbsp;slot)</code></th>
 <td class="colLast">
 <div class="block">Removes the stack currently stored at the indicated slot.</div>
 </td>
 </tr>
 <tr class="altColor" id="i16">
 <td class="colFirst"><code><a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#removeStack(int,int)">removeStack</a></span>&#8203;(int&nbsp;int2,
-int&nbsp;int3)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#removeStack(int,int)">removeStack</a></span>&#8203;(int&nbsp;slot,
+int&nbsp;amount)</code></th>
 <td class="colLast">
 <div class="block">Removes a specific number of items from the given slot.</div>
 </td>
@@ -307,13 +307,13 @@ long&nbsp;lootSeed)</code></th>
 </tr>
 <tr class="altColor" id="i18">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setStack(int,net.minecraft.item.ItemStack)">setStack</a></span>&#8203;(int&nbsp;int2,
-<a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;itemStack)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setStack(int,net.minecraft.item.ItemStack)">setStack</a></span>&#8203;(int&nbsp;slot,
+<a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;stack)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i19">
 <td class="colFirst"><code>protected void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#writeCustomDataToTag(net.minecraft.nbt.CompoundTag)">writeCustomDataToTag</a></span>&#8203;(<a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;compoundTag)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#writeCustomDataToTag(net.minecraft.nbt.CompoundTag)">writeCustomDataToTag</a></span>&#8203;(<a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;tag)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -361,7 +361,7 @@ long&nbsp;lootSeed)</code></th>
 <li class="blockList">
 <section class="detail">
 <h3><a id="&lt;init&gt;(net.minecraft.entity.EntityType,net.minecraft.world.World)">StorageMinecartEntity</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="memberName">StorageMinecartEntity</span>&#8203;(<span class="arguments"><a href="../EntityType.html" title="class in net.minecraft.entity">EntityType</a>&lt;?&gt;&nbsp;entityType,
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="memberName">StorageMinecartEntity</span>&#8203;(<span class="arguments"><a href="../EntityType.html" title="class in net.minecraft.entity">EntityType</a>&lt;?&gt;&nbsp;type,
 <a href="../../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world)</span></div>
 </section>
 </li>
@@ -408,8 +408,7 @@ double&nbsp;z,
 <li class="blockList">
 <section class="detail">
 <h3><a id="getStack(int)">getStack</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a></span>&nbsp;<span class="memberName">getStack</span>&#8203;(<span class="arguments">int&nbsp;int2)</span></div>
-<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../inventory/Inventory.html#getStack(int)">Inventory</a></code></span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a></span>&nbsp;<span class="memberName">getStack</span>&#8203;(<span class="arguments">int&nbsp;slot)</span></div>
 <div class="block">Fetches the stack currently stored at the given slot. If the slot is empty,
  or is outside the bounds of this inventory, returns see <code>ItemStack.EMPTY</code>.</div>
 <dl>
@@ -421,9 +420,8 @@ double&nbsp;z,
 <li class="blockList">
 <section class="detail">
 <h3><a id="removeStack(int,int)">removeStack</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a></span>&nbsp;<span class="memberName">removeStack</span>&#8203;(<span class="arguments">int&nbsp;int2,
-int&nbsp;int3)</span></div>
-<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../inventory/Inventory.html#removeStack(int,int)">Inventory</a></code></span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a></span>&nbsp;<span class="memberName">removeStack</span>&#8203;(<span class="arguments">int&nbsp;slot,
+int&nbsp;amount)</span></div>
 <div class="block">Removes a specific number of items from the given slot.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
@@ -436,8 +434,7 @@ int&nbsp;int3)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="removeStack(int)">removeStack</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a></span>&nbsp;<span class="memberName">removeStack</span>&#8203;(<span class="arguments">int&nbsp;int2)</span></div>
-<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../inventory/Inventory.html#removeStack(int)">Inventory</a></code></span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a></span>&nbsp;<span class="memberName">removeStack</span>&#8203;(<span class="arguments">int&nbsp;slot)</span></div>
 <div class="block">Removes the stack currently stored at the indicated slot.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
@@ -450,8 +447,8 @@ int&nbsp;int3)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="setStack(int,net.minecraft.item.ItemStack)">setStack</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setStack</span>&#8203;(<span class="arguments">int&nbsp;int2,
-<a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;itemStack)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setStack</span>&#8203;(<span class="arguments">int&nbsp;slot,
+<a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;stack)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../inventory/Inventory.html#setStack(int,net.minecraft.item.ItemStack)">setStack</a></code>&nbsp;in interface&nbsp;<code><a href="../../inventory/Inventory.html" title="interface in net.minecraft.inventory">Inventory</a></code></dd>
@@ -461,8 +458,8 @@ int&nbsp;int3)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="equip(int,net.minecraft.item.ItemStack)">equip</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">equip</span>&#8203;(<span class="arguments">int&nbsp;int2,
-<a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;itemStack)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">equip</span>&#8203;(<span class="arguments">int&nbsp;slot,
+<a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;item)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../Entity.html#equip(int,net.minecraft.item.ItemStack)">equip</a></code>&nbsp;in class&nbsp;<code><a href="../Entity.html" title="class in net.minecraft.entity">Entity</a></code></dd>
@@ -482,7 +479,7 @@ int&nbsp;int3)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="canPlayerUse(net.minecraft.entity.player.PlayerEntity)">canPlayerUse</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">canPlayerUse</span>&#8203;(<span class="arguments"><a href="../player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;playerEntity)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">canPlayerUse</span>&#8203;(<span class="arguments"><a href="../player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;player)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../inventory/Inventory.html#canPlayerUse(net.minecraft.entity.player.PlayerEntity)">canPlayerUse</a></code>&nbsp;in interface&nbsp;<code><a href="../../inventory/Inventory.html" title="interface in net.minecraft.inventory">Inventory</a></code></dd>
@@ -492,7 +489,7 @@ int&nbsp;int3)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="changeDimension(net.minecraft.world.dimension.DimensionType)">changeDimension</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../Entity.html" title="class in net.minecraft.entity">Entity</a></span>&nbsp;<span class="memberName">changeDimension</span>&#8203;(<span class="arguments"><a href="../../world/dimension/DimensionType.html" title="class in net.minecraft.world.dimension">DimensionType</a>&nbsp;dimensionType)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../Entity.html" title="class in net.minecraft.entity">Entity</a></span>&nbsp;<span class="memberName">changeDimension</span>&#8203;(<span class="arguments"><a href="../../world/dimension/DimensionType.html" title="class in net.minecraft.world.dimension">DimensionType</a>&nbsp;newDimension)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../Entity.html#changeDimension(net.minecraft.world.dimension.DimensionType)">changeDimension</a></code>&nbsp;in class&nbsp;<code><a href="../Entity.html" title="class in net.minecraft.entity">Entity</a></code></dd>
@@ -512,7 +509,7 @@ int&nbsp;int3)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="writeCustomDataToTag(net.minecraft.nbt.CompoundTag)">writeCustomDataToTag</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">writeCustomDataToTag</span>&#8203;(<span class="arguments"><a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;compoundTag)</span></div>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">writeCustomDataToTag</span>&#8203;(<span class="arguments"><a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;tag)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="AbstractMinecartEntity.html#writeCustomDataToTag(net.minecraft.nbt.CompoundTag)">writeCustomDataToTag</a></code>&nbsp;in class&nbsp;<code><a href="AbstractMinecartEntity.html" title="class in net.minecraft.entity.vehicle">AbstractMinecartEntity</a></code></dd>
@@ -522,7 +519,7 @@ int&nbsp;int3)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="readCustomDataFromTag(net.minecraft.nbt.CompoundTag)">readCustomDataFromTag</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">readCustomDataFromTag</span>&#8203;(<span class="arguments"><a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;compoundTag)</span></div>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">readCustomDataFromTag</span>&#8203;(<span class="arguments"><a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;tag)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="AbstractMinecartEntity.html#readCustomDataFromTag(net.minecraft.nbt.CompoundTag)">readCustomDataFromTag</a></code>&nbsp;in class&nbsp;<code><a href="AbstractMinecartEntity.html" title="class in net.minecraft.entity.vehicle">AbstractMinecartEntity</a></code></dd>
@@ -532,15 +529,14 @@ int&nbsp;int3)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="interact(net.minecraft.entity.player.PlayerEntity,net.minecraft.util.Hand)">interact</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">interact</span>&#8203;(<span class="arguments"><a href="../player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;playerEntity,
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">interact</span>&#8203;(<span class="arguments"><a href="../player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;player,
 <a href="../../util/Hand.html" title="enum in net.minecraft.util">Hand</a>&nbsp;hand)</span></div>
-<div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../Entity.html#interact(net.minecraft.entity.player.PlayerEntity,net.minecraft.util.Hand)">Entity</a></code></span></div>
 <div class="block">Called when a player interacts with this entity.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../Entity.html#interact(net.minecraft.entity.player.PlayerEntity,net.minecraft.util.Hand)">interact</a></code>&nbsp;in class&nbsp;<code><a href="../Entity.html" title="class in net.minecraft.entity">Entity</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>playerEntity</code> - the player</dd>
+<dd><code>player</code> - the player</dd>
 <dd><code>hand</code> - the hand the player used to interact with this entity</dd>
 </dl>
 </section>
@@ -581,9 +577,9 @@ long&nbsp;lootSeed)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="createMenu(int,net.minecraft.entity.player.PlayerInventory,net.minecraft.entity.player.PlayerEntity)">createMenu</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../screen/ScreenHandler.html" title="class in net.minecraft.screen">ScreenHandler</a></span>&nbsp;<span class="memberName">createMenu</span>&#8203;(<span class="arguments">int&nbsp;int2,
-<a href="../player/PlayerInventory.html" title="class in net.minecraft.entity.player">PlayerInventory</a>&nbsp;playerInventory,
-<a href="../player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;playerEntity)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../screen/ScreenHandler.html" title="class in net.minecraft.screen">ScreenHandler</a></span>&nbsp;<span class="memberName">createMenu</span>&#8203;(<span class="arguments">int&nbsp;syncId,
+<a href="../player/PlayerInventory.html" title="class in net.minecraft.entity.player">PlayerInventory</a>&nbsp;inv,
+<a href="../player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;player)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../screen/ScreenHandlerFactory.html#createMenu(int,net.minecraft.entity.player.PlayerInventory,net.minecraft.entity.player.PlayerEntity)">createMenu</a></code>&nbsp;in interface&nbsp;<code><a href="../../screen/ScreenHandlerFactory.html" title="interface in net.minecraft.screen">ScreenHandlerFactory</a></code></dd>

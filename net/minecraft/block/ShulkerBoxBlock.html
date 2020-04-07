@@ -217,15 +217,15 @@ extends <a href="BlockWithEntity.html" title="class in net.minecraft.block">Bloc
 </tr>
 <tr class="rowColor" id="i1">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#buildTooltip(net.minecraft.item.ItemStack,net.minecraft.world.BlockView,java.util.List,net.minecraft.client.item.TooltipContext)">buildTooltip</a></span>&#8203;(<a href="../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;itemStack,
-<a href="../world/BlockView.html" title="interface in net.minecraft.world">BlockView</a>&nbsp;blockView,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../text/Text.html" title="interface in net.minecraft.text">Text</a>&gt;&nbsp;list,
-<a href="../client/item/TooltipContext.html" title="interface in net.minecraft.client.item">TooltipContext</a>&nbsp;tooltipContext)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#buildTooltip(net.minecraft.item.ItemStack,net.minecraft.world.BlockView,java.util.List,net.minecraft.client.item.TooltipContext)">buildTooltip</a></span>&#8203;(<a href="../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;stack,
+<a href="../world/BlockView.html" title="interface in net.minecraft.world">BlockView</a>&nbsp;world,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../text/Text.html" title="interface in net.minecraft.text">Text</a>&gt;&nbsp;tooltip,
+<a href="../client/item/TooltipContext.html" title="interface in net.minecraft.client.item">TooltipContext</a>&nbsp;options)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i2">
 <td class="colFirst"><code><a href="entity/BlockEntity.html" title="class in net.minecraft.block.entity">BlockEntity</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createBlockEntity(net.minecraft.world.BlockView)">createBlockEntity</a></span>&#8203;(<a href="../world/BlockView.html" title="interface in net.minecraft.world">BlockView</a>&nbsp;blockView)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createBlockEntity(net.minecraft.world.BlockView)">createBlockEntity</a></span>&#8203;(<a href="../world/BlockView.html" title="interface in net.minecraft.world">BlockView</a>&nbsp;world)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i3">
@@ -250,14 +250,14 @@ extends <a href="BlockWithEntity.html" title="class in net.minecraft.block">Bloc
 </tr>
 <tr class="rowColor" id="i7">
 <td class="colFirst"><code>int</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getComparatorOutput(net.minecraft.block.BlockState,net.minecraft.world.World,net.minecraft.util.math.BlockPos)">getComparatorOutput</a></span>&#8203;(<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getComparatorOutput(net.minecraft.block.BlockState,net.minecraft.world.World,net.minecraft.util.math.BlockPos)">getComparatorOutput</a></span>&#8203;(<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state,
 <a href="../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world,
-<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos)</code></th>
+<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i8">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getDroppedStacks(net.minecraft.block.BlockState,net.minecraft.loot.context.LootContext.Builder)">getDroppedStacks</a></span>&#8203;(<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getDroppedStacks(net.minecraft.block.BlockState,net.minecraft.loot.context.LootContext.Builder)">getDroppedStacks</a></span>&#8203;(<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state,
 <a href="../loot/context/LootContext.Builder.html" title="class in net.minecraft.loot.context">LootContext.Builder</a>&nbsp;builder)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -268,85 +268,85 @@ extends <a href="BlockWithEntity.html" title="class in net.minecraft.block">Bloc
 </tr>
 <tr class="altColor" id="i10">
 <td class="colFirst"><code><a href="../util/shape/VoxelShape.html" title="class in net.minecraft.util.shape">VoxelShape</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getOutlineShape(net.minecraft.block.BlockState,net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos,net.minecraft.block.ShapeContext)">getOutlineShape</a></span>&#8203;(<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState,
-<a href="../world/BlockView.html" title="interface in net.minecraft.world">BlockView</a>&nbsp;blockView,
-<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
-<a href="ShapeContext.html" title="interface in net.minecraft.block">ShapeContext</a>&nbsp;shapeContext)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getOutlineShape(net.minecraft.block.BlockState,net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos,net.minecraft.block.ShapeContext)">getOutlineShape</a></span>&#8203;(<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state,
+<a href="../world/BlockView.html" title="interface in net.minecraft.world">BlockView</a>&nbsp;world,
+<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<a href="ShapeContext.html" title="interface in net.minecraft.block">ShapeContext</a>&nbsp;context)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i11">
 <td class="colFirst"><code><a href="../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPickStack(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos,net.minecraft.block.BlockState)">getPickStack</a></span>&#8203;(<a href="../world/BlockView.html" title="interface in net.minecraft.world">BlockView</a>&nbsp;blockView,
-<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
-<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPickStack(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos,net.minecraft.block.BlockState)">getPickStack</a></span>&#8203;(<a href="../world/BlockView.html" title="interface in net.minecraft.world">BlockView</a>&nbsp;world,
+<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i12">
 <td class="colFirst"><code><a href="piston/PistonBehavior.html" title="enum in net.minecraft.block.piston">PistonBehavior</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPistonBehavior(net.minecraft.block.BlockState)">getPistonBehavior</a></span>&#8203;(<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPistonBehavior(net.minecraft.block.BlockState)">getPistonBehavior</a></span>&#8203;(<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i13">
 <td class="colFirst"><code><a href="BlockState.html" title="class in net.minecraft.block">BlockState</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPlacementState(net.minecraft.item.ItemPlacementContext)">getPlacementState</a></span>&#8203;(<a href="../item/ItemPlacementContext.html" title="class in net.minecraft.item">ItemPlacementContext</a>&nbsp;itemPlacementContext)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPlacementState(net.minecraft.item.ItemPlacementContext)">getPlacementState</a></span>&#8203;(<a href="../item/ItemPlacementContext.html" title="class in net.minecraft.item">ItemPlacementContext</a>&nbsp;ctx)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i14">
 <td class="colFirst"><code><a href="BlockRenderType.html" title="enum in net.minecraft.block">BlockRenderType</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getRenderType(net.minecraft.block.BlockState)">getRenderType</a></span>&#8203;(<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getRenderType(net.minecraft.block.BlockState)">getRenderType</a></span>&#8203;(<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i15">
 <td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#hasComparatorOutput(net.minecraft.block.BlockState)">hasComparatorOutput</a></span>&#8203;(<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#hasComparatorOutput(net.minecraft.block.BlockState)">hasComparatorOutput</a></span>&#8203;(<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i16">
 <td class="colFirst"><code><a href="BlockState.html" title="class in net.minecraft.block">BlockState</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#mirror(net.minecraft.block.BlockState,net.minecraft.util.BlockMirror)">mirror</a></span>&#8203;(<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState,
-<a href="../util/BlockMirror.html" title="enum in net.minecraft.util">BlockMirror</a>&nbsp;blockMirror)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#mirror(net.minecraft.block.BlockState,net.minecraft.util.BlockMirror)">mirror</a></span>&#8203;(<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state,
+<a href="../util/BlockMirror.html" title="enum in net.minecraft.util">BlockMirror</a>&nbsp;mirror)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i17">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#onBlockRemoved(net.minecraft.block.BlockState,net.minecraft.world.World,net.minecraft.util.math.BlockPos,net.minecraft.block.BlockState,boolean)">onBlockRemoved</a></span>&#8203;(<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#onBlockRemoved(net.minecraft.block.BlockState,net.minecraft.world.World,net.minecraft.util.math.BlockPos,net.minecraft.block.BlockState,boolean)">onBlockRemoved</a></span>&#8203;(<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state,
 <a href="../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world,
-<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
-<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState2,
-boolean&nbsp;bool)</code></th>
+<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;newState,
+boolean&nbsp;notify)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i18">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#onBreak(net.minecraft.world.World,net.minecraft.util.math.BlockPos,net.minecraft.block.BlockState,net.minecraft.entity.player.PlayerEntity)">onBreak</a></span>&#8203;(<a href="../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world,
-<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
-<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState,
-<a href="../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;playerEntity)</code></th>
+<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state,
+<a href="../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;player)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i19">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#onPlaced(net.minecraft.world.World,net.minecraft.util.math.BlockPos,net.minecraft.block.BlockState,net.minecraft.entity.LivingEntity,net.minecraft.item.ItemStack)">onPlaced</a></span>&#8203;(<a href="../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world,
-<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
-<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState,
-<a href="../entity/LivingEntity.html" title="class in net.minecraft.entity">LivingEntity</a>&nbsp;livingEntity,
+<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state,
+<a href="../entity/LivingEntity.html" title="class in net.minecraft.entity">LivingEntity</a>&nbsp;placer,
 <a href="../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;itemStack)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i20">
 <td class="colFirst"><code><a href="../util/ActionResult.html" title="enum in net.minecraft.util">ActionResult</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#onUse(net.minecraft.block.BlockState,net.minecraft.world.World,net.minecraft.util.math.BlockPos,net.minecraft.entity.player.PlayerEntity,net.minecraft.util.Hand,net.minecraft.util.hit.BlockHitResult)">onUse</a></span>&#8203;(<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#onUse(net.minecraft.block.BlockState,net.minecraft.world.World,net.minecraft.util.math.BlockPos,net.minecraft.entity.player.PlayerEntity,net.minecraft.util.Hand,net.minecraft.util.hit.BlockHitResult)">onUse</a></span>&#8203;(<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state,
 <a href="../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world,
-<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
-<a href="../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;playerEntity,
+<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<a href="../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;player,
 <a href="../util/Hand.html" title="enum in net.minecraft.util">Hand</a>&nbsp;hand,
-<a href="../util/hit/BlockHitResult.html" title="class in net.minecraft.util.hit">BlockHitResult</a>&nbsp;blockHitResult)</code></th>
+<a href="../util/hit/BlockHitResult.html" title="class in net.minecraft.util.hit">BlockHitResult</a>&nbsp;hit)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i21">
 <td class="colFirst"><code><a href="BlockState.html" title="class in net.minecraft.block">BlockState</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#rotate(net.minecraft.block.BlockState,net.minecraft.util.BlockRotation)">rotate</a></span>&#8203;(<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState,
-<a href="../util/BlockRotation.html" title="enum in net.minecraft.util">BlockRotation</a>&nbsp;blockRotation)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#rotate(net.minecraft.block.BlockState,net.minecraft.util.BlockRotation)">rotate</a></span>&#8203;(<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state,
+<a href="../util/BlockRotation.html" title="enum in net.minecraft.util">BlockRotation</a>&nbsp;rotation)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -428,13 +428,13 @@ boolean&nbsp;bool)</code></th>
 <li class="blockList">
 <section class="detail">
 <h3><a id="createBlockEntity(net.minecraft.world.BlockView)">createBlockEntity</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="entity/BlockEntity.html" title="class in net.minecraft.block.entity">BlockEntity</a></span>&nbsp;<span class="memberName">createBlockEntity</span>&#8203;(<span class="arguments"><a href="../world/BlockView.html" title="interface in net.minecraft.world">BlockView</a>&nbsp;blockView)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="entity/BlockEntity.html" title="class in net.minecraft.block.entity">BlockEntity</a></span>&nbsp;<span class="memberName">createBlockEntity</span>&#8203;(<span class="arguments"><a href="../world/BlockView.html" title="interface in net.minecraft.world">BlockView</a>&nbsp;world)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getRenderType(net.minecraft.block.BlockState)">getRenderType</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="BlockRenderType.html" title="enum in net.minecraft.block">BlockRenderType</a></span>&nbsp;<span class="memberName">getRenderType</span>&#8203;(<span class="arguments"><a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="BlockRenderType.html" title="enum in net.minecraft.block">BlockRenderType</a></span>&nbsp;<span class="memberName">getRenderType</span>&#8203;(<span class="arguments"><a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="BlockWithEntity.html#getRenderType(net.minecraft.block.BlockState)">getRenderType</a></code>&nbsp;in class&nbsp;<code><a href="BlockWithEntity.html" title="class in net.minecraft.block">BlockWithEntity</a></code></dd>
@@ -444,12 +444,12 @@ boolean&nbsp;bool)</code></th>
 <li class="blockList">
 <section class="detail">
 <h3><a id="onUse(net.minecraft.block.BlockState,net.minecraft.world.World,net.minecraft.util.math.BlockPos,net.minecraft.entity.player.PlayerEntity,net.minecraft.util.Hand,net.minecraft.util.hit.BlockHitResult)">onUse</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../util/ActionResult.html" title="enum in net.minecraft.util">ActionResult</a></span>&nbsp;<span class="memberName">onUse</span>&#8203;(<span class="arguments"><a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState,
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../util/ActionResult.html" title="enum in net.minecraft.util">ActionResult</a></span>&nbsp;<span class="memberName">onUse</span>&#8203;(<span class="arguments"><a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state,
 <a href="../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world,
-<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
-<a href="../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;playerEntity,
+<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<a href="../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;player,
 <a href="../util/Hand.html" title="enum in net.minecraft.util">Hand</a>&nbsp;hand,
-<a href="../util/hit/BlockHitResult.html" title="class in net.minecraft.util.hit">BlockHitResult</a>&nbsp;blockHitResult)</span></div>
+<a href="../util/hit/BlockHitResult.html" title="class in net.minecraft.util.hit">BlockHitResult</a>&nbsp;hit)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="AbstractBlock.html#onUse(net.minecraft.block.BlockState,net.minecraft.world.World,net.minecraft.util.math.BlockPos,net.minecraft.entity.player.PlayerEntity,net.minecraft.util.Hand,net.minecraft.util.hit.BlockHitResult)">onUse</a></code>&nbsp;in class&nbsp;<code><a href="AbstractBlock.html" title="class in net.minecraft.block">AbstractBlock</a></code></dd>
@@ -459,7 +459,7 @@ boolean&nbsp;bool)</code></th>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getPlacementState(net.minecraft.item.ItemPlacementContext)">getPlacementState</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="BlockState.html" title="class in net.minecraft.block">BlockState</a></span>&nbsp;<span class="memberName">getPlacementState</span>&#8203;(<span class="arguments"><a href="../item/ItemPlacementContext.html" title="class in net.minecraft.item">ItemPlacementContext</a>&nbsp;itemPlacementContext)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="BlockState.html" title="class in net.minecraft.block">BlockState</a></span>&nbsp;<span class="memberName">getPlacementState</span>&#8203;(<span class="arguments"><a href="../item/ItemPlacementContext.html" title="class in net.minecraft.item">ItemPlacementContext</a>&nbsp;ctx)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="Block.html#getPlacementState(net.minecraft.item.ItemPlacementContext)">getPlacementState</a></code>&nbsp;in class&nbsp;<code><a href="Block.html" title="class in net.minecraft.block">Block</a></code></dd>
@@ -480,9 +480,9 @@ boolean&nbsp;bool)</code></th>
 <section class="detail">
 <h3><a id="onBreak(net.minecraft.world.World,net.minecraft.util.math.BlockPos,net.minecraft.block.BlockState,net.minecraft.entity.player.PlayerEntity)">onBreak</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">onBreak</span>&#8203;(<span class="arguments"><a href="../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world,
-<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
-<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState,
-<a href="../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;playerEntity)</span></div>
+<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state,
+<a href="../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;player)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="Block.html#onBreak(net.minecraft.world.World,net.minecraft.util.math.BlockPos,net.minecraft.block.BlockState,net.minecraft.entity.player.PlayerEntity)">onBreak</a></code>&nbsp;in class&nbsp;<code><a href="Block.html" title="class in net.minecraft.block">Block</a></code></dd>
@@ -492,7 +492,7 @@ boolean&nbsp;bool)</code></th>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getDroppedStacks(net.minecraft.block.BlockState,net.minecraft.loot.context.LootContext.Builder)">getDroppedStacks</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&gt;</span>&nbsp;<span class="memberName">getDroppedStacks</span>&#8203;(<span class="arguments"><a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState,
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&gt;</span>&nbsp;<span class="memberName">getDroppedStacks</span>&#8203;(<span class="arguments"><a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state,
 <a href="../loot/context/LootContext.Builder.html" title="class in net.minecraft.loot.context">LootContext.Builder</a>&nbsp;builder)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
@@ -504,9 +504,9 @@ boolean&nbsp;bool)</code></th>
 <section class="detail">
 <h3><a id="onPlaced(net.minecraft.world.World,net.minecraft.util.math.BlockPos,net.minecraft.block.BlockState,net.minecraft.entity.LivingEntity,net.minecraft.item.ItemStack)">onPlaced</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">onPlaced</span>&#8203;(<span class="arguments"><a href="../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world,
-<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
-<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState,
-<a href="../entity/LivingEntity.html" title="class in net.minecraft.entity">LivingEntity</a>&nbsp;livingEntity,
+<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state,
+<a href="../entity/LivingEntity.html" title="class in net.minecraft.entity">LivingEntity</a>&nbsp;placer,
 <a href="../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;itemStack)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
@@ -517,11 +517,11 @@ boolean&nbsp;bool)</code></th>
 <li class="blockList">
 <section class="detail">
 <h3><a id="onBlockRemoved(net.minecraft.block.BlockState,net.minecraft.world.World,net.minecraft.util.math.BlockPos,net.minecraft.block.BlockState,boolean)">onBlockRemoved</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">onBlockRemoved</span>&#8203;(<span class="arguments"><a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState,
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">onBlockRemoved</span>&#8203;(<span class="arguments"><a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state,
 <a href="../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world,
-<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
-<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState2,
-boolean&nbsp;bool)</span></div>
+<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;newState,
+boolean&nbsp;notify)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="AbstractBlock.html#onBlockRemoved(net.minecraft.block.BlockState,net.minecraft.world.World,net.minecraft.util.math.BlockPos,net.minecraft.block.BlockState,boolean)">onBlockRemoved</a></code>&nbsp;in class&nbsp;<code><a href="AbstractBlock.html" title="class in net.minecraft.block">AbstractBlock</a></code></dd>
@@ -531,10 +531,10 @@ boolean&nbsp;bool)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="buildTooltip(net.minecraft.item.ItemStack,net.minecraft.world.BlockView,java.util.List,net.minecraft.client.item.TooltipContext)">buildTooltip</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">buildTooltip</span>&#8203;(<span class="arguments"><a href="../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;itemStack,
-<a href="../world/BlockView.html" title="interface in net.minecraft.world">BlockView</a>&nbsp;blockView,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../text/Text.html" title="interface in net.minecraft.text">Text</a>&gt;&nbsp;list,
-<a href="../client/item/TooltipContext.html" title="interface in net.minecraft.client.item">TooltipContext</a>&nbsp;tooltipContext)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">buildTooltip</span>&#8203;(<span class="arguments"><a href="../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;stack,
+<a href="../world/BlockView.html" title="interface in net.minecraft.world">BlockView</a>&nbsp;world,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../text/Text.html" title="interface in net.minecraft.text">Text</a>&gt;&nbsp;tooltip,
+<a href="../client/item/TooltipContext.html" title="interface in net.minecraft.client.item">TooltipContext</a>&nbsp;options)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="Block.html#buildTooltip(net.minecraft.item.ItemStack,net.minecraft.world.BlockView,java.util.List,net.minecraft.client.item.TooltipContext)">buildTooltip</a></code>&nbsp;in class&nbsp;<code><a href="Block.html" title="class in net.minecraft.block">Block</a></code></dd>
@@ -544,7 +544,7 @@ boolean&nbsp;bool)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getPistonBehavior(net.minecraft.block.BlockState)">getPistonBehavior</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="piston/PistonBehavior.html" title="enum in net.minecraft.block.piston">PistonBehavior</a></span>&nbsp;<span class="memberName">getPistonBehavior</span>&#8203;(<span class="arguments"><a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="piston/PistonBehavior.html" title="enum in net.minecraft.block.piston">PistonBehavior</a></span>&nbsp;<span class="memberName">getPistonBehavior</span>&#8203;(<span class="arguments"><a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="AbstractBlock.html#getPistonBehavior(net.minecraft.block.BlockState)">getPistonBehavior</a></code>&nbsp;in class&nbsp;<code><a href="AbstractBlock.html" title="class in net.minecraft.block">AbstractBlock</a></code></dd>
@@ -554,10 +554,10 @@ boolean&nbsp;bool)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getOutlineShape(net.minecraft.block.BlockState,net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos,net.minecraft.block.ShapeContext)">getOutlineShape</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../util/shape/VoxelShape.html" title="class in net.minecraft.util.shape">VoxelShape</a></span>&nbsp;<span class="memberName">getOutlineShape</span>&#8203;(<span class="arguments"><a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState,
-<a href="../world/BlockView.html" title="interface in net.minecraft.world">BlockView</a>&nbsp;blockView,
-<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
-<a href="ShapeContext.html" title="interface in net.minecraft.block">ShapeContext</a>&nbsp;shapeContext)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../util/shape/VoxelShape.html" title="class in net.minecraft.util.shape">VoxelShape</a></span>&nbsp;<span class="memberName">getOutlineShape</span>&#8203;(<span class="arguments"><a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state,
+<a href="../world/BlockView.html" title="interface in net.minecraft.world">BlockView</a>&nbsp;world,
+<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<a href="ShapeContext.html" title="interface in net.minecraft.block">ShapeContext</a>&nbsp;context)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="AbstractBlock.html#getOutlineShape(net.minecraft.block.BlockState,net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos,net.minecraft.block.ShapeContext)">getOutlineShape</a></code>&nbsp;in class&nbsp;<code><a href="AbstractBlock.html" title="class in net.minecraft.block">AbstractBlock</a></code></dd>
@@ -567,7 +567,7 @@ boolean&nbsp;bool)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="hasComparatorOutput(net.minecraft.block.BlockState)">hasComparatorOutput</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">hasComparatorOutput</span>&#8203;(<span class="arguments"><a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">hasComparatorOutput</span>&#8203;(<span class="arguments"><a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="AbstractBlock.html#hasComparatorOutput(net.minecraft.block.BlockState)">hasComparatorOutput</a></code>&nbsp;in class&nbsp;<code><a href="AbstractBlock.html" title="class in net.minecraft.block">AbstractBlock</a></code></dd>
@@ -577,9 +577,9 @@ boolean&nbsp;bool)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getComparatorOutput(net.minecraft.block.BlockState,net.minecraft.world.World,net.minecraft.util.math.BlockPos)">getComparatorOutput</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getComparatorOutput</span>&#8203;(<span class="arguments"><a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState,
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getComparatorOutput</span>&#8203;(<span class="arguments"><a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state,
 <a href="../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world,
-<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos)</span></div>
+<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="AbstractBlock.html#getComparatorOutput(net.minecraft.block.BlockState,net.minecraft.world.World,net.minecraft.util.math.BlockPos)">getComparatorOutput</a></code>&nbsp;in class&nbsp;<code><a href="AbstractBlock.html" title="class in net.minecraft.block">AbstractBlock</a></code></dd>
@@ -589,9 +589,9 @@ boolean&nbsp;bool)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getPickStack(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos,net.minecraft.block.BlockState)">getPickStack</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a></span>&nbsp;<span class="memberName">getPickStack</span>&#8203;(<span class="arguments"><a href="../world/BlockView.html" title="interface in net.minecraft.world">BlockView</a>&nbsp;blockView,
-<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
-<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a></span>&nbsp;<span class="memberName">getPickStack</span>&#8203;(<span class="arguments"><a href="../world/BlockView.html" title="interface in net.minecraft.world">BlockView</a>&nbsp;world,
+<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="Block.html#getPickStack(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos,net.minecraft.block.BlockState)">getPickStack</a></code>&nbsp;in class&nbsp;<code><a href="Block.html" title="class in net.minecraft.block">Block</a></code></dd>
@@ -631,8 +631,8 @@ boolean&nbsp;bool)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="rotate(net.minecraft.block.BlockState,net.minecraft.util.BlockRotation)">rotate</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="BlockState.html" title="class in net.minecraft.block">BlockState</a></span>&nbsp;<span class="memberName">rotate</span>&#8203;(<span class="arguments"><a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState,
-<a href="../util/BlockRotation.html" title="enum in net.minecraft.util">BlockRotation</a>&nbsp;blockRotation)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="BlockState.html" title="class in net.minecraft.block">BlockState</a></span>&nbsp;<span class="memberName">rotate</span>&#8203;(<span class="arguments"><a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state,
+<a href="../util/BlockRotation.html" title="enum in net.minecraft.util">BlockRotation</a>&nbsp;rotation)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="AbstractBlock.html#rotate(net.minecraft.block.BlockState,net.minecraft.util.BlockRotation)">rotate</a></code>&nbsp;in class&nbsp;<code><a href="AbstractBlock.html" title="class in net.minecraft.block">AbstractBlock</a></code></dd>
@@ -642,8 +642,8 @@ boolean&nbsp;bool)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="mirror(net.minecraft.block.BlockState,net.minecraft.util.BlockMirror)">mirror</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="BlockState.html" title="class in net.minecraft.block">BlockState</a></span>&nbsp;<span class="memberName">mirror</span>&#8203;(<span class="arguments"><a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState,
-<a href="../util/BlockMirror.html" title="enum in net.minecraft.util">BlockMirror</a>&nbsp;blockMirror)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="BlockState.html" title="class in net.minecraft.block">BlockState</a></span>&nbsp;<span class="memberName">mirror</span>&#8203;(<span class="arguments"><a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state,
+<a href="../util/BlockMirror.html" title="enum in net.minecraft.util">BlockMirror</a>&nbsp;mirror)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="AbstractBlock.html#mirror(net.minecraft.block.BlockState,net.minecraft.util.BlockMirror)">mirror</a></code>&nbsp;in class&nbsp;<code><a href="AbstractBlock.html" title="class in net.minecraft.block">AbstractBlock</a></code></dd>

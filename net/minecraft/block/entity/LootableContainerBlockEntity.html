@@ -164,7 +164,7 @@ extends <a href="LockableContainerBlockEntity.html" title="class in net.minecraf
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>protected </code></td>
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.block.entity.BlockEntityType)">LootableContainerBlockEntity</a></span>&#8203;(<a href="BlockEntityType.html" title="class in net.minecraft.block.entity">BlockEntityType</a>&lt;?&gt;&nbsp;blockEntityType)</code></th>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.block.entity.BlockEntityType)">LootableContainerBlockEntity</a></span>&#8203;(<a href="BlockEntityType.html" title="class in net.minecraft.block.entity">BlockEntityType</a>&lt;?&gt;&nbsp;type)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -192,7 +192,7 @@ extends <a href="LockableContainerBlockEntity.html" title="class in net.minecraf
 <tbody>
 <tr class="altColor" id="i0">
 <td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#canPlayerUse(net.minecraft.entity.player.PlayerEntity)">canPlayerUse</a></span>&#8203;(<a href="../../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;playerEntity)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#canPlayerUse(net.minecraft.entity.player.PlayerEntity)">canPlayerUse</a></span>&#8203;(<a href="../../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;player)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
@@ -202,7 +202,7 @@ extends <a href="LockableContainerBlockEntity.html" title="class in net.minecraf
 </tr>
 <tr class="altColor" id="i2">
 <td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#checkUnlocked(net.minecraft.entity.player.PlayerEntity)">checkUnlocked</a></span>&#8203;(<a href="../../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;playerEntity)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#checkUnlocked(net.minecraft.entity.player.PlayerEntity)">checkUnlocked</a></span>&#8203;(<a href="../../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;player)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i3">
@@ -212,9 +212,9 @@ extends <a href="LockableContainerBlockEntity.html" title="class in net.minecraf
 </tr>
 <tr class="altColor" id="i4">
 <td class="colFirst"><code><a href="../../screen/ScreenHandler.html" title="class in net.minecraft.screen">ScreenHandler</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createMenu(int,net.minecraft.entity.player.PlayerInventory,net.minecraft.entity.player.PlayerEntity)">createMenu</a></span>&#8203;(int&nbsp;int2,
-<a href="../../entity/player/PlayerInventory.html" title="class in net.minecraft.entity.player">PlayerInventory</a>&nbsp;playerInventory,
-<a href="../../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;playerEntity)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createMenu(int,net.minecraft.entity.player.PlayerInventory,net.minecraft.entity.player.PlayerEntity)">createMenu</a></span>&#8203;(int&nbsp;syncId,
+<a href="../../entity/player/PlayerInventory.html" title="class in net.minecraft.entity.player">PlayerInventory</a>&nbsp;inv,
+<a href="../../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;player)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i5">
@@ -229,7 +229,7 @@ extends <a href="LockableContainerBlockEntity.html" title="class in net.minecraf
 </tr>
 <tr class="rowColor" id="i7">
 <td class="colFirst"><code><a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getStack(int)">getStack</a></span>&#8203;(int&nbsp;int2)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getStack(int)">getStack</a></span>&#8203;(int&nbsp;slot)</code></th>
 <td class="colLast">
 <div class="block">Fetches the stack currently stored at the given slot.</div>
 </td>
@@ -241,15 +241,15 @@ extends <a href="LockableContainerBlockEntity.html" title="class in net.minecraf
 </tr>
 <tr class="rowColor" id="i9">
 <td class="colFirst"><code><a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#removeStack(int)">removeStack</a></span>&#8203;(int&nbsp;int2)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#removeStack(int)">removeStack</a></span>&#8203;(int&nbsp;slot)</code></th>
 <td class="colLast">
 <div class="block">Removes the stack currently stored at the indicated slot.</div>
 </td>
 </tr>
 <tr class="altColor" id="i10">
 <td class="colFirst"><code><a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#removeStack(int,int)">removeStack</a></span>&#8203;(int&nbsp;int2,
-int&nbsp;int3)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#removeStack(int,int)">removeStack</a></span>&#8203;(int&nbsp;slot,
+int&nbsp;amount)</code></th>
 <td class="colLast">
 <div class="block">Removes a specific number of items from the given slot.</div>
 </td>
@@ -280,8 +280,8 @@ long&nbsp;seed)</code></th>
 </tr>
 <tr class="rowColor" id="i15">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setStack(int,net.minecraft.item.ItemStack)">setStack</a></span>&#8203;(int&nbsp;int2,
-<a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;itemStack)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setStack(int,net.minecraft.item.ItemStack)">setStack</a></span>&#8203;(int&nbsp;slot,
+<a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;stack)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -351,7 +351,7 @@ long&nbsp;seed)</code></th>
 <li class="blockList">
 <section class="detail">
 <h3><a id="&lt;init&gt;(net.minecraft.block.entity.BlockEntityType)">LootableContainerBlockEntity</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="memberName">LootableContainerBlockEntity</span>&#8203;(<span class="arguments"><a href="BlockEntityType.html" title="class in net.minecraft.block.entity">BlockEntityType</a>&lt;?&gt;&nbsp;blockEntityType)</span></div>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="memberName">LootableContainerBlockEntity</span>&#8203;(<span class="arguments"><a href="BlockEntityType.html" title="class in net.minecraft.block.entity">BlockEntityType</a>&lt;?&gt;&nbsp;type)</span></div>
 </section>
 </li>
 </ul>
@@ -407,8 +407,7 @@ long&nbsp;seed)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getStack(int)">getStack</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a></span>&nbsp;<span class="memberName">getStack</span>&#8203;(<span class="arguments">int&nbsp;int2)</span></div>
-<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../inventory/Inventory.html#getStack(int)">Inventory</a></code></span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a></span>&nbsp;<span class="memberName">getStack</span>&#8203;(<span class="arguments">int&nbsp;slot)</span></div>
 <div class="block">Fetches the stack currently stored at the given slot. If the slot is empty,
  or is outside the bounds of this inventory, returns see <code>ItemStack.EMPTY</code>.</div>
 </section>
@@ -416,9 +415,8 @@ long&nbsp;seed)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="removeStack(int,int)">removeStack</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a></span>&nbsp;<span class="memberName">removeStack</span>&#8203;(<span class="arguments">int&nbsp;int2,
-int&nbsp;int3)</span></div>
-<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../inventory/Inventory.html#removeStack(int,int)">Inventory</a></code></span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a></span>&nbsp;<span class="memberName">removeStack</span>&#8203;(<span class="arguments">int&nbsp;slot,
+int&nbsp;amount)</span></div>
 <div class="block">Removes a specific number of items from the given slot.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -429,8 +427,7 @@ int&nbsp;int3)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="removeStack(int)">removeStack</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a></span>&nbsp;<span class="memberName">removeStack</span>&#8203;(<span class="arguments">int&nbsp;int2)</span></div>
-<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../inventory/Inventory.html#removeStack(int)">Inventory</a></code></span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a></span>&nbsp;<span class="memberName">removeStack</span>&#8203;(<span class="arguments">int&nbsp;slot)</span></div>
 <div class="block">Removes the stack currently stored at the indicated slot.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -441,14 +438,14 @@ int&nbsp;int3)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="setStack(int,net.minecraft.item.ItemStack)">setStack</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setStack</span>&#8203;(<span class="arguments">int&nbsp;int2,
-<a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;itemStack)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setStack</span>&#8203;(<span class="arguments">int&nbsp;slot,
+<a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;stack)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="canPlayerUse(net.minecraft.entity.player.PlayerEntity)">canPlayerUse</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">canPlayerUse</span>&#8203;(<span class="arguments"><a href="../../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;playerEntity)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">canPlayerUse</span>&#8203;(<span class="arguments"><a href="../../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;player)</span></div>
 </section>
 </li>
 <li class="blockList">
@@ -472,7 +469,7 @@ int&nbsp;int3)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="checkUnlocked(net.minecraft.entity.player.PlayerEntity)">checkUnlocked</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">checkUnlocked</span>&#8203;(<span class="arguments"><a href="../../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;playerEntity)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">checkUnlocked</span>&#8203;(<span class="arguments"><a href="../../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;player)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="LockableContainerBlockEntity.html#checkUnlocked(net.minecraft.entity.player.PlayerEntity)">checkUnlocked</a></code>&nbsp;in class&nbsp;<code><a href="LockableContainerBlockEntity.html" title="class in net.minecraft.block.entity">LockableContainerBlockEntity</a></code></dd>
@@ -482,9 +479,9 @@ int&nbsp;int3)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="createMenu(int,net.minecraft.entity.player.PlayerInventory,net.minecraft.entity.player.PlayerEntity)">createMenu</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../screen/ScreenHandler.html" title="class in net.minecraft.screen">ScreenHandler</a></span>&nbsp;<span class="memberName">createMenu</span>&#8203;(<span class="arguments">int&nbsp;int2,
-<a href="../../entity/player/PlayerInventory.html" title="class in net.minecraft.entity.player">PlayerInventory</a>&nbsp;playerInventory,
-<a href="../../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;playerEntity)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../screen/ScreenHandler.html" title="class in net.minecraft.screen">ScreenHandler</a></span>&nbsp;<span class="memberName">createMenu</span>&#8203;(<span class="arguments">int&nbsp;syncId,
+<a href="../../entity/player/PlayerInventory.html" title="class in net.minecraft.entity.player">PlayerInventory</a>&nbsp;inv,
+<a href="../../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;player)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../screen/ScreenHandlerFactory.html#createMenu(int,net.minecraft.entity.player.PlayerInventory,net.minecraft.entity.player.PlayerEntity)">createMenu</a></code>&nbsp;in interface&nbsp;<code><a href="../../screen/ScreenHandlerFactory.html" title="interface in net.minecraft.screen">ScreenHandlerFactory</a></code></dd>

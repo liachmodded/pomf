@@ -171,10 +171,10 @@ extends <a href="RecipeBookWidget.html" title="class in net.minecraft.client.gui
 <tbody>
 <tr class="altColor" id="i0">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#drawGhostSlots(int,int,boolean,float)">drawGhostSlots</a></span>&#8203;(int&nbsp;int2,
-int&nbsp;int3,
-boolean&nbsp;bool,
-float&nbsp;float2)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#drawGhostSlots(int,int,boolean,float)">drawGhostSlots</a></span>&#8203;(int&nbsp;left,
+int&nbsp;top,
+boolean&nbsp;isBig,
+float&nbsp;lastFrameDuration)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
@@ -224,13 +224,13 @@ float&nbsp;float2)</code></th>
 </tr>
 <tr class="altColor" id="i10">
 <td class="colFirst"><code>protected void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setOpen(boolean)">setOpen</a></span>&#8203;(boolean&nbsp;bool)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setOpen(boolean)">setOpen</a></span>&#8203;(boolean&nbsp;opened)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i11">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#showGhostRecipe(net.minecraft.recipe.Recipe,java.util.List)">showGhostRecipe</a></span>&#8203;(<a href="../../../../recipe/Recipe.html" title="interface in net.minecraft.recipe">Recipe</a>&lt;?&gt;&nbsp;recipe,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../../../../screen/slot/Slot.html" title="class in net.minecraft.screen.slot">Slot</a>&gt;&nbsp;list)</code></th>
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../../../../screen/slot/Slot.html" title="class in net.minecraft.screen.slot">Slot</a>&gt;&nbsp;slots)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i12">
@@ -342,7 +342,7 @@ float&nbsp;float2)</code></th>
 <li class="blockList">
 <section class="detail">
 <h3><a id="setOpen(boolean)">setOpen</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setOpen</span>&#8203;(<span class="arguments">boolean&nbsp;bool)</span></div>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setOpen</span>&#8203;(<span class="arguments">boolean&nbsp;opened)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="RecipeBookWidget.html#setOpen(boolean)">setOpen</a></code>&nbsp;in class&nbsp;<code><a href="RecipeBookWidget.html" title="class in net.minecraft.client.gui.screen.recipebook">RecipeBookWidget</a></code></dd>
@@ -395,7 +395,7 @@ float&nbsp;float2)</code></th>
 <section class="detail">
 <h3><a id="showGhostRecipe(net.minecraft.recipe.Recipe,java.util.List)">showGhostRecipe</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">showGhostRecipe</span>&#8203;(<span class="arguments"><a href="../../../../recipe/Recipe.html" title="interface in net.minecraft.recipe">Recipe</a>&lt;?&gt;&nbsp;recipe,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../../../../screen/slot/Slot.html" title="class in net.minecraft.screen.slot">Slot</a>&gt;&nbsp;list)</span></div>
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../../../../screen/slot/Slot.html" title="class in net.minecraft.screen.slot">Slot</a>&gt;&nbsp;slots)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="RecipeBookWidget.html#showGhostRecipe(net.minecraft.recipe.Recipe,java.util.List)">showGhostRecipe</a></code>&nbsp;in class&nbsp;<code><a href="RecipeBookWidget.html" title="class in net.minecraft.client.gui.screen.recipebook">RecipeBookWidget</a></code></dd>
@@ -411,10 +411,10 @@ float&nbsp;float2)</code></th>
 <li class="blockList">
 <section class="detail">
 <h3><a id="drawGhostSlots(int,int,boolean,float)">drawGhostSlots</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">drawGhostSlots</span>&#8203;(<span class="arguments">int&nbsp;int2,
-int&nbsp;int3,
-boolean&nbsp;bool,
-float&nbsp;float2)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">drawGhostSlots</span>&#8203;(<span class="arguments">int&nbsp;left,
+int&nbsp;top,
+boolean&nbsp;isBig,
+float&nbsp;lastFrameDuration)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="RecipeBookWidget.html#drawGhostSlots(int,int,boolean,float)">drawGhostSlots</a></code>&nbsp;in class&nbsp;<code><a href="RecipeBookWidget.html" title="class in net.minecraft.client.gui.screen.recipebook">RecipeBookWidget</a></code></dd>

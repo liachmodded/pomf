@@ -164,7 +164,7 @@ implements <a href="Inventory.html" title="interface in net.minecraft.inventory"
 </tr>
 <tr class="altColor" id="i2">
 <td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#canPlayerUse(net.minecraft.entity.player.PlayerEntity)">canPlayerUse</a></span>&#8203;(<a href="../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;playerEntity)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#canPlayerUse(net.minecraft.entity.player.PlayerEntity)">canPlayerUse</a></span>&#8203;(<a href="../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;player)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i3">
@@ -181,7 +181,7 @@ implements <a href="Inventory.html" title="interface in net.minecraft.inventory"
 </tr>
 <tr class="rowColor" id="i5">
 <td class="colFirst"><code><a href="../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getStack(int)">getStack</a></span>&#8203;(int&nbsp;int2)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getStack(int)">getStack</a></span>&#8203;(int&nbsp;slot)</code></th>
 <td class="colLast">
 <div class="block">Fetches the stack currently stored at the given slot.</div>
 </td>
@@ -203,7 +203,7 @@ implements <a href="Inventory.html" title="interface in net.minecraft.inventory"
 </tr>
 <tr class="rowColor" id="i9">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#provideRecipeInputs(net.minecraft.recipe.RecipeFinder)">provideRecipeInputs</a></span>&#8203;(<a href="../recipe/RecipeFinder.html" title="class in net.minecraft.recipe">RecipeFinder</a>&nbsp;recipeFinder)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#provideRecipeInputs(net.minecraft.recipe.RecipeFinder)">provideRecipeInputs</a></span>&#8203;(<a href="../recipe/RecipeFinder.html" title="class in net.minecraft.recipe">RecipeFinder</a>&nbsp;finder)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i10">
@@ -226,23 +226,23 @@ int&nbsp;count)</code></th>
 </tr>
 <tr class="rowColor" id="i13">
 <td class="colFirst"><code><a href="../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#removeStack(int)">removeStack</a></span>&#8203;(int&nbsp;int2)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#removeStack(int)">removeStack</a></span>&#8203;(int&nbsp;slot)</code></th>
 <td class="colLast">
 <div class="block">Removes the stack currently stored at the indicated slot.</div>
 </td>
 </tr>
 <tr class="altColor" id="i14">
 <td class="colFirst"><code><a href="../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#removeStack(int,int)">removeStack</a></span>&#8203;(int&nbsp;int2,
-int&nbsp;int3)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#removeStack(int,int)">removeStack</a></span>&#8203;(int&nbsp;slot,
+int&nbsp;amount)</code></th>
 <td class="colLast">
 <div class="block">Removes a specific number of items from the given slot.</div>
 </td>
 </tr>
 <tr class="rowColor" id="i15">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setStack(int,net.minecraft.item.ItemStack)">setStack</a></span>&#8203;(int&nbsp;int2,
-<a href="../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;itemStack)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setStack(int,net.minecraft.item.ItemStack)">setStack</a></span>&#8203;(int&nbsp;slot,
+<a href="../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;stack)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i16">
@@ -319,8 +319,7 @@ int&nbsp;int3)</code></th>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getStack(int)">getStack</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a></span>&nbsp;<span class="memberName">getStack</span>&#8203;(<span class="arguments">int&nbsp;int2)</span></div>
-<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="Inventory.html#getStack(int)">Inventory</a></code></span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a></span>&nbsp;<span class="memberName">getStack</span>&#8203;(<span class="arguments">int&nbsp;slot)</span></div>
 <div class="block">Fetches the stack currently stored at the given slot. If the slot is empty,
  or is outside the bounds of this inventory, returns see <code>ItemStack.EMPTY</code>.</div>
 <dl>
@@ -339,9 +338,8 @@ int&nbsp;int3)</code></th>
 <li class="blockList">
 <section class="detail">
 <h3><a id="removeStack(int,int)">removeStack</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a></span>&nbsp;<span class="memberName">removeStack</span>&#8203;(<span class="arguments">int&nbsp;int2,
-int&nbsp;int3)</span></div>
-<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="Inventory.html#removeStack(int,int)">Inventory</a></code></span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a></span>&nbsp;<span class="memberName">removeStack</span>&#8203;(<span class="arguments">int&nbsp;slot,
+int&nbsp;amount)</span></div>
 <div class="block">Removes a specific number of items from the given slot.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
@@ -372,8 +370,7 @@ int&nbsp;count)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="removeStack(int)">removeStack</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a></span>&nbsp;<span class="memberName">removeStack</span>&#8203;(<span class="arguments">int&nbsp;int2)</span></div>
-<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="Inventory.html#removeStack(int)">Inventory</a></code></span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a></span>&nbsp;<span class="memberName">removeStack</span>&#8203;(<span class="arguments">int&nbsp;slot)</span></div>
 <div class="block">Removes the stack currently stored at the indicated slot.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
@@ -386,8 +383,8 @@ int&nbsp;count)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="setStack(int,net.minecraft.item.ItemStack)">setStack</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setStack</span>&#8203;(<span class="arguments">int&nbsp;int2,
-<a href="../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;itemStack)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setStack</span>&#8203;(<span class="arguments">int&nbsp;slot,
+<a href="../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;stack)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="Inventory.html#setStack(int,net.minecraft.item.ItemStack)">setStack</a></code>&nbsp;in interface&nbsp;<code><a href="Inventory.html" title="interface in net.minecraft.inventory">Inventory</a></code></dd>
@@ -427,7 +424,7 @@ int&nbsp;count)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="canPlayerUse(net.minecraft.entity.player.PlayerEntity)">canPlayerUse</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">canPlayerUse</span>&#8203;(<span class="arguments"><a href="../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;playerEntity)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">canPlayerUse</span>&#8203;(<span class="arguments"><a href="../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;player)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="Inventory.html#canPlayerUse(net.minecraft.entity.player.PlayerEntity)">canPlayerUse</a></code>&nbsp;in interface&nbsp;<code><a href="Inventory.html" title="interface in net.minecraft.inventory">Inventory</a></code></dd>
@@ -447,7 +444,7 @@ int&nbsp;count)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="provideRecipeInputs(net.minecraft.recipe.RecipeFinder)">provideRecipeInputs</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">provideRecipeInputs</span>&#8203;(<span class="arguments"><a href="../recipe/RecipeFinder.html" title="class in net.minecraft.recipe">RecipeFinder</a>&nbsp;recipeFinder)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">provideRecipeInputs</span>&#8203;(<span class="arguments"><a href="../recipe/RecipeFinder.html" title="class in net.minecraft.recipe">RecipeFinder</a>&nbsp;finder)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../recipe/RecipeInputProvider.html#provideRecipeInputs(net.minecraft.recipe.RecipeFinder)">provideRecipeInputs</a></code>&nbsp;in interface&nbsp;<code><a href="../recipe/RecipeInputProvider.html" title="interface in net.minecraft.recipe">RecipeInputProvider</a></code></dd>

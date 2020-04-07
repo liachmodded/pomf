@@ -151,20 +151,20 @@ implements <a href="NbtPathArgumentType.PathNode.html" title="interface in net.m
 <tbody>
 <tr class="altColor" id="i0">
 <td class="colFirst"><code>int</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#clear(net.minecraft.nbt.Tag)">clear</a></span>&#8203;(<a href="../../nbt/Tag.html" title="interface in net.minecraft.nbt">Tag</a>&nbsp;tag)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#clear(net.minecraft.nbt.Tag)">clear</a></span>&#8203;(<a href="../../nbt/Tag.html" title="interface in net.minecraft.nbt">Tag</a>&nbsp;current)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#get(net.minecraft.nbt.Tag,java.util.List)">get</a></span>&#8203;(<a href="../../nbt/Tag.html" title="interface in net.minecraft.nbt">Tag</a>&nbsp;tag,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../../nbt/Tag.html" title="interface in net.minecraft.nbt">Tag</a>&gt;&nbsp;list)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#get(net.minecraft.nbt.Tag,java.util.List)">get</a></span>&#8203;(<a href="../../nbt/Tag.html" title="interface in net.minecraft.nbt">Tag</a>&nbsp;current,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../../nbt/Tag.html" title="interface in net.minecraft.nbt">Tag</a>&gt;&nbsp;results)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i2">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getOrInit(net.minecraft.nbt.Tag,java.util.function.Supplier,java.util.List)">getOrInit</a></span>&#8203;(<a href="../../nbt/Tag.html" title="interface in net.minecraft.nbt">Tag</a>&nbsp;tag,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Supplier</a>&lt;<a href="../../nbt/Tag.html" title="interface in net.minecraft.nbt">Tag</a>&gt;&nbsp;supplier,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../../nbt/Tag.html" title="interface in net.minecraft.nbt">Tag</a>&gt;&nbsp;list)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getOrInit(net.minecraft.nbt.Tag,java.util.function.Supplier,java.util.List)">getOrInit</a></span>&#8203;(<a href="../../nbt/Tag.html" title="interface in net.minecraft.nbt">Tag</a>&nbsp;current,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Supplier</a>&lt;<a href="../../nbt/Tag.html" title="interface in net.minecraft.nbt">Tag</a>&gt;&nbsp;source,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../../nbt/Tag.html" title="interface in net.minecraft.nbt">Tag</a>&gt;&nbsp;results)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i3">
@@ -174,8 +174,8 @@ implements <a href="NbtPathArgumentType.PathNode.html" title="interface in net.m
 </tr>
 <tr class="altColor" id="i4">
 <td class="colFirst"><code>int</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#set(net.minecraft.nbt.Tag,java.util.function.Supplier)">set</a></span>&#8203;(<a href="../../nbt/Tag.html" title="interface in net.minecraft.nbt">Tag</a>&nbsp;tag,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Supplier</a>&lt;<a href="../../nbt/Tag.html" title="interface in net.minecraft.nbt">Tag</a>&gt;&nbsp;supplier)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#set(net.minecraft.nbt.Tag,java.util.function.Supplier)">set</a></span>&#8203;(<a href="../../nbt/Tag.html" title="interface in net.minecraft.nbt">Tag</a>&nbsp;current,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Supplier</a>&lt;<a href="../../nbt/Tag.html" title="interface in net.minecraft.nbt">Tag</a>&gt;&nbsp;source)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -225,8 +225,8 @@ implements <a href="NbtPathArgumentType.PathNode.html" title="interface in net.m
 <li class="blockList">
 <section class="detail">
 <h3><a id="get(net.minecraft.nbt.Tag,java.util.List)">get</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">get</span>&#8203;(<span class="arguments"><a href="../../nbt/Tag.html" title="interface in net.minecraft.nbt">Tag</a>&nbsp;tag,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../../nbt/Tag.html" title="interface in net.minecraft.nbt">Tag</a>&gt;&nbsp;list)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">get</span>&#8203;(<span class="arguments"><a href="../../nbt/Tag.html" title="interface in net.minecraft.nbt">Tag</a>&nbsp;current,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../../nbt/Tag.html" title="interface in net.minecraft.nbt">Tag</a>&gt;&nbsp;results)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="NbtPathArgumentType.PathNode.html#get(net.minecraft.nbt.Tag,java.util.List)">get</a></code>&nbsp;in interface&nbsp;<code><a href="NbtPathArgumentType.PathNode.html" title="interface in net.minecraft.command.arguments">NbtPathArgumentType.PathNode</a></code></dd>
@@ -236,9 +236,9 @@ implements <a href="NbtPathArgumentType.PathNode.html" title="interface in net.m
 <li class="blockList">
 <section class="detail">
 <h3><a id="getOrInit(net.minecraft.nbt.Tag,java.util.function.Supplier,java.util.List)">getOrInit</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">getOrInit</span>&#8203;(<span class="arguments"><a href="../../nbt/Tag.html" title="interface in net.minecraft.nbt">Tag</a>&nbsp;tag,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Supplier</a>&lt;<a href="../../nbt/Tag.html" title="interface in net.minecraft.nbt">Tag</a>&gt;&nbsp;supplier,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../../nbt/Tag.html" title="interface in net.minecraft.nbt">Tag</a>&gt;&nbsp;list)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">getOrInit</span>&#8203;(<span class="arguments"><a href="../../nbt/Tag.html" title="interface in net.minecraft.nbt">Tag</a>&nbsp;current,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Supplier</a>&lt;<a href="../../nbt/Tag.html" title="interface in net.minecraft.nbt">Tag</a>&gt;&nbsp;source,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../../nbt/Tag.html" title="interface in net.minecraft.nbt">Tag</a>&gt;&nbsp;results)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="NbtPathArgumentType.PathNode.html#getOrInit(net.minecraft.nbt.Tag,java.util.function.Supplier,java.util.List)">getOrInit</a></code>&nbsp;in interface&nbsp;<code><a href="NbtPathArgumentType.PathNode.html" title="interface in net.minecraft.command.arguments">NbtPathArgumentType.PathNode</a></code></dd>
@@ -258,8 +258,8 @@ implements <a href="NbtPathArgumentType.PathNode.html" title="interface in net.m
 <li class="blockList">
 <section class="detail">
 <h3><a id="set(net.minecraft.nbt.Tag,java.util.function.Supplier)">set</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">set</span>&#8203;(<span class="arguments"><a href="../../nbt/Tag.html" title="interface in net.minecraft.nbt">Tag</a>&nbsp;tag,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Supplier</a>&lt;<a href="../../nbt/Tag.html" title="interface in net.minecraft.nbt">Tag</a>&gt;&nbsp;supplier)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">set</span>&#8203;(<span class="arguments"><a href="../../nbt/Tag.html" title="interface in net.minecraft.nbt">Tag</a>&nbsp;current,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Supplier</a>&lt;<a href="../../nbt/Tag.html" title="interface in net.minecraft.nbt">Tag</a>&gt;&nbsp;source)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="NbtPathArgumentType.PathNode.html#set(net.minecraft.nbt.Tag,java.util.function.Supplier)">set</a></code>&nbsp;in interface&nbsp;<code><a href="NbtPathArgumentType.PathNode.html" title="interface in net.minecraft.command.arguments">NbtPathArgumentType.PathNode</a></code></dd>
@@ -269,7 +269,7 @@ implements <a href="NbtPathArgumentType.PathNode.html" title="interface in net.m
 <li class="blockList">
 <section class="detail">
 <h3><a id="clear(net.minecraft.nbt.Tag)">clear</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">clear</span>&#8203;(<span class="arguments"><a href="../../nbt/Tag.html" title="interface in net.minecraft.nbt">Tag</a>&nbsp;tag)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">clear</span>&#8203;(<span class="arguments"><a href="../../nbt/Tag.html" title="interface in net.minecraft.nbt">Tag</a>&nbsp;current)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="NbtPathArgumentType.PathNode.html#clear(net.minecraft.nbt.Tag)">clear</a></code>&nbsp;in interface&nbsp;<code><a href="NbtPathArgumentType.PathNode.html" title="interface in net.minecraft.command.arguments">NbtPathArgumentType.PathNode</a></code></dd>

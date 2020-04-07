@@ -159,21 +159,21 @@ implements <a href="../../FlyingItemEntity.html" title="interface in net.minecra
 </thead>
 <tbody>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.entity.EntityType,double,double,double,net.minecraft.world.World)">ThrownItemEntity</a></span>&#8203;(<a href="../../EntityType.html" title="class in net.minecraft.entity">EntityType</a>&lt;? extends <a href="ThrownItemEntity.html" title="class in net.minecraft.entity.projectile.thrown">ThrownItemEntity</a>&gt;&nbsp;entityType,
-double&nbsp;double2,
-double&nbsp;double3,
-double&nbsp;double4,
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.entity.EntityType,double,double,double,net.minecraft.world.World)">ThrownItemEntity</a></span>&#8203;(<a href="../../EntityType.html" title="class in net.minecraft.entity">EntityType</a>&lt;? extends <a href="ThrownItemEntity.html" title="class in net.minecraft.entity.projectile.thrown">ThrownItemEntity</a>&gt;&nbsp;type,
+double&nbsp;x,
+double&nbsp;y,
+double&nbsp;z,
 <a href="../../../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.entity.EntityType,net.minecraft.entity.LivingEntity,net.minecraft.world.World)">ThrownItemEntity</a></span>&#8203;(<a href="../../EntityType.html" title="class in net.minecraft.entity">EntityType</a>&lt;? extends <a href="ThrownItemEntity.html" title="class in net.minecraft.entity.projectile.thrown">ThrownItemEntity</a>&gt;&nbsp;entityType,
-<a href="../../LivingEntity.html" title="class in net.minecraft.entity">LivingEntity</a>&nbsp;livingEntity,
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.entity.EntityType,net.minecraft.entity.LivingEntity,net.minecraft.world.World)">ThrownItemEntity</a></span>&#8203;(<a href="../../EntityType.html" title="class in net.minecraft.entity">EntityType</a>&lt;? extends <a href="ThrownItemEntity.html" title="class in net.minecraft.entity.projectile.thrown">ThrownItemEntity</a>&gt;&nbsp;type,
+<a href="../../LivingEntity.html" title="class in net.minecraft.entity">LivingEntity</a>&nbsp;owner,
 <a href="../../../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.entity.EntityType,net.minecraft.world.World)">ThrownItemEntity</a></span>&#8203;(<a href="../../EntityType.html" title="class in net.minecraft.entity">EntityType</a>&lt;? extends <a href="ThrownItemEntity.html" title="class in net.minecraft.entity.projectile.thrown">ThrownItemEntity</a>&gt;&nbsp;entityType,
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.entity.EntityType,net.minecraft.world.World)">ThrownItemEntity</a></span>&#8203;(<a href="../../EntityType.html" title="class in net.minecraft.entity">EntityType</a>&lt;? extends <a href="ThrownItemEntity.html" title="class in net.minecraft.entity.projectile.thrown">ThrownItemEntity</a>&gt;&nbsp;type,
 <a href="../../../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -222,7 +222,7 @@ double&nbsp;double4,
 </tr>
 <tr class="altColor" id="i4">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#readCustomDataFromTag(net.minecraft.nbt.CompoundTag)">readCustomDataFromTag</a></span>&#8203;(<a href="../../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;compoundTag)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#readCustomDataFromTag(net.minecraft.nbt.CompoundTag)">readCustomDataFromTag</a></span>&#8203;(<a href="../../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;tag)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i5">
@@ -232,7 +232,7 @@ double&nbsp;double4,
 </tr>
 <tr class="altColor" id="i6">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#writeCustomDataToTag(net.minecraft.nbt.CompoundTag)">writeCustomDataToTag</a></span>&#8203;(<a href="../../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;compoundTag)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#writeCustomDataToTag(net.minecraft.nbt.CompoundTag)">writeCustomDataToTag</a></span>&#8203;(<a href="../../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;tag)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -275,25 +275,25 @@ double&nbsp;double4,
 <li class="blockList">
 <section class="detail">
 <h3><a id="&lt;init&gt;(net.minecraft.entity.EntityType,net.minecraft.world.World)">ThrownItemEntity</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">ThrownItemEntity</span>&#8203;(<span class="arguments"><a href="../../EntityType.html" title="class in net.minecraft.entity">EntityType</a>&lt;? extends <a href="ThrownItemEntity.html" title="class in net.minecraft.entity.projectile.thrown">ThrownItemEntity</a>&gt;&nbsp;entityType,
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">ThrownItemEntity</span>&#8203;(<span class="arguments"><a href="../../EntityType.html" title="class in net.minecraft.entity">EntityType</a>&lt;? extends <a href="ThrownItemEntity.html" title="class in net.minecraft.entity.projectile.thrown">ThrownItemEntity</a>&gt;&nbsp;type,
 <a href="../../../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="&lt;init&gt;(net.minecraft.entity.EntityType,double,double,double,net.minecraft.world.World)">ThrownItemEntity</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">ThrownItemEntity</span>&#8203;(<span class="arguments"><a href="../../EntityType.html" title="class in net.minecraft.entity">EntityType</a>&lt;? extends <a href="ThrownItemEntity.html" title="class in net.minecraft.entity.projectile.thrown">ThrownItemEntity</a>&gt;&nbsp;entityType,
-double&nbsp;double2,
-double&nbsp;double3,
-double&nbsp;double4,
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">ThrownItemEntity</span>&#8203;(<span class="arguments"><a href="../../EntityType.html" title="class in net.minecraft.entity">EntityType</a>&lt;? extends <a href="ThrownItemEntity.html" title="class in net.minecraft.entity.projectile.thrown">ThrownItemEntity</a>&gt;&nbsp;type,
+double&nbsp;x,
+double&nbsp;y,
+double&nbsp;z,
 <a href="../../../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="&lt;init&gt;(net.minecraft.entity.EntityType,net.minecraft.entity.LivingEntity,net.minecraft.world.World)">ThrownItemEntity</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">ThrownItemEntity</span>&#8203;(<span class="arguments"><a href="../../EntityType.html" title="class in net.minecraft.entity">EntityType</a>&lt;? extends <a href="ThrownItemEntity.html" title="class in net.minecraft.entity.projectile.thrown">ThrownItemEntity</a>&gt;&nbsp;entityType,
-<a href="../../LivingEntity.html" title="class in net.minecraft.entity">LivingEntity</a>&nbsp;livingEntity,
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">ThrownItemEntity</span>&#8203;(<span class="arguments"><a href="../../EntityType.html" title="class in net.minecraft.entity">EntityType</a>&lt;? extends <a href="ThrownItemEntity.html" title="class in net.minecraft.entity.projectile.thrown">ThrownItemEntity</a>&gt;&nbsp;type,
+<a href="../../LivingEntity.html" title="class in net.minecraft.entity">LivingEntity</a>&nbsp;owner,
 <a href="../../../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world)</span></div>
 </section>
 </li>
@@ -348,7 +348,7 @@ double&nbsp;double4,
 <li class="blockList">
 <section class="detail">
 <h3><a id="writeCustomDataToTag(net.minecraft.nbt.CompoundTag)">writeCustomDataToTag</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">writeCustomDataToTag</span>&#8203;(<span class="arguments"><a href="../../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;compoundTag)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">writeCustomDataToTag</span>&#8203;(<span class="arguments"><a href="../../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;tag)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../ProjectileEntity.html#writeCustomDataToTag(net.minecraft.nbt.CompoundTag)">writeCustomDataToTag</a></code>&nbsp;in class&nbsp;<code><a href="../ProjectileEntity.html" title="class in net.minecraft.entity.projectile">ProjectileEntity</a></code></dd>
@@ -358,7 +358,7 @@ double&nbsp;double4,
 <li class="blockList">
 <section class="detail">
 <h3><a id="readCustomDataFromTag(net.minecraft.nbt.CompoundTag)">readCustomDataFromTag</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">readCustomDataFromTag</span>&#8203;(<span class="arguments"><a href="../../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;compoundTag)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">readCustomDataFromTag</span>&#8203;(<span class="arguments"><a href="../../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;tag)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../ProjectileEntity.html#readCustomDataFromTag(net.minecraft.nbt.CompoundTag)">readCustomDataFromTag</a></code>&nbsp;in class&nbsp;<code><a href="../ProjectileEntity.html" title="class in net.minecraft.entity.projectile">ProjectileEntity</a></code></dd>

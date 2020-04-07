@@ -160,28 +160,28 @@ extends <a href="../../resource/DefaultResourcePack.html" title="class in net.mi
 <tbody>
 <tr class="altColor" id="i0">
 <td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#contains(net.minecraft.resource.ResourceType,net.minecraft.util.Identifier)">contains</a></span>&#8203;(<a href="../../resource/ResourceType.html" title="enum in net.minecraft.resource">ResourceType</a>&nbsp;resourceType,
-<a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;identifier)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#contains(net.minecraft.resource.ResourceType,net.minecraft.util.Identifier)">contains</a></span>&#8203;(<a href="../../resource/ResourceType.html" title="enum in net.minecraft.resource">ResourceType</a>&nbsp;type,
+<a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;id)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
 <td class="colFirst"><code>protected <a href="https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io" class="externalLink">InputStream</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#findInputStream(net.minecraft.resource.ResourceType,net.minecraft.util.Identifier)">findInputStream</a></span>&#8203;(<a href="../../resource/ResourceType.html" title="enum in net.minecraft.resource">ResourceType</a>&nbsp;resourceType,
-<a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;identifier)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#findInputStream(net.minecraft.resource.ResourceType,net.minecraft.util.Identifier)">findInputStream</a></span>&#8203;(<a href="../../resource/ResourceType.html" title="enum in net.minecraft.resource">ResourceType</a>&nbsp;type,
+<a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;id)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i2">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util" class="externalLink">Collection</a>&lt;<a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#findResources(net.minecraft.resource.ResourceType,java.lang.String,java.lang.String,int,java.util.function.Predicate)">findResources</a></span>&#8203;(<a href="../../resource/ResourceType.html" title="enum in net.minecraft.resource">ResourceType</a>&nbsp;resourceType,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;string,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;string2,
-int&nbsp;int2,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Predicate</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&gt;&nbsp;predicate)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#findResources(net.minecraft.resource.ResourceType,java.lang.String,java.lang.String,int,java.util.function.Predicate)">findResources</a></span>&#8203;(<a href="../../resource/ResourceType.html" title="enum in net.minecraft.resource">ResourceType</a>&nbsp;type,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;namespace,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;prefix,
+int&nbsp;maxDepth,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Predicate</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&gt;&nbsp;pathFilter)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i3">
 <td class="colFirst"><code>protected <a href="https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io" class="externalLink">InputStream</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getInputStream(java.lang.String)">getInputStream</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;string)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getInputStream(java.lang.String)">getInputStream</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;path)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -230,8 +230,8 @@ int&nbsp;int2,
 <li class="blockList">
 <section class="detail">
 <h3><a id="findInputStream(net.minecraft.resource.ResourceType,net.minecraft.util.Identifier)">findInputStream</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io" class="externalLink">InputStream</a></span>&nbsp;<span class="memberName">findInputStream</span>&#8203;(<span class="arguments"><a href="../../resource/ResourceType.html" title="enum in net.minecraft.resource">ResourceType</a>&nbsp;resourceType,
-<a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;identifier)</span></div>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io" class="externalLink">InputStream</a></span>&nbsp;<span class="memberName">findInputStream</span>&#8203;(<span class="arguments"><a href="../../resource/ResourceType.html" title="enum in net.minecraft.resource">ResourceType</a>&nbsp;type,
+<a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;id)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../resource/DefaultResourcePack.html#findInputStream(net.minecraft.resource.ResourceType,net.minecraft.util.Identifier)">findInputStream</a></code>&nbsp;in class&nbsp;<code><a href="../../resource/DefaultResourcePack.html" title="class in net.minecraft.resource">DefaultResourcePack</a></code></dd>
@@ -241,8 +241,8 @@ int&nbsp;int2,
 <li class="blockList">
 <section class="detail">
 <h3><a id="contains(net.minecraft.resource.ResourceType,net.minecraft.util.Identifier)">contains</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">contains</span>&#8203;(<span class="arguments"><a href="../../resource/ResourceType.html" title="enum in net.minecraft.resource">ResourceType</a>&nbsp;resourceType,
-<a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;identifier)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">contains</span>&#8203;(<span class="arguments"><a href="../../resource/ResourceType.html" title="enum in net.minecraft.resource">ResourceType</a>&nbsp;type,
+<a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;id)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../resource/ResourcePack.html#contains(net.minecraft.resource.ResourceType,net.minecraft.util.Identifier)">contains</a></code>&nbsp;in interface&nbsp;<code><a href="../../resource/ResourcePack.html" title="interface in net.minecraft.resource">ResourcePack</a></code></dd>
@@ -254,7 +254,7 @@ int&nbsp;int2,
 <li class="blockList">
 <section class="detail">
 <h3><a id="getInputStream(java.lang.String)">getInputStream</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io" class="externalLink">InputStream</a></span>&nbsp;<span class="memberName">getInputStream</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;string)</span></div>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io" class="externalLink">InputStream</a></span>&nbsp;<span class="memberName">getInputStream</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;path)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../resource/DefaultResourcePack.html#getInputStream(java.lang.String)">getInputStream</a></code>&nbsp;in class&nbsp;<code><a href="../../resource/DefaultResourcePack.html" title="class in net.minecraft.resource">DefaultResourcePack</a></code></dd>
@@ -264,11 +264,11 @@ int&nbsp;int2,
 <li class="blockList">
 <section class="detail">
 <h3><a id="findResources(net.minecraft.resource.ResourceType,java.lang.String,java.lang.String,int,java.util.function.Predicate)">findResources</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util" class="externalLink">Collection</a>&lt;<a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&gt;</span>&nbsp;<span class="memberName">findResources</span>&#8203;(<span class="arguments"><a href="../../resource/ResourceType.html" title="enum in net.minecraft.resource">ResourceType</a>&nbsp;resourceType,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;string,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;string2,
-int&nbsp;int2,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Predicate</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&gt;&nbsp;predicate)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util" class="externalLink">Collection</a>&lt;<a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&gt;</span>&nbsp;<span class="memberName">findResources</span>&#8203;(<span class="arguments"><a href="../../resource/ResourceType.html" title="enum in net.minecraft.resource">ResourceType</a>&nbsp;type,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;namespace,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;prefix,
+int&nbsp;maxDepth,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Predicate</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&gt;&nbsp;pathFilter)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../resource/ResourcePack.html#findResources(net.minecraft.resource.ResourceType,java.lang.String,java.lang.String,int,java.util.function.Predicate)">findResources</a></code>&nbsp;in interface&nbsp;<code><a href="../../resource/ResourcePack.html" title="interface in net.minecraft.resource">ResourcePack</a></code></dd>

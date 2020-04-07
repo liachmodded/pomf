@@ -192,23 +192,23 @@ implements <a href="BlockEntityProvider.html" title="interface in net.minecraft.
 <tbody>
 <tr class="altColor" id="i0">
 <td class="colFirst"><code><a href="../screen/NamedScreenHandlerFactory.html" title="interface in net.minecraft.screen">NamedScreenHandlerFactory</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createScreenHandlerFactory(net.minecraft.block.BlockState,net.minecraft.world.World,net.minecraft.util.math.BlockPos)">createScreenHandlerFactory</a></span>&#8203;(<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createScreenHandlerFactory(net.minecraft.block.BlockState,net.minecraft.world.World,net.minecraft.util.math.BlockPos)">createScreenHandlerFactory</a></span>&#8203;(<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state,
 <a href="../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world,
-<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos)</code></th>
+<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
 <td class="colFirst"><code><a href="BlockRenderType.html" title="enum in net.minecraft.block">BlockRenderType</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getRenderType(net.minecraft.block.BlockState)">getRenderType</a></span>&#8203;(<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getRenderType(net.minecraft.block.BlockState)">getRenderType</a></span>&#8203;(<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i2">
 <td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#onBlockAction(net.minecraft.block.BlockState,net.minecraft.world.World,net.minecraft.util.math.BlockPos,int,int)">onBlockAction</a></span>&#8203;(<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#onBlockAction(net.minecraft.block.BlockState,net.minecraft.world.World,net.minecraft.util.math.BlockPos,int,int)">onBlockAction</a></span>&#8203;(<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state,
 <a href="../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world,
-<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
-int&nbsp;int2,
-int&nbsp;int3)</code></th>
+<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+int&nbsp;channel,
+int&nbsp;value)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -267,7 +267,7 @@ int&nbsp;int3)</code></th>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getRenderType(net.minecraft.block.BlockState)">getRenderType</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="BlockRenderType.html" title="enum in net.minecraft.block">BlockRenderType</a></span>&nbsp;<span class="memberName">getRenderType</span>&#8203;(<span class="arguments"><a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="BlockRenderType.html" title="enum in net.minecraft.block">BlockRenderType</a></span>&nbsp;<span class="memberName">getRenderType</span>&#8203;(<span class="arguments"><a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="AbstractBlock.html#getRenderType(net.minecraft.block.BlockState)">getRenderType</a></code>&nbsp;in class&nbsp;<code><a href="AbstractBlock.html" title="class in net.minecraft.block">AbstractBlock</a></code></dd>
@@ -277,11 +277,11 @@ int&nbsp;int3)</code></th>
 <li class="blockList">
 <section class="detail">
 <h3><a id="onBlockAction(net.minecraft.block.BlockState,net.minecraft.world.World,net.minecraft.util.math.BlockPos,int,int)">onBlockAction</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">onBlockAction</span>&#8203;(<span class="arguments"><a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState,
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">onBlockAction</span>&#8203;(<span class="arguments"><a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state,
 <a href="../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world,
-<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
-int&nbsp;int2,
-int&nbsp;int3)</span></div>
+<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+int&nbsp;channel,
+int&nbsp;value)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="AbstractBlock.html#onBlockAction(net.minecraft.block.BlockState,net.minecraft.world.World,net.minecraft.util.math.BlockPos,int,int)">onBlockAction</a></code>&nbsp;in class&nbsp;<code><a href="AbstractBlock.html" title="class in net.minecraft.block">AbstractBlock</a></code></dd>
@@ -291,9 +291,9 @@ int&nbsp;int3)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="createScreenHandlerFactory(net.minecraft.block.BlockState,net.minecraft.world.World,net.minecraft.util.math.BlockPos)">createScreenHandlerFactory</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../screen/NamedScreenHandlerFactory.html" title="interface in net.minecraft.screen">NamedScreenHandlerFactory</a></span>&nbsp;<span class="memberName">createScreenHandlerFactory</span>&#8203;(<span class="arguments"><a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState,
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../screen/NamedScreenHandlerFactory.html" title="interface in net.minecraft.screen">NamedScreenHandlerFactory</a></span>&nbsp;<span class="memberName">createScreenHandlerFactory</span>&#8203;(<span class="arguments"><a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state,
 <a href="../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world,
-<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos)</span></div>
+<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="AbstractBlock.html#createScreenHandlerFactory(net.minecraft.block.BlockState,net.minecraft.world.World,net.minecraft.util.math.BlockPos)">createScreenHandlerFactory</a></code>&nbsp;in class&nbsp;<code><a href="AbstractBlock.html" title="class in net.minecraft.block">AbstractBlock</a></code></dd>

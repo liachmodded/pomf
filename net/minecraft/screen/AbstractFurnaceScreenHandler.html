@@ -196,7 +196,7 @@ int&nbsp;syncId,
 <tbody>
 <tr class="altColor" id="i0">
 <td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#canUse(net.minecraft.entity.player.PlayerEntity)">canUse</a></span>&#8203;(<a href="../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;playerEntity)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#canUse(net.minecraft.entity.player.PlayerEntity)">canUse</a></span>&#8203;(<a href="../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;player)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
@@ -206,9 +206,9 @@ int&nbsp;syncId,
 </tr>
 <tr class="altColor" id="i2">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#fillInputSlots(boolean,net.minecraft.recipe.Recipe,net.minecraft.server.network.ServerPlayerEntity)">fillInputSlots</a></span>&#8203;(boolean&nbsp;bool,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#fillInputSlots(boolean,net.minecraft.recipe.Recipe,net.minecraft.server.network.ServerPlayerEntity)">fillInputSlots</a></span>&#8203;(boolean&nbsp;craftAll,
 <a href="../recipe/Recipe.html" title="interface in net.minecraft.recipe">Recipe</a>&lt;?&gt;&nbsp;recipe,
-<a href="../server/network/ServerPlayerEntity.html" title="class in net.minecraft.server.network">ServerPlayerEntity</a>&nbsp;serverPlayerEntity)</code></th>
+<a href="../server/network/ServerPlayerEntity.html" title="class in net.minecraft.server.network">ServerPlayerEntity</a>&nbsp;player)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i3">
@@ -263,13 +263,13 @@ int&nbsp;syncId,
 </tr>
 <tr class="rowColor" id="i13">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#populateRecipeFinder(net.minecraft.recipe.RecipeFinder)">populateRecipeFinder</a></span>&#8203;(<a href="../recipe/RecipeFinder.html" title="class in net.minecraft.recipe">RecipeFinder</a>&nbsp;recipeFinder)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#populateRecipeFinder(net.minecraft.recipe.RecipeFinder)">populateRecipeFinder</a></span>&#8203;(<a href="../recipe/RecipeFinder.html" title="class in net.minecraft.recipe">RecipeFinder</a>&nbsp;finder)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i14">
 <td class="colFirst"><code><a href="../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#transferSlot(net.minecraft.entity.player.PlayerEntity,int)">transferSlot</a></span>&#8203;(<a href="../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;playerEntity,
-int&nbsp;int2)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#transferSlot(net.minecraft.entity.player.PlayerEntity,int)">transferSlot</a></span>&#8203;(<a href="../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;player,
+int&nbsp;index)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -348,7 +348,7 @@ int&nbsp;syncId,
 <li class="blockList">
 <section class="detail">
 <h3><a id="populateRecipeFinder(net.minecraft.recipe.RecipeFinder)">populateRecipeFinder</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">populateRecipeFinder</span>&#8203;(<span class="arguments"><a href="../recipe/RecipeFinder.html" title="class in net.minecraft.recipe">RecipeFinder</a>&nbsp;recipeFinder)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">populateRecipeFinder</span>&#8203;(<span class="arguments"><a href="../recipe/RecipeFinder.html" title="class in net.minecraft.recipe">RecipeFinder</a>&nbsp;finder)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="AbstractRecipeScreenHandler.html#populateRecipeFinder(net.minecraft.recipe.RecipeFinder)">populateRecipeFinder</a></code>&nbsp;in class&nbsp;<code><a href="AbstractRecipeScreenHandler.html" title="class in net.minecraft.screen">AbstractRecipeScreenHandler</a>&lt;<a href="../inventory/Inventory.html" title="interface in net.minecraft.inventory">Inventory</a>&gt;</code></dd>
@@ -368,9 +368,9 @@ int&nbsp;syncId,
 <li class="blockList">
 <section class="detail">
 <h3><a id="fillInputSlots(boolean,net.minecraft.recipe.Recipe,net.minecraft.server.network.ServerPlayerEntity)">fillInputSlots</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">fillInputSlots</span>&#8203;(<span class="arguments">boolean&nbsp;bool,
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">fillInputSlots</span>&#8203;(<span class="arguments">boolean&nbsp;craftAll,
 <a href="../recipe/Recipe.html" title="interface in net.minecraft.recipe">Recipe</a>&lt;?&gt;&nbsp;recipe,
-<a href="../server/network/ServerPlayerEntity.html" title="class in net.minecraft.server.network">ServerPlayerEntity</a>&nbsp;serverPlayerEntity)</span></div>
+<a href="../server/network/ServerPlayerEntity.html" title="class in net.minecraft.server.network">ServerPlayerEntity</a>&nbsp;player)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="AbstractRecipeScreenHandler.html#fillInputSlots(boolean,net.minecraft.recipe.Recipe,net.minecraft.server.network.ServerPlayerEntity)">fillInputSlots</a></code>&nbsp;in class&nbsp;<code><a href="AbstractRecipeScreenHandler.html" title="class in net.minecraft.screen">AbstractRecipeScreenHandler</a>&lt;<a href="../inventory/Inventory.html" title="interface in net.minecraft.inventory">Inventory</a>&gt;</code></dd>
@@ -430,7 +430,7 @@ int&nbsp;syncId,
 <li class="blockList">
 <section class="detail">
 <h3><a id="canUse(net.minecraft.entity.player.PlayerEntity)">canUse</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">canUse</span>&#8203;(<span class="arguments"><a href="../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;playerEntity)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">canUse</span>&#8203;(<span class="arguments"><a href="../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;player)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="ScreenHandler.html#canUse(net.minecraft.entity.player.PlayerEntity)">canUse</a></code>&nbsp;in class&nbsp;<code><a href="ScreenHandler.html" title="class in net.minecraft.screen">ScreenHandler</a></code></dd>
@@ -440,8 +440,8 @@ int&nbsp;syncId,
 <li class="blockList">
 <section class="detail">
 <h3><a id="transferSlot(net.minecraft.entity.player.PlayerEntity,int)">transferSlot</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a></span>&nbsp;<span class="memberName">transferSlot</span>&#8203;(<span class="arguments"><a href="../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;playerEntity,
-int&nbsp;int2)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a></span>&nbsp;<span class="memberName">transferSlot</span>&#8203;(<span class="arguments"><a href="../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;player,
+int&nbsp;index)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="ScreenHandler.html#transferSlot(net.minecraft.entity.player.PlayerEntity,int)">transferSlot</a></code>&nbsp;in class&nbsp;<code><a href="ScreenHandler.html" title="class in net.minecraft.screen">ScreenHandler</a></code></dd>

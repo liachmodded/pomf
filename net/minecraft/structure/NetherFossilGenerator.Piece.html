@@ -188,7 +188,7 @@ extends <a href="SimpleStructurePiece.html" title="class in net.minecraft.struct
 <tbody>
 <tr class="altColor" id="i0">
 <td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#generate(net.minecraft.world.IWorld,net.minecraft.world.gen.StructureAccessor,net.minecraft.world.gen.chunk.ChunkGenerator,java.util.Random,net.minecraft.util.math.BlockBox,net.minecraft.util.math.ChunkPos,net.minecraft.util.math.BlockPos)">generate</a></span>&#8203;(<a href="../world/IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;iWorld,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#generate(net.minecraft.world.IWorld,net.minecraft.world.gen.StructureAccessor,net.minecraft.world.gen.chunk.ChunkGenerator,java.util.Random,net.minecraft.util.math.BlockBox,net.minecraft.util.math.ChunkPos,net.minecraft.util.math.BlockPos)">generate</a></span>&#8203;(<a href="../world/IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;world,
 <a href="../world/gen/StructureAccessor.html" title="class in net.minecraft.world.gen">StructureAccessor</a>&nbsp;structureAccessor,
 <a href="../world/gen/chunk/ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">ChunkGenerator</a>&lt;?&gt;&nbsp;chunkGenerator,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random,
@@ -199,16 +199,16 @@ extends <a href="SimpleStructurePiece.html" title="class in net.minecraft.struct
 </tr>
 <tr class="rowColor" id="i1">
 <td class="colFirst"><code>protected void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#handleMetadata(java.lang.String,net.minecraft.util.math.BlockPos,net.minecraft.world.IWorld,java.util.Random,net.minecraft.util.math.BlockBox)">handleMetadata</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;string,
-<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
-<a href="../world/IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;iWorld,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#handleMetadata(java.lang.String,net.minecraft.util.math.BlockPos,net.minecraft.world.IWorld,java.util.Random,net.minecraft.util.math.BlockBox)">handleMetadata</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;metadata,
+<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<a href="../world/IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;world,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random,
-<a href="../util/math/BlockBox.html" title="class in net.minecraft.util.math">BlockBox</a>&nbsp;blockBox)</code></th>
+<a href="../util/math/BlockBox.html" title="class in net.minecraft.util.math">BlockBox</a>&nbsp;boundingBox)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i2">
 <td class="colFirst"><code>protected void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#toNbt(net.minecraft.nbt.CompoundTag)">toNbt</a></span>&#8203;(<a href="../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;compoundTag)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#toNbt(net.minecraft.nbt.CompoundTag)">toNbt</a></span>&#8203;(<a href="../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;tag)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -272,7 +272,7 @@ extends <a href="SimpleStructurePiece.html" title="class in net.minecraft.struct
 <li class="blockList">
 <section class="detail">
 <h3><a id="toNbt(net.minecraft.nbt.CompoundTag)">toNbt</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">toNbt</span>&#8203;(<span class="arguments"><a href="../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;compoundTag)</span></div>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">toNbt</span>&#8203;(<span class="arguments"><a href="../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;tag)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="SimpleStructurePiece.html#toNbt(net.minecraft.nbt.CompoundTag)">toNbt</a></code>&nbsp;in class&nbsp;<code><a href="SimpleStructurePiece.html" title="class in net.minecraft.structure">SimpleStructurePiece</a></code></dd>
@@ -282,11 +282,11 @@ extends <a href="SimpleStructurePiece.html" title="class in net.minecraft.struct
 <li class="blockList">
 <section class="detail">
 <h3><a id="handleMetadata(java.lang.String,net.minecraft.util.math.BlockPos,net.minecraft.world.IWorld,java.util.Random,net.minecraft.util.math.BlockBox)">handleMetadata</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">handleMetadata</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;string,
-<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
-<a href="../world/IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;iWorld,
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">handleMetadata</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;metadata,
+<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<a href="../world/IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;world,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random,
-<a href="../util/math/BlockBox.html" title="class in net.minecraft.util.math">BlockBox</a>&nbsp;blockBox)</span></div>
+<a href="../util/math/BlockBox.html" title="class in net.minecraft.util.math">BlockBox</a>&nbsp;boundingBox)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="SimpleStructurePiece.html#handleMetadata(java.lang.String,net.minecraft.util.math.BlockPos,net.minecraft.world.IWorld,java.util.Random,net.minecraft.util.math.BlockBox)">handleMetadata</a></code>&nbsp;in class&nbsp;<code><a href="SimpleStructurePiece.html" title="class in net.minecraft.structure">SimpleStructurePiece</a></code></dd>
@@ -296,7 +296,7 @@ extends <a href="SimpleStructurePiece.html" title="class in net.minecraft.struct
 <li class="blockList">
 <section class="detail">
 <h3><a id="generate(net.minecraft.world.IWorld,net.minecraft.world.gen.StructureAccessor,net.minecraft.world.gen.chunk.ChunkGenerator,java.util.Random,net.minecraft.util.math.BlockBox,net.minecraft.util.math.ChunkPos,net.minecraft.util.math.BlockPos)">generate</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">generate</span>&#8203;(<span class="arguments"><a href="../world/IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;iWorld,
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">generate</span>&#8203;(<span class="arguments"><a href="../world/IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;world,
 <a href="../world/gen/StructureAccessor.html" title="class in net.minecraft.world.gen">StructureAccessor</a>&nbsp;structureAccessor,
 <a href="../world/gen/chunk/ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">ChunkGenerator</a>&lt;?&gt;&nbsp;chunkGenerator,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random,

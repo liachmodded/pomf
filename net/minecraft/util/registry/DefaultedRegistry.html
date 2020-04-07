@@ -169,12 +169,12 @@ extends <a href="SimpleRegistry.html" title="class in net.minecraft.util.registr
 <tbody>
 <tr class="altColor" id="i0">
 <td class="colFirst"><code><a href="DefaultedRegistry.html" title="type parameter in DefaultedRegistry">T</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#get(int)">get</a></span>&#8203;(int&nbsp;int2)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#get(int)">get</a></span>&#8203;(int&nbsp;index)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
 <td class="colFirst"><code><a href="DefaultedRegistry.html" title="type parameter in DefaultedRegistry">T</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#get(net.minecraft.util.Identifier)">get</a></span>&#8203;(<a href="../Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;identifier)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#get(net.minecraft.util.Identifier)">get</a></span>&#8203;(<a href="../Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;id)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i2">
@@ -184,7 +184,7 @@ extends <a href="SimpleRegistry.html" title="class in net.minecraft.util.registr
 </tr>
 <tr class="rowColor" id="i3">
 <td class="colFirst"><code><a href="../Identifier.html" title="class in net.minecraft.util">Identifier</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getId(T)">getId</a></span>&#8203;(<a href="DefaultedRegistry.html" title="type parameter in DefaultedRegistry">T</a>&nbsp;t)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getId(T)">getId</a></span>&#8203;(<a href="DefaultedRegistry.html" title="type parameter in DefaultedRegistry">T</a>&nbsp;entry)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i4">
@@ -194,14 +194,14 @@ extends <a href="SimpleRegistry.html" title="class in net.minecraft.util.registr
 </tr>
 <tr class="rowColor" id="i5">
 <td class="colFirst"><code>int</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getRawId(T)">getRawId</a></span>&#8203;(<a href="DefaultedRegistry.html" title="type parameter in DefaultedRegistry">T</a>&nbsp;t)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getRawId(T)">getRawId</a></span>&#8203;(<a href="DefaultedRegistry.html" title="type parameter in DefaultedRegistry">T</a>&nbsp;entry)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i6">
 <td class="colFirst"><code>&lt;V extends <a href="DefaultedRegistry.html" title="type parameter in DefaultedRegistry">T</a>&gt;<br>V</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#set(int,net.minecraft.util.Identifier,V)">set</a></span>&#8203;(int&nbsp;int2,
-<a href="../Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;identifier,
-V&nbsp;v)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#set(int,net.minecraft.util.Identifier,V)">set</a></span>&#8203;(int&nbsp;rawId,
+<a href="../Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;id,
+V&nbsp;entry)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -262,9 +262,9 @@ V&nbsp;v)</code></th>
 <h3><a id="set(int,net.minecraft.util.Identifier,java.lang.Object)">
 <!--   -->
 </a><a id="set(int,net.minecraft.util.Identifier,V)">set</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="typeParameters">&lt;V extends <a href="DefaultedRegistry.html" title="type parameter in DefaultedRegistry">T</a>&gt;</span>&nbsp;<span class="returnType">V</span>&nbsp;<span class="memberName">set</span>&#8203;(<span class="arguments">int&nbsp;int2,
-<a href="../Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;identifier,
-V&nbsp;v)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="typeParameters">&lt;V extends <a href="DefaultedRegistry.html" title="type parameter in DefaultedRegistry">T</a>&gt;</span>&nbsp;<span class="returnType">V</span>&nbsp;<span class="memberName">set</span>&#8203;(<span class="arguments">int&nbsp;rawId,
+<a href="../Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;id,
+V&nbsp;entry)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="SimpleRegistry.html#set(int,net.minecraft.util.Identifier,V)">set</a></code>&nbsp;in class&nbsp;<code><a href="SimpleRegistry.html" title="class in net.minecraft.util.registry">SimpleRegistry</a>&lt;<a href="DefaultedRegistry.html" title="type parameter in DefaultedRegistry">T</a>&gt;</code></dd>
@@ -276,7 +276,7 @@ V&nbsp;v)</span></div>
 <h3><a id="getRawId(java.lang.Object)">
 <!--   -->
 </a><a id="getRawId(T)">getRawId</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getRawId</span>&#8203;(<span class="arguments"><a href="DefaultedRegistry.html" title="type parameter in DefaultedRegistry">T</a>&nbsp;t)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getRawId</span>&#8203;(<span class="arguments"><a href="DefaultedRegistry.html" title="type parameter in DefaultedRegistry">T</a>&nbsp;entry)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="SimpleRegistry.html#getRawId(T)">getRawId</a></code>&nbsp;in class&nbsp;<code><a href="SimpleRegistry.html" title="class in net.minecraft.util.registry">SimpleRegistry</a>&lt;<a href="DefaultedRegistry.html" title="type parameter in DefaultedRegistry">T</a>&gt;</code></dd>
@@ -288,7 +288,7 @@ V&nbsp;v)</span></div>
 <h3><a id="getId(java.lang.Object)">
 <!--   -->
 </a><a id="getId(T)">getId</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../Identifier.html" title="class in net.minecraft.util">Identifier</a></span>&nbsp;<span class="memberName">getId</span>&#8203;(<span class="arguments"><a href="DefaultedRegistry.html" title="type parameter in DefaultedRegistry">T</a>&nbsp;t)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../Identifier.html" title="class in net.minecraft.util">Identifier</a></span>&nbsp;<span class="memberName">getId</span>&#8203;(<span class="arguments"><a href="DefaultedRegistry.html" title="type parameter in DefaultedRegistry">T</a>&nbsp;entry)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="SimpleRegistry.html#getId(T)">getId</a></code>&nbsp;in class&nbsp;<code><a href="SimpleRegistry.html" title="class in net.minecraft.util.registry">SimpleRegistry</a>&lt;<a href="DefaultedRegistry.html" title="type parameter in DefaultedRegistry">T</a>&gt;</code></dd>
@@ -298,7 +298,7 @@ V&nbsp;v)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="get(net.minecraft.util.Identifier)">get</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="DefaultedRegistry.html" title="type parameter in DefaultedRegistry">T</a></span>&nbsp;<span class="memberName">get</span>&#8203;(<span class="arguments"><a href="../Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;identifier)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="DefaultedRegistry.html" title="type parameter in DefaultedRegistry">T</a></span>&nbsp;<span class="memberName">get</span>&#8203;(<span class="arguments"><a href="../Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;id)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="SimpleRegistry.html#get(net.minecraft.util.Identifier)">get</a></code>&nbsp;in class&nbsp;<code><a href="SimpleRegistry.html" title="class in net.minecraft.util.registry">SimpleRegistry</a>&lt;<a href="DefaultedRegistry.html" title="type parameter in DefaultedRegistry">T</a>&gt;</code></dd>
@@ -308,7 +308,7 @@ V&nbsp;v)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="get(int)">get</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="DefaultedRegistry.html" title="type parameter in DefaultedRegistry">T</a></span>&nbsp;<span class="memberName">get</span>&#8203;(<span class="arguments">int&nbsp;int2)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="DefaultedRegistry.html" title="type parameter in DefaultedRegistry">T</a></span>&nbsp;<span class="memberName">get</span>&#8203;(<span class="arguments">int&nbsp;index)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../collection/IndexedIterable.html#get(int)">get</a></code>&nbsp;in interface&nbsp;<code><a href="../collection/IndexedIterable.html" title="interface in net.minecraft.util.collection">IndexedIterable</a>&lt;<a href="DefaultedRegistry.html" title="type parameter in DefaultedRegistry">T</a>&gt;</code></dd>

@@ -146,22 +146,22 @@ implements <a href="TickScheduler.html" title="interface in net.minecraft.world"
 <tbody>
 <tr class="altColor" id="i0">
 <td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isScheduled(net.minecraft.util.math.BlockPos,T)">isScheduled</a></span>&#8203;(<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
-<a href="MultiTickScheduler.html" title="type parameter in MultiTickScheduler">T</a>&nbsp;t)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isScheduled(net.minecraft.util.math.BlockPos,T)">isScheduled</a></span>&#8203;(<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<a href="MultiTickScheduler.html" title="type parameter in MultiTickScheduler">T</a>&nbsp;object)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
 <td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isTicking(net.minecraft.util.math.BlockPos,T)">isTicking</a></span>&#8203;(<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
-<a href="MultiTickScheduler.html" title="type parameter in MultiTickScheduler">T</a>&nbsp;t)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isTicking(net.minecraft.util.math.BlockPos,T)">isTicking</a></span>&#8203;(<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<a href="MultiTickScheduler.html" title="type parameter in MultiTickScheduler">T</a>&nbsp;object)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i2">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#schedule(net.minecraft.util.math.BlockPos,T,int,net.minecraft.world.TickPriority)">schedule</a></span>&#8203;(<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
-<a href="MultiTickScheduler.html" title="type parameter in MultiTickScheduler">T</a>&nbsp;t,
-int&nbsp;int2,
-<a href="TickPriority.html" title="enum in net.minecraft.world">TickPriority</a>&nbsp;tickPriority)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#schedule(net.minecraft.util.math.BlockPos,T,int,net.minecraft.world.TickPriority)">schedule</a></span>&#8203;(<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<a href="MultiTickScheduler.html" title="type parameter in MultiTickScheduler">T</a>&nbsp;object,
+int&nbsp;delay,
+<a href="TickPriority.html" title="enum in net.minecraft.world">TickPriority</a>&nbsp;priority)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -212,8 +212,8 @@ int&nbsp;int2,
 <h3><a id="isScheduled(net.minecraft.util.math.BlockPos,java.lang.Object)">
 <!--   -->
 </a><a id="isScheduled(net.minecraft.util.math.BlockPos,T)">isScheduled</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isScheduled</span>&#8203;(<span class="arguments"><a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
-<a href="MultiTickScheduler.html" title="type parameter in MultiTickScheduler">T</a>&nbsp;t)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isScheduled</span>&#8203;(<span class="arguments"><a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<a href="MultiTickScheduler.html" title="type parameter in MultiTickScheduler">T</a>&nbsp;object)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="TickScheduler.html#isScheduled(net.minecraft.util.math.BlockPos,T)">isScheduled</a></code>&nbsp;in interface&nbsp;<code><a href="TickScheduler.html" title="interface in net.minecraft.world">TickScheduler</a>&lt;<a href="MultiTickScheduler.html" title="type parameter in MultiTickScheduler">T</a>&gt;</code></dd>
@@ -225,10 +225,10 @@ int&nbsp;int2,
 <h3><a id="schedule(net.minecraft.util.math.BlockPos,java.lang.Object,int,net.minecraft.world.TickPriority)">
 <!--   -->
 </a><a id="schedule(net.minecraft.util.math.BlockPos,T,int,net.minecraft.world.TickPriority)">schedule</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">schedule</span>&#8203;(<span class="arguments"><a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
-<a href="MultiTickScheduler.html" title="type parameter in MultiTickScheduler">T</a>&nbsp;t,
-int&nbsp;int2,
-<a href="TickPriority.html" title="enum in net.minecraft.world">TickPriority</a>&nbsp;tickPriority)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">schedule</span>&#8203;(<span class="arguments"><a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<a href="MultiTickScheduler.html" title="type parameter in MultiTickScheduler">T</a>&nbsp;object,
+int&nbsp;delay,
+<a href="TickPriority.html" title="enum in net.minecraft.world">TickPriority</a>&nbsp;priority)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="TickScheduler.html#schedule(net.minecraft.util.math.BlockPos,T,int,net.minecraft.world.TickPriority)">schedule</a></code>&nbsp;in interface&nbsp;<code><a href="TickScheduler.html" title="interface in net.minecraft.world">TickScheduler</a>&lt;<a href="MultiTickScheduler.html" title="type parameter in MultiTickScheduler">T</a>&gt;</code></dd>
@@ -240,8 +240,8 @@ int&nbsp;int2,
 <h3><a id="isTicking(net.minecraft.util.math.BlockPos,java.lang.Object)">
 <!--   -->
 </a><a id="isTicking(net.minecraft.util.math.BlockPos,T)">isTicking</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isTicking</span>&#8203;(<span class="arguments"><a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
-<a href="MultiTickScheduler.html" title="type parameter in MultiTickScheduler">T</a>&nbsp;t)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isTicking</span>&#8203;(<span class="arguments"><a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<a href="MultiTickScheduler.html" title="type parameter in MultiTickScheduler">T</a>&nbsp;object)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="TickScheduler.html#isTicking(net.minecraft.util.math.BlockPos,T)">isTicking</a></code>&nbsp;in interface&nbsp;<code><a href="TickScheduler.html" title="interface in net.minecraft.world">TickScheduler</a>&lt;<a href="MultiTickScheduler.html" title="type parameter in MultiTickScheduler">T</a>&gt;</code></dd>

@@ -159,21 +159,21 @@ extends <a href="CaveCarver.html" title="class in net.minecraft.world.gen.carver
 <tr class="altColor" id="i0">
 <td class="colFirst"><code>protected boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#carveAtPoint(net.minecraft.world.chunk.Chunk,java.util.function.Function,java.util.BitSet,java.util.Random,net.minecraft.util.math.BlockPos.Mutable,net.minecraft.util.math.BlockPos.Mutable,net.minecraft.util.math.BlockPos.Mutable,int,int,int,int,int,int,int,int,java.util.concurrent.atomic.AtomicBoolean)">carveAtPoint</a></span>&#8203;(<a href="../../chunk/Chunk.html" title="interface in net.minecraft.world.chunk">Chunk</a>&nbsp;chunk,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>,&#8203;<a href="../../biome/Biome.html" title="class in net.minecraft.world.biome">Biome</a>&gt;&nbsp;function,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/BitSet.html?is-external=true" title="class or interface in java.util" class="externalLink">BitSet</a>&nbsp;bitSet,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>,&#8203;<a href="../../biome/Biome.html" title="class in net.minecraft.world.biome">Biome</a>&gt;&nbsp;posToBiome,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/BitSet.html?is-external=true" title="class or interface in java.util" class="externalLink">BitSet</a>&nbsp;carvingMask,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random,
 <a href="../../../util/math/BlockPos.Mutable.html" title="class in net.minecraft.util.math">BlockPos.Mutable</a>&nbsp;mutable,
 <a href="../../../util/math/BlockPos.Mutable.html" title="class in net.minecraft.util.math">BlockPos.Mutable</a>&nbsp;mutable2,
 <a href="../../../util/math/BlockPos.Mutable.html" title="class in net.minecraft.util.math">BlockPos.Mutable</a>&nbsp;mutable3,
-int&nbsp;int2,
-int&nbsp;int3,
-int&nbsp;int4,
-int&nbsp;int5,
-int&nbsp;int6,
-int&nbsp;int7,
-int&nbsp;int8,
-int&nbsp;int9,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/atomic/AtomicBoolean.html?is-external=true" title="class or interface in java.util.concurrent.atomic" class="externalLink">AtomicBoolean</a>&nbsp;atomicBoolean)</code></th>
+int&nbsp;seaLevel,
+int&nbsp;mainChunkX,
+int&nbsp;mainChunkZ,
+int&nbsp;x,
+int&nbsp;z,
+int&nbsp;relativeX,
+int&nbsp;y,
+int&nbsp;relativeZ,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/atomic/AtomicBoolean.html?is-external=true" title="class or interface in java.util.concurrent.atomic" class="externalLink">AtomicBoolean</a>&nbsp;foundSurface)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
@@ -196,14 +196,14 @@ int&nbsp;relativeZ)</code></th>
 <tr class="altColor" id="i2">
 <td class="colFirst"><code>protected boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isRegionUncarvable(net.minecraft.world.chunk.Chunk,int,int,int,int,int,int,int,int)">isRegionUncarvable</a></span>&#8203;(<a href="../../chunk/Chunk.html" title="interface in net.minecraft.world.chunk">Chunk</a>&nbsp;chunk,
-int&nbsp;int2,
-int&nbsp;int3,
-int&nbsp;int4,
-int&nbsp;int5,
-int&nbsp;int6,
-int&nbsp;int7,
-int&nbsp;int8,
-int&nbsp;int9)</code></th>
+int&nbsp;mainChunkX,
+int&nbsp;mainChunkZ,
+int&nbsp;relMinX,
+int&nbsp;relMaxX,
+int&nbsp;minY,
+int&nbsp;maxY,
+int&nbsp;relMinZ,
+int&nbsp;relMaxZ)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -258,14 +258,14 @@ int&nbsp;int9)</code></th>
 <section class="detail">
 <h3><a id="isRegionUncarvable(net.minecraft.world.chunk.Chunk,int,int,int,int,int,int,int,int)">isRegionUncarvable</a></h3>
 <div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isRegionUncarvable</span>&#8203;(<span class="arguments"><a href="../../chunk/Chunk.html" title="interface in net.minecraft.world.chunk">Chunk</a>&nbsp;chunk,
-int&nbsp;int2,
-int&nbsp;int3,
-int&nbsp;int4,
-int&nbsp;int5,
-int&nbsp;int6,
-int&nbsp;int7,
-int&nbsp;int8,
-int&nbsp;int9)</span></div>
+int&nbsp;mainChunkX,
+int&nbsp;mainChunkZ,
+int&nbsp;relMinX,
+int&nbsp;relMaxX,
+int&nbsp;minY,
+int&nbsp;maxY,
+int&nbsp;relMinZ,
+int&nbsp;relMaxZ)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="Carver.html#isRegionUncarvable(net.minecraft.world.chunk.Chunk,int,int,int,int,int,int,int,int)">isRegionUncarvable</a></code>&nbsp;in class&nbsp;<code><a href="Carver.html" title="class in net.minecraft.world.gen.carver">Carver</a>&lt;<a href="../ProbabilityConfig.html" title="class in net.minecraft.world.gen">ProbabilityConfig</a>&gt;</code></dd>
@@ -276,21 +276,21 @@ int&nbsp;int9)</span></div>
 <section class="detail">
 <h3><a id="carveAtPoint(net.minecraft.world.chunk.Chunk,java.util.function.Function,java.util.BitSet,java.util.Random,net.minecraft.util.math.BlockPos.Mutable,net.minecraft.util.math.BlockPos.Mutable,net.minecraft.util.math.BlockPos.Mutable,int,int,int,int,int,int,int,int,java.util.concurrent.atomic.AtomicBoolean)">carveAtPoint</a></h3>
 <div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">carveAtPoint</span>&#8203;(<span class="arguments"><a href="../../chunk/Chunk.html" title="interface in net.minecraft.world.chunk">Chunk</a>&nbsp;chunk,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>,&#8203;<a href="../../biome/Biome.html" title="class in net.minecraft.world.biome">Biome</a>&gt;&nbsp;function,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/BitSet.html?is-external=true" title="class or interface in java.util" class="externalLink">BitSet</a>&nbsp;bitSet,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>,&#8203;<a href="../../biome/Biome.html" title="class in net.minecraft.world.biome">Biome</a>&gt;&nbsp;posToBiome,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/BitSet.html?is-external=true" title="class or interface in java.util" class="externalLink">BitSet</a>&nbsp;carvingMask,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random,
 <a href="../../../util/math/BlockPos.Mutable.html" title="class in net.minecraft.util.math">BlockPos.Mutable</a>&nbsp;mutable,
 <a href="../../../util/math/BlockPos.Mutable.html" title="class in net.minecraft.util.math">BlockPos.Mutable</a>&nbsp;mutable2,
 <a href="../../../util/math/BlockPos.Mutable.html" title="class in net.minecraft.util.math">BlockPos.Mutable</a>&nbsp;mutable3,
-int&nbsp;int2,
-int&nbsp;int3,
-int&nbsp;int4,
-int&nbsp;int5,
-int&nbsp;int6,
-int&nbsp;int7,
-int&nbsp;int8,
-int&nbsp;int9,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/atomic/AtomicBoolean.html?is-external=true" title="class or interface in java.util.concurrent.atomic" class="externalLink">AtomicBoolean</a>&nbsp;atomicBoolean)</span></div>
+int&nbsp;seaLevel,
+int&nbsp;mainChunkX,
+int&nbsp;mainChunkZ,
+int&nbsp;x,
+int&nbsp;z,
+int&nbsp;relativeX,
+int&nbsp;y,
+int&nbsp;relativeZ,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/atomic/AtomicBoolean.html?is-external=true" title="class or interface in java.util.concurrent.atomic" class="externalLink">AtomicBoolean</a>&nbsp;foundSurface)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="Carver.html#carveAtPoint(net.minecraft.world.chunk.Chunk,java.util.function.Function,java.util.BitSet,java.util.Random,net.minecraft.util.math.BlockPos.Mutable,net.minecraft.util.math.BlockPos.Mutable,net.minecraft.util.math.BlockPos.Mutable,int,int,int,int,int,int,int,int,java.util.concurrent.atomic.AtomicBoolean)">carveAtPoint</a></code>&nbsp;in class&nbsp;<code><a href="Carver.html" title="class in net.minecraft.world.gen.carver">Carver</a>&lt;<a href="../ProbabilityConfig.html" title="class in net.minecraft.world.gen">ProbabilityConfig</a>&gt;</code></dd>

@@ -154,25 +154,25 @@ implements <a href="../inventory/SidedInventory.html" title="interface in net.mi
 <tbody>
 <tr class="altColor" id="i0">
 <td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#canExtract(int,net.minecraft.item.ItemStack,net.minecraft.util.math.Direction)">canExtract</a></span>&#8203;(int&nbsp;int2,
-<a href="../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;itemStack,
-<a href="../util/math/Direction.html" title="enum in net.minecraft.util.math">Direction</a>&nbsp;direction)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#canExtract(int,net.minecraft.item.ItemStack,net.minecraft.util.math.Direction)">canExtract</a></span>&#8203;(int&nbsp;slot,
+<a href="../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;stack,
+<a href="../util/math/Direction.html" title="enum in net.minecraft.util.math">Direction</a>&nbsp;dir)</code></th>
 <td class="colLast">
 <div class="block">Determines whether the given stack can be removed from this inventory at the specified slot position from the given direction.</div>
 </td>
 </tr>
 <tr class="rowColor" id="i1">
 <td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#canInsert(int,net.minecraft.item.ItemStack,net.minecraft.util.math.Direction)">canInsert</a></span>&#8203;(int&nbsp;int2,
-<a href="../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;itemStack,
-<a href="../util/math/Direction.html" title="enum in net.minecraft.util.math">Direction</a>&nbsp;direction)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#canInsert(int,net.minecraft.item.ItemStack,net.minecraft.util.math.Direction)">canInsert</a></span>&#8203;(int&nbsp;slot,
+<a href="../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;stack,
+<a href="../util/math/Direction.html" title="enum in net.minecraft.util.math">Direction</a>&nbsp;dir)</code></th>
 <td class="colLast">
 <div class="block">Determines whether the given stack can be inserted into this inventory at the specified slot position from the given direction.</div>
 </td>
 </tr>
 <tr class="altColor" id="i2">
 <td class="colFirst"><code>int[]</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getAvailableSlots(net.minecraft.util.math.Direction)">getAvailableSlots</a></span>&#8203;(<a href="../util/math/Direction.html" title="enum in net.minecraft.util.math">Direction</a>&nbsp;direction)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getAvailableSlots(net.minecraft.util.math.Direction)">getAvailableSlots</a></span>&#8203;(<a href="../util/math/Direction.html" title="enum in net.minecraft.util.math">Direction</a>&nbsp;side)</code></th>
 <td class="colLast">
 <div class="block">Gets the available slot positions that are reachable from a given side.</div>
 </td>
@@ -248,7 +248,6 @@ implements <a href="../inventory/SidedInventory.html" title="interface in net.mi
 <section class="detail">
 <h3><a id="getMaxCountPerStack()">getMaxCountPerStack</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getMaxCountPerStack</span>()</div>
-<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../inventory/Inventory.html#getMaxCountPerStack()">Inventory</a></code></span></div>
 <div class="block">Returns the maximum number of items a stack can contain when placed inside this inventory.
  No slots may have more than this number of items. It is effectively the
  stacking limit for this inventory's slots.</div>
@@ -263,8 +262,7 @@ implements <a href="../inventory/SidedInventory.html" title="interface in net.mi
 <li class="blockList">
 <section class="detail">
 <h3><a id="getAvailableSlots(net.minecraft.util.math.Direction)">getAvailableSlots</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int[]</span>&nbsp;<span class="memberName">getAvailableSlots</span>&#8203;(<span class="arguments"><a href="../util/math/Direction.html" title="enum in net.minecraft.util.math">Direction</a>&nbsp;direction)</span></div>
-<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../inventory/SidedInventory.html#getAvailableSlots(net.minecraft.util.math.Direction)">SidedInventory</a></code></span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int[]</span>&nbsp;<span class="memberName">getAvailableSlots</span>&#8203;(<span class="arguments"><a href="../util/math/Direction.html" title="enum in net.minecraft.util.math">Direction</a>&nbsp;side)</span></div>
 <div class="block">Gets the available slot positions that are reachable from a given side.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
@@ -275,10 +273,9 @@ implements <a href="../inventory/SidedInventory.html" title="interface in net.mi
 <li class="blockList">
 <section class="detail">
 <h3><a id="canInsert(int,net.minecraft.item.ItemStack,net.minecraft.util.math.Direction)">canInsert</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">canInsert</span>&#8203;(<span class="arguments">int&nbsp;int2,
-<a href="../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;itemStack,
-<a href="../util/math/Direction.html" title="enum in net.minecraft.util.math">Direction</a>&nbsp;direction)</span></div>
-<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../inventory/SidedInventory.html#canInsert(int,net.minecraft.item.ItemStack,net.minecraft.util.math.Direction)">SidedInventory</a></code></span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">canInsert</span>&#8203;(<span class="arguments">int&nbsp;slot,
+<a href="../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;stack,
+<a href="../util/math/Direction.html" title="enum in net.minecraft.util.math">Direction</a>&nbsp;dir)</span></div>
 <div class="block">Determines whether the given stack can be inserted into this inventory at the specified slot position from the given direction.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
@@ -289,10 +286,9 @@ implements <a href="../inventory/SidedInventory.html" title="interface in net.mi
 <li class="blockList">
 <section class="detail">
 <h3><a id="canExtract(int,net.minecraft.item.ItemStack,net.minecraft.util.math.Direction)">canExtract</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">canExtract</span>&#8203;(<span class="arguments">int&nbsp;int2,
-<a href="../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;itemStack,
-<a href="../util/math/Direction.html" title="enum in net.minecraft.util.math">Direction</a>&nbsp;direction)</span></div>
-<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../inventory/SidedInventory.html#canExtract(int,net.minecraft.item.ItemStack,net.minecraft.util.math.Direction)">SidedInventory</a></code></span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">canExtract</span>&#8203;(<span class="arguments">int&nbsp;slot,
+<a href="../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;stack,
+<a href="../util/math/Direction.html" title="enum in net.minecraft.util.math">Direction</a>&nbsp;dir)</span></div>
 <div class="block">Determines whether the given stack can be removed from this inventory at the specified slot position from the given direction.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>

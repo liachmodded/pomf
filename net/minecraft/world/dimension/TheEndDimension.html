@@ -186,8 +186,8 @@ extends <a href="Dimension.html" title="class in net.minecraft.world.dimension">
 </tr>
 <tr class="altColor" id="i2">
 <td class="colFirst"><code>float[]</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getBackgroundColor(float,float)">getBackgroundColor</a></span>&#8203;(float&nbsp;float2,
-float&nbsp;float3)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getBackgroundColor(float,float)">getBackgroundColor</a></span>&#8203;(float&nbsp;skyAngle,
+float&nbsp;tickDelta)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i3">
@@ -207,21 +207,21 @@ float&nbsp;float3)</code></th>
 </tr>
 <tr class="altColor" id="i6">
 <td class="colFirst"><code>float</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getSkyAngle(long,float)">getSkyAngle</a></span>&#8203;(long&nbsp;long2,
-float&nbsp;float2)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getSkyAngle(long,float)">getSkyAngle</a></span>&#8203;(long&nbsp;timeOfDay,
+float&nbsp;tickDelta)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i7">
 <td class="colFirst"><code><a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getSpawningBlockInChunk(net.minecraft.util.math.ChunkPos,boolean)">getSpawningBlockInChunk</a></span>&#8203;(<a href="../../util/math/ChunkPos.html" title="class in net.minecraft.util.math">ChunkPos</a>&nbsp;chunkPos,
-boolean&nbsp;bool)</code></th>
+boolean&nbsp;checkMobSpawnValidity)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i8">
 <td class="colFirst"><code><a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getTopSpawningBlockPosition(int,int,boolean)">getTopSpawningBlockPosition</a></span>&#8203;(int&nbsp;int2,
-int&nbsp;int3,
-boolean&nbsp;bool)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getTopSpawningBlockPosition(int,int,boolean)">getTopSpawningBlockPosition</a></span>&#8203;(int&nbsp;x,
+int&nbsp;z,
+boolean&nbsp;checkMobSpawnValidity)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i9">
@@ -241,14 +241,14 @@ boolean&nbsp;bool)</code></th>
 </tr>
 <tr class="altColor" id="i12">
 <td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isFogThick(int,int)">isFogThick</a></span>&#8203;(int&nbsp;int2,
-int&nbsp;int3)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isFogThick(int,int)">isFogThick</a></span>&#8203;(int&nbsp;x,
+int&nbsp;z)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i13">
 <td class="colFirst"><code><a href="../../util/math/Vec3d.html" title="class in net.minecraft.util.math">Vec3d</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#modifyFogColor(net.minecraft.util.math.Vec3d,float)">modifyFogColor</a></span>&#8203;(<a href="../../util/math/Vec3d.html" title="class in net.minecraft.util.math">Vec3d</a>&nbsp;vec3d,
-float&nbsp;float2)</code></th>
+float&nbsp;tickDelta)</code></th>
 <td class="colLast">
 <div class="block">Modify the fog color offered (usually by the biome).</div>
 </td>
@@ -336,8 +336,8 @@ float&nbsp;float2)</code></th>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getSkyAngle(long,float)">getSkyAngle</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">float</span>&nbsp;<span class="memberName">getSkyAngle</span>&#8203;(<span class="arguments">long&nbsp;long2,
-float&nbsp;float2)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">float</span>&nbsp;<span class="memberName">getSkyAngle</span>&#8203;(<span class="arguments">long&nbsp;timeOfDay,
+float&nbsp;tickDelta)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="Dimension.html#getSkyAngle(long,float)">getSkyAngle</a></code>&nbsp;in class&nbsp;<code><a href="Dimension.html" title="class in net.minecraft.world.dimension">Dimension</a></code></dd>
@@ -347,8 +347,8 @@ float&nbsp;float2)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getBackgroundColor(float,float)">getBackgroundColor</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">float[]</span>&nbsp;<span class="memberName">getBackgroundColor</span>&#8203;(<span class="arguments">float&nbsp;float2,
-float&nbsp;float3)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">float[]</span>&nbsp;<span class="memberName">getBackgroundColor</span>&#8203;(<span class="arguments">float&nbsp;skyAngle,
+float&nbsp;tickDelta)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="Dimension.html#getBackgroundColor(float,float)">getBackgroundColor</a></code>&nbsp;in class&nbsp;<code><a href="Dimension.html" title="class in net.minecraft.world.dimension">Dimension</a></code></dd>
@@ -359,8 +359,7 @@ float&nbsp;float3)</span></div>
 <section class="detail">
 <h3><a id="modifyFogColor(net.minecraft.util.math.Vec3d,float)">modifyFogColor</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../util/math/Vec3d.html" title="class in net.minecraft.util.math">Vec3d</a></span>&nbsp;<span class="memberName">modifyFogColor</span>&#8203;(<span class="arguments"><a href="../../util/math/Vec3d.html" title="class in net.minecraft.util.math">Vec3d</a>&nbsp;vec3d,
-float&nbsp;float2)</span></div>
-<div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="Dimension.html#modifyFogColor(net.minecraft.util.math.Vec3d,float)">Dimension</a></code></span></div>
+float&nbsp;tickDelta)</span></div>
 <div class="block">Modify the fog color offered (usually by the biome).
 
  <p>The overworld slightly whiteshifts and blueshifts this color; the
@@ -415,7 +414,7 @@ float&nbsp;float2)</span></div>
 <section class="detail">
 <h3><a id="getSpawningBlockInChunk(net.minecraft.util.math.ChunkPos,boolean)">getSpawningBlockInChunk</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a></span>&nbsp;<span class="memberName">getSpawningBlockInChunk</span>&#8203;(<span class="arguments"><a href="../../util/math/ChunkPos.html" title="class in net.minecraft.util.math">ChunkPos</a>&nbsp;chunkPos,
-boolean&nbsp;bool)</span></div>
+boolean&nbsp;checkMobSpawnValidity)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="Dimension.html#getSpawningBlockInChunk(net.minecraft.util.math.ChunkPos,boolean)">getSpawningBlockInChunk</a></code>&nbsp;in class&nbsp;<code><a href="Dimension.html" title="class in net.minecraft.world.dimension">Dimension</a></code></dd>
@@ -435,9 +434,9 @@ boolean&nbsp;bool)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getTopSpawningBlockPosition(int,int,boolean)">getTopSpawningBlockPosition</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a></span>&nbsp;<span class="memberName">getTopSpawningBlockPosition</span>&#8203;(<span class="arguments">int&nbsp;int2,
-int&nbsp;int3,
-boolean&nbsp;bool)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a></span>&nbsp;<span class="memberName">getTopSpawningBlockPosition</span>&#8203;(<span class="arguments">int&nbsp;x,
+int&nbsp;z,
+boolean&nbsp;checkMobSpawnValidity)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="Dimension.html#getTopSpawningBlockPosition(int,int,boolean)">getTopSpawningBlockPosition</a></code>&nbsp;in class&nbsp;<code><a href="Dimension.html" title="class in net.minecraft.world.dimension">Dimension</a></code></dd>
@@ -447,8 +446,8 @@ boolean&nbsp;bool)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="isFogThick(int,int)">isFogThick</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isFogThick</span>&#8203;(<span class="arguments">int&nbsp;int2,
-int&nbsp;int3)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isFogThick</span>&#8203;(<span class="arguments">int&nbsp;x,
+int&nbsp;z)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="Dimension.html#isFogThick(int,int)">isFogThick</a></code>&nbsp;in class&nbsp;<code><a href="Dimension.html" title="class in net.minecraft.world.dimension">Dimension</a></code></dd>

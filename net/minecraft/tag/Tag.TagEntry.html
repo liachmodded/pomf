@@ -150,14 +150,14 @@ implements <a href="Tag.Entry.html" title="interface in net.minecraft.tag">Tag.E
 <tbody>
 <tr class="altColor" id="i0">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addToJson(com.google.gson.JsonArray)">addToJson</a></span>&#8203;(com.google.gson.JsonArray&nbsp;jsonArray)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addToJson(com.google.gson.JsonArray)">addToJson</a></span>&#8203;(com.google.gson.JsonArray&nbsp;json)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
 <td class="colFirst"><code>&lt;T&gt;&nbsp;boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#resolve(java.util.function.Function,java.util.function.Function,java.util.function.Consumer)">resolve</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;<a href="../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>,&#8203;<a href="Tag.html" title="interface in net.minecraft.tag">Tag</a>&lt;T&gt;&gt;&nbsp;function,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;<a href="../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>,&#8203;T&gt;&nbsp;function2,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Consumer.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Consumer</a>&lt;T&gt;&nbsp;consumer)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#resolve(java.util.function.Function,java.util.function.Function,java.util.function.Consumer)">resolve</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;<a href="../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>,&#8203;<a href="Tag.html" title="interface in net.minecraft.tag">Tag</a>&lt;T&gt;&gt;&nbsp;tagGetter,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;<a href="../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>,&#8203;T&gt;&nbsp;objectGetter,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Consumer.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Consumer</a>&lt;T&gt;&nbsp;collector)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i2">
@@ -206,9 +206,9 @@ implements <a href="Tag.Entry.html" title="interface in net.minecraft.tag">Tag.E
 <li class="blockList">
 <section class="detail">
 <h3><a id="resolve(java.util.function.Function,java.util.function.Function,java.util.function.Consumer)">resolve</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="typeParameters">&lt;T&gt;</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">resolve</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;<a href="../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>,&#8203;<a href="Tag.html" title="interface in net.minecraft.tag">Tag</a>&lt;T&gt;&gt;&nbsp;function,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;<a href="../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>,&#8203;T&gt;&nbsp;function2,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Consumer.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Consumer</a>&lt;T&gt;&nbsp;consumer)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="typeParameters">&lt;T&gt;</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">resolve</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;<a href="../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>,&#8203;<a href="Tag.html" title="interface in net.minecraft.tag">Tag</a>&lt;T&gt;&gt;&nbsp;tagGetter,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;<a href="../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>,&#8203;T&gt;&nbsp;objectGetter,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Consumer.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Consumer</a>&lt;T&gt;&nbsp;collector)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="Tag.Entry.html#resolve(java.util.function.Function,java.util.function.Function,java.util.function.Consumer)">resolve</a></code>&nbsp;in interface&nbsp;<code><a href="Tag.Entry.html" title="interface in net.minecraft.tag">Tag.Entry</a></code></dd>
@@ -218,7 +218,7 @@ implements <a href="Tag.Entry.html" title="interface in net.minecraft.tag">Tag.E
 <li class="blockList">
 <section class="detail">
 <h3><a id="addToJson(com.google.gson.JsonArray)">addToJson</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">addToJson</span>&#8203;(<span class="arguments">com.google.gson.JsonArray&nbsp;jsonArray)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">addToJson</span>&#8203;(<span class="arguments">com.google.gson.JsonArray&nbsp;json)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="Tag.Entry.html#addToJson(com.google.gson.JsonArray)">addToJson</a></code>&nbsp;in interface&nbsp;<code><a href="Tag.Entry.html" title="interface in net.minecraft.tag">Tag.Entry</a></code></dd>

@@ -182,7 +182,7 @@ extends <a href="ChunkGenerator.html" title="class in net.minecraft.world.gen.ch
 <tbody>
 <tr class="altColor" id="i0">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#buildSurface(net.minecraft.world.ChunkRegion,net.minecraft.world.chunk.Chunk)">buildSurface</a></span>&#8203;(<a href="../../ChunkRegion.html" title="class in net.minecraft.world">ChunkRegion</a>&nbsp;chunkRegion,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#buildSurface(net.minecraft.world.ChunkRegion,net.minecraft.world.chunk.Chunk)">buildSurface</a></span>&#8203;(<a href="../../ChunkRegion.html" title="class in net.minecraft.world">ChunkRegion</a>&nbsp;region,
 <a href="../../chunk/Chunk.html" title="interface in net.minecraft.world.chunk">Chunk</a>&nbsp;chunk)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -207,15 +207,15 @@ int&nbsp;z)</code></th>
 </tr>
 <tr class="altColor" id="i4">
 <td class="colFirst"><code><a href="../../BlockView.html" title="interface in net.minecraft.world">BlockView</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getColumnSample(int,int)">getColumnSample</a></span>&#8203;(int&nbsp;int2,
-int&nbsp;int3)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getColumnSample(int,int)">getColumnSample</a></span>&#8203;(int&nbsp;x,
+int&nbsp;z)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i5">
 <td class="colFirst"><code>int</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getHeight(int,int,net.minecraft.world.Heightmap.Type)">getHeight</a></span>&#8203;(int&nbsp;int2,
-int&nbsp;int3,
-<a href="../../Heightmap.Type.html" title="enum in net.minecraft.world">Heightmap.Type</a>&nbsp;type)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getHeight(int,int,net.minecraft.world.Heightmap.Type)">getHeight</a></span>&#8203;(int&nbsp;x,
+int&nbsp;z,
+<a href="../../Heightmap.Type.html" title="enum in net.minecraft.world">Heightmap.Type</a>&nbsp;heightmapType)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i6">
@@ -225,7 +225,7 @@ int&nbsp;int3,
 </tr>
 <tr class="rowColor" id="i7">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#populateNoise(net.minecraft.world.IWorld,net.minecraft.world.gen.StructureAccessor,net.minecraft.world.chunk.Chunk)">populateNoise</a></span>&#8203;(<a href="../../IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;iWorld,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#populateNoise(net.minecraft.world.IWorld,net.minecraft.world.gen.StructureAccessor,net.minecraft.world.chunk.Chunk)">populateNoise</a></span>&#8203;(<a href="../../IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;world,
 <a href="../StructureAccessor.html" title="class in net.minecraft.world.gen">StructureAccessor</a>&nbsp;structureAccessor,
 <a href="../../chunk/Chunk.html" title="interface in net.minecraft.world.chunk">Chunk</a>&nbsp;chunk)</code></th>
 <td class="colLast">&nbsp;</td>
@@ -300,7 +300,7 @@ int&nbsp;int3,
 <li class="blockList">
 <section class="detail">
 <h3><a id="buildSurface(net.minecraft.world.ChunkRegion,net.minecraft.world.chunk.Chunk)">buildSurface</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">buildSurface</span>&#8203;(<span class="arguments"><a href="../../ChunkRegion.html" title="class in net.minecraft.world">ChunkRegion</a>&nbsp;chunkRegion,
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">buildSurface</span>&#8203;(<span class="arguments"><a href="../../ChunkRegion.html" title="class in net.minecraft.world">ChunkRegion</a>&nbsp;region,
 <a href="../../chunk/Chunk.html" title="interface in net.minecraft.world.chunk">Chunk</a>&nbsp;chunk)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
@@ -344,7 +344,7 @@ int&nbsp;int3,
 <li class="blockList">
 <section class="detail">
 <h3><a id="populateNoise(net.minecraft.world.IWorld,net.minecraft.world.gen.StructureAccessor,net.minecraft.world.chunk.Chunk)">populateNoise</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">populateNoise</span>&#8203;(<span class="arguments"><a href="../../IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;iWorld,
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">populateNoise</span>&#8203;(<span class="arguments"><a href="../../IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;world,
 <a href="../StructureAccessor.html" title="class in net.minecraft.world.gen">StructureAccessor</a>&nbsp;structureAccessor,
 <a href="../../chunk/Chunk.html" title="interface in net.minecraft.world.chunk">Chunk</a>&nbsp;chunk)</span></div>
 <dl>
@@ -356,9 +356,9 @@ int&nbsp;int3,
 <li class="blockList">
 <section class="detail">
 <h3><a id="getHeight(int,int,net.minecraft.world.Heightmap.Type)">getHeight</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getHeight</span>&#8203;(<span class="arguments">int&nbsp;int2,
-int&nbsp;int3,
-<a href="../../Heightmap.Type.html" title="enum in net.minecraft.world">Heightmap.Type</a>&nbsp;type)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getHeight</span>&#8203;(<span class="arguments">int&nbsp;x,
+int&nbsp;z,
+<a href="../../Heightmap.Type.html" title="enum in net.minecraft.world">Heightmap.Type</a>&nbsp;heightmapType)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="ChunkGenerator.html#getHeight(int,int,net.minecraft.world.Heightmap.Type)">getHeight</a></code>&nbsp;in class&nbsp;<code><a href="ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">ChunkGenerator</a>&lt;<a href="DebugChunkGeneratorConfig.html" title="class in net.minecraft.world.gen.chunk">DebugChunkGeneratorConfig</a>&gt;</code></dd>
@@ -368,8 +368,8 @@ int&nbsp;int3,
 <li class="blockList">
 <section class="detail">
 <h3><a id="getColumnSample(int,int)">getColumnSample</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../BlockView.html" title="interface in net.minecraft.world">BlockView</a></span>&nbsp;<span class="memberName">getColumnSample</span>&#8203;(<span class="arguments">int&nbsp;int2,
-int&nbsp;int3)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../BlockView.html" title="interface in net.minecraft.world">BlockView</a></span>&nbsp;<span class="memberName">getColumnSample</span>&#8203;(<span class="arguments">int&nbsp;x,
+int&nbsp;z)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="ChunkGenerator.html#getColumnSample(int,int)">getColumnSample</a></code>&nbsp;in class&nbsp;<code><a href="ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">ChunkGenerator</a>&lt;<a href="DebugChunkGeneratorConfig.html" title="class in net.minecraft.world.gen.chunk">DebugChunkGeneratorConfig</a>&gt;</code></dd>

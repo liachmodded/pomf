@@ -436,7 +436,7 @@ extends <a href="Entity.html" title="class in net.minecraft.entity">Entity</a></
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>protected </code></td>
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.entity.EntityType,net.minecraft.world.World)">LivingEntity</a></span>&#8203;(<a href="EntityType.html" title="class in net.minecraft.entity">EntityType</a>&lt;? extends <a href="LivingEntity.html" title="class in net.minecraft.entity">LivingEntity</a>&gt;&nbsp;entityType,
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.entity.EntityType,net.minecraft.world.World)">LivingEntity</a></span>&#8203;(<a href="EntityType.html" title="class in net.minecraft.entity">EntityType</a>&lt;? extends <a href="LivingEntity.html" title="class in net.minecraft.entity">LivingEntity</a>&gt;&nbsp;type,
 <a href="../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -609,8 +609,8 @@ float&nbsp;damageMultiplier)</code></th>
 </tr>
 <tr class="altColor" id="i28">
 <td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#damage(net.minecraft.entity.damage.DamageSource,float)">damage</a></span>&#8203;(<a href="damage/DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a>&nbsp;damageSource,
-float&nbsp;float2)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#damage(net.minecraft.entity.damage.DamageSource,float)">damage</a></span>&#8203;(<a href="damage/DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a>&nbsp;source,
+float&nbsp;amount)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i29">
@@ -680,16 +680,16 @@ boolean&nbsp;causedByPlayer)</code></th>
 </tr>
 <tr class="rowColor" id="i41">
 <td class="colFirst"><code>abstract void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#equipStack(net.minecraft.entity.EquipmentSlot,net.minecraft.item.ItemStack)">equipStack</a></span>&#8203;(<a href="EquipmentSlot.html" title="enum in net.minecraft.entity">EquipmentSlot</a>&nbsp;equipmentSlot,
-<a href="../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;itemStack)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#equipStack(net.minecraft.entity.EquipmentSlot,net.minecraft.item.ItemStack)">equipStack</a></span>&#8203;(<a href="EquipmentSlot.html" title="enum in net.minecraft.entity">EquipmentSlot</a>&nbsp;slot,
+<a href="../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;stack)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i42">
 <td class="colFirst"><code>protected void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#fall(double,boolean,net.minecraft.block.BlockState,net.minecraft.util.math.BlockPos)">fall</a></span>&#8203;(double&nbsp;double2,
-boolean&nbsp;bool,
-<a href="../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState,
-<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#fall(double,boolean,net.minecraft.block.BlockState,net.minecraft.util.math.BlockPos)">fall</a></span>&#8203;(double&nbsp;heightDifference,
+boolean&nbsp;onGround,
+<a href="../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;landedState,
+<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;landedPosition)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i43">
@@ -800,7 +800,7 @@ boolean&nbsp;bool,
 </tr>
 <tr class="altColor" id="i64">
 <td class="colFirst"><code><a href="EntityDimensions.html" title="class in net.minecraft.entity">EntityDimensions</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getDimensions(net.minecraft.entity.EntityPose)">getDimensions</a></span>&#8203;(<a href="EntityPose.html" title="enum in net.minecraft.entity">EntityPose</a>&nbsp;entityPose)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getDimensions(net.minecraft.entity.EntityPose)">getDimensions</a></span>&#8203;(<a href="EntityPose.html" title="enum in net.minecraft.entity">EntityPose</a>&nbsp;pose)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i65">
@@ -820,8 +820,8 @@ boolean&nbsp;bool,
 </tr>
 <tr class="altColor" id="i68">
 <td class="colFirst"><code>protected float</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getEyeHeight(net.minecraft.entity.EntityPose,net.minecraft.entity.EntityDimensions)">getEyeHeight</a></span>&#8203;(<a href="EntityPose.html" title="enum in net.minecraft.entity">EntityPose</a>&nbsp;entityPose,
-<a href="EntityDimensions.html" title="class in net.minecraft.entity">EntityDimensions</a>&nbsp;entityDimensions)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getEyeHeight(net.minecraft.entity.EntityPose,net.minecraft.entity.EntityDimensions)">getEyeHeight</a></span>&#8203;(<a href="EntityPose.html" title="enum in net.minecraft.entity">EntityPose</a>&nbsp;pose,
+<a href="EntityDimensions.html" title="class in net.minecraft.entity">EntityDimensions</a>&nbsp;dimensions)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i69">
@@ -1012,18 +1012,18 @@ boolean&nbsp;bool,
 </tr>
 <tr class="altColor" id="i106">
 <td class="colFirst"><code>float</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getYaw(float)">getYaw</a></span>&#8203;(float&nbsp;float2)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getYaw(float)">getYaw</a></span>&#8203;(float&nbsp;tickDelta)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i107">
 <td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#handleFallDamage(float,float)">handleFallDamage</a></span>&#8203;(float&nbsp;float2,
-float&nbsp;float3)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#handleFallDamage(float,float)">handleFallDamage</a></span>&#8203;(float&nbsp;fallDistance,
+float&nbsp;damageMultiplier)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i108">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#handleStatus(byte)">handleStatus</a></span>&#8203;(byte&nbsp;byte2)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#handleStatus(byte)">handleStatus</a></span>&#8203;(byte&nbsp;status)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i109">
@@ -1168,8 +1168,8 @@ float&nbsp;float3)</code></th>
 </tr>
 <tr class="altColor" id="i136">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#lookAt(net.minecraft.command.arguments.EntityAnchorArgumentType.EntityAnchor,net.minecraft.util.math.Vec3d)">lookAt</a></span>&#8203;(<a href="../command/arguments/EntityAnchorArgumentType.EntityAnchor.html" title="enum in net.minecraft.command.arguments">EntityAnchorArgumentType.EntityAnchor</a>&nbsp;entityAnchor,
-<a href="../util/math/Vec3d.html" title="class in net.minecraft.util.math">Vec3d</a>&nbsp;vec3d)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#lookAt(net.minecraft.command.arguments.EntityAnchorArgumentType.EntityAnchor,net.minecraft.util.math.Vec3d)">lookAt</a></span>&#8203;(<a href="../command/arguments/EntityAnchorArgumentType.EntityAnchor.html" title="enum in net.minecraft.command.arguments">EntityAnchorArgumentType.EntityAnchor</a>&nbsp;anchorPoint,
+<a href="../util/math/Vec3d.html" title="class in net.minecraft.util.math">Vec3d</a>&nbsp;target)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i137">
@@ -1270,7 +1270,7 @@ boolean&nbsp;reapplyEffect)</code></th>
 </tr>
 <tr class="rowColor" id="i155">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#onTrackedDataSet(net.minecraft.entity.data.TrackedData)">onTrackedDataSet</a></span>&#8203;(<a href="data/TrackedData.html" title="class in net.minecraft.entity.data">TrackedData</a>&lt;?&gt;&nbsp;trackedData)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#onTrackedDataSet(net.minecraft.entity.data.TrackedData)">onTrackedDataSet</a></span>&#8203;(<a href="data/TrackedData.html" title="class in net.minecraft.entity.data">TrackedData</a>&lt;?&gt;&nbsp;data)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i156">
@@ -1301,7 +1301,7 @@ boolean&nbsp;reapplyEffect)</code></th>
 </tr>
 <tr class="rowColor" id="i161">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#readCustomDataFromTag(net.minecraft.nbt.CompoundTag)">readCustomDataFromTag</a></span>&#8203;(<a href="../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;compoundTag)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#readCustomDataFromTag(net.minecraft.nbt.CompoundTag)">readCustomDataFromTag</a></span>&#8203;(<a href="../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;tag)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i162">
@@ -1361,7 +1361,7 @@ int&nbsp;count)</code></th>
 </tr>
 <tr class="altColor" id="i172">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setHeadYaw(float)">setHeadYaw</a></span>&#8203;(float&nbsp;float2)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setHeadYaw(float)">setHeadYaw</a></span>&#8203;(float&nbsp;headYaw)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i173">
@@ -1393,7 +1393,7 @@ boolean&nbsp;playing)</code></th>
 </tr>
 <tr class="altColor" id="i178">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setOnGround(boolean)">setOnGround</a></span>&#8203;(boolean&nbsp;bool)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setOnGround(boolean)">setOnGround</a></span>&#8203;(boolean&nbsp;onGround)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i179">
@@ -1408,7 +1408,7 @@ boolean&nbsp;playing)</code></th>
 </tr>
 <tr class="rowColor" id="i181">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setSprinting(boolean)">setSprinting</a></span>&#8203;(boolean&nbsp;bool)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setSprinting(boolean)">setSprinting</a></span>&#8203;(boolean&nbsp;sprinting)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i182">
@@ -1429,7 +1429,7 @@ boolean&nbsp;playing)</code></th>
 </tr>
 <tr class="rowColor" id="i185">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setYaw(float)">setYaw</a></span>&#8203;(float&nbsp;float2)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setYaw(float)">setYaw</a></span>&#8203;(float&nbsp;yaw)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i186">
@@ -1562,19 +1562,19 @@ float&nbsp;headRotation)</code></th>
 </tr>
 <tr class="altColor" id="i210">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#updateTrackedHeadRotation(float,int)">updateTrackedHeadRotation</a></span>&#8203;(float&nbsp;float2,
-int&nbsp;int2)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#updateTrackedHeadRotation(float,int)">updateTrackedHeadRotation</a></span>&#8203;(float&nbsp;yaw,
+int&nbsp;interpolationSteps)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i211">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#updateTrackedPositionAndAngles(double,double,double,float,float,int,boolean)">updateTrackedPositionAndAngles</a></span>&#8203;(double&nbsp;double2,
-double&nbsp;double3,
-double&nbsp;double4,
-float&nbsp;float2,
-float&nbsp;float3,
-int&nbsp;int2,
-boolean&nbsp;bool)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#updateTrackedPositionAndAngles(double,double,double,float,float,int,boolean)">updateTrackedPositionAndAngles</a></span>&#8203;(double&nbsp;x,
+double&nbsp;y,
+double&nbsp;z,
+float&nbsp;yaw,
+float&nbsp;pitch,
+int&nbsp;interpolationSteps,
+boolean&nbsp;interpolate)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i212">
@@ -1584,7 +1584,7 @@ boolean&nbsp;bool)</code></th>
 </tr>
 <tr class="rowColor" id="i213">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#writeCustomDataToTag(net.minecraft.nbt.CompoundTag)">writeCustomDataToTag</a></span>&#8203;(<a href="../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;compoundTag)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#writeCustomDataToTag(net.minecraft.nbt.CompoundTag)">writeCustomDataToTag</a></span>&#8203;(<a href="../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;tag)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -1949,7 +1949,7 @@ boolean&nbsp;bool)</code></th>
 <li class="blockList">
 <section class="detail">
 <h3><a id="&lt;init&gt;(net.minecraft.entity.EntityType,net.minecraft.world.World)">LivingEntity</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="memberName">LivingEntity</span>&#8203;(<span class="arguments"><a href="EntityType.html" title="class in net.minecraft.entity">EntityType</a>&lt;? extends <a href="LivingEntity.html" title="class in net.minecraft.entity">LivingEntity</a>&gt;&nbsp;entityType,
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="memberName">LivingEntity</span>&#8203;(<span class="arguments"><a href="EntityType.html" title="class in net.minecraft.entity">EntityType</a>&lt;? extends <a href="LivingEntity.html" title="class in net.minecraft.entity">LivingEntity</a>&gt;&nbsp;type,
 <a href="../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world)</span></div>
 </section>
 </li>
@@ -2010,10 +2010,10 @@ boolean&nbsp;bool)</code></th>
 <li class="blockList">
 <section class="detail">
 <h3><a id="fall(double,boolean,net.minecraft.block.BlockState,net.minecraft.util.math.BlockPos)">fall</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">fall</span>&#8203;(<span class="arguments">double&nbsp;double2,
-boolean&nbsp;bool,
-<a href="../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState,
-<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos)</span></div>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">fall</span>&#8203;(<span class="arguments">double&nbsp;heightDifference,
+boolean&nbsp;onGround,
+<a href="../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;landedState,
+<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;landedPosition)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="Entity.html#fall(double,boolean,net.minecraft.block.BlockState,net.minecraft.util.math.BlockPos)">fall</a></code>&nbsp;in class&nbsp;<code><a href="Entity.html" title="class in net.minecraft.entity">Entity</a></code></dd>
@@ -2195,7 +2195,7 @@ boolean&nbsp;bool,
 <li class="blockList">
 <section class="detail">
 <h3><a id="writeCustomDataToTag(net.minecraft.nbt.CompoundTag)">writeCustomDataToTag</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">writeCustomDataToTag</span>&#8203;(<span class="arguments"><a href="../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;compoundTag)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">writeCustomDataToTag</span>&#8203;(<span class="arguments"><a href="../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;tag)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="Entity.html#writeCustomDataToTag(net.minecraft.nbt.CompoundTag)">writeCustomDataToTag</a></code>&nbsp;in class&nbsp;<code><a href="Entity.html" title="class in net.minecraft.entity">Entity</a></code></dd>
@@ -2205,7 +2205,7 @@ boolean&nbsp;bool,
 <li class="blockList">
 <section class="detail">
 <h3><a id="readCustomDataFromTag(net.minecraft.nbt.CompoundTag)">readCustomDataFromTag</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">readCustomDataFromTag</span>&#8203;(<span class="arguments"><a href="../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;compoundTag)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">readCustomDataFromTag</span>&#8203;(<span class="arguments"><a href="../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;tag)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="Entity.html#readCustomDataFromTag(net.minecraft.nbt.CompoundTag)">readCustomDataFromTag</a></code>&nbsp;in class&nbsp;<code><a href="Entity.html" title="class in net.minecraft.entity">Entity</a></code></dd>
@@ -2373,8 +2373,8 @@ boolean&nbsp;reapplyEffect)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="damage(net.minecraft.entity.damage.DamageSource,float)">damage</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">damage</span>&#8203;(<span class="arguments"><a href="damage/DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a>&nbsp;damageSource,
-float&nbsp;float2)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">damage</span>&#8203;(<span class="arguments"><a href="damage/DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a>&nbsp;source,
+float&nbsp;amount)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="Entity.html#damage(net.minecraft.entity.damage.DamageSource,float)">damage</a></code>&nbsp;in class&nbsp;<code><a href="Entity.html" title="class in net.minecraft.entity">Entity</a></code></dd>
@@ -2511,7 +2511,7 @@ double&nbsp;double3)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="setOnGround(boolean)">setOnGround</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setOnGround</span>&#8203;(<span class="arguments">boolean&nbsp;bool)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setOnGround</span>&#8203;(<span class="arguments">boolean&nbsp;onGround)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="Entity.html#setOnGround(boolean)">setOnGround</a></code>&nbsp;in class&nbsp;<code><a href="Entity.html" title="class in net.minecraft.entity">Entity</a></code></dd>
@@ -2549,8 +2549,8 @@ double&nbsp;double3)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="handleFallDamage(float,float)">handleFallDamage</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">handleFallDamage</span>&#8203;(<span class="arguments">float&nbsp;float2,
-float&nbsp;float3)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">handleFallDamage</span>&#8203;(<span class="arguments">float&nbsp;fallDistance,
+float&nbsp;damageMultiplier)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="Entity.html#handleFallDamage(float,float)">handleFallDamage</a></code>&nbsp;in class&nbsp;<code><a href="Entity.html" title="class in net.minecraft.entity">Entity</a></code></dd>
@@ -2678,7 +2678,7 @@ boolean&nbsp;bool)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="handleStatus(byte)">handleStatus</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">handleStatus</span>&#8203;(<span class="arguments">byte&nbsp;byte2)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">handleStatus</span>&#8203;(<span class="arguments">byte&nbsp;status)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="Entity.html#handleStatus(byte)">handleStatus</a></code>&nbsp;in class&nbsp;<code><a href="Entity.html" title="class in net.minecraft.entity">Entity</a></code></dd>
@@ -2799,8 +2799,8 @@ boolean&nbsp;bool)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="equipStack(net.minecraft.entity.EquipmentSlot,net.minecraft.item.ItemStack)">equipStack</a></h3>
-<div class="memberSignature"><span class="modifiers">public abstract</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">equipStack</span>&#8203;(<span class="arguments"><a href="EquipmentSlot.html" title="enum in net.minecraft.entity">EquipmentSlot</a>&nbsp;equipmentSlot,
-<a href="../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;itemStack)</span></div>
+<div class="memberSignature"><span class="modifiers">public abstract</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">equipStack</span>&#8203;(<span class="arguments"><a href="EquipmentSlot.html" title="enum in net.minecraft.entity">EquipmentSlot</a>&nbsp;slot,
+<a href="../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;stack)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="Entity.html#equipStack(net.minecraft.entity.EquipmentSlot,net.minecraft.item.ItemStack)">equipStack</a></code>&nbsp;in class&nbsp;<code><a href="Entity.html" title="class in net.minecraft.entity">Entity</a></code></dd>
@@ -2816,7 +2816,7 @@ boolean&nbsp;bool)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="setSprinting(boolean)">setSprinting</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setSprinting</span>&#8203;(<span class="arguments">boolean&nbsp;bool)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setSprinting</span>&#8203;(<span class="arguments">boolean&nbsp;sprinting)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="Entity.html#setSprinting(boolean)">setSprinting</a></code>&nbsp;in class&nbsp;<code><a href="Entity.html" title="class in net.minecraft.entity">Entity</a></code></dd>
@@ -3025,13 +3025,13 @@ float&nbsp;headRotation)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="updateTrackedPositionAndAngles(double,double,double,float,float,int,boolean)">updateTrackedPositionAndAngles</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">updateTrackedPositionAndAngles</span>&#8203;(<span class="arguments">double&nbsp;double2,
-double&nbsp;double3,
-double&nbsp;double4,
-float&nbsp;float2,
-float&nbsp;float3,
-int&nbsp;int2,
-boolean&nbsp;bool)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">updateTrackedPositionAndAngles</span>&#8203;(<span class="arguments">double&nbsp;x,
+double&nbsp;y,
+double&nbsp;z,
+float&nbsp;yaw,
+float&nbsp;pitch,
+int&nbsp;interpolationSteps,
+boolean&nbsp;interpolate)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="Entity.html#updateTrackedPositionAndAngles(double,double,double,float,float,int,boolean)">updateTrackedPositionAndAngles</a></code>&nbsp;in class&nbsp;<code><a href="Entity.html" title="class in net.minecraft.entity">Entity</a></code></dd>
@@ -3041,8 +3041,8 @@ boolean&nbsp;bool)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="updateTrackedHeadRotation(float,int)">updateTrackedHeadRotation</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">updateTrackedHeadRotation</span>&#8203;(<span class="arguments">float&nbsp;float2,
-int&nbsp;int2)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">updateTrackedHeadRotation</span>&#8203;(<span class="arguments">float&nbsp;yaw,
+int&nbsp;interpolationSteps)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="Entity.html#updateTrackedHeadRotation(float,int)">updateTrackedHeadRotation</a></code>&nbsp;in class&nbsp;<code><a href="Entity.html" title="class in net.minecraft.entity">Entity</a></code></dd>
@@ -3071,7 +3071,7 @@ int&nbsp;count)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getYaw(float)">getYaw</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">float</span>&nbsp;<span class="memberName">getYaw</span>&#8203;(<span class="arguments">float&nbsp;float2)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">float</span>&nbsp;<span class="memberName">getYaw</span>&#8203;(<span class="arguments">float&nbsp;tickDelta)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="Entity.html#getYaw(float)">getYaw</a></code>&nbsp;in class&nbsp;<code><a href="Entity.html" title="class in net.minecraft.entity">Entity</a></code></dd>
@@ -3133,7 +3133,7 @@ int&nbsp;count)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="setHeadYaw(float)">setHeadYaw</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setHeadYaw</span>&#8203;(<span class="arguments">float&nbsp;float2)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setHeadYaw</span>&#8203;(<span class="arguments">float&nbsp;headYaw)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="Entity.html#setHeadYaw(float)">setHeadYaw</a></code>&nbsp;in class&nbsp;<code><a href="Entity.html" title="class in net.minecraft.entity">Entity</a></code></dd>
@@ -3143,7 +3143,7 @@ int&nbsp;count)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="setYaw(float)">setYaw</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setYaw</span>&#8203;(<span class="arguments">float&nbsp;float2)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setYaw</span>&#8203;(<span class="arguments">float&nbsp;yaw)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="Entity.html#setYaw(float)">setYaw</a></code>&nbsp;in class&nbsp;<code><a href="Entity.html" title="class in net.minecraft.entity">Entity</a></code></dd>
@@ -3214,7 +3214,7 @@ boolean&nbsp;value)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="onTrackedDataSet(net.minecraft.entity.data.TrackedData)">onTrackedDataSet</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">onTrackedDataSet</span>&#8203;(<span class="arguments"><a href="data/TrackedData.html" title="class in net.minecraft.entity.data">TrackedData</a>&lt;?&gt;&nbsp;trackedData)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">onTrackedDataSet</span>&#8203;(<span class="arguments"><a href="data/TrackedData.html" title="class in net.minecraft.entity.data">TrackedData</a>&lt;?&gt;&nbsp;data)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="Entity.html#onTrackedDataSet(net.minecraft.entity.data.TrackedData)">onTrackedDataSet</a></code>&nbsp;in class&nbsp;<code><a href="Entity.html" title="class in net.minecraft.entity">Entity</a></code></dd>
@@ -3224,8 +3224,8 @@ boolean&nbsp;value)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="lookAt(net.minecraft.command.arguments.EntityAnchorArgumentType.EntityAnchor,net.minecraft.util.math.Vec3d)">lookAt</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">lookAt</span>&#8203;(<span class="arguments"><a href="../command/arguments/EntityAnchorArgumentType.EntityAnchor.html" title="enum in net.minecraft.command.arguments">EntityAnchorArgumentType.EntityAnchor</a>&nbsp;entityAnchor,
-<a href="../util/math/Vec3d.html" title="class in net.minecraft.util.math">Vec3d</a>&nbsp;vec3d)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">lookAt</span>&#8203;(<span class="arguments"><a href="../command/arguments/EntityAnchorArgumentType.EntityAnchor.html" title="enum in net.minecraft.command.arguments">EntityAnchorArgumentType.EntityAnchor</a>&nbsp;anchorPoint,
+<a href="../util/math/Vec3d.html" title="class in net.minecraft.util.math">Vec3d</a>&nbsp;target)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="Entity.html#lookAt(net.minecraft.command.arguments.EntityAnchorArgumentType.EntityAnchor,net.minecraft.util.math.Vec3d)">lookAt</a></code>&nbsp;in class&nbsp;<code><a href="Entity.html" title="class in net.minecraft.entity">Entity</a></code></dd>
@@ -3362,7 +3362,7 @@ boolean&nbsp;playing)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getDimensions(net.minecraft.entity.EntityPose)">getDimensions</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="EntityDimensions.html" title="class in net.minecraft.entity">EntityDimensions</a></span>&nbsp;<span class="memberName">getDimensions</span>&#8203;(<span class="arguments"><a href="EntityPose.html" title="enum in net.minecraft.entity">EntityPose</a>&nbsp;entityPose)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="EntityDimensions.html" title="class in net.minecraft.entity">EntityDimensions</a></span>&nbsp;<span class="memberName">getDimensions</span>&#8203;(<span class="arguments"><a href="EntityPose.html" title="enum in net.minecraft.entity">EntityPose</a>&nbsp;pose)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="Entity.html#getDimensions(net.minecraft.entity.EntityPose)">getDimensions</a></code>&nbsp;in class&nbsp;<code><a href="Entity.html" title="class in net.minecraft.entity">Entity</a></code></dd>
@@ -3442,8 +3442,8 @@ boolean&nbsp;playing)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getEyeHeight(net.minecraft.entity.EntityPose,net.minecraft.entity.EntityDimensions)">getEyeHeight</a></h3>
-<div class="memberSignature"><span class="modifiers">protected final</span>&nbsp;<span class="returnType">float</span>&nbsp;<span class="memberName">getEyeHeight</span>&#8203;(<span class="arguments"><a href="EntityPose.html" title="enum in net.minecraft.entity">EntityPose</a>&nbsp;entityPose,
-<a href="EntityDimensions.html" title="class in net.minecraft.entity">EntityDimensions</a>&nbsp;entityDimensions)</span></div>
+<div class="memberSignature"><span class="modifiers">protected final</span>&nbsp;<span class="returnType">float</span>&nbsp;<span class="memberName">getEyeHeight</span>&#8203;(<span class="arguments"><a href="EntityPose.html" title="enum in net.minecraft.entity">EntityPose</a>&nbsp;pose,
+<a href="EntityDimensions.html" title="class in net.minecraft.entity">EntityDimensions</a>&nbsp;dimensions)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="Entity.html#getEyeHeight(net.minecraft.entity.EntityPose,net.minecraft.entity.EntityDimensions)">getEyeHeight</a></code>&nbsp;in class&nbsp;<code><a href="Entity.html" title="class in net.minecraft.entity">Entity</a></code></dd>

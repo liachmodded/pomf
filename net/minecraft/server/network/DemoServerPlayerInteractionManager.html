@@ -128,7 +128,7 @@ extends <a href="ServerPlayerInteractionManager.html" title="class in net.minecr
 </thead>
 <tbody>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.server.world.ServerWorld)">DemoServerPlayerInteractionManager</a></span>&#8203;(<a href="../world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a>&nbsp;serverWorld)</code></th>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.server.world.ServerWorld)">DemoServerPlayerInteractionManager</a></span>&#8203;(<a href="../world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a>&nbsp;world)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -156,27 +156,27 @@ extends <a href="ServerPlayerInteractionManager.html" title="class in net.minecr
 <tbody>
 <tr class="altColor" id="i0">
 <td class="colFirst"><code><a href="../../util/ActionResult.html" title="enum in net.minecraft.util">ActionResult</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#interactBlock(net.minecraft.entity.player.PlayerEntity,net.minecraft.world.World,net.minecraft.item.ItemStack,net.minecraft.util.Hand,net.minecraft.util.hit.BlockHitResult)">interactBlock</a></span>&#8203;(<a href="../../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;playerEntity,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#interactBlock(net.minecraft.entity.player.PlayerEntity,net.minecraft.world.World,net.minecraft.item.ItemStack,net.minecraft.util.Hand,net.minecraft.util.hit.BlockHitResult)">interactBlock</a></span>&#8203;(<a href="../../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;player,
 <a href="../../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world,
-<a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;itemStack,
+<a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;stack,
 <a href="../../util/Hand.html" title="enum in net.minecraft.util">Hand</a>&nbsp;hand,
-<a href="../../util/hit/BlockHitResult.html" title="class in net.minecraft.util.hit">BlockHitResult</a>&nbsp;blockHitResult)</code></th>
+<a href="../../util/hit/BlockHitResult.html" title="class in net.minecraft.util.hit">BlockHitResult</a>&nbsp;hitResult)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
 <td class="colFirst"><code><a href="../../util/ActionResult.html" title="enum in net.minecraft.util">ActionResult</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#interactItem(net.minecraft.entity.player.PlayerEntity,net.minecraft.world.World,net.minecraft.item.ItemStack,net.minecraft.util.Hand)">interactItem</a></span>&#8203;(<a href="../../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;playerEntity,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#interactItem(net.minecraft.entity.player.PlayerEntity,net.minecraft.world.World,net.minecraft.item.ItemStack,net.minecraft.util.Hand)">interactItem</a></span>&#8203;(<a href="../../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;player,
 <a href="../../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world,
-<a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;itemStack,
+<a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;stack,
 <a href="../../util/Hand.html" title="enum in net.minecraft.util">Hand</a>&nbsp;hand)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i2">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#processBlockBreakingAction(net.minecraft.util.math.BlockPos,net.minecraft.network.packet.c2s.play.PlayerActionC2SPacket.Action,net.minecraft.util.math.Direction,int)">processBlockBreakingAction</a></span>&#8203;(<a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#processBlockBreakingAction(net.minecraft.util.math.BlockPos,net.minecraft.network.packet.c2s.play.PlayerActionC2SPacket.Action,net.minecraft.util.math.Direction,int)">processBlockBreakingAction</a></span>&#8203;(<a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
 <a href="../../network/packet/c2s/play/PlayerActionC2SPacket.Action.html" title="enum in net.minecraft.network.packet.c2s.play">PlayerActionC2SPacket.Action</a>&nbsp;action,
 <a href="../../util/math/Direction.html" title="enum in net.minecraft.util.math">Direction</a>&nbsp;direction,
-int&nbsp;int2)</code></th>
+int&nbsp;worldHeight)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i3">
@@ -214,7 +214,7 @@ int&nbsp;int2)</code></th>
 <li class="blockList">
 <section class="detail">
 <h3><a id="&lt;init&gt;(net.minecraft.server.world.ServerWorld)">DemoServerPlayerInteractionManager</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">DemoServerPlayerInteractionManager</span>&#8203;(<span class="arguments"><a href="../world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a>&nbsp;serverWorld)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">DemoServerPlayerInteractionManager</span>&#8203;(<span class="arguments"><a href="../world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a>&nbsp;world)</span></div>
 </section>
 </li>
 </ul>
@@ -240,10 +240,10 @@ int&nbsp;int2)</code></th>
 <li class="blockList">
 <section class="detail">
 <h3><a id="processBlockBreakingAction(net.minecraft.util.math.BlockPos,net.minecraft.network.packet.c2s.play.PlayerActionC2SPacket.Action,net.minecraft.util.math.Direction,int)">processBlockBreakingAction</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">processBlockBreakingAction</span>&#8203;(<span class="arguments"><a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">processBlockBreakingAction</span>&#8203;(<span class="arguments"><a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
 <a href="../../network/packet/c2s/play/PlayerActionC2SPacket.Action.html" title="enum in net.minecraft.network.packet.c2s.play">PlayerActionC2SPacket.Action</a>&nbsp;action,
 <a href="../../util/math/Direction.html" title="enum in net.minecraft.util.math">Direction</a>&nbsp;direction,
-int&nbsp;int2)</span></div>
+int&nbsp;worldHeight)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="ServerPlayerInteractionManager.html#processBlockBreakingAction(net.minecraft.util.math.BlockPos,net.minecraft.network.packet.c2s.play.PlayerActionC2SPacket.Action,net.minecraft.util.math.Direction,int)">processBlockBreakingAction</a></code>&nbsp;in class&nbsp;<code><a href="ServerPlayerInteractionManager.html" title="class in net.minecraft.server.network">ServerPlayerInteractionManager</a></code></dd>
@@ -253,9 +253,9 @@ int&nbsp;int2)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="interactItem(net.minecraft.entity.player.PlayerEntity,net.minecraft.world.World,net.minecraft.item.ItemStack,net.minecraft.util.Hand)">interactItem</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../util/ActionResult.html" title="enum in net.minecraft.util">ActionResult</a></span>&nbsp;<span class="memberName">interactItem</span>&#8203;(<span class="arguments"><a href="../../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;playerEntity,
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../util/ActionResult.html" title="enum in net.minecraft.util">ActionResult</a></span>&nbsp;<span class="memberName">interactItem</span>&#8203;(<span class="arguments"><a href="../../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;player,
 <a href="../../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world,
-<a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;itemStack,
+<a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;stack,
 <a href="../../util/Hand.html" title="enum in net.minecraft.util">Hand</a>&nbsp;hand)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
@@ -266,11 +266,11 @@ int&nbsp;int2)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="interactBlock(net.minecraft.entity.player.PlayerEntity,net.minecraft.world.World,net.minecraft.item.ItemStack,net.minecraft.util.Hand,net.minecraft.util.hit.BlockHitResult)">interactBlock</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../util/ActionResult.html" title="enum in net.minecraft.util">ActionResult</a></span>&nbsp;<span class="memberName">interactBlock</span>&#8203;(<span class="arguments"><a href="../../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;playerEntity,
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../util/ActionResult.html" title="enum in net.minecraft.util">ActionResult</a></span>&nbsp;<span class="memberName">interactBlock</span>&#8203;(<span class="arguments"><a href="../../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;player,
 <a href="../../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world,
-<a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;itemStack,
+<a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;stack,
 <a href="../../util/Hand.html" title="enum in net.minecraft.util">Hand</a>&nbsp;hand,
-<a href="../../util/hit/BlockHitResult.html" title="class in net.minecraft.util.hit">BlockHitResult</a>&nbsp;blockHitResult)</span></div>
+<a href="../../util/hit/BlockHitResult.html" title="class in net.minecraft.util.hit">BlockHitResult</a>&nbsp;hitResult)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="ServerPlayerInteractionManager.html#interactBlock(net.minecraft.entity.player.PlayerEntity,net.minecraft.world.World,net.minecraft.item.ItemStack,net.minecraft.util.Hand,net.minecraft.util.hit.BlockHitResult)">interactBlock</a></code>&nbsp;in class&nbsp;<code><a href="ServerPlayerInteractionManager.html" title="class in net.minecraft.server.network">ServerPlayerInteractionManager</a></code></dd>

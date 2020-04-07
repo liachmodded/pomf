@@ -244,12 +244,12 @@ implements <a href="../../../Packet.html" title="interface in net.minecraft.netw
 </tr>
 <tr class="altColor" id="i2">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#read(net.minecraft.network.PacketByteBuf)">read</a></span>&#8203;(<a href="../../../PacketByteBuf.html" title="class in net.minecraft.network">PacketByteBuf</a>&nbsp;packetByteBuf)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#read(net.minecraft.network.PacketByteBuf)">read</a></span>&#8203;(<a href="../../../PacketByteBuf.html" title="class in net.minecraft.network">PacketByteBuf</a>&nbsp;buf)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i3">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#write(net.minecraft.network.PacketByteBuf)">write</a></span>&#8203;(<a href="../../../PacketByteBuf.html" title="class in net.minecraft.network">PacketByteBuf</a>&nbsp;packetByteBuf)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#write(net.minecraft.network.PacketByteBuf)">write</a></span>&#8203;(<a href="../../../PacketByteBuf.html" title="class in net.minecraft.network">PacketByteBuf</a>&nbsp;buf)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -348,7 +348,7 @@ implements <a href="../../../Packet.html" title="interface in net.minecraft.netw
 <li class="blockList">
 <section class="detail">
 <h3><a id="read(net.minecraft.network.PacketByteBuf)">read</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">read</span>&#8203;(<span class="arguments"><a href="../../../PacketByteBuf.html" title="class in net.minecraft.network">PacketByteBuf</a>&nbsp;packetByteBuf)</span>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">read</span>&#8203;(<span class="arguments"><a href="../../../PacketByteBuf.html" title="class in net.minecraft.network">PacketByteBuf</a>&nbsp;buf)</span>
           throws <span class="exceptions"><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
@@ -361,7 +361,7 @@ implements <a href="../../../Packet.html" title="interface in net.minecraft.netw
 <li class="blockList">
 <section class="detail">
 <h3><a id="write(net.minecraft.network.PacketByteBuf)">write</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">write</span>&#8203;(<span class="arguments"><a href="../../../PacketByteBuf.html" title="class in net.minecraft.network">PacketByteBuf</a>&nbsp;packetByteBuf)</span>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">write</span>&#8203;(<span class="arguments"><a href="../../../PacketByteBuf.html" title="class in net.minecraft.network">PacketByteBuf</a>&nbsp;buf)</span>
            throws <span class="exceptions"><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
@@ -385,7 +385,6 @@ implements <a href="../../../Packet.html" title="interface in net.minecraft.netw
 <section class="detail">
 <h3><a id="isWritingErrorSkippable()">isWritingErrorSkippable</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isWritingErrorSkippable</span>()</div>
-<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../Packet.html#isWritingErrorSkippable()">Packet</a></code></span></div>
 <div class="block">Returns whether a throwable in writing of this packet allows the
  connection to simply skip the packet's sending than disconnecting.</div>
 <dl>
