@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":10};
+<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -56,13 +56,13 @@ loadScripts(document, 'script');</script>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
@@ -90,12 +90,64 @@ loadScripts(document, 'script');</script>
 <div class="inheritance">net.minecraft.world.WanderingTraderManager</div>
 </div>
 <section class="description">
+<dl>
+<dt>All Implemented Interfaces:</dt>
+<dd><code><a href="gen/Spawner.html" title="interface in net.minecraft.world.gen">Spawner</a></code></dd>
+</dl>
 <hr>
 <pre>public class <span class="typeNameLabel">WanderingTraderManager</span>
-extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></pre>
+extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>
+implements <a href="gen/Spawner.html" title="interface in net.minecraft.world.gen">Spawner</a></pre>
 </section>
 <section class="summary">
 <ul class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<li class="blockList">
+<section class="fieldSummary"><a id="field.summary">
+<!--   -->
+</a>
+<h2>Field Summary</h2>
+<div class="memberSummary">
+<table>
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<thead>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colSecond" scope="col">Field</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="level/ServerWorldProperties.html" title="interface in net.minecraft.world.level">ServerWorldProperties</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#field_24387">field_24387</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#random">random</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#spawnChance">spawnChance</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#spawnDelay">spawnDelay</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#spawnTimer">spawnTimer</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</li>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <li class="blockList">
 <section class="constructorSummary"><a id="constructor.summary">
@@ -113,7 +165,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </thead>
 <tbody>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.server.world.ServerWorld)">WanderingTraderManager</a></span>&#8203;(<a href="../server/world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a>&nbsp;world)</code></th>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.world.level.ServerWorldProperties)">WanderingTraderManager</a></span>&#8203;(<a href="level/ServerWorldProperties.html" title="interface in net.minecraft.world.level">ServerWorldProperties</a>&nbsp;serverWorldProperties)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -140,8 +192,34 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </thead>
 <tbody>
 <tr class="altColor" id="i0">
-<td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#tick()">tick</a></span>()</code></th>
+<td class="colFirst"><code>private <a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getNearbySpawnPos(net.minecraft.world.WorldView,net.minecraft.util.math.BlockPos,int)">getNearbySpawnPos</a></span>&#8203;(<a href="WorldView.html" title="interface in net.minecraft.world">WorldView</a>&nbsp;worldView,
+<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
+int&nbsp;int2)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i1">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_18018(net.minecraft.server.world.ServerWorld)">method_18018</a></span>&#8203;(<a href="../server/world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a>&nbsp;serverWorld)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i2">
+<td class="colFirst"><code>int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#spawn(net.minecraft.server.world.ServerWorld,boolean,boolean)">spawn</a></span>&#8203;(<a href="../server/world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a>&nbsp;serverWorld,
+boolean&nbsp;bool,
+boolean&nbsp;bool2)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i3">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#spawnLlama(net.minecraft.entity.passive.WanderingTraderEntity,int)">spawnLlama</a></span>&#8203;(<a href="../entity/passive/WanderingTraderEntity.html" title="class in net.minecraft.entity.passive">WanderingTraderEntity</a>&nbsp;wanderingTrader,
+int&nbsp;range)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i4">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#wontSuffocateAt(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos)">wontSuffocateAt</a></span>&#8203;(<a href="BlockView.html" title="interface in net.minecraft.world">BlockView</a>&nbsp;blockView,
+<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -159,6 +237,46 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </section>
 <section class="details">
 <ul class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<li class="blockList">
+<section class="fieldDetails"><a id="field.detail">
+<!--   -->
+</a>
+<h2>Field Details</h2>
+<ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="random">random</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a></span>&nbsp;<span class="memberName">random</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="field_24387">field_24387</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="level/ServerWorldProperties.html" title="interface in net.minecraft.world.level">ServerWorldProperties</a></span>&nbsp;<span class="memberName">field_24387</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="spawnTimer">spawnTimer</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">spawnTimer</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="spawnDelay">spawnDelay</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">spawnDelay</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="spawnChance">spawnChance</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">spawnChance</span></div>
+</section>
+</li>
+</ul>
+</section>
+</li>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <li class="blockList">
 <section class="constructorDetails"><a id="constructor.detail">
@@ -168,8 +286,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="&lt;init&gt;(net.minecraft.server.world.ServerWorld)">WanderingTraderManager</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">WanderingTraderManager</span>&#8203;(<span class="arguments"><a href="../server/world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a>&nbsp;world)</span></div>
+<h3><a id="&lt;init&gt;(net.minecraft.world.level.ServerWorldProperties)">WanderingTraderManager</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">WanderingTraderManager</span>&#8203;(<span class="arguments"><a href="level/ServerWorldProperties.html" title="interface in net.minecraft.world.level">ServerWorldProperties</a>&nbsp;serverWorldProperties)</span></div>
 </section>
 </li>
 </ul>
@@ -184,8 +302,43 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="tick()">tick</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">tick</span>()</div>
+<h3><a id="spawn(net.minecraft.server.world.ServerWorld,boolean,boolean)">spawn</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">spawn</span>&#8203;(<span class="arguments"><a href="../server/world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a>&nbsp;serverWorld,
+boolean&nbsp;bool,
+boolean&nbsp;bool2)</span></div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="gen/Spawner.html#spawn(net.minecraft.server.world.ServerWorld,boolean,boolean)">spawn</a></code>&nbsp;in interface&nbsp;<code><a href="gen/Spawner.html" title="interface in net.minecraft.world.gen">Spawner</a></code></dd>
+</dl>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="method_18018(net.minecraft.server.world.ServerWorld)">method_18018</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">method_18018</span>&#8203;(<span class="arguments"><a href="../server/world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a>&nbsp;serverWorld)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="spawnLlama(net.minecraft.entity.passive.WanderingTraderEntity,int)">spawnLlama</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">spawnLlama</span>&#8203;(<span class="arguments"><a href="../entity/passive/WanderingTraderEntity.html" title="class in net.minecraft.entity.passive">WanderingTraderEntity</a>&nbsp;wanderingTrader,
+int&nbsp;range)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="getNearbySpawnPos(net.minecraft.world.WorldView,net.minecraft.util.math.BlockPos,int)">getNearbySpawnPos</a></h3>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a></span>&nbsp;<span class="memberName">getNearbySpawnPos</span>&#8203;(<span class="arguments"><a href="WorldView.html" title="interface in net.minecraft.world">WorldView</a>&nbsp;worldView,
+<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
+int&nbsp;int2)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="wontSuffocateAt(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos)">wontSuffocateAt</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">wontSuffocateAt</span>&#8203;(<span class="arguments"><a href="BlockView.html" title="interface in net.minecraft.world">BlockView</a>&nbsp;blockView,
+<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos)</span></div>
 </section>
 </li>
 </ul>
@@ -221,13 +374,13 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>

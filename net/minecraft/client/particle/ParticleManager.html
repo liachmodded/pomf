@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10};
+<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -157,7 +157,52 @@ implements <a href="../../resource/ResourceReloadListener.html" title="interface
 </thead>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><code>protected <a href="../../world/World.html" title="class in net.minecraft.world">World</a></code></td>
+<td class="colFirst"><code>private <a href="http://fastutil.di.unimi.it/docs/it/unimi/dsi/fastutil/ints/Int2ObjectMap.html?is-external=true" title="class or interface in it.unimi.dsi.fastutil.ints" class="externalLink">Int2ObjectMap</a>&lt;<a href="ParticleFactory.html" title="interface in net.minecraft.client.particle">ParticleFactory</a>&lt;?&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#factories">factories</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Queue.html?is-external=true" title="class or interface in java.util" class="externalLink">Queue</a>&lt;<a href="EmitterParticle.html" title="class in net.minecraft.client.particle">EmitterParticle</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#newEmitterParticles">newEmitterParticles</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Queue.html?is-external=true" title="class or interface in java.util" class="externalLink">Queue</a>&lt;<a href="Particle.html" title="class in net.minecraft.client.particle">Particle</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#newParticles">newParticles</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="ParticleTextureSheet.html" title="interface in net.minecraft.client.particle">ParticleTextureSheet</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#PARTICLE_TEXTURE_SHEETS">PARTICLE_TEXTURE_SHEETS</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../texture/SpriteAtlasTexture.html" title="class in net.minecraft.client.texture">SpriteAtlasTexture</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#particleAtlasTexture">particleAtlasTexture</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util" class="externalLink">Map</a>&lt;<a href="ParticleTextureSheet.html" title="interface in net.minecraft.client.particle">ParticleTextureSheet</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Queue.html?is-external=true" title="class or interface in java.util" class="externalLink">Queue</a>&lt;<a href="Particle.html" title="class in net.minecraft.client.particle">Particle</a>&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#particles">particles</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#random">random</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util" class="externalLink">Map</a>&lt;<a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>,&#8203;<a href="ParticleManager.SimpleSpriteProvider.html" title="class in net.minecraft.client.particle">ParticleManager.SimpleSpriteProvider</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#spriteAwareFactories">spriteAwareFactories</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../texture/TextureManager.html" title="class in net.minecraft.client.texture">TextureManager</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#textureManager">textureManager</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected <a href="../world/ClientWorld.html" title="class in net.minecraft.client.world">ClientWorld</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#world">world</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -183,7 +228,7 @@ implements <a href="../../resource/ResourceReloadListener.html" title="interface
 </thead>
 <tbody>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.world.World,net.minecraft.client.texture.TextureManager)">ParticleManager</a></span>&#8203;(<a href="../../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world,
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.client.world.ClientWorld,net.minecraft.client.texture.TextureManager)">ParticleManager</a></span>&#8203;(<a href="../world/ClientWorld.html" title="class in net.minecraft.client.world">ClientWorld</a>&nbsp;world,
 <a href="../texture/TextureManager.html" title="class in net.minecraft.client.texture">TextureManager</a>&nbsp;textureManager)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -212,7 +257,7 @@ implements <a href="../../resource/ResourceReloadListener.html" title="interface
 <tbody>
 <tr class="altColor" id="i0">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addBlockBreakingParticles(net.minecraft.util.math.BlockPos,net.minecraft.util.math.Direction)">addBlockBreakingParticles</a></span>&#8203;(<a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addBlockBreakingParticles(net.minecraft.util.math.BlockPos,net.minecraft.util.math.Direction)">addBlockBreakingParticles</a></span>&#8203;(<a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
 <a href="../../util/math/Direction.html" title="enum in net.minecraft.util.math">Direction</a>&nbsp;direction)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -257,11 +302,46 @@ double&nbsp;velocityZ)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i7">
+<td class="colFirst"><code>private &lt;T extends <a href="../../particle/ParticleEffect.html" title="interface in net.minecraft.particle">ParticleEffect</a>&gt;<br><a href="Particle.html" title="class in net.minecraft.client.particle">Particle</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createParticle(T,double,double,double,double,double,double)">createParticle</a></span>&#8203;(T&nbsp;parameters,
+double&nbsp;x,
+double&nbsp;y,
+double&nbsp;z,
+double&nbsp;velocityX,
+double&nbsp;velocityY,
+double&nbsp;velocityZ)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i8">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getDebugString()">getDebugString</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i8">
+<tr class="rowColor" id="i9">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#loadTextureList(net.minecraft.resource.ResourceManager,net.minecraft.util.Identifier,java.util.Map)">loadTextureList</a></span>&#8203;(<a href="../../resource/ResourceManager.html" title="interface in net.minecraft.resource">ResourceManager</a>&nbsp;resourceManager,
+<a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;id,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util" class="externalLink">Map</a>&lt;<a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&gt;&gt;&nbsp;result)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i10">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#registerDefaultFactories()">registerDefaultFactories</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i11">
+<td class="colFirst"><code>private &lt;T extends <a href="../../particle/ParticleEffect.html" title="interface in net.minecraft.particle">ParticleEffect</a>&gt;<br>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#registerFactory(net.minecraft.particle.ParticleType,net.minecraft.client.particle.ParticleFactory)">registerFactory</a></span>&#8203;(<a href="../../particle/ParticleType.html" title="class in net.minecraft.particle">ParticleType</a>&lt;T&gt;&nbsp;type,
+<a href="ParticleFactory.html" title="interface in net.minecraft.client.particle">ParticleFactory</a>&lt;T&gt;&nbsp;factory)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i12">
+<td class="colFirst"><code>private &lt;T extends <a href="../../particle/ParticleEffect.html" title="interface in net.minecraft.particle">ParticleEffect</a>&gt;<br>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#registerFactory(net.minecraft.particle.ParticleType,net.minecraft.client.particle.ParticleManager.SpriteAwareFactory)">registerFactory</a></span>&#8203;(<a href="../../particle/ParticleType.html" title="class in net.minecraft.particle">ParticleType</a>&lt;T&gt;&nbsp;particleType,
+<a href="ParticleManager.SpriteAwareFactory.html" title="interface in net.minecraft.client.particle">ParticleManager.SpriteAwareFactory</a>&lt;T&gt;&nbsp;spriteAwareFactory)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i13">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html?is-external=true" title="class or interface in java.util.concurrent" class="externalLink">CompletableFuture</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html?is-external=true" title="class or interface in java.lang" class="externalLink">Void</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#reload(net.minecraft.resource.ResourceReloadListener.Synchronizer,net.minecraft.resource.ResourceManager,net.minecraft.util.profiler.Profiler,net.minecraft.util.profiler.Profiler,java.util.concurrent.Executor,java.util.concurrent.Executor)">reload</a></span>&#8203;(<a href="../../resource/ResourceReloadListener.Synchronizer.html" title="interface in net.minecraft.resource">ResourceReloadListener.Synchronizer</a>&nbsp;synchronizer,
 <a href="../../resource/ResourceManager.html" title="interface in net.minecraft.resource">ResourceManager</a>&nbsp;manager,
@@ -271,7 +351,7 @@ double&nbsp;velocityZ)</code></th>
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executor.html?is-external=true" title="class or interface in java.util.concurrent" class="externalLink">Executor</a>&nbsp;applyExecutor)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i9">
+<tr class="altColor" id="i14">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#renderParticles(net.minecraft.client.util.math.MatrixStack,net.minecraft.client.render.VertexConsumerProvider.Immediate,net.minecraft.client.render.LightmapTextureManager,net.minecraft.client.render.Camera,float)">renderParticles</a></span>&#8203;(<a href="../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrixStack,
 <a href="../render/VertexConsumerProvider.Immediate.html" title="class in net.minecraft.client.render">VertexConsumerProvider.Immediate</a>&nbsp;immediate,
@@ -280,14 +360,24 @@ double&nbsp;velocityZ)</code></th>
 float&nbsp;float2)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i10">
+<tr class="rowColor" id="i15">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setWorld(net.minecraft.world.World)">setWorld</a></span>&#8203;(<a href="../../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setWorld(net.minecraft.client.world.ClientWorld)">setWorld</a></span>&#8203;(<a href="../world/ClientWorld.html" title="class in net.minecraft.client.world">ClientWorld</a>&nbsp;world)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i11">
+<tr class="altColor" id="i16">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#tick()">tick</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i17">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#tickParticle(net.minecraft.client.particle.Particle)">tickParticle</a></span>&#8203;(<a href="Particle.html" title="class in net.minecraft.client.particle">Particle</a>&nbsp;particle)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i18">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#tickParticles(java.util.Collection)">tickParticles</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util" class="externalLink">Collection</a>&lt;<a href="Particle.html" title="class in net.minecraft.client.particle">Particle</a>&gt;&nbsp;collection)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -319,8 +409,62 @@ float&nbsp;float2)</code></th>
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
+<h3><a id="PARTICLE_TEXTURE_SHEETS">PARTICLE_TEXTURE_SHEETS</a></h3>
+<div class="memberSignature"><span class="modifiers">private static final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="ParticleTextureSheet.html" title="interface in net.minecraft.client.particle">ParticleTextureSheet</a>&gt;</span>&nbsp;<span class="memberName">PARTICLE_TEXTURE_SHEETS</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="world">world</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType"><a href="../../world/World.html" title="class in net.minecraft.world">World</a></span>&nbsp;<span class="memberName">world</span></div>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType"><a href="../world/ClientWorld.html" title="class in net.minecraft.client.world">ClientWorld</a></span>&nbsp;<span class="memberName">world</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="particles">particles</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util" class="externalLink">Map</a>&lt;<a href="ParticleTextureSheet.html" title="interface in net.minecraft.client.particle">ParticleTextureSheet</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Queue.html?is-external=true" title="class or interface in java.util" class="externalLink">Queue</a>&lt;<a href="Particle.html" title="class in net.minecraft.client.particle">Particle</a>&gt;&gt;</span>&nbsp;<span class="memberName">particles</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="newEmitterParticles">newEmitterParticles</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Queue.html?is-external=true" title="class or interface in java.util" class="externalLink">Queue</a>&lt;<a href="EmitterParticle.html" title="class in net.minecraft.client.particle">EmitterParticle</a>&gt;</span>&nbsp;<span class="memberName">newEmitterParticles</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="textureManager">textureManager</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../texture/TextureManager.html" title="class in net.minecraft.client.texture">TextureManager</a></span>&nbsp;<span class="memberName">textureManager</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="random">random</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a></span>&nbsp;<span class="memberName">random</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="factories">factories</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="http://fastutil.di.unimi.it/docs/it/unimi/dsi/fastutil/ints/Int2ObjectMap.html?is-external=true" title="class or interface in it.unimi.dsi.fastutil.ints" class="externalLink">Int2ObjectMap</a>&lt;<a href="ParticleFactory.html" title="interface in net.minecraft.client.particle">ParticleFactory</a>&lt;?&gt;&gt;</span>&nbsp;<span class="memberName">factories</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="newParticles">newParticles</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Queue.html?is-external=true" title="class or interface in java.util" class="externalLink">Queue</a>&lt;<a href="Particle.html" title="class in net.minecraft.client.particle">Particle</a>&gt;</span>&nbsp;<span class="memberName">newParticles</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="spriteAwareFactories">spriteAwareFactories</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util" class="externalLink">Map</a>&lt;<a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>,&#8203;<a href="ParticleManager.SimpleSpriteProvider.html" title="class in net.minecraft.client.particle">ParticleManager.SimpleSpriteProvider</a>&gt;</span>&nbsp;<span class="memberName">spriteAwareFactories</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="particleAtlasTexture">particleAtlasTexture</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../texture/SpriteAtlasTexture.html" title="class in net.minecraft.client.texture">SpriteAtlasTexture</a></span>&nbsp;<span class="memberName">particleAtlasTexture</span></div>
 </section>
 </li>
 </ul>
@@ -335,8 +479,8 @@ float&nbsp;float2)</code></th>
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="&lt;init&gt;(net.minecraft.world.World,net.minecraft.client.texture.TextureManager)">ParticleManager</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">ParticleManager</span>&#8203;(<span class="arguments"><a href="../../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world,
+<h3><a id="&lt;init&gt;(net.minecraft.client.world.ClientWorld,net.minecraft.client.texture.TextureManager)">ParticleManager</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">ParticleManager</span>&#8203;(<span class="arguments"><a href="../world/ClientWorld.html" title="class in net.minecraft.client.world">ClientWorld</a>&nbsp;world,
 <a href="../texture/TextureManager.html" title="class in net.minecraft.client.texture">TextureManager</a>&nbsp;textureManager)</span></div>
 </section>
 </li>
@@ -350,6 +494,26 @@ float&nbsp;float2)</code></th>
 </a>
 <h2>Method Details</h2>
 <ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="registerDefaultFactories()">registerDefaultFactories</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">registerDefaultFactories</span>()</div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="registerFactory(net.minecraft.particle.ParticleType,net.minecraft.client.particle.ParticleFactory)">registerFactory</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="typeParameters">&lt;T extends <a href="../../particle/ParticleEffect.html" title="interface in net.minecraft.particle">ParticleEffect</a>&gt;</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">registerFactory</span>&#8203;(<span class="arguments"><a href="../../particle/ParticleType.html" title="class in net.minecraft.particle">ParticleType</a>&lt;T&gt;&nbsp;type,
+<a href="ParticleFactory.html" title="interface in net.minecraft.client.particle">ParticleFactory</a>&lt;T&gt;&nbsp;factory)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="registerFactory(net.minecraft.particle.ParticleType,net.minecraft.client.particle.ParticleManager.SpriteAwareFactory)">registerFactory</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="typeParameters">&lt;T extends <a href="../../particle/ParticleEffect.html" title="interface in net.minecraft.particle">ParticleEffect</a>&gt;</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">registerFactory</span>&#8203;(<span class="arguments"><a href="../../particle/ParticleType.html" title="class in net.minecraft.particle">ParticleType</a>&lt;T&gt;&nbsp;particleType,
+<a href="ParticleManager.SpriteAwareFactory.html" title="interface in net.minecraft.client.particle">ParticleManager.SpriteAwareFactory</a>&lt;T&gt;&nbsp;spriteAwareFactory)</span></div>
+</section>
+</li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="reload(net.minecraft.resource.ResourceReloadListener.Synchronizer,net.minecraft.resource.ResourceManager,net.minecraft.util.profiler.Profiler,net.minecraft.util.profiler.Profiler,java.util.concurrent.Executor,java.util.concurrent.Executor)">reload</a></h3>
@@ -373,6 +537,14 @@ float&nbsp;float2)</code></th>
 </li>
 <li class="blockList">
 <section class="detail">
+<h3><a id="loadTextureList(net.minecraft.resource.ResourceManager,net.minecraft.util.Identifier,java.util.Map)">loadTextureList</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">loadTextureList</span>&#8203;(<span class="arguments"><a href="../../resource/ResourceManager.html" title="interface in net.minecraft.resource">ResourceManager</a>&nbsp;resourceManager,
+<a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;id,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util" class="externalLink">Map</a>&lt;<a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&gt;&gt;&nbsp;result)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="addEmitter(net.minecraft.entity.Entity,net.minecraft.particle.ParticleEffect)">addEmitter</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">addEmitter</span>&#8203;(<span class="arguments"><a href="../../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&nbsp;entity,
 <a href="../../particle/ParticleEffect.html" title="interface in net.minecraft.particle">ParticleEffect</a>&nbsp;parameters)</span></div>
@@ -389,8 +561,23 @@ int&nbsp;maxAge)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="addParticle(net.minecraft.particle.ParticleEffect,double,double,double,double,double,double)">addParticle</a></h3>
-<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 </span><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="Particle.html" title="class in net.minecraft.client.particle">Particle</a></span>&nbsp;<span class="memberName">addParticle</span>&#8203;(<span class="arguments"><a href="../../particle/ParticleEffect.html" title="interface in net.minecraft.particle">ParticleEffect</a>&nbsp;parameters,
+double&nbsp;x,
+double&nbsp;y,
+double&nbsp;z,
+double&nbsp;velocityX,
+double&nbsp;velocityY,
+double&nbsp;velocityZ)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="createParticle(net.minecraft.particle.ParticleEffect,double,double,double,double,double,double)">
+<!--   -->
+</a><a id="createParticle(T,double,double,double,double,double,double)">createParticle</a></h3>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">private</span>&nbsp;<span class="typeParameters">&lt;T extends <a href="../../particle/ParticleEffect.html" title="interface in net.minecraft.particle">ParticleEffect</a>&gt;</span>&nbsp;<span class="returnType"><a href="Particle.html" title="class in net.minecraft.client.particle">Particle</a></span>&nbsp;<span class="memberName">createParticle</span>&#8203;(<span class="arguments">T&nbsp;parameters,
 double&nbsp;x,
 double&nbsp;y,
 double&nbsp;z,
@@ -413,6 +600,18 @@ double&nbsp;velocityZ)</span></div>
 </li>
 <li class="blockList">
 <section class="detail">
+<h3><a id="tickParticles(java.util.Collection)">tickParticles</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">tickParticles</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util" class="externalLink">Collection</a>&lt;<a href="Particle.html" title="class in net.minecraft.client.particle">Particle</a>&gt;&nbsp;collection)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="tickParticle(net.minecraft.client.particle.Particle)">tickParticle</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">tickParticle</span>&#8203;(<span class="arguments"><a href="Particle.html" title="class in net.minecraft.client.particle">Particle</a>&nbsp;particle)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="renderParticles(net.minecraft.client.util.math.MatrixStack,net.minecraft.client.render.VertexConsumerProvider.Immediate,net.minecraft.client.render.LightmapTextureManager,net.minecraft.client.render.Camera,float)">renderParticles</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">renderParticles</span>&#8203;(<span class="arguments"><a href="../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrixStack,
 <a href="../render/VertexConsumerProvider.Immediate.html" title="class in net.minecraft.client.render">VertexConsumerProvider.Immediate</a>&nbsp;immediate,
@@ -423,9 +622,9 @@ float&nbsp;float2)</span></div>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="setWorld(net.minecraft.world.World)">setWorld</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setWorld</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
-<a href="../../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world)</span></div>
+<h3><a id="setWorld(net.minecraft.client.world.ClientWorld)">setWorld</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setWorld</span>&#8203;(<span class="arguments"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<a href="../world/ClientWorld.html" title="class in net.minecraft.client.world">ClientWorld</a>&nbsp;world)</span></div>
 </section>
 </li>
 <li class="blockList">
@@ -438,7 +637,7 @@ float&nbsp;float2)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="addBlockBreakingParticles(net.minecraft.util.math.BlockPos,net.minecraft.util.math.Direction)">addBlockBreakingParticles</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">addBlockBreakingParticles</span>&#8203;(<span class="arguments"><a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">addBlockBreakingParticles</span>&#8203;(<span class="arguments"><a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
 <a href="../../util/math/Direction.html" title="enum in net.minecraft.util.math">Direction</a>&nbsp;direction)</span></div>
 </section>
 </li>

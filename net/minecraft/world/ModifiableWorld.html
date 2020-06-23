@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":18,"i1":6,"i2":6,"i3":6,"i4":18};
+<script type="text/javascript">var data = {"i0":18,"i1":18,"i2":6,"i3":6,"i4":18,"i5":6,"i6":18};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -89,14 +89,15 @@ loadScripts(document, 'script');</script>
 <section class="description">
 <dl>
 <dt>All Known Subinterfaces:</dt>
-<dd><code><a href="IWorld.html" title="interface in net.minecraft.world">IWorld</a></code>, <code><a href="ModifiableTestableWorld.html" title="interface in net.minecraft.world">ModifiableTestableWorld</a></code></dd>
+<dd><code><a href="ModifiableTestableWorld.html" title="interface in net.minecraft.world">ModifiableTestableWorld</a></code>, <code><a href="ServerWorldAccess.html" title="interface in net.minecraft.world">ServerWorldAccess</a></code>, <code><a href="WorldAccess.html" title="interface in net.minecraft.world">WorldAccess</a></code></dd>
 </dl>
 <dl>
 <dt>All Known Implementing Classes:</dt>
-<dd><code><a href="ChunkRegion.html" title="class in net.minecraft.world">ChunkRegion</a></code>, <code><a href="../client/world/ClientWorld.html" title="class in net.minecraft.client.world">ClientWorld</a></code>, <code><a href="../server/world/SecondaryServerWorld.html" title="class in net.minecraft.server.world">SecondaryServerWorld</a></code>, <code><a href="../server/world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a></code>, <code><a href="World.html" title="class in net.minecraft.world">World</a></code></dd>
+<dd><code><a href="ChunkRegion.html" title="class in net.minecraft.world">ChunkRegion</a></code>, <code><a href="../client/world/ClientWorld.html" title="class in net.minecraft.client.world">ClientWorld</a></code>, <code><a href="../server/world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a></code>, <code><a href="World.html" title="class in net.minecraft.world">World</a></code></dd>
 </dl>
 <hr>
 <pre>public interface <span class="typeNameLabel">ModifiableWorld</span></pre>
+<div class="block">Represents a modifable world where block states can be changed and entities spawned.</div>
 </section>
 <section class="summary">
 <ul class="blockList">
@@ -125,7 +126,7 @@ boolean&nbsp;drop)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
-<td class="colFirst"><code>boolean</code></td>
+<td class="colFirst"><code>default boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#breakBlock(net.minecraft.util.math.BlockPos,boolean,net.minecraft.entity.Entity)">breakBlock</a></span>&#8203;(<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
 boolean&nbsp;drop,
 <a href="../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&nbsp;breakingEntity)</code></th>
@@ -133,12 +134,20 @@ boolean&nbsp;drop,
 </tr>
 <tr class="altColor" id="i2">
 <td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#removeBlock(net.minecraft.util.math.BlockPos,boolean)">removeBlock</a></span>&#8203;(<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
-boolean&nbsp;move)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_30093(net.minecraft.util.math.BlockPos,boolean,net.minecraft.entity.Entity,int)">method_30093</a></span>&#8203;(<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
+boolean&nbsp;bool,
+<a href="../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&nbsp;entity,
+int&nbsp;int2)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i3">
 <td class="colFirst"><code>boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#removeBlock(net.minecraft.util.math.BlockPos,boolean)">removeBlock</a></span>&#8203;(<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+boolean&nbsp;move)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i4">
+<td class="colFirst"><code>default boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setBlockState(net.minecraft.util.math.BlockPos,net.minecraft.block.BlockState,int)">setBlockState</a></span>&#8203;(<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
 <a href="../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state,
 int&nbsp;flags)</code></th>
@@ -146,7 +155,17 @@ int&nbsp;flags)</code></th>
 <div class="block">Updates the block state at a position, calling appropriate callbacks.</div>
 </td>
 </tr>
-<tr class="altColor" id="i4">
+<tr class="rowColor" id="i5">
+<td class="colFirst"><code>boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setBlockState(net.minecraft.util.math.BlockPos,net.minecraft.block.BlockState,int,int)">setBlockState</a></span>&#8203;(<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<a href="../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state,
+int&nbsp;flags,
+int&nbsp;maxUpdateDepth)</code></th>
+<td class="colLast">
+<div class="block">Updates the block state at a position, calling appropriate callbacks.</div>
+</td>
+</tr>
+<tr class="altColor" id="i6">
 <td class="colFirst"><code>default boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#spawnEntity(net.minecraft.entity.Entity)">spawnEntity</a></span>&#8203;(<a href="../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&nbsp;entity)</code></th>
 <td class="colLast">&nbsp;</td>
@@ -170,8 +189,41 @@ int&nbsp;flags)</code></th>
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="setBlockState(net.minecraft.util.math.BlockPos,net.minecraft.block.BlockState,int)">setBlockState</a></h3>
+<h3><a id="setBlockState(net.minecraft.util.math.BlockPos,net.minecraft.block.BlockState,int,int)">setBlockState</a></h3>
 <div class="memberSignature"><span class="returnType">boolean</span>&nbsp;<span class="memberName">setBlockState</span>&#8203;(<span class="arguments"><a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<a href="../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state,
+int&nbsp;flags,
+int&nbsp;maxUpdateDepth)</span></div>
+<div class="block">Updates the block state at a position, calling appropriate callbacks.
+
+ <p>When called on the server, the new block state is stored and propagated to clients and listeners as dictated
+ by the supplied flags. Note that calling this on the client will update the world locally, but may not see the
+ change persisted across loads. It's recommended to check whether this world is client before
+ interacting with the world in this way.</p>
+
+ <p>Accepted values of the flags are a bitset combination of the following:</p>
+ <ul>
+ <li>0b0000001 // 1 - PROPAGATE_CHANGE - Propagates a change event to surrounding blocks.</li>
+ <li>0b0000010 // 2 - NOTIFY_LISTENERS - Notifies listeners and clients who need to react when the block changes</li>
+ <li>0b0000100 // 4 - NO_REDRAW - Used in conjunction with NOTIFY_LISTENERS to suppress the render pass on clients.</li>
+ <li>0b0001000 // 8 - REDRAW_ON_MAIN_THREAD - Forces a synchronous redraw on clients.</li>
+ <li>0b0010000 // 16 - FORCE_STATE - Bypass virtual blockstate changes and forces the passed state to be stored as-is.</li>
+ <li>0b0100000 // 32 - SKIP_DROPS - Prevents the previous block (container) from dropping items when destroyed.</li>
+ <li>0b1000000 // 64 - MOVED - Signals that the current block is being moved to a different location, usually because of a piston.</li>
+ </ul></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>pos</code> - the target position</dd>
+<dd><code>state</code> - the block state to set</dd>
+<dd><code>flags</code> - the bitwise flag combination, as described above</dd>
+<dd><code>maxUpdateDepth</code> - the limit for the cascading block updates</dd>
+</dl>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="setBlockState(net.minecraft.util.math.BlockPos,net.minecraft.block.BlockState,int)">setBlockState</a></h3>
+<div class="memberSignature"><span class="modifiers">default</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">setBlockState</span>&#8203;(<span class="arguments"><a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
 <a href="../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state,
 int&nbsp;flags)</span></div>
 <div class="block">Updates the block state at a position, calling appropriate callbacks.
@@ -216,10 +268,20 @@ boolean&nbsp;drop)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="breakBlock(net.minecraft.util.math.BlockPos,boolean,net.minecraft.entity.Entity)">breakBlock</a></h3>
-<div class="memberSignature"><span class="returnType">boolean</span>&nbsp;<span class="memberName">breakBlock</span>&#8203;(<span class="arguments"><a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<div class="memberSignature"><span class="modifiers">default</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">breakBlock</span>&#8203;(<span class="arguments"><a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
 boolean&nbsp;drop,
-<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 <a href="../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&nbsp;breakingEntity)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="method_30093(net.minecraft.util.math.BlockPos,boolean,net.minecraft.entity.Entity,int)">method_30093</a></h3>
+<div class="memberSignature"><span class="returnType">boolean</span>&nbsp;<span class="memberName">method_30093</span>&#8203;(<span class="arguments"><a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
+boolean&nbsp;bool,
+<a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<a href="../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&nbsp;entity,
+int&nbsp;int2)</span></div>
 </section>
 </li>
 <li class="blockList">

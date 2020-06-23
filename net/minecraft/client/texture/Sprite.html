@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10};
+<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -156,8 +156,80 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/AutoClos
 </thead>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code>private <a href="../resource/metadata/AnimationResourceMetadata.html" title="class in net.minecraft.client.resource.metadata">AnimationResourceMetadata</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#animationMetadata">animationMetadata</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="SpriteAtlasTexture.html" title="class in net.minecraft.client.texture">SpriteAtlasTexture</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#atlas">atlas</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#frameIndex">frameIndex</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#frameTicks">frameTicks</a></span></code></th>
+<td class="colLast">
+<div class="block">The tick position within the current frame.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int[]</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#frameXs">frameXs</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int[]</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#frameYs">frameYs</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="NativeImage.html" title="class in net.minecraft.client.texture">NativeImage</a>[]</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#images">images</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="Sprite.Info.html" title="class in net.minecraft.client.texture">Sprite.Info</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#info">info</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="Sprite.Interpolation.html" title="class in net.minecraft.client.texture">Sprite.Interpolation</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#interpolation">interpolation</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private float</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#uMax">uMax</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private float</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#uMin">uMin</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private float</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#vMax">vMax</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private float</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#vMin">vMin</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#x">x</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#y">y</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -186,11 +258,11 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/AutoClos
 <td class="colFirst"><code>protected </code></td>
 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.client.texture.SpriteAtlasTexture,net.minecraft.client.texture.Sprite.Info,int,int,int,int,int,net.minecraft.client.texture.NativeImage)">Sprite</a></span>&#8203;(<a href="SpriteAtlasTexture.html" title="class in net.minecraft.client.texture">SpriteAtlasTexture</a>&nbsp;spriteAtlasTexture,
 <a href="Sprite.Info.html" title="class in net.minecraft.client.texture">Sprite.Info</a>&nbsp;info,
-int&nbsp;int2,
-int&nbsp;int3,
-int&nbsp;int4,
-int&nbsp;int5,
-int&nbsp;int6,
+int&nbsp;maxLevel,
+int&nbsp;atlasWidth,
+int&nbsp;atlasHeight,
+int&nbsp;x,
+int&nbsp;y,
 <a href="NativeImage.html" title="class in net.minecraft.client.texture">NativeImage</a>&nbsp;nativeImage)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -238,80 +310,97 @@ int&nbsp;int6,
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i4">
-<td class="colFirst"><code>float</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getFrameU(double)">getFrameU</a></span>&#8203;(double&nbsp;frame)</code></th>
+<td class="colFirst"><code>private float</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getFrameDeltaFactor()">getFrameDeltaFactor</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i5">
 <td class="colFirst"><code>float</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getFrameV(double)">getFrameV</a></span>&#8203;(double&nbsp;frame)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getFrameU(double)">getFrameU</a></span>&#8203;(double&nbsp;frame)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i6">
+<td class="colFirst"><code>float</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getFrameV(double)">getFrameV</a></span>&#8203;(double&nbsp;frame)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i7">
 <td class="colFirst"><code>int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getHeight()">getHeight</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i7">
+<tr class="altColor" id="i8">
 <td class="colFirst"><code><a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getId()">getId</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i8">
+<tr class="rowColor" id="i9">
 <td class="colFirst"><code>float</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getMaxU()">getMaxU</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i9">
+<tr class="altColor" id="i10">
 <td class="colFirst"><code>float</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getMaxV()">getMaxV</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i10">
+<tr class="rowColor" id="i11">
 <td class="colFirst"><code>float</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getMinU()">getMinU</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i11">
+<tr class="altColor" id="i12">
 <td class="colFirst"><code>float</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getMinV()">getMinV</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i12">
+<tr class="rowColor" id="i13">
 <td class="colFirst"><code><a href="../render/VertexConsumer.html" title="interface in net.minecraft.client.render">VertexConsumer</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getTextureSpecificVertexConsumer(net.minecraft.client.render.VertexConsumer)">getTextureSpecificVertexConsumer</a></span>&#8203;(<a href="../render/VertexConsumer.html" title="interface in net.minecraft.client.render">VertexConsumer</a>&nbsp;vertexConsumer)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i13">
+<tr class="altColor" id="i14">
 <td class="colFirst"><code>int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getWidth()">getWidth</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i14">
+<tr class="rowColor" id="i15">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isAnimated()">isAnimated</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i15">
+<tr class="altColor" id="i16">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isPixelTransparent(int,int,int)">isPixelTransparent</a></span>&#8203;(int&nbsp;frame,
 int&nbsp;x,
 int&nbsp;y)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i16">
+<tr class="rowColor" id="i17">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#tickAnimation()">tickAnimation</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i17">
+<tr class="altColor" id="i18">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#toString()">toString</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i18">
+<tr class="rowColor" id="i19">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#upload()">upload</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i20">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#upload(int)">upload</a></span>&#8203;(int&nbsp;frame)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i21">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#upload(int,int,net.minecraft.client.texture.NativeImage%5B%5D)">upload</a></span>&#8203;(int&nbsp;frameX,
+int&nbsp;frameY,
+<a href="NativeImage.html" title="class in net.minecraft.client.texture">NativeImage</a>[]&nbsp;output)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -338,8 +427,95 @@ int&nbsp;y)</code></th>
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
+<h3><a id="atlas">atlas</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="SpriteAtlasTexture.html" title="class in net.minecraft.client.texture">SpriteAtlasTexture</a></span>&nbsp;<span class="memberName">atlas</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="info">info</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="Sprite.Info.html" title="class in net.minecraft.client.texture">Sprite.Info</a></span>&nbsp;<span class="memberName">info</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="animationMetadata">animationMetadata</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../resource/metadata/AnimationResourceMetadata.html" title="class in net.minecraft.client.resource.metadata">AnimationResourceMetadata</a></span>&nbsp;<span class="memberName">animationMetadata</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="images">images</a></h3>
 <div class="memberSignature"><span class="modifiers">protected final</span>&nbsp;<span class="returnType"><a href="NativeImage.html" title="class in net.minecraft.client.texture">NativeImage</a>[]</span>&nbsp;<span class="memberName">images</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="frameXs">frameXs</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType">int[]</span>&nbsp;<span class="memberName">frameXs</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="frameYs">frameYs</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType">int[]</span>&nbsp;<span class="memberName">frameYs</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="interpolation">interpolation</a></h3>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="Sprite.Interpolation.html" title="class in net.minecraft.client.texture">Sprite.Interpolation</a></span>&nbsp;<span class="memberName">interpolation</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="x">x</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">x</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="y">y</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">y</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="uMin">uMin</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType">float</span>&nbsp;<span class="memberName">uMin</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="uMax">uMax</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType">float</span>&nbsp;<span class="memberName">uMax</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="vMin">vMin</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType">float</span>&nbsp;<span class="memberName">vMin</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="vMax">vMax</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType">float</span>&nbsp;<span class="memberName">vMax</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="frameIndex">frameIndex</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">frameIndex</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="frameTicks">frameTicks</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">frameTicks</span></div>
+<div class="block">The tick position within the current frame.
+ Resets to 0 on every frame advance.</div>
 </section>
 </li>
 </ul>
@@ -357,11 +533,11 @@ int&nbsp;y)</code></th>
 <h3><a id="&lt;init&gt;(net.minecraft.client.texture.SpriteAtlasTexture,net.minecraft.client.texture.Sprite.Info,int,int,int,int,int,net.minecraft.client.texture.NativeImage)">Sprite</a></h3>
 <div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="memberName">Sprite</span>&#8203;(<span class="arguments"><a href="SpriteAtlasTexture.html" title="class in net.minecraft.client.texture">SpriteAtlasTexture</a>&nbsp;spriteAtlasTexture,
 <a href="Sprite.Info.html" title="class in net.minecraft.client.texture">Sprite.Info</a>&nbsp;info,
-int&nbsp;int2,
-int&nbsp;int3,
-int&nbsp;int4,
-int&nbsp;int5,
-int&nbsp;int6,
+int&nbsp;maxLevel,
+int&nbsp;atlasWidth,
+int&nbsp;atlasHeight,
+int&nbsp;x,
+int&nbsp;y,
 <a href="NativeImage.html" title="class in net.minecraft.client.texture">NativeImage</a>&nbsp;nativeImage)</span></div>
 </section>
 </li>
@@ -375,6 +551,20 @@ int&nbsp;int6,
 </a>
 <h2>Method Details</h2>
 <ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="upload(int)">upload</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">upload</span>&#8203;(<span class="arguments">int&nbsp;frame)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="upload(int,int,net.minecraft.client.texture.NativeImage[])">upload</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">upload</span>&#8203;(<span class="arguments">int&nbsp;frameX,
+int&nbsp;frameY,
+<a href="NativeImage.html" title="class in net.minecraft.client.texture">NativeImage</a>[]&nbsp;output)</span></div>
+</section>
+</li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getWidth()">getWidth</a></h3>
@@ -473,6 +663,12 @@ int&nbsp;y)</span></div>
 <section class="detail">
 <h3><a id="upload()">upload</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">upload</span>()</div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="getFrameDeltaFactor()">getFrameDeltaFactor</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">float</span>&nbsp;<span class="memberName">getFrameDeltaFactor</span>()</div>
 </section>
 </li>
 <li class="blockList">

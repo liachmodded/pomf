@@ -141,6 +141,11 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </thead>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util" class="externalLink">Map</a>&lt;<a href="../../entity/effect/StatusEffect.html" title="class in net.minecraft.entity.effect">StatusEffect</a>,&#8203;<a href="EntityEffectPredicate.EffectData.html" title="class in net.minecraft.predicate.entity">EntityEffectPredicate.EffectData</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#effects">effects</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="EntityEffectPredicate.html" title="class in net.minecraft.predicate.entity">EntityEffectPredicate</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#EMPTY">EMPTY</a></span></code></th>
 <td class="colLast">&nbsp;</td>
@@ -200,12 +205,12 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </tr>
 <tr class="rowColor" id="i1">
 <td class="colFirst"><code>static <a href="EntityEffectPredicate.html" title="class in net.minecraft.predicate.entity">EntityEffectPredicate</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#deserialize(com.google.gson.JsonElement)">deserialize</a></span>&#8203;(com.google.gson.JsonElement&nbsp;jsonElement)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#fromJson(com.google.gson.JsonElement)">fromJson</a></span>&#8203;(<a href="https://www.javadoc.io/doc/com.google.code.gson/gson/2.8.0/com/google/gson/JsonElement.html?is-external=true" title="class or interface in com.google.gson" class="externalLink">JsonElement</a>&nbsp;json)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i2">
 <td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#test(java.util.Map)">test</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util" class="externalLink">Map</a>&lt;<a href="../../entity/effect/StatusEffect.html" title="class in net.minecraft.entity.effect">StatusEffect</a>,&#8203;<a href="../../entity/effect/StatusEffectInstance.html" title="class in net.minecraft.entity.effect">StatusEffectInstance</a>&gt;&nbsp;map)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#test(java.util.Map)">test</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util" class="externalLink">Map</a>&lt;<a href="../../entity/effect/StatusEffect.html" title="class in net.minecraft.entity.effect">StatusEffect</a>,&#8203;<a href="../../entity/effect/StatusEffectInstance.html" title="class in net.minecraft.entity.effect">StatusEffectInstance</a>&gt;&nbsp;effects)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i3">
@@ -219,7 +224,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i5">
-<td class="colFirst"><code>com.google.gson.JsonElement</code></td>
+<td class="colFirst"><code><a href="https://www.javadoc.io/doc/com.google.code.gson/gson/2.8.0/com/google/gson/JsonElement.html?is-external=true" title="class or interface in com.google.gson" class="externalLink">JsonElement</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#toJson()">toJson</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -254,6 +259,12 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <section class="detail">
 <h3><a id="EMPTY">EMPTY</a></h3>
 <div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="EntityEffectPredicate.html" title="class in net.minecraft.predicate.entity">EntityEffectPredicate</a></span>&nbsp;<span class="memberName">EMPTY</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="effects">effects</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util" class="externalLink">Map</a>&lt;<a href="../../entity/effect/StatusEffect.html" title="class in net.minecraft.entity.effect">StatusEffect</a>,&#8203;<a href="EntityEffectPredicate.EffectData.html" title="class in net.minecraft.predicate.entity">EntityEffectPredicate.EffectData</a>&gt;</span>&nbsp;<span class="memberName">effects</span></div>
 </section>
 </li>
 </ul>
@@ -309,20 +320,20 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <section class="detail">
 <h3><a id="test(java.util.Map)">test</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">test</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util" class="externalLink">Map</a>&lt;<a href="../../entity/effect/StatusEffect.html" title="class in net.minecraft.entity.effect">StatusEffect</a>,&#8203;<a href="../../entity/effect/StatusEffectInstance.html" title="class in net.minecraft.entity.effect">StatusEffectInstance</a>&gt;&nbsp;map)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">test</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util" class="externalLink">Map</a>&lt;<a href="../../entity/effect/StatusEffect.html" title="class in net.minecraft.entity.effect">StatusEffect</a>,&#8203;<a href="../../entity/effect/StatusEffectInstance.html" title="class in net.minecraft.entity.effect">StatusEffectInstance</a>&gt;&nbsp;effects)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="deserialize(com.google.gson.JsonElement)">deserialize</a></h3>
-<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType"><a href="EntityEffectPredicate.html" title="class in net.minecraft.predicate.entity">EntityEffectPredicate</a></span>&nbsp;<span class="memberName">deserialize</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
-com.google.gson.JsonElement&nbsp;jsonElement)</span></div>
+<h3><a id="fromJson(com.google.gson.JsonElement)">fromJson</a></h3>
+<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType"><a href="EntityEffectPredicate.html" title="class in net.minecraft.predicate.entity">EntityEffectPredicate</a></span>&nbsp;<span class="memberName">fromJson</span>&#8203;(<span class="arguments"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<a href="https://www.javadoc.io/doc/com.google.code.gson/gson/2.8.0/com/google/gson/JsonElement.html?is-external=true" title="class or interface in com.google.gson" class="externalLink">JsonElement</a>&nbsp;json)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="toJson()">toJson</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">com.google.gson.JsonElement</span>&nbsp;<span class="memberName">toJson</span>()</div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="https://www.javadoc.io/doc/com.google.code.gson/gson/2.8.0/com/google/gson/JsonElement.html?is-external=true" title="class or interface in com.google.gson" class="externalLink">JsonElement</a></span>&nbsp;<span class="memberName">toJson</span>()</div>
 </section>
 </li>
 </ul>

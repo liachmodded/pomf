@@ -133,13 +133,68 @@ extends <a href="Goal.html" title="class in net.minecraft.entity.ai.goal">Goal</
 </thead>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#active">active</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#canBeScared">canBeScared</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#closestPlayer">closestPlayer</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#cooldown">cooldown</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../recipe/Ingredient.html" title="class in net.minecraft.recipe">Ingredient</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#food">food</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private double</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#lastPlayerPitch">lastPlayerPitch</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private double</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#lastPlayerX">lastPlayerX</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private double</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#lastPlayerY">lastPlayerY</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private double</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#lastPlayerYaw">lastPlayerYaw</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private double</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#lastPlayerZ">lastPlayerZ</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../mob/MobEntityWithAi.html" title="class in net.minecraft.entity.mob">MobEntityWithAi</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#mob">mob</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private double</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#speed">speed</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="../TargetPredicate.html" title="class in net.minecraft.entity.ai">TargetPredicate</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#TEMPTING_ENTITY_PREDICATE">TEMPTING_ENTITY_PREDICATE</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -269,14 +324,80 @@ boolean&nbsp;canBeScared)</code></th>
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
+<h3><a id="TEMPTING_ENTITY_PREDICATE">TEMPTING_ENTITY_PREDICATE</a></h3>
+<div class="memberSignature"><span class="modifiers">private static final</span>&nbsp;<span class="returnType"><a href="../TargetPredicate.html" title="class in net.minecraft.entity.ai">TargetPredicate</a></span>&nbsp;<span class="memberName">TEMPTING_ENTITY_PREDICATE</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="mob">mob</a></h3>
 <div class="memberSignature"><span class="modifiers">protected final</span>&nbsp;<span class="returnType"><a href="../../mob/MobEntityWithAi.html" title="class in net.minecraft.entity.mob">MobEntityWithAi</a></span>&nbsp;<span class="memberName">mob</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
+<h3><a id="speed">speed</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType">double</span>&nbsp;<span class="memberName">speed</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="lastPlayerX">lastPlayerX</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">double</span>&nbsp;<span class="memberName">lastPlayerX</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="lastPlayerY">lastPlayerY</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">double</span>&nbsp;<span class="memberName">lastPlayerY</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="lastPlayerZ">lastPlayerZ</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">double</span>&nbsp;<span class="memberName">lastPlayerZ</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="lastPlayerPitch">lastPlayerPitch</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">double</span>&nbsp;<span class="memberName">lastPlayerPitch</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="lastPlayerYaw">lastPlayerYaw</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">double</span>&nbsp;<span class="memberName">lastPlayerYaw</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="closestPlayer">closestPlayer</a></h3>
 <div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType"><a href="../../player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a></span>&nbsp;<span class="memberName">closestPlayer</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="cooldown">cooldown</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">cooldown</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="active">active</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">active</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="food">food</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../../../recipe/Ingredient.html" title="class in net.minecraft.recipe">Ingredient</a></span>&nbsp;<span class="memberName">food</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="canBeScared">canBeScared</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">canBeScared</span></div>
 </section>
 </li>
 </ul>

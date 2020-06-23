@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10};
+<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -90,14 +90,9 @@ loadScripts(document, 'script');</script>
 <div class="inheritance">net.minecraft.world.WorldSaveHandler</div>
 </div>
 <section class="description">
-<dl>
-<dt>All Implemented Interfaces:</dt>
-<dd><code><a href="PlayerSaveHandler.html" title="interface in net.minecraft.world">PlayerSaveHandler</a></code></dd>
-</dl>
 <hr>
 <pre>public class <span class="typeNameLabel">WorldSaveHandler</span>
-extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>
-implements <a href="PlayerSaveHandler.html" title="interface in net.minecraft.world">PlayerSaveHandler</a></pre>
+extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></pre>
 </section>
 <section class="summary">
 <ul class="blockList">
@@ -123,6 +118,16 @@ implements <a href="PlayerSaveHandler.html" title="interface in net.minecraft.wo
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#dataFixer">dataFixer</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static <a href="https://logging.apache.org/log4j/2.x/log4j-api/apidocs/org/apache/logging/log4j/Logger.html?is-external=true" title="class or interface in org.apache.logging.log4j" class="externalLink">Logger</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#LOGGER">LOGGER</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io" class="externalLink">File</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#playerDataDir">playerDataDir</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -145,9 +150,7 @@ implements <a href="PlayerSaveHandler.html" title="interface in net.minecraft.wo
 </thead>
 <tbody>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.io.File,java.lang.String,net.minecraft.server.MinecraftServer,com.mojang.datafixers.DataFixer)">WorldSaveHandler</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io" class="externalLink">File</a>&nbsp;worldsDirectory,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;worldName,
-<a href="../server/MinecraftServer.html" title="class in net.minecraft.server">MinecraftServer</a>&nbsp;server,
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.world.level.storage.LevelStorage.Session,com.mojang.datafixers.DataFixer)">WorldSaveHandler</a></span>&#8203;(<a href="level/storage/LevelStorage.Session.html" title="class in net.minecraft.world.level.storage">LevelStorage.Session</a>&nbsp;session,
 com.mojang.datafixers.DataFixer&nbsp;dataFixer)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -175,49 +178,18 @@ com.mojang.datafixers.DataFixer&nbsp;dataFixer)</code></th>
 </thead>
 <tbody>
 <tr class="altColor" id="i0">
-<td class="colFirst"><code>com.mojang.datafixers.DataFixer</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getDataFixer()">getDataFixer</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="rowColor" id="i1">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>[]</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getSavedPlayerIds()">getSavedPlayerIds</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i2">
-<td class="colFirst"><code><a href="../structure/StructureManager.html" title="class in net.minecraft.structure">StructureManager</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getStructureManager()">getStructureManager</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="rowColor" id="i3">
-<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io" class="externalLink">File</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getWorldDir()">getWorldDir</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="altColor" id="i4">
+<tr class="rowColor" id="i1">
 <td class="colFirst"><code><a href="../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#loadPlayerData(net.minecraft.entity.player.PlayerEntity)">loadPlayerData</a></span>&#8203;(<a href="../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;player)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#loadPlayerData(net.minecraft.entity.player.PlayerEntity)">loadPlayerData</a></span>&#8203;(<a href="../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;playerEntity)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i5">
-<td class="colFirst"><code><a href="level/LevelProperties.html" title="class in net.minecraft.world.level">LevelProperties</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#readProperties()">readProperties</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="altColor" id="i6">
+<tr class="altColor" id="i2">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#savePlayerData(net.minecraft.entity.player.PlayerEntity)">savePlayerData</a></span>&#8203;(<a href="../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;player)</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="rowColor" id="i7">
-<td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#saveWorld(net.minecraft.world.level.LevelProperties)">saveWorld</a></span>&#8203;(<a href="level/LevelProperties.html" title="class in net.minecraft.world.level">LevelProperties</a>&nbsp;levelProperties)</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="altColor" id="i8">
-<td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#saveWorld(net.minecraft.world.level.LevelProperties,net.minecraft.nbt.CompoundTag)">saveWorld</a></span>&#8203;(<a href="level/LevelProperties.html" title="class in net.minecraft.world.level">LevelProperties</a>&nbsp;levelProperties,
-<a href="../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;tag)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#savePlayerData(net.minecraft.entity.player.PlayerEntity)">savePlayerData</a></span>&#8203;(<a href="../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;playerEntity)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -244,6 +216,18 @@ com.mojang.datafixers.DataFixer&nbsp;dataFixer)</code></th>
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
+<h3><a id="LOGGER">LOGGER</a></h3>
+<div class="memberSignature"><span class="modifiers">private static final</span>&nbsp;<span class="returnType"><a href="https://logging.apache.org/log4j/2.x/log4j-api/apidocs/org/apache/logging/log4j/Logger.html?is-external=true" title="class or interface in org.apache.logging.log4j" class="externalLink">Logger</a></span>&nbsp;<span class="memberName">LOGGER</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="playerDataDir">playerDataDir</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io" class="externalLink">File</a></span>&nbsp;<span class="memberName">playerDataDir</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="dataFixer">dataFixer</a></h3>
 <div class="memberSignature"><span class="modifiers">protected final</span>&nbsp;<span class="returnType">com.mojang.datafixers.DataFixer</span>&nbsp;<span class="memberName">dataFixer</span></div>
 </section>
@@ -260,11 +244,8 @@ com.mojang.datafixers.DataFixer&nbsp;dataFixer)</code></th>
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="&lt;init&gt;(java.io.File,java.lang.String,net.minecraft.server.MinecraftServer,com.mojang.datafixers.DataFixer)">WorldSaveHandler</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">WorldSaveHandler</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io" class="externalLink">File</a>&nbsp;worldsDirectory,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;worldName,
-<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
-<a href="../server/MinecraftServer.html" title="class in net.minecraft.server">MinecraftServer</a>&nbsp;server,
+<h3><a id="&lt;init&gt;(net.minecraft.world.level.storage.LevelStorage.Session,com.mojang.datafixers.DataFixer)">WorldSaveHandler</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">WorldSaveHandler</span>&#8203;(<span class="arguments"><a href="level/storage/LevelStorage.Session.html" title="class in net.minecraft.world.level.storage">LevelStorage.Session</a>&nbsp;session,
 com.mojang.datafixers.DataFixer&nbsp;dataFixer)</span></div>
 </section>
 </li>
@@ -280,68 +261,21 @@ com.mojang.datafixers.DataFixer&nbsp;dataFixer)</span></div>
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="saveWorld(net.minecraft.world.level.LevelProperties,net.minecraft.nbt.CompoundTag)">saveWorld</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">saveWorld</span>&#8203;(<span class="arguments"><a href="level/LevelProperties.html" title="class in net.minecraft.world.level">LevelProperties</a>&nbsp;levelProperties,
-<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
-<a href="../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;tag)</span></div>
-</section>
-</li>
-<li class="blockList">
-<section class="detail">
-<h3><a id="getWorldDir()">getWorldDir</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io" class="externalLink">File</a></span>&nbsp;<span class="memberName">getWorldDir</span>()</div>
-</section>
-</li>
-<li class="blockList">
-<section class="detail">
-<h3><a id="readProperties()">readProperties</a></h3>
-<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="level/LevelProperties.html" title="class in net.minecraft.world.level">LevelProperties</a></span>&nbsp;<span class="memberName">readProperties</span>()</div>
-</section>
-</li>
-<li class="blockList">
-<section class="detail">
-<h3><a id="saveWorld(net.minecraft.world.level.LevelProperties)">saveWorld</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">saveWorld</span>&#8203;(<span class="arguments"><a href="level/LevelProperties.html" title="class in net.minecraft.world.level">LevelProperties</a>&nbsp;levelProperties)</span></div>
-</section>
-</li>
-<li class="blockList">
-<section class="detail">
 <h3><a id="savePlayerData(net.minecraft.entity.player.PlayerEntity)">savePlayerData</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">savePlayerData</span>&#8203;(<span class="arguments"><a href="../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;player)</span></div>
-<dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="PlayerSaveHandler.html#savePlayerData(net.minecraft.entity.player.PlayerEntity)">savePlayerData</a></code>&nbsp;in interface&nbsp;<code><a href="PlayerSaveHandler.html" title="interface in net.minecraft.world">PlayerSaveHandler</a></code></dd>
-</dl>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">savePlayerData</span>&#8203;(<span class="arguments"><a href="../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;playerEntity)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="loadPlayerData(net.minecraft.entity.player.PlayerEntity)">loadPlayerData</a></h3>
-<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a></span>&nbsp;<span class="memberName">loadPlayerData</span>&#8203;(<span class="arguments"><a href="../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;player)</span></div>
-<dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="PlayerSaveHandler.html#loadPlayerData(net.minecraft.entity.player.PlayerEntity)">loadPlayerData</a></code>&nbsp;in interface&nbsp;<code><a href="PlayerSaveHandler.html" title="interface in net.minecraft.world">PlayerSaveHandler</a></code></dd>
-</dl>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a></span>&nbsp;<span class="memberName">loadPlayerData</span>&#8203;(<span class="arguments"><a href="../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;playerEntity)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getSavedPlayerIds()">getSavedPlayerIds</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>[]</span>&nbsp;<span class="memberName">getSavedPlayerIds</span>()</div>
-</section>
-</li>
-<li class="blockList">
-<section class="detail">
-<h3><a id="getStructureManager()">getStructureManager</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../structure/StructureManager.html" title="class in net.minecraft.structure">StructureManager</a></span>&nbsp;<span class="memberName">getStructureManager</span>()</div>
-</section>
-</li>
-<li class="blockList">
-<section class="detail">
-<h3><a id="getDataFixer()">getDataFixer</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">com.mojang.datafixers.DataFixer</span>&nbsp;<span class="memberName">getDataFixer</span>()</div>
 </section>
 </li>
 </ul>

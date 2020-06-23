@@ -62,7 +62,7 @@ loadScripts(document, 'script');</script>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
@@ -102,7 +102,7 @@ loadScripts(document, 'script');</script>
 <section class="description">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="../../Drawable.html" title="interface in net.minecraft.client.gui">Drawable</a></code>, <code><a href="../../Element.html" title="interface in net.minecraft.client.gui">Element</a></code>, <code><a href="../../ParentElement.html" title="interface in net.minecraft.client.gui">ParentElement</a></code>, <code><a href="ScreenHandlerProvider.html" title="interface in net.minecraft.client.gui.screen.ingame">ScreenHandlerProvider</a>&lt;<a href="../../../../screen/SmithingScreenHandler.html" title="class in net.minecraft.screen">SmithingScreenHandler</a>&gt;</code>, <code><a href="../../../../screen/ScreenHandlerListener.html" title="interface in net.minecraft.screen">ScreenHandlerListener</a></code></dd>
+<dd><code><a href="../../Drawable.html" title="interface in net.minecraft.client.gui">Drawable</a></code>, <code><a href="../../Element.html" title="interface in net.minecraft.client.gui">Element</a></code>, <code><a href="../../ParentElement.html" title="interface in net.minecraft.client.gui">ParentElement</a></code>, <code><a href="ScreenHandlerProvider.html" title="interface in net.minecraft.client.gui.screen.ingame">ScreenHandlerProvider</a>&lt;<a href="../../../../screen/SmithingScreenHandler.html" title="class in net.minecraft.screen">SmithingScreenHandler</a>&gt;</code>, <code><a href="../TickableElement.html" title="interface in net.minecraft.client.gui.screen">TickableElement</a></code>, <code><a href="../../../../screen/ScreenHandlerListener.html" title="interface in net.minecraft.screen">ScreenHandlerListener</a></code></dd>
 </dl>
 <hr>
 <pre>@Environment(CLIENT)
@@ -117,11 +117,30 @@ extends <a href="ForgingScreen.html" title="class in net.minecraft.client.gui.sc
 <!--   -->
 </a>
 <h2>Field Summary</h2>
+<div class="memberSummary">
+<table>
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<thead>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colSecond" scope="col">Field</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="../../../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#TEXTURE">TEXTURE</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
 <div class="inheritedList">
 <h3>Fields inherited from class&nbsp;net.minecraft.client.gui.screen.ingame.<a href="HandledScreen.html" title="class in net.minecraft.client.gui.screen.ingame">HandledScreen</a></h3>
 <a id="fields.inherited.from.class.net.minecraft.client.gui.screen.ingame.HandledScreen">
 <!--   -->
-</a><code><a href="HandledScreen.html#BACKGROUND_TEXTURE">BACKGROUND_TEXTURE</a>, <a href="HandledScreen.html#backgroundHeight">backgroundHeight</a>, <a href="HandledScreen.html#backgroundWidth">backgroundWidth</a>, <a href="HandledScreen.html#cursorDragSlots">cursorDragSlots</a>, <a href="HandledScreen.html#focusedSlot">focusedSlot</a>, <a href="HandledScreen.html#handler">handler</a>, <a href="HandledScreen.html#isCursorDragging">isCursorDragging</a>, <a href="HandledScreen.html#playerInventory">playerInventory</a>, <a href="HandledScreen.html#x">x</a>, <a href="HandledScreen.html#y">y</a></code></div>
+</a><code><a href="HandledScreen.html#BACKGROUND_TEXTURE">BACKGROUND_TEXTURE</a>, <a href="HandledScreen.html#backgroundHeight">backgroundHeight</a>, <a href="HandledScreen.html#backgroundWidth">backgroundWidth</a>, <a href="HandledScreen.html#cursorDragSlots">cursorDragSlots</a>, <a href="HandledScreen.html#focusedSlot">focusedSlot</a>, <a href="HandledScreen.html#handler">handler</a>, <a href="HandledScreen.html#isCursorDragging">isCursorDragging</a>, <a href="HandledScreen.html#playerInventory">playerInventory</a>, <a href="HandledScreen.html#playerInventoryTitleX">playerInventoryTitleX</a>, <a href="HandledScreen.html#playerInventoryTitleY">playerInventoryTitleY</a>, <a href="HandledScreen.html#titleX">titleX</a>, <a href="HandledScreen.html#titleY">titleY</a>, <a href="HandledScreen.html#x">x</a>, <a href="HandledScreen.html#y">y</a></code></div>
 <div class="inheritedList">
 <h3>Fields inherited from class&nbsp;net.minecraft.client.gui.screen.<a href="../Screen.html" title="class in net.minecraft.client.gui.screen">Screen</a></h3>
 <a id="fields.inherited.from.class.net.minecraft.client.gui.screen.Screen">
@@ -181,7 +200,8 @@ extends <a href="ForgingScreen.html" title="class in net.minecraft.client.gui.sc
 <tbody>
 <tr class="altColor" id="i0">
 <td class="colFirst"><code>protected void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#drawForeground(int,int)">drawForeground</a></span>&#8203;(int&nbsp;mouseX,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#drawForeground(net.minecraft.client.util.math.MatrixStack,int,int)">drawForeground</a></span>&#8203;(<a href="../../../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
+int&nbsp;mouseX,
 int&nbsp;mouseY)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -193,17 +213,17 @@ int&nbsp;mouseY)</code></th>
 <h3>Methods inherited from class&nbsp;net.minecraft.client.gui.screen.ingame.<a href="ForgingScreen.html" title="class in net.minecraft.client.gui.screen.ingame">ForgingScreen</a></h3>
 <a id="methods.inherited.from.class.net.minecraft.client.gui.screen.ingame.ForgingScreen">
 <!--   -->
-</a><code><a href="ForgingScreen.html#drawBackground(float,int,int)">drawBackground</a>, <a href="ForgingScreen.html#init()">init</a>, <a href="ForgingScreen.html#onHandlerRegistered(net.minecraft.screen.ScreenHandler,net.minecraft.util.collection.DefaultedList)">onHandlerRegistered</a>, <a href="ForgingScreen.html#onPropertyUpdate(net.minecraft.screen.ScreenHandler,int,int)">onPropertyUpdate</a>, <a href="ForgingScreen.html#onSlotUpdate(net.minecraft.screen.ScreenHandler,int,net.minecraft.item.ItemStack)">onSlotUpdate</a>, <a href="ForgingScreen.html#removed()">removed</a>, <a href="ForgingScreen.html#render(int,int,float)">render</a>, <a href="ForgingScreen.html#renderForeground(int,int,float)">renderForeground</a>, <a href="ForgingScreen.html#setup()">setup</a></code></div>
+</a><code><a href="ForgingScreen.html#drawBackground(net.minecraft.client.util.math.MatrixStack,float,int,int)">drawBackground</a>, <a href="ForgingScreen.html#init()">init</a>, <a href="ForgingScreen.html#onHandlerRegistered(net.minecraft.screen.ScreenHandler,net.minecraft.util.collection.DefaultedList)">onHandlerRegistered</a>, <a href="ForgingScreen.html#onPropertyUpdate(net.minecraft.screen.ScreenHandler,int,int)">onPropertyUpdate</a>, <a href="ForgingScreen.html#onSlotUpdate(net.minecraft.screen.ScreenHandler,int,net.minecraft.item.ItemStack)">onSlotUpdate</a>, <a href="ForgingScreen.html#removed()">removed</a>, <a href="ForgingScreen.html#render(net.minecraft.client.util.math.MatrixStack,int,int,float)">render</a>, <a href="ForgingScreen.html#renderForeground(net.minecraft.client.util.math.MatrixStack,int,int,float)">renderForeground</a>, <a href="ForgingScreen.html#setup()">setup</a></code></div>
 <div class="inheritedList">
 <h3>Methods inherited from class&nbsp;net.minecraft.client.gui.screen.ingame.<a href="HandledScreen.html" title="class in net.minecraft.client.gui.screen.ingame">HandledScreen</a></h3>
 <a id="methods.inherited.from.class.net.minecraft.client.gui.screen.ingame.HandledScreen">
 <!--   -->
-</a><code><a href="HandledScreen.html#drawMouseoverTooltip(int,int)">drawMouseoverTooltip</a>, <a href="HandledScreen.html#getScreenHandler()">getScreenHandler</a>, <a href="HandledScreen.html#handleHotbarKeyPressed(int,int)">handleHotbarKeyPressed</a>, <a href="HandledScreen.html#isClickOutsideBounds(double,double,int,int,int)">isClickOutsideBounds</a>, <a href="HandledScreen.html#isPauseScreen()">isPauseScreen</a>, <a href="HandledScreen.html#isPointWithinBounds(int,int,int,int,double,double)">isPointWithinBounds</a>, <a href="HandledScreen.html#keyPressed(int,int,int)">keyPressed</a>, <a href="HandledScreen.html#mouseClicked(double,double,int)">mouseClicked</a>, <a href="HandledScreen.html#mouseDragged(double,double,int,double,double)">mouseDragged</a>, <a href="HandledScreen.html#mouseReleased(double,double,int)">mouseReleased</a>, <a href="HandledScreen.html#onMouseClick(net.minecraft.screen.slot.Slot,int,int,net.minecraft.screen.slot.SlotActionType)">onMouseClick</a>, <a href="HandledScreen.html#shouldCloseOnEsc()">shouldCloseOnEsc</a>, <a href="HandledScreen.html#tick()">tick</a></code></div>
+</a><code><a href="HandledScreen.html#drawMouseoverTooltip(net.minecraft.client.util.math.MatrixStack,int,int)">drawMouseoverTooltip</a>, <a href="HandledScreen.html#getScreenHandler()">getScreenHandler</a>, <a href="HandledScreen.html#handleHotbarKeyPressed(int,int)">handleHotbarKeyPressed</a>, <a href="HandledScreen.html#isClickOutsideBounds(double,double,int,int,int)">isClickOutsideBounds</a>, <a href="HandledScreen.html#isPauseScreen()">isPauseScreen</a>, <a href="HandledScreen.html#isPointWithinBounds(int,int,int,int,double,double)">isPointWithinBounds</a>, <a href="HandledScreen.html#keyPressed(int,int,int)">keyPressed</a>, <a href="HandledScreen.html#mouseClicked(double,double,int)">mouseClicked</a>, <a href="HandledScreen.html#mouseDragged(double,double,int,double,double)">mouseDragged</a>, <a href="HandledScreen.html#mouseReleased(double,double,int)">mouseReleased</a>, <a href="HandledScreen.html#onMouseClick(net.minecraft.screen.slot.Slot,int,int,net.minecraft.screen.slot.SlotActionType)">onMouseClick</a>, <a href="HandledScreen.html#shouldCloseOnEsc()">shouldCloseOnEsc</a>, <a href="HandledScreen.html#tick()">tick</a></code></div>
 <div class="inheritedList">
 <h3>Methods inherited from class&nbsp;net.minecraft.client.gui.screen.<a href="../Screen.html" title="class in net.minecraft.client.gui.screen">Screen</a></h3>
 <a id="methods.inherited.from.class.net.minecraft.client.gui.screen.Screen">
 <!--   -->
-</a><code><a href="../Screen.html#addButton(T)">addButton</a>, <a href="../Screen.html#addChild(T)">addChild</a>, <a href="../Screen.html#children()">children</a>, <a href="../Screen.html#getNarrationMessage()">getNarrationMessage</a>, <a href="../Screen.html#getTitle()">getTitle</a>, <a href="../Screen.html#getTooltipFromItem(net.minecraft.item.ItemStack)">getTooltipFromItem</a>, <a href="../Screen.html#handleTextClick(net.minecraft.text.Text)">handleTextClick</a>, <a href="../Screen.html#hasAltDown()">hasAltDown</a>, <a href="../Screen.html#hasControlDown()">hasControlDown</a>, <a href="../Screen.html#hasShiftDown()">hasShiftDown</a>, <a href="../Screen.html#init(net.minecraft.client.MinecraftClient,int,int)">init</a>, <a href="../Screen.html#insertText(java.lang.String,boolean)">insertText</a>, <a href="../Screen.html#isCopy(int)">isCopy</a>, <a href="../Screen.html#isCut(int)">isCut</a>, <a href="../Screen.html#isMouseOver(double,double)">isMouseOver</a>, <a href="../Screen.html#isPaste(int)">isPaste</a>, <a href="../Screen.html#isSelectAll(int)">isSelectAll</a>, <a href="../Screen.html#isValidCharacterForName(java.lang.String,char,int)">isValidCharacterForName</a>, <a href="../Screen.html#onClose()">onClose</a>, <a href="../Screen.html#renderBackground()">renderBackground</a>, <a href="../Screen.html#renderBackground(int)">renderBackground</a>, <a href="../Screen.html#renderDirtBackground(int)">renderDirtBackground</a>, <a href="../Screen.html#renderTextHoverEffect(net.minecraft.text.Text,int,int)">renderTextHoverEffect</a>, <a href="../Screen.html#renderTooltip(java.lang.String,int,int)">renderTooltip</a>, <a href="../Screen.html#renderTooltip(java.util.List,int,int)">renderTooltip</a>, <a href="../Screen.html#renderTooltip(net.minecraft.item.ItemStack,int,int)">renderTooltip</a>, <a href="../Screen.html#resize(net.minecraft.client.MinecraftClient,int,int)">resize</a>, <a href="../Screen.html#sendMessage(java.lang.String)">sendMessage</a>, <a href="../Screen.html#sendMessage(java.lang.String,boolean)">sendMessage</a>, <a href="../Screen.html#wrapScreenError(java.lang.Runnable,java.lang.String,java.lang.String)">wrapScreenError</a></code></div>
+</a><code><a href="../Screen.html#addButton(T)">addButton</a>, <a href="../Screen.html#addChild(T)">addChild</a>, <a href="../Screen.html#children()">children</a>, <a href="../Screen.html#getNarrationMessage()">getNarrationMessage</a>, <a href="../Screen.html#getTitle()">getTitle</a>, <a href="../Screen.html#getTooltipFromItem(net.minecraft.item.ItemStack)">getTooltipFromItem</a>, <a href="../Screen.html#handleTextClick(net.minecraft.text.Style)">handleTextClick</a>, <a href="../Screen.html#hasAltDown()">hasAltDown</a>, <a href="../Screen.html#hasControlDown()">hasControlDown</a>, <a href="../Screen.html#hasShiftDown()">hasShiftDown</a>, <a href="../Screen.html#init(net.minecraft.client.MinecraftClient,int,int)">init</a>, <a href="../Screen.html#insertText(java.lang.String,boolean)">insertText</a>, <a href="../Screen.html#isCopy(int)">isCopy</a>, <a href="../Screen.html#isCut(int)">isCut</a>, <a href="../Screen.html#isMouseOver(double,double)">isMouseOver</a>, <a href="../Screen.html#isPaste(int)">isPaste</a>, <a href="../Screen.html#isSelectAll(int)">isSelectAll</a>, <a href="../Screen.html#isValidCharacterForName(java.lang.String,char,int)">isValidCharacterForName</a>, <a href="../Screen.html#method_29638(java.util.List)">method_29638</a>, <a href="../Screen.html#onClose()">onClose</a>, <a href="../Screen.html#renderBackground(net.minecraft.client.util.math.MatrixStack)">renderBackground</a>, <a href="../Screen.html#renderBackground(net.minecraft.client.util.math.MatrixStack,int)">renderBackground</a>, <a href="../Screen.html#renderBackgroundTexture(int)">renderBackgroundTexture</a>, <a href="../Screen.html#renderTextHoverEffect(net.minecraft.client.util.math.MatrixStack,net.minecraft.text.Style,int,int)">renderTextHoverEffect</a>, <a href="../Screen.html#renderTooltip(net.minecraft.client.util.math.MatrixStack,java.util.List,int,int)">renderTooltip</a>, <a href="../Screen.html#renderTooltip(net.minecraft.client.util.math.MatrixStack,net.minecraft.item.ItemStack,int,int)">renderTooltip</a>, <a href="../Screen.html#renderTooltip(net.minecraft.client.util.math.MatrixStack,net.minecraft.text.StringRenderable,int,int)">renderTooltip</a>, <a href="../Screen.html#resize(net.minecraft.client.MinecraftClient,int,int)">resize</a>, <a href="../Screen.html#sendMessage(java.lang.String)">sendMessage</a>, <a href="../Screen.html#sendMessage(java.lang.String,boolean)">sendMessage</a>, <a href="../Screen.html#wrapScreenError(java.lang.Runnable,java.lang.String,java.lang.String)">wrapScreenError</a></code></div>
 <div class="inheritedList">
 <h3>Methods inherited from class&nbsp;net.minecraft.client.gui.<a href="../../AbstractParentElement.html" title="class in net.minecraft.client.gui">AbstractParentElement</a></h3>
 <a id="methods.inherited.from.class.net.minecraft.client.gui.AbstractParentElement">
@@ -213,7 +233,7 @@ int&nbsp;mouseY)</code></th>
 <h3>Methods inherited from class&nbsp;net.minecraft.client.gui.<a href="../../DrawableHelper.html" title="class in net.minecraft.client.gui">DrawableHelper</a></h3>
 <a id="methods.inherited.from.class.net.minecraft.client.gui.DrawableHelper">
 <!--   -->
-</a><code><a href="../../DrawableHelper.html#drawCenteredString(net.minecraft.client.font.TextRenderer,java.lang.String,int,int,int)">drawCenteredString</a>, <a href="../../DrawableHelper.html#drawHorizontalLine(int,int,int,int)">drawHorizontalLine</a>, <a href="../../DrawableHelper.html#drawSprite(int,int,int,int,int,net.minecraft.client.texture.Sprite)">drawSprite</a>, <a href="../../DrawableHelper.html#drawString(net.minecraft.client.font.TextRenderer,java.lang.String,int,int,int)">drawString</a>, <a href="../../DrawableHelper.html#drawTexture(int,int,float,float,int,int,int,int)">drawTexture</a>, <a href="../../DrawableHelper.html#drawTexture(int,int,int,float,float,int,int,int,int)">drawTexture</a>, <a href="../../DrawableHelper.html#drawTexture(int,int,int,int,float,float,int,int,int,int)">drawTexture</a>, <a href="../../DrawableHelper.html#drawTexture(int,int,int,int,int,int)">drawTexture</a>, <a href="../../DrawableHelper.html#drawTexturedQuad(int,int,int,int,int,float,float,float,float)">drawTexturedQuad</a>, <a href="../../DrawableHelper.html#drawVerticalLine(int,int,int,int)">drawVerticalLine</a>, <a href="../../DrawableHelper.html#fill(int,int,int,int,int)">fill</a>, <a href="../../DrawableHelper.html#fill(net.minecraft.util.math.Matrix4f,int,int,int,int,int)">fill</a>, <a href="../../DrawableHelper.html#fillGradient(int,int,int,int,int,int)">fillGradient</a>, <a href="../../DrawableHelper.html#getZOffset()">getZOffset</a>, <a href="../../DrawableHelper.html#setZOffset(int)">setZOffset</a></code></div>
+</a><code><a href="../../DrawableHelper.html#drawCenteredString(net.minecraft.client.util.math.MatrixStack,net.minecraft.client.font.TextRenderer,java.lang.String,int,int,int)">drawCenteredString</a>, <a href="../../DrawableHelper.html#drawCenteredText(net.minecraft.client.util.math.MatrixStack,net.minecraft.client.font.TextRenderer,net.minecraft.text.StringRenderable,int,int,int)">drawCenteredText</a>, <a href="../../DrawableHelper.html#drawHorizontalLine(net.minecraft.client.util.math.MatrixStack,int,int,int,int)">drawHorizontalLine</a>, <a href="../../DrawableHelper.html#drawSprite(net.minecraft.client.util.math.MatrixStack,int,int,int,int,int,net.minecraft.client.texture.Sprite)">drawSprite</a>, <a href="../../DrawableHelper.html#drawStringWithShadow(net.minecraft.client.util.math.MatrixStack,net.minecraft.client.font.TextRenderer,java.lang.String,int,int,int)">drawStringWithShadow</a>, <a href="../../DrawableHelper.html#drawTexture(net.minecraft.client.util.math.MatrixStack,int,int,float,float,int,int,int,int)">drawTexture</a>, <a href="../../DrawableHelper.html#drawTexture(net.minecraft.client.util.math.MatrixStack,int,int,int,float,float,int,int,int,int)">drawTexture</a>, <a href="../../DrawableHelper.html#drawTexture(net.minecraft.client.util.math.MatrixStack,int,int,int,int,float,float,int,int,int,int)">drawTexture</a>, <a href="../../DrawableHelper.html#drawTexture(net.minecraft.client.util.math.MatrixStack,int,int,int,int,int,int)">drawTexture</a>, <a href="../../DrawableHelper.html#drawTextWithShadow(net.minecraft.client.util.math.MatrixStack,net.minecraft.client.font.TextRenderer,net.minecraft.text.StringRenderable,int,int,int)">drawTextWithShadow</a>, <a href="../../DrawableHelper.html#drawVerticalLine(net.minecraft.client.util.math.MatrixStack,int,int,int,int)">drawVerticalLine</a>, <a href="../../DrawableHelper.html#fill(net.minecraft.client.util.math.MatrixStack,int,int,int,int,int)">fill</a>, <a href="../../DrawableHelper.html#fillGradient(net.minecraft.client.util.math.MatrixStack,int,int,int,int,int,int)">fillGradient</a>, <a href="../../DrawableHelper.html#fillGradient(net.minecraft.util.math.Matrix4f,net.minecraft.client.render.BufferBuilder,int,int,int,int,int,int,int)">fillGradient</a>, <a href="../../DrawableHelper.html#getZOffset()">getZOffset</a>, <a href="../../DrawableHelper.html#method_29343(int,int,java.util.function.BiConsumer)">method_29343</a>, <a href="../../DrawableHelper.html#setZOffset(int)">setZOffset</a></code></div>
 <div class="inheritedList">
 <h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></h3>
 <a id="methods.inherited.from.class.java.lang.Object">
@@ -235,6 +255,22 @@ int&nbsp;mouseY)</code></th>
 </section>
 <section class="details">
 <ul class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<li class="blockList">
+<section class="fieldDetails"><a id="field.detail">
+<!--   -->
+</a>
+<h2>Field Details</h2>
+<ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="TEXTURE">TEXTURE</a></h3>
+<div class="memberSignature"><span class="modifiers">private static final</span>&nbsp;<span class="returnType"><a href="../../../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a></span>&nbsp;<span class="memberName">TEXTURE</span></div>
+</section>
+</li>
+</ul>
+</section>
+</li>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <li class="blockList">
 <section class="constructorDetails"><a id="constructor.detail">
@@ -262,12 +298,13 @@ int&nbsp;mouseY)</code></th>
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="drawForeground(int,int)">drawForeground</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">drawForeground</span>&#8203;(<span class="arguments">int&nbsp;mouseX,
+<h3><a id="drawForeground(net.minecraft.client.util.math.MatrixStack,int,int)">drawForeground</a></h3>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">drawForeground</span>&#8203;(<span class="arguments"><a href="../../../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
+int&nbsp;mouseX,
 int&nbsp;mouseY)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code><a href="HandledScreen.html#drawForeground(int,int)">drawForeground</a></code>&nbsp;in class&nbsp;<code><a href="HandledScreen.html" title="class in net.minecraft.client.gui.screen.ingame">HandledScreen</a>&lt;<a href="../../../../screen/SmithingScreenHandler.html" title="class in net.minecraft.screen">SmithingScreenHandler</a>&gt;</code></dd>
+<dd><code><a href="HandledScreen.html#drawForeground(net.minecraft.client.util.math.MatrixStack,int,int)">drawForeground</a></code>&nbsp;in class&nbsp;<code><a href="HandledScreen.html" title="class in net.minecraft.client.gui.screen.ingame">HandledScreen</a>&lt;<a href="../../../../screen/SmithingScreenHandler.html" title="class in net.minecraft.screen">SmithingScreenHandler</a>&gt;</code></dd>
 </dl>
 </section>
 </li>
@@ -310,7 +347,7 @@ int&nbsp;mouseY)</span></div>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>

@@ -152,23 +152,33 @@ implements <a href="BakedModel.html" title="interface in net.minecraft.client.re
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="https://commons.apache.org/proper/commons-lang/javadocs/api-3.5/org/apache/commons/lang3/tuple/Pair.html?is-external=true" title="class or interface in org.apache.commons.lang3.tuple" class="externalLink">Pair</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Predicate</a>&lt;<a href="../../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&gt;,&#8203;<a href="BakedModel.html" title="interface in net.minecraft.client.render.model">BakedModel</a>&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#components">components</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>protected boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#depthGui">depthGui</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#field_21863">field_21863</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
-<td class="colFirst"><code>protected <a href="json/ModelItemPropertyOverrideList.html" title="class in net.minecraft.client.render.model.json">ModelItemPropertyOverrideList</a></code></td>
+<tr class="altColor">
+<td class="colFirst"><code>protected <a href="json/ModelOverrideList.html" title="class in net.minecraft.client.render.model.json">ModelOverrideList</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#itemPropertyOverrides">itemPropertyOverrides</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../texture/Sprite.html" title="class in net.minecraft.client.texture">Sprite</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#sprite">sprite</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util" class="externalLink">Map</a>&lt;<a href="../../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/BitSet.html?is-external=true" title="class or interface in java.util" class="externalLink">BitSet</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#stateCache">stateCache</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
@@ -198,7 +208,7 @@ implements <a href="BakedModel.html" title="interface in net.minecraft.client.re
 </thead>
 <tbody>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.util.List)">MultipartBakedModel</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;org.apache.commons.lang3.tuple.Pair&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Predicate</a>&lt;<a href="../../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&gt;,&#8203;<a href="BakedModel.html" title="interface in net.minecraft.client.render.model">BakedModel</a>&gt;&gt;&nbsp;components)</code></th>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.util.List)">MultipartBakedModel</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="https://commons.apache.org/proper/commons-lang/javadocs/api-3.5/org/apache/commons/lang3/tuple/Pair.html?is-external=true" title="class or interface in org.apache.commons.lang3.tuple" class="externalLink">Pair</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Predicate</a>&lt;<a href="../../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&gt;,&#8203;<a href="BakedModel.html" title="interface in net.minecraft.client.render.model">BakedModel</a>&gt;&gt;&nbsp;components)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -225,8 +235,8 @@ implements <a href="BakedModel.html" title="interface in net.minecraft.client.re
 </thead>
 <tbody>
 <tr class="altColor" id="i0">
-<td class="colFirst"><code><a href="json/ModelItemPropertyOverrideList.html" title="class in net.minecraft.client.render.model.json">ModelItemPropertyOverrideList</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getItemPropertyOverrides()">getItemPropertyOverrides</a></span>()</code></th>
+<td class="colFirst"><code><a href="json/ModelOverrideList.html" title="class in net.minecraft.client.render.model.json">ModelOverrideList</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getOverrides()">getOverrides</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
@@ -292,6 +302,12 @@ implements <a href="BakedModel.html" title="interface in net.minecraft.client.re
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
+<h3><a id="components">components</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="https://commons.apache.org/proper/commons-lang/javadocs/api-3.5/org/apache/commons/lang3/tuple/Pair.html?is-external=true" title="class or interface in org.apache.commons.lang3.tuple" class="externalLink">Pair</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Predicate</a>&lt;<a href="../../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&gt;,&#8203;<a href="BakedModel.html" title="interface in net.minecraft.client.render.model">BakedModel</a>&gt;&gt;</span>&nbsp;<span class="memberName">components</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="ambientOcclusion">ambientOcclusion</a></h3>
 <div class="memberSignature"><span class="modifiers">protected final</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">ambientOcclusion</span></div>
 </section>
@@ -323,7 +339,13 @@ implements <a href="BakedModel.html" title="interface in net.minecraft.client.re
 <li class="blockList">
 <section class="detail">
 <h3><a id="itemPropertyOverrides">itemPropertyOverrides</a></h3>
-<div class="memberSignature"><span class="modifiers">protected final</span>&nbsp;<span class="returnType"><a href="json/ModelItemPropertyOverrideList.html" title="class in net.minecraft.client.render.model.json">ModelItemPropertyOverrideList</a></span>&nbsp;<span class="memberName">itemPropertyOverrides</span></div>
+<div class="memberSignature"><span class="modifiers">protected final</span>&nbsp;<span class="returnType"><a href="json/ModelOverrideList.html" title="class in net.minecraft.client.render.model.json">ModelOverrideList</a></span>&nbsp;<span class="memberName">itemPropertyOverrides</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="stateCache">stateCache</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util" class="externalLink">Map</a>&lt;<a href="../../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/BitSet.html?is-external=true" title="class or interface in java.util" class="externalLink">BitSet</a>&gt;</span>&nbsp;<span class="memberName">stateCache</span></div>
 </section>
 </li>
 </ul>
@@ -339,7 +361,7 @@ implements <a href="BakedModel.html" title="interface in net.minecraft.client.re
 <li class="blockList">
 <section class="detail">
 <h3><a id="&lt;init&gt;(java.util.List)">MultipartBakedModel</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">MultipartBakedModel</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;org.apache.commons.lang3.tuple.Pair&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Predicate</a>&lt;<a href="../../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&gt;,&#8203;<a href="BakedModel.html" title="interface in net.minecraft.client.render.model">BakedModel</a>&gt;&gt;&nbsp;components)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">MultipartBakedModel</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="https://commons.apache.org/proper/commons-lang/javadocs/api-3.5/org/apache/commons/lang3/tuple/Pair.html?is-external=true" title="class or interface in org.apache.commons.lang3.tuple" class="externalLink">Pair</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Predicate</a>&lt;<a href="../../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&gt;,&#8203;<a href="BakedModel.html" title="interface in net.minecraft.client.render.model">BakedModel</a>&gt;&gt;&nbsp;components)</span></div>
 </section>
 </li>
 </ul>
@@ -355,9 +377,9 @@ implements <a href="BakedModel.html" title="interface in net.minecraft.client.re
 <li class="blockList">
 <section class="detail">
 <h3><a id="getQuads(net.minecraft.block.BlockState,net.minecraft.util.math.Direction,java.util.Random)">getQuads</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="BakedQuad.html" title="class in net.minecraft.client.render.model">BakedQuad</a>&gt;</span>&nbsp;<span class="memberName">getQuads</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="BakedQuad.html" title="class in net.minecraft.client.render.model">BakedQuad</a>&gt;</span>&nbsp;<span class="memberName">getQuads</span>&#8203;(<span class="arguments"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 <a href="../../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state,
-<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 <a href="../../../util/math/Direction.html" title="enum in net.minecraft.util.math">Direction</a>&nbsp;face,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random)</span></div>
 <dl>
@@ -433,11 +455,11 @@ implements <a href="BakedModel.html" title="interface in net.minecraft.client.re
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="getItemPropertyOverrides()">getItemPropertyOverrides</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="json/ModelItemPropertyOverrideList.html" title="class in net.minecraft.client.render.model.json">ModelItemPropertyOverrideList</a></span>&nbsp;<span class="memberName">getItemPropertyOverrides</span>()</div>
+<h3><a id="getOverrides()">getOverrides</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="json/ModelOverrideList.html" title="class in net.minecraft.client.render.model.json">ModelOverrideList</a></span>&nbsp;<span class="memberName">getOverrides</span>()</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="BakedModel.html#getItemPropertyOverrides()">getItemPropertyOverrides</a></code>&nbsp;in interface&nbsp;<code><a href="BakedModel.html" title="interface in net.minecraft.client.render.model">BakedModel</a></code></dd>
+<dd><code><a href="BakedModel.html#getOverrides()">getOverrides</a></code>&nbsp;in interface&nbsp;<code><a href="BakedModel.html" title="interface in net.minecraft.client.render.model">BakedModel</a></code></dd>
 </dl>
 </section>
 </li>

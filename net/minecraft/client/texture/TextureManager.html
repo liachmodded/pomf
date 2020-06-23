@@ -19,8 +19,8 @@
 <script type="text/javascript" src="../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10};
-var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
+<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":9,"i11":10};
+var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
@@ -133,8 +133,33 @@ implements <a href="../../resource/ResourceReloadListener.html" title="interface
 </thead>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util" class="externalLink">Map</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang" class="externalLink">Integer</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#dynamicIdCounters">dynamicIdCounters</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static <a href="https://logging.apache.org/log4j/2.x/log4j-api/apidocs/org/apache/logging/log4j/Logger.html?is-external=true" title="class or interface in org.apache.logging.log4j" class="externalLink">Logger</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#LOGGER">LOGGER</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#MISSING_IDENTIFIER">MISSING_IDENTIFIER</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../resource/ResourceManager.html" title="interface in net.minecraft.resource">ResourceManager</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#resourceContainer">resourceContainer</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util" class="externalLink">Map</a>&lt;<a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>,&#8203;<a href="AbstractTexture.html" title="class in net.minecraft.client.texture">AbstractTexture</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#textures">textures</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="TextureTickListener.html" title="interface in net.minecraft.client.texture">TextureTickListener</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#tickListeners">tickListeners</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -174,7 +199,7 @@ implements <a href="../../resource/ResourceReloadListener.html" title="interface
 </a>
 <h2>Method Summary</h2>
 <div class="memberSummary">
-<div role="tablist" aria-orientation="horizontal"><button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t2" class="tableTab" onclick="show(2);">Instance Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t4" class="tableTab" onclick="show(8);">Concrete Methods</button></div>
+<div role="tablist" aria-orientation="horizontal"><button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t1" class="tableTab" onclick="show(1);">Static Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t2" class="tableTab" onclick="show(2);">Instance Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t4" class="tableTab" onclick="show(8);">Concrete Methods</button></div>
 <div id="memberSummary_tabpanel" role="tabpanel">
 <table aria-labelledby="t0">
 <thead>
@@ -191,39 +216,50 @@ implements <a href="../../resource/ResourceReloadListener.html" title="interface
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
-<td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#close()">close</a></span>()</code></th>
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#bindTextureInner(net.minecraft.util.Identifier)">bindTextureInner</a></span>&#8203;(<a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;id)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i2">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#destroyTexture(net.minecraft.util.Identifier)">destroyTexture</a></span>&#8203;(<a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;id)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#close()">close</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i3">
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#destroyTexture(net.minecraft.util.Identifier)">destroyTexture</a></span>&#8203;(<a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;id)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i4">
 <td class="colFirst"><code><a href="AbstractTexture.html" title="class in net.minecraft.client.texture">AbstractTexture</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getTexture(net.minecraft.util.Identifier)">getTexture</a></span>&#8203;(<a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;id)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i4">
+<tr class="rowColor" id="i5">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html?is-external=true" title="class or interface in java.util.concurrent" class="externalLink">CompletableFuture</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html?is-external=true" title="class or interface in java.lang" class="externalLink">Void</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#loadTextureAsync(net.minecraft.util.Identifier,java.util.concurrent.Executor)">loadTextureAsync</a></span>&#8203;(<a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;id,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executor.html?is-external=true" title="class or interface in java.util.concurrent" class="externalLink">Executor</a>&nbsp;executor)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i5">
+<tr class="altColor" id="i6">
+<td class="colFirst"><code>private <a href="AbstractTexture.html" title="class in net.minecraft.client.texture">AbstractTexture</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_24303(net.minecraft.util.Identifier,net.minecraft.client.texture.AbstractTexture)">method_24303</a></span>&#8203;(<a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;identifier,
+<a href="AbstractTexture.html" title="class in net.minecraft.client.texture">AbstractTexture</a>&nbsp;abstractTexture)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i7">
 <td class="colFirst"><code><a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#registerDynamicTexture(java.lang.String,net.minecraft.client.texture.NativeImageBackedTexture)">registerDynamicTexture</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;prefix,
 <a href="NativeImageBackedTexture.html" title="class in net.minecraft.client.texture">NativeImageBackedTexture</a>&nbsp;texture)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i6">
+<tr class="altColor" id="i8">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#registerTexture(net.minecraft.util.Identifier,net.minecraft.client.texture.AbstractTexture)">registerTexture</a></span>&#8203;(<a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;identifier,
 <a href="AbstractTexture.html" title="class in net.minecraft.client.texture">AbstractTexture</a>&nbsp;abstractTexture)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i7">
+<tr class="rowColor" id="i9">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html?is-external=true" title="class or interface in java.util.concurrent" class="externalLink">CompletableFuture</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html?is-external=true" title="class or interface in java.lang" class="externalLink">Void</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#reload(net.minecraft.resource.ResourceReloadListener.Synchronizer,net.minecraft.resource.ResourceManager,net.minecraft.util.profiler.Profiler,net.minecraft.util.profiler.Profiler,java.util.concurrent.Executor,java.util.concurrent.Executor)">reload</a></span>&#8203;(<a href="../../resource/ResourceReloadListener.Synchronizer.html" title="interface in net.minecraft.resource">ResourceReloadListener.Synchronizer</a>&nbsp;synchronizer,
 <a href="../../resource/ResourceManager.html" title="interface in net.minecraft.resource">ResourceManager</a>&nbsp;manager,
@@ -233,7 +269,12 @@ implements <a href="../../resource/ResourceReloadListener.html" title="interface
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executor.html?is-external=true" title="class or interface in java.util.concurrent" class="externalLink">Executor</a>&nbsp;applyExecutor)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i8">
+<tr class="altColor" id="i10">
+<td class="colFirst"><code>private static void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#runOnRenderThread(java.lang.Runnable)">runOnRenderThread</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang" class="externalLink">Runnable</a>&nbsp;runnable)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i11">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#tick()">tick</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
@@ -267,8 +308,38 @@ implements <a href="../../resource/ResourceReloadListener.html" title="interface
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
+<h3><a id="LOGGER">LOGGER</a></h3>
+<div class="memberSignature"><span class="modifiers">private static final</span>&nbsp;<span class="returnType"><a href="https://logging.apache.org/log4j/2.x/log4j-api/apidocs/org/apache/logging/log4j/Logger.html?is-external=true" title="class or interface in org.apache.logging.log4j" class="externalLink">Logger</a></span>&nbsp;<span class="memberName">LOGGER</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="MISSING_IDENTIFIER">MISSING_IDENTIFIER</a></h3>
 <div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a></span>&nbsp;<span class="memberName">MISSING_IDENTIFIER</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="textures">textures</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util" class="externalLink">Map</a>&lt;<a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>,&#8203;<a href="AbstractTexture.html" title="class in net.minecraft.client.texture">AbstractTexture</a>&gt;</span>&nbsp;<span class="memberName">textures</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="tickListeners">tickListeners</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="TextureTickListener.html" title="interface in net.minecraft.client.texture">TextureTickListener</a>&gt;</span>&nbsp;<span class="memberName">tickListeners</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="dynamicIdCounters">dynamicIdCounters</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util" class="externalLink">Map</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang" class="externalLink">Integer</a>&gt;</span>&nbsp;<span class="memberName">dynamicIdCounters</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="resourceContainer">resourceContainer</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../../resource/ResourceManager.html" title="interface in net.minecraft.resource">ResourceManager</a></span>&nbsp;<span class="memberName">resourceContainer</span></div>
 </section>
 </li>
 </ul>
@@ -305,6 +376,12 @@ implements <a href="../../resource/ResourceReloadListener.html" title="interface
 </li>
 <li class="blockList">
 <section class="detail">
+<h3><a id="bindTextureInner(net.minecraft.util.Identifier)">bindTextureInner</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">bindTextureInner</span>&#8203;(<span class="arguments"><a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;id)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="registerTexture(net.minecraft.util.Identifier,net.minecraft.client.texture.AbstractTexture)">registerTexture</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">registerTexture</span>&#8203;(<span class="arguments"><a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;identifier,
 <a href="AbstractTexture.html" title="class in net.minecraft.client.texture">AbstractTexture</a>&nbsp;abstractTexture)</span></div>
@@ -312,8 +389,15 @@ implements <a href="../../resource/ResourceReloadListener.html" title="interface
 </li>
 <li class="blockList">
 <section class="detail">
+<h3><a id="method_24303(net.minecraft.util.Identifier,net.minecraft.client.texture.AbstractTexture)">method_24303</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="AbstractTexture.html" title="class in net.minecraft.client.texture">AbstractTexture</a></span>&nbsp;<span class="memberName">method_24303</span>&#8203;(<span class="arguments"><a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;identifier,
+<a href="AbstractTexture.html" title="class in net.minecraft.client.texture">AbstractTexture</a>&nbsp;abstractTexture)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="getTexture(net.minecraft.util.Identifier)">getTexture</a></h3>
-<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 </span><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="AbstractTexture.html" title="class in net.minecraft.client.texture">AbstractTexture</a></span>&nbsp;<span class="memberName">getTexture</span>&#8203;(<span class="arguments"><a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;id)</span></div>
 </section>
 </li>
@@ -329,6 +413,12 @@ implements <a href="../../resource/ResourceReloadListener.html" title="interface
 <h3><a id="loadTextureAsync(net.minecraft.util.Identifier,java.util.concurrent.Executor)">loadTextureAsync</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html?is-external=true" title="class or interface in java.util.concurrent" class="externalLink">CompletableFuture</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html?is-external=true" title="class or interface in java.lang" class="externalLink">Void</a>&gt;</span>&nbsp;<span class="memberName">loadTextureAsync</span>&#8203;(<span class="arguments"><a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;id,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executor.html?is-external=true" title="class or interface in java.util.concurrent" class="externalLink">Executor</a>&nbsp;executor)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="runOnRenderThread(java.lang.Runnable)">runOnRenderThread</a></h3>
+<div class="memberSignature"><span class="modifiers">private static</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">runOnRenderThread</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang" class="externalLink">Runnable</a>&nbsp;runnable)</span></div>
 </section>
 </li>
 <li class="blockList">

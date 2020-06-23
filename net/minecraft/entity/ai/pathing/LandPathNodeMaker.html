@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":9,"i4":10,"i5":9,"i6":9,"i7":10,"i8":10,"i9":9,"i10":10,"i11":10,"i12":10};
+<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":9,"i4":10,"i5":9,"i6":9,"i7":10,"i8":10,"i9":10,"i10":9,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":9,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -120,6 +120,16 @@ extends <a href="PathNodeMaker.html" title="class in net.minecraft.entity.ai.pat
 </thead>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code>private <a href="http://fastutil.di.unimi.it/docs/it/unimi/dsi/fastutil/longs/Long2ObjectMap.html?is-external=true" title="class or interface in it.unimi.dsi.fastutil.longs" class="externalLink">Long2ObjectMap</a>&lt;<a href="PathNodeType.html" title="enum in net.minecraft.entity.ai.pathing">PathNodeType</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#field_25190">field_25190</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://fastutil.di.unimi.it/docs/it/unimi/dsi/fastutil/objects/Object2BooleanMap.html?is-external=true" title="class or interface in it.unimi.dsi.fastutil.objects" class="externalLink">Object2BooleanMap</a>&lt;<a href="../../../util/math/Box.html" title="class in net.minecraft.util.math">Box</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#field_25191">field_25191</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>protected float</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#waterPathNodeTypeWeight">waterPathNodeTypeWeight</a></span></code></th>
 <td class="colLast">&nbsp;</td>
@@ -211,10 +221,8 @@ boolean&nbsp;canEnterOpenDoors,
 </tr>
 <tr class="rowColor" id="i3">
 <td class="colFirst"><code>protected static <a href="PathNodeType.html" title="enum in net.minecraft.entity.ai.pathing">PathNodeType</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getCommonNodeType(net.minecraft.world.BlockView,int,int,int)">getCommonNodeType</a></span>&#8203;(<a href="../../../world/BlockView.html" title="interface in net.minecraft.world">BlockView</a>&nbsp;world,
-int&nbsp;x,
-int&nbsp;y,
-int&nbsp;z)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getCommonNodeType(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos)">getCommonNodeType</a></span>&#8203;(<a href="../../../world/BlockView.html" title="interface in net.minecraft.world">BlockView</a>&nbsp;blockView,
+<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i4">
@@ -235,10 +243,8 @@ int&nbsp;z)</code></th>
 </tr>
 <tr class="altColor" id="i6">
 <td class="colFirst"><code>static <a href="PathNodeType.html" title="enum in net.minecraft.entity.ai.pathing">PathNodeType</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getLandNodeType(net.minecraft.world.BlockView,int,int,int)">getLandNodeType</a></span>&#8203;(<a href="../../../world/BlockView.html" title="interface in net.minecraft.world">BlockView</a>&nbsp;world,
-int&nbsp;x,
-int&nbsp;y,
-int&nbsp;z)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getLandNodeType(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos.Mutable)">getLandNodeType</a></span>&#8203;(<a href="../../../world/BlockView.html" title="interface in net.minecraft.world">BlockView</a>&nbsp;blockView,
+<a href="../../../util/math/BlockPos.Mutable.html" title="class in net.minecraft.util.math">BlockPos.Mutable</a>&nbsp;mutable)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i7">
@@ -249,6 +255,12 @@ double&nbsp;z)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i8">
+<td class="colFirst"><code>private <a href="PathNodeType.html" title="enum in net.minecraft.entity.ai.pathing">PathNodeType</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getNodeType(net.minecraft.entity.mob.MobEntity,net.minecraft.util.math.BlockPos)">getNodeType</a></span>&#8203;(<a href="../../mob/MobEntity.html" title="class in net.minecraft.entity.mob">MobEntity</a>&nbsp;entity,
+<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i9">
 <td class="colFirst"><code><a href="PathNodeType.html" title="enum in net.minecraft.entity.ai.pathing">PathNodeType</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getNodeType(net.minecraft.world.BlockView,int,int,int,net.minecraft.entity.mob.MobEntity,int,int,int,boolean,boolean)">getNodeType</a></span>&#8203;(<a href="../../../world/BlockView.html" title="interface in net.minecraft.world">BlockView</a>&nbsp;world,
 int&nbsp;x,
@@ -262,30 +274,81 @@ boolean&nbsp;canOpenDoors,
 boolean&nbsp;canEnterOpenDoors)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i9">
+<tr class="altColor" id="i10">
 <td class="colFirst"><code>static <a href="PathNodeType.html" title="enum in net.minecraft.entity.ai.pathing">PathNodeType</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getNodeTypeFromNeighbors(net.minecraft.world.BlockView,int,int,int,net.minecraft.entity.ai.pathing.PathNodeType)">getNodeTypeFromNeighbors</a></span>&#8203;(<a href="../../../world/BlockView.html" title="interface in net.minecraft.world">BlockView</a>&nbsp;world,
-int&nbsp;x,
-int&nbsp;y,
-int&nbsp;z,
-<a href="PathNodeType.html" title="enum in net.minecraft.entity.ai.pathing">PathNodeType</a>&nbsp;type)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getNodeTypeFromNeighbors(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos.Mutable,net.minecraft.entity.ai.pathing.PathNodeType)">getNodeTypeFromNeighbors</a></span>&#8203;(<a href="../../../world/BlockView.html" title="interface in net.minecraft.world">BlockView</a>&nbsp;blockView,
+<a href="../../../util/math/BlockPos.Mutable.html" title="class in net.minecraft.util.math">BlockPos.Mutable</a>&nbsp;mutable,
+<a href="PathNodeType.html" title="enum in net.minecraft.entity.ai.pathing">PathNodeType</a>&nbsp;pathNodeType)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i10">
+<tr class="rowColor" id="i11">
+<td class="colFirst"><code>private <a href="PathNode.html" title="class in net.minecraft.entity.ai.pathing">PathNode</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPathNode(int,int,int,int,double,net.minecraft.util.math.Direction,net.minecraft.entity.ai.pathing.PathNodeType)">getPathNode</a></span>&#8203;(int&nbsp;x,
+int&nbsp;y,
+int&nbsp;z,
+int&nbsp;maxYStep,
+double&nbsp;prevFeetY,
+<a href="../../../util/math/Direction.html" title="enum in net.minecraft.util.math">Direction</a>&nbsp;direction,
+<a href="PathNodeType.html" title="enum in net.minecraft.entity.ai.pathing">PathNodeType</a>&nbsp;pathNodeType)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i12">
 <td class="colFirst"><code><a href="PathNode.html" title="class in net.minecraft.entity.ai.pathing">PathNode</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getStart()">getStart</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i11">
+<tr class="rowColor" id="i13">
 <td class="colFirst"><code>int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getSuccessors(net.minecraft.entity.ai.pathing.PathNode%5B%5D,net.minecraft.entity.ai.pathing.PathNode)">getSuccessors</a></span>&#8203;(<a href="PathNode.html" title="class in net.minecraft.entity.ai.pathing">PathNode</a>[]&nbsp;successors,
 <a href="PathNode.html" title="class in net.minecraft.entity.ai.pathing">PathNode</a>&nbsp;node)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i12">
+<tr class="altColor" id="i14">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#init(net.minecraft.world.chunk.ChunkCache,net.minecraft.entity.mob.MobEntity)">init</a></span>&#8203;(<a href="../../../world/chunk/ChunkCache.html" title="class in net.minecraft.world.chunk">ChunkCache</a>&nbsp;cachedWorld,
 <a href="../../mob/MobEntity.html" title="class in net.minecraft.entity.mob">MobEntity</a>&nbsp;entity)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i15">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isValidDiagonalSuccessor(net.minecraft.entity.ai.pathing.PathNode,net.minecraft.entity.ai.pathing.PathNode)">isValidDiagonalSuccessor</a></span>&#8203;(<a href="PathNode.html" title="class in net.minecraft.entity.ai.pathing">PathNode</a>&nbsp;node,
+<a href="PathNode.html" title="class in net.minecraft.entity.ai.pathing">PathNode</a>&nbsp;successor1)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i16">
+<td class="colFirst"><code>private static boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_27138(net.minecraft.block.BlockState)">method_27138</a></span>&#8203;(<a href="../../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i17">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_27139(net.minecraft.util.math.BlockPos)">method_27139</a></span>&#8203;(<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i18">
+<td class="colFirst"><code>private <a href="PathNodeType.html" title="enum in net.minecraft.entity.ai.pathing">PathNodeType</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_29303(net.minecraft.entity.mob.MobEntity,int,int,int)">method_29303</a></span>&#8203;(<a href="../../mob/MobEntity.html" title="class in net.minecraft.entity.mob">MobEntity</a>&nbsp;mobEntity,
+int&nbsp;int2,
+int&nbsp;int3,
+int&nbsp;int4)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i19">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_29304(net.minecraft.util.math.Box)">method_29304</a></span>&#8203;(<a href="../../../util/math/Box.html" title="class in net.minecraft.util.math">Box</a>&nbsp;box)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i20">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_29578(net.minecraft.entity.ai.pathing.PathNode)">method_29578</a></span>&#8203;(<a href="PathNode.html" title="class in net.minecraft.entity.ai.pathing">PathNode</a>&nbsp;pathNode)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i21">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_29579(net.minecraft.entity.ai.pathing.PathNode,net.minecraft.entity.ai.pathing.PathNode,net.minecraft.entity.ai.pathing.PathNode,net.minecraft.entity.ai.pathing.PathNode)">method_29579</a></span>&#8203;(<a href="PathNode.html" title="class in net.minecraft.entity.ai.pathing">PathNode</a>&nbsp;pathNode,
+<a href="PathNode.html" title="class in net.minecraft.entity.ai.pathing">PathNode</a>&nbsp;pathNode2,
+<a href="PathNode.html" title="class in net.minecraft.entity.ai.pathing">PathNode</a>&nbsp;pathNode3,
+<a href="PathNode.html" title="class in net.minecraft.entity.ai.pathing">PathNode</a>&nbsp;pathNode4)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -296,7 +359,7 @@ int&nbsp;z,
 <h3>Methods inherited from class&nbsp;net.minecraft.entity.ai.pathing.<a href="PathNodeMaker.html" title="class in net.minecraft.entity.ai.pathing">PathNodeMaker</a></h3>
 <a id="methods.inherited.from.class.net.minecraft.entity.ai.pathing.PathNodeMaker">
 <!--   -->
-</a><code><a href="PathNodeMaker.html#canEnterOpenDoors()">canEnterOpenDoors</a>, <a href="PathNodeMaker.html#canOpenDoors()">canOpenDoors</a>, <a href="PathNodeMaker.html#canSwim()">canSwim</a>, <a href="PathNodeMaker.html#getNode(int,int,int)">getNode</a>, <a href="PathNodeMaker.html#setCanEnterOpenDoors(boolean)">setCanEnterOpenDoors</a>, <a href="PathNodeMaker.html#setCanOpenDoors(boolean)">setCanOpenDoors</a>, <a href="PathNodeMaker.html#setCanSwim(boolean)">setCanSwim</a></code></div>
+</a><code><a href="PathNodeMaker.html#canEnterOpenDoors()">canEnterOpenDoors</a>, <a href="PathNodeMaker.html#canOpenDoors()">canOpenDoors</a>, <a href="PathNodeMaker.html#canSwim()">canSwim</a>, <a href="PathNodeMaker.html#getNode(int,int,int)">getNode</a>, <a href="PathNodeMaker.html#method_27137(net.minecraft.util.math.BlockPos)">method_27137</a>, <a href="PathNodeMaker.html#setCanEnterOpenDoors(boolean)">setCanEnterOpenDoors</a>, <a href="PathNodeMaker.html#setCanOpenDoors(boolean)">setCanOpenDoors</a>, <a href="PathNodeMaker.html#setCanSwim(boolean)">setCanSwim</a></code></div>
 <div class="inheritedList">
 <h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></h3>
 <a id="methods.inherited.from.class.java.lang.Object">
@@ -319,6 +382,18 @@ int&nbsp;z,
 <section class="detail">
 <h3><a id="waterPathNodeTypeWeight">waterPathNodeTypeWeight</a></h3>
 <div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">float</span>&nbsp;<span class="memberName">waterPathNodeTypeWeight</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="field_25190">field_25190</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="http://fastutil.di.unimi.it/docs/it/unimi/dsi/fastutil/longs/Long2ObjectMap.html?is-external=true" title="class or interface in it.unimi.dsi.fastutil.longs" class="externalLink">Long2ObjectMap</a>&lt;<a href="PathNodeType.html" title="enum in net.minecraft.entity.ai.pathing">PathNodeType</a>&gt;</span>&nbsp;<span class="memberName">field_25190</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="field_25191">field_25191</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="http://fastutil.di.unimi.it/docs/it/unimi/dsi/fastutil/objects/Object2BooleanMap.html?is-external=true" title="class or interface in it.unimi.dsi.fastutil.objects" class="externalLink">Object2BooleanMap</a>&lt;<a href="../../../util/math/Box.html" title="class in net.minecraft.util.math">Box</a>&gt;</span>&nbsp;<span class="memberName">field_25191</span></div>
 </section>
 </li>
 </ul>
@@ -380,6 +455,12 @@ int&nbsp;z,
 </li>
 <li class="blockList">
 <section class="detail">
+<h3><a id="method_27139(net.minecraft.util.math.BlockPos)">method_27139</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">method_27139</span>&#8203;(<span class="arguments"><a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="getNode(double,double,double)">getNode</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="TargetPathNode.html" title="class in net.minecraft.entity.ai.pathing">TargetPathNode</a></span>&nbsp;<span class="memberName">getNode</span>&#8203;(<span class="arguments">double&nbsp;x,
 double&nbsp;y,
@@ -403,9 +484,53 @@ double&nbsp;z)</span></div>
 </li>
 <li class="blockList">
 <section class="detail">
+<h3><a id="isValidDiagonalSuccessor(net.minecraft.entity.ai.pathing.PathNode,net.minecraft.entity.ai.pathing.PathNode)">isValidDiagonalSuccessor</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isValidDiagonalSuccessor</span>&#8203;(<span class="arguments"><a href="PathNode.html" title="class in net.minecraft.entity.ai.pathing">PathNode</a>&nbsp;node,
+<a href="PathNode.html" title="class in net.minecraft.entity.ai.pathing">PathNode</a>&nbsp;successor1)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="method_29579(net.minecraft.entity.ai.pathing.PathNode,net.minecraft.entity.ai.pathing.PathNode,net.minecraft.entity.ai.pathing.PathNode,net.minecraft.entity.ai.pathing.PathNode)">method_29579</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">method_29579</span>&#8203;(<span class="arguments"><a href="PathNode.html" title="class in net.minecraft.entity.ai.pathing">PathNode</a>&nbsp;pathNode,
+<a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<a href="PathNode.html" title="class in net.minecraft.entity.ai.pathing">PathNode</a>&nbsp;pathNode2,
+<a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<a href="PathNode.html" title="class in net.minecraft.entity.ai.pathing">PathNode</a>&nbsp;pathNode3,
+<a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<a href="PathNode.html" title="class in net.minecraft.entity.ai.pathing">PathNode</a>&nbsp;pathNode4)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="method_29578(net.minecraft.entity.ai.pathing.PathNode)">method_29578</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">method_29578</span>&#8203;(<span class="arguments"><a href="PathNode.html" title="class in net.minecraft.entity.ai.pathing">PathNode</a>&nbsp;pathNode)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="getFeetY(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos)">getFeetY</a></h3>
 <div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType">double</span>&nbsp;<span class="memberName">getFeetY</span>&#8203;(<span class="arguments"><a href="../../../world/BlockView.html" title="interface in net.minecraft.world">BlockView</a>&nbsp;world,
 <a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="getPathNode(int,int,int,int,double,net.minecraft.util.math.Direction,net.minecraft.entity.ai.pathing.PathNodeType)">getPathNode</a></h3>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="PathNode.html" title="class in net.minecraft.entity.ai.pathing">PathNode</a></span>&nbsp;<span class="memberName">getPathNode</span>&#8203;(<span class="arguments">int&nbsp;x,
+int&nbsp;y,
+int&nbsp;z,
+int&nbsp;maxYStep,
+double&nbsp;prevFeetY,
+<a href="../../../util/math/Direction.html" title="enum in net.minecraft.util.math">Direction</a>&nbsp;direction,
+<a href="PathNodeType.html" title="enum in net.minecraft.entity.ai.pathing">PathNodeType</a>&nbsp;pathNodeType)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="method_29304(net.minecraft.util.math.Box)">method_29304</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">method_29304</span>&#8203;(<span class="arguments"><a href="../../../util/math/Box.html" title="class in net.minecraft.util.math">Box</a>&nbsp;box)</span></div>
 </section>
 </li>
 <li class="blockList">
@@ -461,6 +586,22 @@ boolean&nbsp;canEnterOpenDoors,
 </li>
 <li class="blockList">
 <section class="detail">
+<h3><a id="getNodeType(net.minecraft.entity.mob.MobEntity,net.minecraft.util.math.BlockPos)">getNodeType</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="PathNodeType.html" title="enum in net.minecraft.entity.ai.pathing">PathNodeType</a></span>&nbsp;<span class="memberName">getNodeType</span>&#8203;(<span class="arguments"><a href="../../mob/MobEntity.html" title="class in net.minecraft.entity.mob">MobEntity</a>&nbsp;entity,
+<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="method_29303(net.minecraft.entity.mob.MobEntity,int,int,int)">method_29303</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="PathNodeType.html" title="enum in net.minecraft.entity.ai.pathing">PathNodeType</a></span>&nbsp;<span class="memberName">method_29303</span>&#8203;(<span class="arguments"><a href="../../mob/MobEntity.html" title="class in net.minecraft.entity.mob">MobEntity</a>&nbsp;mobEntity,
+int&nbsp;int2,
+int&nbsp;int3,
+int&nbsp;int4)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="getDefaultNodeType(net.minecraft.world.BlockView,int,int,int)">getDefaultNodeType</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="PathNodeType.html" title="enum in net.minecraft.entity.ai.pathing">PathNodeType</a></span>&nbsp;<span class="memberName">getDefaultNodeType</span>&#8203;(<span class="arguments"><a href="../../../world/BlockView.html" title="interface in net.minecraft.world">BlockView</a>&nbsp;world,
 int&nbsp;x,
@@ -475,30 +616,30 @@ int&nbsp;z)</span></div>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="getLandNodeType(net.minecraft.world.BlockView,int,int,int)">getLandNodeType</a></h3>
-<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType"><a href="PathNodeType.html" title="enum in net.minecraft.entity.ai.pathing">PathNodeType</a></span>&nbsp;<span class="memberName">getLandNodeType</span>&#8203;(<span class="arguments"><a href="../../../world/BlockView.html" title="interface in net.minecraft.world">BlockView</a>&nbsp;world,
-int&nbsp;x,
-int&nbsp;y,
-int&nbsp;z)</span></div>
+<h3><a id="getLandNodeType(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos.Mutable)">getLandNodeType</a></h3>
+<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType"><a href="PathNodeType.html" title="enum in net.minecraft.entity.ai.pathing">PathNodeType</a></span>&nbsp;<span class="memberName">getLandNodeType</span>&#8203;(<span class="arguments"><a href="../../../world/BlockView.html" title="interface in net.minecraft.world">BlockView</a>&nbsp;blockView,
+<a href="../../../util/math/BlockPos.Mutable.html" title="class in net.minecraft.util.math">BlockPos.Mutable</a>&nbsp;mutable)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="getNodeTypeFromNeighbors(net.minecraft.world.BlockView,int,int,int,net.minecraft.entity.ai.pathing.PathNodeType)">getNodeTypeFromNeighbors</a></h3>
-<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType"><a href="PathNodeType.html" title="enum in net.minecraft.entity.ai.pathing">PathNodeType</a></span>&nbsp;<span class="memberName">getNodeTypeFromNeighbors</span>&#8203;(<span class="arguments"><a href="../../../world/BlockView.html" title="interface in net.minecraft.world">BlockView</a>&nbsp;world,
-int&nbsp;x,
-int&nbsp;y,
-int&nbsp;z,
-<a href="PathNodeType.html" title="enum in net.minecraft.entity.ai.pathing">PathNodeType</a>&nbsp;type)</span></div>
+<h3><a id="getNodeTypeFromNeighbors(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos.Mutable,net.minecraft.entity.ai.pathing.PathNodeType)">getNodeTypeFromNeighbors</a></h3>
+<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType"><a href="PathNodeType.html" title="enum in net.minecraft.entity.ai.pathing">PathNodeType</a></span>&nbsp;<span class="memberName">getNodeTypeFromNeighbors</span>&#8203;(<span class="arguments"><a href="../../../world/BlockView.html" title="interface in net.minecraft.world">BlockView</a>&nbsp;blockView,
+<a href="../../../util/math/BlockPos.Mutable.html" title="class in net.minecraft.util.math">BlockPos.Mutable</a>&nbsp;mutable,
+<a href="PathNodeType.html" title="enum in net.minecraft.entity.ai.pathing">PathNodeType</a>&nbsp;pathNodeType)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="getCommonNodeType(net.minecraft.world.BlockView,int,int,int)">getCommonNodeType</a></h3>
-<div class="memberSignature"><span class="modifiers">protected static</span>&nbsp;<span class="returnType"><a href="PathNodeType.html" title="enum in net.minecraft.entity.ai.pathing">PathNodeType</a></span>&nbsp;<span class="memberName">getCommonNodeType</span>&#8203;(<span class="arguments"><a href="../../../world/BlockView.html" title="interface in net.minecraft.world">BlockView</a>&nbsp;world,
-int&nbsp;x,
-int&nbsp;y,
-int&nbsp;z)</span></div>
+<h3><a id="getCommonNodeType(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos)">getCommonNodeType</a></h3>
+<div class="memberSignature"><span class="modifiers">protected static</span>&nbsp;<span class="returnType"><a href="PathNodeType.html" title="enum in net.minecraft.entity.ai.pathing">PathNodeType</a></span>&nbsp;<span class="memberName">getCommonNodeType</span>&#8203;(<span class="arguments"><a href="../../../world/BlockView.html" title="interface in net.minecraft.world">BlockView</a>&nbsp;blockView,
+<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="method_27138(net.minecraft.block.BlockState)">method_27138</a></h3>
+<div class="memberSignature"><span class="modifiers">private static</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">method_27138</span>&#8203;(<span class="arguments"><a href="../../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState)</span></div>
 </section>
 </li>
 </ul>

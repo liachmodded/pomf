@@ -62,7 +62,7 @@ loadScripts(document, 'script');</script>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
@@ -105,6 +105,25 @@ extends <a href="../PlayerManager.html" title="class in net.minecraft.server">Pl
 <!--   -->
 </a>
 <h2>Field Summary</h2>
+<div class="memberSummary">
+<table>
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<thead>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colSecond" scope="col">Field</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#userData">userData</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
 <div class="inheritedList">
 <h3>Fields inherited from class&nbsp;net.minecraft.server.<a href="../PlayerManager.html" title="class in net.minecraft.server">PlayerManager</a></h3>
 <a id="fields.inherited.from.class.net.minecraft.server.PlayerManager">
@@ -129,7 +148,9 @@ extends <a href="../PlayerManager.html" title="class in net.minecraft.server">Pl
 </thead>
 <tbody>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.server.integrated.IntegratedServer)">IntegratedPlayerManager</a></span>&#8203;(<a href="IntegratedServer.html" title="class in net.minecraft.server.integrated">IntegratedServer</a>&nbsp;integratedServer)</code></th>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.server.integrated.IntegratedServer,net.minecraft.util.registry.RegistryTracker.Modifiable,net.minecraft.world.WorldSaveHandler)">IntegratedPlayerManager</a></span>&#8203;(<a href="IntegratedServer.html" title="class in net.minecraft.server.integrated">IntegratedServer</a>&nbsp;server,
+<a href="../../util/registry/RegistryTracker.Modifiable.html" title="class in net.minecraft.util.registry">RegistryTracker.Modifiable</a>&nbsp;tracker,
+<a href="../../world/WorldSaveHandler.html" title="class in net.minecraft.world">WorldSaveHandler</a>&nbsp;saveHandler)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -157,8 +178,8 @@ extends <a href="../PlayerManager.html" title="class in net.minecraft.server">Pl
 <tbody>
 <tr class="altColor" id="i0">
 <td class="colFirst"><code><a href="../../text/Text.html" title="interface in net.minecraft.text">Text</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#checkCanJoin(java.net.SocketAddress,com.mojang.authlib.GameProfile)">checkCanJoin</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/net/SocketAddress.html?is-external=true" title="class or interface in java.net" class="externalLink">SocketAddress</a>&nbsp;socketAddress,
-com.mojang.authlib.GameProfile&nbsp;gameProfile)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#checkCanJoin(java.net.SocketAddress,com.mojang.authlib.GameProfile)">checkCanJoin</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/net/SocketAddress.html?is-external=true" title="class or interface in java.net" class="externalLink">SocketAddress</a>&nbsp;address,
+com.mojang.authlib.GameProfile&nbsp;profile)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
@@ -184,7 +205,7 @@ com.mojang.authlib.GameProfile&nbsp;gameProfile)</code></th>
 <h3>Methods inherited from class&nbsp;net.minecraft.server.<a href="../PlayerManager.html" title="class in net.minecraft.server">PlayerManager</a></h3>
 <a id="methods.inherited.from.class.net.minecraft.server.PlayerManager">
 <!--   -->
-</a><code><a href="../PlayerManager.html#addToOperators(com.mojang.authlib.GameProfile)">addToOperators</a>, <a href="../PlayerManager.html#areCheatsAllowed()">areCheatsAllowed</a>, <a href="../PlayerManager.html#broadcastChatMessage(net.minecraft.text.Text,boolean)">broadcastChatMessage</a>, <a href="../PlayerManager.html#canBypassPlayerLimit(com.mojang.authlib.GameProfile)">canBypassPlayerLimit</a>, <a href="../PlayerManager.html#createPlayer(com.mojang.authlib.GameProfile)">createPlayer</a>, <a href="../PlayerManager.html#createStatHandler(net.minecraft.entity.player.PlayerEntity)">createStatHandler</a>, <a href="../PlayerManager.html#disconnectAllPlayers()">disconnectAllPlayers</a>, <a href="../PlayerManager.html#getAdvancementTracker(net.minecraft.server.network.ServerPlayerEntity)">getAdvancementTracker</a>, <a href="../PlayerManager.html#getCurrentPlayerCount()">getCurrentPlayerCount</a>, <a href="../PlayerManager.html#getIpBanList()">getIpBanList</a>, <a href="../PlayerManager.html#getMaxPlayerCount()">getMaxPlayerCount</a>, <a href="../PlayerManager.html#getOpList()">getOpList</a>, <a href="../PlayerManager.html#getOpNames()">getOpNames</a>, <a href="../PlayerManager.html#getPlayer(java.lang.String)">getPlayer</a>, <a href="../PlayerManager.html#getPlayer(java.util.UUID)">getPlayer</a>, <a href="../PlayerManager.html#getPlayerList()">getPlayerList</a>, <a href="../PlayerManager.html#getPlayerNames()">getPlayerNames</a>, <a href="../PlayerManager.html#getPlayersByIp(java.lang.String)">getPlayersByIp</a>, <a href="../PlayerManager.html#getUserBanList()">getUserBanList</a>, <a href="../PlayerManager.html#getViewDistance()">getViewDistance</a>, <a href="../PlayerManager.html#getWhitelist()">getWhitelist</a>, <a href="../PlayerManager.html#getWhitelistedNames()">getWhitelistedNames</a>, <a href="../PlayerManager.html#isOperator(com.mojang.authlib.GameProfile)">isOperator</a>, <a href="../PlayerManager.html#isWhitelisted(com.mojang.authlib.GameProfile)">isWhitelisted</a>, <a href="../PlayerManager.html#isWhitelistEnabled()">isWhitelistEnabled</a>, <a href="../PlayerManager.html#loadPlayerData(net.minecraft.server.network.ServerPlayerEntity)">loadPlayerData</a>, <a href="../PlayerManager.html#onDataPacksReloaded()">onDataPacksReloaded</a>, <a href="../PlayerManager.html#onPlayerConnect(net.minecraft.network.ClientConnection,net.minecraft.server.network.ServerPlayerEntity)">onPlayerConnect</a>, <a href="../PlayerManager.html#reloadWhitelist()">reloadWhitelist</a>, <a href="../PlayerManager.html#remove(net.minecraft.server.network.ServerPlayerEntity)">remove</a>, <a href="../PlayerManager.html#removeFromOperators(com.mojang.authlib.GameProfile)">removeFromOperators</a>, <a href="../PlayerManager.html#respawnPlayer(net.minecraft.server.network.ServerPlayerEntity,boolean)">respawnPlayer</a>, <a href="../PlayerManager.html#saveAllPlayerData()">saveAllPlayerData</a>, <a href="../PlayerManager.html#sendCommandTree(net.minecraft.server.network.ServerPlayerEntity)">sendCommandTree</a>, <a href="../PlayerManager.html#sendPlayerStatus(net.minecraft.server.network.ServerPlayerEntity)">sendPlayerStatus</a>, <a href="../PlayerManager.html#sendScoreboard(net.minecraft.scoreboard.ServerScoreboard,net.minecraft.server.network.ServerPlayerEntity)">sendScoreboard</a>, <a href="../PlayerManager.html#sendToAll(net.minecraft.network.Packet)">sendToAll</a>, <a href="../PlayerManager.html#sendToAll(net.minecraft.text.Text)">sendToAll</a>, <a href="../PlayerManager.html#sendToAround(net.minecraft.entity.player.PlayerEntity,double,double,double,double,net.minecraft.world.dimension.DimensionType,net.minecraft.network.Packet)">sendToAround</a>, <a href="../PlayerManager.html#sendToDimension(net.minecraft.network.Packet,net.minecraft.world.dimension.DimensionType)">sendToDimension</a>, <a href="../PlayerManager.html#sendToOtherTeams(net.minecraft.entity.player.PlayerEntity,net.minecraft.text.Text)">sendToOtherTeams</a>, <a href="../PlayerManager.html#sendToTeam(net.minecraft.entity.player.PlayerEntity,net.minecraft.text.Text)">sendToTeam</a>, <a href="../PlayerManager.html#sendWorldInfo(net.minecraft.server.network.ServerPlayerEntity,net.minecraft.server.world.ServerWorld)">sendWorldInfo</a>, <a href="../PlayerManager.html#setCheatsAllowed(boolean)">setCheatsAllowed</a>, <a href="../PlayerManager.html#setGameMode(net.minecraft.world.GameMode)">setGameMode</a>, <a href="../PlayerManager.html#setMainWorld(net.minecraft.server.world.ServerWorld)">setMainWorld</a>, <a href="../PlayerManager.html#setViewDistance(int)">setViewDistance</a>, <a href="../PlayerManager.html#setWhitelistEnabled(boolean)">setWhitelistEnabled</a>, <a href="../PlayerManager.html#updatePlayerLatency()">updatePlayerLatency</a></code></div>
+</a><code><a href="../PlayerManager.html#addToOperators(com.mojang.authlib.GameProfile)">addToOperators</a>, <a href="../PlayerManager.html#areCheatsAllowed()">areCheatsAllowed</a>, <a href="../PlayerManager.html#broadcastChatMessage(net.minecraft.text.Text,net.minecraft.network.MessageType,java.util.UUID)">broadcastChatMessage</a>, <a href="../PlayerManager.html#canBypassPlayerLimit(com.mojang.authlib.GameProfile)">canBypassPlayerLimit</a>, <a href="../PlayerManager.html#createPlayer(com.mojang.authlib.GameProfile)">createPlayer</a>, <a href="../PlayerManager.html#createStatHandler(net.minecraft.entity.player.PlayerEntity)">createStatHandler</a>, <a href="../PlayerManager.html#disconnectAllPlayers()">disconnectAllPlayers</a>, <a href="../PlayerManager.html#getAdvancementTracker(net.minecraft.server.network.ServerPlayerEntity)">getAdvancementTracker</a>, <a href="../PlayerManager.html#getCurrentPlayerCount()">getCurrentPlayerCount</a>, <a href="../PlayerManager.html#getIpBanList()">getIpBanList</a>, <a href="../PlayerManager.html#getMaxPlayerCount()">getMaxPlayerCount</a>, <a href="../PlayerManager.html#getOpList()">getOpList</a>, <a href="../PlayerManager.html#getOpNames()">getOpNames</a>, <a href="../PlayerManager.html#getPlayer(java.lang.String)">getPlayer</a>, <a href="../PlayerManager.html#getPlayer(java.util.UUID)">getPlayer</a>, <a href="../PlayerManager.html#getPlayerList()">getPlayerList</a>, <a href="../PlayerManager.html#getPlayerNames()">getPlayerNames</a>, <a href="../PlayerManager.html#getPlayersByIp(java.lang.String)">getPlayersByIp</a>, <a href="../PlayerManager.html#getUserBanList()">getUserBanList</a>, <a href="../PlayerManager.html#getViewDistance()">getViewDistance</a>, <a href="../PlayerManager.html#getWhitelist()">getWhitelist</a>, <a href="../PlayerManager.html#getWhitelistedNames()">getWhitelistedNames</a>, <a href="../PlayerManager.html#isOperator(com.mojang.authlib.GameProfile)">isOperator</a>, <a href="../PlayerManager.html#isWhitelisted(com.mojang.authlib.GameProfile)">isWhitelisted</a>, <a href="../PlayerManager.html#isWhitelistEnabled()">isWhitelistEnabled</a>, <a href="../PlayerManager.html#loadPlayerData(net.minecraft.server.network.ServerPlayerEntity)">loadPlayerData</a>, <a href="../PlayerManager.html#onDataPacksReloaded()">onDataPacksReloaded</a>, <a href="../PlayerManager.html#onPlayerConnect(net.minecraft.network.ClientConnection,net.minecraft.server.network.ServerPlayerEntity)">onPlayerConnect</a>, <a href="../PlayerManager.html#reloadWhitelist()">reloadWhitelist</a>, <a href="../PlayerManager.html#remove(net.minecraft.server.network.ServerPlayerEntity)">remove</a>, <a href="../PlayerManager.html#removeFromOperators(com.mojang.authlib.GameProfile)">removeFromOperators</a>, <a href="../PlayerManager.html#respawnPlayer(net.minecraft.server.network.ServerPlayerEntity,boolean)">respawnPlayer</a>, <a href="../PlayerManager.html#saveAllPlayerData()">saveAllPlayerData</a>, <a href="../PlayerManager.html#sendCommandTree(net.minecraft.server.network.ServerPlayerEntity)">sendCommandTree</a>, <a href="../PlayerManager.html#sendPlayerStatus(net.minecraft.server.network.ServerPlayerEntity)">sendPlayerStatus</a>, <a href="../PlayerManager.html#sendScoreboard(net.minecraft.scoreboard.ServerScoreboard,net.minecraft.server.network.ServerPlayerEntity)">sendScoreboard</a>, <a href="../PlayerManager.html#sendToAll(net.minecraft.network.Packet)">sendToAll</a>, <a href="../PlayerManager.html#sendToAround(net.minecraft.entity.player.PlayerEntity,double,double,double,double,net.minecraft.util.registry.RegistryKey,net.minecraft.network.Packet)">sendToAround</a>, <a href="../PlayerManager.html#sendToDimension(net.minecraft.network.Packet,net.minecraft.util.registry.RegistryKey)">sendToDimension</a>, <a href="../PlayerManager.html#sendToOtherTeams(net.minecraft.entity.player.PlayerEntity,net.minecraft.text.Text)">sendToOtherTeams</a>, <a href="../PlayerManager.html#sendToTeam(net.minecraft.entity.player.PlayerEntity,net.minecraft.text.Text)">sendToTeam</a>, <a href="../PlayerManager.html#sendWorldInfo(net.minecraft.server.network.ServerPlayerEntity,net.minecraft.server.world.ServerWorld)">sendWorldInfo</a>, <a href="../PlayerManager.html#setCheatsAllowed(boolean)">setCheatsAllowed</a>, <a href="../PlayerManager.html#setGameMode(net.minecraft.world.GameMode)">setGameMode</a>, <a href="../PlayerManager.html#setMainWorld(net.minecraft.server.world.ServerWorld)">setMainWorld</a>, <a href="../PlayerManager.html#setViewDistance(int)">setViewDistance</a>, <a href="../PlayerManager.html#setWhitelistEnabled(boolean)">setWhitelistEnabled</a>, <a href="../PlayerManager.html#updatePlayerLatency()">updatePlayerLatency</a></code></div>
 <div class="inheritedList">
 <h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></h3>
 <a id="methods.inherited.from.class.java.lang.Object">
@@ -196,6 +217,22 @@ com.mojang.authlib.GameProfile&nbsp;gameProfile)</code></th>
 </section>
 <section class="details">
 <ul class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<li class="blockList">
+<section class="fieldDetails"><a id="field.detail">
+<!--   -->
+</a>
+<h2>Field Details</h2>
+<ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="userData">userData</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a></span>&nbsp;<span class="memberName">userData</span></div>
+</section>
+</li>
+</ul>
+</section>
+</li>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <li class="blockList">
 <section class="constructorDetails"><a id="constructor.detail">
@@ -205,8 +242,10 @@ com.mojang.authlib.GameProfile&nbsp;gameProfile)</code></th>
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="&lt;init&gt;(net.minecraft.server.integrated.IntegratedServer)">IntegratedPlayerManager</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">IntegratedPlayerManager</span>&#8203;(<span class="arguments"><a href="IntegratedServer.html" title="class in net.minecraft.server.integrated">IntegratedServer</a>&nbsp;integratedServer)</span></div>
+<h3><a id="&lt;init&gt;(net.minecraft.server.integrated.IntegratedServer,net.minecraft.util.registry.RegistryTracker.Modifiable,net.minecraft.world.WorldSaveHandler)">IntegratedPlayerManager</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">IntegratedPlayerManager</span>&#8203;(<span class="arguments"><a href="IntegratedServer.html" title="class in net.minecraft.server.integrated">IntegratedServer</a>&nbsp;server,
+<a href="../../util/registry/RegistryTracker.Modifiable.html" title="class in net.minecraft.util.registry">RegistryTracker.Modifiable</a>&nbsp;tracker,
+<a href="../../world/WorldSaveHandler.html" title="class in net.minecraft.world">WorldSaveHandler</a>&nbsp;saveHandler)</span></div>
 </section>
 </li>
 </ul>
@@ -232,8 +271,8 @@ com.mojang.authlib.GameProfile&nbsp;gameProfile)</code></th>
 <li class="blockList">
 <section class="detail">
 <h3><a id="checkCanJoin(java.net.SocketAddress,com.mojang.authlib.GameProfile)">checkCanJoin</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../text/Text.html" title="interface in net.minecraft.text">Text</a></span>&nbsp;<span class="memberName">checkCanJoin</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/net/SocketAddress.html?is-external=true" title="class or interface in java.net" class="externalLink">SocketAddress</a>&nbsp;socketAddress,
-com.mojang.authlib.GameProfile&nbsp;gameProfile)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../text/Text.html" title="interface in net.minecraft.text">Text</a></span>&nbsp;<span class="memberName">checkCanJoin</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/net/SocketAddress.html?is-external=true" title="class or interface in java.net" class="externalLink">SocketAddress</a>&nbsp;address,
+com.mojang.authlib.GameProfile&nbsp;profile)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../PlayerManager.html#checkCanJoin(java.net.SocketAddress,com.mojang.authlib.GameProfile)">checkCanJoin</a></code>&nbsp;in class&nbsp;<code><a href="../PlayerManager.html" title="class in net.minecraft.server">PlayerManager</a></code></dd>
@@ -299,7 +338,7 @@ com.mojang.authlib.GameProfile&nbsp;gameProfile)</span></div>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>

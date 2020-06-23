@@ -19,7 +19,13 @@
 <script type="text/javascript" src="../../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var pathtoroot = "../../../../../";
+<script type="text/javascript">var data = {"i0":10};
+var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
+var altColor = "altColor";
+var rowColor = "rowColor";
+var tableTab = "tableTab";
+var activeTableTab = "activeTableTab";
+var pathtoroot = "../../../../../";
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -56,9 +62,9 @@ loadScripts(document, 'script');</script>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
-<li>Method</li>
+<li><a href="#method.detail">Method</a></li>
 </ul>
 </div>
 <div class="navListSearch"><label for="search">SEARCH:</label>
@@ -113,7 +119,7 @@ extends <a href="ButtonWidget.html" title="class in net.minecraft.client.gui.wid
 <h2>Nested classes/interfaces inherited from class&nbsp;net.minecraft.client.gui.widget.<a href="ButtonWidget.html" title="class in net.minecraft.client.gui.widget">ButtonWidget</a></h2>
 <a id="nested.classes.inherited.from.class.net.minecraft.client.gui.widget.ButtonWidget">
 <!--   -->
-</a><code><a href="ButtonWidget.PressAction.html" title="interface in net.minecraft.client.gui.widget">ButtonWidget.PressAction</a></code></div>
+</a><code><a href="ButtonWidget.PressAction.html" title="interface in net.minecraft.client.gui.widget">ButtonWidget.PressAction</a>, <a href="ButtonWidget.TooltipSupplier.html" title="interface in net.minecraft.client.gui.widget">ButtonWidget.TooltipSupplier</a></code></div>
 </section>
 </li>
 <!-- =========== FIELD SUMMARY =========== -->
@@ -122,11 +128,30 @@ extends <a href="ButtonWidget.html" title="class in net.minecraft.client.gui.wid
 <!--   -->
 </a>
 <h2>Field Summary</h2>
+<div class="memberSummary">
+<table>
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<thead>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colSecond" scope="col">Field</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../options/Option.html" title="class in net.minecraft.client.options">Option</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#option">option</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
 <div class="inheritedList">
 <h3>Fields inherited from class&nbsp;net.minecraft.client.gui.widget.<a href="ButtonWidget.html" title="class in net.minecraft.client.gui.widget">ButtonWidget</a></h3>
 <a id="fields.inherited.from.class.net.minecraft.client.gui.widget.ButtonWidget">
 <!--   -->
-</a><code><a href="ButtonWidget.html#onPress">onPress</a></code></div>
+</a><code><a href="ButtonWidget.html#EMPTY">EMPTY</a>, <a href="ButtonWidget.html#onPress">onPress</a>, <a href="ButtonWidget.html#tooltipSupplier">tooltipSupplier</a></code></div>
 <div class="inheritedList">
 <h3>Fields inherited from class&nbsp;net.minecraft.client.gui.widget.<a href="AbstractButtonWidget.html" title="class in net.minecraft.client.gui.widget">AbstractButtonWidget</a></h3>
 <a id="fields.inherited.from.class.net.minecraft.client.gui.widget.AbstractButtonWidget">
@@ -156,12 +181,12 @@ extends <a href="ButtonWidget.html" title="class in net.minecraft.client.gui.wid
 </thead>
 <tbody>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(int,int,int,int,net.minecraft.client.options.Option,java.lang.String,net.minecraft.client.gui.widget.ButtonWidget.PressAction)">OptionButtonWidget</a></span>&#8203;(int&nbsp;x,
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(int,int,int,int,net.minecraft.client.options.Option,net.minecraft.text.Text,net.minecraft.client.gui.widget.ButtonWidget.PressAction)">OptionButtonWidget</a></span>&#8203;(int&nbsp;x,
 int&nbsp;y,
 int&nbsp;width,
 int&nbsp;height,
 <a href="../../options/Option.html" title="class in net.minecraft.client.options">Option</a>&nbsp;option,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;text,
+<a href="../../../text/Text.html" title="interface in net.minecraft.text">Text</a>&nbsp;text,
 <a href="ButtonWidget.PressAction.html" title="interface in net.minecraft.client.gui.widget">ButtonWidget.PressAction</a>&nbsp;pressAction)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -176,11 +201,32 @@ int&nbsp;height,
 <!--   -->
 </a>
 <h2>Method Summary</h2>
+<div class="memberSummary">
+<div role="tablist" aria-orientation="horizontal"><button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t2" class="tableTab" onclick="show(2);">Instance Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t4" class="tableTab" onclick="show(8);">Concrete Methods</button></div>
+<div id="memberSummary_tabpanel" role="tabpanel">
+<table aria-labelledby="t0">
+<thead>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colSecond" scope="col">Method</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="altColor" id="i0">
+<td class="colFirst"><code><a href="../../options/Option.html" title="class in net.minecraft.client.options">Option</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_29623()">method_29623</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <div class="inheritedList">
 <h3>Methods inherited from class&nbsp;net.minecraft.client.gui.widget.<a href="ButtonWidget.html" title="class in net.minecraft.client.gui.widget">ButtonWidget</a></h3>
 <a id="methods.inherited.from.class.net.minecraft.client.gui.widget.ButtonWidget">
 <!--   -->
-</a><code><a href="ButtonWidget.html#onPress()">onPress</a></code></div>
+</a><code><a href="ButtonWidget.html#onPress()">onPress</a>, <a href="ButtonWidget.html#renderButton(net.minecraft.client.util.math.MatrixStack,int,int,float)">renderButton</a>, <a href="ButtonWidget.html#renderToolTip(net.minecraft.client.util.math.MatrixStack,int,int)">renderToolTip</a></code></div>
 <div class="inheritedList">
 <h3>Methods inherited from class&nbsp;net.minecraft.client.gui.widget.<a href="AbstractPressableButtonWidget.html" title="class in net.minecraft.client.gui.widget">AbstractPressableButtonWidget</a></h3>
 <a id="methods.inherited.from.class.net.minecraft.client.gui.widget.AbstractPressableButtonWidget">
@@ -190,12 +236,12 @@ int&nbsp;height,
 <h3>Methods inherited from class&nbsp;net.minecraft.client.gui.widget.<a href="AbstractButtonWidget.html" title="class in net.minecraft.client.gui.widget">AbstractButtonWidget</a></h3>
 <a id="methods.inherited.from.class.net.minecraft.client.gui.widget.AbstractButtonWidget">
 <!--   -->
-</a><code><a href="AbstractButtonWidget.html#changeFocus(boolean)">changeFocus</a>, <a href="AbstractButtonWidget.html#clicked(double,double)">clicked</a>, <a href="AbstractButtonWidget.html#getHeight()">getHeight</a>, <a href="AbstractButtonWidget.html#getMessage()">getMessage</a>, <a href="AbstractButtonWidget.html#getNarrationMessage()">getNarrationMessage</a>, <a href="AbstractButtonWidget.html#getWidth()">getWidth</a>, <a href="AbstractButtonWidget.html#getYImage(boolean)">getYImage</a>, <a href="AbstractButtonWidget.html#isFocused()">isFocused</a>, <a href="AbstractButtonWidget.html#isHovered()">isHovered</a>, <a href="AbstractButtonWidget.html#isMouseOver(double,double)">isMouseOver</a>, <a href="AbstractButtonWidget.html#isValidClickButton(int)">isValidClickButton</a>, <a href="AbstractButtonWidget.html#mouseClicked(double,double,int)">mouseClicked</a>, <a href="AbstractButtonWidget.html#mouseDragged(double,double,int,double,double)">mouseDragged</a>, <a href="AbstractButtonWidget.html#mouseReleased(double,double,int)">mouseReleased</a>, <a href="AbstractButtonWidget.html#narrate()">narrate</a>, <a href="AbstractButtonWidget.html#onDrag(double,double,double,double)">onDrag</a>, <a href="AbstractButtonWidget.html#onFocusedChanged(boolean)">onFocusedChanged</a>, <a href="AbstractButtonWidget.html#onRelease(double,double)">onRelease</a>, <a href="AbstractButtonWidget.html#playDownSound(net.minecraft.client.sound.SoundManager)">playDownSound</a>, <a href="AbstractButtonWidget.html#queueNarration(int)">queueNarration</a>, <a href="AbstractButtonWidget.html#render(int,int,float)">render</a>, <a href="AbstractButtonWidget.html#renderBg(net.minecraft.client.MinecraftClient,int,int)">renderBg</a>, <a href="AbstractButtonWidget.html#renderButton(int,int,float)">renderButton</a>, <a href="AbstractButtonWidget.html#renderToolTip(int,int)">renderToolTip</a>, <a href="AbstractButtonWidget.html#setAlpha(float)">setAlpha</a>, <a href="AbstractButtonWidget.html#setFocused(boolean)">setFocused</a>, <a href="AbstractButtonWidget.html#setMessage(java.lang.String)">setMessage</a>, <a href="AbstractButtonWidget.html#setWidth(int)">setWidth</a></code></div>
+</a><code><a href="AbstractButtonWidget.html#changeFocus(boolean)">changeFocus</a>, <a href="AbstractButtonWidget.html#clicked(double,double)">clicked</a>, <a href="AbstractButtonWidget.html#getHeight()">getHeight</a>, <a href="AbstractButtonWidget.html#getMessage()">getMessage</a>, <a href="AbstractButtonWidget.html#getNarrationMessage()">getNarrationMessage</a>, <a href="AbstractButtonWidget.html#getWidth()">getWidth</a>, <a href="AbstractButtonWidget.html#getYImage(boolean)">getYImage</a>, <a href="AbstractButtonWidget.html#isFocused()">isFocused</a>, <a href="AbstractButtonWidget.html#isHovered()">isHovered</a>, <a href="AbstractButtonWidget.html#isMouseOver(double,double)">isMouseOver</a>, <a href="AbstractButtonWidget.html#isValidClickButton(int)">isValidClickButton</a>, <a href="AbstractButtonWidget.html#mouseClicked(double,double,int)">mouseClicked</a>, <a href="AbstractButtonWidget.html#mouseDragged(double,double,int,double,double)">mouseDragged</a>, <a href="AbstractButtonWidget.html#mouseReleased(double,double,int)">mouseReleased</a>, <a href="AbstractButtonWidget.html#narrate()">narrate</a>, <a href="AbstractButtonWidget.html#onDrag(double,double,double,double)">onDrag</a>, <a href="AbstractButtonWidget.html#onFocusedChanged(boolean)">onFocusedChanged</a>, <a href="AbstractButtonWidget.html#onRelease(double,double)">onRelease</a>, <a href="AbstractButtonWidget.html#playDownSound(net.minecraft.client.sound.SoundManager)">playDownSound</a>, <a href="AbstractButtonWidget.html#queueNarration(int)">queueNarration</a>, <a href="AbstractButtonWidget.html#render(net.minecraft.client.util.math.MatrixStack,int,int,float)">render</a>, <a href="AbstractButtonWidget.html#renderBg(net.minecraft.client.util.math.MatrixStack,net.minecraft.client.MinecraftClient,int,int)">renderBg</a>, <a href="AbstractButtonWidget.html#setAlpha(float)">setAlpha</a>, <a href="AbstractButtonWidget.html#setFocused(boolean)">setFocused</a>, <a href="AbstractButtonWidget.html#setMessage(net.minecraft.text.Text)">setMessage</a>, <a href="AbstractButtonWidget.html#setWidth(int)">setWidth</a></code></div>
 <div class="inheritedList">
 <h3>Methods inherited from class&nbsp;net.minecraft.client.gui.<a href="../DrawableHelper.html" title="class in net.minecraft.client.gui">DrawableHelper</a></h3>
 <a id="methods.inherited.from.class.net.minecraft.client.gui.DrawableHelper">
 <!--   -->
-</a><code><a href="../DrawableHelper.html#drawCenteredString(net.minecraft.client.font.TextRenderer,java.lang.String,int,int,int)">drawCenteredString</a>, <a href="../DrawableHelper.html#drawHorizontalLine(int,int,int,int)">drawHorizontalLine</a>, <a href="../DrawableHelper.html#drawSprite(int,int,int,int,int,net.minecraft.client.texture.Sprite)">drawSprite</a>, <a href="../DrawableHelper.html#drawString(net.minecraft.client.font.TextRenderer,java.lang.String,int,int,int)">drawString</a>, <a href="../DrawableHelper.html#drawTexture(int,int,float,float,int,int,int,int)">drawTexture</a>, <a href="../DrawableHelper.html#drawTexture(int,int,int,float,float,int,int,int,int)">drawTexture</a>, <a href="../DrawableHelper.html#drawTexture(int,int,int,int,float,float,int,int,int,int)">drawTexture</a>, <a href="../DrawableHelper.html#drawTexture(int,int,int,int,int,int)">drawTexture</a>, <a href="../DrawableHelper.html#drawTexturedQuad(int,int,int,int,int,float,float,float,float)">drawTexturedQuad</a>, <a href="../DrawableHelper.html#drawVerticalLine(int,int,int,int)">drawVerticalLine</a>, <a href="../DrawableHelper.html#fill(int,int,int,int,int)">fill</a>, <a href="../DrawableHelper.html#fill(net.minecraft.util.math.Matrix4f,int,int,int,int,int)">fill</a>, <a href="../DrawableHelper.html#fillGradient(int,int,int,int,int,int)">fillGradient</a>, <a href="../DrawableHelper.html#getZOffset()">getZOffset</a>, <a href="../DrawableHelper.html#setZOffset(int)">setZOffset</a></code></div>
+</a><code><a href="../DrawableHelper.html#drawCenteredString(net.minecraft.client.util.math.MatrixStack,net.minecraft.client.font.TextRenderer,java.lang.String,int,int,int)">drawCenteredString</a>, <a href="../DrawableHelper.html#drawCenteredText(net.minecraft.client.util.math.MatrixStack,net.minecraft.client.font.TextRenderer,net.minecraft.text.StringRenderable,int,int,int)">drawCenteredText</a>, <a href="../DrawableHelper.html#drawHorizontalLine(net.minecraft.client.util.math.MatrixStack,int,int,int,int)">drawHorizontalLine</a>, <a href="../DrawableHelper.html#drawSprite(net.minecraft.client.util.math.MatrixStack,int,int,int,int,int,net.minecraft.client.texture.Sprite)">drawSprite</a>, <a href="../DrawableHelper.html#drawStringWithShadow(net.minecraft.client.util.math.MatrixStack,net.minecraft.client.font.TextRenderer,java.lang.String,int,int,int)">drawStringWithShadow</a>, <a href="../DrawableHelper.html#drawTexture(net.minecraft.client.util.math.MatrixStack,int,int,float,float,int,int,int,int)">drawTexture</a>, <a href="../DrawableHelper.html#drawTexture(net.minecraft.client.util.math.MatrixStack,int,int,int,float,float,int,int,int,int)">drawTexture</a>, <a href="../DrawableHelper.html#drawTexture(net.minecraft.client.util.math.MatrixStack,int,int,int,int,float,float,int,int,int,int)">drawTexture</a>, <a href="../DrawableHelper.html#drawTexture(net.minecraft.client.util.math.MatrixStack,int,int,int,int,int,int)">drawTexture</a>, <a href="../DrawableHelper.html#drawTextWithShadow(net.minecraft.client.util.math.MatrixStack,net.minecraft.client.font.TextRenderer,net.minecraft.text.StringRenderable,int,int,int)">drawTextWithShadow</a>, <a href="../DrawableHelper.html#drawVerticalLine(net.minecraft.client.util.math.MatrixStack,int,int,int,int)">drawVerticalLine</a>, <a href="../DrawableHelper.html#fill(net.minecraft.client.util.math.MatrixStack,int,int,int,int,int)">fill</a>, <a href="../DrawableHelper.html#fillGradient(net.minecraft.client.util.math.MatrixStack,int,int,int,int,int,int)">fillGradient</a>, <a href="../DrawableHelper.html#fillGradient(net.minecraft.util.math.Matrix4f,net.minecraft.client.render.BufferBuilder,int,int,int,int,int,int,int)">fillGradient</a>, <a href="../DrawableHelper.html#getZOffset()">getZOffset</a>, <a href="../DrawableHelper.html#method_29343(int,int,java.util.function.BiConsumer)">method_29343</a>, <a href="../DrawableHelper.html#setZOffset(int)">setZOffset</a></code></div>
 <div class="inheritedList">
 <h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></h3>
 <a id="methods.inherited.from.class.java.lang.Object">
@@ -212,6 +258,22 @@ int&nbsp;height,
 </section>
 <section class="details">
 <ul class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<li class="blockList">
+<section class="fieldDetails"><a id="field.detail">
+<!--   -->
+</a>
+<h2>Field Details</h2>
+<ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="option">option</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../../options/Option.html" title="class in net.minecraft.client.options">Option</a></span>&nbsp;<span class="memberName">option</span></div>
+</section>
+</li>
+</ul>
+</section>
+</li>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <li class="blockList">
 <section class="constructorDetails"><a id="constructor.detail">
@@ -221,14 +283,30 @@ int&nbsp;height,
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="&lt;init&gt;(int,int,int,int,net.minecraft.client.options.Option,java.lang.String,net.minecraft.client.gui.widget.ButtonWidget.PressAction)">OptionButtonWidget</a></h3>
+<h3><a id="&lt;init&gt;(int,int,int,int,net.minecraft.client.options.Option,net.minecraft.text.Text,net.minecraft.client.gui.widget.ButtonWidget.PressAction)">OptionButtonWidget</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">OptionButtonWidget</span>&#8203;(<span class="arguments">int&nbsp;x,
 int&nbsp;y,
 int&nbsp;width,
 int&nbsp;height,
 <a href="../../options/Option.html" title="class in net.minecraft.client.options">Option</a>&nbsp;option,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;text,
+<a href="../../../text/Text.html" title="interface in net.minecraft.text">Text</a>&nbsp;text,
 <a href="ButtonWidget.PressAction.html" title="interface in net.minecraft.client.gui.widget">ButtonWidget.PressAction</a>&nbsp;pressAction)</span></div>
+</section>
+</li>
+</ul>
+</section>
+</li>
+<!-- ============ METHOD DETAIL ========== -->
+<li class="blockList">
+<section class="methodDetails"><a id="method.detail">
+<!--   -->
+</a>
+<h2>Method Details</h2>
+<ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="method_29623()">method_29623</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../options/Option.html" title="class in net.minecraft.client.options">Option</a></span>&nbsp;<span class="memberName">method_29623</span>()</div>
 </section>
 </li>
 </ul>
@@ -270,9 +348,9 @@ int&nbsp;height,
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
-<li>Method</li>
+<li><a href="#method.detail">Method</a></li>
 </ul>
 </div>
 </div>

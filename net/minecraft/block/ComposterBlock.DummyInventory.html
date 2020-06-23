@@ -87,7 +87,7 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="contentContainer">
 <div class="inheritance" title="Inheritance Tree"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">java.lang.Object</a>
-<div class="inheritance"><a href="../inventory/BasicInventory.html" title="class in net.minecraft.inventory">net.minecraft.inventory.BasicInventory</a>
+<div class="inheritance"><a href="../inventory/SimpleInventory.html" title="class in net.minecraft.inventory">net.minecraft.inventory.SimpleInventory</a>
 <div class="inheritance">net.minecraft.block.ComposterBlock.DummyInventory</div>
 </div>
 </div>
@@ -102,7 +102,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <pre>static class <span class="typeNameLabel">ComposterBlock.DummyInventory</span>
-extends <a href="../inventory/BasicInventory.html" title="class in net.minecraft.inventory">BasicInventory</a>
+extends <a href="../inventory/SimpleInventory.html" title="class in net.minecraft.inventory">SimpleInventory</a>
 implements <a href="../inventory/SidedInventory.html" title="interface in net.minecraft.inventory">SidedInventory</a></pre>
 </section>
 <section class="summary">
@@ -180,10 +180,10 @@ implements <a href="../inventory/SidedInventory.html" title="interface in net.mi
 </div>
 </div>
 <div class="inheritedList">
-<h3>Methods inherited from class&nbsp;net.minecraft.inventory.<a href="../inventory/BasicInventory.html" title="class in net.minecraft.inventory">BasicInventory</a></h3>
-<a id="methods.inherited.from.class.net.minecraft.inventory.BasicInventory">
+<h3>Methods inherited from class&nbsp;net.minecraft.inventory.<a href="../inventory/SimpleInventory.html" title="class in net.minecraft.inventory">SimpleInventory</a></h3>
+<a id="methods.inherited.from.class.net.minecraft.inventory.SimpleInventory">
 <!--   -->
-</a><code><a href="../inventory/BasicInventory.html#addListener(net.minecraft.inventory.InventoryChangedListener)">addListener</a>, <a href="../inventory/BasicInventory.html#addStack(net.minecraft.item.ItemStack)">addStack</a>, <a href="../inventory/BasicInventory.html#canPlayerUse(net.minecraft.entity.player.PlayerEntity)">canPlayerUse</a>, <a href="../inventory/BasicInventory.html#clear()">clear</a>, <a href="../inventory/BasicInventory.html#clearToList()">clearToList</a>, <a href="../inventory/BasicInventory.html#getStack(int)">getStack</a>, <a href="../inventory/BasicInventory.html#getTags()">getTags</a>, <a href="../inventory/BasicInventory.html#isEmpty()">isEmpty</a>, <a href="../inventory/BasicInventory.html#markDirty()">markDirty</a>, <a href="../inventory/BasicInventory.html#provideRecipeInputs(net.minecraft.recipe.RecipeFinder)">provideRecipeInputs</a>, <a href="../inventory/BasicInventory.html#readTags(net.minecraft.nbt.ListTag)">readTags</a>, <a href="../inventory/BasicInventory.html#removeItem(net.minecraft.item.Item,int)">removeItem</a>, <a href="../inventory/BasicInventory.html#removeListener(net.minecraft.inventory.InventoryChangedListener)">removeListener</a>, <a href="../inventory/BasicInventory.html#removeStack(int)">removeStack</a>, <a href="../inventory/BasicInventory.html#removeStack(int,int)">removeStack</a>, <a href="../inventory/BasicInventory.html#setStack(int,net.minecraft.item.ItemStack)">setStack</a>, <a href="../inventory/BasicInventory.html#size()">size</a>, <a href="../inventory/BasicInventory.html#toString()">toString</a></code></div>
+</a><code><a href="../inventory/SimpleInventory.html#addListener(net.minecraft.inventory.InventoryChangedListener)">addListener</a>, <a href="../inventory/SimpleInventory.html#addStack(net.minecraft.item.ItemStack)">addStack</a>, <a href="../inventory/SimpleInventory.html#canInsert(net.minecraft.item.ItemStack)">canInsert</a>, <a href="../inventory/SimpleInventory.html#canPlayerUse(net.minecraft.entity.player.PlayerEntity)">canPlayerUse</a>, <a href="../inventory/SimpleInventory.html#clear()">clear</a>, <a href="../inventory/SimpleInventory.html#clearToList()">clearToList</a>, <a href="../inventory/SimpleInventory.html#getStack(int)">getStack</a>, <a href="../inventory/SimpleInventory.html#getTags()">getTags</a>, <a href="../inventory/SimpleInventory.html#isEmpty()">isEmpty</a>, <a href="../inventory/SimpleInventory.html#markDirty()">markDirty</a>, <a href="../inventory/SimpleInventory.html#provideRecipeInputs(net.minecraft.recipe.RecipeFinder)">provideRecipeInputs</a>, <a href="../inventory/SimpleInventory.html#readTags(net.minecraft.nbt.ListTag)">readTags</a>, <a href="../inventory/SimpleInventory.html#removeItem(net.minecraft.item.Item,int)">removeItem</a>, <a href="../inventory/SimpleInventory.html#removeListener(net.minecraft.inventory.InventoryChangedListener)">removeListener</a>, <a href="../inventory/SimpleInventory.html#removeStack(int)">removeStack</a>, <a href="../inventory/SimpleInventory.html#removeStack(int,int)">removeStack</a>, <a href="../inventory/SimpleInventory.html#setStack(int,net.minecraft.item.ItemStack)">setStack</a>, <a href="../inventory/SimpleInventory.html#size()">size</a>, <a href="../inventory/SimpleInventory.html#toString()">toString</a></code></div>
 <div class="inheritedList">
 <h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></h3>
 <a id="methods.inherited.from.class.java.lang.Object">
@@ -244,7 +244,7 @@ implements <a href="../inventory/SidedInventory.html" title="interface in net.mi
 <h3><a id="canInsert(int,net.minecraft.item.ItemStack,net.minecraft.util.math.Direction)">canInsert</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">canInsert</span>&#8203;(<span class="arguments">int&nbsp;slot,
 <a href="../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;stack,
-<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 <a href="../util/math/Direction.html" title="enum in net.minecraft.util.math">Direction</a>&nbsp;dir)</span></div>
 <div class="block">Determines whether the given stack can be inserted into this inventory at the specified slot position from the given direction.</div>
 <dl>

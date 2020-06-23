@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10};
+<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -156,7 +156,7 @@ extends <a href="ServerConfigList.html" title="class in net.minecraft.server">Se
 <tbody>
 <tr class="altColor" id="i0">
 <td class="colFirst"><code>protected <a href="ServerConfigEntry.html" title="class in net.minecraft.server">ServerConfigEntry</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#fromJson(com.google.gson.JsonObject)">fromJson</a></span>&#8203;(com.google.gson.JsonObject&nbsp;json)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#fromJson(com.google.gson.JsonObject)">fromJson</a></span>&#8203;(<a href="https://www.javadoc.io/doc/com.google.code.gson/gson/2.8.0/com/google/gson/JsonObject.html?is-external=true" title="class or interface in com.google.gson" class="externalLink">JsonObject</a>&nbsp;json)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
@@ -174,6 +174,11 @@ extends <a href="ServerConfigList.html" title="class in net.minecraft.server">Se
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isBanned(java.net.SocketAddress)">isBanned</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/net/SocketAddress.html?is-external=true" title="class or interface in java.net" class="externalLink">SocketAddress</a>&nbsp;ip)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
+<tr class="altColor" id="i4">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#stringifyAddress(java.net.SocketAddress)">stringifyAddress</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/net/SocketAddress.html?is-external=true" title="class or interface in java.net" class="externalLink">SocketAddress</a>&nbsp;socketAddress)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -182,7 +187,7 @@ extends <a href="ServerConfigList.html" title="class in net.minecraft.server">Se
 <h3>Methods inherited from class&nbsp;net.minecraft.server.<a href="ServerConfigList.html" title="class in net.minecraft.server">ServerConfigList</a></h3>
 <a id="methods.inherited.from.class.net.minecraft.server.ServerConfigList">
 <!--   -->
-</a><code><a href="ServerConfigList.html#add(V)">add</a>, <a href="ServerConfigList.html#contains(K)">contains</a>, <a href="ServerConfigList.html#get(K)">get</a>, <a href="ServerConfigList.html#getFile()">getFile</a>, <a href="ServerConfigList.html#getNames()">getNames</a>, <a href="ServerConfigList.html#isEmpty()">isEmpty</a>, <a href="ServerConfigList.html#isEnabled()">isEnabled</a>, <a href="ServerConfigList.html#load()">load</a>, <a href="ServerConfigList.html#remove(K)">remove</a>, <a href="ServerConfigList.html#remove(net.minecraft.server.ServerConfigEntry)">remove</a>, <a href="ServerConfigList.html#save()">save</a>, <a href="ServerConfigList.html#setEnabled(boolean)">setEnabled</a>, <a href="ServerConfigList.html#toString(K)">toString</a>, <a href="ServerConfigList.html#values()">values</a></code></div>
+</a><code><a href="ServerConfigList.html#add(V)">add</a>, <a href="ServerConfigList.html#contains(K)">contains</a>, <a href="ServerConfigList.html#get(K)">get</a>, <a href="ServerConfigList.html#getFile()">getFile</a>, <a href="ServerConfigList.html#getNames()">getNames</a>, <a href="ServerConfigList.html#isEmpty()">isEmpty</a>, <a href="ServerConfigList.html#load()">load</a>, <a href="ServerConfigList.html#remove(K)">remove</a>, <a href="ServerConfigList.html#remove(net.minecraft.server.ServerConfigEntry)">remove</a>, <a href="ServerConfigList.html#save()">save</a>, <a href="ServerConfigList.html#toString(K)">toString</a>, <a href="ServerConfigList.html#values()">values</a></code></div>
 <div class="inheritedList">
 <h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></h3>
 <a id="methods.inherited.from.class.java.lang.Object">
@@ -220,7 +225,7 @@ extends <a href="ServerConfigList.html" title="class in net.minecraft.server">Se
 <li class="blockList">
 <section class="detail">
 <h3><a id="fromJson(com.google.gson.JsonObject)">fromJson</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType"><a href="ServerConfigEntry.html" title="class in net.minecraft.server">ServerConfigEntry</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&gt;</span>&nbsp;<span class="memberName">fromJson</span>&#8203;(<span class="arguments">com.google.gson.JsonObject&nbsp;json)</span></div>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType"><a href="ServerConfigEntry.html" title="class in net.minecraft.server">ServerConfigEntry</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&gt;</span>&nbsp;<span class="memberName">fromJson</span>&#8203;(<span class="arguments"><a href="https://www.javadoc.io/doc/com.google.code.gson/gson/2.8.0/com/google/gson/JsonObject.html?is-external=true" title="class or interface in com.google.gson" class="externalLink">JsonObject</a>&nbsp;json)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="ServerConfigList.html#fromJson(com.google.gson.JsonObject)">fromJson</a></code>&nbsp;in class&nbsp;<code><a href="ServerConfigList.html" title="class in net.minecraft.server">ServerConfigList</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>,&#8203;<a href="BannedIpEntry.html" title="class in net.minecraft.server">BannedIpEntry</a>&gt;</code></dd>
@@ -243,6 +248,12 @@ extends <a href="ServerConfigList.html" title="class in net.minecraft.server">Se
 <section class="detail">
 <h3><a id="get(java.net.SocketAddress)">get</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="BannedIpEntry.html" title="class in net.minecraft.server">BannedIpEntry</a></span>&nbsp;<span class="memberName">get</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/net/SocketAddress.html?is-external=true" title="class or interface in java.net" class="externalLink">SocketAddress</a>&nbsp;socketAddress)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="stringifyAddress(java.net.SocketAddress)">stringifyAddress</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></span>&nbsp;<span class="memberName">stringifyAddress</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/net/SocketAddress.html?is-external=true" title="class or interface in java.net" class="externalLink">SocketAddress</a>&nbsp;socketAddress)</span></div>
 </section>
 </li>
 </ul>

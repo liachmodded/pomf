@@ -141,6 +141,33 @@ implements <a href="BlockView.html" title="interface in net.minecraft.world">Blo
 </div>
 </section>
 </li>
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<li class="blockList">
+<section class="constructorSummary"><a id="constructor.summary">
+<!--   -->
+</a>
+<h2>Constructor Summary</h2>
+<div class="memberSummary">
+<table>
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<thead>
+<tr>
+<th class="colFirst" scope="col">Modifier</th>
+<th class="colSecond" scope="col">Constructor</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private </code></td>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E()">EmptyBlockView</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</li>
 <!-- ========== METHOD SUMMARY =========== -->
 <li class="blockList">
 <section class="methodSummary"><a id="method.summary">
@@ -170,7 +197,7 @@ implements <a href="BlockView.html" title="interface in net.minecraft.world">Blo
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i2">
-<td class="colFirst"><code><a href="../fluid/FluidState.html" title="interface in net.minecraft.fluid">FluidState</a></code></td>
+<td class="colFirst"><code><a href="../fluid/FluidState.html" title="class in net.minecraft.fluid">FluidState</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getFluidState(net.minecraft.util.math.BlockPos)">getFluidState</a></span>&#8203;(<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -207,7 +234,7 @@ the order they are declared.</div>
 <h3>Methods inherited from interface&nbsp;net.minecraft.world.<a href="BlockView.html" title="interface in net.minecraft.world">BlockView</a></h3>
 <a id="methods.inherited.from.class.net.minecraft.world.BlockView">
 <!--   -->
-</a><code><a href="BlockView.html#getHeight()">getHeight</a>, <a href="BlockView.html#getLuminance(net.minecraft.util.math.BlockPos)">getLuminance</a>, <a href="BlockView.html#getMaxLightLevel()">getMaxLightLevel</a>, <a href="BlockView.html#rayTrace(net.minecraft.world.RayTraceContext)">rayTrace</a>, <a href="BlockView.html#rayTraceBlock(net.minecraft.util.math.Vec3d,net.minecraft.util.math.Vec3d,net.minecraft.util.math.BlockPos,net.minecraft.util.shape.VoxelShape,net.minecraft.block.BlockState)">rayTraceBlock</a></code></div>
+</a><code><a href="BlockView.html#getHeight()">getHeight</a>, <a href="BlockView.html#getLuminance(net.minecraft.util.math.BlockPos)">getLuminance</a>, <a href="BlockView.html#getMaxLightLevel()">getMaxLightLevel</a>, <a href="BlockView.html#method_29546(net.minecraft.util.math.Box)">method_29546</a>, <a href="BlockView.html#rayTrace(net.minecraft.world.RayTraceContext)">rayTrace</a>, <a href="BlockView.html#rayTraceBlock(net.minecraft.util.math.Vec3d,net.minecraft.util.math.Vec3d,net.minecraft.util.math.BlockPos,net.minecraft.util.shape.VoxelShape,net.minecraft.block.BlockState)">rayTraceBlock</a></code></div>
 </section>
 </li>
 </ul>
@@ -225,6 +252,22 @@ the order they are declared.</div>
 <section class="detail">
 <h3><a id="INSTANCE">INSTANCE</a></h3>
 <div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="EmptyBlockView.html" title="enum in net.minecraft.world">EmptyBlockView</a></span>&nbsp;<span class="memberName">INSTANCE</span></div>
+</section>
+</li>
+</ul>
+</section>
+</li>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<li class="blockList">
+<section class="constructorDetails"><a id="constructor.detail">
+<!--   -->
+</a>
+<h2>Constructor Details</h2>
+<ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="&lt;init&gt;()">EmptyBlockView</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="memberName">EmptyBlockView</span>()</div>
 </section>
 </li>
 </ul>
@@ -271,7 +314,7 @@ not permitted.)</div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getBlockEntity(net.minecraft.util.math.BlockPos)">getBlockEntity</a></h3>
-<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 </span><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../block/entity/BlockEntity.html" title="class in net.minecraft.block.entity">BlockEntity</a></span>&nbsp;<span class="memberName">getBlockEntity</span>&#8203;(<span class="arguments"><a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
@@ -292,7 +335,7 @@ not permitted.)</div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getFluidState(net.minecraft.util.math.BlockPos)">getFluidState</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../fluid/FluidState.html" title="interface in net.minecraft.fluid">FluidState</a></span>&nbsp;<span class="memberName">getFluidState</span>&#8203;(<span class="arguments"><a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../fluid/FluidState.html" title="class in net.minecraft.fluid">FluidState</a></span>&nbsp;<span class="memberName">getFluidState</span>&#8203;(<span class="arguments"><a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="BlockView.html#getFluidState(net.minecraft.util.math.BlockPos)">getFluidState</a></code>&nbsp;in interface&nbsp;<code><a href="BlockView.html" title="interface in net.minecraft.world">BlockView</a></code></dd>

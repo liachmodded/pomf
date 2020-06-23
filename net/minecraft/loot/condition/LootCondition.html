@@ -19,7 +19,13 @@
 <script type="text/javascript" src="../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var pathtoroot = "../../../../";
+<script type="text/javascript">var data = {"i0":6};
+var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"]};
+var altColor = "altColor";
+var rowColor = "rowColor";
+var tableTab = "tableTab";
+var activeTableTab = "activeTableTab";
+var pathtoroot = "../../../../";
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -58,7 +64,7 @@ loadScripts(document, 'script');</script>
 <li>Detail:&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
-<li>Method</li>
+<li><a href="#method.detail">Method</a></li>
 </ul>
 </div>
 <div class="navListSearch"><label for="search">SEARCH:</label>
@@ -87,15 +93,10 @@ loadScripts(document, 'script');</script>
 </dl>
 <dl>
 <dt>All Known Implementing Classes:</dt>
-<dd><code><a href="AlternativeLootCondition.html" title="class in net.minecraft.loot.condition">AlternativeLootCondition</a></code>, <code><a href="BlockStatePropertyLootCondition.html" title="class in net.minecraft.loot.condition">BlockStatePropertyLootCondition</a></code>, <code><a href="DamageSourcePropertiesLootCondition.html" title="class in net.minecraft.loot.condition">DamageSourcePropertiesLootCondition</a></code>, <code><a href="EntityPropertiesLootCondition.html" title="class in net.minecraft.loot.condition">EntityPropertiesLootCondition</a></code>, <code><a href="EntityScoresLootCondition.html" title="class in net.minecraft.loot.condition">EntityScoresLootCondition</a></code>, <code><a href="InvertedLootCondition.html" title="class in net.minecraft.loot.condition">InvertedLootCondition</a></code>, <code><a href="KilledByPlayerLootCondition.html" title="class in net.minecraft.loot.condition">KilledByPlayerLootCondition</a></code>, <code><a href="LocationCheckLootCondition.html" title="class in net.minecraft.loot.condition">LocationCheckLootCondition</a></code>, <code><a href="MatchToolLootCondition.html" title="class in net.minecraft.loot.condition">MatchToolLootCondition</a></code>, <code><a href="RandomChanceLootCondition.html" title="class in net.minecraft.loot.condition">RandomChanceLootCondition</a></code>, <code><a href="RandomChanceWithLootingLootCondition.html" title="class in net.minecraft.loot.condition">RandomChanceWithLootingLootCondition</a></code>, <code><a href="ReferenceLootCondition.html" title="class in net.minecraft.loot.condition">ReferenceLootCondition</a></code>, <code><a href="SurvivesExplosionLootCondition.html" title="class in net.minecraft.loot.condition">SurvivesExplosionLootCondition</a></code>, <code><a href="TableBonusLootCondition.html" title="class in net.minecraft.loot.condition">TableBonusLootCondition</a></code>, <code><a href="TimeCheckLootCondition.html" title="class in net.minecraft.loot.condition">TimeCheckLootCondition</a></code>, <code><a href="WeatherCheckLootCondition.html" title="class in net.minecraft.loot.condition">WeatherCheckLootCondition</a></code></dd>
-</dl>
-<dl>
-<dt>Functional Interface:</dt>
-<dd>This is a functional interface and can therefore be used as the assignment target for a lambda expression or method reference.</dd>
+<dd><code><a href="AlternativeLootCondition.html" title="class in net.minecraft.loot.condition">AlternativeLootCondition</a></code>, <code><a href="BlockStatePropertyLootCondition.html" title="class in net.minecraft.loot.condition">BlockStatePropertyLootCondition</a></code>, <code><a href="DamageSourcePropertiesLootCondition.html" title="class in net.minecraft.loot.condition">DamageSourcePropertiesLootCondition</a></code>, <code><a href="EntityPropertiesLootCondition.html" title="class in net.minecraft.loot.condition">EntityPropertiesLootCondition</a></code>, <code><a href="EntityScoresLootCondition.html" title="class in net.minecraft.loot.condition">EntityScoresLootCondition</a></code>, <code><a href="InvertedLootCondition.html" title="class in net.minecraft.loot.condition">InvertedLootCondition</a></code>, <code><a href="KilledByPlayerLootCondition.html" title="class in net.minecraft.loot.condition">KilledByPlayerLootCondition</a></code>, <code><a href="LocationCheckLootCondition.html" title="class in net.minecraft.loot.condition">LocationCheckLootCondition</a></code>, <code><a href="LootConditionManager.AndCondition.html" title="class in net.minecraft.loot.condition">LootConditionManager.AndCondition</a></code>, <code><a href="MatchToolLootCondition.html" title="class in net.minecraft.loot.condition">MatchToolLootCondition</a></code>, <code><a href="RandomChanceLootCondition.html" title="class in net.minecraft.loot.condition">RandomChanceLootCondition</a></code>, <code><a href="RandomChanceWithLootingLootCondition.html" title="class in net.minecraft.loot.condition">RandomChanceWithLootingLootCondition</a></code>, <code><a href="ReferenceLootCondition.html" title="class in net.minecraft.loot.condition">ReferenceLootCondition</a></code>, <code><a href="SurvivesExplosionLootCondition.html" title="class in net.minecraft.loot.condition">SurvivesExplosionLootCondition</a></code>, <code><a href="TableBonusLootCondition.html" title="class in net.minecraft.loot.condition">TableBonusLootCondition</a></code>, <code><a href="TimeCheckLootCondition.html" title="class in net.minecraft.loot.condition">TimeCheckLootCondition</a></code>, <code><a href="WeatherCheckLootCondition.html" title="class in net.minecraft.loot.condition">WeatherCheckLootCondition</a></code></dd>
 </dl>
 <hr>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/FunctionalInterface.html?is-external=true" title="class or interface in java.lang" class="externalLink">@FunctionalInterface</a>
-public interface <span class="typeNameLabel">LootCondition</span>
+<pre>public interface <span class="typeNameLabel">LootCondition</span>
 extends <a href="../context/LootContextAware.html" title="interface in net.minecraft.loot.context">LootContextAware</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Predicate</a>&lt;<a href="../context/LootContext.html" title="class in net.minecraft.loot.context">LootContext</a>&gt;</pre>
 </section>
 <section class="summary">
@@ -122,11 +123,6 @@ extends <a href="../context/LootContextAware.html" title="interface in net.minec
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="LootCondition.Builder.html" title="interface in net.minecraft.loot.condition">LootCondition.Builder</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
-<td class="colFirst"><code>static class&nbsp;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="LootCondition.Factory.html" title="class in net.minecraft.loot.condition">LootCondition.Factory</a>&lt;<a href="LootCondition.Factory.html" title="type parameter in LootCondition.Factory">T</a> extends <a href="LootCondition.html" title="interface in net.minecraft.loot.condition">LootCondition</a>&gt;</span></code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
 </tbody>
 </table>
 </div>
@@ -138,16 +134,57 @@ extends <a href="../context/LootContextAware.html" title="interface in net.minec
 <!--   -->
 </a>
 <h2>Method Summary</h2>
+<div class="memberSummary">
+<div role="tablist" aria-orientation="horizontal"><button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t2" class="tableTab" onclick="show(2);">Instance Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t3" class="tableTab" onclick="show(4);">Abstract Methods</button></div>
+<div id="memberSummary_tabpanel" role="tabpanel">
+<table aria-labelledby="t0">
+<thead>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colSecond" scope="col">Method</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="altColor" id="i0">
+<td class="colFirst"><code><a href="LootConditionType.html" title="class in net.minecraft.loot.condition">LootConditionType</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getType()">getType</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <div class="inheritedList">
 <h3>Methods inherited from interface&nbsp;net.minecraft.loot.context.<a href="../context/LootContextAware.html" title="interface in net.minecraft.loot.context">LootContextAware</a></h3>
 <a id="methods.inherited.from.class.net.minecraft.loot.context.LootContextAware">
 <!--   -->
-</a><code><a href="../context/LootContextAware.html#check(net.minecraft.loot.LootTableReporter)">check</a>, <a href="../context/LootContextAware.html#getRequiredParameters()">getRequiredParameters</a></code></div>
+</a><code><a href="../context/LootContextAware.html#getRequiredParameters()">getRequiredParameters</a>, <a href="../context/LootContextAware.html#validate(net.minecraft.loot.LootTableReporter)">validate</a></code></div>
 <div class="inheritedList">
 <h3>Methods inherited from interface&nbsp;java.util.function.<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Predicate</a></h3>
 <a id="methods.inherited.from.class.java.util.function.Predicate">
 <!--   -->
 </a><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true#and(java.util.function.Predicate)" title="class or interface in java.util.function" class="externalLink">and</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true#negate()" title="class or interface in java.util.function" class="externalLink">negate</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true#or(java.util.function.Predicate)" title="class or interface in java.util.function" class="externalLink">or</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true#test(T)" title="class or interface in java.util.function" class="externalLink">test</a></code></div>
+</section>
+</li>
+</ul>
+</section>
+<section class="details">
+<ul class="blockList">
+<!-- ============ METHOD DETAIL ========== -->
+<li class="blockList">
+<section class="methodDetails"><a id="method.detail">
+<!--   -->
+</a>
+<h2>Method Details</h2>
+<ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="getType()">getType</a></h3>
+<div class="memberSignature"><span class="returnType"><a href="LootConditionType.html" title="class in net.minecraft.loot.condition">LootConditionType</a></span>&nbsp;<span class="memberName">getType</span>()</div>
+</section>
+</li>
+</ul>
 </section>
 </li>
 </ul>
@@ -188,7 +225,7 @@ extends <a href="../context/LootContextAware.html" title="interface in net.minec
 <li>Detail:&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
-<li>Method</li>
+<li><a href="#method.detail">Method</a></li>
 </ul>
 </div>
 </div>

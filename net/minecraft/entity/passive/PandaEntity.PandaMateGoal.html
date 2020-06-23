@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":10};
+<script type="text/javascript">var data = {"i0":10,"i1":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -62,7 +62,7 @@ loadScripts(document, 'script');</script>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
@@ -123,6 +123,30 @@ extends <a href="../ai/goal/AnimalMateGoal.html" title="class in net.minecraft.e
 <!--   -->
 </a>
 <h2>Field Summary</h2>
+<div class="memberSummary">
+<table>
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<thead>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colSecond" scope="col">Field</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#nextAskPlayerForBambooAge">nextAskPlayerForBambooAge</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="PandaEntity.html" title="class in net.minecraft.entity.passive">PandaEntity</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#panda">panda</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
 <div class="inheritedList">
 <h3>Fields inherited from class&nbsp;net.minecraft.entity.ai.goal.<a href="../ai/goal/AnimalMateGoal.html" title="class in net.minecraft.entity.ai.goal">AnimalMateGoal</a></h3>
 <a id="fields.inherited.from.class.net.minecraft.entity.ai.goal.AnimalMateGoal">
@@ -147,9 +171,8 @@ extends <a href="../ai/goal/AnimalMateGoal.html" title="class in net.minecraft.e
 </thead>
 <tbody>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.entity.passive.PandaEntity,net.minecraft.entity.passive.PandaEntity,double)">PandaMateGoal</a></span>&#8203;(<a href="PandaEntity.html" title="class in net.minecraft.entity.passive">PandaEntity</a>&nbsp;pandaEntity,
-<a href="PandaEntity.html" title="class in net.minecraft.entity.passive">PandaEntity</a>&nbsp;pandaEntity2,
-double&nbsp;double2)</code></th>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.entity.passive.PandaEntity,double)">PandaMateGoal</a></span>&#8203;(<a href="PandaEntity.html" title="class in net.minecraft.entity.passive">PandaEntity</a>&nbsp;panda,
+double&nbsp;chance)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -180,6 +203,11 @@ double&nbsp;double2)</code></th>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#canStart()">canStart</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
+<tr class="rowColor" id="i1">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isBambooClose()">isBambooClose</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -205,6 +233,28 @@ double&nbsp;double2)</code></th>
 </section>
 <section class="details">
 <ul class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<li class="blockList">
+<section class="fieldDetails"><a id="field.detail">
+<!--   -->
+</a>
+<h2>Field Details</h2>
+<ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="panda">panda</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="PandaEntity.html" title="class in net.minecraft.entity.passive">PandaEntity</a></span>&nbsp;<span class="memberName">panda</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="nextAskPlayerForBambooAge">nextAskPlayerForBambooAge</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">nextAskPlayerForBambooAge</span></div>
+</section>
+</li>
+</ul>
+</section>
+</li>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <li class="blockList">
 <section class="constructorDetails"><a id="constructor.detail">
@@ -214,10 +264,9 @@ double&nbsp;double2)</code></th>
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="&lt;init&gt;(net.minecraft.entity.passive.PandaEntity,net.minecraft.entity.passive.PandaEntity,double)">PandaMateGoal</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">PandaMateGoal</span>&#8203;(<span class="arguments"><a href="PandaEntity.html" title="class in net.minecraft.entity.passive">PandaEntity</a>&nbsp;pandaEntity,
-<a href="PandaEntity.html" title="class in net.minecraft.entity.passive">PandaEntity</a>&nbsp;pandaEntity2,
-double&nbsp;double2)</span></div>
+<h3><a id="&lt;init&gt;(net.minecraft.entity.passive.PandaEntity,double)">PandaMateGoal</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">PandaMateGoal</span>&#8203;(<span class="arguments"><a href="PandaEntity.html" title="class in net.minecraft.entity.passive">PandaEntity</a>&nbsp;panda,
+double&nbsp;chance)</span></div>
 </section>
 </li>
 </ul>
@@ -238,6 +287,12 @@ double&nbsp;double2)</span></div>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../ai/goal/AnimalMateGoal.html#canStart()">canStart</a></code>&nbsp;in class&nbsp;<code><a href="../ai/goal/AnimalMateGoal.html" title="class in net.minecraft.entity.ai.goal">AnimalMateGoal</a></code></dd>
 </dl>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="isBambooClose()">isBambooClose</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isBambooClose</span>()</div>
 </section>
 </li>
 </ul>
@@ -279,7 +334,7 @@ double&nbsp;double2)</span></div>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>

@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../../../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10};
+<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -62,7 +62,7 @@ loadScripts(document, 'script');</script>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
@@ -117,6 +117,40 @@ extends <a href="Task.html" title="class in net.minecraft.entity.ai.brain.task">
 <!--   -->
 </a>
 <h2>Field Summary</h2>
+<div class="memberSummary">
+<table>
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<thead>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colSecond" scope="col">Field</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#lookTargetPos">lookTargetPos</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../pathing/Path.html" title="class in net.minecraft.entity.ai.pathing">Path</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#path">path</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#pathUpdateCountdownTicks">pathUpdateCountdownTicks</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private float</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#speed">speed</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
 <div class="inheritedList">
 <h3>Fields inherited from class&nbsp;net.minecraft.entity.ai.brain.task.<a href="Task.html" title="class in net.minecraft.entity.ai.brain.task">Task</a></h3>
 <a id="fields.inherited.from.class.net.minecraft.entity.ai.brain.task.Task">
@@ -175,27 +209,40 @@ long&nbsp;long2)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#hasFinishedPath(net.minecraft.entity.mob.MobEntity,net.minecraft.entity.ai.brain.WalkTarget,long)">hasFinishedPath</a></span>&#8203;(<a href="../../../mob/MobEntity.html" title="class in net.minecraft.entity.mob">MobEntity</a>&nbsp;mobEntity,
+<a href="../WalkTarget.html" title="class in net.minecraft.entity.ai.brain">WalkTarget</a>&nbsp;walkTarget,
+long&nbsp;time)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i2">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#hasReached(net.minecraft.entity.mob.MobEntity,net.minecraft.entity.ai.brain.WalkTarget)">hasReached</a></span>&#8203;(<a href="../../../mob/MobEntity.html" title="class in net.minecraft.entity.mob">MobEntity</a>&nbsp;entity,
+<a href="../WalkTarget.html" title="class in net.minecraft.entity.ai.brain">WalkTarget</a>&nbsp;walkTarget)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i3">
 <td class="colFirst"><code>protected void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#keepRunning(net.minecraft.server.world.ServerWorld,net.minecraft.entity.mob.MobEntity,long)">keepRunning</a></span>&#8203;(<a href="../../../../server/world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a>&nbsp;serverWorld,
 <a href="../../../mob/MobEntity.html" title="class in net.minecraft.entity.mob">MobEntity</a>&nbsp;mobEntity,
 long&nbsp;long2)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i2">
+<tr class="altColor" id="i4">
 <td class="colFirst"><code>protected void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#run(net.minecraft.server.world.ServerWorld,net.minecraft.entity.mob.MobEntity,long)">run</a></span>&#8203;(<a href="../../../../server/world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a>&nbsp;serverWorld,
 <a href="../../../mob/MobEntity.html" title="class in net.minecraft.entity.mob">MobEntity</a>&nbsp;mobEntity,
 long&nbsp;long2)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i3">
+<tr class="rowColor" id="i5">
 <td class="colFirst"><code>protected boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#shouldKeepRunning(net.minecraft.server.world.ServerWorld,net.minecraft.entity.mob.MobEntity,long)">shouldKeepRunning</a></span>&#8203;(<a href="../../../../server/world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a>&nbsp;serverWorld,
 <a href="../../../mob/MobEntity.html" title="class in net.minecraft.entity.mob">MobEntity</a>&nbsp;mobEntity,
 long&nbsp;long2)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i4">
+<tr class="altColor" id="i6">
 <td class="colFirst"><code>protected boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#shouldRun(net.minecraft.server.world.ServerWorld,net.minecraft.entity.mob.MobEntity)">shouldRun</a></span>&#8203;(<a href="../../../../server/world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a>&nbsp;serverWorld,
 <a href="../../../mob/MobEntity.html" title="class in net.minecraft.entity.mob">MobEntity</a>&nbsp;mobEntity)</code></th>
@@ -221,6 +268,42 @@ long&nbsp;long2)</code></th>
 </section>
 <section class="details">
 <ul class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<li class="blockList">
+<section class="fieldDetails"><a id="field.detail">
+<!--   -->
+</a>
+<h2>Field Details</h2>
+<ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="path">path</a></h3>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="../../pathing/Path.html" title="class in net.minecraft.entity.ai.pathing">Path</a></span>&nbsp;<span class="memberName">path</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="lookTargetPos">lookTargetPos</a></h3>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="../../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a></span>&nbsp;<span class="memberName">lookTargetPos</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="speed">speed</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">float</span>&nbsp;<span class="memberName">speed</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="pathUpdateCountdownTicks">pathUpdateCountdownTicks</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">pathUpdateCountdownTicks</span></div>
+</section>
+</li>
+</ul>
+</section>
+</li>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <li class="blockList">
 <section class="constructorDetails"><a id="constructor.detail">
@@ -303,6 +386,21 @@ long&nbsp;long2)</span></div>
 </dl>
 </section>
 </li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="hasFinishedPath(net.minecraft.entity.mob.MobEntity,net.minecraft.entity.ai.brain.WalkTarget,long)">hasFinishedPath</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">hasFinishedPath</span>&#8203;(<span class="arguments"><a href="../../../mob/MobEntity.html" title="class in net.minecraft.entity.mob">MobEntity</a>&nbsp;mobEntity,
+<a href="../WalkTarget.html" title="class in net.minecraft.entity.ai.brain">WalkTarget</a>&nbsp;walkTarget,
+long&nbsp;time)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="hasReached(net.minecraft.entity.mob.MobEntity,net.minecraft.entity.ai.brain.WalkTarget)">hasReached</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">hasReached</span>&#8203;(<span class="arguments"><a href="../../../mob/MobEntity.html" title="class in net.minecraft.entity.mob">MobEntity</a>&nbsp;entity,
+<a href="../WalkTarget.html" title="class in net.minecraft.entity.ai.brain">WalkTarget</a>&nbsp;walkTarget)</span></div>
+</section>
+</li>
 </ul>
 </section>
 </li>
@@ -342,7 +440,7 @@ long&nbsp;long2)</span></div>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>

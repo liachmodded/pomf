@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":10,"i1":10};
+<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -62,7 +62,7 @@ loadScripts(document, 'script');</script>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
@@ -139,6 +139,50 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponen
 <!--   -->
 </a>
 <h2>Field Summary</h2>
+<div class="memberSummary">
+<table>
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<thead>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colSecond" scope="col">Field</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="https://docs.oracle.com/javase/8/docs/api/java/text/DecimalFormat.html?is-external=true" title="class or interface in java.text" class="externalLink">DecimalFormat</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#AVG_TICK_FORMAT">AVG_TICK_FORMAT</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>[]</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#lines">lines</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#memoryusePctPos">memoryusePctPos</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int[]</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#memoryUsePercentage">memoryUsePercentage</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../MinecraftServer.html" title="class in net.minecraft.server">MinecraftServer</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#server">server</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/Timer.html?is-external=true" title="class or interface in javax.swing" class="externalLink">Timer</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#timer">timer</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
 <div class="inheritedList">
 <h3>Fields inherited from class&nbsp;javax.swing.<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true" title="class or interface in javax.swing" class="externalLink">JComponent</a></h3>
 <a id="fields.inherited.from.class.javax.swing.JComponent">
@@ -173,7 +217,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponen
 </thead>
 <tbody>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.server.MinecraftServer)">PlayerStatsGui</a></span>&#8203;(<a href="../../MinecraftServer.html" title="class in net.minecraft.server">MinecraftServer</a>&nbsp;minecraftServer)</code></th>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.server.MinecraftServer)">PlayerStatsGui</a></span>&#8203;(<a href="../../MinecraftServer.html" title="class in net.minecraft.server">MinecraftServer</a>&nbsp;server)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -200,13 +244,23 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponen
 </thead>
 <tbody>
 <tr class="altColor" id="i0">
-<td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#paint(java.awt.Graphics)">paint</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Graphics.html?is-external=true" title="class or interface in java.awt" class="externalLink">Graphics</a>&nbsp;graphics)</code></th>
+<td class="colFirst"><code>private double</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#average(long%5B%5D)">average</a></span>&#8203;(long[]&nbsp;long2)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
 <td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#paint(java.awt.Graphics)">paint</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Graphics.html?is-external=true" title="class or interface in java.awt" class="externalLink">Graphics</a>&nbsp;graphics)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i2">
+<td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#stop()">stop</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i3">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#update()">update</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -239,6 +293,52 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponen
 </section>
 <section class="details">
 <ul class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<li class="blockList">
+<section class="fieldDetails"><a id="field.detail">
+<!--   -->
+</a>
+<h2>Field Details</h2>
+<ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="AVG_TICK_FORMAT">AVG_TICK_FORMAT</a></h3>
+<div class="memberSignature"><span class="modifiers">private static final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/text/DecimalFormat.html?is-external=true" title="class or interface in java.text" class="externalLink">DecimalFormat</a></span>&nbsp;<span class="memberName">AVG_TICK_FORMAT</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="memoryUsePercentage">memoryUsePercentage</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType">int[]</span>&nbsp;<span class="memberName">memoryUsePercentage</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="memoryusePctPos">memoryusePctPos</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">memoryusePctPos</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="lines">lines</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>[]</span>&nbsp;<span class="memberName">lines</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="server">server</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../../MinecraftServer.html" title="class in net.minecraft.server">MinecraftServer</a></span>&nbsp;<span class="memberName">server</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="timer">timer</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/Timer.html?is-external=true" title="class or interface in javax.swing" class="externalLink">Timer</a></span>&nbsp;<span class="memberName">timer</span></div>
+</section>
+</li>
+</ul>
+</section>
+</li>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <li class="blockList">
 <section class="constructorDetails"><a id="constructor.detail">
@@ -249,7 +349,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponen
 <li class="blockList">
 <section class="detail">
 <h3><a id="&lt;init&gt;(net.minecraft.server.MinecraftServer)">PlayerStatsGui</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">PlayerStatsGui</span>&#8203;(<span class="arguments"><a href="../../MinecraftServer.html" title="class in net.minecraft.server">MinecraftServer</a>&nbsp;minecraftServer)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">PlayerStatsGui</span>&#8203;(<span class="arguments"><a href="../../MinecraftServer.html" title="class in net.minecraft.server">MinecraftServer</a>&nbsp;server)</span></div>
 </section>
 </li>
 </ul>
@@ -262,6 +362,18 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponen
 </a>
 <h2>Method Details</h2>
 <ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="update()">update</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">update</span>()</div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="average(long[])">average</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">double</span>&nbsp;<span class="memberName">average</span>&#8203;(<span class="arguments">long[]&nbsp;long2)</span></div>
+</section>
+</li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="paint(java.awt.Graphics)">paint</a></h3>
@@ -317,7 +429,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponen
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>

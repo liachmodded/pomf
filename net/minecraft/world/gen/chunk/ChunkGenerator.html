@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":10,"i1":6,"i2":10,"i3":10,"i4":10,"i5":6,"i6":10,"i7":10,"i8":10,"i9":6,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":6,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":6,"i22":10,"i23":10};
+<script type="text/javascript">var data = {"i0":10,"i1":6,"i2":10,"i3":10,"i4":10,"i5":6,"i6":10,"i7":10,"i8":6,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":6,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":6,"i22":10,"i23":6};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -83,11 +83,11 @@ loadScripts(document, 'script');</script>
 <!-- ======== START OF CLASS DATA ======== -->
 <div class="header">
 <div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html">net.minecraft.world.gen.chunk</a></div>
-<h1 title="Class ChunkGenerator" class="title">Class ChunkGenerator&lt;C extends <a href="ChunkGeneratorConfig.html" title="class in net.minecraft.world.gen.chunk">ChunkGeneratorConfig</a>&gt;</h1>
+<h1 title="Class ChunkGenerator" class="title">Class ChunkGenerator</h1>
 </div>
 <div class="contentContainer">
 <div class="inheritance" title="Inheritance Tree"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">java.lang.Object</a>
-<div class="inheritance">net.minecraft.world.gen.chunk.ChunkGenerator&lt;C&gt;</div>
+<div class="inheritance">net.minecraft.world.gen.chunk.ChunkGenerator</div>
 </div>
 <section class="description">
 <dl>
@@ -95,8 +95,11 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="DebugChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">DebugChunkGenerator</a></code>, <code><a href="FlatChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">FlatChunkGenerator</a></code>, <code><a href="SurfaceChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">SurfaceChunkGenerator</a></code></dd>
 </dl>
 <hr>
-<pre>public abstract class <span class="typeNameLabel">ChunkGenerator&lt;C extends <a href="ChunkGeneratorConfig.html" title="class in net.minecraft.world.gen.chunk">ChunkGeneratorConfig</a>&gt;</span>
+<pre>public abstract class <span class="typeNameLabel">ChunkGenerator</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></pre>
+<div class="block">In charge of shaping, adding biome specific surface blocks, and carving chunks,
+ as well as populating the generated chunks with <a href="../feature/Feature.html" title="class in net.minecraft.world.gen.feature">features</a> and <a href="../../../entity/Entity.html" title="class in net.minecraft.entity">entities</a>.
+ Biome placement starts here, however all vanilla and most modded chunk generators delegate this to a <a href="../../biome/source/BiomeSource.html" title="class in net.minecraft.world.biome.source">biome source</a>.</div>
 </section>
 <section class="summary">
 <ul class="blockList">
@@ -123,18 +126,28 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>protected <a href="ChunkGenerator.html" title="type parameter in ChunkGenerator">C</a></code></td>
+<td class="colFirst"><code>private <a href="StructuresConfig.html" title="class in net.minecraft.world.gen.chunk">StructuresConfig</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#config">config</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>protected long</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#seed">seed</a></span></code></th>
+<td class="colFirst"><code>static com.mojang.serialization.Codec&lt;<a href="ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">ChunkGenerator</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#field_24746">field_24746</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>protected <a href="../../IWorld.html" title="interface in net.minecraft.world">IWorld</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#world">world</a></span></code></th>
+<td class="colFirst"><code>protected <a href="../../biome/source/BiomeSource.html" title="class in net.minecraft.world.biome.source">BiomeSource</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#field_24747">field_24747</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private long</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#field_24748">field_24748</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../../../util/math/ChunkPos.html" title="class in net.minecraft.util.math">ChunkPos</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#field_24749">field_24749</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -159,9 +172,15 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </thead>
 <tbody>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.world.IWorld,net.minecraft.world.biome.source.BiomeSource,C)">ChunkGenerator</a></span>&#8203;(<a href="../../IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;world,
-<a href="../../biome/source/BiomeSource.html" title="class in net.minecraft.world.biome.source">BiomeSource</a>&nbsp;biomeSource,
-<a href="ChunkGenerator.html" title="type parameter in ChunkGenerator">C</a>&nbsp;config)</code></th>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.world.biome.source.BiomeSource,net.minecraft.world.biome.source.BiomeSource,net.minecraft.world.gen.chunk.StructuresConfig,long)">ChunkGenerator</a></span>&#8203;(<a href="../../biome/source/BiomeSource.html" title="class in net.minecraft.world.biome.source">BiomeSource</a>&nbsp;biomeSource,
+<a href="../../biome/source/BiomeSource.html" title="class in net.minecraft.world.biome.source">BiomeSource</a>&nbsp;biomeSource2,
+<a href="StructuresConfig.html" title="class in net.minecraft.world.gen.chunk">StructuresConfig</a>&nbsp;structuresConfig,
+long&nbsp;long2)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.world.biome.source.BiomeSource,net.minecraft.world.gen.chunk.StructuresConfig)">ChunkGenerator</a></span>&#8203;(<a href="../../biome/source/BiomeSource.html" title="class in net.minecraft.world.biome.source">BiomeSource</a>&nbsp;biomeSource,
+<a href="StructuresConfig.html" title="class in net.minecraft.world.gen.chunk">StructuresConfig</a>&nbsp;structuresConfig)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -189,8 +208,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tbody>
 <tr class="altColor" id="i0">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addStructureReferences(net.minecraft.world.IWorld,net.minecraft.world.gen.StructureAccessor,net.minecraft.world.chunk.Chunk)">addStructureReferences</a></span>&#8203;(<a href="../../IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;world,
-<a href="../StructureAccessor.html" title="class in net.minecraft.world.gen">StructureAccessor</a>&nbsp;structureAccessor,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addStructureReferences(net.minecraft.world.WorldAccess,net.minecraft.world.gen.StructureAccessor,net.minecraft.world.chunk.Chunk)">addStructureReferences</a></span>&#8203;(<a href="../../WorldAccess.html" title="interface in net.minecraft.world">WorldAccess</a>&nbsp;world,
+<a href="../StructureAccessor.html" title="class in net.minecraft.world.gen">StructureAccessor</a>&nbsp;accessor,
 <a href="../../chunk/Chunk.html" title="interface in net.minecraft.world.chunk">Chunk</a>&nbsp;chunk)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -202,15 +221,16 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </tr>
 <tr class="altColor" id="i2">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#carve(net.minecraft.world.biome.source.BiomeAccess,net.minecraft.world.chunk.Chunk,net.minecraft.world.gen.GenerationStep.Carver)">carve</a></span>&#8203;(<a href="../../biome/source/BiomeAccess.html" title="class in net.minecraft.world.biome.source">BiomeAccess</a>&nbsp;biomeAccess,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#carve(long,net.minecraft.world.biome.source.BiomeAccess,net.minecraft.world.chunk.Chunk,net.minecraft.world.gen.GenerationStep.Carver)">carve</a></span>&#8203;(long&nbsp;seed,
+<a href="../../biome/source/BiomeAccess.html" title="class in net.minecraft.world.biome.source">BiomeAccess</a>&nbsp;access,
 <a href="../../chunk/Chunk.html" title="interface in net.minecraft.world.chunk">Chunk</a>&nbsp;chunk,
 <a href="../GenerationStep.Carver.html" title="enum in net.minecraft.world.gen">GenerationStep.Carver</a>&nbsp;carver)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i3">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#generateFeatures(net.minecraft.world.ChunkRegion,net.minecraft.world.gen.StructureAccessor)">generateFeatures</a></span>&#8203;(<a href="../../ChunkRegion.html" title="class in net.minecraft.world">ChunkRegion</a>&nbsp;chunkRegion,
-<a href="../StructureAccessor.html" title="class in net.minecraft.world.gen">StructureAccessor</a>&nbsp;structureAccessor)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#generateFeatures(net.minecraft.world.ChunkRegion,net.minecraft.world.gen.StructureAccessor)">generateFeatures</a></span>&#8203;(<a href="../../ChunkRegion.html" title="class in net.minecraft.world">ChunkRegion</a>&nbsp;region,
+<a href="../StructureAccessor.html" title="class in net.minecraft.world.gen">StructureAccessor</a>&nbsp;accessor)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i4">
@@ -225,83 +245,87 @@ int&nbsp;z)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i6">
-<td class="colFirst"><code><a href="ChunkGenerator.html" title="type parameter in ChunkGenerator">C</a></code></td>
+<td class="colFirst"><code><a href="StructuresConfig.html" title="class in net.minecraft.world.gen.chunk">StructuresConfig</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getConfig()">getConfig</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i7">
-<td class="colFirst"><code>protected <a href="../../biome/Biome.html" title="class in net.minecraft.world.biome">Biome</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getDecorationBiome(net.minecraft.world.biome.source.BiomeAccess,net.minecraft.util.math.BlockPos)">getDecorationBiome</a></span>&#8203;(<a href="../../biome/source/BiomeAccess.html" title="class in net.minecraft.world.biome.source">BiomeAccess</a>&nbsp;biomeAccess,
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../../biome/Biome.SpawnEntry.html" title="class in net.minecraft.world.biome">Biome.SpawnEntry</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getEntitySpawnList(net.minecraft.world.biome.Biome,net.minecraft.world.gen.StructureAccessor,net.minecraft.entity.SpawnGroup,net.minecraft.util.math.BlockPos)">getEntitySpawnList</a></span>&#8203;(<a href="../../biome/Biome.html" title="class in net.minecraft.world.biome">Biome</a>&nbsp;biome,
+<a href="../StructureAccessor.html" title="class in net.minecraft.world.gen">StructureAccessor</a>&nbsp;accessor,
+<a href="../../../entity/SpawnGroup.html" title="enum in net.minecraft.entity">SpawnGroup</a>&nbsp;group,
 <a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i8">
-<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../../biome/Biome.SpawnEntry.html" title="class in net.minecraft.world.biome">Biome.SpawnEntry</a>&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getEntitySpawnList(net.minecraft.world.gen.StructureAccessor,net.minecraft.entity.EntityCategory,net.minecraft.util.math.BlockPos)">getEntitySpawnList</a></span>&#8203;(<a href="../StructureAccessor.html" title="class in net.minecraft.world.gen">StructureAccessor</a>&nbsp;structureAccessor,
-<a href="../../../entity/EntityCategory.html" title="enum in net.minecraft.entity">EntityCategory</a>&nbsp;entityCategory,
-<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos)</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="rowColor" id="i9">
 <td class="colFirst"><code>abstract int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getHeight(int,int,net.minecraft.world.Heightmap.Type)">getHeight</a></span>&#8203;(int&nbsp;x,
 int&nbsp;z,
 <a href="../../Heightmap.Type.html" title="enum in net.minecraft.world">Heightmap.Type</a>&nbsp;heightmapType)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i10">
+<tr class="rowColor" id="i9">
 <td class="colFirst"><code>int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getHeightInGround(int,int,net.minecraft.world.Heightmap.Type)">getHeightInGround</a></span>&#8203;(int&nbsp;x,
 int&nbsp;z,
 <a href="../../Heightmap.Type.html" title="enum in net.minecraft.world">Heightmap.Type</a>&nbsp;heightmapType)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i11">
+<tr class="altColor" id="i10">
 <td class="colFirst"><code>int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getHeightOnGround(int,int,net.minecraft.world.Heightmap.Type)">getHeightOnGround</a></span>&#8203;(int&nbsp;x,
 int&nbsp;z,
 <a href="../../Heightmap.Type.html" title="enum in net.minecraft.world">Heightmap.Type</a>&nbsp;heightmapType)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i12">
+<tr class="rowColor" id="i11">
 <td class="colFirst"><code>int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getMaxY()">getMaxY</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i13">
+<tr class="altColor" id="i12">
 <td class="colFirst"><code>int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getSeaLevel()">getSeaLevel</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i14">
-<td class="colFirst"><code>long</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getSeed()">getSeed</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="rowColor" id="i15">
-<td class="colFirst"><code>abstract int</code></td>
+<tr class="rowColor" id="i13">
+<td class="colFirst"><code>int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getSpawnHeight()">getSpawnHeight</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i16">
-<td class="colFirst"><code>&lt;C extends <a href="../feature/FeatureConfig.html" title="interface in net.minecraft.world.gen.feature">FeatureConfig</a>&gt;<br>C</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getStructureConfig(net.minecraft.world.biome.Biome,net.minecraft.world.gen.feature.StructureFeature)">getStructureConfig</a></span>&#8203;(<a href="../../biome/Biome.html" title="class in net.minecraft.world.biome">Biome</a>&nbsp;biome,
-<a href="../feature/StructureFeature.html" title="class in net.minecraft.world.gen.feature">StructureFeature</a>&lt;C&gt;&nbsp;structureFeature)</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="rowColor" id="i17">
-<td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#hasStructure(net.minecraft.world.biome.Biome,net.minecraft.world.gen.feature.StructureFeature)">hasStructure</a></span>&#8203;(<a href="../../biome/Biome.html" title="class in net.minecraft.world.biome">Biome</a>&nbsp;biome,
-<a href="../feature/StructureFeature.html" title="class in net.minecraft.world.gen.feature">StructureFeature</a>&lt;? extends <a href="../feature/FeatureConfig.html" title="interface in net.minecraft.world.gen.feature">FeatureConfig</a>&gt;&nbsp;feature)</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="altColor" id="i18">
+<tr class="altColor" id="i14">
 <td class="colFirst"><code><a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#locateStructure(net.minecraft.server.world.ServerWorld,java.lang.String,net.minecraft.util.math.BlockPos,int,boolean)">locateStructure</a></span>&#8203;(<a href="../../../server/world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a>&nbsp;serverWorld,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;id,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#locateStructure(net.minecraft.server.world.ServerWorld,net.minecraft.world.gen.feature.StructureFeature,net.minecraft.util.math.BlockPos,int,boolean)">locateStructure</a></span>&#8203;(<a href="../../../server/world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a>&nbsp;world,
+<a href="../feature/StructureFeature.html" title="class in net.minecraft.world.gen.feature">StructureFeature</a>&lt;?&gt;&nbsp;feature,
 <a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;center,
 int&nbsp;radius,
 boolean&nbsp;skipExistingChunks)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i15">
+<td class="colFirst"><code>protected abstract com.mojang.serialization.Codec&lt;? extends <a href="ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">ChunkGenerator</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_28506()">method_28506</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i16">
+<td class="colFirst"><code>boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_28507(net.minecraft.util.math.ChunkPos)">method_28507</a></span>&#8203;(<a href="../../../util/math/ChunkPos.html" title="class in net.minecraft.util.math">ChunkPos</a>&nbsp;chunkPos)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i17">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_28508(net.minecraft.world.gen.feature.ConfiguredStructureFeature,net.minecraft.world.gen.StructureAccessor,net.minecraft.world.chunk.Chunk,net.minecraft.structure.StructureManager,long,net.minecraft.util.math.ChunkPos,net.minecraft.world.biome.Biome)">method_28508</a></span>&#8203;(<a href="../feature/ConfiguredStructureFeature.html" title="class in net.minecraft.world.gen.feature">ConfiguredStructureFeature</a>&lt;?,&#8203;?&gt;&nbsp;configuredStructureFeature,
+<a href="../StructureAccessor.html" title="class in net.minecraft.world.gen">StructureAccessor</a>&nbsp;structureAccessor,
+<a href="../../chunk/Chunk.html" title="interface in net.minecraft.world.chunk">Chunk</a>&nbsp;chunk,
+<a href="../../../structure/StructureManager.html" title="class in net.minecraft.structure">StructureManager</a>&nbsp;structureManager,
+long&nbsp;long2,
+<a href="../../../util/math/ChunkPos.html" title="class in net.minecraft.util.math">ChunkPos</a>&nbsp;chunkPos,
+<a href="../../biome/Biome.html" title="class in net.minecraft.world.biome">Biome</a>&nbsp;biome)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i18">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_28509()">method_28509</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i19">
@@ -316,25 +340,24 @@ boolean&nbsp;skipExistingChunks)</code></th>
 </tr>
 <tr class="rowColor" id="i21">
 <td class="colFirst"><code>abstract void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#populateNoise(net.minecraft.world.IWorld,net.minecraft.world.gen.StructureAccessor,net.minecraft.world.chunk.Chunk)">populateNoise</a></span>&#8203;(<a href="../../IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;world,
-<a href="../StructureAccessor.html" title="class in net.minecraft.world.gen">StructureAccessor</a>&nbsp;structureAccessor,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#populateNoise(net.minecraft.world.WorldAccess,net.minecraft.world.gen.StructureAccessor,net.minecraft.world.chunk.Chunk)">populateNoise</a></span>&#8203;(<a href="../../WorldAccess.html" title="interface in net.minecraft.world">WorldAccess</a>&nbsp;world,
+<a href="../StructureAccessor.html" title="class in net.minecraft.world.gen">StructureAccessor</a>&nbsp;accessor,
 <a href="../../chunk/Chunk.html" title="interface in net.minecraft.world.chunk">Chunk</a>&nbsp;chunk)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Generates the base shape of the chunk out of the basic block states as decided by this chunk generator's config.</div>
+</td>
 </tr>
 <tr class="altColor" id="i22">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setStructureStarts(net.minecraft.world.gen.StructureAccessor,net.minecraft.world.biome.source.BiomeAccess,net.minecraft.world.chunk.Chunk,net.minecraft.world.gen.chunk.ChunkGenerator,net.minecraft.structure.StructureManager)">setStructureStarts</a></span>&#8203;(<a href="../StructureAccessor.html" title="class in net.minecraft.world.gen">StructureAccessor</a>&nbsp;structureAccessor,
-<a href="../../biome/source/BiomeAccess.html" title="class in net.minecraft.world.biome.source">BiomeAccess</a>&nbsp;biomeAccess,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setStructureStarts(net.minecraft.world.gen.StructureAccessor,net.minecraft.world.chunk.Chunk,net.minecraft.structure.StructureManager,long)">setStructureStarts</a></span>&#8203;(<a href="../StructureAccessor.html" title="class in net.minecraft.world.gen">StructureAccessor</a>&nbsp;structureAccessor,
 <a href="../../chunk/Chunk.html" title="interface in net.minecraft.world.chunk">Chunk</a>&nbsp;chunk,
-<a href="ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">ChunkGenerator</a>&lt;?&gt;&nbsp;chunkGenerator,
-<a href="../../../structure/StructureManager.html" title="class in net.minecraft.structure">StructureManager</a>&nbsp;structureManager)</code></th>
+<a href="../../../structure/StructureManager.html" title="class in net.minecraft.structure">StructureManager</a>&nbsp;structureManager,
+long&nbsp;long2)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i23">
-<td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#spawnEntities(net.minecraft.server.world.ServerWorld,boolean,boolean)">spawnEntities</a></span>&#8203;(<a href="../../../server/world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a>&nbsp;world,
-boolean&nbsp;spawnMonsters,
-boolean&nbsp;spawnAnimals)</code></th>
+<td class="colFirst"><code>abstract <a href="ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">ChunkGenerator</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#withSeed(long)">withSeed</a></span>&#8203;(long&nbsp;seed)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -361,14 +384,8 @@ boolean&nbsp;spawnAnimals)</code></th>
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="world">world</a></h3>
-<div class="memberSignature"><span class="modifiers">protected final</span>&nbsp;<span class="returnType"><a href="../../IWorld.html" title="interface in net.minecraft.world">IWorld</a></span>&nbsp;<span class="memberName">world</span></div>
-</section>
-</li>
-<li class="blockList">
-<section class="detail">
-<h3><a id="seed">seed</a></h3>
-<div class="memberSignature"><span class="modifiers">protected final</span>&nbsp;<span class="returnType">long</span>&nbsp;<span class="memberName">seed</span></div>
+<h3><a id="field_24746">field_24746</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType">com.mojang.serialization.Codec&lt;<a href="ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">ChunkGenerator</a>&gt;</span>&nbsp;<span class="memberName">field_24746</span></div>
 </section>
 </li>
 <li class="blockList">
@@ -379,8 +396,26 @@ boolean&nbsp;spawnAnimals)</code></th>
 </li>
 <li class="blockList">
 <section class="detail">
+<h3><a id="field_24747">field_24747</a></h3>
+<div class="memberSignature"><span class="modifiers">protected final</span>&nbsp;<span class="returnType"><a href="../../biome/source/BiomeSource.html" title="class in net.minecraft.world.biome.source">BiomeSource</a></span>&nbsp;<span class="memberName">field_24747</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="config">config</a></h3>
-<div class="memberSignature"><span class="modifiers">protected final</span>&nbsp;<span class="returnType"><a href="ChunkGenerator.html" title="type parameter in ChunkGenerator">C</a> extends <a href="ChunkGeneratorConfig.html" title="class in net.minecraft.world.gen.chunk">ChunkGeneratorConfig</a></span>&nbsp;<span class="memberName">config</span></div>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="StructuresConfig.html" title="class in net.minecraft.world.gen.chunk">StructuresConfig</a></span>&nbsp;<span class="memberName">config</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="field_24748">field_24748</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType">long</span>&nbsp;<span class="memberName">field_24748</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="field_24749">field_24749</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../../../util/math/ChunkPos.html" title="class in net.minecraft.util.math">ChunkPos</a>&gt;</span>&nbsp;<span class="memberName">field_24749</span></div>
 </section>
 </li>
 </ul>
@@ -395,12 +430,18 @@ boolean&nbsp;spawnAnimals)</code></th>
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="&lt;init&gt;(net.minecraft.world.IWorld,net.minecraft.world.biome.source.BiomeSource,net.minecraft.world.gen.chunk.ChunkGeneratorConfig)">
-<!--   -->
-</a><a id="&lt;init&gt;(net.minecraft.world.IWorld,net.minecraft.world.biome.source.BiomeSource,C)">ChunkGenerator</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">ChunkGenerator</span>&#8203;(<span class="arguments"><a href="../../IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;world,
-<a href="../../biome/source/BiomeSource.html" title="class in net.minecraft.world.biome.source">BiomeSource</a>&nbsp;biomeSource,
-<a href="ChunkGenerator.html" title="type parameter in ChunkGenerator">C</a>&nbsp;config)</span></div>
+<h3><a id="&lt;init&gt;(net.minecraft.world.biome.source.BiomeSource,net.minecraft.world.gen.chunk.StructuresConfig)">ChunkGenerator</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">ChunkGenerator</span>&#8203;(<span class="arguments"><a href="../../biome/source/BiomeSource.html" title="class in net.minecraft.world.biome.source">BiomeSource</a>&nbsp;biomeSource,
+<a href="StructuresConfig.html" title="class in net.minecraft.world.gen.chunk">StructuresConfig</a>&nbsp;structuresConfig)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="&lt;init&gt;(net.minecraft.world.biome.source.BiomeSource,net.minecraft.world.biome.source.BiomeSource,net.minecraft.world.gen.chunk.StructuresConfig,long)">ChunkGenerator</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">ChunkGenerator</span>&#8203;(<span class="arguments"><a href="../../biome/source/BiomeSource.html" title="class in net.minecraft.world.biome.source">BiomeSource</a>&nbsp;biomeSource,
+<a href="../../biome/source/BiomeSource.html" title="class in net.minecraft.world.biome.source">BiomeSource</a>&nbsp;biomeSource2,
+<a href="StructuresConfig.html" title="class in net.minecraft.world.gen.chunk">StructuresConfig</a>&nbsp;structuresConfig,
+long&nbsp;long2)</span></div>
 </section>
 </li>
 </ul>
@@ -415,31 +456,44 @@ boolean&nbsp;spawnAnimals)</code></th>
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
+<h3><a id="method_28509()">method_28509</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">method_28509</span>()</div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="method_28506()">method_28506</a></h3>
+<div class="memberSignature"><span class="modifiers">protected abstract</span>&nbsp;<span class="returnType">com.mojang.serialization.Codec&lt;? extends <a href="ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">ChunkGenerator</a>&gt;</span>&nbsp;<span class="memberName">method_28506</span>()</div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="withSeed(long)">withSeed</a></h3>
+<div class="memberSignature"><span class="annotations">@Environment(CLIENT)
+</span><span class="modifiers">public abstract</span>&nbsp;<span class="returnType"><a href="ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">ChunkGenerator</a></span>&nbsp;<span class="memberName">withSeed</span>&#8203;(<span class="arguments">long&nbsp;seed)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="populateBiomes(net.minecraft.world.chunk.Chunk)">populateBiomes</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">populateBiomes</span>&#8203;(<span class="arguments"><a href="../../chunk/Chunk.html" title="interface in net.minecraft.world.chunk">Chunk</a>&nbsp;chunk)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="getDecorationBiome(net.minecraft.world.biome.source.BiomeAccess,net.minecraft.util.math.BlockPos)">getDecorationBiome</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType"><a href="../../biome/Biome.html" title="class in net.minecraft.world.biome">Biome</a></span>&nbsp;<span class="memberName">getDecorationBiome</span>&#8203;(<span class="arguments"><a href="../../biome/source/BiomeAccess.html" title="class in net.minecraft.world.biome.source">BiomeAccess</a>&nbsp;biomeAccess,
-<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</span></div>
-</section>
-</li>
-<li class="blockList">
-<section class="detail">
-<h3><a id="carve(net.minecraft.world.biome.source.BiomeAccess,net.minecraft.world.chunk.Chunk,net.minecraft.world.gen.GenerationStep.Carver)">carve</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">carve</span>&#8203;(<span class="arguments"><a href="../../biome/source/BiomeAccess.html" title="class in net.minecraft.world.biome.source">BiomeAccess</a>&nbsp;biomeAccess,
+<h3><a id="carve(long,net.minecraft.world.biome.source.BiomeAccess,net.minecraft.world.chunk.Chunk,net.minecraft.world.gen.GenerationStep.Carver)">carve</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">carve</span>&#8203;(<span class="arguments">long&nbsp;seed,
+<a href="../../biome/source/BiomeAccess.html" title="class in net.minecraft.world.biome.source">BiomeAccess</a>&nbsp;access,
 <a href="../../chunk/Chunk.html" title="interface in net.minecraft.world.chunk">Chunk</a>&nbsp;chunk,
 <a href="../GenerationStep.Carver.html" title="enum in net.minecraft.world.gen">GenerationStep.Carver</a>&nbsp;carver)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="locateStructure(net.minecraft.server.world.ServerWorld,java.lang.String,net.minecraft.util.math.BlockPos,int,boolean)">locateStructure</a></h3>
-<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a></span>&nbsp;<span class="memberName">locateStructure</span>&#8203;(<span class="arguments"><a href="../../../server/world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a>&nbsp;serverWorld,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;id,
+<h3><a id="locateStructure(net.minecraft.server.world.ServerWorld,net.minecraft.world.gen.feature.StructureFeature,net.minecraft.util.math.BlockPos,int,boolean)">locateStructure</a></h3>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a></span>&nbsp;<span class="memberName">locateStructure</span>&#8203;(<span class="arguments"><a href="../../../server/world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a>&nbsp;world,
+<a href="../feature/StructureFeature.html" title="class in net.minecraft.world.gen.feature">StructureFeature</a>&lt;?&gt;&nbsp;feature,
 <a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;center,
 int&nbsp;radius,
 boolean&nbsp;skipExistingChunks)</span></div>
@@ -448,8 +502,8 @@ boolean&nbsp;skipExistingChunks)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="generateFeatures(net.minecraft.world.ChunkRegion,net.minecraft.world.gen.StructureAccessor)">generateFeatures</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">generateFeatures</span>&#8203;(<span class="arguments"><a href="../../ChunkRegion.html" title="class in net.minecraft.world">ChunkRegion</a>&nbsp;chunkRegion,
-<a href="../StructureAccessor.html" title="class in net.minecraft.world.gen">StructureAccessor</a>&nbsp;structureAccessor)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">generateFeatures</span>&#8203;(<span class="arguments"><a href="../../ChunkRegion.html" title="class in net.minecraft.world">ChunkRegion</a>&nbsp;region,
+<a href="../StructureAccessor.html" title="class in net.minecraft.world.gen">StructureAccessor</a>&nbsp;accessor)</span></div>
 </section>
 </li>
 <li class="blockList">
@@ -468,36 +522,13 @@ boolean&nbsp;skipExistingChunks)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getConfig()">getConfig</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="ChunkGenerator.html" title="type parameter in ChunkGenerator">C</a></span>&nbsp;<span class="memberName">getConfig</span>()</div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="StructuresConfig.html" title="class in net.minecraft.world.gen.chunk">StructuresConfig</a></span>&nbsp;<span class="memberName">getConfig</span>()</div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getSpawnHeight()">getSpawnHeight</a></h3>
-<div class="memberSignature"><span class="modifiers">public abstract</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getSpawnHeight</span>()</div>
-</section>
-</li>
-<li class="blockList">
-<section class="detail">
-<h3><a id="spawnEntities(net.minecraft.server.world.ServerWorld,boolean,boolean)">spawnEntities</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">spawnEntities</span>&#8203;(<span class="arguments"><a href="../../../server/world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a>&nbsp;world,
-boolean&nbsp;spawnMonsters,
-boolean&nbsp;spawnAnimals)</span></div>
-</section>
-</li>
-<li class="blockList">
-<section class="detail">
-<h3><a id="hasStructure(net.minecraft.world.biome.Biome,net.minecraft.world.gen.feature.StructureFeature)">hasStructure</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">hasStructure</span>&#8203;(<span class="arguments"><a href="../../biome/Biome.html" title="class in net.minecraft.world.biome">Biome</a>&nbsp;biome,
-<a href="../feature/StructureFeature.html" title="class in net.minecraft.world.gen.feature">StructureFeature</a>&lt;? extends <a href="../feature/FeatureConfig.html" title="interface in net.minecraft.world.gen.feature">FeatureConfig</a>&gt;&nbsp;feature)</span></div>
-</section>
-</li>
-<li class="blockList">
-<section class="detail">
-<h3><a id="getStructureConfig(net.minecraft.world.biome.Biome,net.minecraft.world.gen.feature.StructureFeature)">getStructureConfig</a></h3>
-<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="typeParameters">&lt;C extends <a href="../feature/FeatureConfig.html" title="interface in net.minecraft.world.gen.feature">FeatureConfig</a>&gt;</span>&nbsp;<span class="returnType">C</span>&nbsp;<span class="memberName">getStructureConfig</span>&#8203;(<span class="arguments"><a href="../../biome/Biome.html" title="class in net.minecraft.world.biome">Biome</a>&nbsp;biome,
-<a href="../feature/StructureFeature.html" title="class in net.minecraft.world.gen.feature">StructureFeature</a>&lt;C&gt;&nbsp;structureFeature)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getSpawnHeight</span>()</div>
 </section>
 </li>
 <li class="blockList">
@@ -508,48 +539,55 @@ boolean&nbsp;spawnAnimals)</span></div>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="getSeed()">getSeed</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">long</span>&nbsp;<span class="memberName">getSeed</span>()</div>
-</section>
-</li>
-<li class="blockList">
-<section class="detail">
 <h3><a id="getMaxY()">getMaxY</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getMaxY</span>()</div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="getEntitySpawnList(net.minecraft.world.gen.StructureAccessor,net.minecraft.entity.EntityCategory,net.minecraft.util.math.BlockPos)">getEntitySpawnList</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../../biome/Biome.SpawnEntry.html" title="class in net.minecraft.world.biome">Biome.SpawnEntry</a>&gt;</span>&nbsp;<span class="memberName">getEntitySpawnList</span>&#8203;(<span class="arguments"><a href="../StructureAccessor.html" title="class in net.minecraft.world.gen">StructureAccessor</a>&nbsp;structureAccessor,
-<a href="../../../entity/EntityCategory.html" title="enum in net.minecraft.entity">EntityCategory</a>&nbsp;entityCategory,
-<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos)</span></div>
+<h3><a id="getEntitySpawnList(net.minecraft.world.biome.Biome,net.minecraft.world.gen.StructureAccessor,net.minecraft.entity.SpawnGroup,net.minecraft.util.math.BlockPos)">getEntitySpawnList</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../../biome/Biome.SpawnEntry.html" title="class in net.minecraft.world.biome">Biome.SpawnEntry</a>&gt;</span>&nbsp;<span class="memberName">getEntitySpawnList</span>&#8203;(<span class="arguments"><a href="../../biome/Biome.html" title="class in net.minecraft.world.biome">Biome</a>&nbsp;biome,
+<a href="../StructureAccessor.html" title="class in net.minecraft.world.gen">StructureAccessor</a>&nbsp;accessor,
+<a href="../../../entity/SpawnGroup.html" title="enum in net.minecraft.entity">SpawnGroup</a>&nbsp;group,
+<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="setStructureStarts(net.minecraft.world.gen.StructureAccessor,net.minecraft.world.biome.source.BiomeAccess,net.minecraft.world.chunk.Chunk,net.minecraft.world.gen.chunk.ChunkGenerator,net.minecraft.structure.StructureManager)">setStructureStarts</a></h3>
+<h3><a id="setStructureStarts(net.minecraft.world.gen.StructureAccessor,net.minecraft.world.chunk.Chunk,net.minecraft.structure.StructureManager,long)">setStructureStarts</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setStructureStarts</span>&#8203;(<span class="arguments"><a href="../StructureAccessor.html" title="class in net.minecraft.world.gen">StructureAccessor</a>&nbsp;structureAccessor,
-<a href="../../biome/source/BiomeAccess.html" title="class in net.minecraft.world.biome.source">BiomeAccess</a>&nbsp;biomeAccess,
 <a href="../../chunk/Chunk.html" title="interface in net.minecraft.world.chunk">Chunk</a>&nbsp;chunk,
-<a href="ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">ChunkGenerator</a>&lt;?&gt;&nbsp;chunkGenerator,
-<a href="../../../structure/StructureManager.html" title="class in net.minecraft.structure">StructureManager</a>&nbsp;structureManager)</span></div>
+<a href="../../../structure/StructureManager.html" title="class in net.minecraft.structure">StructureManager</a>&nbsp;structureManager,
+long&nbsp;long2)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="addStructureReferences(net.minecraft.world.IWorld,net.minecraft.world.gen.StructureAccessor,net.minecraft.world.chunk.Chunk)">addStructureReferences</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">addStructureReferences</span>&#8203;(<span class="arguments"><a href="../../IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;world,
+<h3><a id="method_28508(net.minecraft.world.gen.feature.ConfiguredStructureFeature,net.minecraft.world.gen.StructureAccessor,net.minecraft.world.chunk.Chunk,net.minecraft.structure.StructureManager,long,net.minecraft.util.math.ChunkPos,net.minecraft.world.biome.Biome)">method_28508</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">method_28508</span>&#8203;(<span class="arguments"><a href="../feature/ConfiguredStructureFeature.html" title="class in net.minecraft.world.gen.feature">ConfiguredStructureFeature</a>&lt;?,&#8203;?&gt;&nbsp;configuredStructureFeature,
 <a href="../StructureAccessor.html" title="class in net.minecraft.world.gen">StructureAccessor</a>&nbsp;structureAccessor,
+<a href="../../chunk/Chunk.html" title="interface in net.minecraft.world.chunk">Chunk</a>&nbsp;chunk,
+<a href="../../../structure/StructureManager.html" title="class in net.minecraft.structure">StructureManager</a>&nbsp;structureManager,
+long&nbsp;long2,
+<a href="../../../util/math/ChunkPos.html" title="class in net.minecraft.util.math">ChunkPos</a>&nbsp;chunkPos,
+<a href="../../biome/Biome.html" title="class in net.minecraft.world.biome">Biome</a>&nbsp;biome)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="addStructureReferences(net.minecraft.world.WorldAccess,net.minecraft.world.gen.StructureAccessor,net.minecraft.world.chunk.Chunk)">addStructureReferences</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">addStructureReferences</span>&#8203;(<span class="arguments"><a href="../../WorldAccess.html" title="interface in net.minecraft.world">WorldAccess</a>&nbsp;world,
+<a href="../StructureAccessor.html" title="class in net.minecraft.world.gen">StructureAccessor</a>&nbsp;accessor,
 <a href="../../chunk/Chunk.html" title="interface in net.minecraft.world.chunk">Chunk</a>&nbsp;chunk)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="populateNoise(net.minecraft.world.IWorld,net.minecraft.world.gen.StructureAccessor,net.minecraft.world.chunk.Chunk)">populateNoise</a></h3>
-<div class="memberSignature"><span class="modifiers">public abstract</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">populateNoise</span>&#8203;(<span class="arguments"><a href="../../IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;world,
-<a href="../StructureAccessor.html" title="class in net.minecraft.world.gen">StructureAccessor</a>&nbsp;structureAccessor,
+<h3><a id="populateNoise(net.minecraft.world.WorldAccess,net.minecraft.world.gen.StructureAccessor,net.minecraft.world.chunk.Chunk)">populateNoise</a></h3>
+<div class="memberSignature"><span class="modifiers">public abstract</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">populateNoise</span>&#8203;(<span class="arguments"><a href="../../WorldAccess.html" title="interface in net.minecraft.world">WorldAccess</a>&nbsp;world,
+<a href="../StructureAccessor.html" title="class in net.minecraft.world.gen">StructureAccessor</a>&nbsp;accessor,
 <a href="../../chunk/Chunk.html" title="interface in net.minecraft.world.chunk">Chunk</a>&nbsp;chunk)</span></div>
+<div class="block">Generates the base shape of the chunk out of the basic block states as decided by this chunk generator's config.</div>
 </section>
 </li>
 <li class="blockList">
@@ -587,6 +625,12 @@ int&nbsp;z,
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getHeightInGround</span>&#8203;(<span class="arguments">int&nbsp;x,
 int&nbsp;z,
 <a href="../../Heightmap.Type.html" title="enum in net.minecraft.world">Heightmap.Type</a>&nbsp;heightmapType)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="method_28507(net.minecraft.util.math.ChunkPos)">method_28507</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">method_28507</span>&#8203;(<span class="arguments"><a href="../../../util/math/ChunkPos.html" title="class in net.minecraft.util.math">ChunkPos</a>&nbsp;chunkPos)</span></div>
 </section>
 </li>
 </ul>

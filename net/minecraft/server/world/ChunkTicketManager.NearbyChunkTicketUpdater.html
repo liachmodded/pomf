@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10};
+<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -62,7 +62,7 @@ loadScripts(document, 'script');</script>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
@@ -112,6 +112,35 @@ extends <a href="ChunkTicketManager.DistanceFromNearestPlayerTracker.html" title
 <!--   -->
 </a>
 <h2>Field Summary</h2>
+<div class="memberSummary">
+<table>
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<thead>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colSecond" scope="col">Field</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://fastutil.di.unimi.it/docs/it/unimi/dsi/fastutil/longs/Long2IntMap.html?is-external=true" title="class or interface in it.unimi.dsi.fastutil.longs" class="externalLink">Long2IntMap</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#distances">distances</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://fastutil.di.unimi.it/docs/it/unimi/dsi/fastutil/longs/LongSet.html?is-external=true" title="class or interface in it.unimi.dsi.fastutil.longs" class="externalLink">LongSet</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#positionsAffected">positionsAffected</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#watchDistance">watchDistance</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
 <div class="inheritedList">
 <h3>Fields inherited from class&nbsp;net.minecraft.server.world.<a href="ChunkTicketManager.DistanceFromNearestPlayerTracker.html" title="class in net.minecraft.server.world">ChunkTicketManager.DistanceFromNearestPlayerTracker</a></h3>
 <a id="fields.inherited.from.class.net.minecraft.server.world.ChunkTicketManager.DistanceFromNearestPlayerTracker">
@@ -138,8 +167,7 @@ extends <a href="ChunkTicketManager.DistanceFromNearestPlayerTracker.html" title
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>protected </code></td>
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.server.world.ChunkTicketManager,int)">NearbyChunkTicketUpdater</a></span>&#8203;(<a href="ChunkTicketManager.html" title="class in net.minecraft.server.world">ChunkTicketManager</a>&nbsp;maxDistance,
-int&nbsp;int2)</code></th>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(int)">NearbyChunkTicketUpdater</a></span>&#8203;(int&nbsp;int2)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -166,20 +194,33 @@ int&nbsp;int2)</code></th>
 </thead>
 <tbody>
 <tr class="altColor" id="i0">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isWithinViewDistance(int)">isWithinViewDistance</a></span>&#8203;(int&nbsp;distance)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i1">
 <td class="colFirst"><code>protected void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#onDistanceChange(long,int,int)">onDistanceChange</a></span>&#8203;(long&nbsp;pos,
 int&nbsp;oldDistance,
 int&nbsp;distance)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i1">
+<tr class="altColor" id="i2">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setWatchDistance(int)">setWatchDistance</a></span>&#8203;(int&nbsp;watchDistance)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i2">
+<tr class="rowColor" id="i3">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#updateLevels()">updateLevels</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i4">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#updateTicket(long,int,boolean,boolean)">updateTicket</a></span>&#8203;(long&nbsp;pos,
+int&nbsp;distance,
+boolean&nbsp;oldWithinViewDistance,
+boolean&nbsp;withinViewDistance)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -212,6 +253,34 @@ int&nbsp;distance)</code></th>
 </section>
 <section class="details">
 <ul class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<li class="blockList">
+<section class="fieldDetails"><a id="field.detail">
+<!--   -->
+</a>
+<h2>Field Details</h2>
+<ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="watchDistance">watchDistance</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">watchDistance</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="distances">distances</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="http://fastutil.di.unimi.it/docs/it/unimi/dsi/fastutil/longs/Long2IntMap.html?is-external=true" title="class or interface in it.unimi.dsi.fastutil.longs" class="externalLink">Long2IntMap</a></span>&nbsp;<span class="memberName">distances</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="positionsAffected">positionsAffected</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="http://fastutil.di.unimi.it/docs/it/unimi/dsi/fastutil/longs/LongSet.html?is-external=true" title="class or interface in it.unimi.dsi.fastutil.longs" class="externalLink">LongSet</a></span>&nbsp;<span class="memberName">positionsAffected</span></div>
+</section>
+</li>
+</ul>
+</section>
+</li>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <li class="blockList">
 <section class="constructorDetails"><a id="constructor.detail">
@@ -221,9 +290,8 @@ int&nbsp;distance)</code></th>
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="&lt;init&gt;(net.minecraft.server.world.ChunkTicketManager,int)">NearbyChunkTicketUpdater</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="memberName">NearbyChunkTicketUpdater</span>&#8203;(<span class="arguments"><a href="ChunkTicketManager.html" title="class in net.minecraft.server.world">ChunkTicketManager</a>&nbsp;maxDistance,
-int&nbsp;int2)</span></div>
+<h3><a id="&lt;init&gt;(int)">NearbyChunkTicketUpdater</a></h3>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="memberName">NearbyChunkTicketUpdater</span>&#8203;(<span class="arguments">int&nbsp;int2)</span></div>
 </section>
 </li>
 </ul>
@@ -256,12 +324,27 @@ int&nbsp;distance)</span></div>
 </li>
 <li class="blockList">
 <section class="detail">
+<h3><a id="updateTicket(long,int,boolean,boolean)">updateTicket</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">updateTicket</span>&#8203;(<span class="arguments">long&nbsp;pos,
+int&nbsp;distance,
+boolean&nbsp;oldWithinViewDistance,
+boolean&nbsp;withinViewDistance)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="updateLevels()">updateLevels</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">updateLevels</span>()</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="ChunkTicketManager.DistanceFromNearestPlayerTracker.html#updateLevels()">updateLevels</a></code>&nbsp;in class&nbsp;<code><a href="ChunkTicketManager.DistanceFromNearestPlayerTracker.html" title="class in net.minecraft.server.world">ChunkTicketManager.DistanceFromNearestPlayerTracker</a></code></dd>
 </dl>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="isWithinViewDistance(int)">isWithinViewDistance</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isWithinViewDistance</span>&#8203;(<span class="arguments">int&nbsp;distance)</span></div>
 </section>
 </li>
 </ul>
@@ -303,7 +386,7 @@ int&nbsp;distance)</span></div>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>

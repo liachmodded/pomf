@@ -55,14 +55,14 @@ loadScripts(document, 'script');</script>
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li><a href="#nested.class.summary">Nested</a>&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
@@ -97,26 +97,41 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </section>
 <section class="summary">
 <ul class="blockList">
-<!-- ======== NESTED CLASS SUMMARY ======== -->
+<!-- =========== FIELD SUMMARY =========== -->
 <li class="blockList">
-<section class="nestedClassSummary"><a id="nested.class.summary">
+<section class="fieldSummary"><a id="field.summary">
 <!--   -->
 </a>
-<h2>Nested Class Summary</h2>
+<h2>Field Summary</h2>
 <div class="memberSummary">
 <table>
-<caption><span>Nested Classes</span><span class="tabEnd">&nbsp;</span></caption>
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
 <thead>
 <tr>
 <th class="colFirst" scope="col">Modifier and Type</th>
-<th class="colSecond" scope="col">Class</th>
+<th class="colSecond" scope="col">Field</th>
 <th class="colLast" scope="col">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><code>static class&nbsp;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="MusicTracker.MusicType.html" title="enum in net.minecraft.client.sound">MusicTracker.MusicType</a></span></code></th>
+<td class="colFirst"><code>private <a href="../MinecraftClient.html" title="class in net.minecraft.client">MinecraftClient</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#client">client</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="SoundInstance.html" title="interface in net.minecraft.client.sound">SoundInstance</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#current">current</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#random">random</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#timeUntilNextSong">timeUntilNextSong</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -169,12 +184,12 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tbody>
 <tr class="altColor" id="i0">
 <td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isPlayingType(net.minecraft.client.sound.MusicTracker.MusicType)">isPlayingType</a></span>&#8203;(<a href="MusicTracker.MusicType.html" title="enum in net.minecraft.client.sound">MusicTracker.MusicType</a>&nbsp;musicType)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isPlayingType(net.minecraft.sound.MusicSound)">isPlayingType</a></span>&#8203;(<a href="../../sound/MusicSound.html" title="class in net.minecraft.sound">MusicSound</a>&nbsp;type)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#play(net.minecraft.client.sound.MusicTracker.MusicType)">play</a></span>&#8203;(<a href="MusicTracker.MusicType.html" title="enum in net.minecraft.client.sound">MusicTracker.MusicType</a>&nbsp;musicType)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#play(net.minecraft.sound.MusicSound)">play</a></span>&#8203;(<a href="../../sound/MusicSound.html" title="class in net.minecraft.sound">MusicSound</a>&nbsp;type)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i2">
@@ -202,6 +217,41 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </section>
 <section class="details">
 <ul class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<li class="blockList">
+<section class="fieldDetails"><a id="field.detail">
+<!--   -->
+</a>
+<h2>Field Details</h2>
+<ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="random">random</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a></span>&nbsp;<span class="memberName">random</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="client">client</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../MinecraftClient.html" title="class in net.minecraft.client">MinecraftClient</a></span>&nbsp;<span class="memberName">client</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="current">current</a></h3>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="SoundInstance.html" title="interface in net.minecraft.client.sound">SoundInstance</a></span>&nbsp;<span class="memberName">current</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="timeUntilNextSong">timeUntilNextSong</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">timeUntilNextSong</span></div>
+</section>
+</li>
+</ul>
+</section>
+</li>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <li class="blockList">
 <section class="constructorDetails"><a id="constructor.detail">
@@ -233,8 +283,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="play(net.minecraft.client.sound.MusicTracker.MusicType)">play</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">play</span>&#8203;(<span class="arguments"><a href="MusicTracker.MusicType.html" title="enum in net.minecraft.client.sound">MusicTracker.MusicType</a>&nbsp;musicType)</span></div>
+<h3><a id="play(net.minecraft.sound.MusicSound)">play</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">play</span>&#8203;(<span class="arguments"><a href="../../sound/MusicSound.html" title="class in net.minecraft.sound">MusicSound</a>&nbsp;type)</span></div>
 </section>
 </li>
 <li class="blockList">
@@ -245,8 +295,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="isPlayingType(net.minecraft.client.sound.MusicTracker.MusicType)">isPlayingType</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isPlayingType</span>&#8203;(<span class="arguments"><a href="MusicTracker.MusicType.html" title="enum in net.minecraft.client.sound">MusicTracker.MusicType</a>&nbsp;musicType)</span></div>
+<h3><a id="isPlayingType(net.minecraft.sound.MusicSound)">isPlayingType</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isPlayingType</span>&#8203;(<span class="arguments"><a href="../../sound/MusicSound.html" title="class in net.minecraft.sound">MusicSound</a>&nbsp;type)</span></div>
 </section>
 </li>
 </ul>
@@ -281,14 +331,14 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li><a href="#nested.class.summary">Nested</a>&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>

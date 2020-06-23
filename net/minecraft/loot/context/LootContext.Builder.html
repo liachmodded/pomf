@@ -56,13 +56,13 @@ loadScripts(document, 'script');</script>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
@@ -100,6 +100,53 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </section>
 <section class="summary">
 <ul class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<li class="blockList">
+<section class="fieldSummary"><a id="field.summary">
+<!--   -->
+</a>
+<h2>Field Summary</h2>
+<div class="memberSummary">
+<table>
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<thead>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colSecond" scope="col">Field</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util" class="externalLink">Map</a>&lt;<a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>,&#8203;<a href="LootContext.Dropper.html" title="interface in net.minecraft.loot.context">LootContext.Dropper</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#drops">drops</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private float</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#luck">luck</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util" class="externalLink">Map</a>&lt;<a href="LootContextParameter.html" title="class in net.minecraft.loot.context">LootContextParameter</a>&lt;?&gt;,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#parameters">parameters</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#random">random</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../server/world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#world">world</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</li>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <li class="blockList">
 <section class="constructorSummary"><a id="constructor.summary">
@@ -164,42 +211,42 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i4">
-<td class="colFirst"><code>&lt;T&gt;&nbsp;<a href="LootContext.Builder.html" title="class in net.minecraft.loot.context">LootContext.Builder</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#put(net.minecraft.loot.context.LootContextParameter,T)">put</a></span>&#8203;(<a href="LootContextParameter.html" title="class in net.minecraft.loot.context">LootContextParameter</a>&lt;T&gt;&nbsp;key,
-T&nbsp;value)</code></th>
+<td class="colFirst"><code><a href="LootContext.Builder.html" title="class in net.minecraft.loot.context">LootContext.Builder</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#luck(float)">luck</a></span>&#8203;(float&nbsp;luck)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i5">
-<td class="colFirst"><code><a href="LootContext.Builder.html" title="class in net.minecraft.loot.context">LootContext.Builder</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#putDrop(net.minecraft.util.Identifier,net.minecraft.loot.context.LootContext.Dropper)">putDrop</a></span>&#8203;(<a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;id,
-<a href="LootContext.Dropper.html" title="interface in net.minecraft.loot.context">LootContext.Dropper</a>&nbsp;value)</code></th>
+<td class="colFirst"><code>&lt;T&gt;&nbsp;<a href="LootContext.Builder.html" title="class in net.minecraft.loot.context">LootContext.Builder</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#optionalParameter(net.minecraft.loot.context.LootContextParameter,T)">optionalParameter</a></span>&#8203;(<a href="LootContextParameter.html" title="class in net.minecraft.loot.context">LootContextParameter</a>&lt;T&gt;&nbsp;key,
+T&nbsp;value)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i6">
 <td class="colFirst"><code>&lt;T&gt;&nbsp;<a href="LootContext.Builder.html" title="class in net.minecraft.loot.context">LootContext.Builder</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#putNullable(net.minecraft.loot.context.LootContextParameter,T)">putNullable</a></span>&#8203;(<a href="LootContextParameter.html" title="class in net.minecraft.loot.context">LootContextParameter</a>&lt;T&gt;&nbsp;key,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#parameter(net.minecraft.loot.context.LootContextParameter,T)">parameter</a></span>&#8203;(<a href="LootContextParameter.html" title="class in net.minecraft.loot.context">LootContextParameter</a>&lt;T&gt;&nbsp;key,
 T&nbsp;value)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i7">
 <td class="colFirst"><code><a href="LootContext.Builder.html" title="class in net.minecraft.loot.context">LootContext.Builder</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setLuck(float)">setLuck</a></span>&#8203;(float&nbsp;luck)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#putDrop(net.minecraft.util.Identifier,net.minecraft.loot.context.LootContext.Dropper)">putDrop</a></span>&#8203;(<a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;id,
+<a href="LootContext.Dropper.html" title="interface in net.minecraft.loot.context">LootContext.Dropper</a>&nbsp;value)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i8">
 <td class="colFirst"><code><a href="LootContext.Builder.html" title="class in net.minecraft.loot.context">LootContext.Builder</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setRandom(long)">setRandom</a></span>&#8203;(long&nbsp;seed)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#random(long)">random</a></span>&#8203;(long&nbsp;seed)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i9">
 <td class="colFirst"><code><a href="LootContext.Builder.html" title="class in net.minecraft.loot.context">LootContext.Builder</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setRandom(long,java.util.Random)">setRandom</a></span>&#8203;(long&nbsp;seed,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#random(long,java.util.Random)">random</a></span>&#8203;(long&nbsp;seed,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i10">
 <td class="colFirst"><code><a href="LootContext.Builder.html" title="class in net.minecraft.loot.context">LootContext.Builder</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setRandom(java.util.Random)">setRandom</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#random(java.util.Random)">random</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -217,6 +264,46 @@ T&nbsp;value)</code></th>
 </section>
 <section class="details">
 <ul class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<li class="blockList">
+<section class="fieldDetails"><a id="field.detail">
+<!--   -->
+</a>
+<h2>Field Details</h2>
+<ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="world">world</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../../server/world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a></span>&nbsp;<span class="memberName">world</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="parameters">parameters</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util" class="externalLink">Map</a>&lt;<a href="LootContextParameter.html" title="class in net.minecraft.loot.context">LootContextParameter</a>&lt;?&gt;,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&gt;</span>&nbsp;<span class="memberName">parameters</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="drops">drops</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util" class="externalLink">Map</a>&lt;<a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>,&#8203;<a href="LootContext.Dropper.html" title="interface in net.minecraft.loot.context">LootContext.Dropper</a>&gt;</span>&nbsp;<span class="memberName">drops</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="random">random</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a></span>&nbsp;<span class="memberName">random</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="luck">luck</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">float</span>&nbsp;<span class="memberName">luck</span></div>
+</section>
+</li>
+</ul>
+</section>
+</li>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <li class="blockList">
 <section class="constructorDetails"><a id="constructor.detail">
@@ -242,45 +329,45 @@ T&nbsp;value)</code></th>
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="setRandom(java.util.Random)">setRandom</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="LootContext.Builder.html" title="class in net.minecraft.loot.context">LootContext.Builder</a></span>&nbsp;<span class="memberName">setRandom</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random)</span></div>
+<h3><a id="random(java.util.Random)">random</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="LootContext.Builder.html" title="class in net.minecraft.loot.context">LootContext.Builder</a></span>&nbsp;<span class="memberName">random</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="setRandom(long)">setRandom</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="LootContext.Builder.html" title="class in net.minecraft.loot.context">LootContext.Builder</a></span>&nbsp;<span class="memberName">setRandom</span>&#8203;(<span class="arguments">long&nbsp;seed)</span></div>
+<h3><a id="random(long)">random</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="LootContext.Builder.html" title="class in net.minecraft.loot.context">LootContext.Builder</a></span>&nbsp;<span class="memberName">random</span>&#8203;(<span class="arguments">long&nbsp;seed)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="setRandom(long,java.util.Random)">setRandom</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="LootContext.Builder.html" title="class in net.minecraft.loot.context">LootContext.Builder</a></span>&nbsp;<span class="memberName">setRandom</span>&#8203;(<span class="arguments">long&nbsp;seed,
+<h3><a id="random(long,java.util.Random)">random</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="LootContext.Builder.html" title="class in net.minecraft.loot.context">LootContext.Builder</a></span>&nbsp;<span class="memberName">random</span>&#8203;(<span class="arguments">long&nbsp;seed,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="setLuck(float)">setLuck</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="LootContext.Builder.html" title="class in net.minecraft.loot.context">LootContext.Builder</a></span>&nbsp;<span class="memberName">setLuck</span>&#8203;(<span class="arguments">float&nbsp;luck)</span></div>
+<h3><a id="luck(float)">luck</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="LootContext.Builder.html" title="class in net.minecraft.loot.context">LootContext.Builder</a></span>&nbsp;<span class="memberName">luck</span>&#8203;(<span class="arguments">float&nbsp;luck)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="put(net.minecraft.loot.context.LootContextParameter,java.lang.Object)">
+<h3><a id="parameter(net.minecraft.loot.context.LootContextParameter,java.lang.Object)">
 <!--   -->
-</a><a id="put(net.minecraft.loot.context.LootContextParameter,T)">put</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="typeParameters">&lt;T&gt;</span>&nbsp;<span class="returnType"><a href="LootContext.Builder.html" title="class in net.minecraft.loot.context">LootContext.Builder</a></span>&nbsp;<span class="memberName">put</span>&#8203;(<span class="arguments"><a href="LootContextParameter.html" title="class in net.minecraft.loot.context">LootContextParameter</a>&lt;T&gt;&nbsp;key,
+</a><a id="parameter(net.minecraft.loot.context.LootContextParameter,T)">parameter</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="typeParameters">&lt;T&gt;</span>&nbsp;<span class="returnType"><a href="LootContext.Builder.html" title="class in net.minecraft.loot.context">LootContext.Builder</a></span>&nbsp;<span class="memberName">parameter</span>&#8203;(<span class="arguments"><a href="LootContextParameter.html" title="class in net.minecraft.loot.context">LootContextParameter</a>&lt;T&gt;&nbsp;key,
 T&nbsp;value)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="putNullable(net.minecraft.loot.context.LootContextParameter,java.lang.Object)">
+<h3><a id="optionalParameter(net.minecraft.loot.context.LootContextParameter,java.lang.Object)">
 <!--   -->
-</a><a id="putNullable(net.minecraft.loot.context.LootContextParameter,T)">putNullable</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="typeParameters">&lt;T&gt;</span>&nbsp;<span class="returnType"><a href="LootContext.Builder.html" title="class in net.minecraft.loot.context">LootContext.Builder</a></span>&nbsp;<span class="memberName">putNullable</span>&#8203;(<span class="arguments"><a href="LootContextParameter.html" title="class in net.minecraft.loot.context">LootContextParameter</a>&lt;T&gt;&nbsp;key,
-<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</a><a id="optionalParameter(net.minecraft.loot.context.LootContextParameter,T)">optionalParameter</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="typeParameters">&lt;T&gt;</span>&nbsp;<span class="returnType"><a href="LootContext.Builder.html" title="class in net.minecraft.loot.context">LootContext.Builder</a></span>&nbsp;<span class="memberName">optionalParameter</span>&#8203;(<span class="arguments"><a href="LootContextParameter.html" title="class in net.minecraft.loot.context">LootContextParameter</a>&lt;T&gt;&nbsp;key,
+<a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 T&nbsp;value)</span></div>
 </section>
 </li>
@@ -306,7 +393,7 @@ T&nbsp;value)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getNullable(net.minecraft.loot.context.LootContextParameter)">getNullable</a></h3>
-<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 </span><span class="modifiers">public</span>&nbsp;<span class="typeParameters">&lt;T&gt;</span>&nbsp;<span class="returnType">T</span>&nbsp;<span class="memberName">getNullable</span>&#8203;(<span class="arguments"><a href="LootContextParameter.html" title="class in net.minecraft.loot.context">LootContextParameter</a>&lt;T&gt;&nbsp;parameter)</span></div>
 </section>
 </li>
@@ -349,13 +436,13 @@ T&nbsp;value)</span></div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>

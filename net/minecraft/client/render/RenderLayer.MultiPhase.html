@@ -19,8 +19,8 @@
 <script type="text/javascript" src="../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10};
-var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
+<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":9,"i5":10};
+var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
@@ -57,13 +57,13 @@ loadScripts(document, 'script');</script>
 <li>Summary:&nbsp;</li>
 <li><a href="#nested.class.summary">Nested</a>&nbsp;|&nbsp;</li>
 <li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
 </div>
@@ -148,6 +148,45 @@ extends <a href="RenderLayer.html" title="class in net.minecraft.client.render">
 <!--   -->
 </a>
 <h2>Field Summary</h2>
+<div class="memberSummary">
+<table>
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<thead>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colSecond" scope="col">Field</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util" class="externalLink">Optional</a>&lt;<a href="RenderLayer.html" title="class in net.minecraft.client.render">RenderLayer</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#affectedOutline">affectedOutline</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static <a href="http://fastutil.di.unimi.it/docs/it/unimi/dsi/fastutil/objects/ObjectOpenCustomHashSet.html?is-external=true" title="class or interface in it.unimi.dsi.fastutil.objects" class="externalLink">ObjectOpenCustomHashSet</a>&lt;<a href="RenderLayer.MultiPhase.html" title="class in net.minecraft.client.render">RenderLayer.MultiPhase</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#CACHE">CACHE</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#hash">hash</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#outline">outline</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="RenderLayer.MultiPhaseParameters.html" title="class in net.minecraft.client.render">RenderLayer.MultiPhaseParameters</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#phases">phases</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
 <div class="inheritedList">
 <h3>Fields inherited from class&nbsp;net.minecraft.client.render.<a href="RenderLayer.html" title="class in net.minecraft.client.render">RenderLayer</a></h3>
 <a id="fields.inherited.from.class.net.minecraft.client.render.RenderLayer">
@@ -157,7 +196,40 @@ extends <a href="RenderLayer.html" title="class in net.minecraft.client.render">
 <h3>Fields inherited from class&nbsp;net.minecraft.client.render.<a href="RenderPhase.html" title="class in net.minecraft.client.render">RenderPhase</a></h3>
 <a id="fields.inherited.from.class.net.minecraft.client.render.RenderPhase">
 <!--   -->
-</a><code><a href="RenderPhase.html#ADDITIVE_TRANSPARENCY">ADDITIVE_TRANSPARENCY</a>, <a href="RenderPhase.html#ALL_MASK">ALL_MASK</a>, <a href="RenderPhase.html#ALWAYS_DEPTH_TEST">ALWAYS_DEPTH_TEST</a>, <a href="RenderPhase.html#BLACK_FOG">BLACK_FOG</a>, <a href="RenderPhase.html#BLOCK_ATLAS_TEXTURE">BLOCK_ATLAS_TEXTURE</a>, <a href="RenderPhase.html#COLOR_MASK">COLOR_MASK</a>, <a href="RenderPhase.html#CRUMBLING_TRANSPARENCY">CRUMBLING_TRANSPARENCY</a>, <a href="RenderPhase.html#DEFAULT_TEXTURING">DEFAULT_TEXTURING</a>, <a href="RenderPhase.html#DEPTH_MASK">DEPTH_MASK</a>, <a href="RenderPhase.html#DISABLE_CULLING">DISABLE_CULLING</a>, <a href="RenderPhase.html#DISABLE_DIFFUSE_LIGHTING">DISABLE_DIFFUSE_LIGHTING</a>, <a href="RenderPhase.html#DISABLE_LIGHTMAP">DISABLE_LIGHTMAP</a>, <a href="RenderPhase.html#DISABLE_OVERLAY_COLOR">DISABLE_OVERLAY_COLOR</a>, <a href="RenderPhase.html#ENABLE_CULLING">ENABLE_CULLING</a>, <a href="RenderPhase.html#ENABLE_DIFFUSE_LIGHTING">ENABLE_DIFFUSE_LIGHTING</a>, <a href="RenderPhase.html#ENABLE_LIGHTMAP">ENABLE_LIGHTMAP</a>, <a href="RenderPhase.html#ENABLE_OVERLAY_COLOR">ENABLE_OVERLAY_COLOR</a>, <a href="RenderPhase.html#ENTITY_GLINT_TEXTURING">ENTITY_GLINT_TEXTURING</a>, <a href="RenderPhase.html#EQUAL_DEPTH_TEST">EQUAL_DEPTH_TEST</a>, <a href="RenderPhase.html#FOG">FOG</a>, <a href="RenderPhase.html#FULL_LINEWIDTH">FULL_LINEWIDTH</a>, <a href="RenderPhase.html#GLINT_TEXTURING">GLINT_TEXTURING</a>, <a href="RenderPhase.html#GLINT_TRANSPARENCY">GLINT_TRANSPARENCY</a>, <a href="RenderPhase.html#HALF_ALPHA">HALF_ALPHA</a>, <a href="RenderPhase.html#LEQUAL_DEPTH_TEST">LEQUAL_DEPTH_TEST</a>, <a href="RenderPhase.html#LIGHTNING_TRANSPARENCY">LIGHTNING_TRANSPARENCY</a>, <a href="RenderPhase.html#MAIN_TARGET">MAIN_TARGET</a>, <a href="RenderPhase.html#MIPMAP_BLOCK_ATLAS_TEXTURE">MIPMAP_BLOCK_ATLAS_TEXTURE</a>, <a href="RenderPhase.html#name">name</a>, <a href="RenderPhase.html#NO_FOG">NO_FOG</a>, <a href="RenderPhase.html#NO_LAYERING">NO_LAYERING</a>, <a href="RenderPhase.html#NO_TEXTURE">NO_TEXTURE</a>, <a href="RenderPhase.html#NO_TRANSPARENCY">NO_TRANSPARENCY</a>, <a href="RenderPhase.html#ONE_TENTH_ALPHA">ONE_TENTH_ALPHA</a>, <a href="RenderPhase.html#OUTLINE_TARGET">OUTLINE_TARGET</a>, <a href="RenderPhase.html#OUTLINE_TEXTURING">OUTLINE_TEXTURING</a>, <a href="RenderPhase.html#POLYGON_OFFSET_LAYERING">POLYGON_OFFSET_LAYERING</a>, <a href="RenderPhase.html#SHADE_MODEL">SHADE_MODEL</a>, <a href="RenderPhase.html#SMOOTH_SHADE_MODEL">SMOOTH_SHADE_MODEL</a>, <a href="RenderPhase.html#TRANSLUCENT_TRANSPARENCY">TRANSLUCENT_TRANSPARENCY</a>, <a href="RenderPhase.html#VIEW_OFFSET_Z_LAYERING">VIEW_OFFSET_Z_LAYERING</a>, <a href="RenderPhase.html#ZERO_ALPHA">ZERO_ALPHA</a></code></div>
+</a><code><a href="RenderPhase.html#ADDITIVE_TRANSPARENCY">ADDITIVE_TRANSPARENCY</a>, <a href="RenderPhase.html#ALL_MASK">ALL_MASK</a>, <a href="RenderPhase.html#ALWAYS_DEPTH_TEST">ALWAYS_DEPTH_TEST</a>, <a href="RenderPhase.html#BLACK_FOG">BLACK_FOG</a>, <a href="RenderPhase.html#BLOCK_ATLAS_TEXTURE">BLOCK_ATLAS_TEXTURE</a>, <a href="RenderPhase.html#CLOUDS_TARGET">CLOUDS_TARGET</a>, <a href="RenderPhase.html#COLOR_MASK">COLOR_MASK</a>, <a href="RenderPhase.html#CRUMBLING_TRANSPARENCY">CRUMBLING_TRANSPARENCY</a>, <a href="RenderPhase.html#DEFAULT_TEXTURING">DEFAULT_TEXTURING</a>, <a href="RenderPhase.html#DEPTH_MASK">DEPTH_MASK</a>, <a href="RenderPhase.html#DISABLE_CULLING">DISABLE_CULLING</a>, <a href="RenderPhase.html#DISABLE_DIFFUSE_LIGHTING">DISABLE_DIFFUSE_LIGHTING</a>, <a href="RenderPhase.html#DISABLE_LIGHTMAP">DISABLE_LIGHTMAP</a>, <a href="RenderPhase.html#DISABLE_OVERLAY_COLOR">DISABLE_OVERLAY_COLOR</a>, <a href="RenderPhase.html#ENABLE_CULLING">ENABLE_CULLING</a>, <a href="RenderPhase.html#ENABLE_DIFFUSE_LIGHTING">ENABLE_DIFFUSE_LIGHTING</a>, <a href="RenderPhase.html#ENABLE_LIGHTMAP">ENABLE_LIGHTMAP</a>, <a href="RenderPhase.html#ENABLE_OVERLAY_COLOR">ENABLE_OVERLAY_COLOR</a>, <a href="RenderPhase.html#ENTITY_GLINT_TEXTURING">ENTITY_GLINT_TEXTURING</a>, <a href="RenderPhase.html#EQUAL_DEPTH_TEST">EQUAL_DEPTH_TEST</a>, <a href="RenderPhase.html#FOG">FOG</a>, <a href="RenderPhase.html#FULL_LINEWIDTH">FULL_LINEWIDTH</a>, <a href="RenderPhase.html#GLINT_GUI_TRANSPARENCY">GLINT_GUI_TRANSPARENCY</a>, <a href="RenderPhase.html#GLINT_TEXTURING">GLINT_TEXTURING</a>, <a href="RenderPhase.html#GLINT_TRANSPARENCY">GLINT_TRANSPARENCY</a>, <a href="RenderPhase.html#HALF_ALPHA">HALF_ALPHA</a>, <a href="RenderPhase.html#ITEM_TARGET">ITEM_TARGET</a>, <a href="RenderPhase.html#LEQUAL_DEPTH_TEST">LEQUAL_DEPTH_TEST</a>, <a href="RenderPhase.html#LIGHTNING_TRANSPARENCY">LIGHTNING_TRANSPARENCY</a>, <a href="RenderPhase.html#MAIN_TARGET">MAIN_TARGET</a>, <a href="RenderPhase.html#MIPMAP_BLOCK_ATLAS_TEXTURE">MIPMAP_BLOCK_ATLAS_TEXTURE</a>, <a href="RenderPhase.html#name">name</a>, <a href="RenderPhase.html#NO_FOG">NO_FOG</a>, <a href="RenderPhase.html#NO_LAYERING">NO_LAYERING</a>, <a href="RenderPhase.html#NO_TEXTURE">NO_TEXTURE</a>, <a href="RenderPhase.html#NO_TRANSPARENCY">NO_TRANSPARENCY</a>, <a href="RenderPhase.html#ONE_TENTH_ALPHA">ONE_TENTH_ALPHA</a>, <a href="RenderPhase.html#OUTLINE_TARGET">OUTLINE_TARGET</a>, <a href="RenderPhase.html#OUTLINE_TEXTURING">OUTLINE_TEXTURING</a>, <a href="RenderPhase.html#PARTICLES_TARGET">PARTICLES_TARGET</a>, <a href="RenderPhase.html#POLYGON_OFFSET_LAYERING">POLYGON_OFFSET_LAYERING</a>, <a href="RenderPhase.html#SHADE_MODEL">SHADE_MODEL</a>, <a href="RenderPhase.html#SMOOTH_SHADE_MODEL">SMOOTH_SHADE_MODEL</a>, <a href="RenderPhase.html#TRANSLUCENT_TARGET">TRANSLUCENT_TARGET</a>, <a href="RenderPhase.html#TRANSLUCENT_TRANSPARENCY">TRANSLUCENT_TRANSPARENCY</a>, <a href="RenderPhase.html#VIEW_OFFSET_Z_LAYERING">VIEW_OFFSET_Z_LAYERING</a>, <a href="RenderPhase.html#WEATHER_TARGET">WEATHER_TARGET</a>, <a href="RenderPhase.html#ZERO_ALPHA">ZERO_ALPHA</a></code></div>
+</section>
+</li>
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<li class="blockList">
+<section class="constructorSummary"><a id="constructor.summary">
+<!--   -->
+</a>
+<h2>Constructor Summary</h2>
+<div class="memberSummary">
+<table>
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<thead>
+<tr>
+<th class="colFirst" scope="col">Modifier</th>
+<th class="colSecond" scope="col">Constructor</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private </code></td>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.lang.String,net.minecraft.client.render.VertexFormat,int,int,boolean,boolean,net.minecraft.client.render.RenderLayer.MultiPhaseParameters)">MultiPhase</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name,
+<a href="VertexFormat.html" title="class in net.minecraft.client.render">VertexFormat</a>&nbsp;vertexFormat,
+int&nbsp;drawMode,
+int&nbsp;expectedBufferSize,
+boolean&nbsp;hasCrumbling,
+boolean&nbsp;translucent,
+<a href="RenderLayer.MultiPhaseParameters.html" title="class in net.minecraft.client.render">RenderLayer.MultiPhaseParameters</a>&nbsp;phases)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 </li>
 <!-- ========== METHOD SUMMARY =========== -->
@@ -167,7 +239,7 @@ extends <a href="RenderLayer.html" title="class in net.minecraft.client.render">
 </a>
 <h2>Method Summary</h2>
 <div class="memberSummary">
-<div role="tablist" aria-orientation="horizontal"><button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t2" class="tableTab" onclick="show(2);">Instance Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t4" class="tableTab" onclick="show(8);">Concrete Methods</button></div>
+<div role="tablist" aria-orientation="horizontal"><button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t1" class="tableTab" onclick="show(1);">Static Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t2" class="tableTab" onclick="show(2);">Instance Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t4" class="tableTab" onclick="show(8);">Concrete Methods</button></div>
 <div id="memberSummary_tabpanel" role="tabpanel">
 <table aria-labelledby="t0">
 <thead>
@@ -199,6 +271,17 @@ extends <a href="RenderLayer.html" title="class in net.minecraft.client.render">
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i4">
+<td class="colFirst"><code>private static <a href="RenderLayer.MultiPhase.html" title="class in net.minecraft.client.render">RenderLayer.MultiPhase</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#of(java.lang.String,net.minecraft.client.render.VertexFormat,int,int,boolean,boolean,net.minecraft.client.render.RenderLayer.MultiPhaseParameters)">of</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name,
+<a href="VertexFormat.html" title="class in net.minecraft.client.render">VertexFormat</a>&nbsp;vertexFormat,
+int&nbsp;drawMode,
+int&nbsp;expectedBufferSize,
+boolean&nbsp;hasCrumbling,
+boolean&nbsp;translucent,
+<a href="RenderLayer.MultiPhaseParameters.html" title="class in net.minecraft.client.render">RenderLayer.MultiPhaseParameters</a>&nbsp;phases)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i5">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#toString()">toString</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
@@ -211,7 +294,7 @@ extends <a href="RenderLayer.html" title="class in net.minecraft.client.render">
 <h3>Methods inherited from class&nbsp;net.minecraft.client.render.<a href="RenderLayer.html" title="class in net.minecraft.client.render">RenderLayer</a></h3>
 <a id="methods.inherited.from.class.net.minecraft.client.render.RenderLayer">
 <!--   -->
-</a><code><a href="RenderLayer.html#asOptional()">asOptional</a>, <a href="RenderLayer.html#draw(net.minecraft.client.render.BufferBuilder,int,int,int)">draw</a>, <a href="RenderLayer.html#getArmorCutoutNoCull(net.minecraft.util.Identifier)">getArmorCutoutNoCull</a>, <a href="RenderLayer.html#getBeaconBeam(net.minecraft.util.Identifier,boolean)">getBeaconBeam</a>, <a href="RenderLayer.html#getBlockBreaking(net.minecraft.util.Identifier)">getBlockBreaking</a>, <a href="RenderLayer.html#getBlockLayers()">getBlockLayers</a>, <a href="RenderLayer.html#getCutout()">getCutout</a>, <a href="RenderLayer.html#getCutoutMipped()">getCutoutMipped</a>, <a href="RenderLayer.html#getCutoutNoCull(net.minecraft.util.Identifier,boolean)">getCutoutNoCull</a>, <a href="RenderLayer.html#getDrawMode()">getDrawMode</a>, <a href="RenderLayer.html#getEndPortal(int)">getEndPortal</a>, <a href="RenderLayer.html#getEnergySwirl(net.minecraft.util.Identifier,float,float)">getEnergySwirl</a>, <a href="RenderLayer.html#getEntityAlpha(net.minecraft.util.Identifier,float)">getEntityAlpha</a>, <a href="RenderLayer.html#getEntityCutout(net.minecraft.util.Identifier)">getEntityCutout</a>, <a href="RenderLayer.html#getEntityCutoutNoCull(net.minecraft.util.Identifier)">getEntityCutoutNoCull</a>, <a href="RenderLayer.html#getEntityDecal(net.minecraft.util.Identifier)">getEntityDecal</a>, <a href="RenderLayer.html#getEntityGlint()">getEntityGlint</a>, <a href="RenderLayer.html#getEntityNoOutline(net.minecraft.util.Identifier)">getEntityNoOutline</a>, <a href="RenderLayer.html#getEntityShadow(net.minecraft.util.Identifier)">getEntityShadow</a>, <a href="RenderLayer.html#getEntitySmoothCutout(net.minecraft.util.Identifier)">getEntitySmoothCutout</a>, <a href="RenderLayer.html#getEntitySolid(net.minecraft.util.Identifier)">getEntitySolid</a>, <a href="RenderLayer.html#getEntityTranslucent(net.minecraft.util.Identifier)">getEntityTranslucent</a>, <a href="RenderLayer.html#getEntityTranslucent(net.minecraft.util.Identifier,boolean)">getEntityTranslucent</a>, <a href="RenderLayer.html#getEntityTranslucentCull(net.minecraft.util.Identifier)">getEntityTranslucentCull</a>, <a href="RenderLayer.html#getExpectedBufferSize()">getExpectedBufferSize</a>, <a href="RenderLayer.html#getEyes(net.minecraft.util.Identifier)">getEyes</a>, <a href="RenderLayer.html#getGlint()">getGlint</a>, <a href="RenderLayer.html#getLeash()">getLeash</a>, <a href="RenderLayer.html#getLightning()">getLightning</a>, <a href="RenderLayer.html#getLines()">getLines</a>, <a href="RenderLayer.html#getOutline(net.minecraft.util.Identifier)">getOutline</a>, <a href="RenderLayer.html#getOutline(net.minecraft.util.Identifier,net.minecraft.client.render.RenderPhase.Cull)">getOutline</a>, <a href="RenderLayer.html#getSolid()">getSolid</a>, <a href="RenderLayer.html#getText(net.minecraft.util.Identifier)">getText</a>, <a href="RenderLayer.html#getTextSeeThrough(net.minecraft.util.Identifier)">getTextSeeThrough</a>, <a href="RenderLayer.html#getTranslucent()">getTranslucent</a>, <a href="RenderLayer.html#getTranslucentNoCrumbling()">getTranslucentNoCrumbling</a>, <a href="RenderLayer.html#getVertexFormat()">getVertexFormat</a>, <a href="RenderLayer.html#getWaterMask()">getWaterMask</a>, <a href="RenderLayer.html#hasCrumbling()">hasCrumbling</a>, <a href="RenderLayer.html#of(java.lang.String,net.minecraft.client.render.VertexFormat,int,int,boolean,boolean,net.minecraft.client.render.RenderLayer.MultiPhaseParameters)">of</a>, <a href="RenderLayer.html#of(java.lang.String,net.minecraft.client.render.VertexFormat,int,int,net.minecraft.client.render.RenderLayer.MultiPhaseParameters)">of</a></code></div>
+</a><code><a href="RenderLayer.html#asOptional()">asOptional</a>, <a href="RenderLayer.html#draw(net.minecraft.client.render.BufferBuilder,int,int,int)">draw</a>, <a href="RenderLayer.html#getArmorCutoutNoCull(net.minecraft.util.Identifier)">getArmorCutoutNoCull</a>, <a href="RenderLayer.html#getArmorEntityGlint()">getArmorEntityGlint</a>, <a href="RenderLayer.html#getArmorGlint()">getArmorGlint</a>, <a href="RenderLayer.html#getBeaconBeam(net.minecraft.util.Identifier,boolean)">getBeaconBeam</a>, <a href="RenderLayer.html#getBlockBreaking(net.minecraft.util.Identifier)">getBlockBreaking</a>, <a href="RenderLayer.html#getBlockLayers()">getBlockLayers</a>, <a href="RenderLayer.html#getCutout()">getCutout</a>, <a href="RenderLayer.html#getCutoutMipped()">getCutoutMipped</a>, <a href="RenderLayer.html#getDrawMode()">getDrawMode</a>, <a href="RenderLayer.html#getEndPortal(int)">getEndPortal</a>, <a href="RenderLayer.html#getEnergySwirl(net.minecraft.util.Identifier,float,float)">getEnergySwirl</a>, <a href="RenderLayer.html#getEntityAlpha(net.minecraft.util.Identifier,float)">getEntityAlpha</a>, <a href="RenderLayer.html#getEntityCutout(net.minecraft.util.Identifier)">getEntityCutout</a>, <a href="RenderLayer.html#getEntityCutoutNoCull(net.minecraft.util.Identifier)">getEntityCutoutNoCull</a>, <a href="RenderLayer.html#getEntityCutoutNoCull(net.minecraft.util.Identifier,boolean)">getEntityCutoutNoCull</a>, <a href="RenderLayer.html#getEntityCutoutNoCullZOffset(net.minecraft.util.Identifier)">getEntityCutoutNoCullZOffset</a>, <a href="RenderLayer.html#getEntityCutoutNoCullZOffset(net.minecraft.util.Identifier,boolean)">getEntityCutoutNoCullZOffset</a>, <a href="RenderLayer.html#getEntityDecal(net.minecraft.util.Identifier)">getEntityDecal</a>, <a href="RenderLayer.html#getEntityGlint()">getEntityGlint</a>, <a href="RenderLayer.html#getEntityGlintDirect()">getEntityGlintDirect</a>, <a href="RenderLayer.html#getEntityNoOutline(net.minecraft.util.Identifier)">getEntityNoOutline</a>, <a href="RenderLayer.html#getEntityShadow(net.minecraft.util.Identifier)">getEntityShadow</a>, <a href="RenderLayer.html#getEntitySmoothCutout(net.minecraft.util.Identifier)">getEntitySmoothCutout</a>, <a href="RenderLayer.html#getEntitySolid(net.minecraft.util.Identifier)">getEntitySolid</a>, <a href="RenderLayer.html#getEntityTranslucent(net.minecraft.util.Identifier)">getEntityTranslucent</a>, <a href="RenderLayer.html#getEntityTranslucent(net.minecraft.util.Identifier,boolean)">getEntityTranslucent</a>, <a href="RenderLayer.html#getEntityTranslucentCull(net.minecraft.util.Identifier)">getEntityTranslucentCull</a>, <a href="RenderLayer.html#getExpectedBufferSize()">getExpectedBufferSize</a>, <a href="RenderLayer.html#getEyes(net.minecraft.util.Identifier)">getEyes</a>, <a href="RenderLayer.html#getGlint()">getGlint</a>, <a href="RenderLayer.html#getGlintDirect()">getGlintDirect</a>, <a href="RenderLayer.html#getItemEntityTranslucentCull(net.minecraft.util.Identifier)">getItemEntityTranslucentCull</a>, <a href="RenderLayer.html#getLeash()">getLeash</a>, <a href="RenderLayer.html#getLightning()">getLightning</a>, <a href="RenderLayer.html#getLines()">getLines</a>, <a href="RenderLayer.html#getOutline(net.minecraft.util.Identifier)">getOutline</a>, <a href="RenderLayer.html#getOutline(net.minecraft.util.Identifier,net.minecraft.client.render.RenderPhase.Cull)">getOutline</a>, <a href="RenderLayer.html#getSolid()">getSolid</a>, <a href="RenderLayer.html#getText(net.minecraft.util.Identifier)">getText</a>, <a href="RenderLayer.html#getTextSeeThrough(net.minecraft.util.Identifier)">getTextSeeThrough</a>, <a href="RenderLayer.html#getTranslucent()">getTranslucent</a>, <a href="RenderLayer.html#getTranslucentMovingBlock()">getTranslucentMovingBlock</a>, <a href="RenderLayer.html#getTranslucentNoCrumbling()">getTranslucentNoCrumbling</a>, <a href="RenderLayer.html#getTripwire()">getTripwire</a>, <a href="RenderLayer.html#getVertexFormat()">getVertexFormat</a>, <a href="RenderLayer.html#getWaterMask()">getWaterMask</a>, <a href="RenderLayer.html#hasCrumbling()">hasCrumbling</a>, <a href="RenderLayer.html#of(java.lang.String,net.minecraft.client.render.VertexFormat,int,int,boolean,boolean,net.minecraft.client.render.RenderLayer.MultiPhaseParameters)">of</a>, <a href="RenderLayer.html#of(java.lang.String,net.minecraft.client.render.VertexFormat,int,int,net.minecraft.client.render.RenderLayer.MultiPhaseParameters)">of</a></code></div>
 <div class="inheritedList">
 <h3>Methods inherited from class&nbsp;net.minecraft.client.render.<a href="RenderPhase.html" title="class in net.minecraft.client.render">RenderPhase</a></h3>
 <a id="methods.inherited.from.class.net.minecraft.client.render.RenderPhase">
@@ -228,6 +311,68 @@ extends <a href="RenderLayer.html" title="class in net.minecraft.client.render">
 </section>
 <section class="details">
 <ul class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<li class="blockList">
+<section class="fieldDetails"><a id="field.detail">
+<!--   -->
+</a>
+<h2>Field Details</h2>
+<ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="CACHE">CACHE</a></h3>
+<div class="memberSignature"><span class="modifiers">private static final</span>&nbsp;<span class="returnType"><a href="http://fastutil.di.unimi.it/docs/it/unimi/dsi/fastutil/objects/ObjectOpenCustomHashSet.html?is-external=true" title="class or interface in it.unimi.dsi.fastutil.objects" class="externalLink">ObjectOpenCustomHashSet</a>&lt;<a href="RenderLayer.MultiPhase.html" title="class in net.minecraft.client.render">RenderLayer.MultiPhase</a>&gt;</span>&nbsp;<span class="memberName">CACHE</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="phases">phases</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="RenderLayer.MultiPhaseParameters.html" title="class in net.minecraft.client.render">RenderLayer.MultiPhaseParameters</a></span>&nbsp;<span class="memberName">phases</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="hash">hash</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">hash</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="affectedOutline">affectedOutline</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util" class="externalLink">Optional</a>&lt;<a href="RenderLayer.html" title="class in net.minecraft.client.render">RenderLayer</a>&gt;</span>&nbsp;<span class="memberName">affectedOutline</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="outline">outline</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">outline</span></div>
+</section>
+</li>
+</ul>
+</section>
+</li>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<li class="blockList">
+<section class="constructorDetails"><a id="constructor.detail">
+<!--   -->
+</a>
+<h2>Constructor Details</h2>
+<ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="&lt;init&gt;(java.lang.String,net.minecraft.client.render.VertexFormat,int,int,boolean,boolean,net.minecraft.client.render.RenderLayer.MultiPhaseParameters)">MultiPhase</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="memberName">MultiPhase</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name,
+<a href="VertexFormat.html" title="class in net.minecraft.client.render">VertexFormat</a>&nbsp;vertexFormat,
+int&nbsp;drawMode,
+int&nbsp;expectedBufferSize,
+boolean&nbsp;hasCrumbling,
+boolean&nbsp;translucent,
+<a href="RenderLayer.MultiPhaseParameters.html" title="class in net.minecraft.client.render">RenderLayer.MultiPhaseParameters</a>&nbsp;phases)</span></div>
+</section>
+</li>
+</ul>
+</section>
+</li>
 <!-- ============ METHOD DETAIL ========== -->
 <li class="blockList">
 <section class="methodDetails"><a id="method.detail">
@@ -235,6 +380,18 @@ extends <a href="RenderLayer.html" title="class in net.minecraft.client.render">
 </a>
 <h2>Method Details</h2>
 <ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="of(java.lang.String,net.minecraft.client.render.VertexFormat,int,int,boolean,boolean,net.minecraft.client.render.RenderLayer.MultiPhaseParameters)">of</a></h3>
+<div class="memberSignature"><span class="modifiers">private static</span>&nbsp;<span class="returnType"><a href="RenderLayer.MultiPhase.html" title="class in net.minecraft.client.render">RenderLayer.MultiPhase</a></span>&nbsp;<span class="memberName">of</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name,
+<a href="VertexFormat.html" title="class in net.minecraft.client.render">VertexFormat</a>&nbsp;vertexFormat,
+int&nbsp;drawMode,
+int&nbsp;expectedBufferSize,
+boolean&nbsp;hasCrumbling,
+boolean&nbsp;translucent,
+<a href="RenderLayer.MultiPhaseParameters.html" title="class in net.minecraft.client.render">RenderLayer.MultiPhaseParameters</a>&nbsp;phases)</span></div>
+</section>
+</li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getAffectedOutline()">getAffectedOutline</a></h3>
@@ -258,7 +415,7 @@ extends <a href="RenderLayer.html" title="class in net.minecraft.client.render">
 <li class="blockList">
 <section class="detail">
 <h3><a id="equals(java.lang.Object)">equals</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">equals</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">equals</span>&#8203;(<span class="arguments"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&nbsp;object)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
@@ -320,13 +477,13 @@ extends <a href="RenderLayer.html" title="class in net.minecraft.client.render">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested.class.summary">Nested</a>&nbsp;|&nbsp;</li>
 <li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
 </div>

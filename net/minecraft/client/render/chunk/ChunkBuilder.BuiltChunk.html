@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10};
+<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -156,13 +156,58 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </thead>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="../../../block/entity/BlockEntity.html" title="class in net.minecraft.block.entity">BlockEntity</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#blockEntities">blockEntities</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../util/math/Box.html" title="class in net.minecraft.util.math">Box</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#boundingBox">boundingBox</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util" class="externalLink">Map</a>&lt;<a href="../RenderLayer.html" title="class in net.minecraft.client.render">RenderLayer</a>,&#8203;<a href="../../gl/VertexBuffer.html" title="class in net.minecraft.client.gl">VertexBuffer</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#buffers">buffers</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/atomic/AtomicReference.html?is-external=true" title="class or interface in java.util.concurrent.atomic" class="externalLink">AtomicReference</a>&lt;<a href="ChunkBuilder.ChunkData.html" title="class in net.minecraft.client.render.chunk">ChunkBuilder.ChunkData</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#data">data</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#needsImportantRebuild">needsImportantRebuild</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#needsRebuild">needsRebuild</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../util/math/BlockPos.Mutable.html" title="class in net.minecraft.util.math">BlockPos.Mutable</a>[]</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#neighborPositions">neighborPositions</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../util/math/BlockPos.Mutable.html" title="class in net.minecraft.util.math">BlockPos.Mutable</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#origin">origin</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#rebuildFrame">rebuildFrame</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="ChunkBuilder.BuiltChunk.RebuildTask.html" title="class in net.minecraft.client.render.chunk">ChunkBuilder.BuiltChunk.RebuildTask</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#rebuildTask">rebuildTask</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="ChunkBuilder.BuiltChunk.SortTask.html" title="class in net.minecraft.client.render.chunk">ChunkBuilder.BuiltChunk.SortTask</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#sortTask">sortTask</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -187,7 +232,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </thead>
 <tbody>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.client.render.chunk.ChunkBuilder)">BuiltChunk</a></span>&#8203;(<a href="ChunkBuilder.html" title="class in net.minecraft.client.render.chunk">ChunkBuilder</a>&nbsp;chunkBuilder)</code></th>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E()">BuiltChunk</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -214,94 +259,114 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </thead>
 <tbody>
 <tr class="altColor" id="i0">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#beginBufferBuilding(net.minecraft.client.render.BufferBuilder)">beginBufferBuilding</a></span>&#8203;(<a href="../BufferBuilder.html" title="class in net.minecraft.client.render">BufferBuilder</a>&nbsp;buffer)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i1">
 <td class="colFirst"><code>protected void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#cancel()">cancel</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i1">
+<tr class="altColor" id="i2">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#cancelRebuild()">cancelRebuild</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i2">
+<tr class="rowColor" id="i3">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#clear()">clear</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i4">
 <td class="colFirst"><code><a href="ChunkBuilder.BuiltChunk.Task.html" title="class in net.minecraft.client.render.chunk">ChunkBuilder.BuiltChunk.Task</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createRebuildTask()">createRebuildTask</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i3">
+<tr class="rowColor" id="i5">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#delete()">delete</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i4">
+<tr class="altColor" id="i6">
 <td class="colFirst"><code><a href="../../gl/VertexBuffer.html" title="class in net.minecraft.client.gl">VertexBuffer</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getBuffer(net.minecraft.client.render.RenderLayer)">getBuffer</a></span>&#8203;(<a href="../RenderLayer.html" title="class in net.minecraft.client.render">RenderLayer</a>&nbsp;layer)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i5">
+<tr class="rowColor" id="i7">
 <td class="colFirst"><code><a href="ChunkBuilder.ChunkData.html" title="class in net.minecraft.client.render.chunk">ChunkBuilder.ChunkData</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getData()">getData</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i6">
+<tr class="altColor" id="i8">
 <td class="colFirst"><code><a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getNeighborPosition(net.minecraft.util.math.Direction)">getNeighborPosition</a></span>&#8203;(<a href="../../../util/math/Direction.html" title="enum in net.minecraft.util.math">Direction</a>&nbsp;direction)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i7">
+<tr class="rowColor" id="i9">
 <td class="colFirst"><code><a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getOrigin()">getOrigin</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i8">
+<tr class="altColor" id="i10">
 <td class="colFirst"><code>protected double</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getSquaredCameraDistance()">getSquaredCameraDistance</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i9">
+<tr class="rowColor" id="i11">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isChunkNonEmpty(net.minecraft.util.math.BlockPos)">isChunkNonEmpty</a></span>&#8203;(<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i12">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#needsImportantRebuild()">needsImportantRebuild</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i10">
+<tr class="rowColor" id="i13">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#needsRebuild()">needsRebuild</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i11">
+<tr class="altColor" id="i14">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#rebuild()">rebuild</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i12">
+<tr class="rowColor" id="i15">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#scheduleRebuild(boolean)">scheduleRebuild</a></span>&#8203;(boolean&nbsp;important)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i13">
+<tr class="altColor" id="i16">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#scheduleRebuild(net.minecraft.client.render.chunk.ChunkBuilder)">scheduleRebuild</a></span>&#8203;(<a href="ChunkBuilder.html" title="class in net.minecraft.client.render.chunk">ChunkBuilder</a>&nbsp;chunkRenderer)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i14">
+<tr class="rowColor" id="i17">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#scheduleSort(net.minecraft.client.render.RenderLayer,net.minecraft.client.render.chunk.ChunkBuilder)">scheduleSort</a></span>&#8203;(<a href="../RenderLayer.html" title="class in net.minecraft.client.render">RenderLayer</a>&nbsp;layer,
 <a href="ChunkBuilder.html" title="class in net.minecraft.client.render.chunk">ChunkBuilder</a>&nbsp;chunkRenderer)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i15">
+<tr class="altColor" id="i18">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setNoCullingBlockEntities(java.util.Set)">setNoCullingBlockEntities</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="../../../block/entity/BlockEntity.html" title="class in net.minecraft.block.entity">BlockEntity</a>&gt;&nbsp;noCullingBlockEntities)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i19">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setOrigin(int,int,int)">setOrigin</a></span>&#8203;(int&nbsp;x,
 int&nbsp;y,
 int&nbsp;z)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i16">
+<tr class="altColor" id="i20">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setRebuildFrame(int)">setRebuildFrame</a></span>&#8203;(int&nbsp;frame)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i17">
+<tr class="rowColor" id="i21">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#shouldBuild()">shouldBuild</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
@@ -336,8 +401,64 @@ int&nbsp;z)</code></th>
 </li>
 <li class="blockList">
 <section class="detail">
+<h3><a id="rebuildTask">rebuildTask</a></h3>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="ChunkBuilder.BuiltChunk.RebuildTask.html" title="class in net.minecraft.client.render.chunk">ChunkBuilder.BuiltChunk.RebuildTask</a></span>&nbsp;<span class="memberName">rebuildTask</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="sortTask">sortTask</a></h3>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="ChunkBuilder.BuiltChunk.SortTask.html" title="class in net.minecraft.client.render.chunk">ChunkBuilder.BuiltChunk.SortTask</a></span>&nbsp;<span class="memberName">sortTask</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="blockEntities">blockEntities</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="../../../block/entity/BlockEntity.html" title="class in net.minecraft.block.entity">BlockEntity</a>&gt;</span>&nbsp;<span class="memberName">blockEntities</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="buffers">buffers</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util" class="externalLink">Map</a>&lt;<a href="../RenderLayer.html" title="class in net.minecraft.client.render">RenderLayer</a>,&#8203;<a href="../../gl/VertexBuffer.html" title="class in net.minecraft.client.gl">VertexBuffer</a>&gt;</span>&nbsp;<span class="memberName">buffers</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="boundingBox">boundingBox</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../../util/math/Box.html" title="class in net.minecraft.util.math">Box</a></span>&nbsp;<span class="memberName">boundingBox</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="rebuildFrame">rebuildFrame</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">rebuildFrame</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="needsRebuild">needsRebuild</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">needsRebuild</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="origin">origin</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../../../util/math/BlockPos.Mutable.html" title="class in net.minecraft.util.math">BlockPos.Mutable</a></span>&nbsp;<span class="memberName">origin</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="neighborPositions">neighborPositions</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../../../util/math/BlockPos.Mutable.html" title="class in net.minecraft.util.math">BlockPos.Mutable</a>[]</span>&nbsp;<span class="memberName">neighborPositions</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="needsImportantRebuild">needsImportantRebuild</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">needsImportantRebuild</span></div>
 </section>
 </li>
 </ul>
@@ -352,8 +473,8 @@ int&nbsp;z)</code></th>
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="&lt;init&gt;(net.minecraft.client.render.chunk.ChunkBuilder)">BuiltChunk</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">BuiltChunk</span>&#8203;(<span class="arguments"><a href="ChunkBuilder.html" title="class in net.minecraft.client.render.chunk">ChunkBuilder</a>&nbsp;chunkBuilder)</span></div>
+<h3><a id="&lt;init&gt;()">BuiltChunk</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">BuiltChunk</span>()</div>
 </section>
 </li>
 </ul>
@@ -366,6 +487,12 @@ int&nbsp;z)</code></th>
 </a>
 <h2>Method Details</h2>
 <ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="isChunkNonEmpty(net.minecraft.util.math.BlockPos)">isChunkNonEmpty</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isChunkNonEmpty</span>&#8203;(<span class="arguments"><a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</span></div>
+</section>
+</li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="shouldBuild()">shouldBuild</a></h3>
@@ -400,8 +527,20 @@ int&nbsp;z)</span></div>
 </li>
 <li class="blockList">
 <section class="detail">
+<h3><a id="beginBufferBuilding(net.minecraft.client.render.BufferBuilder)">beginBufferBuilding</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">beginBufferBuilding</span>&#8203;(<span class="arguments"><a href="../BufferBuilder.html" title="class in net.minecraft.client.render">BufferBuilder</a>&nbsp;buffer)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="getData()">getData</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="ChunkBuilder.ChunkData.html" title="class in net.minecraft.client.render.chunk">ChunkBuilder.ChunkData</a></span>&nbsp;<span class="memberName">getData</span>()</div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="clear()">clear</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">clear</span>()</div>
 </section>
 </li>
 <li class="blockList">
@@ -469,6 +608,12 @@ int&nbsp;z)</span></div>
 <section class="detail">
 <h3><a id="scheduleRebuild(net.minecraft.client.render.chunk.ChunkBuilder)">scheduleRebuild</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">scheduleRebuild</span>&#8203;(<span class="arguments"><a href="ChunkBuilder.html" title="class in net.minecraft.client.render.chunk">ChunkBuilder</a>&nbsp;chunkRenderer)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="setNoCullingBlockEntities(java.util.Set)">setNoCullingBlockEntities</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setNoCullingBlockEntities</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="../../../block/entity/BlockEntity.html" title="class in net.minecraft.block.entity">BlockEntity</a>&gt;&nbsp;noCullingBlockEntities)</span></div>
 </section>
 </li>
 <li class="blockList">

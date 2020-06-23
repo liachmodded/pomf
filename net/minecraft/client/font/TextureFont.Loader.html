@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":9,"i1":10};
+<script type="text/javascript">var data = {"i0":10,"i1":9,"i2":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -56,13 +56,13 @@ loadScripts(document, 'script');</script>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
@@ -106,6 +106,48 @@ implements <a href="FontLoader.html" title="interface in net.minecraft.client.fo
 </section>
 <section class="summary">
 <ul class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<li class="blockList">
+<section class="fieldSummary"><a id="field.summary">
+<!--   -->
+</a>
+<h2>Field Summary</h2>
+<div class="memberSummary">
+<table>
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<thead>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colSecond" scope="col">Field</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#ascent">ascent</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;int[]&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#chars">chars</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#filename">filename</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#height">height</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</li>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <li class="blockList">
 <section class="constructorSummary"><a id="constructor.summary">
@@ -126,7 +168,7 @@ implements <a href="FontLoader.html" title="interface in net.minecraft.client.fo
 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.util.Identifier,int,int,java.util.List)">Loader</a></span>&#8203;(<a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;id,
 int&nbsp;height,
 int&nbsp;ascent,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&gt;&nbsp;chars)</code></th>
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;int[]&gt;&nbsp;chars)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -153,11 +195,20 @@ int&nbsp;ascent,
 </thead>
 <tbody>
 <tr class="altColor" id="i0">
-<td class="colFirst"><code>static <a href="TextureFont.Loader.html" title="class in net.minecraft.client.font">TextureFont.Loader</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#fromJson(com.google.gson.JsonObject)">fromJson</a></span>&#8203;(com.google.gson.JsonObject&nbsp;json)</code></th>
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#findCharacterStartX(net.minecraft.client.texture.NativeImage,int,int,int,int)">findCharacterStartX</a></span>&#8203;(<a href="../texture/NativeImage.html" title="class in net.minecraft.client.texture">NativeImage</a>&nbsp;image,
+int&nbsp;characterWidth,
+int&nbsp;characterHeight,
+int&nbsp;charPosX,
+int&nbsp;charPosY)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
+<td class="colFirst"><code>static <a href="TextureFont.Loader.html" title="class in net.minecraft.client.font">TextureFont.Loader</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#fromJson(com.google.gson.JsonObject)">fromJson</a></span>&#8203;(<a href="https://www.javadoc.io/doc/com.google.code.gson/gson/2.8.0/com/google/gson/JsonObject.html?is-external=true" title="class or interface in com.google.gson" class="externalLink">JsonObject</a>&nbsp;json)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i2">
 <td class="colFirst"><code><a href="Font.html" title="interface in net.minecraft.client.font">Font</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#load(net.minecraft.resource.ResourceManager)">load</a></span>&#8203;(<a href="../../resource/ResourceManager.html" title="interface in net.minecraft.resource">ResourceManager</a>&nbsp;manager)</code></th>
 <td class="colLast">&nbsp;</td>
@@ -177,6 +228,40 @@ int&nbsp;ascent,
 </section>
 <section class="details">
 <ul class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<li class="blockList">
+<section class="fieldDetails"><a id="field.detail">
+<!--   -->
+</a>
+<h2>Field Details</h2>
+<ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="filename">filename</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a></span>&nbsp;<span class="memberName">filename</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="chars">chars</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;int[]&gt;</span>&nbsp;<span class="memberName">chars</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="height">height</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">height</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="ascent">ascent</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">ascent</span></div>
+</section>
+</li>
+</ul>
+</section>
+</li>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <li class="blockList">
 <section class="constructorDetails"><a id="constructor.detail">
@@ -190,7 +275,7 @@ int&nbsp;ascent,
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">Loader</span>&#8203;(<span class="arguments"><a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;id,
 int&nbsp;height,
 int&nbsp;ascent,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&gt;&nbsp;chars)</span></div>
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;int[]&gt;&nbsp;chars)</span></div>
 </section>
 </li>
 </ul>
@@ -206,18 +291,28 @@ int&nbsp;ascent,
 <li class="blockList">
 <section class="detail">
 <h3><a id="fromJson(com.google.gson.JsonObject)">fromJson</a></h3>
-<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType"><a href="TextureFont.Loader.html" title="class in net.minecraft.client.font">TextureFont.Loader</a></span>&nbsp;<span class="memberName">fromJson</span>&#8203;(<span class="arguments">com.google.gson.JsonObject&nbsp;json)</span></div>
+<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType"><a href="TextureFont.Loader.html" title="class in net.minecraft.client.font">TextureFont.Loader</a></span>&nbsp;<span class="memberName">fromJson</span>&#8203;(<span class="arguments"><a href="https://www.javadoc.io/doc/com.google.code.gson/gson/2.8.0/com/google/gson/JsonObject.html?is-external=true" title="class or interface in com.google.gson" class="externalLink">JsonObject</a>&nbsp;json)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="load(net.minecraft.resource.ResourceManager)">load</a></h3>
-<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 </span><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="Font.html" title="interface in net.minecraft.client.font">Font</a></span>&nbsp;<span class="memberName">load</span>&#8203;(<span class="arguments"><a href="../../resource/ResourceManager.html" title="interface in net.minecraft.resource">ResourceManager</a>&nbsp;manager)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="FontLoader.html#load(net.minecraft.resource.ResourceManager)">load</a></code>&nbsp;in interface&nbsp;<code><a href="FontLoader.html" title="interface in net.minecraft.client.font">FontLoader</a></code></dd>
 </dl>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="findCharacterStartX(net.minecraft.client.texture.NativeImage,int,int,int,int)">findCharacterStartX</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">findCharacterStartX</span>&#8203;(<span class="arguments"><a href="../texture/NativeImage.html" title="class in net.minecraft.client.texture">NativeImage</a>&nbsp;image,
+int&nbsp;characterWidth,
+int&nbsp;characterHeight,
+int&nbsp;charPosX,
+int&nbsp;charPosY)</span></div>
 </section>
 </li>
 </ul>
@@ -253,13 +348,13 @@ int&nbsp;ascent,
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>

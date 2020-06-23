@@ -19,7 +19,13 @@
 <script type="text/javascript" src="../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var pathtoroot = "../../../../";
+<script type="text/javascript">var data = {"i0":10};
+var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
+var altColor = "altColor";
+var rowColor = "rowColor";
+var tableTab = "tableTab";
+var activeTableTab = "activeTableTab";
+var pathtoroot = "../../../../";
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -50,15 +56,15 @@ loadScripts(document, 'script');</script>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
-<li>Method</li>
+<li><a href="#method.detail">Method</a></li>
 </ul>
 </div>
 <div class="navListSearch"><label for="search">SEARCH:</label>
@@ -94,6 +100,63 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </section>
 <section class="summary">
 <ul class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<li class="blockList">
+<section class="fieldSummary"><a id="field.summary">
+<!--   -->
+</a>
+<h2>Field Summary</h2>
+<div class="memberSummary">
+<table>
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<thead>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colSecond" scope="col">Field</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;? super <a href="../PoolStructurePiece.html" title="class in net.minecraft.structure">PoolStructurePiece</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#children">children</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../world/gen/chunk/ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">ChunkGenerator</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#chunkGenerator">chunkGenerator</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#maxSize">maxSize</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="StructurePoolBasedGenerator.PieceFactory.html" title="interface in net.minecraft.structure.pool">StructurePoolBasedGenerator.PieceFactory</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#pieceFactory">pieceFactory</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#random">random</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../StructureManager.html" title="class in net.minecraft.structure">StructureManager</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#structureManager">structureManager</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Deque.html?is-external=true" title="class or interface in java.util" class="externalLink">Deque</a>&lt;<a href="StructurePoolBasedGenerator.ShapedPoolStructurePiece.html" title="class in net.minecraft.structure.pool">StructurePoolBasedGenerator.ShapedPoolStructurePiece</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#structurePieces">structurePieces</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</li>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <li class="blockList">
 <section class="constructorSummary"><a id="constructor.summary">
@@ -105,19 +168,19 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
 <thead>
 <tr>
-<th class="colFirst" scope="col">Constructor</th>
+<th class="colFirst" scope="col">Modifier</th>
+<th class="colSecond" scope="col">Constructor</th>
 <th class="colLast" scope="col">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.util.Identifier,int,net.minecraft.structure.pool.StructurePoolBasedGenerator.PieceFactory,net.minecraft.world.gen.chunk.ChunkGenerator,net.minecraft.structure.StructureManager,net.minecraft.util.math.BlockPos,java.util.List,java.util.Random)">StructurePoolGenerator</a></span>&#8203;(<a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;startingPool,
-int&nbsp;maxSize,
+<td class="colFirst"><code>private </code></td>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(int,net.minecraft.structure.pool.StructurePoolBasedGenerator.PieceFactory,net.minecraft.world.gen.chunk.ChunkGenerator,net.minecraft.structure.StructureManager,java.util.List,java.util.Random)">StructurePoolGenerator</a></span>&#8203;(int&nbsp;int2,
 <a href="StructurePoolBasedGenerator.PieceFactory.html" title="interface in net.minecraft.structure.pool">StructurePoolBasedGenerator.PieceFactory</a>&nbsp;pieceFactory,
-<a href="../../world/gen/chunk/ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">ChunkGenerator</a>&lt;?&gt;&nbsp;chunkGenerator,
+<a href="../../world/gen/chunk/ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">ChunkGenerator</a>&nbsp;chunkGenerator,
 <a href="../StructureManager.html" title="class in net.minecraft.structure">StructureManager</a>&nbsp;structureManager,
-<a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../StructurePiece.html" title="class in net.minecraft.structure">StructurePiece</a>&gt;&nbsp;children,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;? super <a href="../PoolStructurePiece.html" title="class in net.minecraft.structure">PoolStructurePiece</a>&gt;&nbsp;list,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -132,6 +195,31 @@ int&nbsp;maxSize,
 <!--   -->
 </a>
 <h2>Method Summary</h2>
+<div class="memberSummary">
+<div role="tablist" aria-orientation="horizontal"><button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t2" class="tableTab" onclick="show(2);">Instance Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t4" class="tableTab" onclick="show(8);">Concrete Methods</button></div>
+<div id="memberSummary_tabpanel" role="tabpanel">
+<table aria-labelledby="t0">
+<thead>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colSecond" scope="col">Method</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="altColor" id="i0">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#generatePiece(net.minecraft.structure.PoolStructurePiece,org.apache.commons.lang3.mutable.MutableObject,int,int,boolean)">generatePiece</a></span>&#8203;(<a href="../PoolStructurePiece.html" title="class in net.minecraft.structure">PoolStructurePiece</a>&nbsp;piece,
+<a href="https://commons.apache.org/proper/commons-lang/javadocs/api-3.5/org/apache/commons/lang3/mutable/MutableObject.html?is-external=true" title="class or interface in org.apache.commons.lang3.mutable" class="externalLink">MutableObject</a>&lt;<a href="../../util/shape/VoxelShape.html" title="class in net.minecraft.util.shape">VoxelShape</a>&gt;&nbsp;mutableObject,
+int&nbsp;minY,
+int&nbsp;currentSize,
+boolean&nbsp;bool)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <div class="inheritedList">
 <h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></h3>
 <a id="methods.inherited.from.class.java.lang.Object">
@@ -143,6 +231,58 @@ int&nbsp;maxSize,
 </section>
 <section class="details">
 <ul class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<li class="blockList">
+<section class="fieldDetails"><a id="field.detail">
+<!--   -->
+</a>
+<h2>Field Details</h2>
+<ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="maxSize">maxSize</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">maxSize</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="pieceFactory">pieceFactory</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="StructurePoolBasedGenerator.PieceFactory.html" title="interface in net.minecraft.structure.pool">StructurePoolBasedGenerator.PieceFactory</a></span>&nbsp;<span class="memberName">pieceFactory</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="chunkGenerator">chunkGenerator</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../../world/gen/chunk/ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">ChunkGenerator</a></span>&nbsp;<span class="memberName">chunkGenerator</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="structureManager">structureManager</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../StructureManager.html" title="class in net.minecraft.structure">StructureManager</a></span>&nbsp;<span class="memberName">structureManager</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="children">children</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;? super <a href="../PoolStructurePiece.html" title="class in net.minecraft.structure">PoolStructurePiece</a>&gt;</span>&nbsp;<span class="memberName">children</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="random">random</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a></span>&nbsp;<span class="memberName">random</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="structurePieces">structurePieces</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Deque.html?is-external=true" title="class or interface in java.util" class="externalLink">Deque</a>&lt;<a href="StructurePoolBasedGenerator.ShapedPoolStructurePiece.html" title="class in net.minecraft.structure.pool">StructurePoolBasedGenerator.ShapedPoolStructurePiece</a>&gt;</span>&nbsp;<span class="memberName">structurePieces</span></div>
+</section>
+</li>
+</ul>
+</section>
+</li>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <li class="blockList">
 <section class="constructorDetails"><a id="constructor.detail">
@@ -152,15 +292,33 @@ int&nbsp;maxSize,
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="&lt;init&gt;(net.minecraft.util.Identifier,int,net.minecraft.structure.pool.StructurePoolBasedGenerator.PieceFactory,net.minecraft.world.gen.chunk.ChunkGenerator,net.minecraft.structure.StructureManager,net.minecraft.util.math.BlockPos,java.util.List,java.util.Random)">StructurePoolGenerator</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">StructurePoolGenerator</span>&#8203;(<span class="arguments"><a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;startingPool,
-int&nbsp;maxSize,
+<h3><a id="&lt;init&gt;(int,net.minecraft.structure.pool.StructurePoolBasedGenerator.PieceFactory,net.minecraft.world.gen.chunk.ChunkGenerator,net.minecraft.structure.StructureManager,java.util.List,java.util.Random)">StructurePoolGenerator</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="memberName">StructurePoolGenerator</span>&#8203;(<span class="arguments">int&nbsp;int2,
 <a href="StructurePoolBasedGenerator.PieceFactory.html" title="interface in net.minecraft.structure.pool">StructurePoolBasedGenerator.PieceFactory</a>&nbsp;pieceFactory,
-<a href="../../world/gen/chunk/ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">ChunkGenerator</a>&lt;?&gt;&nbsp;chunkGenerator,
+<a href="../../world/gen/chunk/ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">ChunkGenerator</a>&nbsp;chunkGenerator,
 <a href="../StructureManager.html" title="class in net.minecraft.structure">StructureManager</a>&nbsp;structureManager,
-<a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../StructurePiece.html" title="class in net.minecraft.structure">StructurePiece</a>&gt;&nbsp;children,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;? super <a href="../PoolStructurePiece.html" title="class in net.minecraft.structure">PoolStructurePiece</a>&gt;&nbsp;list,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random)</span></div>
+</section>
+</li>
+</ul>
+</section>
+</li>
+<!-- ============ METHOD DETAIL ========== -->
+<li class="blockList">
+<section class="methodDetails"><a id="method.detail">
+<!--   -->
+</a>
+<h2>Method Details</h2>
+<ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="generatePiece(net.minecraft.structure.PoolStructurePiece,org.apache.commons.lang3.mutable.MutableObject,int,int,boolean)">generatePiece</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">generatePiece</span>&#8203;(<span class="arguments"><a href="../PoolStructurePiece.html" title="class in net.minecraft.structure">PoolStructurePiece</a>&nbsp;piece,
+<a href="https://commons.apache.org/proper/commons-lang/javadocs/api-3.5/org/apache/commons/lang3/mutable/MutableObject.html?is-external=true" title="class or interface in org.apache.commons.lang3.mutable" class="externalLink">MutableObject</a>&lt;<a href="../../util/shape/VoxelShape.html" title="class in net.minecraft.util.shape">VoxelShape</a>&gt;&nbsp;mutableObject,
+int&nbsp;minY,
+int&nbsp;currentSize,
+boolean&nbsp;bool)</span></div>
 </section>
 </li>
 </ul>
@@ -196,15 +354,15 @@ int&nbsp;maxSize,
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
-<li>Method</li>
+<li><a href="#method.detail">Method</a></li>
 </ul>
 </div>
 </div>

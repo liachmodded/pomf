@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":9,"i1":9,"i2":10,"i3":10,"i4":10,"i5":10};
+<script type="text/javascript">var data = {"i0":9,"i1":9,"i2":10,"i3":10,"i4":10,"i5":10,"i6":9,"i7":10,"i8":10,"i9":10,"i10":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -56,13 +56,13 @@ loadScripts(document, 'script');</script>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested.class.summary">Nested</a>&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
@@ -144,6 +144,38 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </div>
 </section>
 </li>
+<!-- =========== FIELD SUMMARY =========== -->
+<li class="blockList">
+<section class="fieldSummary"><a id="field.summary">
+<!--   -->
+</a>
+<h2>Field Summary</h2>
+<div class="memberSummary">
+<table>
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<thead>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colSecond" scope="col">Field</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/ThreadLocal.html?is-external=true" title="class or interface in java.lang" class="externalLink">ThreadLocal</a>&lt;<a href="BlockModelRenderer.BrightnessCache.html" title="class in net.minecraft.client.render.block">BlockModelRenderer.BrightnessCache</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#brightnessCache">brightnessCache</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../color/block/BlockColors.html" title="class in net.minecraft.client.color.block">BlockColors</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#colorMap">colorMap</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</li>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <li class="blockList">
 <section class="constructorSummary"><a id="constructor.summary">
@@ -161,7 +193,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </thead>
 <tbody>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.client.color.block.BlockColors)">BlockModelRenderer</a></span>&#8203;(<a href="../../color/block/BlockColors.html" title="class in net.minecraft.client.color.block">BlockColors</a>&nbsp;blockColors)</code></th>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.client.color.block.BlockColors)">BlockModelRenderer</a></span>&#8203;(<a href="../../color/block/BlockColors.html" title="class in net.minecraft.client.color.block">BlockColors</a>&nbsp;colorMap)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -198,6 +230,17 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i2">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getQuadDimensions(net.minecraft.world.BlockRenderView,net.minecraft.block.BlockState,net.minecraft.util.math.BlockPos,int%5B%5D,net.minecraft.util.math.Direction,float%5B%5D,java.util.BitSet)">getQuadDimensions</a></span>&#8203;(<a href="../../../world/BlockRenderView.html" title="interface in net.minecraft.world">BlockRenderView</a>&nbsp;world,
+<a href="../../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state,
+<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+int[]&nbsp;vertexData,
+<a href="../../../util/math/Direction.html" title="enum in net.minecraft.util.math">Direction</a>&nbsp;face,
+float[]&nbsp;box,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/BitSet.html?is-external=true" title="class or interface in java.util" class="externalLink">BitSet</a>&nbsp;flags)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i3">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#render(net.minecraft.client.util.math.MatrixStack.Entry,net.minecraft.client.render.VertexConsumer,net.minecraft.block.BlockState,net.minecraft.client.render.model.BakedModel,float,float,float,int,int)">render</a></span>&#8203;(<a href="../../util/math/MatrixStack.Entry.html" title="class in net.minecraft.client.util.math">MatrixStack.Entry</a>&nbsp;entry,
 <a href="../VertexConsumer.html" title="interface in net.minecraft.client.render">VertexConsumer</a>&nbsp;vertexConsumer,
@@ -210,7 +253,7 @@ int&nbsp;int2,
 int&nbsp;int3)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i3">
+<tr class="altColor" id="i4">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#render(net.minecraft.world.BlockRenderView,net.minecraft.client.render.model.BakedModel,net.minecraft.block.BlockState,net.minecraft.util.math.BlockPos,net.minecraft.client.util.math.MatrixStack,net.minecraft.client.render.VertexConsumer,boolean,java.util.Random,long,int)">render</a></span>&#8203;(<a href="../../../world/BlockRenderView.html" title="interface in net.minecraft.world">BlockRenderView</a>&nbsp;world,
 <a href="../model/BakedModel.html" title="interface in net.minecraft.client.render.model">BakedModel</a>&nbsp;model,
@@ -224,7 +267,7 @@ long&nbsp;seed,
 int&nbsp;overlay)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i4">
+<tr class="rowColor" id="i5">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#renderFlat(net.minecraft.world.BlockRenderView,net.minecraft.client.render.model.BakedModel,net.minecraft.block.BlockState,net.minecraft.util.math.BlockPos,net.minecraft.client.util.math.MatrixStack,net.minecraft.client.render.VertexConsumer,boolean,java.util.Random,long,int)">renderFlat</a></span>&#8203;(<a href="../../../world/BlockRenderView.html" title="interface in net.minecraft.world">BlockRenderView</a>&nbsp;world,
 <a href="../model/BakedModel.html" title="interface in net.minecraft.client.render.model">BakedModel</a>&nbsp;model,
@@ -238,7 +281,66 @@ long&nbsp;long2,
 int&nbsp;int2)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i5">
+<tr class="altColor" id="i6">
+<td class="colFirst"><code>private static void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#renderQuad(net.minecraft.client.util.math.MatrixStack.Entry,net.minecraft.client.render.VertexConsumer,float,float,float,java.util.List,int,int)">renderQuad</a></span>&#8203;(<a href="../../util/math/MatrixStack.Entry.html" title="class in net.minecraft.client.util.math">MatrixStack.Entry</a>&nbsp;entry,
+<a href="../VertexConsumer.html" title="interface in net.minecraft.client.render">VertexConsumer</a>&nbsp;vertexConsumer,
+float&nbsp;float2,
+float&nbsp;float3,
+float&nbsp;float4,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../model/BakedQuad.html" title="class in net.minecraft.client.render.model">BakedQuad</a>&gt;&nbsp;list,
+int&nbsp;int2,
+int&nbsp;int3)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i7">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#renderQuad(net.minecraft.world.BlockRenderView,net.minecraft.block.BlockState,net.minecraft.util.math.BlockPos,net.minecraft.client.render.VertexConsumer,net.minecraft.client.util.math.MatrixStack.Entry,net.minecraft.client.render.model.BakedQuad,float,float,float,float,int,int,int,int,int)">renderQuad</a></span>&#8203;(<a href="../../../world/BlockRenderView.html" title="interface in net.minecraft.world">BlockRenderView</a>&nbsp;world,
+<a href="../../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state,
+<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<a href="../VertexConsumer.html" title="interface in net.minecraft.client.render">VertexConsumer</a>&nbsp;vertexConsumer,
+<a href="../../util/math/MatrixStack.Entry.html" title="class in net.minecraft.client.util.math">MatrixStack.Entry</a>&nbsp;matrixEntry,
+<a href="../model/BakedQuad.html" title="class in net.minecraft.client.render.model">BakedQuad</a>&nbsp;quad,
+float&nbsp;brightness0,
+float&nbsp;brightness1,
+float&nbsp;brightness2,
+float&nbsp;brightness3,
+int&nbsp;light0,
+int&nbsp;light1,
+int&nbsp;light2,
+int&nbsp;light3,
+int&nbsp;overlay)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i8">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#renderQuadsFlat(net.minecraft.world.BlockRenderView,net.minecraft.block.BlockState,net.minecraft.util.math.BlockPos,int,int,boolean,net.minecraft.client.util.math.MatrixStack,net.minecraft.client.render.VertexConsumer,java.util.List,java.util.BitSet)">renderQuadsFlat</a></span>&#8203;(<a href="../../../world/BlockRenderView.html" title="interface in net.minecraft.world">BlockRenderView</a>&nbsp;world,
+<a href="../../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state,
+<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+int&nbsp;light,
+int&nbsp;overlay,
+boolean&nbsp;useWorldLight,
+<a href="../../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
+<a href="../VertexConsumer.html" title="interface in net.minecraft.client.render">VertexConsumer</a>&nbsp;vertexConsumer,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../model/BakedQuad.html" title="class in net.minecraft.client.render.model">BakedQuad</a>&gt;&nbsp;quads,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/BitSet.html?is-external=true" title="class or interface in java.util" class="externalLink">BitSet</a>&nbsp;flags)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i9">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#renderQuadsSmooth(net.minecraft.world.BlockRenderView,net.minecraft.block.BlockState,net.minecraft.util.math.BlockPos,net.minecraft.client.util.math.MatrixStack,net.minecraft.client.render.VertexConsumer,java.util.List,float%5B%5D,java.util.BitSet,net.minecraft.client.render.block.BlockModelRenderer.AmbientOcclusionCalculator,int)">renderQuadsSmooth</a></span>&#8203;(<a href="../../../world/BlockRenderView.html" title="interface in net.minecraft.world">BlockRenderView</a>&nbsp;world,
+<a href="../../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state,
+<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<a href="../../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrix,
+<a href="../VertexConsumer.html" title="interface in net.minecraft.client.render">VertexConsumer</a>&nbsp;vertexConsumer,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../model/BakedQuad.html" title="class in net.minecraft.client.render.model">BakedQuad</a>&gt;&nbsp;quads,
+float[]&nbsp;box,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/BitSet.html?is-external=true" title="class or interface in java.util" class="externalLink">BitSet</a>&nbsp;flags,
+<a href="BlockModelRenderer.AmbientOcclusionCalculator.html" title="class in net.minecraft.client.render.block">BlockModelRenderer.AmbientOcclusionCalculator</a>&nbsp;ambientOcclusionCalculator,
+int&nbsp;overlay)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i10">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#renderSmooth(net.minecraft.world.BlockRenderView,net.minecraft.client.render.model.BakedModel,net.minecraft.block.BlockState,net.minecraft.util.math.BlockPos,net.minecraft.client.util.math.MatrixStack,net.minecraft.client.render.VertexConsumer,boolean,java.util.Random,long,int)">renderSmooth</a></span>&#8203;(<a href="../../../world/BlockRenderView.html" title="interface in net.minecraft.world">BlockRenderView</a>&nbsp;world,
 <a href="../model/BakedModel.html" title="interface in net.minecraft.client.render.model">BakedModel</a>&nbsp;model,
@@ -267,6 +369,28 @@ int&nbsp;overlay)</code></th>
 </section>
 <section class="details">
 <ul class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<li class="blockList">
+<section class="fieldDetails"><a id="field.detail">
+<!--   -->
+</a>
+<h2>Field Details</h2>
+<ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="brightnessCache">brightnessCache</a></h3>
+<div class="memberSignature"><span class="modifiers">private static final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/ThreadLocal.html?is-external=true" title="class or interface in java.lang" class="externalLink">ThreadLocal</a>&lt;<a href="BlockModelRenderer.BrightnessCache.html" title="class in net.minecraft.client.render.block">BlockModelRenderer.BrightnessCache</a>&gt;</span>&nbsp;<span class="memberName">brightnessCache</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="colorMap">colorMap</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../../color/block/BlockColors.html" title="class in net.minecraft.client.color.block">BlockColors</a></span>&nbsp;<span class="memberName">colorMap</span></div>
+</section>
+</li>
+</ul>
+</section>
+</li>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <li class="blockList">
 <section class="constructorDetails"><a id="constructor.detail">
@@ -277,7 +401,7 @@ int&nbsp;overlay)</code></th>
 <li class="blockList">
 <section class="detail">
 <h3><a id="&lt;init&gt;(net.minecraft.client.color.block.BlockColors)">BlockModelRenderer</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">BlockModelRenderer</span>&#8203;(<span class="arguments"><a href="../../color/block/BlockColors.html" title="class in net.minecraft.client.color.block">BlockColors</a>&nbsp;blockColors)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">BlockModelRenderer</span>&#8203;(<span class="arguments"><a href="../../color/block/BlockColors.html" title="class in net.minecraft.client.color.block">BlockColors</a>&nbsp;colorMap)</span></div>
 </section>
 </li>
 </ul>
@@ -337,15 +461,91 @@ int&nbsp;int2)</span></div>
 </li>
 <li class="blockList">
 <section class="detail">
+<h3><a id="renderQuadsSmooth(net.minecraft.world.BlockRenderView,net.minecraft.block.BlockState,net.minecraft.util.math.BlockPos,net.minecraft.client.util.math.MatrixStack,net.minecraft.client.render.VertexConsumer,java.util.List,float[],java.util.BitSet,net.minecraft.client.render.block.BlockModelRenderer.AmbientOcclusionCalculator,int)">renderQuadsSmooth</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">renderQuadsSmooth</span>&#8203;(<span class="arguments"><a href="../../../world/BlockRenderView.html" title="interface in net.minecraft.world">BlockRenderView</a>&nbsp;world,
+<a href="../../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state,
+<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<a href="../../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrix,
+<a href="../VertexConsumer.html" title="interface in net.minecraft.client.render">VertexConsumer</a>&nbsp;vertexConsumer,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../model/BakedQuad.html" title="class in net.minecraft.client.render.model">BakedQuad</a>&gt;&nbsp;quads,
+float[]&nbsp;box,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/BitSet.html?is-external=true" title="class or interface in java.util" class="externalLink">BitSet</a>&nbsp;flags,
+<a href="BlockModelRenderer.AmbientOcclusionCalculator.html" title="class in net.minecraft.client.render.block">BlockModelRenderer.AmbientOcclusionCalculator</a>&nbsp;ambientOcclusionCalculator,
+int&nbsp;overlay)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="renderQuad(net.minecraft.world.BlockRenderView,net.minecraft.block.BlockState,net.minecraft.util.math.BlockPos,net.minecraft.client.render.VertexConsumer,net.minecraft.client.util.math.MatrixStack.Entry,net.minecraft.client.render.model.BakedQuad,float,float,float,float,int,int,int,int,int)">renderQuad</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">renderQuad</span>&#8203;(<span class="arguments"><a href="../../../world/BlockRenderView.html" title="interface in net.minecraft.world">BlockRenderView</a>&nbsp;world,
+<a href="../../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state,
+<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<a href="../VertexConsumer.html" title="interface in net.minecraft.client.render">VertexConsumer</a>&nbsp;vertexConsumer,
+<a href="../../util/math/MatrixStack.Entry.html" title="class in net.minecraft.client.util.math">MatrixStack.Entry</a>&nbsp;matrixEntry,
+<a href="../model/BakedQuad.html" title="class in net.minecraft.client.render.model">BakedQuad</a>&nbsp;quad,
+float&nbsp;brightness0,
+float&nbsp;brightness1,
+float&nbsp;brightness2,
+float&nbsp;brightness3,
+int&nbsp;light0,
+int&nbsp;light1,
+int&nbsp;light2,
+int&nbsp;light3,
+int&nbsp;overlay)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="getQuadDimensions(net.minecraft.world.BlockRenderView,net.minecraft.block.BlockState,net.minecraft.util.math.BlockPos,int[],net.minecraft.util.math.Direction,float[],java.util.BitSet)">getQuadDimensions</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">getQuadDimensions</span>&#8203;(<span class="arguments"><a href="../../../world/BlockRenderView.html" title="interface in net.minecraft.world">BlockRenderView</a>&nbsp;world,
+<a href="../../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state,
+<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+int[]&nbsp;vertexData,
+<a href="../../../util/math/Direction.html" title="enum in net.minecraft.util.math">Direction</a>&nbsp;face,
+<a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+float[]&nbsp;box,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/BitSet.html?is-external=true" title="class or interface in java.util" class="externalLink">BitSet</a>&nbsp;flags)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="renderQuadsFlat(net.minecraft.world.BlockRenderView,net.minecraft.block.BlockState,net.minecraft.util.math.BlockPos,int,int,boolean,net.minecraft.client.util.math.MatrixStack,net.minecraft.client.render.VertexConsumer,java.util.List,java.util.BitSet)">renderQuadsFlat</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">renderQuadsFlat</span>&#8203;(<span class="arguments"><a href="../../../world/BlockRenderView.html" title="interface in net.minecraft.world">BlockRenderView</a>&nbsp;world,
+<a href="../../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state,
+<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+int&nbsp;light,
+int&nbsp;overlay,
+boolean&nbsp;useWorldLight,
+<a href="../../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
+<a href="../VertexConsumer.html" title="interface in net.minecraft.client.render">VertexConsumer</a>&nbsp;vertexConsumer,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../model/BakedQuad.html" title="class in net.minecraft.client.render.model">BakedQuad</a>&gt;&nbsp;quads,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/BitSet.html?is-external=true" title="class or interface in java.util" class="externalLink">BitSet</a>&nbsp;flags)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="render(net.minecraft.client.util.math.MatrixStack.Entry,net.minecraft.client.render.VertexConsumer,net.minecraft.block.BlockState,net.minecraft.client.render.model.BakedModel,float,float,float,int,int)">render</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">render</span>&#8203;(<span class="arguments"><a href="../../util/math/MatrixStack.Entry.html" title="class in net.minecraft.client.util.math">MatrixStack.Entry</a>&nbsp;entry,
 <a href="../VertexConsumer.html" title="interface in net.minecraft.client.render">VertexConsumer</a>&nbsp;vertexConsumer,
-<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 <a href="../../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState,
 <a href="../model/BakedModel.html" title="interface in net.minecraft.client.render.model">BakedModel</a>&nbsp;bakedModel,
 float&nbsp;float2,
 float&nbsp;float3,
 float&nbsp;float4,
+int&nbsp;int2,
+int&nbsp;int3)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="renderQuad(net.minecraft.client.util.math.MatrixStack.Entry,net.minecraft.client.render.VertexConsumer,float,float,float,java.util.List,int,int)">renderQuad</a></h3>
+<div class="memberSignature"><span class="modifiers">private static</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">renderQuad</span>&#8203;(<span class="arguments"><a href="../../util/math/MatrixStack.Entry.html" title="class in net.minecraft.client.util.math">MatrixStack.Entry</a>&nbsp;entry,
+<a href="../VertexConsumer.html" title="interface in net.minecraft.client.render">VertexConsumer</a>&nbsp;vertexConsumer,
+float&nbsp;float2,
+float&nbsp;float3,
+float&nbsp;float4,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../model/BakedQuad.html" title="class in net.minecraft.client.render.model">BakedQuad</a>&gt;&nbsp;list,
 int&nbsp;int2,
 int&nbsp;int3)</span></div>
 </section>
@@ -395,13 +595,13 @@ int&nbsp;int3)</span></div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested.class.summary">Nested</a>&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>

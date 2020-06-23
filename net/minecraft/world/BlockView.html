@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":6,"i1":6,"i2":6,"i3":18,"i4":18,"i5":18,"i6":18,"i7":1,"i8":18};
+<script type="text/javascript">var data = {"i0":6,"i1":6,"i2":6,"i3":18,"i4":18,"i5":18,"i6":18,"i7":18,"i8":1,"i9":18};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -89,14 +89,15 @@ loadScripts(document, 'script');</script>
 <section class="description">
 <dl>
 <dt>All Known Subinterfaces:</dt>
-<dd><code><a href="BlockRenderView.html" title="interface in net.minecraft.world">BlockRenderView</a></code>, <code><a href="chunk/Chunk.html" title="interface in net.minecraft.world.chunk">Chunk</a></code>, <code><a href="CollisionView.html" title="interface in net.minecraft.world">CollisionView</a></code>, <code><a href="IWorld.html" title="interface in net.minecraft.world">IWorld</a></code>, <code><a href="WorldView.html" title="interface in net.minecraft.world">WorldView</a></code></dd>
+<dd><code><a href="BlockRenderView.html" title="interface in net.minecraft.world">BlockRenderView</a></code>, <code><a href="chunk/Chunk.html" title="interface in net.minecraft.world.chunk">Chunk</a></code>, <code><a href="CollisionView.html" title="interface in net.minecraft.world">CollisionView</a></code>, <code><a href="ServerWorldAccess.html" title="interface in net.minecraft.world">ServerWorldAccess</a></code>, <code><a href="WorldAccess.html" title="interface in net.minecraft.world">WorldAccess</a></code>, <code><a href="WorldView.html" title="interface in net.minecraft.world">WorldView</a></code></dd>
 </dl>
 <dl>
 <dt>All Known Implementing Classes:</dt>
-<dd><code><a href="chunk/ChunkCache.html" title="class in net.minecraft.world.chunk">ChunkCache</a></code>, <code><a href="ChunkRegion.html" title="class in net.minecraft.world">ChunkRegion</a></code>, <code><a href="../client/render/chunk/ChunkRendererRegion.html" title="class in net.minecraft.client.render.chunk">ChunkRendererRegion</a></code>, <code><a href="../client/world/ClientWorld.html" title="class in net.minecraft.client.world">ClientWorld</a></code>, <code><a href="EmptyBlockView.html" title="enum in net.minecraft.world">EmptyBlockView</a></code>, <code><a href="chunk/EmptyChunk.html" title="class in net.minecraft.world.chunk">EmptyChunk</a></code>, <code><a href="chunk/ProtoChunk.html" title="class in net.minecraft.world.chunk">ProtoChunk</a></code>, <code><a href="chunk/ReadOnlyChunk.html" title="class in net.minecraft.world.chunk">ReadOnlyChunk</a></code>, <code><a href="../server/world/SecondaryServerWorld.html" title="class in net.minecraft.server.world">SecondaryServerWorld</a></code>, <code><a href="../server/world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a></code>, <code><a href="gen/chunk/VerticalBlockSample.html" title="class in net.minecraft.world.gen.chunk">VerticalBlockSample</a></code>, <code><a href="World.html" title="class in net.minecraft.world">World</a></code>, <code><a href="chunk/WorldChunk.html" title="class in net.minecraft.world.chunk">WorldChunk</a></code></dd>
+<dd><code><a href="chunk/ChunkCache.html" title="class in net.minecraft.world.chunk">ChunkCache</a></code>, <code><a href="ChunkRegion.html" title="class in net.minecraft.world">ChunkRegion</a></code>, <code><a href="../client/render/chunk/ChunkRendererRegion.html" title="class in net.minecraft.client.render.chunk">ChunkRendererRegion</a></code>, <code><a href="../client/world/ClientWorld.html" title="class in net.minecraft.client.world">ClientWorld</a></code>, <code><a href="EmptyBlockView.html" title="enum in net.minecraft.world">EmptyBlockView</a></code>, <code><a href="chunk/EmptyChunk.html" title="class in net.minecraft.world.chunk">EmptyChunk</a></code>, <code><a href="chunk/ProtoChunk.html" title="class in net.minecraft.world.chunk">ProtoChunk</a></code>, <code><a href="chunk/ReadOnlyChunk.html" title="class in net.minecraft.world.chunk">ReadOnlyChunk</a></code>, <code><a href="../server/world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a></code>, <code><a href="gen/chunk/VerticalBlockSample.html" title="class in net.minecraft.world.gen.chunk">VerticalBlockSample</a></code>, <code><a href="World.html" title="class in net.minecraft.world">World</a></code>, <code><a href="chunk/WorldChunk.html" title="class in net.minecraft.world.chunk">WorldChunk</a></code></dd>
 </dl>
 <hr>
 <pre>public interface <span class="typeNameLabel">BlockView</span></pre>
+<div class="block">Represents a scoped, read-only view of block states, fluid states and block entities.</div>
 </section>
 <section class="summary">
 <ul class="blockList">
@@ -129,7 +130,7 @@ loadScripts(document, 'script');</script>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i2">
-<td class="colFirst"><code><a href="../fluid/FluidState.html" title="interface in net.minecraft.fluid">FluidState</a></code></td>
+<td class="colFirst"><code><a href="../fluid/FluidState.html" title="class in net.minecraft.fluid">FluidState</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getFluidState(net.minecraft.util.math.BlockPos)">getFluidState</a></span>&#8203;(<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -149,18 +150,23 @@ loadScripts(document, 'script');</script>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i6">
+<td class="colFirst"><code>default <a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html?is-external=true" title="class or interface in java.util.stream" class="externalLink">Stream</a>&lt;<a href="../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_29546(net.minecraft.util.math.Box)">method_29546</a></span>&#8203;(<a href="../util/math/Box.html" title="class in net.minecraft.util.math">Box</a>&nbsp;box)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i7">
 <td class="colFirst"><code>default <a href="../util/hit/BlockHitResult.html" title="class in net.minecraft.util.hit">BlockHitResult</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#rayTrace(net.minecraft.world.RayTraceContext)">rayTrace</a></span>&#8203;(<a href="RayTraceContext.html" title="class in net.minecraft.world">RayTraceContext</a>&nbsp;context)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i7">
+<tr class="altColor" id="i8">
 <td class="colFirst"><code>static &lt;T&gt;&nbsp;T</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#rayTrace(net.minecraft.world.RayTraceContext,java.util.function.BiFunction,java.util.function.Function)">rayTrace</a></span>&#8203;(<a href="RayTraceContext.html" title="class in net.minecraft.world">RayTraceContext</a>&nbsp;rayTraceContext,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/BiFunction.html?is-external=true" title="class or interface in java.util.function" class="externalLink">BiFunction</a>&lt;<a href="RayTraceContext.html" title="class in net.minecraft.world">RayTraceContext</a>,&#8203;<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>,&#8203;T&gt;&nbsp;context,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;<a href="RayTraceContext.html" title="class in net.minecraft.world">RayTraceContext</a>,&#8203;T&gt;&nbsp;blockRaytracer)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i8">
+<tr class="rowColor" id="i9">
 <td class="colFirst"><code>default <a href="../util/hit/BlockHitResult.html" title="class in net.minecraft.util.hit">BlockHitResult</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#rayTraceBlock(net.minecraft.util.math.Vec3d,net.minecraft.util.math.Vec3d,net.minecraft.util.math.BlockPos,net.minecraft.util.shape.VoxelShape,net.minecraft.block.BlockState)">rayTraceBlock</a></span>&#8203;(<a href="../util/math/Vec3d.html" title="class in net.minecraft.util.math">Vec3d</a>&nbsp;start,
 <a href="../util/math/Vec3d.html" title="class in net.minecraft.util.math">Vec3d</a>&nbsp;end,
@@ -189,7 +195,7 @@ loadScripts(document, 'script');</script>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getBlockEntity(net.minecraft.util.math.BlockPos)">getBlockEntity</a></h3>
-<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 </span><span class="returnType"><a href="../block/entity/BlockEntity.html" title="class in net.minecraft.block.entity">BlockEntity</a></span>&nbsp;<span class="memberName">getBlockEntity</span>&#8203;(<span class="arguments"><a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</span></div>
 </section>
 </li>
@@ -202,7 +208,7 @@ loadScripts(document, 'script');</script>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getFluidState(net.minecraft.util.math.BlockPos)">getFluidState</a></h3>
-<div class="memberSignature"><span class="returnType"><a href="../fluid/FluidState.html" title="interface in net.minecraft.fluid">FluidState</a></span>&nbsp;<span class="memberName">getFluidState</span>&#8203;(<span class="arguments"><a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</span></div>
+<div class="memberSignature"><span class="returnType"><a href="../fluid/FluidState.html" title="class in net.minecraft.fluid">FluidState</a></span>&nbsp;<span class="memberName">getFluidState</span>&#8203;(<span class="arguments"><a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</span></div>
 </section>
 </li>
 <li class="blockList">
@@ -225,6 +231,12 @@ loadScripts(document, 'script');</script>
 </li>
 <li class="blockList">
 <section class="detail">
+<h3><a id="method_29546(net.minecraft.util.math.Box)">method_29546</a></h3>
+<div class="memberSignature"><span class="modifiers">default</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html?is-external=true" title="class or interface in java.util.stream" class="externalLink">Stream</a>&lt;<a href="../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&gt;</span>&nbsp;<span class="memberName">method_29546</span>&#8203;(<span class="arguments"><a href="../util/math/Box.html" title="class in net.minecraft.util.math">Box</a>&nbsp;box)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="rayTrace(net.minecraft.world.RayTraceContext)">rayTrace</a></h3>
 <div class="memberSignature"><span class="modifiers">default</span>&nbsp;<span class="returnType"><a href="../util/hit/BlockHitResult.html" title="class in net.minecraft.util.hit">BlockHitResult</a></span>&nbsp;<span class="memberName">rayTrace</span>&#8203;(<span class="arguments"><a href="RayTraceContext.html" title="class in net.minecraft.world">RayTraceContext</a>&nbsp;context)</span></div>
 </section>
@@ -232,7 +244,7 @@ loadScripts(document, 'script');</script>
 <li class="blockList">
 <section class="detail">
 <h3><a id="rayTraceBlock(net.minecraft.util.math.Vec3d,net.minecraft.util.math.Vec3d,net.minecraft.util.math.BlockPos,net.minecraft.util.shape.VoxelShape,net.minecraft.block.BlockState)">rayTraceBlock</a></h3>
-<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 </span><span class="modifiers">default</span>&nbsp;<span class="returnType"><a href="../util/hit/BlockHitResult.html" title="class in net.minecraft.util.hit">BlockHitResult</a></span>&nbsp;<span class="memberName">rayTraceBlock</span>&#8203;(<span class="arguments"><a href="../util/math/Vec3d.html" title="class in net.minecraft.util.math">Vec3d</a>&nbsp;start,
 <a href="../util/math/Vec3d.html" title="class in net.minecraft.util.math">Vec3d</a>&nbsp;end,
 <a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,

@@ -62,7 +62,7 @@ loadScripts(document, 'script');</script>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
@@ -111,6 +111,65 @@ implements <a href="../server/command/CommandOutput.html" title="interface in ne
 <!--   -->
 </a>
 <h2>Field Summary</h2>
+<div class="memberSummary">
+<table>
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<thead>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colSecond" scope="col">Field</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#command">command</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../text/Text.html" title="interface in net.minecraft.text">Text</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#customName">customName</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="https://docs.oracle.com/javase/8/docs/api/java/text/SimpleDateFormat.html?is-external=true" title="class or interface in java.text" class="externalLink">SimpleDateFormat</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#DATE_FORMAT">DATE_FORMAT</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static <a href="../text/Text.html" title="interface in net.minecraft.text">Text</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#DEFAULT_NAME">DEFAULT_NAME</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private long</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#lastExecution">lastExecution</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../text/Text.html" title="interface in net.minecraft.text">Text</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#lastOutput">lastOutput</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#successCount">successCount</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#trackOutput">trackOutput</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#updateLastExecution">updateLastExecution</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
 <div class="inheritedList">
 <h3>Fields inherited from interface&nbsp;net.minecraft.server.command.<a href="../server/command/CommandOutput.html" title="interface in net.minecraft.server.command">CommandOutput</a></h3>
 <a id="fields.inherited.from.class.net.minecraft.server.command.CommandOutput">
@@ -207,7 +266,7 @@ implements <a href="../server/command/CommandOutput.html" title="interface in ne
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i9">
-<td class="colFirst"><code>boolean</code></td>
+<td class="colFirst"><code><a href="../util/ActionResult.html" title="enum in net.minecraft.util">ActionResult</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#interact(net.minecraft.entity.player.PlayerEntity)">interact</a></span>&#8203;(<a href="../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;player)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -223,7 +282,8 @@ implements <a href="../server/command/CommandOutput.html" title="interface in ne
 </tr>
 <tr class="altColor" id="i12">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#sendMessage(net.minecraft.text.Text)">sendMessage</a></span>&#8203;(<a href="../text/Text.html" title="interface in net.minecraft.text">Text</a>&nbsp;message)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#sendSystemMessage(net.minecraft.text.Text,java.util.UUID)">sendSystemMessage</a></span>&#8203;(<a href="../text/Text.html" title="interface in net.minecraft.text">Text</a>&nbsp;message,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util" class="externalLink">UUID</a>&nbsp;senderUuid)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i13">
@@ -286,6 +346,71 @@ implements <a href="../server/command/CommandOutput.html" title="interface in ne
 </section>
 <section class="details">
 <ul class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<li class="blockList">
+<section class="fieldDetails"><a id="field.detail">
+<!--   -->
+</a>
+<h2>Field Details</h2>
+<ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="DATE_FORMAT">DATE_FORMAT</a></h3>
+<div class="memberSignature"><span class="modifiers">private static final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/text/SimpleDateFormat.html?is-external=true" title="class or interface in java.text" class="externalLink">SimpleDateFormat</a></span>&nbsp;<span class="memberName">DATE_FORMAT</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="DEFAULT_NAME">DEFAULT_NAME</a></h3>
+<div class="memberSignature"><span class="modifiers">private static final</span>&nbsp;<span class="returnType"><a href="../text/Text.html" title="interface in net.minecraft.text">Text</a></span>&nbsp;<span class="memberName">DEFAULT_NAME</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="lastExecution">lastExecution</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">long</span>&nbsp;<span class="memberName">lastExecution</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="updateLastExecution">updateLastExecution</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">updateLastExecution</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="successCount">successCount</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">successCount</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="trackOutput">trackOutput</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">trackOutput</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="lastOutput">lastOutput</a></h3>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="../text/Text.html" title="interface in net.minecraft.text">Text</a></span>&nbsp;<span class="memberName">lastOutput</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="command">command</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></span>&nbsp;<span class="memberName">command</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="customName">customName</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="../text/Text.html" title="interface in net.minecraft.text">Text</a></span>&nbsp;<span class="memberName">customName</span></div>
+</section>
+</li>
+</ul>
+</section>
+</li>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <li class="blockList">
 <section class="constructorDetails"><a id="constructor.detail">
@@ -366,17 +491,18 @@ implements <a href="../server/command/CommandOutput.html" title="interface in ne
 <li class="blockList">
 <section class="detail">
 <h3><a id="setCustomName(net.minecraft.text.Text)">setCustomName</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setCustomName</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setCustomName</span>&#8203;(<span class="arguments"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 <a href="../text/Text.html" title="interface in net.minecraft.text">Text</a>&nbsp;name)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="sendMessage(net.minecraft.text.Text)">sendMessage</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">sendMessage</span>&#8203;(<span class="arguments"><a href="../text/Text.html" title="interface in net.minecraft.text">Text</a>&nbsp;message)</span></div>
+<h3><a id="sendSystemMessage(net.minecraft.text.Text,java.util.UUID)">sendSystemMessage</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">sendSystemMessage</span>&#8203;(<span class="arguments"><a href="../text/Text.html" title="interface in net.minecraft.text">Text</a>&nbsp;message,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util" class="externalLink">UUID</a>&nbsp;senderUuid)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../server/command/CommandOutput.html#sendMessage(net.minecraft.text.Text)">sendMessage</a></code>&nbsp;in interface&nbsp;<code><a href="../server/command/CommandOutput.html" title="interface in net.minecraft.server.command">CommandOutput</a></code></dd>
+<dd><code><a href="../server/command/CommandOutput.html#sendSystemMessage(net.minecraft.text.Text,java.util.UUID)">sendSystemMessage</a></code>&nbsp;in interface&nbsp;<code><a href="../server/command/CommandOutput.html" title="interface in net.minecraft.server.command">CommandOutput</a></code></dd>
 </dl>
 </section>
 </li>
@@ -395,7 +521,7 @@ implements <a href="../server/command/CommandOutput.html" title="interface in ne
 <li class="blockList">
 <section class="detail">
 <h3><a id="setLastOutput(net.minecraft.text.Text)">setLastOutput</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setLastOutput</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setLastOutput</span>&#8203;(<span class="arguments"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 <a href="../text/Text.html" title="interface in net.minecraft.text">Text</a>&nbsp;lastOutput)</span></div>
 </section>
 </li>
@@ -415,7 +541,7 @@ implements <a href="../server/command/CommandOutput.html" title="interface in ne
 <li class="blockList">
 <section class="detail">
 <h3><a id="interact(net.minecraft.entity.player.PlayerEntity)">interact</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">interact</span>&#8203;(<span class="arguments"><a href="../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;player)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../util/ActionResult.html" title="enum in net.minecraft.util">ActionResult</a></span>&nbsp;<span class="memberName">interact</span>&#8203;(<span class="arguments"><a href="../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;player)</span></div>
 </section>
 </li>
 <li class="blockList">
@@ -500,7 +626,7 @@ implements <a href="../server/command/CommandOutput.html" title="interface in ne
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>

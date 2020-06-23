@@ -83,16 +83,16 @@ loadScripts(document, 'script');</script>
 <!-- ======== START OF CLASS DATA ======== -->
 <div class="header">
 <div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html">net.minecraft.state</a></div>
-<h1 title="Interface StateManager.Factory" class="title">Interface StateManager.Factory&lt;O,&#8203;S extends <a href="State.html" title="interface in net.minecraft.state">State</a>&lt;S&gt;,&#8203;A extends <a href="AbstractState.html" title="class in net.minecraft.state">AbstractState</a>&lt;O,&#8203;S&gt;&gt;</h1>
+<h1 title="Interface StateManager.Factory" class="title">Interface StateManager.Factory&lt;O,&#8203;S&gt;</h1>
 </div>
 <div class="contentContainer">
 <section class="description">
 <dl>
 <dt>Enclosing class:</dt>
-<dd><a href="StateManager.html" title="class in net.minecraft.state">StateManager</a>&lt;<a href="StateManager.html" title="type parameter in StateManager">O</a>,&#8203;<a href="StateManager.html" title="type parameter in StateManager">S</a> extends <a href="State.html" title="interface in net.minecraft.state">State</a>&lt;<a href="StateManager.html" title="type parameter in StateManager">S</a>&gt;&gt;</dd>
+<dd><a href="StateManager.html" title="class in net.minecraft.state">StateManager</a>&lt;<a href="StateManager.html" title="type parameter in StateManager">O</a>,&#8203;<a href="StateManager.html" title="type parameter in StateManager">S</a> extends <a href="State.html" title="class in net.minecraft.state">State</a>&lt;<a href="StateManager.html" title="type parameter in StateManager">O</a>,&#8203;<a href="StateManager.html" title="type parameter in StateManager">S</a>&gt;&gt;</dd>
 </dl>
 <hr>
-<pre>public static interface <span class="typeNameLabel">StateManager.Factory&lt;O,&#8203;S extends <a href="State.html" title="interface in net.minecraft.state">State</a>&lt;S&gt;,&#8203;A extends <a href="AbstractState.html" title="class in net.minecraft.state">AbstractState</a>&lt;O,&#8203;S&gt;&gt;</span></pre>
+<pre>public static interface <span class="typeNameLabel">StateManager.Factory&lt;O,&#8203;S&gt;</span></pre>
 </section>
 <section class="summary">
 <ul class="blockList">
@@ -115,9 +115,10 @@ loadScripts(document, 'script');</script>
 </thead>
 <tbody>
 <tr class="altColor" id="i0">
-<td class="colFirst"><code><a href="StateManager.Factory.html" title="type parameter in StateManager.Factory">A</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#create(O,com.google.common.collect.ImmutableMap)">create</a></span>&#8203;(<a href="StateManager.Factory.html" title="type parameter in StateManager.Factory">O</a>&nbsp;owner,
-<a href="https://guava.dev/releases/21.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect" class="externalLink">ImmutableMap</a>&lt;<a href="property/Property.html" title="interface in net.minecraft.state.property">Property</a>&lt;?&gt;,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html?is-external=true" title="class or interface in java.lang" class="externalLink">Comparable</a>&lt;?&gt;&gt;&nbsp;entries)</code></th>
+<td class="colFirst"><code><a href="StateManager.Factory.html" title="type parameter in StateManager.Factory">S</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#create(O,com.google.common.collect.ImmutableMap,com.mojang.serialization.MapCodec)">create</a></span>&#8203;(<a href="StateManager.Factory.html" title="type parameter in StateManager.Factory">O</a>&nbsp;owner,
+<a href="https://guava.dev/releases/21.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect" class="externalLink">ImmutableMap</a>&lt;<a href="property/Property.html" title="class in net.minecraft.state.property">Property</a>&lt;?&gt;,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html?is-external=true" title="class or interface in java.lang" class="externalLink">Comparable</a>&lt;?&gt;&gt;&nbsp;entries,
+com.mojang.serialization.MapCodec&lt;<a href="StateManager.Factory.html" title="type parameter in StateManager.Factory">S</a>&gt;&nbsp;mapCodec)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -139,11 +140,12 @@ loadScripts(document, 'script');</script>
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="create(java.lang.Object,com.google.common.collect.ImmutableMap)">
+<h3><a id="create(java.lang.Object,com.google.common.collect.ImmutableMap,com.mojang.serialization.MapCodec)">
 <!--   -->
-</a><a id="create(O,com.google.common.collect.ImmutableMap)">create</a></h3>
-<div class="memberSignature"><span class="returnType"><a href="StateManager.Factory.html" title="type parameter in StateManager.Factory">A</a></span>&nbsp;<span class="memberName">create</span>&#8203;(<span class="arguments"><a href="StateManager.Factory.html" title="type parameter in StateManager.Factory">O</a>&nbsp;owner,
-<a href="https://guava.dev/releases/21.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect" class="externalLink">ImmutableMap</a>&lt;<a href="property/Property.html" title="interface in net.minecraft.state.property">Property</a>&lt;?&gt;,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html?is-external=true" title="class or interface in java.lang" class="externalLink">Comparable</a>&lt;?&gt;&gt;&nbsp;entries)</span></div>
+</a><a id="create(O,com.google.common.collect.ImmutableMap,com.mojang.serialization.MapCodec)">create</a></h3>
+<div class="memberSignature"><span class="returnType"><a href="StateManager.Factory.html" title="type parameter in StateManager.Factory">S</a></span>&nbsp;<span class="memberName">create</span>&#8203;(<span class="arguments"><a href="StateManager.Factory.html" title="type parameter in StateManager.Factory">O</a>&nbsp;owner,
+<a href="https://guava.dev/releases/21.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect" class="externalLink">ImmutableMap</a>&lt;<a href="property/Property.html" title="class in net.minecraft.state.property">Property</a>&lt;?&gt;,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html?is-external=true" title="class or interface in java.lang" class="externalLink">Comparable</a>&lt;?&gt;&gt;&nbsp;entries,
+com.mojang.serialization.MapCodec&lt;<a href="StateManager.Factory.html" title="type parameter in StateManager.Factory">S</a>&gt;&nbsp;mapCodec)</span></div>
 </section>
 </li>
 </ul>

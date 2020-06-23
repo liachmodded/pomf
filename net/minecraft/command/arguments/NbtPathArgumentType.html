@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":10,"i1":9,"i2":9,"i3":10};
+<script type="text/javascript">var data = {"i0":10,"i1":9,"i2":9,"i3":9,"i4":9,"i5":10,"i6":9,"i7":9,"i8":9};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -181,11 +181,16 @@ implements com.mojang.brigadier.arguments.ArgumentType&lt;<a href="NbtPathArgume
 </thead>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code>private static <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util" class="externalLink">Collection</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#EXAMPLES">EXAMPLES</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>static com.mojang.brigadier.exceptions.SimpleCommandExceptionType</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#INVALID_PATH_NODE_EXCEPTION">INVALID_PATH_NODE_EXCEPTION</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static com.mojang.brigadier.exceptions.DynamicCommandExceptionType</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#NOTHING_FOUND_EXCEPTION">NOTHING_FOUND_EXCEPTION</a></span></code></th>
 <td class="colLast">&nbsp;</td>
@@ -250,13 +255,40 @@ implements com.mojang.brigadier.arguments.ArgumentType&lt;<a href="NbtPathArgume
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i2">
+<td class="colFirst"><code>private static <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Predicate</a>&lt;<a href="../../nbt/Tag.html" title="interface in net.minecraft.nbt">Tag</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPredicate(net.minecraft.nbt.CompoundTag)">getPredicate</a></span>&#8203;(<a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;filter)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i3">
+<td class="colFirst"><code>private static boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isNameCharacter(char)">isNameCharacter</a></span>&#8203;(char&nbsp;c)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i4">
 <td class="colFirst"><code>static <a href="NbtPathArgumentType.html" title="class in net.minecraft.command.arguments">NbtPathArgumentType</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#nbtPath()">nbtPath</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i3">
+<tr class="rowColor" id="i5">
 <td class="colFirst"><code><a href="NbtPathArgumentType.NbtPath.html" title="class in net.minecraft.command.arguments">NbtPathArgumentType.NbtPath</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#parse(com.mojang.brigadier.StringReader)">parse</a></span>&#8203;(com.mojang.brigadier.StringReader&nbsp;stringReader)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i6">
+<td class="colFirst"><code>private static <a href="NbtPathArgumentType.PathNode.html" title="interface in net.minecraft.command.arguments">NbtPathArgumentType.PathNode</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#parseNode(com.mojang.brigadier.StringReader,boolean)">parseNode</a></span>&#8203;(com.mojang.brigadier.StringReader&nbsp;reader,
+boolean&nbsp;root)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i7">
+<td class="colFirst"><code>private static <a href="NbtPathArgumentType.PathNode.html" title="interface in net.minecraft.command.arguments">NbtPathArgumentType.PathNode</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#readCompoundChildNode(com.mojang.brigadier.StringReader,java.lang.String)">readCompoundChildNode</a></span>&#8203;(com.mojang.brigadier.StringReader&nbsp;reader,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i8">
+<td class="colFirst"><code>private static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#readName(com.mojang.brigadier.StringReader)">readName</a></span>&#8203;(com.mojang.brigadier.StringReader&nbsp;reader)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -286,6 +318,12 @@ implements com.mojang.brigadier.arguments.ArgumentType&lt;<a href="NbtPathArgume
 </a>
 <h2>Field Details</h2>
 <ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="EXAMPLES">EXAMPLES</a></h3>
+<div class="memberSignature"><span class="modifiers">private static final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util" class="externalLink">Collection</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&gt;</span>&nbsp;<span class="memberName">EXAMPLES</span></div>
+</section>
+</li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="INVALID_PATH_NODE_EXCEPTION">INVALID_PATH_NODE_EXCEPTION</a></h3>
@@ -352,12 +390,59 @@ implements com.mojang.brigadier.arguments.ArgumentType&lt;<a href="NbtPathArgume
 </li>
 <li class="blockList">
 <section class="detail">
+<h3><a id="parseNode(com.mojang.brigadier.StringReader,boolean)">parseNode</a></h3>
+<div class="memberSignature"><span class="modifiers">private static</span>&nbsp;<span class="returnType"><a href="NbtPathArgumentType.PathNode.html" title="interface in net.minecraft.command.arguments">NbtPathArgumentType.PathNode</a></span>&nbsp;<span class="memberName">parseNode</span>&#8203;(<span class="arguments">com.mojang.brigadier.StringReader&nbsp;reader,
+boolean&nbsp;root)</span>
+                                               throws <span class="exceptions">com.mojang.brigadier.exceptions.CommandSyntaxException</span></div>
+<dl>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code>com.mojang.brigadier.exceptions.CommandSyntaxException</code></dd>
+</dl>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="readCompoundChildNode(com.mojang.brigadier.StringReader,java.lang.String)">readCompoundChildNode</a></h3>
+<div class="memberSignature"><span class="modifiers">private static</span>&nbsp;<span class="returnType"><a href="NbtPathArgumentType.PathNode.html" title="interface in net.minecraft.command.arguments">NbtPathArgumentType.PathNode</a></span>&nbsp;<span class="memberName">readCompoundChildNode</span>&#8203;(<span class="arguments">com.mojang.brigadier.StringReader&nbsp;reader,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name)</span>
+                                                           throws <span class="exceptions">com.mojang.brigadier.exceptions.CommandSyntaxException</span></div>
+<dl>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code>com.mojang.brigadier.exceptions.CommandSyntaxException</code></dd>
+</dl>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="readName(com.mojang.brigadier.StringReader)">readName</a></h3>
+<div class="memberSignature"><span class="modifiers">private static</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></span>&nbsp;<span class="memberName">readName</span>&#8203;(<span class="arguments">com.mojang.brigadier.StringReader&nbsp;reader)</span>
+                        throws <span class="exceptions">com.mojang.brigadier.exceptions.CommandSyntaxException</span></div>
+<dl>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code>com.mojang.brigadier.exceptions.CommandSyntaxException</code></dd>
+</dl>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="getExamples()">getExamples</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util" class="externalLink">Collection</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&gt;</span>&nbsp;<span class="memberName">getExamples</span>()</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code>getExamples</code>&nbsp;in interface&nbsp;<code>com.mojang.brigadier.arguments.ArgumentType&lt;<a href="NbtPathArgumentType.NbtPath.html" title="class in net.minecraft.command.arguments">NbtPathArgumentType.NbtPath</a>&gt;</code></dd>
 </dl>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="isNameCharacter(char)">isNameCharacter</a></h3>
+<div class="memberSignature"><span class="modifiers">private static</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isNameCharacter</span>&#8203;(<span class="arguments">char&nbsp;c)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="getPredicate(net.minecraft.nbt.CompoundTag)">getPredicate</a></h3>
+<div class="memberSignature"><span class="modifiers">private static</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Predicate</a>&lt;<a href="../../nbt/Tag.html" title="interface in net.minecraft.nbt">Tag</a>&gt;</span>&nbsp;<span class="memberName">getPredicate</span>&#8203;(<span class="arguments"><a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;filter)</span></div>
 </section>
 </li>
 </ul>

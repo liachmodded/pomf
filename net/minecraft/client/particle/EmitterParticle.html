@@ -62,7 +62,7 @@ loadScripts(document, 'script');</script>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
@@ -107,6 +107,40 @@ extends <a href="NoRenderParticle.html" title="class in net.minecraft.client.par
 <!--   -->
 </a>
 <h2>Field Summary</h2>
+<div class="memberSummary">
+<table>
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<thead>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colSecond" scope="col">Field</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#emitterAge">emitterAge</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../entity/Entity.html" title="class in net.minecraft.entity">Entity</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#entity">entity</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#maxEmitterAge">maxEmitterAge</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../particle/ParticleEffect.html" title="interface in net.minecraft.particle">ParticleEffect</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#parameters">parameters</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
 <div class="inheritedList">
 <h3>Fields inherited from class&nbsp;net.minecraft.client.particle.<a href="Particle.html" title="class in net.minecraft.client.particle">Particle</a></h3>
 <a id="fields.inherited.from.class.net.minecraft.client.particle.Particle">
@@ -125,22 +159,34 @@ extends <a href="NoRenderParticle.html" title="class in net.minecraft.client.par
 <caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
 <thead>
 <tr>
-<th class="colFirst" scope="col">Constructor</th>
+<th class="colFirst" scope="col">Modifier</th>
+<th class="colSecond" scope="col">Constructor</th>
 <th class="colLast" scope="col">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.world.World,net.minecraft.entity.Entity,net.minecraft.particle.ParticleEffect)">EmitterParticle</a></span>&#8203;(<a href="../../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world,
+<td class="colFirst"><code>&nbsp;</code></td>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.client.world.ClientWorld,net.minecraft.entity.Entity,net.minecraft.particle.ParticleEffect)">EmitterParticle</a></span>&#8203;(<a href="../world/ClientWorld.html" title="class in net.minecraft.client.world">ClientWorld</a>&nbsp;world,
 <a href="../../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&nbsp;entity,
 <a href="../../particle/ParticleEffect.html" title="interface in net.minecraft.particle">ParticleEffect</a>&nbsp;parameters)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.world.World,net.minecraft.entity.Entity,net.minecraft.particle.ParticleEffect,int)">EmitterParticle</a></span>&#8203;(<a href="../../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world,
+<td class="colFirst"><code>&nbsp;</code></td>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.client.world.ClientWorld,net.minecraft.entity.Entity,net.minecraft.particle.ParticleEffect,int)">EmitterParticle</a></span>&#8203;(<a href="../world/ClientWorld.html" title="class in net.minecraft.client.world">ClientWorld</a>&nbsp;world,
 <a href="../../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&nbsp;entity,
-<a href="../../particle/ParticleEffect.html" title="interface in net.minecraft.particle">ParticleEffect</a>&nbsp;particleEffect,
-int&nbsp;int2)</code></th>
+<a href="../../particle/ParticleEffect.html" title="interface in net.minecraft.particle">ParticleEffect</a>&nbsp;parameters,
+int&nbsp;maxEmitterAge)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private </code></td>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.client.world.ClientWorld,net.minecraft.entity.Entity,net.minecraft.particle.ParticleEffect,int,net.minecraft.util.math.Vec3d)">EmitterParticle</a></span>&#8203;(<a href="../world/ClientWorld.html" title="class in net.minecraft.client.world">ClientWorld</a>&nbsp;world,
+<a href="../../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&nbsp;entity,
+<a href="../../particle/ParticleEffect.html" title="interface in net.minecraft.particle">ParticleEffect</a>&nbsp;parameters,
+int&nbsp;maxEmitterAge,
+<a href="../../util/math/Vec3d.html" title="class in net.minecraft.util.math">Vec3d</a>&nbsp;velocity)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -196,6 +242,40 @@ int&nbsp;int2)</code></th>
 </section>
 <section class="details">
 <ul class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<li class="blockList">
+<section class="fieldDetails"><a id="field.detail">
+<!--   -->
+</a>
+<h2>Field Details</h2>
+<ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="entity">entity</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../../entity/Entity.html" title="class in net.minecraft.entity">Entity</a></span>&nbsp;<span class="memberName">entity</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="emitterAge">emitterAge</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">emitterAge</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="maxEmitterAge">maxEmitterAge</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">maxEmitterAge</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="parameters">parameters</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../../particle/ParticleEffect.html" title="interface in net.minecraft.particle">ParticleEffect</a></span>&nbsp;<span class="memberName">parameters</span></div>
+</section>
+</li>
+</ul>
+</section>
+</li>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <li class="blockList">
 <section class="constructorDetails"><a id="constructor.detail">
@@ -205,19 +285,29 @@ int&nbsp;int2)</code></th>
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="&lt;init&gt;(net.minecraft.world.World,net.minecraft.entity.Entity,net.minecraft.particle.ParticleEffect)">EmitterParticle</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">EmitterParticle</span>&#8203;(<span class="arguments"><a href="../../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world,
+<h3><a id="&lt;init&gt;(net.minecraft.client.world.ClientWorld,net.minecraft.entity.Entity,net.minecraft.particle.ParticleEffect)">EmitterParticle</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">EmitterParticle</span>&#8203;(<span class="arguments"><a href="../world/ClientWorld.html" title="class in net.minecraft.client.world">ClientWorld</a>&nbsp;world,
 <a href="../../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&nbsp;entity,
 <a href="../../particle/ParticleEffect.html" title="interface in net.minecraft.particle">ParticleEffect</a>&nbsp;parameters)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="&lt;init&gt;(net.minecraft.world.World,net.minecraft.entity.Entity,net.minecraft.particle.ParticleEffect,int)">EmitterParticle</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">EmitterParticle</span>&#8203;(<span class="arguments"><a href="../../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world,
+<h3><a id="&lt;init&gt;(net.minecraft.client.world.ClientWorld,net.minecraft.entity.Entity,net.minecraft.particle.ParticleEffect,int)">EmitterParticle</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">EmitterParticle</span>&#8203;(<span class="arguments"><a href="../world/ClientWorld.html" title="class in net.minecraft.client.world">ClientWorld</a>&nbsp;world,
 <a href="../../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&nbsp;entity,
-<a href="../../particle/ParticleEffect.html" title="interface in net.minecraft.particle">ParticleEffect</a>&nbsp;particleEffect,
-int&nbsp;int2)</span></div>
+<a href="../../particle/ParticleEffect.html" title="interface in net.minecraft.particle">ParticleEffect</a>&nbsp;parameters,
+int&nbsp;maxEmitterAge)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="&lt;init&gt;(net.minecraft.client.world.ClientWorld,net.minecraft.entity.Entity,net.minecraft.particle.ParticleEffect,int,net.minecraft.util.math.Vec3d)">EmitterParticle</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="memberName">EmitterParticle</span>&#8203;(<span class="arguments"><a href="../world/ClientWorld.html" title="class in net.minecraft.client.world">ClientWorld</a>&nbsp;world,
+<a href="../../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&nbsp;entity,
+<a href="../../particle/ParticleEffect.html" title="interface in net.minecraft.particle">ParticleEffect</a>&nbsp;parameters,
+int&nbsp;maxEmitterAge,
+<a href="../../util/math/Vec3d.html" title="class in net.minecraft.util.math">Vec3d</a>&nbsp;velocity)</span></div>
 </section>
 </li>
 </ul>
@@ -279,7 +369,7 @@ int&nbsp;int2)</span></div>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>

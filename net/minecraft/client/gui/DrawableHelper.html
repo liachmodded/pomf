@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":9,"i3":10,"i4":9,"i5":9,"i6":9,"i7":10,"i8":9,"i9":10,"i10":9,"i11":9,"i12":10,"i13":10,"i14":10};
+<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":9,"i4":10,"i5":9,"i6":9,"i7":9,"i8":10,"i9":9,"i10":9,"i11":10,"i12":10,"i13":9,"i14":9,"i15":10,"i16":9,"i17":10,"i18":10,"i19":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -139,6 +139,13 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="block">The texture of icons used in the stats screen.</div>
 </td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#zOffset">zOffset</a></span></code></th>
+<td class="colLast">
+<div class="block">The z offset used by <a href="DrawableHelper.html" title="class in net.minecraft.client.gui"><code>DrawableHelper</code></a>.</div>
+</td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -189,24 +196,37 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tbody>
 <tr class="altColor" id="i0">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#drawCenteredString(net.minecraft.client.font.TextRenderer,java.lang.String,int,int,int)">drawCenteredString</a></span>&#8203;(<a href="../font/TextRenderer.html" title="class in net.minecraft.client.font">TextRenderer</a>&nbsp;textRenderer,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;str,
-int&nbsp;centerX,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#drawCenteredString(net.minecraft.client.util.math.MatrixStack,net.minecraft.client.font.TextRenderer,java.lang.String,int,int,int)">drawCenteredString</a></span>&#8203;(<a href="../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
+<a href="../font/TextRenderer.html" title="class in net.minecraft.client.font">TextRenderer</a>&nbsp;textRenderer,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;text,
+int&nbsp;x,
 int&nbsp;y,
 int&nbsp;color)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
-<td class="colFirst"><code>protected void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#drawHorizontalLine(int,int,int,int)">drawHorizontalLine</a></span>&#8203;(int&nbsp;x1,
-int&nbsp;x2,
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#drawCenteredText(net.minecraft.client.util.math.MatrixStack,net.minecraft.client.font.TextRenderer,net.minecraft.text.StringRenderable,int,int,int)">drawCenteredText</a></span>&#8203;(<a href="../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
+<a href="../font/TextRenderer.html" title="class in net.minecraft.client.font">TextRenderer</a>&nbsp;textRenderer,
+<a href="../../text/StringRenderable.html" title="interface in net.minecraft.text">StringRenderable</a>&nbsp;stringRenderable,
+int&nbsp;x,
 int&nbsp;y,
 int&nbsp;color)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i2">
+<td class="colFirst"><code>protected void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#drawHorizontalLine(net.minecraft.client.util.math.MatrixStack,int,int,int,int)">drawHorizontalLine</a></span>&#8203;(<a href="../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
+int&nbsp;x1,
+int&nbsp;x2,
+int&nbsp;y,
+int&nbsp;color)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i3">
 <td class="colFirst"><code>static void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#drawSprite(int,int,int,int,int,net.minecraft.client.texture.Sprite)">drawSprite</a></span>&#8203;(int&nbsp;x,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#drawSprite(net.minecraft.client.util.math.MatrixStack,int,int,int,int,int,net.minecraft.client.texture.Sprite)">drawSprite</a></span>&#8203;(<a href="../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
+int&nbsp;x,
 int&nbsp;y,
 int&nbsp;z,
 int&nbsp;width,
@@ -214,18 +234,20 @@ int&nbsp;height,
 <a href="../texture/Sprite.html" title="class in net.minecraft.client.texture">Sprite</a>&nbsp;sprite)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i3">
+<tr class="altColor" id="i4">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#drawString(net.minecraft.client.font.TextRenderer,java.lang.String,int,int,int)">drawString</a></span>&#8203;(<a href="../font/TextRenderer.html" title="class in net.minecraft.client.font">TextRenderer</a>&nbsp;textRenderer,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;str,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#drawStringWithShadow(net.minecraft.client.util.math.MatrixStack,net.minecraft.client.font.TextRenderer,java.lang.String,int,int,int)">drawStringWithShadow</a></span>&#8203;(<a href="../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
+<a href="../font/TextRenderer.html" title="class in net.minecraft.client.font">TextRenderer</a>&nbsp;textRenderer,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;text,
 int&nbsp;x,
 int&nbsp;y,
 int&nbsp;color)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i4">
+<tr class="rowColor" id="i5">
 <td class="colFirst"><code>static void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#drawTexture(int,int,float,float,int,int,int,int)">drawTexture</a></span>&#8203;(int&nbsp;x,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#drawTexture(net.minecraft.client.util.math.MatrixStack,int,int,float,float,int,int,int,int)">drawTexture</a></span>&#8203;(<a href="../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
+int&nbsp;x,
 int&nbsp;y,
 float&nbsp;u,
 float&nbsp;v,
@@ -233,11 +255,14 @@ int&nbsp;width,
 int&nbsp;height,
 int&nbsp;textureWidth,
 int&nbsp;textureHeight)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Draws a textured rectangle from a region in a texture.</div>
+</td>
 </tr>
-<tr class="rowColor" id="i5">
+<tr class="altColor" id="i6">
 <td class="colFirst"><code>static void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#drawTexture(int,int,int,float,float,int,int,int,int)">drawTexture</a></span>&#8203;(int&nbsp;x,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#drawTexture(net.minecraft.client.util.math.MatrixStack,int,int,int,float,float,int,int,int,int)">drawTexture</a></span>&#8203;(<a href="../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
+int&nbsp;x,
 int&nbsp;y,
 int&nbsp;z,
 float&nbsp;u,
@@ -246,64 +271,101 @@ int&nbsp;width,
 int&nbsp;height,
 int&nbsp;textureHeight,
 int&nbsp;textureWidth)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Draws a textured rectangle from a region in a texture.</div>
+</td>
 </tr>
-<tr class="altColor" id="i6">
+<tr class="rowColor" id="i7">
 <td class="colFirst"><code>static void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#drawTexture(int,int,int,int,float,float,int,int,int,int)">drawTexture</a></span>&#8203;(int&nbsp;x,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#drawTexture(net.minecraft.client.util.math.MatrixStack,int,int,int,int,float,float,int,int,int,int)">drawTexture</a></span>&#8203;(<a href="../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
+int&nbsp;x,
 int&nbsp;y,
 int&nbsp;width,
 int&nbsp;height,
 float&nbsp;u,
 float&nbsp;v,
-int&nbsp;uWidth,
-int&nbsp;vHeight,
+int&nbsp;regionWidth,
+int&nbsp;regionHeight,
 int&nbsp;textureWidth,
 int&nbsp;textureHeight)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Draws a textured rectangle from a region in a texture.</div>
+</td>
 </tr>
-<tr class="rowColor" id="i7">
+<tr class="altColor" id="i8">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#drawTexture(int,int,int,int,int,int)">drawTexture</a></span>&#8203;(int&nbsp;x,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#drawTexture(net.minecraft.client.util.math.MatrixStack,int,int,int,int,int,int)">drawTexture</a></span>&#8203;(<a href="../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
+int&nbsp;x,
 int&nbsp;y,
 int&nbsp;u,
 int&nbsp;v,
 int&nbsp;width,
 int&nbsp;height)</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="altColor" id="i8">
-<td class="colFirst"><code>protected static void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#drawTexturedQuad(int,int,int,int,int,float,float,float,float)">drawTexturedQuad</a></span>&#8203;(int&nbsp;xStart,
-int&nbsp;xEnd,
-int&nbsp;yStart,
-int&nbsp;yEnd,
-int&nbsp;z,
-float&nbsp;uStart,
-float&nbsp;uEnd,
-float&nbsp;vStart,
-float&nbsp;vEnd)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Draws a textured rectangle from a region in a 256x256 texture.</div>
+</td>
 </tr>
 <tr class="rowColor" id="i9">
+<td class="colFirst"><code>private static void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#drawTexture(net.minecraft.client.util.math.MatrixStack,int,int,int,int,int,int,int,float,float,int,int)">drawTexture</a></span>&#8203;(<a href="../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
+int&nbsp;x0,
+int&nbsp;y0,
+int&nbsp;x1,
+int&nbsp;y1,
+int&nbsp;z,
+int&nbsp;regionWidth,
+int&nbsp;regionHeight,
+float&nbsp;u,
+float&nbsp;v,
+int&nbsp;textureWidth,
+int&nbsp;textureHeight)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i10">
+<td class="colFirst"><code>private static void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#drawTexturedQuad(net.minecraft.util.math.Matrix4f,int,int,int,int,int,float,float,float,float)">drawTexturedQuad</a></span>&#8203;(<a href="../../util/math/Matrix4f.html" title="class in net.minecraft.util.math">Matrix4f</a>&nbsp;matrices,
+int&nbsp;x0,
+int&nbsp;x1,
+int&nbsp;y0,
+int&nbsp;y1,
+int&nbsp;z,
+float&nbsp;u0,
+float&nbsp;u1,
+float&nbsp;v0,
+float&nbsp;v1)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i11">
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#drawTextWithShadow(net.minecraft.client.util.math.MatrixStack,net.minecraft.client.font.TextRenderer,net.minecraft.text.StringRenderable,int,int,int)">drawTextWithShadow</a></span>&#8203;(<a href="../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
+<a href="../font/TextRenderer.html" title="class in net.minecraft.client.font">TextRenderer</a>&nbsp;textRenderer,
+<a href="../../text/StringRenderable.html" title="interface in net.minecraft.text">StringRenderable</a>&nbsp;stringRenderable,
+int&nbsp;x,
+int&nbsp;y,
+int&nbsp;color)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i12">
 <td class="colFirst"><code>protected void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#drawVerticalLine(int,int,int,int)">drawVerticalLine</a></span>&#8203;(int&nbsp;x,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#drawVerticalLine(net.minecraft.client.util.math.MatrixStack,int,int,int,int)">drawVerticalLine</a></span>&#8203;(<a href="../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
+int&nbsp;x,
 int&nbsp;y1,
 int&nbsp;y2,
 int&nbsp;color)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i10">
+<tr class="rowColor" id="i13">
 <td class="colFirst"><code>static void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#fill(int,int,int,int,int)">fill</a></span>&#8203;(int&nbsp;x1,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#fill(net.minecraft.client.util.math.MatrixStack,int,int,int,int,int)">fill</a></span>&#8203;(<a href="../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
+int&nbsp;x1,
 int&nbsp;y1,
 int&nbsp;x2,
 int&nbsp;y2,
 int&nbsp;color)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i11">
-<td class="colFirst"><code>static void</code></td>
+<tr class="altColor" id="i14">
+<td class="colFirst"><code>private static void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#fill(net.minecraft.util.math.Matrix4f,int,int,int,int,int)">fill</a></span>&#8203;(<a href="../../util/math/Matrix4f.html" title="class in net.minecraft.util.math">Matrix4f</a>&nbsp;matrix,
 int&nbsp;x1,
 int&nbsp;y1,
@@ -312,9 +374,10 @@ int&nbsp;y2,
 int&nbsp;color)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i12">
+<tr class="rowColor" id="i15">
 <td class="colFirst"><code>protected void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#fillGradient(int,int,int,int,int,int)">fillGradient</a></span>&#8203;(int&nbsp;xStart,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#fillGradient(net.minecraft.client.util.math.MatrixStack,int,int,int,int,int,int)">fillGradient</a></span>&#8203;(<a href="../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
+int&nbsp;xStart,
 int&nbsp;yStart,
 int&nbsp;xEnd,
 int&nbsp;yEnd,
@@ -322,12 +385,32 @@ int&nbsp;colorStart,
 int&nbsp;colorEnd)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i13">
+<tr class="altColor" id="i16">
+<td class="colFirst"><code>protected static void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#fillGradient(net.minecraft.util.math.Matrix4f,net.minecraft.client.render.BufferBuilder,int,int,int,int,int,int,int)">fillGradient</a></span>&#8203;(<a href="../../util/math/Matrix4f.html" title="class in net.minecraft.util.math">Matrix4f</a>&nbsp;matrix4f,
+<a href="../render/BufferBuilder.html" title="class in net.minecraft.client.render">BufferBuilder</a>&nbsp;bufferBuilder,
+int&nbsp;xStart,
+int&nbsp;yStart,
+int&nbsp;xEnd,
+int&nbsp;yEnd,
+int&nbsp;int2,
+int&nbsp;int3,
+int&nbsp;int4)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i17">
 <td class="colFirst"><code>int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getZOffset()">getZOffset</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i14">
+<tr class="altColor" id="i18">
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_29343(int,int,java.util.function.BiConsumer)">method_29343</a></span>&#8203;(int&nbsp;int2,
+int&nbsp;int3,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/BiConsumer.html?is-external=true" title="class or interface in java.util.function" class="externalLink">BiConsumer</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang" class="externalLink">Integer</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang" class="externalLink">Integer</a>&gt;&nbsp;biConsumer)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i19">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setZOffset(int)">setZOffset</a></span>&#8203;(int&nbsp;zOffset)</code></th>
 <td class="colLast">&nbsp;</td>
@@ -375,6 +458,13 @@ int&nbsp;colorEnd)</code></th>
 <div class="block">The texture of various icons and widgets used for rendering ingame indicators.</div>
 </section>
 </li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="zOffset">zOffset</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">zOffset</span></div>
+<div class="block">The z offset used by <a href="DrawableHelper.html" title="class in net.minecraft.client.gui"><code>DrawableHelper</code></a>.</div>
+</section>
+</li>
 </ul>
 </section>
 </li>
@@ -403,8 +493,9 @@ int&nbsp;colorEnd)</code></th>
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="drawHorizontalLine(int,int,int,int)">drawHorizontalLine</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">drawHorizontalLine</span>&#8203;(<span class="arguments">int&nbsp;x1,
+<h3><a id="drawHorizontalLine(net.minecraft.client.util.math.MatrixStack,int,int,int,int)">drawHorizontalLine</a></h3>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">drawHorizontalLine</span>&#8203;(<span class="arguments"><a href="../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
+int&nbsp;x1,
 int&nbsp;x2,
 int&nbsp;y,
 int&nbsp;color)</span></div>
@@ -412,8 +503,9 @@ int&nbsp;color)</span></div>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="drawVerticalLine(int,int,int,int)">drawVerticalLine</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">drawVerticalLine</span>&#8203;(<span class="arguments">int&nbsp;x,
+<h3><a id="drawVerticalLine(net.minecraft.client.util.math.MatrixStack,int,int,int,int)">drawVerticalLine</a></h3>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">drawVerticalLine</span>&#8203;(<span class="arguments"><a href="../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
+int&nbsp;x,
 int&nbsp;y1,
 int&nbsp;y2,
 int&nbsp;color)</span></div>
@@ -421,18 +513,8 @@ int&nbsp;color)</span></div>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="fill(int,int,int,int,int)">fill</a></h3>
-<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">fill</span>&#8203;(<span class="arguments">int&nbsp;x1,
-int&nbsp;y1,
-int&nbsp;x2,
-int&nbsp;y2,
-int&nbsp;color)</span></div>
-</section>
-</li>
-<li class="blockList">
-<section class="detail">
-<h3><a id="fill(net.minecraft.util.math.Matrix4f,int,int,int,int,int)">fill</a></h3>
-<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">fill</span>&#8203;(<span class="arguments"><a href="../../util/math/Matrix4f.html" title="class in net.minecraft.util.math">Matrix4f</a>&nbsp;matrix,
+<h3><a id="fill(net.minecraft.client.util.math.MatrixStack,int,int,int,int,int)">fill</a></h3>
+<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">fill</span>&#8203;(<span class="arguments"><a href="../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
 int&nbsp;x1,
 int&nbsp;y1,
 int&nbsp;x2,
@@ -442,8 +524,20 @@ int&nbsp;color)</span></div>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="fillGradient(int,int,int,int,int,int)">fillGradient</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">fillGradient</span>&#8203;(<span class="arguments">int&nbsp;xStart,
+<h3><a id="fill(net.minecraft.util.math.Matrix4f,int,int,int,int,int)">fill</a></h3>
+<div class="memberSignature"><span class="modifiers">private static</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">fill</span>&#8203;(<span class="arguments"><a href="../../util/math/Matrix4f.html" title="class in net.minecraft.util.math">Matrix4f</a>&nbsp;matrix,
+int&nbsp;x1,
+int&nbsp;y1,
+int&nbsp;x2,
+int&nbsp;y2,
+int&nbsp;color)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="fillGradient(net.minecraft.client.util.math.MatrixStack,int,int,int,int,int,int)">fillGradient</a></h3>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">fillGradient</span>&#8203;(<span class="arguments"><a href="../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
+int&nbsp;xStart,
 int&nbsp;yStart,
 int&nbsp;xEnd,
 int&nbsp;yEnd,
@@ -453,19 +547,24 @@ int&nbsp;colorEnd)</span></div>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="drawCenteredString(net.minecraft.client.font.TextRenderer,java.lang.String,int,int,int)">drawCenteredString</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">drawCenteredString</span>&#8203;(<span class="arguments"><a href="../font/TextRenderer.html" title="class in net.minecraft.client.font">TextRenderer</a>&nbsp;textRenderer,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;str,
-int&nbsp;centerX,
-int&nbsp;y,
-int&nbsp;color)</span></div>
+<h3><a id="fillGradient(net.minecraft.util.math.Matrix4f,net.minecraft.client.render.BufferBuilder,int,int,int,int,int,int,int)">fillGradient</a></h3>
+<div class="memberSignature"><span class="modifiers">protected static</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">fillGradient</span>&#8203;(<span class="arguments"><a href="../../util/math/Matrix4f.html" title="class in net.minecraft.util.math">Matrix4f</a>&nbsp;matrix4f,
+<a href="../render/BufferBuilder.html" title="class in net.minecraft.client.render">BufferBuilder</a>&nbsp;bufferBuilder,
+int&nbsp;xStart,
+int&nbsp;yStart,
+int&nbsp;xEnd,
+int&nbsp;yEnd,
+int&nbsp;int2,
+int&nbsp;int3,
+int&nbsp;int4)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="drawString(net.minecraft.client.font.TextRenderer,java.lang.String,int,int,int)">drawString</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">drawString</span>&#8203;(<span class="arguments"><a href="../font/TextRenderer.html" title="class in net.minecraft.client.font">TextRenderer</a>&nbsp;textRenderer,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;str,
+<h3><a id="drawCenteredString(net.minecraft.client.util.math.MatrixStack,net.minecraft.client.font.TextRenderer,java.lang.String,int,int,int)">drawCenteredString</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">drawCenteredString</span>&#8203;(<span class="arguments"><a href="../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
+<a href="../font/TextRenderer.html" title="class in net.minecraft.client.font">TextRenderer</a>&nbsp;textRenderer,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;text,
 int&nbsp;x,
 int&nbsp;y,
 int&nbsp;color)</span></div>
@@ -473,8 +572,50 @@ int&nbsp;color)</span></div>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="drawSprite(int,int,int,int,int,net.minecraft.client.texture.Sprite)">drawSprite</a></h3>
-<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">drawSprite</span>&#8203;(<span class="arguments">int&nbsp;x,
+<h3><a id="drawCenteredText(net.minecraft.client.util.math.MatrixStack,net.minecraft.client.font.TextRenderer,net.minecraft.text.StringRenderable,int,int,int)">drawCenteredText</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">drawCenteredText</span>&#8203;(<span class="arguments"><a href="../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
+<a href="../font/TextRenderer.html" title="class in net.minecraft.client.font">TextRenderer</a>&nbsp;textRenderer,
+<a href="../../text/StringRenderable.html" title="interface in net.minecraft.text">StringRenderable</a>&nbsp;stringRenderable,
+int&nbsp;x,
+int&nbsp;y,
+int&nbsp;color)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="drawStringWithShadow(net.minecraft.client.util.math.MatrixStack,net.minecraft.client.font.TextRenderer,java.lang.String,int,int,int)">drawStringWithShadow</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">drawStringWithShadow</span>&#8203;(<span class="arguments"><a href="../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
+<a href="../font/TextRenderer.html" title="class in net.minecraft.client.font">TextRenderer</a>&nbsp;textRenderer,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;text,
+int&nbsp;x,
+int&nbsp;y,
+int&nbsp;color)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="drawTextWithShadow(net.minecraft.client.util.math.MatrixStack,net.minecraft.client.font.TextRenderer,net.minecraft.text.StringRenderable,int,int,int)">drawTextWithShadow</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">drawTextWithShadow</span>&#8203;(<span class="arguments"><a href="../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
+<a href="../font/TextRenderer.html" title="class in net.minecraft.client.font">TextRenderer</a>&nbsp;textRenderer,
+<a href="../../text/StringRenderable.html" title="interface in net.minecraft.text">StringRenderable</a>&nbsp;stringRenderable,
+int&nbsp;x,
+int&nbsp;y,
+int&nbsp;color)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="method_29343(int,int,java.util.function.BiConsumer)">method_29343</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">method_29343</span>&#8203;(<span class="arguments">int&nbsp;int2,
+int&nbsp;int3,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/BiConsumer.html?is-external=true" title="class or interface in java.util.function" class="externalLink">BiConsumer</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang" class="externalLink">Integer</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang" class="externalLink">Integer</a>&gt;&nbsp;biConsumer)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="drawSprite(net.minecraft.client.util.math.MatrixStack,int,int,int,int,int,net.minecraft.client.texture.Sprite)">drawSprite</a></h3>
+<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">drawSprite</span>&#8203;(<span class="arguments"><a href="../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
+int&nbsp;x,
 int&nbsp;y,
 int&nbsp;z,
 int&nbsp;width,
@@ -484,19 +625,37 @@ int&nbsp;height,
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="drawTexture(int,int,int,int,int,int)">drawTexture</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">drawTexture</span>&#8203;(<span class="arguments">int&nbsp;x,
+<h3><a id="drawTexture(net.minecraft.client.util.math.MatrixStack,int,int,int,int,int,int)">drawTexture</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">drawTexture</span>&#8203;(<span class="arguments"><a href="../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
+int&nbsp;x,
 int&nbsp;y,
 int&nbsp;u,
 int&nbsp;v,
 int&nbsp;width,
 int&nbsp;height)</span></div>
+<div class="block">Draws a textured rectangle from a region in a 256x256 texture.
+
+ <p>The Z coordinate of the rectangle is <a href="#zOffset"><code>zOffset</code></a>.
+
+ <p>The width and height of the region are the same as
+ the dimensions of the rectangle.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>matrices</code> - the matrix stack used for rendering</dd>
+<dd><code>x</code> - the X coordinate of the rectangle</dd>
+<dd><code>y</code> - the Y coordinate of the rectangle</dd>
+<dd><code>u</code> - the left-most coordinate of the texture region</dd>
+<dd><code>v</code> - the top-most coordinate of the texture region</dd>
+<dd><code>width</code> - the width</dd>
+<dd><code>height</code> - the height</dd>
+</dl>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="drawTexture(int,int,int,float,float,int,int,int,int)">drawTexture</a></h3>
-<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">drawTexture</span>&#8203;(<span class="arguments">int&nbsp;x,
+<h3><a id="drawTexture(net.minecraft.client.util.math.MatrixStack,int,int,int,float,float,int,int,int,int)">drawTexture</a></h3>
+<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">drawTexture</span>&#8203;(<span class="arguments"><a href="../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
+int&nbsp;x,
 int&nbsp;y,
 int&nbsp;z,
 float&nbsp;u,
@@ -505,27 +664,61 @@ int&nbsp;width,
 int&nbsp;height,
 int&nbsp;textureHeight,
 int&nbsp;textureWidth)</span></div>
+<div class="block">Draws a textured rectangle from a region in a texture.
+
+ <p>The width and height of the region are the same as
+ the dimensions of the rectangle.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>matrices</code> - the matrix stack used for rendering</dd>
+<dd><code>x</code> - the X coordinate of the rectangle</dd>
+<dd><code>y</code> - the Y coordinate of the rectangle</dd>
+<dd><code>z</code> - the Z coordinate of the rectangle</dd>
+<dd><code>u</code> - the left-most coordinate of the texture region</dd>
+<dd><code>v</code> - the top-most coordinate of the texture region</dd>
+<dd><code>width</code> - the width of the rectangle</dd>
+<dd><code>height</code> - the height of the rectangle</dd>
+<dd><code>textureHeight</code> - the height of the entire texture</dd>
+<dd><code>textureWidth</code> - the width of the entire texture</dd>
+</dl>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="drawTexture(int,int,int,int,float,float,int,int,int,int)">drawTexture</a></h3>
-<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">drawTexture</span>&#8203;(<span class="arguments">int&nbsp;x,
+<h3><a id="drawTexture(net.minecraft.client.util.math.MatrixStack,int,int,int,int,float,float,int,int,int,int)">drawTexture</a></h3>
+<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">drawTexture</span>&#8203;(<span class="arguments"><a href="../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
+int&nbsp;x,
 int&nbsp;y,
 int&nbsp;width,
 int&nbsp;height,
 float&nbsp;u,
 float&nbsp;v,
-int&nbsp;uWidth,
-int&nbsp;vHeight,
+int&nbsp;regionWidth,
+int&nbsp;regionHeight,
 int&nbsp;textureWidth,
 int&nbsp;textureHeight)</span></div>
+<div class="block">Draws a textured rectangle from a region in a texture.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>matrices</code> - the matrix stack used for rendering</dd>
+<dd><code>x</code> - the X coordinate of the rectangle</dd>
+<dd><code>y</code> - the Y coordinate of the rectangle</dd>
+<dd><code>width</code> - the width of the rectangle</dd>
+<dd><code>height</code> - the height of the rectangle</dd>
+<dd><code>u</code> - the left-most coordinate of the texture region</dd>
+<dd><code>v</code> - the top-most coordinate of the texture region</dd>
+<dd><code>regionWidth</code> - the width of the texture region</dd>
+<dd><code>regionHeight</code> - the height of the texture region</dd>
+<dd><code>textureWidth</code> - the width of the entire texture</dd>
+<dd><code>textureHeight</code> - the height of the entire texture</dd>
+</dl>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="drawTexture(int,int,float,float,int,int,int,int)">drawTexture</a></h3>
-<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">drawTexture</span>&#8203;(<span class="arguments">int&nbsp;x,
+<h3><a id="drawTexture(net.minecraft.client.util.math.MatrixStack,int,int,float,float,int,int,int,int)">drawTexture</a></h3>
+<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">drawTexture</span>&#8203;(<span class="arguments"><a href="../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
+int&nbsp;x,
 int&nbsp;y,
 float&nbsp;u,
 float&nbsp;v,
@@ -533,20 +726,54 @@ int&nbsp;width,
 int&nbsp;height,
 int&nbsp;textureWidth,
 int&nbsp;textureHeight)</span></div>
+<div class="block">Draws a textured rectangle from a region in a texture.
+
+ <p>The width and height of the region are the same as
+ the dimensions of the rectangle.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>matrices</code> - the matrix stack used for rendering</dd>
+<dd><code>x</code> - the X coordinate of the rectangle</dd>
+<dd><code>y</code> - the Y coordinate of the rectangle</dd>
+<dd><code>u</code> - the left-most coordinate of the texture region</dd>
+<dd><code>v</code> - the top-most coordinate of the texture region</dd>
+<dd><code>width</code> - the width of the rectangle</dd>
+<dd><code>height</code> - the height of the rectangle</dd>
+<dd><code>textureWidth</code> - the width of the entire texture</dd>
+<dd><code>textureHeight</code> - the height of the entire texture</dd>
+</dl>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="drawTexturedQuad(int,int,int,int,int,float,float,float,float)">drawTexturedQuad</a></h3>
-<div class="memberSignature"><span class="modifiers">protected static</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">drawTexturedQuad</span>&#8203;(<span class="arguments">int&nbsp;xStart,
-int&nbsp;xEnd,
-int&nbsp;yStart,
-int&nbsp;yEnd,
+<h3><a id="drawTexture(net.minecraft.client.util.math.MatrixStack,int,int,int,int,int,int,int,float,float,int,int)">drawTexture</a></h3>
+<div class="memberSignature"><span class="modifiers">private static</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">drawTexture</span>&#8203;(<span class="arguments"><a href="../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
+int&nbsp;x0,
+int&nbsp;y0,
+int&nbsp;x1,
+int&nbsp;y1,
 int&nbsp;z,
-float&nbsp;uStart,
-float&nbsp;uEnd,
-float&nbsp;vStart,
-float&nbsp;vEnd)</span></div>
+int&nbsp;regionWidth,
+int&nbsp;regionHeight,
+float&nbsp;u,
+float&nbsp;v,
+int&nbsp;textureWidth,
+int&nbsp;textureHeight)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="drawTexturedQuad(net.minecraft.util.math.Matrix4f,int,int,int,int,int,float,float,float,float)">drawTexturedQuad</a></h3>
+<div class="memberSignature"><span class="modifiers">private static</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">drawTexturedQuad</span>&#8203;(<span class="arguments"><a href="../../util/math/Matrix4f.html" title="class in net.minecraft.util.math">Matrix4f</a>&nbsp;matrices,
+int&nbsp;x0,
+int&nbsp;x1,
+int&nbsp;y0,
+int&nbsp;y1,
+int&nbsp;z,
+float&nbsp;u0,
+float&nbsp;u1,
+float&nbsp;v0,
+float&nbsp;v1)</span></div>
 </section>
 </li>
 <li class="blockList">

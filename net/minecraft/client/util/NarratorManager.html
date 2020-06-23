@@ -19,8 +19,8 @@
 <script type="text/javascript" src="../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10};
-var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
+<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":9,"i4":10,"i5":10,"i6":10,"i7":10};
+var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
@@ -129,6 +129,16 @@ implements <a href="../gui/ClientChatListener.html" title="interface in net.mine
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#INSTANCE">INSTANCE</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="https://logging.apache.org/log4j/2.x/log4j-api/apidocs/org/apache/logging/log4j/Logger.html?is-external=true" title="class or interface in org.apache.logging.log4j" class="externalLink">Logger</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#LOGGER">LOGGER</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private com.mojang.text2speech.Narrator</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#narrator">narrator</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -166,7 +176,7 @@ implements <a href="../gui/ClientChatListener.html" title="interface in net.mine
 </a>
 <h2>Method Summary</h2>
 <div class="memberSummary">
-<div role="tablist" aria-orientation="horizontal"><button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t2" class="tableTab" onclick="show(2);">Instance Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t4" class="tableTab" onclick="show(8);">Concrete Methods</button></div>
+<div role="tablist" aria-orientation="horizontal"><button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t1" class="tableTab" onclick="show(1);">Static Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t2" class="tableTab" onclick="show(2);">Instance Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t4" class="tableTab" onclick="show(8);">Concrete Methods</button></div>
 <div id="memberSummary_tabpanel" role="tabpanel">
 <table aria-labelledby="t0">
 <thead>
@@ -193,19 +203,31 @@ implements <a href="../gui/ClientChatListener.html" title="interface in net.mine
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i3">
+<td class="colFirst"><code>private static <a href="../options/NarratorOption.html" title="enum in net.minecraft.client.options">NarratorOption</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getNarratorOption()">getNarratorOption</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i4">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isActive()">isActive</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i4">
+<tr class="rowColor" id="i5">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#narrate(boolean,java.lang.String)">narrate</a></span>&#8203;(boolean&nbsp;interrupt,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;message)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i6">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#narrate(java.lang.String)">narrate</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;text)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i5">
+<tr class="rowColor" id="i7">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#onChatMessage(net.minecraft.network.MessageType,net.minecraft.text.Text)">onChatMessage</a></span>&#8203;(<a href="../../network/MessageType.html" title="enum in net.minecraft.network">MessageType</a>&nbsp;messageType,
-<a href="../../text/Text.html" title="interface in net.minecraft.text">Text</a>&nbsp;message)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#onChatMessage(net.minecraft.network.MessageType,net.minecraft.text.Text,java.util.UUID)">onChatMessage</a></span>&#8203;(<a href="../../network/MessageType.html" title="enum in net.minecraft.network">MessageType</a>&nbsp;messageType,
+<a href="../../text/Text.html" title="interface in net.minecraft.text">Text</a>&nbsp;message,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util" class="externalLink">UUID</a>&nbsp;senderUuid)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -238,8 +260,20 @@ implements <a href="../gui/ClientChatListener.html" title="interface in net.mine
 </li>
 <li class="blockList">
 <section class="detail">
+<h3><a id="LOGGER">LOGGER</a></h3>
+<div class="memberSignature"><span class="modifiers">private static final</span>&nbsp;<span class="returnType"><a href="https://logging.apache.org/log4j/2.x/log4j-api/apidocs/org/apache/logging/log4j/Logger.html?is-external=true" title="class or interface in org.apache.logging.log4j" class="externalLink">Logger</a></span>&nbsp;<span class="memberName">LOGGER</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="INSTANCE">INSTANCE</a></h3>
 <div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="NarratorManager.html" title="class in net.minecraft.client.util">NarratorManager</a></span>&nbsp;<span class="memberName">INSTANCE</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="narrator">narrator</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType">com.mojang.text2speech.Narrator</span>&nbsp;<span class="memberName">narrator</span></div>
 </section>
 </li>
 </ul>
@@ -270,12 +304,13 @@ implements <a href="../gui/ClientChatListener.html" title="interface in net.mine
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="onChatMessage(net.minecraft.network.MessageType,net.minecraft.text.Text)">onChatMessage</a></h3>
+<h3><a id="onChatMessage(net.minecraft.network.MessageType,net.minecraft.text.Text,java.util.UUID)">onChatMessage</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">onChatMessage</span>&#8203;(<span class="arguments"><a href="../../network/MessageType.html" title="enum in net.minecraft.network">MessageType</a>&nbsp;messageType,
-<a href="../../text/Text.html" title="interface in net.minecraft.text">Text</a>&nbsp;message)</span></div>
+<a href="../../text/Text.html" title="interface in net.minecraft.text">Text</a>&nbsp;message,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util" class="externalLink">UUID</a>&nbsp;senderUuid)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../gui/ClientChatListener.html#onChatMessage(net.minecraft.network.MessageType,net.minecraft.text.Text)">onChatMessage</a></code>&nbsp;in interface&nbsp;<code><a href="../gui/ClientChatListener.html" title="interface in net.minecraft.client.gui">ClientChatListener</a></code></dd>
+<dd><code><a href="../gui/ClientChatListener.html#onChatMessage(net.minecraft.network.MessageType,net.minecraft.text.Text,java.util.UUID)">onChatMessage</a></code>&nbsp;in interface&nbsp;<code><a href="../gui/ClientChatListener.html" title="interface in net.minecraft.client.gui">ClientChatListener</a></code></dd>
 </dl>
 </section>
 </li>
@@ -283,6 +318,19 @@ implements <a href="../gui/ClientChatListener.html" title="interface in net.mine
 <section class="detail">
 <h3><a id="narrate(java.lang.String)">narrate</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">narrate</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;text)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="getNarratorOption()">getNarratorOption</a></h3>
+<div class="memberSignature"><span class="modifiers">private static</span>&nbsp;<span class="returnType"><a href="../options/NarratorOption.html" title="enum in net.minecraft.client.options">NarratorOption</a></span>&nbsp;<span class="memberName">getNarratorOption</span>()</div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="narrate(boolean,java.lang.String)">narrate</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">narrate</span>&#8203;(<span class="arguments">boolean&nbsp;interrupt,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;message)</span></div>
 </section>
 </li>
 <li class="blockList">

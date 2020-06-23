@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":9,"i1":9,"i2":9,"i3":9,"i4":9,"i5":9,"i6":9,"i7":9,"i8":9};
+<script type="text/javascript">var data = {"i0":9,"i1":9,"i2":9,"i3":9,"i4":9,"i5":9,"i6":9,"i7":9,"i8":9,"i9":9,"i10":9,"i11":9,"i12":9,"i13":9,"i14":9,"i15":9,"i16":9};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -174,18 +174,17 @@ int&nbsp;int2,
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
-<td class="colFirst"><code>static <a href="../util/math/BlockBox.html" title="class in net.minecraft.util.math">BlockBox</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createArea(net.minecraft.util.math.BlockPos,net.minecraft.util.math.BlockPos,int)">createArea</a></span>&#8203;(<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
-<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;size,
-int&nbsp;margin)</code></th>
+<td class="colFirst"><code>private static <a href="../structure/Structure.html" title="class in net.minecraft.structure">Structure</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createStructure(java.lang.String,net.minecraft.server.world.ServerWorld)">createStructure</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;structureId,
+<a href="../server/world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a>&nbsp;world)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i2">
 <td class="colFirst"><code>static void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createTestArea(java.lang.String,net.minecraft.util.math.BlockPos,net.minecraft.util.math.BlockPos,int,net.minecraft.server.world.ServerWorld)">createTestArea</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;structure,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createTestArea(java.lang.String,net.minecraft.util.math.BlockPos,net.minecraft.util.math.BlockPos,net.minecraft.util.BlockRotation,net.minecraft.server.world.ServerWorld)">createTestArea</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;structure,
 <a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
 <a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;size,
-int&nbsp;margin,
+<a href="../util/BlockRotation.html" title="enum in net.minecraft.util">BlockRotation</a>&nbsp;blockRotation,
 <a href="../server/world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a>&nbsp;world)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -211,23 +210,77 @@ int&nbsp;radius,
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i6">
+<td class="colFirst"><code>private static void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#forceLoadNearbyChunks(net.minecraft.util.math.BlockPos,net.minecraft.server.world.ServerWorld)">forceLoadNearbyChunks</a></span>&#8203;(<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<a href="../server/world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a>&nbsp;world)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i7">
 <td class="colFirst"><code>static <a href="../util/math/Box.html" title="class in net.minecraft.util.math">Box</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getStructureBoundingBox(net.minecraft.block.entity.StructureBlockBlockEntity)">getStructureBoundingBox</a></span>&#8203;(<a href="../block/entity/StructureBlockBlockEntity.html" title="class in net.minecraft.block.entity">StructureBlockBlockEntity</a>&nbsp;structureBlockEntity)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i7">
-<td class="colFirst"><code>static <a href="../block/entity/StructureBlockBlockEntity.html" title="class in net.minecraft.block.entity">StructureBlockBlockEntity</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_22250(java.lang.String,net.minecraft.util.math.BlockPos,int,net.minecraft.server.world.ServerWorld,boolean)">method_22250</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;structureId,
+<tr class="altColor" id="i8">
+<td class="colFirst"><code>private static boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isInStructureBounds(net.minecraft.util.math.BlockPos,net.minecraft.util.math.BlockPos,net.minecraft.server.world.ServerWorld)">isInStructureBounds</a></span>&#8203;(<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;structureBlockPos,
 <a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<a href="../server/world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a>&nbsp;world)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i9">
+<td class="colFirst"><code>private static <a href="../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#loadSnbt(java.nio.file.Path)">loadSnbt</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html?is-external=true" title="class or interface in java.nio.file" class="externalLink">Path</a>&nbsp;path)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i10">
+<td class="colFirst"><code>static <a href="../block/entity/StructureBlockBlockEntity.html" title="class in net.minecraft.block.entity">StructureBlockBlockEntity</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_22250(java.lang.String,net.minecraft.util.math.BlockPos,net.minecraft.util.BlockRotation,int,net.minecraft.server.world.ServerWorld,boolean)">method_22250</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;string,
+<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
+<a href="../util/BlockRotation.html" title="enum in net.minecraft.util">BlockRotation</a>&nbsp;blockRotation,
 int&nbsp;int2,
-<a href="../server/world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a>&nbsp;world,
+<a href="../server/world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a>&nbsp;serverWorld,
 boolean&nbsp;bool)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i8">
-<td class="colFirst"><code>static void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#placeStartButton(net.minecraft.util.math.BlockPos,net.minecraft.server.world.ServerWorld)">placeStartButton</a></span>&#8203;(<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<tr class="rowColor" id="i11">
+<td class="colFirst"><code>private static void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_22368(int,net.minecraft.util.math.BlockPos,net.minecraft.server.world.ServerWorld)">method_22368</a></span>&#8203;(int&nbsp;altitude,
+<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
 <a href="../server/world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a>&nbsp;world)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i12">
+<td class="colFirst"><code>static <a href="../util/BlockRotation.html" title="enum in net.minecraft.util">BlockRotation</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_29408(int)">method_29408</a></span>&#8203;(int&nbsp;int2)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i13">
+<td class="colFirst"><code>static <a href="../util/math/BlockBox.html" title="class in net.minecraft.util.math">BlockBox</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_29409(net.minecraft.util.math.BlockPos,net.minecraft.util.math.BlockPos,net.minecraft.util.BlockRotation)">method_29409</a></span>&#8203;(<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
+<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos2,
+<a href="../util/BlockRotation.html" title="enum in net.minecraft.util">BlockRotation</a>&nbsp;blockRotation)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i14">
+<td class="colFirst"><code>static <a href="../util/math/BlockBox.html" title="class in net.minecraft.util.math">BlockBox</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_29410(net.minecraft.block.entity.StructureBlockBlockEntity)">method_29410</a></span>&#8203;(<a href="../block/entity/StructureBlockBlockEntity.html" title="class in net.minecraft.block.entity">StructureBlockBlockEntity</a>&nbsp;structureBlockBlockEntity)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i15">
+<td class="colFirst"><code>static void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#placeStartButton(net.minecraft.util.math.BlockPos,net.minecraft.util.math.BlockPos,net.minecraft.util.BlockRotation,net.minecraft.server.world.ServerWorld)">placeStartButton</a></span>&#8203;(<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
+<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos2,
+<a href="../util/BlockRotation.html" title="enum in net.minecraft.util">BlockRotation</a>&nbsp;blockRotation,
+<a href="../server/world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a>&nbsp;serverWorld)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i16">
+<td class="colFirst"><code>private static <a href="../block/entity/StructureBlockBlockEntity.html" title="class in net.minecraft.block.entity">StructureBlockBlockEntity</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#placeStructure(java.lang.String,net.minecraft.util.math.BlockPos,net.minecraft.util.BlockRotation,net.minecraft.server.world.ServerWorld,boolean)">placeStructure</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name,
+<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<a href="../util/BlockRotation.html" title="enum in net.minecraft.util">BlockRotation</a>&nbsp;blockRotation,
+<a href="../server/world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a>&nbsp;serverWorld,
+boolean&nbsp;bool)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -286,35 +339,57 @@ boolean&nbsp;bool)</code></th>
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
+<h3><a id="method_29408(int)">method_29408</a></h3>
+<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType"><a href="../util/BlockRotation.html" title="enum in net.minecraft.util">BlockRotation</a></span>&nbsp;<span class="memberName">method_29408</span>&#8203;(<span class="arguments">int&nbsp;int2)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="getStructureBoundingBox(net.minecraft.block.entity.StructureBlockBlockEntity)">getStructureBoundingBox</a></h3>
 <div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType"><a href="../util/math/Box.html" title="class in net.minecraft.util.math">Box</a></span>&nbsp;<span class="memberName">getStructureBoundingBox</span>&#8203;(<span class="arguments"><a href="../block/entity/StructureBlockBlockEntity.html" title="class in net.minecraft.block.entity">StructureBlockBlockEntity</a>&nbsp;structureBlockEntity)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="placeStartButton(net.minecraft.util.math.BlockPos,net.minecraft.server.world.ServerWorld)">placeStartButton</a></h3>
-<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">placeStartButton</span>&#8203;(<span class="arguments"><a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
-<a href="../server/world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a>&nbsp;world)</span></div>
+<h3><a id="method_29410(net.minecraft.block.entity.StructureBlockBlockEntity)">method_29410</a></h3>
+<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType"><a href="../util/math/BlockBox.html" title="class in net.minecraft.util.math">BlockBox</a></span>&nbsp;<span class="memberName">method_29410</span>&#8203;(<span class="arguments"><a href="../block/entity/StructureBlockBlockEntity.html" title="class in net.minecraft.block.entity">StructureBlockBlockEntity</a>&nbsp;structureBlockBlockEntity)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="createTestArea(java.lang.String,net.minecraft.util.math.BlockPos,net.minecraft.util.math.BlockPos,int,net.minecraft.server.world.ServerWorld)">createTestArea</a></h3>
+<h3><a id="placeStartButton(net.minecraft.util.math.BlockPos,net.minecraft.util.math.BlockPos,net.minecraft.util.BlockRotation,net.minecraft.server.world.ServerWorld)">placeStartButton</a></h3>
+<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">placeStartButton</span>&#8203;(<span class="arguments"><a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
+<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos2,
+<a href="../util/BlockRotation.html" title="enum in net.minecraft.util">BlockRotation</a>&nbsp;blockRotation,
+<a href="../server/world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a>&nbsp;serverWorld)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="createTestArea(java.lang.String,net.minecraft.util.math.BlockPos,net.minecraft.util.math.BlockPos,net.minecraft.util.BlockRotation,net.minecraft.server.world.ServerWorld)">createTestArea</a></h3>
 <div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">createTestArea</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;structure,
 <a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
 <a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;size,
-int&nbsp;margin,
+<a href="../util/BlockRotation.html" title="enum in net.minecraft.util">BlockRotation</a>&nbsp;blockRotation,
 <a href="../server/world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a>&nbsp;world)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="method_22250(java.lang.String,net.minecraft.util.math.BlockPos,int,net.minecraft.server.world.ServerWorld,boolean)">method_22250</a></h3>
-<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType"><a href="../block/entity/StructureBlockBlockEntity.html" title="class in net.minecraft.block.entity">StructureBlockBlockEntity</a></span>&nbsp;<span class="memberName">method_22250</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;structureId,
-<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<h3><a id="method_22250(java.lang.String,net.minecraft.util.math.BlockPos,net.minecraft.util.BlockRotation,int,net.minecraft.server.world.ServerWorld,boolean)">method_22250</a></h3>
+<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType"><a href="../block/entity/StructureBlockBlockEntity.html" title="class in net.minecraft.block.entity">StructureBlockBlockEntity</a></span>&nbsp;<span class="memberName">method_22250</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;string,
+<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
+<a href="../util/BlockRotation.html" title="enum in net.minecraft.util">BlockRotation</a>&nbsp;blockRotation,
 int&nbsp;int2,
-<a href="../server/world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a>&nbsp;world,
+<a href="../server/world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a>&nbsp;serverWorld,
 boolean&nbsp;bool)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="forceLoadNearbyChunks(net.minecraft.util.math.BlockPos,net.minecraft.server.world.ServerWorld)">forceLoadNearbyChunks</a></h3>
+<div class="memberSignature"><span class="modifiers">private static</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">forceLoadNearbyChunks</span>&#8203;(<span class="arguments"><a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<a href="../server/world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a>&nbsp;world)</span></div>
 </section>
 </li>
 <li class="blockList">
@@ -327,10 +402,10 @@ int&nbsp;int2,
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="createArea(net.minecraft.util.math.BlockPos,net.minecraft.util.math.BlockPos,int)">createArea</a></h3>
-<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType"><a href="../util/math/BlockBox.html" title="class in net.minecraft.util.math">BlockBox</a></span>&nbsp;<span class="memberName">createArea</span>&#8203;(<span class="arguments"><a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
-<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;size,
-int&nbsp;margin)</span></div>
+<h3><a id="method_29409(net.minecraft.util.math.BlockPos,net.minecraft.util.math.BlockPos,net.minecraft.util.BlockRotation)">method_29409</a></h3>
+<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType"><a href="../util/math/BlockBox.html" title="class in net.minecraft.util.math">BlockBox</a></span>&nbsp;<span class="memberName">method_29409</span>&#8203;(<span class="arguments"><a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
+<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos2,
+<a href="../util/BlockRotation.html" title="enum in net.minecraft.util">BlockRotation</a>&nbsp;blockRotation)</span></div>
 </section>
 </li>
 <li class="blockList">
@@ -344,7 +419,7 @@ int&nbsp;radius,
 <li class="blockList">
 <section class="detail">
 <h3><a id="findNearestStructureBlock(net.minecraft.util.math.BlockPos,int,net.minecraft.server.world.ServerWorld)">findNearestStructureBlock</a></h3>
-<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 </span><span class="modifiers">public static</span>&nbsp;<span class="returnType"><a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a></span>&nbsp;<span class="memberName">findNearestStructureBlock</span>&#8203;(<span class="arguments"><a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
 int&nbsp;radius,
 <a href="../server/world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a>&nbsp;world)</span></div>
@@ -355,6 +430,46 @@ int&nbsp;radius,
 <h3><a id="findStructureBlocks(net.minecraft.util.math.BlockPos,int,net.minecraft.server.world.ServerWorld)">findStructureBlocks</a></h3>
 <div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util" class="externalLink">Collection</a>&lt;<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;</span>&nbsp;<span class="memberName">findStructureBlocks</span>&#8203;(<span class="arguments"><a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
 int&nbsp;radius,
+<a href="../server/world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a>&nbsp;world)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="createStructure(java.lang.String,net.minecraft.server.world.ServerWorld)">createStructure</a></h3>
+<div class="memberSignature"><span class="modifiers">private static</span>&nbsp;<span class="returnType"><a href="../structure/Structure.html" title="class in net.minecraft.structure">Structure</a></span>&nbsp;<span class="memberName">createStructure</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;structureId,
+<a href="../server/world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a>&nbsp;world)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="placeStructure(java.lang.String,net.minecraft.util.math.BlockPos,net.minecraft.util.BlockRotation,net.minecraft.server.world.ServerWorld,boolean)">placeStructure</a></h3>
+<div class="memberSignature"><span class="modifiers">private static</span>&nbsp;<span class="returnType"><a href="../block/entity/StructureBlockBlockEntity.html" title="class in net.minecraft.block.entity">StructureBlockBlockEntity</a></span>&nbsp;<span class="memberName">placeStructure</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name,
+<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<a href="../util/BlockRotation.html" title="enum in net.minecraft.util">BlockRotation</a>&nbsp;blockRotation,
+<a href="../server/world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a>&nbsp;serverWorld,
+boolean&nbsp;bool)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="loadSnbt(java.nio.file.Path)">loadSnbt</a></h3>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">private static</span>&nbsp;<span class="returnType"><a href="../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a></span>&nbsp;<span class="memberName">loadSnbt</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html?is-external=true" title="class or interface in java.nio.file" class="externalLink">Path</a>&nbsp;path)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="method_22368(int,net.minecraft.util.math.BlockPos,net.minecraft.server.world.ServerWorld)">method_22368</a></h3>
+<div class="memberSignature"><span class="modifiers">private static</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">method_22368</span>&#8203;(<span class="arguments">int&nbsp;altitude,
+<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<a href="../server/world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a>&nbsp;world)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="isInStructureBounds(net.minecraft.util.math.BlockPos,net.minecraft.util.math.BlockPos,net.minecraft.server.world.ServerWorld)">isInStructureBounds</a></h3>
+<div class="memberSignature"><span class="modifiers">private static</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isInStructureBounds</span>&#8203;(<span class="arguments"><a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;structureBlockPos,
+<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
 <a href="../server/world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a>&nbsp;world)</span></div>
 </section>
 </li>

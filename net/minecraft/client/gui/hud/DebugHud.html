@@ -19,8 +19,8 @@
 <script type="text/javascript" src="../../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10};
-var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
+<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":9};
+var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
@@ -62,7 +62,7 @@ loadScripts(document, 'script');</script>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
@@ -105,6 +105,60 @@ extends <a href="../DrawableHelper.html" title="class in net.minecraft.client.gu
 <!--   -->
 </a>
 <h2>Field Summary</h2>
+<div class="memberSummary">
+<table>
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<thead>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colSecond" scope="col">Field</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../util/hit/HitResult.html" title="class in net.minecraft.util.hit">HitResult</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#blockHit">blockHit</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../world/chunk/WorldChunk.html" title="class in net.minecraft.world.chunk">WorldChunk</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#chunk">chunk</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html?is-external=true" title="class or interface in java.util.concurrent" class="externalLink">CompletableFuture</a>&lt;<a href="../../../world/chunk/WorldChunk.html" title="class in net.minecraft.world.chunk">WorldChunk</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#chunkFuture">chunkFuture</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../MinecraftClient.html" title="class in net.minecraft.client">MinecraftClient</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#client">client</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../util/hit/HitResult.html" title="class in net.minecraft.util.hit">HitResult</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#fluidHit">fluidHit</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../font/TextRenderer.html" title="class in net.minecraft.client.font">TextRenderer</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#fontRenderer">fontRenderer</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util" class="externalLink">Map</a>&lt;<a href="../../../world/Heightmap.Type.html" title="enum in net.minecraft.world">Heightmap.Type</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#HEIGHT_MAP_TYPES">HEIGHT_MAP_TYPES</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../util/math/ChunkPos.html" title="class in net.minecraft.util.math">ChunkPos</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#pos">pos</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
 <div class="inheritedList">
 <h3>Fields inherited from class&nbsp;net.minecraft.client.gui.<a href="../DrawableHelper.html" title="class in net.minecraft.client.gui">DrawableHelper</a></h3>
 <a id="fields.inherited.from.class.net.minecraft.client.gui.DrawableHelper">
@@ -144,7 +198,7 @@ extends <a href="../DrawableHelper.html" title="class in net.minecraft.client.gu
 </a>
 <h2>Method Summary</h2>
 <div class="memberSummary">
-<div role="tablist" aria-orientation="horizontal"><button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t2" class="tableTab" onclick="show(2);">Instance Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t4" class="tableTab" onclick="show(8);">Concrete Methods</button></div>
+<div role="tablist" aria-orientation="horizontal"><button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t1" class="tableTab" onclick="show(1);">Static Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t2" class="tableTab" onclick="show(2);">Instance Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t4" class="tableTab" onclick="show(8);">Concrete Methods</button></div>
 <div id="memberSummary_tabpanel" role="tabpanel">
 <table aria-labelledby="t0">
 <thead>
@@ -156,33 +210,92 @@ extends <a href="../DrawableHelper.html" title="class in net.minecraft.client.gu
 </thead>
 <tbody>
 <tr class="altColor" id="i0">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#drawMetricsData(net.minecraft.client.util.math.MatrixStack,net.minecraft.util.MetricsData,int,int,boolean)">drawMetricsData</a></span>&#8203;(<a href="../../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrixStack,
+<a href="../../../util/MetricsData.html" title="class in net.minecraft.util">MetricsData</a>&nbsp;metricsData,
+int&nbsp;int2,
+int&nbsp;int3,
+boolean&nbsp;bool)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i1">
+<td class="colFirst"><code>private <a href="../../../world/chunk/WorldChunk.html" title="class in net.minecraft.world.chunk">WorldChunk</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getChunk()">getChunk</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i2">
+<td class="colFirst"><code>private <a href="../../../world/chunk/WorldChunk.html" title="class in net.minecraft.world.chunk">WorldChunk</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getClientChunk()">getClientChunk</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i3">
 <td class="colFirst"><code>protected <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getLeftText()">getLeftText</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i1">
+<tr class="altColor" id="i4">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getMetricsLineColor(int,int,int,int)">getMetricsLineColor</a></span>&#8203;(int&nbsp;value,
+int&nbsp;greenValue,
+int&nbsp;yellowValue,
+int&nbsp;redValue)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i5">
 <td class="colFirst"><code>protected <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getRightText()">getRightText</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i2">
+<tr class="altColor" id="i6">
+<td class="colFirst"><code>private <a href="../../../server/world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getServerWorld()">getServerWorld</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i7">
+<td class="colFirst"><code>private <a href="../../../world/World.html" title="class in net.minecraft.world">World</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getWorld()">getWorld</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i8">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#interpolateColor(int,int,float)">interpolateColor</a></span>&#8203;(int&nbsp;color1,
+int&nbsp;color2,
+float&nbsp;dt)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i9">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_27871()">method_27871</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i10">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#propertyToString(java.util.Map.Entry)">propertyToString</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.Entry.html?is-external=true" title="class or interface in java.util" class="externalLink">Map.Entry</a>&lt;<a href="../../../state/property/Property.html" title="class in net.minecraft.state.property">Property</a>&lt;?&gt;,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html?is-external=true" title="class or interface in java.lang" class="externalLink">Comparable</a>&lt;?&gt;&gt;&nbsp;propEntry)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i11">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#render()">render</a></span>()</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#render(net.minecraft.client.util.math.MatrixStack)">render</a></span>&#8203;(<a href="../../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrixStack)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i3">
+<tr class="altColor" id="i12">
 <td class="colFirst"><code>protected void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#renderLeftText()">renderLeftText</a></span>()</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#renderLeftText(net.minecraft.client.util.math.MatrixStack)">renderLeftText</a></span>&#8203;(<a href="../../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrixStack)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i4">
+<tr class="rowColor" id="i13">
 <td class="colFirst"><code>protected void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#renderRightText()">renderRightText</a></span>()</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#renderRightText(net.minecraft.client.util.math.MatrixStack)">renderRightText</a></span>&#8203;(<a href="../../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrixStack)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i5">
+<tr class="altColor" id="i14">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#resetChunk()">resetChunk</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i15">
+<td class="colFirst"><code>private static long</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#toMiB(long)">toMiB</a></span>&#8203;(long&nbsp;bytes)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -193,7 +306,7 @@ extends <a href="../DrawableHelper.html" title="class in net.minecraft.client.gu
 <h3>Methods inherited from class&nbsp;net.minecraft.client.gui.<a href="../DrawableHelper.html" title="class in net.minecraft.client.gui">DrawableHelper</a></h3>
 <a id="methods.inherited.from.class.net.minecraft.client.gui.DrawableHelper">
 <!--   -->
-</a><code><a href="../DrawableHelper.html#drawCenteredString(net.minecraft.client.font.TextRenderer,java.lang.String,int,int,int)">drawCenteredString</a>, <a href="../DrawableHelper.html#drawHorizontalLine(int,int,int,int)">drawHorizontalLine</a>, <a href="../DrawableHelper.html#drawSprite(int,int,int,int,int,net.minecraft.client.texture.Sprite)">drawSprite</a>, <a href="../DrawableHelper.html#drawString(net.minecraft.client.font.TextRenderer,java.lang.String,int,int,int)">drawString</a>, <a href="../DrawableHelper.html#drawTexture(int,int,float,float,int,int,int,int)">drawTexture</a>, <a href="../DrawableHelper.html#drawTexture(int,int,int,float,float,int,int,int,int)">drawTexture</a>, <a href="../DrawableHelper.html#drawTexture(int,int,int,int,float,float,int,int,int,int)">drawTexture</a>, <a href="../DrawableHelper.html#drawTexture(int,int,int,int,int,int)">drawTexture</a>, <a href="../DrawableHelper.html#drawTexturedQuad(int,int,int,int,int,float,float,float,float)">drawTexturedQuad</a>, <a href="../DrawableHelper.html#drawVerticalLine(int,int,int,int)">drawVerticalLine</a>, <a href="../DrawableHelper.html#fill(int,int,int,int,int)">fill</a>, <a href="../DrawableHelper.html#fill(net.minecraft.util.math.Matrix4f,int,int,int,int,int)">fill</a>, <a href="../DrawableHelper.html#fillGradient(int,int,int,int,int,int)">fillGradient</a>, <a href="../DrawableHelper.html#getZOffset()">getZOffset</a>, <a href="../DrawableHelper.html#setZOffset(int)">setZOffset</a></code></div>
+</a><code><a href="../DrawableHelper.html#drawCenteredString(net.minecraft.client.util.math.MatrixStack,net.minecraft.client.font.TextRenderer,java.lang.String,int,int,int)">drawCenteredString</a>, <a href="../DrawableHelper.html#drawCenteredText(net.minecraft.client.util.math.MatrixStack,net.minecraft.client.font.TextRenderer,net.minecraft.text.StringRenderable,int,int,int)">drawCenteredText</a>, <a href="../DrawableHelper.html#drawHorizontalLine(net.minecraft.client.util.math.MatrixStack,int,int,int,int)">drawHorizontalLine</a>, <a href="../DrawableHelper.html#drawSprite(net.minecraft.client.util.math.MatrixStack,int,int,int,int,int,net.minecraft.client.texture.Sprite)">drawSprite</a>, <a href="../DrawableHelper.html#drawStringWithShadow(net.minecraft.client.util.math.MatrixStack,net.minecraft.client.font.TextRenderer,java.lang.String,int,int,int)">drawStringWithShadow</a>, <a href="../DrawableHelper.html#drawTexture(net.minecraft.client.util.math.MatrixStack,int,int,float,float,int,int,int,int)">drawTexture</a>, <a href="../DrawableHelper.html#drawTexture(net.minecraft.client.util.math.MatrixStack,int,int,int,float,float,int,int,int,int)">drawTexture</a>, <a href="../DrawableHelper.html#drawTexture(net.minecraft.client.util.math.MatrixStack,int,int,int,int,float,float,int,int,int,int)">drawTexture</a>, <a href="../DrawableHelper.html#drawTexture(net.minecraft.client.util.math.MatrixStack,int,int,int,int,int,int)">drawTexture</a>, <a href="../DrawableHelper.html#drawTextWithShadow(net.minecraft.client.util.math.MatrixStack,net.minecraft.client.font.TextRenderer,net.minecraft.text.StringRenderable,int,int,int)">drawTextWithShadow</a>, <a href="../DrawableHelper.html#drawVerticalLine(net.minecraft.client.util.math.MatrixStack,int,int,int,int)">drawVerticalLine</a>, <a href="../DrawableHelper.html#fill(net.minecraft.client.util.math.MatrixStack,int,int,int,int,int)">fill</a>, <a href="../DrawableHelper.html#fillGradient(net.minecraft.client.util.math.MatrixStack,int,int,int,int,int,int)">fillGradient</a>, <a href="../DrawableHelper.html#fillGradient(net.minecraft.util.math.Matrix4f,net.minecraft.client.render.BufferBuilder,int,int,int,int,int,int,int)">fillGradient</a>, <a href="../DrawableHelper.html#getZOffset()">getZOffset</a>, <a href="../DrawableHelper.html#method_29343(int,int,java.util.function.BiConsumer)">method_29343</a>, <a href="../DrawableHelper.html#setZOffset(int)">setZOffset</a></code></div>
 <div class="inheritedList">
 <h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></h3>
 <a id="methods.inherited.from.class.java.lang.Object">
@@ -205,6 +318,67 @@ extends <a href="../DrawableHelper.html" title="class in net.minecraft.client.gu
 </section>
 <section class="details">
 <ul class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<li class="blockList">
+<section class="fieldDetails"><a id="field.detail">
+<!--   -->
+</a>
+<h2>Field Details</h2>
+<ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="HEIGHT_MAP_TYPES">HEIGHT_MAP_TYPES</a></h3>
+<div class="memberSignature"><span class="modifiers">private static final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util" class="externalLink">Map</a>&lt;<a href="../../../world/Heightmap.Type.html" title="enum in net.minecraft.world">Heightmap.Type</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&gt;</span>&nbsp;<span class="memberName">HEIGHT_MAP_TYPES</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="client">client</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../../MinecraftClient.html" title="class in net.minecraft.client">MinecraftClient</a></span>&nbsp;<span class="memberName">client</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="fontRenderer">fontRenderer</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../../font/TextRenderer.html" title="class in net.minecraft.client.font">TextRenderer</a></span>&nbsp;<span class="memberName">fontRenderer</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="blockHit">blockHit</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="../../../util/hit/HitResult.html" title="class in net.minecraft.util.hit">HitResult</a></span>&nbsp;<span class="memberName">blockHit</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="fluidHit">fluidHit</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="../../../util/hit/HitResult.html" title="class in net.minecraft.util.hit">HitResult</a></span>&nbsp;<span class="memberName">fluidHit</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="pos">pos</a></h3>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="../../../util/math/ChunkPos.html" title="class in net.minecraft.util.math">ChunkPos</a></span>&nbsp;<span class="memberName">pos</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="chunk">chunk</a></h3>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="../../../world/chunk/WorldChunk.html" title="class in net.minecraft.world.chunk">WorldChunk</a></span>&nbsp;<span class="memberName">chunk</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="chunkFuture">chunkFuture</a></h3>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html?is-external=true" title="class or interface in java.util.concurrent" class="externalLink">CompletableFuture</a>&lt;<a href="../../../world/chunk/WorldChunk.html" title="class in net.minecraft.world.chunk">WorldChunk</a>&gt;</span>&nbsp;<span class="memberName">chunkFuture</span></div>
+</section>
+</li>
+</ul>
+</section>
+</li>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <li class="blockList">
 <section class="constructorDetails"><a id="constructor.detail">
@@ -236,20 +410,20 @@ extends <a href="../DrawableHelper.html" title="class in net.minecraft.client.gu
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="render()">render</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">render</span>()</div>
+<h3><a id="render(net.minecraft.client.util.math.MatrixStack)">render</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">render</span>&#8203;(<span class="arguments"><a href="../../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrixStack)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="renderLeftText()">renderLeftText</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">renderLeftText</span>()</div>
+<h3><a id="renderLeftText(net.minecraft.client.util.math.MatrixStack)">renderLeftText</a></h3>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">renderLeftText</span>&#8203;(<span class="arguments"><a href="../../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrixStack)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="renderRightText()">renderRightText</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">renderRightText</span>()</div>
+<h3><a id="renderRightText(net.minecraft.client.util.math.MatrixStack)">renderRightText</a></h3>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">renderRightText</span>&#8203;(<span class="arguments"><a href="../../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrixStack)</span></div>
 </section>
 </li>
 <li class="blockList">
@@ -260,8 +434,80 @@ extends <a href="../DrawableHelper.html" title="class in net.minecraft.client.gu
 </li>
 <li class="blockList">
 <section class="detail">
+<h3><a id="getServerWorld()">getServerWorld</a></h3>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="../../../server/world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a></span>&nbsp;<span class="memberName">getServerWorld</span>()</div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="method_27871()">method_27871</a></h3>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></span>&nbsp;<span class="memberName">method_27871</span>()</div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="getWorld()">getWorld</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="../../../world/World.html" title="class in net.minecraft.world">World</a></span>&nbsp;<span class="memberName">getWorld</span>()</div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="getChunk()">getChunk</a></h3>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="../../../world/chunk/WorldChunk.html" title="class in net.minecraft.world.chunk">WorldChunk</a></span>&nbsp;<span class="memberName">getChunk</span>()</div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="getClientChunk()">getClientChunk</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="../../../world/chunk/WorldChunk.html" title="class in net.minecraft.world.chunk">WorldChunk</a></span>&nbsp;<span class="memberName">getClientChunk</span>()</div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="getRightText()">getRightText</a></h3>
 <div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&gt;</span>&nbsp;<span class="memberName">getRightText</span>()</div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="propertyToString(java.util.Map.Entry)">propertyToString</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></span>&nbsp;<span class="memberName">propertyToString</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.Entry.html?is-external=true" title="class or interface in java.util" class="externalLink">Map.Entry</a>&lt;<a href="../../../state/property/Property.html" title="class in net.minecraft.state.property">Property</a>&lt;?&gt;,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html?is-external=true" title="class or interface in java.lang" class="externalLink">Comparable</a>&lt;?&gt;&gt;&nbsp;propEntry)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="drawMetricsData(net.minecraft.client.util.math.MatrixStack,net.minecraft.util.MetricsData,int,int,boolean)">drawMetricsData</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">drawMetricsData</span>&#8203;(<span class="arguments"><a href="../../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrixStack,
+<a href="../../../util/MetricsData.html" title="class in net.minecraft.util">MetricsData</a>&nbsp;metricsData,
+int&nbsp;int2,
+int&nbsp;int3,
+boolean&nbsp;bool)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="getMetricsLineColor(int,int,int,int)">getMetricsLineColor</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getMetricsLineColor</span>&#8203;(<span class="arguments">int&nbsp;value,
+int&nbsp;greenValue,
+int&nbsp;yellowValue,
+int&nbsp;redValue)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="interpolateColor(int,int,float)">interpolateColor</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">interpolateColor</span>&#8203;(<span class="arguments">int&nbsp;color1,
+int&nbsp;color2,
+float&nbsp;dt)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="toMiB(long)">toMiB</a></h3>
+<div class="memberSignature"><span class="modifiers">private static</span>&nbsp;<span class="returnType">long</span>&nbsp;<span class="memberName">toMiB</span>&#8203;(<span class="arguments">long&nbsp;bytes)</span></div>
 </section>
 </li>
 </ul>
@@ -303,7 +549,7 @@ extends <a href="../DrawableHelper.html" title="class in net.minecraft.client.gu
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>

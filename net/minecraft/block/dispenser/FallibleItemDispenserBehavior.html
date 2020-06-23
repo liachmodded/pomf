@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":10};
+<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -98,7 +98,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <dl>
 <dt>Direct Known Subclasses:</dt>
-<dd><code><a href="BlockPlacementDispenserBehavior.html" title="class in net.minecraft.block.dispenser">BlockPlacementDispenserBehavior</a></code></dd>
+<dd><code><a href="BlockPlacementDispenserBehavior.html" title="class in net.minecraft.block.dispenser">BlockPlacementDispenserBehavior</a></code>, <code><a href="ShearsDispenserBehavior.html" title="class in net.minecraft.block.dispenser">ShearsDispenserBehavior</a></code></dd>
 </dl>
 <hr>
 <pre>public abstract class <span class="typeNameLabel">FallibleItemDispenserBehavior</span>
@@ -124,7 +124,7 @@ extends <a href="ItemDispenserBehavior.html" title="class in net.minecraft.block
 </thead>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><code>protected boolean</code></td>
+<td class="colFirst"><code>private boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#success">success</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -182,8 +182,18 @@ extends <a href="ItemDispenserBehavior.html" title="class in net.minecraft.block
 </thead>
 <tbody>
 <tr class="altColor" id="i0">
+<td class="colFirst"><code>boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isSuccess()">isSuccess</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i1">
 <td class="colFirst"><code>protected void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#playSound(net.minecraft.util.math.BlockPointer)">playSound</a></span>&#8203;(<a href="../../util/math/BlockPointer.html" title="interface in net.minecraft.util.math">BlockPointer</a>&nbsp;pointer)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i2">
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setSuccess(boolean)">setSuccess</a></span>&#8203;(boolean&nbsp;success)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -216,7 +226,7 @@ extends <a href="ItemDispenserBehavior.html" title="class in net.minecraft.block
 <li class="blockList">
 <section class="detail">
 <h3><a id="success">success</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">success</span></div>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">success</span></div>
 </section>
 </li>
 </ul>
@@ -245,6 +255,18 @@ extends <a href="ItemDispenserBehavior.html" title="class in net.minecraft.block
 </a>
 <h2>Method Details</h2>
 <ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="isSuccess()">isSuccess</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isSuccess</span>()</div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="setSuccess(boolean)">setSuccess</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setSuccess</span>&#8203;(<span class="arguments">boolean&nbsp;success)</span></div>
+</section>
+</li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="playSound(net.minecraft.util.math.BlockPointer)">playSound</a></h3>

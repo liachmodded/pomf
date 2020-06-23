@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10};
+<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -55,14 +55,14 @@ loadScripts(document, 'script');</script>
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li><a href="#nested.class.summary">Nested</a>&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
@@ -90,28 +90,57 @@ loadScripts(document, 'script');</script>
 <div class="inheritance">net.minecraft.structure.StructureManager</div>
 </div>
 <section class="description">
-<dl>
-<dt>All Implemented Interfaces:</dt>
-<dd><code><a href="../resource/ResourceReloadListener.html" title="interface in net.minecraft.resource">ResourceReloadListener</a></code>, <code><a href="../resource/SynchronousResourceReloadListener.html" title="interface in net.minecraft.resource">SynchronousResourceReloadListener</a></code></dd>
-</dl>
 <hr>
 <pre>public class <span class="typeNameLabel">StructureManager</span>
-extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>
-implements <a href="../resource/SynchronousResourceReloadListener.html" title="interface in net.minecraft.resource">SynchronousResourceReloadListener</a></pre>
+extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></pre>
 </section>
 <section class="summary">
 <ul class="blockList">
-<!-- ======== NESTED CLASS SUMMARY ======== -->
+<!-- =========== FIELD SUMMARY =========== -->
 <li class="blockList">
-<section class="nestedClassSummary"><a id="nested.class.summary">
+<section class="fieldSummary"><a id="field.summary">
 <!--   -->
 </a>
-<h2>Nested Class Summary</h2>
-<div class="inheritedList">
-<h2>Nested classes/interfaces inherited from interface&nbsp;net.minecraft.resource.<a href="../resource/ResourceReloadListener.html" title="interface in net.minecraft.resource">ResourceReloadListener</a></h2>
-<a id="nested.classes.inherited.from.class.net.minecraft.resource.ResourceReloadListener">
-<!--   -->
-</a><code><a href="../resource/ResourceReloadListener.Synchronizer.html" title="interface in net.minecraft.resource">ResourceReloadListener.Synchronizer</a></code></div>
+<h2>Field Summary</h2>
+<div class="memberSummary">
+<table>
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<thead>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colSecond" scope="col">Field</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private com.mojang.datafixers.DataFixer</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#dataFixer">dataFixer</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../resource/ResourceManager.html" title="interface in net.minecraft.resource">ResourceManager</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#field_25189">field_25189</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html?is-external=true" title="class or interface in java.nio.file" class="externalLink">Path</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#generatedPath">generatedPath</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static <a href="https://logging.apache.org/log4j/2.x/log4j-api/apidocs/org/apache/logging/log4j/Logger.html?is-external=true" title="class or interface in org.apache.logging.log4j" class="externalLink">Logger</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#LOGGER">LOGGER</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util" class="externalLink">Map</a>&lt;<a href="../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>,&#8203;<a href="Structure.html" title="class in net.minecraft.structure">Structure</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#structures">structures</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 </li>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
@@ -131,8 +160,8 @@ implements <a href="../resource/SynchronousResourceReloadListener.html" title="i
 </thead>
 <tbody>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.server.MinecraftServer,java.io.File,com.mojang.datafixers.DataFixer)">StructureManager</a></span>&#8203;(<a href="../server/MinecraftServer.html" title="class in net.minecraft.server">MinecraftServer</a>&nbsp;server,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io" class="externalLink">File</a>&nbsp;worldDir,
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.resource.ResourceManager,net.minecraft.world.level.storage.LevelStorage.Session,com.mojang.datafixers.DataFixer)">StructureManager</a></span>&#8203;(<a href="../resource/ResourceManager.html" title="interface in net.minecraft.resource">ResourceManager</a>&nbsp;resourceManager,
+<a href="../world/level/storage/LevelStorage.Session.html" title="class in net.minecraft.world.level.storage">LevelStorage.Session</a>&nbsp;session,
 com.mojang.datafixers.DataFixer&nbsp;dataFixer)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -160,13 +189,14 @@ com.mojang.datafixers.DataFixer&nbsp;dataFixer)</code></th>
 </thead>
 <tbody>
 <tr class="altColor" id="i0">
-<td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#apply(net.minecraft.resource.ResourceManager)">apply</a></span>&#8203;(<a href="../resource/ResourceManager.html" title="interface in net.minecraft.resource">ResourceManager</a>&nbsp;manager)</code></th>
+<td class="colFirst"><code><a href="Structure.html" title="class in net.minecraft.structure">Structure</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createStructure(net.minecraft.nbt.CompoundTag)">createStructure</a></span>&#8203;(<a href="../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;tag)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
-<td class="colFirst"><code><a href="Structure.html" title="class in net.minecraft.structure">Structure</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createStructure(net.minecraft.nbt.CompoundTag)">createStructure</a></span>&#8203;(<a href="../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;tag)</code></th>
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html?is-external=true" title="class or interface in java.nio.file" class="externalLink">Path</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getAndCheckStructurePath(net.minecraft.util.Identifier,java.lang.String)">getAndCheckStructurePath</a></span>&#8203;(<a href="../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;id,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;extension)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i2">
@@ -186,11 +216,31 @@ com.mojang.datafixers.DataFixer&nbsp;dataFixer)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i5">
+<td class="colFirst"><code>private <a href="Structure.html" title="class in net.minecraft.structure">Structure</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#loadStructureFromFile(net.minecraft.util.Identifier)">loadStructureFromFile</a></span>&#8203;(<a href="../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;id)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i6">
+<td class="colFirst"><code>private <a href="Structure.html" title="class in net.minecraft.structure">Structure</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#loadStructureFromResource(net.minecraft.util.Identifier)">loadStructureFromResource</a></span>&#8203;(<a href="../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;id)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i7">
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_29300(net.minecraft.resource.ResourceManager)">method_29300</a></span>&#8203;(<a href="../resource/ResourceManager.html" title="interface in net.minecraft.resource">ResourceManager</a>&nbsp;resourceManager)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i8">
+<td class="colFirst"><code>private <a href="Structure.html" title="class in net.minecraft.structure">Structure</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#readStructure(java.io.InputStream)">readStructure</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io" class="externalLink">InputStream</a>&nbsp;structureInputStream)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i9">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#saveStructure(net.minecraft.util.Identifier)">saveStructure</a></span>&#8203;(<a href="../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;id)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i6">
+<tr class="altColor" id="i10">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#unloadStructure(net.minecraft.util.Identifier)">unloadStructure</a></span>&#8203;(<a href="../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;id)</code></th>
 <td class="colLast">&nbsp;</td>
@@ -204,22 +254,52 @@ com.mojang.datafixers.DataFixer&nbsp;dataFixer)</code></th>
 <a id="methods.inherited.from.class.java.lang.Object">
 <!--   -->
 </a><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang" class="externalLink">clone</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang" class="externalLink">equals</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang" class="externalLink">finalize</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang" class="externalLink">getClass</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang" class="externalLink">hashCode</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang" class="externalLink">notify</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang" class="externalLink">notifyAll</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang" class="externalLink">toString</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang" class="externalLink">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang" class="externalLink">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait(long,int)" title="class or interface in java.lang" class="externalLink">wait</a></code></div>
-<div class="inheritedList">
-<h3>Methods inherited from interface&nbsp;net.minecraft.resource.<a href="../resource/ResourceReloadListener.html" title="interface in net.minecraft.resource">ResourceReloadListener</a></h3>
-<a id="methods.inherited.from.class.net.minecraft.resource.ResourceReloadListener">
-<!--   -->
-</a><code><a href="../resource/ResourceReloadListener.html#getName()">getName</a></code></div>
-<div class="inheritedList">
-<h3>Methods inherited from interface&nbsp;net.minecraft.resource.<a href="../resource/SynchronousResourceReloadListener.html" title="interface in net.minecraft.resource">SynchronousResourceReloadListener</a></h3>
-<a id="methods.inherited.from.class.net.minecraft.resource.SynchronousResourceReloadListener">
-<!--   -->
-</a><code><a href="../resource/SynchronousResourceReloadListener.html#reload(net.minecraft.resource.ResourceReloadListener.Synchronizer,net.minecraft.resource.ResourceManager,net.minecraft.util.profiler.Profiler,net.minecraft.util.profiler.Profiler,java.util.concurrent.Executor,java.util.concurrent.Executor)">reload</a></code></div>
 </section>
 </li>
 </ul>
 </section>
 <section class="details">
 <ul class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<li class="blockList">
+<section class="fieldDetails"><a id="field.detail">
+<!--   -->
+</a>
+<h2>Field Details</h2>
+<ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="LOGGER">LOGGER</a></h3>
+<div class="memberSignature"><span class="modifiers">private static final</span>&nbsp;<span class="returnType"><a href="https://logging.apache.org/log4j/2.x/log4j-api/apidocs/org/apache/logging/log4j/Logger.html?is-external=true" title="class or interface in org.apache.logging.log4j" class="externalLink">Logger</a></span>&nbsp;<span class="memberName">LOGGER</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="structures">structures</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util" class="externalLink">Map</a>&lt;<a href="../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>,&#8203;<a href="Structure.html" title="class in net.minecraft.structure">Structure</a>&gt;</span>&nbsp;<span class="memberName">structures</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="dataFixer">dataFixer</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType">com.mojang.datafixers.DataFixer</span>&nbsp;<span class="memberName">dataFixer</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="field_25189">field_25189</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="../resource/ResourceManager.html" title="interface in net.minecraft.resource">ResourceManager</a></span>&nbsp;<span class="memberName">field_25189</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="generatedPath">generatedPath</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html?is-external=true" title="class or interface in java.nio.file" class="externalLink">Path</a></span>&nbsp;<span class="memberName">generatedPath</span></div>
+</section>
+</li>
+</ul>
+</section>
+</li>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <li class="blockList">
 <section class="constructorDetails"><a id="constructor.detail">
@@ -229,9 +309,9 @@ com.mojang.datafixers.DataFixer&nbsp;dataFixer)</code></th>
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="&lt;init&gt;(net.minecraft.server.MinecraftServer,java.io.File,com.mojang.datafixers.DataFixer)">StructureManager</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">StructureManager</span>&#8203;(<span class="arguments"><a href="../server/MinecraftServer.html" title="class in net.minecraft.server">MinecraftServer</a>&nbsp;server,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io" class="externalLink">File</a>&nbsp;worldDir,
+<h3><a id="&lt;init&gt;(net.minecraft.resource.ResourceManager,net.minecraft.world.level.storage.LevelStorage.Session,com.mojang.datafixers.DataFixer)">StructureManager</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">StructureManager</span>&#8203;(<span class="arguments"><a href="../resource/ResourceManager.html" title="interface in net.minecraft.resource">ResourceManager</a>&nbsp;resourceManager,
+<a href="../world/level/storage/LevelStorage.Session.html" title="class in net.minecraft.world.level.storage">LevelStorage.Session</a>&nbsp;session,
 com.mojang.datafixers.DataFixer&nbsp;dataFixer)</span></div>
 </section>
 </li>
@@ -254,17 +334,38 @@ com.mojang.datafixers.DataFixer&nbsp;dataFixer)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getStructure(net.minecraft.util.Identifier)">getStructure</a></h3>
-<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 </span><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="Structure.html" title="class in net.minecraft.structure">Structure</a></span>&nbsp;<span class="memberName">getStructure</span>&#8203;(<span class="arguments"><a href="../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;identifier)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="apply(net.minecraft.resource.ResourceManager)">apply</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">apply</span>&#8203;(<span class="arguments"><a href="../resource/ResourceManager.html" title="interface in net.minecraft.resource">ResourceManager</a>&nbsp;manager)</span></div>
+<h3><a id="method_29300(net.minecraft.resource.ResourceManager)">method_29300</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">method_29300</span>&#8203;(<span class="arguments"><a href="../resource/ResourceManager.html" title="interface in net.minecraft.resource">ResourceManager</a>&nbsp;resourceManager)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="loadStructureFromResource(net.minecraft.util.Identifier)">loadStructureFromResource</a></h3>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="Structure.html" title="class in net.minecraft.structure">Structure</a></span>&nbsp;<span class="memberName">loadStructureFromResource</span>&#8203;(<span class="arguments"><a href="../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;id)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="loadStructureFromFile(net.minecraft.util.Identifier)">loadStructureFromFile</a></h3>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="Structure.html" title="class in net.minecraft.structure">Structure</a></span>&nbsp;<span class="memberName">loadStructureFromFile</span>&#8203;(<span class="arguments"><a href="../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;id)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="readStructure(java.io.InputStream)">readStructure</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="Structure.html" title="class in net.minecraft.structure">Structure</a></span>&nbsp;<span class="memberName">readStructure</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io" class="externalLink">InputStream</a>&nbsp;structureInputStream)</span>
+                         throws <span class="exceptions"><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></span></div>
 <dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../resource/SynchronousResourceReloadListener.html#apply(net.minecraft.resource.ResourceManager)">apply</a></code>&nbsp;in interface&nbsp;<code><a href="../resource/SynchronousResourceReloadListener.html" title="interface in net.minecraft.resource">SynchronousResourceReloadListener</a></code></dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code></dd>
 </dl>
 </section>
 </li>
@@ -284,6 +385,13 @@ com.mojang.datafixers.DataFixer&nbsp;dataFixer)</span></div>
 <section class="detail">
 <h3><a id="getStructurePath(net.minecraft.util.Identifier,java.lang.String)">getStructurePath</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html?is-external=true" title="class or interface in java.nio.file" class="externalLink">Path</a></span>&nbsp;<span class="memberName">getStructurePath</span>&#8203;(<span class="arguments"><a href="../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;id,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;extension)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="getAndCheckStructurePath(net.minecraft.util.Identifier,java.lang.String)">getAndCheckStructurePath</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html?is-external=true" title="class or interface in java.nio.file" class="externalLink">Path</a></span>&nbsp;<span class="memberName">getAndCheckStructurePath</span>&#8203;(<span class="arguments"><a href="../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;id,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;extension)</span></div>
 </section>
 </li>
@@ -325,14 +433,14 @@ com.mojang.datafixers.DataFixer&nbsp;dataFixer)</span></div>
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li><a href="#nested.class.summary">Nested</a>&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>

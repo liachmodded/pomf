@@ -19,8 +19,8 @@
 <script type="text/javascript" src="../../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":6,"i3":6,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":6,"i12":10,"i13":10};
-var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],8:["t4","Concrete Methods"]};
+<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":9,"i9":9,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10};
+var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
@@ -83,22 +83,18 @@ loadScripts(document, 'script');</script>
 <!-- ======== START OF CLASS DATA ======== -->
 <div class="header">
 <div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html">net.minecraft.world.gen.chunk</a></div>
-<h1 title="Class SurfaceChunkGenerator" class="title">Class SurfaceChunkGenerator&lt;T extends <a href="ChunkGeneratorConfig.html" title="class in net.minecraft.world.gen.chunk">ChunkGeneratorConfig</a>&gt;</h1>
+<h1 title="Class SurfaceChunkGenerator" class="title">Class SurfaceChunkGenerator</h1>
 </div>
 <div class="contentContainer">
 <div class="inheritance" title="Inheritance Tree"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">java.lang.Object</a>
-<div class="inheritance"><a href="ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">net.minecraft.world.gen.chunk.ChunkGenerator</a>&lt;T&gt;
-<div class="inheritance">net.minecraft.world.gen.chunk.SurfaceChunkGenerator&lt;T&gt;</div>
+<div class="inheritance"><a href="ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">net.minecraft.world.gen.chunk.ChunkGenerator</a>
+<div class="inheritance">net.minecraft.world.gen.chunk.SurfaceChunkGenerator</div>
 </div>
 </div>
 <section class="description">
-<dl>
-<dt>Direct Known Subclasses:</dt>
-<dd><code><a href="CavesChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">CavesChunkGenerator</a></code>, <code><a href="FloatingIslandsChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">FloatingIslandsChunkGenerator</a></code>, <code><a href="OverworldChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">OverworldChunkGenerator</a></code></dd>
-</dl>
 <hr>
-<pre>public abstract class <span class="typeNameLabel">SurfaceChunkGenerator&lt;T extends <a href="ChunkGeneratorConfig.html" title="class in net.minecraft.world.gen.chunk">ChunkGeneratorConfig</a>&gt;</span>
-extends <a href="ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">ChunkGenerator</a>&lt;T&gt;</pre>
+<pre>public final class <span class="typeNameLabel">SurfaceChunkGenerator</span>
+extends <a href="ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">ChunkGenerator</a></pre>
 </section>
 <section class="summary">
 <ul class="blockList">
@@ -120,6 +116,16 @@ extends <a href="ChunkGenerator.html" title="class in net.minecraft.world.gen.ch
 </thead>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code>private static <a href="../../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#AIR">AIR</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static com.mojang.serialization.Codec&lt;<a href="SurfaceChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">SurfaceChunkGenerator</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#CODEC">CODEC</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#defaultBlock">defaultBlock</a></span></code></th>
 <td class="colLast">&nbsp;</td>
@@ -130,8 +136,88 @@ extends <a href="ChunkGenerator.html" title="class in net.minecraft.world.gen.ch
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private static float[]</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#field_16649">field_16649</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected <a href="ChunkGeneratorType.html" title="class in net.minecraft.world.gen.chunk">ChunkGeneratorType</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#field_24774">field_24774</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static float[]</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#field_24775">field_24775</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../util/math/noise/OctavePerlinNoiseSampler.html" title="class in net.minecraft.util.math.noise">OctavePerlinNoiseSampler</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#field_24776">field_24776</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../util/math/noise/SimplexNoiseSampler.html" title="class in net.minecraft.util.math.noise">SimplexNoiseSampler</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#field_24777">field_24777</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private long</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#field_24778">field_24778</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#field_24779">field_24779</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#horizontalNoiseResolution">horizontalNoiseResolution</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../util/math/noise/OctavePerlinNoiseSampler.html" title="class in net.minecraft.util.math.noise">OctavePerlinNoiseSampler</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#interpolationNoise">interpolationNoise</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../util/math/noise/OctavePerlinNoiseSampler.html" title="class in net.minecraft.util.math.noise">OctavePerlinNoiseSampler</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#lowerInterpolatedNoise">lowerInterpolatedNoise</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#noiseSizeX">noiseSizeX</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#noiseSizeY">noiseSizeY</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#noiseSizeZ">noiseSizeZ</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../ChunkRandom.html" title="class in net.minecraft.world.gen">ChunkRandom</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#random">random</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../util/math/noise/NoiseSampler.html" title="interface in net.minecraft.util.math.noise">NoiseSampler</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#surfaceDepthNoise">surfaceDepthNoise</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../util/math/noise/OctavePerlinNoiseSampler.html" title="class in net.minecraft.util.math.noise">OctavePerlinNoiseSampler</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#upperInterpolatedNoise">upperInterpolatedNoise</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#verticalNoiseResolution">verticalNoiseResolution</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -141,7 +227,7 @@ extends <a href="ChunkGenerator.html" title="class in net.minecraft.world.gen.ch
 <h3>Fields inherited from class&nbsp;net.minecraft.world.gen.chunk.<a href="ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">ChunkGenerator</a></h3>
 <a id="fields.inherited.from.class.net.minecraft.world.gen.chunk.ChunkGenerator">
 <!--   -->
-</a><code><a href="ChunkGenerator.html#biomeSource">biomeSource</a>, <a href="ChunkGenerator.html#config">config</a>, <a href="ChunkGenerator.html#seed">seed</a>, <a href="ChunkGenerator.html#world">world</a></code></div>
+</a><code><a href="ChunkGenerator.html#biomeSource">biomeSource</a>, <a href="ChunkGenerator.html#field_24746">field_24746</a>, <a href="ChunkGenerator.html#field_24747">field_24747</a></code></div>
 </section>
 </li>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
@@ -155,19 +241,25 @@ extends <a href="ChunkGenerator.html" title="class in net.minecraft.world.gen.ch
 <caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
 <thead>
 <tr>
-<th class="colFirst" scope="col">Constructor</th>
+<th class="colFirst" scope="col">Modifier</th>
+<th class="colSecond" scope="col">Constructor</th>
 <th class="colLast" scope="col">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.world.IWorld,net.minecraft.world.biome.source.BiomeSource,int,int,int,T,boolean)">SurfaceChunkGenerator</a></span>&#8203;(<a href="../../IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;world,
-<a href="../../biome/source/BiomeSource.html" title="class in net.minecraft.world.biome.source">BiomeSource</a>&nbsp;biomeSource,
-int&nbsp;verticalNoiseResolution,
-int&nbsp;horizontalNoiseResolution,
-int&nbsp;worldHeight,
-<a href="SurfaceChunkGenerator.html" title="type parameter in SurfaceChunkGenerator">T</a>&nbsp;config,
-boolean&nbsp;useSimplexNoise)</code></th>
+<td class="colFirst"><code>&nbsp;</code></td>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.world.biome.source.BiomeSource,long,net.minecraft.world.gen.chunk.ChunkGeneratorType)">SurfaceChunkGenerator</a></span>&#8203;(<a href="../../biome/source/BiomeSource.html" title="class in net.minecraft.world.biome.source">BiomeSource</a>&nbsp;biomeSource,
+long&nbsp;long2,
+<a href="ChunkGeneratorType.html" title="class in net.minecraft.world.gen.chunk">ChunkGeneratorType</a>&nbsp;chunkGeneratorType)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private </code></td>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.world.biome.source.BiomeSource,net.minecraft.world.biome.source.BiomeSource,long,net.minecraft.world.gen.chunk.ChunkGeneratorType)">SurfaceChunkGenerator</a></span>&#8203;(<a href="../../biome/source/BiomeSource.html" title="class in net.minecraft.world.biome.source">BiomeSource</a>&nbsp;biomeSource,
+<a href="../../biome/source/BiomeSource.html" title="class in net.minecraft.world.biome.source">BiomeSource</a>&nbsp;biomeSource2,
+long&nbsp;long2,
+<a href="ChunkGeneratorType.html" title="class in net.minecraft.world.gen.chunk">ChunkGeneratorType</a>&nbsp;chunkGeneratorType)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -182,7 +274,7 @@ boolean&nbsp;useSimplexNoise)</code></th>
 </a>
 <h2>Method Summary</h2>
 <div class="memberSummary">
-<div role="tablist" aria-orientation="horizontal"><button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t2" class="tableTab" onclick="show(2);">Instance Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t3" class="tableTab" onclick="show(4);">Abstract Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t4" class="tableTab" onclick="show(8);">Concrete Methods</button></div>
+<div role="tablist" aria-orientation="horizontal"><button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t1" class="tableTab" onclick="show(1);">Static Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t2" class="tableTab" onclick="show(2);">Instance Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t4" class="tableTab" onclick="show(8);">Concrete Methods</button></div>
 <div id="memberSummary_tabpanel" role="tabpanel">
 <table aria-labelledby="t0">
 <thead>
@@ -194,7 +286,7 @@ boolean&nbsp;useSimplexNoise)</code></th>
 </thead>
 <tbody>
 <tr class="altColor" id="i0">
-<td class="colFirst"><code>protected void</code></td>
+<td class="colFirst"><code>private void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#buildBedrock(net.minecraft.world.chunk.Chunk,java.util.Random)">buildBedrock</a></span>&#8203;(<a href="../../chunk/Chunk.html" title="interface in net.minecraft.world.chunk">Chunk</a>&nbsp;chunk,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random)</code></th>
 <td class="colLast">&nbsp;</td>
@@ -206,22 +298,23 @@ boolean&nbsp;useSimplexNoise)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i2">
-<td class="colFirst"><code>protected abstract double</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#computeNoiseFalloff(double,double,int)">computeNoiseFalloff</a></span>&#8203;(double&nbsp;depth,
-double&nbsp;scale,
+<td class="colFirst"><code>protected <a href="../../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getBlockState(double,int)">getBlockState</a></span>&#8203;(double&nbsp;density,
 int&nbsp;y)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i3">
-<td class="colFirst"><code>protected abstract double[]</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#computeNoiseRange(int,int)">computeNoiseRange</a></span>&#8203;(int&nbsp;x,
+<td class="colFirst"><code><a href="../../BlockView.html" title="interface in net.minecraft.world">BlockView</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getColumnSample(int,int)">getColumnSample</a></span>&#8203;(int&nbsp;x,
 int&nbsp;z)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i4">
-<td class="colFirst"><code><a href="../../BlockView.html" title="interface in net.minecraft.world">BlockView</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getColumnSample(int,int)">getColumnSample</a></span>&#8203;(int&nbsp;x,
-int&nbsp;z)</code></th>
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../../biome/Biome.SpawnEntry.html" title="class in net.minecraft.world.biome">Biome.SpawnEntry</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getEntitySpawnList(net.minecraft.world.biome.Biome,net.minecraft.world.gen.StructureAccessor,net.minecraft.entity.SpawnGroup,net.minecraft.util.math.BlockPos)">getEntitySpawnList</a></span>&#8203;(<a href="../../biome/Biome.html" title="class in net.minecraft.world.biome">Biome</a>&nbsp;biome,
+<a href="../StructureAccessor.html" title="class in net.minecraft.world.gen">StructureAccessor</a>&nbsp;accessor,
+<a href="../../../entity/SpawnGroup.html" title="enum in net.minecraft.entity">SpawnGroup</a>&nbsp;group,
+<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i5">
@@ -233,56 +326,94 @@ int&nbsp;z,
 </tr>
 <tr class="altColor" id="i6">
 <td class="colFirst"><code>int</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getNoiseSizeY()">getNoiseSizeY</a></span>()</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getMaxY()">getMaxY</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i7">
-<td class="colFirst"><code>protected double</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_16409()">method_16409</a></span>()</code></th>
+<td class="colFirst"><code>int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getSeaLevel()">getSeaLevel</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i8">
-<td class="colFirst"><code>protected double</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_16410()">method_16410</a></span>()</code></th>
+<td class="colFirst"><code>private static double</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_16571(int,int,int)">method_16571</a></span>&#8203;(int&nbsp;int2,
+int&nbsp;int3,
+int&nbsp;int4)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i9">
-<td class="colFirst"><code>protected <a href="../../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_26262(double,int)">method_26262</a></span>&#8203;(double&nbsp;double2,
-int&nbsp;int2)</code></th>
+<td class="colFirst"><code>private static double</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_16572(int,int,int)">method_16572</a></span>&#8203;(int&nbsp;int2,
+int&nbsp;int3,
+int&nbsp;int4)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i10">
-<td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#populateNoise(net.minecraft.world.IWorld,net.minecraft.world.gen.StructureAccessor,net.minecraft.world.chunk.Chunk)">populateNoise</a></span>&#8203;(<a href="../../IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;world,
-<a href="../StructureAccessor.html" title="class in net.minecraft.world.gen">StructureAccessor</a>&nbsp;structureAccessor,
-<a href="../../chunk/Chunk.html" title="interface in net.minecraft.world.chunk">Chunk</a>&nbsp;chunk)</code></th>
+<td class="colFirst"><code>protected com.mojang.serialization.Codec&lt;? extends <a href="ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">ChunkGenerator</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_28506()">method_28506</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i11">
-<td class="colFirst"><code>protected abstract void</code></td>
+<td class="colFirst"><code>boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_28548(long,net.minecraft.world.gen.chunk.ChunkGeneratorType.Preset)">method_28548</a></span>&#8203;(long&nbsp;long2,
+<a href="ChunkGeneratorType.Preset.html" title="class in net.minecraft.world.gen.chunk">ChunkGeneratorType.Preset</a>&nbsp;preset)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i12">
+<td class="colFirst"><code>private double</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_28553(int,int)">method_28553</a></span>&#8203;(int&nbsp;int2,
+int&nbsp;int3)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i13">
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#populateEntities(net.minecraft.world.ChunkRegion)">populateEntities</a></span>&#8203;(<a href="../../ChunkRegion.html" title="class in net.minecraft.world">ChunkRegion</a>&nbsp;region)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i14">
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#populateNoise(net.minecraft.world.WorldAccess,net.minecraft.world.gen.StructureAccessor,net.minecraft.world.chunk.Chunk)">populateNoise</a></span>&#8203;(<a href="../../WorldAccess.html" title="interface in net.minecraft.world">WorldAccess</a>&nbsp;world,
+<a href="../StructureAccessor.html" title="class in net.minecraft.world.gen">StructureAccessor</a>&nbsp;accessor,
+<a href="../../chunk/Chunk.html" title="interface in net.minecraft.world.chunk">Chunk</a>&nbsp;chunk)</code></th>
+<td class="colLast">
+<div class="block">Generates the base shape of the chunk out of the basic block states as decided by this chunk generator's config.</div>
+</td>
+</tr>
+<tr class="rowColor" id="i15">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#sampleHeightmap(int,int,net.minecraft.block.BlockState%5B%5D,java.util.function.Predicate)">sampleHeightmap</a></span>&#8203;(int&nbsp;x,
+int&nbsp;z,
+<a href="../../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>[]&nbsp;states,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Predicate</a>&lt;<a href="../../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&gt;&nbsp;predicate)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i16">
+<td class="colFirst"><code>private double</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#sampleNoise(int,int,int,double,double,double,double)">sampleNoise</a></span>&#8203;(int&nbsp;x,
+int&nbsp;y,
+int&nbsp;z,
+double&nbsp;horizontalScale,
+double&nbsp;verticalScale,
+double&nbsp;horizontalStretch,
+double&nbsp;verticalStretch)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i17">
+<td class="colFirst"><code>private void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#sampleNoiseColumn(double%5B%5D,int,int)">sampleNoiseColumn</a></span>&#8203;(double[]&nbsp;buffer,
 int&nbsp;x,
 int&nbsp;z)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i12">
-<td class="colFirst"><code>protected void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#sampleNoiseColumn(double%5B%5D,int,int,double,double,double,double,int,int)">sampleNoiseColumn</a></span>&#8203;(double[]&nbsp;buffer,
-int&nbsp;x,
-int&nbsp;z,
-double&nbsp;double2,
-double&nbsp;double3,
-double&nbsp;double4,
-double&nbsp;double5,
-int&nbsp;int2,
-int&nbsp;int3)</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="rowColor" id="i13">
-<td class="colFirst"><code>protected double[]</code></td>
+<tr class="altColor" id="i18">
+<td class="colFirst"><code>private double[]</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#sampleNoiseColumn(int,int)">sampleNoiseColumn</a></span>&#8203;(int&nbsp;x,
 int&nbsp;z)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i19">
+<td class="colFirst"><code><a href="ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">ChunkGenerator</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#withSeed(long)">withSeed</a></span>&#8203;(long&nbsp;seed)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -293,7 +424,7 @@ int&nbsp;z)</code></th>
 <h3>Methods inherited from class&nbsp;net.minecraft.world.gen.chunk.<a href="ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">ChunkGenerator</a></h3>
 <a id="methods.inherited.from.class.net.minecraft.world.gen.chunk.ChunkGenerator">
 <!--   -->
-</a><code><a href="ChunkGenerator.html#addStructureReferences(net.minecraft.world.IWorld,net.minecraft.world.gen.StructureAccessor,net.minecraft.world.chunk.Chunk)">addStructureReferences</a>, <a href="ChunkGenerator.html#carve(net.minecraft.world.biome.source.BiomeAccess,net.minecraft.world.chunk.Chunk,net.minecraft.world.gen.GenerationStep.Carver)">carve</a>, <a href="ChunkGenerator.html#generateFeatures(net.minecraft.world.ChunkRegion,net.minecraft.world.gen.StructureAccessor)">generateFeatures</a>, <a href="ChunkGenerator.html#getBiomeSource()">getBiomeSource</a>, <a href="ChunkGenerator.html#getConfig()">getConfig</a>, <a href="ChunkGenerator.html#getDecorationBiome(net.minecraft.world.biome.source.BiomeAccess,net.minecraft.util.math.BlockPos)">getDecorationBiome</a>, <a href="ChunkGenerator.html#getEntitySpawnList(net.minecraft.world.gen.StructureAccessor,net.minecraft.entity.EntityCategory,net.minecraft.util.math.BlockPos)">getEntitySpawnList</a>, <a href="ChunkGenerator.html#getHeightInGround(int,int,net.minecraft.world.Heightmap.Type)">getHeightInGround</a>, <a href="ChunkGenerator.html#getHeightOnGround(int,int,net.minecraft.world.Heightmap.Type)">getHeightOnGround</a>, <a href="ChunkGenerator.html#getMaxY()">getMaxY</a>, <a href="ChunkGenerator.html#getSeaLevel()">getSeaLevel</a>, <a href="ChunkGenerator.html#getSeed()">getSeed</a>, <a href="ChunkGenerator.html#getSpawnHeight()">getSpawnHeight</a>, <a href="ChunkGenerator.html#getStructureConfig(net.minecraft.world.biome.Biome,net.minecraft.world.gen.feature.StructureFeature)">getStructureConfig</a>, <a href="ChunkGenerator.html#hasStructure(net.minecraft.world.biome.Biome,net.minecraft.world.gen.feature.StructureFeature)">hasStructure</a>, <a href="ChunkGenerator.html#locateStructure(net.minecraft.server.world.ServerWorld,java.lang.String,net.minecraft.util.math.BlockPos,int,boolean)">locateStructure</a>, <a href="ChunkGenerator.html#populateBiomes(net.minecraft.world.chunk.Chunk)">populateBiomes</a>, <a href="ChunkGenerator.html#populateEntities(net.minecraft.world.ChunkRegion)">populateEntities</a>, <a href="ChunkGenerator.html#setStructureStarts(net.minecraft.world.gen.StructureAccessor,net.minecraft.world.biome.source.BiomeAccess,net.minecraft.world.chunk.Chunk,net.minecraft.world.gen.chunk.ChunkGenerator,net.minecraft.structure.StructureManager)">setStructureStarts</a>, <a href="ChunkGenerator.html#spawnEntities(net.minecraft.server.world.ServerWorld,boolean,boolean)">spawnEntities</a></code></div>
+</a><code><a href="ChunkGenerator.html#addStructureReferences(net.minecraft.world.WorldAccess,net.minecraft.world.gen.StructureAccessor,net.minecraft.world.chunk.Chunk)">addStructureReferences</a>, <a href="ChunkGenerator.html#carve(long,net.minecraft.world.biome.source.BiomeAccess,net.minecraft.world.chunk.Chunk,net.minecraft.world.gen.GenerationStep.Carver)">carve</a>, <a href="ChunkGenerator.html#generateFeatures(net.minecraft.world.ChunkRegion,net.minecraft.world.gen.StructureAccessor)">generateFeatures</a>, <a href="ChunkGenerator.html#getBiomeSource()">getBiomeSource</a>, <a href="ChunkGenerator.html#getConfig()">getConfig</a>, <a href="ChunkGenerator.html#getHeightInGround(int,int,net.minecraft.world.Heightmap.Type)">getHeightInGround</a>, <a href="ChunkGenerator.html#getHeightOnGround(int,int,net.minecraft.world.Heightmap.Type)">getHeightOnGround</a>, <a href="ChunkGenerator.html#getSpawnHeight()">getSpawnHeight</a>, <a href="ChunkGenerator.html#locateStructure(net.minecraft.server.world.ServerWorld,net.minecraft.world.gen.feature.StructureFeature,net.minecraft.util.math.BlockPos,int,boolean)">locateStructure</a>, <a href="ChunkGenerator.html#method_28507(net.minecraft.util.math.ChunkPos)">method_28507</a>, <a href="ChunkGenerator.html#populateBiomes(net.minecraft.world.chunk.Chunk)">populateBiomes</a>, <a href="ChunkGenerator.html#setStructureStarts(net.minecraft.world.gen.StructureAccessor,net.minecraft.world.chunk.Chunk,net.minecraft.structure.StructureManager,long)">setStructureStarts</a></code></div>
 <div class="inheritedList">
 <h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></h3>
 <a id="methods.inherited.from.class.java.lang.Object">
@@ -314,8 +445,99 @@ int&nbsp;z)</code></th>
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
+<h3><a id="CODEC">CODEC</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType">com.mojang.serialization.Codec&lt;<a href="SurfaceChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">SurfaceChunkGenerator</a>&gt;</span>&nbsp;<span class="memberName">CODEC</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="field_16649">field_16649</a></h3>
+<div class="memberSignature"><span class="modifiers">private static final</span>&nbsp;<span class="returnType">float[]</span>&nbsp;<span class="memberName">field_16649</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="field_24775">field_24775</a></h3>
+<div class="memberSignature"><span class="modifiers">private static final</span>&nbsp;<span class="returnType">float[]</span>&nbsp;<span class="memberName">field_24775</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="AIR">AIR</a></h3>
+<div class="memberSignature"><span class="modifiers">private static final</span>&nbsp;<span class="returnType"><a href="../../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a></span>&nbsp;<span class="memberName">AIR</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="verticalNoiseResolution">verticalNoiseResolution</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">verticalNoiseResolution</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="horizontalNoiseResolution">horizontalNoiseResolution</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">horizontalNoiseResolution</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="noiseSizeX">noiseSizeX</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">noiseSizeX</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="noiseSizeY">noiseSizeY</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">noiseSizeY</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="noiseSizeZ">noiseSizeZ</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">noiseSizeZ</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="random">random</a></h3>
 <div class="memberSignature"><span class="modifiers">protected final</span>&nbsp;<span class="returnType"><a href="../ChunkRandom.html" title="class in net.minecraft.world.gen">ChunkRandom</a></span>&nbsp;<span class="memberName">random</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="lowerInterpolatedNoise">lowerInterpolatedNoise</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../../../util/math/noise/OctavePerlinNoiseSampler.html" title="class in net.minecraft.util.math.noise">OctavePerlinNoiseSampler</a></span>&nbsp;<span class="memberName">lowerInterpolatedNoise</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="upperInterpolatedNoise">upperInterpolatedNoise</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../../../util/math/noise/OctavePerlinNoiseSampler.html" title="class in net.minecraft.util.math.noise">OctavePerlinNoiseSampler</a></span>&nbsp;<span class="memberName">upperInterpolatedNoise</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="interpolationNoise">interpolationNoise</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../../../util/math/noise/OctavePerlinNoiseSampler.html" title="class in net.minecraft.util.math.noise">OctavePerlinNoiseSampler</a></span>&nbsp;<span class="memberName">interpolationNoise</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="surfaceDepthNoise">surfaceDepthNoise</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../../../util/math/noise/NoiseSampler.html" title="interface in net.minecraft.util.math.noise">NoiseSampler</a></span>&nbsp;<span class="memberName">surfaceDepthNoise</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="field_24776">field_24776</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../../../util/math/noise/OctavePerlinNoiseSampler.html" title="class in net.minecraft.util.math.noise">OctavePerlinNoiseSampler</a></span>&nbsp;<span class="memberName">field_24776</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="field_24777">field_24777</a></h3>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../../../util/math/noise/SimplexNoiseSampler.html" title="class in net.minecraft.util.math.noise">SimplexNoiseSampler</a></span>&nbsp;<span class="memberName">field_24777</span></div>
 </section>
 </li>
 <li class="blockList">
@@ -330,6 +552,24 @@ int&nbsp;z)</code></th>
 <div class="memberSignature"><span class="modifiers">protected final</span>&nbsp;<span class="returnType"><a href="../../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a></span>&nbsp;<span class="memberName">defaultFluid</span></div>
 </section>
 </li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="field_24778">field_24778</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType">long</span>&nbsp;<span class="memberName">field_24778</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="field_24774">field_24774</a></h3>
+<div class="memberSignature"><span class="modifiers">protected final</span>&nbsp;<span class="returnType"><a href="ChunkGeneratorType.html" title="class in net.minecraft.world.gen.chunk">ChunkGeneratorType</a></span>&nbsp;<span class="memberName">field_24774</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="field_24779">field_24779</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">field_24779</span></div>
+</section>
+</li>
 </ul>
 </section>
 </li>
@@ -342,16 +582,19 @@ int&nbsp;z)</code></th>
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="&lt;init&gt;(net.minecraft.world.IWorld,net.minecraft.world.biome.source.BiomeSource,int,int,int,net.minecraft.world.gen.chunk.ChunkGeneratorConfig,boolean)">
-<!--   -->
-</a><a id="&lt;init&gt;(net.minecraft.world.IWorld,net.minecraft.world.biome.source.BiomeSource,int,int,int,T,boolean)">SurfaceChunkGenerator</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">SurfaceChunkGenerator</span>&#8203;(<span class="arguments"><a href="../../IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;world,
-<a href="../../biome/source/BiomeSource.html" title="class in net.minecraft.world.biome.source">BiomeSource</a>&nbsp;biomeSource,
-int&nbsp;verticalNoiseResolution,
-int&nbsp;horizontalNoiseResolution,
-int&nbsp;worldHeight,
-<a href="SurfaceChunkGenerator.html" title="type parameter in SurfaceChunkGenerator">T</a>&nbsp;config,
-boolean&nbsp;useSimplexNoise)</span></div>
+<h3><a id="&lt;init&gt;(net.minecraft.world.biome.source.BiomeSource,long,net.minecraft.world.gen.chunk.ChunkGeneratorType)">SurfaceChunkGenerator</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">SurfaceChunkGenerator</span>&#8203;(<span class="arguments"><a href="../../biome/source/BiomeSource.html" title="class in net.minecraft.world.biome.source">BiomeSource</a>&nbsp;biomeSource,
+long&nbsp;long2,
+<a href="ChunkGeneratorType.html" title="class in net.minecraft.world.gen.chunk">ChunkGeneratorType</a>&nbsp;chunkGeneratorType)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="&lt;init&gt;(net.minecraft.world.biome.source.BiomeSource,net.minecraft.world.biome.source.BiomeSource,long,net.minecraft.world.gen.chunk.ChunkGeneratorType)">SurfaceChunkGenerator</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="memberName">SurfaceChunkGenerator</span>&#8203;(<span class="arguments"><a href="../../biome/source/BiomeSource.html" title="class in net.minecraft.world.biome.source">BiomeSource</a>&nbsp;biomeSource,
+<a href="../../biome/source/BiomeSource.html" title="class in net.minecraft.world.biome.source">BiomeSource</a>&nbsp;biomeSource2,
+long&nbsp;long2,
+<a href="ChunkGeneratorType.html" title="class in net.minecraft.world.gen.chunk">ChunkGeneratorType</a>&nbsp;chunkGeneratorType)</span></div>
 </section>
 </li>
 </ul>
@@ -366,50 +609,64 @@ boolean&nbsp;useSimplexNoise)</span></div>
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="sampleNoiseColumn(int,int)">sampleNoiseColumn</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">double[]</span>&nbsp;<span class="memberName">sampleNoiseColumn</span>&#8203;(<span class="arguments">int&nbsp;x,
-int&nbsp;z)</span></div>
+<h3><a id="method_28506()">method_28506</a></h3>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">com.mojang.serialization.Codec&lt;? extends <a href="ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">ChunkGenerator</a>&gt;</span>&nbsp;<span class="memberName">method_28506</span>()</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="ChunkGenerator.html#method_28506()">method_28506</a></code>&nbsp;in class&nbsp;<code><a href="ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">ChunkGenerator</a></code></dd>
+</dl>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="sampleNoiseColumn(double[],int,int,double,double,double,double,int,int)">sampleNoiseColumn</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">sampleNoiseColumn</span>&#8203;(<span class="arguments">double[]&nbsp;buffer,
-int&nbsp;x,
+<h3><a id="withSeed(long)">withSeed</a></h3>
+<div class="memberSignature"><span class="annotations">@Environment(CLIENT)
+</span><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">ChunkGenerator</a></span>&nbsp;<span class="memberName">withSeed</span>&#8203;(<span class="arguments">long&nbsp;seed)</span></div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="ChunkGenerator.html#withSeed(long)">withSeed</a></code>&nbsp;in class&nbsp;<code><a href="ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">ChunkGenerator</a></code></dd>
+</dl>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="method_28548(long,net.minecraft.world.gen.chunk.ChunkGeneratorType.Preset)">method_28548</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">method_28548</span>&#8203;(<span class="arguments">long&nbsp;long2,
+<a href="ChunkGeneratorType.Preset.html" title="class in net.minecraft.world.gen.chunk">ChunkGeneratorType.Preset</a>&nbsp;preset)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="sampleNoise(int,int,int,double,double,double,double)">sampleNoise</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">double</span>&nbsp;<span class="memberName">sampleNoise</span>&#8203;(<span class="arguments">int&nbsp;x,
+int&nbsp;y,
 int&nbsp;z,
-double&nbsp;double2,
-double&nbsp;double3,
-double&nbsp;double4,
-double&nbsp;double5,
-int&nbsp;int2,
-int&nbsp;int3)</span></div>
+double&nbsp;horizontalScale,
+double&nbsp;verticalScale,
+double&nbsp;horizontalStretch,
+double&nbsp;verticalStretch)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="computeNoiseRange(int,int)">computeNoiseRange</a></h3>
-<div class="memberSignature"><span class="modifiers">protected abstract</span>&nbsp;<span class="returnType">double[]</span>&nbsp;<span class="memberName">computeNoiseRange</span>&#8203;(<span class="arguments">int&nbsp;x,
+<h3><a id="sampleNoiseColumn(int,int)">sampleNoiseColumn</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">double[]</span>&nbsp;<span class="memberName">sampleNoiseColumn</span>&#8203;(<span class="arguments">int&nbsp;x,
 int&nbsp;z)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="computeNoiseFalloff(double,double,int)">computeNoiseFalloff</a></h3>
-<div class="memberSignature"><span class="modifiers">protected abstract</span>&nbsp;<span class="returnType">double</span>&nbsp;<span class="memberName">computeNoiseFalloff</span>&#8203;(<span class="arguments">double&nbsp;depth,
-double&nbsp;scale,
-int&nbsp;y)</span></div>
+<h3><a id="sampleNoiseColumn(double[],int,int)">sampleNoiseColumn</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">sampleNoiseColumn</span>&#8203;(<span class="arguments">double[]&nbsp;buffer,
+int&nbsp;x,
+int&nbsp;z)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="method_16409()">method_16409</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">double</span>&nbsp;<span class="memberName">method_16409</span>()</div>
-</section>
-</li>
-<li class="blockList">
-<section class="detail">
-<h3><a id="method_16410()">method_16410</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">double</span>&nbsp;<span class="memberName">method_16410</span>()</div>
+<h3><a id="method_28553(int,int)">method_28553</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">double</span>&nbsp;<span class="memberName">method_28553</span>&#8203;(<span class="arguments">int&nbsp;int2,
+int&nbsp;int3)</span></div>
 </section>
 </li>
 <li class="blockList">
@@ -420,7 +677,7 @@ int&nbsp;z,
 <a href="../../Heightmap.Type.html" title="enum in net.minecraft.world">Heightmap.Type</a>&nbsp;heightmapType)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="ChunkGenerator.html#getHeight(int,int,net.minecraft.world.Heightmap.Type)">getHeight</a></code>&nbsp;in class&nbsp;<code><a href="ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">ChunkGenerator</a>&lt;<a href="SurfaceChunkGenerator.html" title="type parameter in SurfaceChunkGenerator">T</a> extends <a href="ChunkGeneratorConfig.html" title="class in net.minecraft.world.gen.chunk">ChunkGeneratorConfig</a>&gt;</code></dd>
+<dd><code><a href="ChunkGenerator.html#getHeight(int,int,net.minecraft.world.Heightmap.Type)">getHeight</a></code>&nbsp;in class&nbsp;<code><a href="ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">ChunkGenerator</a></code></dd>
 </dl>
 </section>
 </li>
@@ -431,29 +688,26 @@ int&nbsp;z,
 int&nbsp;z)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="ChunkGenerator.html#getColumnSample(int,int)">getColumnSample</a></code>&nbsp;in class&nbsp;<code><a href="ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">ChunkGenerator</a>&lt;<a href="SurfaceChunkGenerator.html" title="type parameter in SurfaceChunkGenerator">T</a> extends <a href="ChunkGeneratorConfig.html" title="class in net.minecraft.world.gen.chunk">ChunkGeneratorConfig</a>&gt;</code></dd>
+<dd><code><a href="ChunkGenerator.html#getColumnSample(int,int)">getColumnSample</a></code>&nbsp;in class&nbsp;<code><a href="ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">ChunkGenerator</a></code></dd>
 </dl>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="method_26262(double,int)">method_26262</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType"><a href="../../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a></span>&nbsp;<span class="memberName">method_26262</span>&#8203;(<span class="arguments">double&nbsp;double2,
-int&nbsp;int2)</span></div>
+<h3><a id="sampleHeightmap(int,int,net.minecraft.block.BlockState[],java.util.function.Predicate)">sampleHeightmap</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">sampleHeightmap</span>&#8203;(<span class="arguments">int&nbsp;x,
+int&nbsp;z,
+<a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<a href="../../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>[]&nbsp;states,
+<a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Predicate</a>&lt;<a href="../../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&gt;&nbsp;predicate)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="sampleNoiseColumn(double[],int,int)">sampleNoiseColumn</a></h3>
-<div class="memberSignature"><span class="modifiers">protected abstract</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">sampleNoiseColumn</span>&#8203;(<span class="arguments">double[]&nbsp;buffer,
-int&nbsp;x,
-int&nbsp;z)</span></div>
-</section>
-</li>
-<li class="blockList">
-<section class="detail">
-<h3><a id="getNoiseSizeY()">getNoiseSizeY</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getNoiseSizeY</span>()</div>
+<h3><a id="getBlockState(double,int)">getBlockState</a></h3>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType"><a href="../../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a></span>&nbsp;<span class="memberName">getBlockState</span>&#8203;(<span class="arguments">double&nbsp;density,
+int&nbsp;y)</span></div>
 </section>
 </li>
 <li class="blockList">
@@ -463,26 +717,86 @@ int&nbsp;z)</span></div>
 <a href="../../chunk/Chunk.html" title="interface in net.minecraft.world.chunk">Chunk</a>&nbsp;chunk)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="ChunkGenerator.html#buildSurface(net.minecraft.world.ChunkRegion,net.minecraft.world.chunk.Chunk)">buildSurface</a></code>&nbsp;in class&nbsp;<code><a href="ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">ChunkGenerator</a>&lt;<a href="SurfaceChunkGenerator.html" title="type parameter in SurfaceChunkGenerator">T</a> extends <a href="ChunkGeneratorConfig.html" title="class in net.minecraft.world.gen.chunk">ChunkGeneratorConfig</a>&gt;</code></dd>
+<dd><code><a href="ChunkGenerator.html#buildSurface(net.minecraft.world.ChunkRegion,net.minecraft.world.chunk.Chunk)">buildSurface</a></code>&nbsp;in class&nbsp;<code><a href="ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">ChunkGenerator</a></code></dd>
 </dl>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="buildBedrock(net.minecraft.world.chunk.Chunk,java.util.Random)">buildBedrock</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">buildBedrock</span>&#8203;(<span class="arguments"><a href="../../chunk/Chunk.html" title="interface in net.minecraft.world.chunk">Chunk</a>&nbsp;chunk,
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">buildBedrock</span>&#8203;(<span class="arguments"><a href="../../chunk/Chunk.html" title="interface in net.minecraft.world.chunk">Chunk</a>&nbsp;chunk,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="populateNoise(net.minecraft.world.IWorld,net.minecraft.world.gen.StructureAccessor,net.minecraft.world.chunk.Chunk)">populateNoise</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">populateNoise</span>&#8203;(<span class="arguments"><a href="../../IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;world,
-<a href="../StructureAccessor.html" title="class in net.minecraft.world.gen">StructureAccessor</a>&nbsp;structureAccessor,
+<h3><a id="populateNoise(net.minecraft.world.WorldAccess,net.minecraft.world.gen.StructureAccessor,net.minecraft.world.chunk.Chunk)">populateNoise</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">populateNoise</span>&#8203;(<span class="arguments"><a href="../../WorldAccess.html" title="interface in net.minecraft.world">WorldAccess</a>&nbsp;world,
+<a href="../StructureAccessor.html" title="class in net.minecraft.world.gen">StructureAccessor</a>&nbsp;accessor,
 <a href="../../chunk/Chunk.html" title="interface in net.minecraft.world.chunk">Chunk</a>&nbsp;chunk)</span></div>
+<div class="block">Generates the base shape of the chunk out of the basic block states as decided by this chunk generator's config.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="ChunkGenerator.html#populateNoise(net.minecraft.world.IWorld,net.minecraft.world.gen.StructureAccessor,net.minecraft.world.chunk.Chunk)">populateNoise</a></code>&nbsp;in class&nbsp;<code><a href="ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">ChunkGenerator</a>&lt;<a href="SurfaceChunkGenerator.html" title="type parameter in SurfaceChunkGenerator">T</a> extends <a href="ChunkGeneratorConfig.html" title="class in net.minecraft.world.gen.chunk">ChunkGeneratorConfig</a>&gt;</code></dd>
+<dd><code><a href="ChunkGenerator.html#populateNoise(net.minecraft.world.WorldAccess,net.minecraft.world.gen.StructureAccessor,net.minecraft.world.chunk.Chunk)">populateNoise</a></code>&nbsp;in class&nbsp;<code><a href="ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">ChunkGenerator</a></code></dd>
+</dl>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="method_16572(int,int,int)">method_16572</a></h3>
+<div class="memberSignature"><span class="modifiers">private static</span>&nbsp;<span class="returnType">double</span>&nbsp;<span class="memberName">method_16572</span>&#8203;(<span class="arguments">int&nbsp;int2,
+int&nbsp;int3,
+int&nbsp;int4)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="method_16571(int,int,int)">method_16571</a></h3>
+<div class="memberSignature"><span class="modifiers">private static</span>&nbsp;<span class="returnType">double</span>&nbsp;<span class="memberName">method_16571</span>&#8203;(<span class="arguments">int&nbsp;int2,
+int&nbsp;int3,
+int&nbsp;int4)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="getMaxY()">getMaxY</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getMaxY</span>()</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code><a href="ChunkGenerator.html#getMaxY()">getMaxY</a></code>&nbsp;in class&nbsp;<code><a href="ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">ChunkGenerator</a></code></dd>
+</dl>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="getSeaLevel()">getSeaLevel</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getSeaLevel</span>()</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code><a href="ChunkGenerator.html#getSeaLevel()">getSeaLevel</a></code>&nbsp;in class&nbsp;<code><a href="ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">ChunkGenerator</a></code></dd>
+</dl>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="getEntitySpawnList(net.minecraft.world.biome.Biome,net.minecraft.world.gen.StructureAccessor,net.minecraft.entity.SpawnGroup,net.minecraft.util.math.BlockPos)">getEntitySpawnList</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../../biome/Biome.SpawnEntry.html" title="class in net.minecraft.world.biome">Biome.SpawnEntry</a>&gt;</span>&nbsp;<span class="memberName">getEntitySpawnList</span>&#8203;(<span class="arguments"><a href="../../biome/Biome.html" title="class in net.minecraft.world.biome">Biome</a>&nbsp;biome,
+<a href="../StructureAccessor.html" title="class in net.minecraft.world.gen">StructureAccessor</a>&nbsp;accessor,
+<a href="../../../entity/SpawnGroup.html" title="enum in net.minecraft.entity">SpawnGroup</a>&nbsp;group,
+<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</span></div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code><a href="ChunkGenerator.html#getEntitySpawnList(net.minecraft.world.biome.Biome,net.minecraft.world.gen.StructureAccessor,net.minecraft.entity.SpawnGroup,net.minecraft.util.math.BlockPos)">getEntitySpawnList</a></code>&nbsp;in class&nbsp;<code><a href="ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">ChunkGenerator</a></code></dd>
+</dl>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="populateEntities(net.minecraft.world.ChunkRegion)">populateEntities</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">populateEntities</span>&#8203;(<span class="arguments"><a href="../../ChunkRegion.html" title="class in net.minecraft.world">ChunkRegion</a>&nbsp;region)</span></div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code><a href="ChunkGenerator.html#populateEntities(net.minecraft.world.ChunkRegion)">populateEntities</a></code>&nbsp;in class&nbsp;<code><a href="ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">ChunkGenerator</a></code></dd>
 </dl>
 </section>
 </li>

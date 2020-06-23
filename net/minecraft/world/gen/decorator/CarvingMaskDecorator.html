@@ -128,7 +128,7 @@ extends <a href="Decorator.html" title="class in net.minecraft.world.gen.decorat
 </thead>
 <tbody>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.util.function.Function)">CarvingMaskDecorator</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;com.mojang.datafixers.Dynamic&lt;?&gt;,&#8203;? extends <a href="CarvingMaskDecoratorConfig.html" title="class in net.minecraft.world.gen.decorator">CarvingMaskDecoratorConfig</a>&gt;&nbsp;configDeserializer)</code></th>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(com.mojang.serialization.Codec)">CarvingMaskDecorator</a></span>&#8203;(com.mojang.serialization.Codec&lt;<a href="CarvingMaskDecoratorConfig.html" title="class in net.minecraft.world.gen.decorator">CarvingMaskDecoratorConfig</a>&gt;&nbsp;codec)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -156,8 +156,8 @@ extends <a href="Decorator.html" title="class in net.minecraft.world.gen.decorat
 <tbody>
 <tr class="altColor" id="i0">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html?is-external=true" title="class or interface in java.util.stream" class="externalLink">Stream</a>&lt;<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPositions(net.minecraft.world.IWorld,net.minecraft.world.gen.chunk.ChunkGenerator,java.util.Random,net.minecraft.world.gen.decorator.CarvingMaskDecoratorConfig,net.minecraft.util.math.BlockPos)">getPositions</a></span>&#8203;(<a href="../../IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;iWorld,
-<a href="../chunk/ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">ChunkGenerator</a>&lt;? extends <a href="../chunk/ChunkGeneratorConfig.html" title="class in net.minecraft.world.gen.chunk">ChunkGeneratorConfig</a>&gt;&nbsp;chunkGenerator,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPositions(net.minecraft.world.WorldAccess,net.minecraft.world.gen.chunk.ChunkGenerator,java.util.Random,net.minecraft.world.gen.decorator.CarvingMaskDecoratorConfig,net.minecraft.util.math.BlockPos)">getPositions</a></span>&#8203;(<a href="../../WorldAccess.html" title="interface in net.minecraft.world">WorldAccess</a>&nbsp;worldAccess,
+<a href="../chunk/ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">ChunkGenerator</a>&nbsp;chunkGenerator,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random,
 <a href="CarvingMaskDecoratorConfig.html" title="class in net.minecraft.world.gen.decorator">CarvingMaskDecoratorConfig</a>&nbsp;carvingMaskDecoratorConfig,
 <a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos)</code></th>
@@ -171,7 +171,7 @@ extends <a href="Decorator.html" title="class in net.minecraft.world.gen.decorat
 <h3>Methods inherited from class&nbsp;net.minecraft.world.gen.decorator.<a href="Decorator.html" title="class in net.minecraft.world.gen.decorator">Decorator</a></h3>
 <a id="methods.inherited.from.class.net.minecraft.world.gen.decorator.Decorator">
 <!--   -->
-</a><code><a href="Decorator.html#configure(DC)">configure</a>, <a href="Decorator.html#deserialize(com.mojang.datafixers.Dynamic)">deserialize</a>, <a href="Decorator.html#generate(net.minecraft.world.IWorld,net.minecraft.world.gen.StructureAccessor,net.minecraft.world.gen.chunk.ChunkGenerator,java.util.Random,net.minecraft.util.math.BlockPos,DC,net.minecraft.world.gen.feature.ConfiguredFeature)">generate</a>, <a href="Decorator.html#toString()">toString</a></code></div>
+</a><code><a href="Decorator.html#configure(DC)">configure</a>, <a href="Decorator.html#generate(net.minecraft.world.ServerWorldAccess,net.minecraft.world.gen.StructureAccessor,net.minecraft.world.gen.chunk.ChunkGenerator,java.util.Random,net.minecraft.util.math.BlockPos,DC,net.minecraft.world.gen.feature.ConfiguredFeature)">generate</a>, <a href="Decorator.html#method_28928()">method_28928</a>, <a href="Decorator.html#toString()">toString</a></code></div>
 <div class="inheritedList">
 <h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></h3>
 <a id="methods.inherited.from.class.java.lang.Object">
@@ -192,8 +192,8 @@ extends <a href="Decorator.html" title="class in net.minecraft.world.gen.decorat
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="&lt;init&gt;(java.util.function.Function)">CarvingMaskDecorator</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">CarvingMaskDecorator</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;com.mojang.datafixers.Dynamic&lt;?&gt;,&#8203;? extends <a href="CarvingMaskDecoratorConfig.html" title="class in net.minecraft.world.gen.decorator">CarvingMaskDecoratorConfig</a>&gt;&nbsp;configDeserializer)</span></div>
+<h3><a id="&lt;init&gt;(com.mojang.serialization.Codec)">CarvingMaskDecorator</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">CarvingMaskDecorator</span>&#8203;(<span class="arguments">com.mojang.serialization.Codec&lt;<a href="CarvingMaskDecoratorConfig.html" title="class in net.minecraft.world.gen.decorator">CarvingMaskDecoratorConfig</a>&gt;&nbsp;codec)</span></div>
 </section>
 </li>
 </ul>
@@ -208,15 +208,15 @@ extends <a href="Decorator.html" title="class in net.minecraft.world.gen.decorat
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="getPositions(net.minecraft.world.IWorld,net.minecraft.world.gen.chunk.ChunkGenerator,java.util.Random,net.minecraft.world.gen.decorator.CarvingMaskDecoratorConfig,net.minecraft.util.math.BlockPos)">getPositions</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html?is-external=true" title="class or interface in java.util.stream" class="externalLink">Stream</a>&lt;<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;</span>&nbsp;<span class="memberName">getPositions</span>&#8203;(<span class="arguments"><a href="../../IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;iWorld,
-<a href="../chunk/ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">ChunkGenerator</a>&lt;? extends <a href="../chunk/ChunkGeneratorConfig.html" title="class in net.minecraft.world.gen.chunk">ChunkGeneratorConfig</a>&gt;&nbsp;chunkGenerator,
+<h3><a id="getPositions(net.minecraft.world.WorldAccess,net.minecraft.world.gen.chunk.ChunkGenerator,java.util.Random,net.minecraft.world.gen.decorator.CarvingMaskDecoratorConfig,net.minecraft.util.math.BlockPos)">getPositions</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html?is-external=true" title="class or interface in java.util.stream" class="externalLink">Stream</a>&lt;<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;</span>&nbsp;<span class="memberName">getPositions</span>&#8203;(<span class="arguments"><a href="../../WorldAccess.html" title="interface in net.minecraft.world">WorldAccess</a>&nbsp;worldAccess,
+<a href="../chunk/ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">ChunkGenerator</a>&nbsp;chunkGenerator,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random,
 <a href="CarvingMaskDecoratorConfig.html" title="class in net.minecraft.world.gen.decorator">CarvingMaskDecoratorConfig</a>&nbsp;carvingMaskDecoratorConfig,
 <a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="Decorator.html#getPositions(net.minecraft.world.IWorld,net.minecraft.world.gen.chunk.ChunkGenerator,java.util.Random,DC,net.minecraft.util.math.BlockPos)">getPositions</a></code>&nbsp;in class&nbsp;<code><a href="Decorator.html" title="class in net.minecraft.world.gen.decorator">Decorator</a>&lt;<a href="CarvingMaskDecoratorConfig.html" title="class in net.minecraft.world.gen.decorator">CarvingMaskDecoratorConfig</a>&gt;</code></dd>
+<dd><code><a href="Decorator.html#getPositions(net.minecraft.world.WorldAccess,net.minecraft.world.gen.chunk.ChunkGenerator,java.util.Random,DC,net.minecraft.util.math.BlockPos)">getPositions</a></code>&nbsp;in class&nbsp;<code><a href="Decorator.html" title="class in net.minecraft.world.gen.decorator">Decorator</a>&lt;<a href="CarvingMaskDecoratorConfig.html" title="class in net.minecraft.world.gen.decorator">CarvingMaskDecoratorConfig</a>&gt;</code></dd>
 </dl>
 </section>
 </li>

@@ -19,8 +19,8 @@
 <script type="text/javascript" src="../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10};
-var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
+<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":9,"i9":10,"i10":10,"i11":10};
+var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
@@ -119,8 +119,43 @@ implements <a href="../../world/TickScheduler.html" title="interface in net.mine
 </thead>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../../world/ScheduledTick.html" title="class in net.minecraft.world">ScheduledTick</a>&lt;<a href="ServerTickScheduler.html" title="type parameter in ServerTickScheduler">T</a>&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#consumedTickActions">consumedTickActions</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Queue.html?is-external=true" title="class or interface in java.util" class="externalLink">Queue</a>&lt;<a href="../../world/ScheduledTick.html" title="class in net.minecraft.world">ScheduledTick</a>&lt;<a href="ServerTickScheduler.html" title="type parameter in ServerTickScheduler">T</a>&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#currentTickActions">currentTickActions</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;<a href="ServerTickScheduler.html" title="type parameter in ServerTickScheduler">T</a>,&#8203;<a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#idToName">idToName</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Predicate</a>&lt;<a href="ServerTickScheduler.html" title="type parameter in ServerTickScheduler">T</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#invalidObjPredicate">invalidObjPredicate</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="../../world/ScheduledTick.html" title="class in net.minecraft.world">ScheduledTick</a>&lt;<a href="ServerTickScheduler.html" title="type parameter in ServerTickScheduler">T</a>&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#scheduledTickActions">scheduledTickActions</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/TreeSet.html?is-external=true" title="class or interface in java.util" class="externalLink">TreeSet</a>&lt;<a href="../../world/ScheduledTick.html" title="class in net.minecraft.world">ScheduledTick</a>&lt;<a href="ServerTickScheduler.html" title="type parameter in ServerTickScheduler">T</a>&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#scheduledTickActionsInOrder">scheduledTickActionsInOrder</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Consumer.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Consumer</a>&lt;<a href="../../world/ScheduledTick.html" title="class in net.minecraft.world">ScheduledTick</a>&lt;<a href="ServerTickScheduler.html" title="type parameter in ServerTickScheduler">T</a>&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#tickConsumer">tickConsumer</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#world">world</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -163,7 +198,7 @@ implements <a href="../../world/TickScheduler.html" title="interface in net.mine
 </a>
 <h2>Method Summary</h2>
 <div class="memberSummary">
-<div role="tablist" aria-orientation="horizontal"><button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t2" class="tableTab" onclick="show(2);">Instance Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t4" class="tableTab" onclick="show(8);">Concrete Methods</button></div>
+<div role="tablist" aria-orientation="horizontal"><button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t1" class="tableTab" onclick="show(1);">Static Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t2" class="tableTab" onclick="show(2);">Instance Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t4" class="tableTab" onclick="show(8);">Concrete Methods</button></div>
 <div id="memberSummary_tabpanel" role="tabpanel">
 <table aria-labelledby="t0">
 <thead>
@@ -175,43 +210,48 @@ implements <a href="../../world/TickScheduler.html" title="interface in net.mine
 </thead>
 <tbody>
 <tr class="altColor" id="i0">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addScheduledTick(net.minecraft.world.ScheduledTick)">addScheduledTick</a></span>&#8203;(<a href="../../world/ScheduledTick.html" title="class in net.minecraft.world">ScheduledTick</a>&lt;<a href="ServerTickScheduler.html" title="type parameter in ServerTickScheduler">T</a>&gt;&nbsp;scheduledTick)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i1">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#copyScheduledTicks(net.minecraft.util.math.BlockBox,net.minecraft.util.math.BlockPos)">copyScheduledTicks</a></span>&#8203;(<a href="../../util/math/BlockBox.html" title="class in net.minecraft.util.math">BlockBox</a>&nbsp;box,
 <a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;offset)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i1">
+<tr class="altColor" id="i2">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../../world/ScheduledTick.html" title="class in net.minecraft.world">ScheduledTick</a>&lt;<a href="ServerTickScheduler.html" title="type parameter in ServerTickScheduler">T</a>&gt;&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getScheduledTicks(net.minecraft.util.math.BlockBox,boolean,boolean)">getScheduledTicks</a></span>&#8203;(<a href="../../util/math/BlockBox.html" title="class in net.minecraft.util.math">BlockBox</a>&nbsp;bounds,
 boolean&nbsp;updateState,
 boolean&nbsp;getStaleTicks)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i2">
+<tr class="rowColor" id="i3">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../../world/ScheduledTick.html" title="class in net.minecraft.world">ScheduledTick</a>&lt;<a href="ServerTickScheduler.html" title="type parameter in ServerTickScheduler">T</a>&gt;&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getScheduledTicksInChunk(net.minecraft.util.math.ChunkPos,boolean,boolean)">getScheduledTicksInChunk</a></span>&#8203;(<a href="../../util/math/ChunkPos.html" title="class in net.minecraft.util.math">ChunkPos</a>&nbsp;chunkPos,
 boolean&nbsp;updateState,
 boolean&nbsp;getStaleTicks)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i3">
+<tr class="altColor" id="i4">
 <td class="colFirst"><code>int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getTicks()">getTicks</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i4">
+<tr class="rowColor" id="i5">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isScheduled(net.minecraft.util.math.BlockPos,T)">isScheduled</a></span>&#8203;(<a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
 <a href="ServerTickScheduler.html" title="type parameter in ServerTickScheduler">T</a>&nbsp;object)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i5">
+<tr class="altColor" id="i6">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isTicking(net.minecraft.util.math.BlockPos,T)">isTicking</a></span>&#8203;(<a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
 <a href="ServerTickScheduler.html" title="type parameter in ServerTickScheduler">T</a>&nbsp;object)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i6">
+<tr class="rowColor" id="i7">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#schedule(net.minecraft.util.math.BlockPos,T,int,net.minecraft.world.TickPriority)">schedule</a></span>&#8203;(<a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
 <a href="ServerTickScheduler.html" title="type parameter in ServerTickScheduler">T</a>&nbsp;object,
@@ -219,14 +259,29 @@ int&nbsp;delay,
 <a href="../../world/TickPriority.html" title="enum in net.minecraft.world">TickPriority</a>&nbsp;priority)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i7">
+<tr class="altColor" id="i8">
+<td class="colFirst"><code>private static &lt;T&gt;&nbsp;<a href="../../nbt/ListTag.html" title="class in net.minecraft.nbt">ListTag</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#serializeScheduledTicks(java.util.function.Function,java.lang.Iterable,long)">serializeScheduledTicks</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;T,&#8203;<a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&gt;&nbsp;identifierProvider,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html?is-external=true" title="class or interface in java.lang" class="externalLink">Iterable</a>&lt;<a href="../../world/ScheduledTick.html" title="class in net.minecraft.world">ScheduledTick</a>&lt;T&gt;&gt;&nbsp;scheduledTicks,
+long&nbsp;time)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i9">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#tick()">tick</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i8">
+<tr class="altColor" id="i10">
 <td class="colFirst"><code><a href="../../nbt/ListTag.html" title="class in net.minecraft.nbt">ListTag</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#toTag(net.minecraft.util.math.ChunkPos)">toTag</a></span>&#8203;(<a href="../../util/math/ChunkPos.html" title="class in net.minecraft.util.math">ChunkPos</a>&nbsp;chunkPos)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i11">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../../world/ScheduledTick.html" title="class in net.minecraft.world">ScheduledTick</a>&lt;<a href="ServerTickScheduler.html" title="type parameter in ServerTickScheduler">T</a>&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#transferTicksInBounds(java.util.List,java.util.Collection,net.minecraft.util.math.BlockBox,boolean)">transferTicksInBounds</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../../world/ScheduledTick.html" title="class in net.minecraft.world">ScheduledTick</a>&lt;<a href="ServerTickScheduler.html" title="type parameter in ServerTickScheduler">T</a>&gt;&gt;&nbsp;dst,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util" class="externalLink">Collection</a>&lt;<a href="../../world/ScheduledTick.html" title="class in net.minecraft.world">ScheduledTick</a>&lt;<a href="ServerTickScheduler.html" title="type parameter in ServerTickScheduler">T</a>&gt;&gt;&nbsp;src,
+<a href="../../util/math/BlockBox.html" title="class in net.minecraft.util.math">BlockBox</a>&nbsp;bounds,
+boolean&nbsp;move)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -260,6 +315,48 @@ int&nbsp;delay,
 <section class="detail">
 <h3><a id="invalidObjPredicate">invalidObjPredicate</a></h3>
 <div class="memberSignature"><span class="modifiers">protected final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Predicate</a>&lt;<a href="ServerTickScheduler.html" title="type parameter in ServerTickScheduler">T</a>&gt;</span>&nbsp;<span class="memberName">invalidObjPredicate</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="idToName">idToName</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;<a href="ServerTickScheduler.html" title="type parameter in ServerTickScheduler">T</a>,&#8203;<a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&gt;</span>&nbsp;<span class="memberName">idToName</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="scheduledTickActions">scheduledTickActions</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="../../world/ScheduledTick.html" title="class in net.minecraft.world">ScheduledTick</a>&lt;<a href="ServerTickScheduler.html" title="type parameter in ServerTickScheduler">T</a>&gt;&gt;</span>&nbsp;<span class="memberName">scheduledTickActions</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="scheduledTickActionsInOrder">scheduledTickActionsInOrder</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/TreeSet.html?is-external=true" title="class or interface in java.util" class="externalLink">TreeSet</a>&lt;<a href="../../world/ScheduledTick.html" title="class in net.minecraft.world">ScheduledTick</a>&lt;<a href="ServerTickScheduler.html" title="type parameter in ServerTickScheduler">T</a>&gt;&gt;</span>&nbsp;<span class="memberName">scheduledTickActionsInOrder</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="world">world</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a></span>&nbsp;<span class="memberName">world</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="currentTickActions">currentTickActions</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Queue.html?is-external=true" title="class or interface in java.util" class="externalLink">Queue</a>&lt;<a href="../../world/ScheduledTick.html" title="class in net.minecraft.world">ScheduledTick</a>&lt;<a href="ServerTickScheduler.html" title="type parameter in ServerTickScheduler">T</a>&gt;&gt;</span>&nbsp;<span class="memberName">currentTickActions</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="consumedTickActions">consumedTickActions</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../../world/ScheduledTick.html" title="class in net.minecraft.world">ScheduledTick</a>&lt;<a href="ServerTickScheduler.html" title="type parameter in ServerTickScheduler">T</a>&gt;&gt;</span>&nbsp;<span class="memberName">consumedTickActions</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="tickConsumer">tickConsumer</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Consumer.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Consumer</a>&lt;<a href="../../world/ScheduledTick.html" title="class in net.minecraft.world">ScheduledTick</a>&lt;<a href="ServerTickScheduler.html" title="type parameter in ServerTickScheduler">T</a>&gt;&gt;</span>&nbsp;<span class="memberName">tickConsumer</span></div>
 </section>
 </li>
 </ul>
@@ -328,6 +425,17 @@ boolean&nbsp;getStaleTicks)</span></div>
 </li>
 <li class="blockList">
 <section class="detail">
+<h3><a id="transferTicksInBounds(java.util.List,java.util.Collection,net.minecraft.util.math.BlockBox,boolean)">transferTicksInBounds</a></h3>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../../world/ScheduledTick.html" title="class in net.minecraft.world">ScheduledTick</a>&lt;<a href="ServerTickScheduler.html" title="type parameter in ServerTickScheduler">T</a>&gt;&gt;</span>&nbsp;<span class="memberName">transferTicksInBounds</span>&#8203;(<span class="arguments"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../../world/ScheduledTick.html" title="class in net.minecraft.world">ScheduledTick</a>&lt;<a href="ServerTickScheduler.html" title="type parameter in ServerTickScheduler">T</a>&gt;&gt;&nbsp;dst,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util" class="externalLink">Collection</a>&lt;<a href="../../world/ScheduledTick.html" title="class in net.minecraft.world">ScheduledTick</a>&lt;<a href="ServerTickScheduler.html" title="type parameter in ServerTickScheduler">T</a>&gt;&gt;&nbsp;src,
+<a href="../../util/math/BlockBox.html" title="class in net.minecraft.util.math">BlockBox</a>&nbsp;bounds,
+boolean&nbsp;move)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="copyScheduledTicks(net.minecraft.util.math.BlockBox,net.minecraft.util.math.BlockPos)">copyScheduledTicks</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">copyScheduledTicks</span>&#8203;(<span class="arguments"><a href="../../util/math/BlockBox.html" title="class in net.minecraft.util.math">BlockBox</a>&nbsp;box,
 <a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;offset)</span></div>
@@ -337,6 +445,14 @@ boolean&nbsp;getStaleTicks)</span></div>
 <section class="detail">
 <h3><a id="toTag(net.minecraft.util.math.ChunkPos)">toTag</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../nbt/ListTag.html" title="class in net.minecraft.nbt">ListTag</a></span>&nbsp;<span class="memberName">toTag</span>&#8203;(<span class="arguments"><a href="../../util/math/ChunkPos.html" title="class in net.minecraft.util.math">ChunkPos</a>&nbsp;chunkPos)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="serializeScheduledTicks(java.util.function.Function,java.lang.Iterable,long)">serializeScheduledTicks</a></h3>
+<div class="memberSignature"><span class="modifiers">private static</span>&nbsp;<span class="typeParameters">&lt;T&gt;</span>&nbsp;<span class="returnType"><a href="../../nbt/ListTag.html" title="class in net.minecraft.nbt">ListTag</a></span>&nbsp;<span class="memberName">serializeScheduledTicks</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;T,&#8203;<a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&gt;&nbsp;identifierProvider,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html?is-external=true" title="class or interface in java.lang" class="externalLink">Iterable</a>&lt;<a href="../../world/ScheduledTick.html" title="class in net.minecraft.world">ScheduledTick</a>&lt;T&gt;&gt;&nbsp;scheduledTicks,
+long&nbsp;time)</span></div>
 </section>
 </li>
 <li class="blockList">
@@ -365,6 +481,12 @@ int&nbsp;delay,
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../world/TickScheduler.html#schedule(net.minecraft.util.math.BlockPos,T,int,net.minecraft.world.TickPriority)">schedule</a></code>&nbsp;in interface&nbsp;<code><a href="../../world/TickScheduler.html" title="interface in net.minecraft.world">TickScheduler</a>&lt;<a href="ServerTickScheduler.html" title="type parameter in ServerTickScheduler">T</a>&gt;</code></dd>
 </dl>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="addScheduledTick(net.minecraft.world.ScheduledTick)">addScheduledTick</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">addScheduledTick</span>&#8203;(<span class="arguments"><a href="../../world/ScheduledTick.html" title="class in net.minecraft.world">ScheduledTick</a>&lt;<a href="ServerTickScheduler.html" title="type parameter in ServerTickScheduler">T</a>&gt;&nbsp;scheduledTick)</span></div>
 </section>
 </li>
 <li class="blockList">

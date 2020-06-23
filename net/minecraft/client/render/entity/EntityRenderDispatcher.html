@@ -19,8 +19,8 @@
 <script type="text/javascript" src="../../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10};
-var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
+<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":9,"i3":9,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":9,"i16":9,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10};
+var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
@@ -125,13 +125,58 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util" class="externalLink">Map</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>,&#8203;<a href="PlayerEntityRenderer.html" title="class in net.minecraft.client.render.entity">PlayerEntityRenderer</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#modelRenderers">modelRenderers</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="PlayerEntityRenderer.html" title="class in net.minecraft.client.render.entity">PlayerEntityRenderer</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#playerRenderer">playerRenderer</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util" class="externalLink">Map</a>&lt;<a href="../../../entity/EntityType.html" title="class in net.minecraft.entity">EntityType</a>&lt;?&gt;,&#8203;<a href="EntityRenderer.html" title="class in net.minecraft.client.render.entity">EntityRenderer</a>&lt;?&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#renderers">renderers</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#renderHitboxes">renderHitboxes</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#renderShadows">renderShadows</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../util/math/Quaternion.html" title="class in net.minecraft.util.math">Quaternion</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#rotation">rotation</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="../RenderLayer.html" title="class in net.minecraft.client.render">RenderLayer</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#SHADOW_LAYER">SHADOW_LAYER</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../entity/Entity.html" title="class in net.minecraft.entity">Entity</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#targetedEntity">targetedEntity</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../font/TextRenderer.html" title="class in net.minecraft.client.font">TextRenderer</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#textRenderer">textRenderer</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../texture/TextureManager.html" title="class in net.minecraft.client.texture">TextureManager</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#textureManager">textureManager</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../world/World.html" title="class in net.minecraft.world">World</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#world">world</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -175,7 +220,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </a>
 <h2>Method Summary</h2>
 <div class="memberSummary">
-<div role="tablist" aria-orientation="horizontal"><button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t2" class="tableTab" onclick="show(2);">Instance Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t4" class="tableTab" onclick="show(8);">Concrete Methods</button></div>
+<div role="tablist" aria-orientation="horizontal"><button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t1" class="tableTab" onclick="show(1);">Static Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t2" class="tableTab" onclick="show(2);">Instance Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t4" class="tableTab" onclick="show(8);">Concrete Methods</button></div>
 <div id="memberSummary_tabpanel" role="tabpanel">
 <table aria-labelledby="t0">
 <thead>
@@ -194,39 +239,84 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#drawBox(net.minecraft.client.util.math.MatrixStack,net.minecraft.client.render.VertexConsumer,net.minecraft.entity.Entity,float,float,float)">drawBox</a></span>&#8203;(<a href="../../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrix,
+<a href="../VertexConsumer.html" title="interface in net.minecraft.client.render">VertexConsumer</a>&nbsp;vertices,
+<a href="../../../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&nbsp;entity,
+float&nbsp;red,
+float&nbsp;green,
+float&nbsp;blue)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i2">
+<td class="colFirst"><code>private static void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#drawFireVertex(net.minecraft.client.util.math.MatrixStack.Entry,net.minecraft.client.render.VertexConsumer,float,float,float,float,float)">drawFireVertex</a></span>&#8203;(<a href="../../util/math/MatrixStack.Entry.html" title="class in net.minecraft.client.util.math">MatrixStack.Entry</a>&nbsp;entry,
+<a href="../VertexConsumer.html" title="interface in net.minecraft.client.render">VertexConsumer</a>&nbsp;vertices,
+float&nbsp;x,
+float&nbsp;y,
+float&nbsp;z,
+float&nbsp;u,
+float&nbsp;v)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i3">
+<td class="colFirst"><code>private static void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#drawShadowVertex(net.minecraft.client.util.math.MatrixStack.Entry,net.minecraft.client.render.VertexConsumer,float,float,float,float,float,float)">drawShadowVertex</a></span>&#8203;(<a href="../../util/math/MatrixStack.Entry.html" title="class in net.minecraft.client.util.math">MatrixStack.Entry</a>&nbsp;entry,
+<a href="../VertexConsumer.html" title="interface in net.minecraft.client.render">VertexConsumer</a>&nbsp;vertices,
+float&nbsp;alpha,
+float&nbsp;x,
+float&nbsp;y,
+float&nbsp;z,
+float&nbsp;u,
+float&nbsp;v)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i4">
 <td class="colFirst"><code>&lt;E extends <a href="../../../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&gt;<br>int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getLight(E,float)">getLight</a></span>&#8203;(E&nbsp;entity,
 float&nbsp;tickDelta)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i2">
+<tr class="rowColor" id="i5">
 <td class="colFirst"><code>&lt;T extends <a href="../../../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&gt;<br><a href="EntityRenderer.html" title="class in net.minecraft.client.render.entity">EntityRenderer</a>&lt;? super T&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getRenderer(T)">getRenderer</a></span>&#8203;(T&nbsp;entity)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i3">
+<tr class="altColor" id="i6">
 <td class="colFirst"><code><a href="../../../util/math/Quaternion.html" title="class in net.minecraft.util.math">Quaternion</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getRotation()">getRotation</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i4">
+<tr class="rowColor" id="i7">
 <td class="colFirst"><code>double</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getSquaredDistanceToCamera(double,double,double)">getSquaredDistanceToCamera</a></span>&#8203;(double&nbsp;x,
 double&nbsp;y,
 double&nbsp;z)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i5">
+<tr class="altColor" id="i8">
 <td class="colFirst"><code>double</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getSquaredDistanceToCamera(net.minecraft.entity.Entity)">getSquaredDistanceToCamera</a></span>&#8203;(<a href="../../../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&nbsp;entity)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i6">
+<tr class="rowColor" id="i9">
 <td class="colFirst"><code><a href="../../font/TextRenderer.html" title="class in net.minecraft.client.font">TextRenderer</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getTextRenderer()">getTextRenderer</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i7">
+<tr class="altColor" id="i10">
+<td class="colFirst"><code>private &lt;T extends <a href="../../../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&gt;<br>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#register(net.minecraft.entity.EntityType,net.minecraft.client.render.entity.EntityRenderer)">register</a></span>&#8203;(<a href="../../../entity/EntityType.html" title="class in net.minecraft.entity">EntityType</a>&lt;T&gt;&nbsp;entityType,
+<a href="EntityRenderer.html" title="class in net.minecraft.client.render.entity">EntityRenderer</a>&lt;? super T&gt;&nbsp;entityRenderer)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i11">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#registerRenderers(net.minecraft.client.render.item.ItemRenderer,net.minecraft.resource.ReloadableResourceManager)">registerRenderers</a></span>&#8203;(<a href="../item/ItemRenderer.html" title="class in net.minecraft.client.render.item">ItemRenderer</a>&nbsp;itemRenderer,
+<a href="../../../resource/ReloadableResourceManager.html" title="interface in net.minecraft.resource">ReloadableResourceManager</a>&nbsp;reloadableResourceManager)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i12">
 <td class="colFirst"><code>&lt;E extends <a href="../../../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&gt;<br>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#render(E,double,double,double,float,float,net.minecraft.client.util.math.MatrixStack,net.minecraft.client.render.VertexConsumerProvider,int)">render</a></span>&#8203;(E&nbsp;entity,
 double&nbsp;x,
@@ -239,27 +329,66 @@ float&nbsp;tickDelta,
 int&nbsp;light)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i8">
+<tr class="rowColor" id="i13">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#renderFire(net.minecraft.client.util.math.MatrixStack,net.minecraft.client.render.VertexConsumerProvider,net.minecraft.entity.Entity)">renderFire</a></span>&#8203;(<a href="../../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
+<a href="../VertexConsumerProvider.html" title="interface in net.minecraft.client.render">VertexConsumerProvider</a>&nbsp;vertexConsumers,
+<a href="../../../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&nbsp;entity)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i14">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#renderHitbox(net.minecraft.client.util.math.MatrixStack,net.minecraft.client.render.VertexConsumer,net.minecraft.entity.Entity,float)">renderHitbox</a></span>&#8203;(<a href="../../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
+<a href="../VertexConsumer.html" title="interface in net.minecraft.client.render">VertexConsumer</a>&nbsp;vertices,
+<a href="../../../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&nbsp;entity,
+float&nbsp;tickDelta)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i15">
+<td class="colFirst"><code>private static void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#renderShadow(net.minecraft.client.util.math.MatrixStack,net.minecraft.client.render.VertexConsumerProvider,net.minecraft.entity.Entity,float,float,net.minecraft.world.WorldView,float)">renderShadow</a></span>&#8203;(<a href="../../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
+<a href="../VertexConsumerProvider.html" title="interface in net.minecraft.client.render">VertexConsumerProvider</a>&nbsp;vertexConsumers,
+<a href="../../../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&nbsp;entity,
+float&nbsp;opacity,
+float&nbsp;tickDelta,
+<a href="../../../world/WorldView.html" title="interface in net.minecraft.world">WorldView</a>&nbsp;world,
+float&nbsp;radius)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i16">
+<td class="colFirst"><code>private static void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#renderShadowPart(net.minecraft.client.util.math.MatrixStack.Entry,net.minecraft.client.render.VertexConsumer,net.minecraft.world.WorldView,net.minecraft.util.math.BlockPos,double,double,double,float,float)">renderShadowPart</a></span>&#8203;(<a href="../../util/math/MatrixStack.Entry.html" title="class in net.minecraft.client.util.math">MatrixStack.Entry</a>&nbsp;entry,
+<a href="../VertexConsumer.html" title="interface in net.minecraft.client.render">VertexConsumer</a>&nbsp;vertices,
+<a href="../../../world/WorldView.html" title="interface in net.minecraft.world">WorldView</a>&nbsp;world,
+<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+double&nbsp;x,
+double&nbsp;y,
+double&nbsp;z,
+float&nbsp;radius,
+float&nbsp;opacity)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i17">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setRenderHitboxes(boolean)">setRenderHitboxes</a></span>&#8203;(boolean&nbsp;value)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i9">
+<tr class="altColor" id="i18">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setRenderShadows(boolean)">setRenderShadows</a></span>&#8203;(boolean&nbsp;value)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i10">
+<tr class="rowColor" id="i19">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setRotation(net.minecraft.util.math.Quaternion)">setRotation</a></span>&#8203;(<a href="../../../util/math/Quaternion.html" title="class in net.minecraft.util.math">Quaternion</a>&nbsp;rotation)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i11">
+<tr class="altColor" id="i20">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setWorld(net.minecraft.world.World)">setWorld</a></span>&#8203;(<a href="../../../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i12">
+<tr class="rowColor" id="i21">
 <td class="colFirst"><code>&lt;E extends <a href="../../../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&gt;<br>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#shouldRender(E,net.minecraft.client.render.Frustum,double,double,double)">shouldRender</a></span>&#8203;(E&nbsp;entity,
 <a href="../Frustum.html" title="class in net.minecraft.client.render">Frustum</a>&nbsp;frustum,
@@ -268,7 +397,7 @@ double&nbsp;y,
 double&nbsp;z)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i13">
+<tr class="altColor" id="i22">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#shouldRenderHitboxes()">shouldRenderHitboxes</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
@@ -297,14 +426,56 @@ double&nbsp;z)</code></th>
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
+<h3><a id="SHADOW_LAYER">SHADOW_LAYER</a></h3>
+<div class="memberSignature"><span class="modifiers">private static final</span>&nbsp;<span class="returnType"><a href="../RenderLayer.html" title="class in net.minecraft.client.render">RenderLayer</a></span>&nbsp;<span class="memberName">SHADOW_LAYER</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="renderers">renderers</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util" class="externalLink">Map</a>&lt;<a href="../../../entity/EntityType.html" title="class in net.minecraft.entity">EntityType</a>&lt;?&gt;,&#8203;<a href="EntityRenderer.html" title="class in net.minecraft.client.render.entity">EntityRenderer</a>&lt;?&gt;&gt;</span>&nbsp;<span class="memberName">renderers</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="modelRenderers">modelRenderers</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util" class="externalLink">Map</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>,&#8203;<a href="PlayerEntityRenderer.html" title="class in net.minecraft.client.render.entity">PlayerEntityRenderer</a>&gt;</span>&nbsp;<span class="memberName">modelRenderers</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="playerRenderer">playerRenderer</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="PlayerEntityRenderer.html" title="class in net.minecraft.client.render.entity">PlayerEntityRenderer</a></span>&nbsp;<span class="memberName">playerRenderer</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="textRenderer">textRenderer</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../../font/TextRenderer.html" title="class in net.minecraft.client.font">TextRenderer</a></span>&nbsp;<span class="memberName">textRenderer</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="textureManager">textureManager</a></h3>
 <div class="memberSignature"><span class="modifiers">public final</span>&nbsp;<span class="returnType"><a href="../../texture/TextureManager.html" title="class in net.minecraft.client.texture">TextureManager</a></span>&nbsp;<span class="memberName">textureManager</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
+<h3><a id="world">world</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="../../../world/World.html" title="class in net.minecraft.world">World</a></span>&nbsp;<span class="memberName">world</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="camera">camera</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../Camera.html" title="class in net.minecraft.client.render">Camera</a></span>&nbsp;<span class="memberName">camera</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="rotation">rotation</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="../../../util/math/Quaternion.html" title="class in net.minecraft.util.math">Quaternion</a></span>&nbsp;<span class="memberName">rotation</span></div>
 </section>
 </li>
 <li class="blockList">
@@ -317,6 +488,18 @@ double&nbsp;z)</code></th>
 <section class="detail">
 <h3><a id="gameOptions">gameOptions</a></h3>
 <div class="memberSignature"><span class="modifiers">public final</span>&nbsp;<span class="returnType"><a href="../../options/GameOptions.html" title="class in net.minecraft.client.options">GameOptions</a></span>&nbsp;<span class="memberName">gameOptions</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="renderShadows">renderShadows</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">renderShadows</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="renderHitboxes">renderHitboxes</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">renderHitboxes</span></div>
 </section>
 </li>
 </ul>
@@ -356,6 +539,20 @@ double&nbsp;z)</code></th>
 </a><a id="getLight(E,float)">getLight</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="typeParameters">&lt;E extends <a href="../../../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&gt;</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getLight</span>&#8203;(<span class="arguments">E&nbsp;entity,
 float&nbsp;tickDelta)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="register(net.minecraft.entity.EntityType,net.minecraft.client.render.entity.EntityRenderer)">register</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="typeParameters">&lt;T extends <a href="../../../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&gt;</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">register</span>&#8203;(<span class="arguments"><a href="../../../entity/EntityType.html" title="class in net.minecraft.entity">EntityType</a>&lt;T&gt;&nbsp;entityType,
+<a href="EntityRenderer.html" title="class in net.minecraft.client.render.entity">EntityRenderer</a>&lt;? super T&gt;&nbsp;entityRenderer)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="registerRenderers(net.minecraft.client.render.item.ItemRenderer,net.minecraft.resource.ReloadableResourceManager)">registerRenderers</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">registerRenderers</span>&#8203;(<span class="arguments"><a href="../item/ItemRenderer.html" title="class in net.minecraft.client.render.item">ItemRenderer</a>&nbsp;itemRenderer,
+<a href="../../../resource/ReloadableResourceManager.html" title="interface in net.minecraft.resource">ReloadableResourceManager</a>&nbsp;reloadableResourceManager)</span></div>
 </section>
 </li>
 <li class="blockList">
@@ -428,8 +625,87 @@ int&nbsp;light)</span></div>
 </li>
 <li class="blockList">
 <section class="detail">
+<h3><a id="renderHitbox(net.minecraft.client.util.math.MatrixStack,net.minecraft.client.render.VertexConsumer,net.minecraft.entity.Entity,float)">renderHitbox</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">renderHitbox</span>&#8203;(<span class="arguments"><a href="../../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
+<a href="../VertexConsumer.html" title="interface in net.minecraft.client.render">VertexConsumer</a>&nbsp;vertices,
+<a href="../../../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&nbsp;entity,
+float&nbsp;tickDelta)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="drawBox(net.minecraft.client.util.math.MatrixStack,net.minecraft.client.render.VertexConsumer,net.minecraft.entity.Entity,float,float,float)">drawBox</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">drawBox</span>&#8203;(<span class="arguments"><a href="../../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrix,
+<a href="../VertexConsumer.html" title="interface in net.minecraft.client.render">VertexConsumer</a>&nbsp;vertices,
+<a href="../../../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&nbsp;entity,
+float&nbsp;red,
+float&nbsp;green,
+float&nbsp;blue)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="renderFire(net.minecraft.client.util.math.MatrixStack,net.minecraft.client.render.VertexConsumerProvider,net.minecraft.entity.Entity)">renderFire</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">renderFire</span>&#8203;(<span class="arguments"><a href="../../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
+<a href="../VertexConsumerProvider.html" title="interface in net.minecraft.client.render">VertexConsumerProvider</a>&nbsp;vertexConsumers,
+<a href="../../../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&nbsp;entity)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="drawFireVertex(net.minecraft.client.util.math.MatrixStack.Entry,net.minecraft.client.render.VertexConsumer,float,float,float,float,float)">drawFireVertex</a></h3>
+<div class="memberSignature"><span class="modifiers">private static</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">drawFireVertex</span>&#8203;(<span class="arguments"><a href="../../util/math/MatrixStack.Entry.html" title="class in net.minecraft.client.util.math">MatrixStack.Entry</a>&nbsp;entry,
+<a href="../VertexConsumer.html" title="interface in net.minecraft.client.render">VertexConsumer</a>&nbsp;vertices,
+float&nbsp;x,
+float&nbsp;y,
+float&nbsp;z,
+float&nbsp;u,
+float&nbsp;v)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="renderShadow(net.minecraft.client.util.math.MatrixStack,net.minecraft.client.render.VertexConsumerProvider,net.minecraft.entity.Entity,float,float,net.minecraft.world.WorldView,float)">renderShadow</a></h3>
+<div class="memberSignature"><span class="modifiers">private static</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">renderShadow</span>&#8203;(<span class="arguments"><a href="../../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
+<a href="../VertexConsumerProvider.html" title="interface in net.minecraft.client.render">VertexConsumerProvider</a>&nbsp;vertexConsumers,
+<a href="../../../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&nbsp;entity,
+float&nbsp;opacity,
+float&nbsp;tickDelta,
+<a href="../../../world/WorldView.html" title="interface in net.minecraft.world">WorldView</a>&nbsp;world,
+float&nbsp;radius)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="renderShadowPart(net.minecraft.client.util.math.MatrixStack.Entry,net.minecraft.client.render.VertexConsumer,net.minecraft.world.WorldView,net.minecraft.util.math.BlockPos,double,double,double,float,float)">renderShadowPart</a></h3>
+<div class="memberSignature"><span class="modifiers">private static</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">renderShadowPart</span>&#8203;(<span class="arguments"><a href="../../util/math/MatrixStack.Entry.html" title="class in net.minecraft.client.util.math">MatrixStack.Entry</a>&nbsp;entry,
+<a href="../VertexConsumer.html" title="interface in net.minecraft.client.render">VertexConsumer</a>&nbsp;vertices,
+<a href="../../../world/WorldView.html" title="interface in net.minecraft.world">WorldView</a>&nbsp;world,
+<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+double&nbsp;x,
+double&nbsp;y,
+double&nbsp;z,
+float&nbsp;radius,
+float&nbsp;opacity)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="drawShadowVertex(net.minecraft.client.util.math.MatrixStack.Entry,net.minecraft.client.render.VertexConsumer,float,float,float,float,float,float)">drawShadowVertex</a></h3>
+<div class="memberSignature"><span class="modifiers">private static</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">drawShadowVertex</span>&#8203;(<span class="arguments"><a href="../../util/math/MatrixStack.Entry.html" title="class in net.minecraft.client.util.math">MatrixStack.Entry</a>&nbsp;entry,
+<a href="../VertexConsumer.html" title="interface in net.minecraft.client.render">VertexConsumer</a>&nbsp;vertices,
+float&nbsp;alpha,
+float&nbsp;x,
+float&nbsp;y,
+float&nbsp;z,
+float&nbsp;u,
+float&nbsp;v)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="setWorld(net.minecraft.world.World)">setWorld</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setWorld</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setWorld</span>&#8203;(<span class="arguments"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 <a href="../../../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world)</span></div>
 </section>
 </li>

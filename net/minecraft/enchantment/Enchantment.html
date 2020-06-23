@@ -147,6 +147,16 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </thead>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code>private <a href="Enchantment.Rarity.html" title="enum in net.minecraft.enchantment">Enchantment.Rarity</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#rarity">rarity</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../entity/EquipmentSlot.html" title="enum in net.minecraft.entity">EquipmentSlot</a>[]</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#slotTypes">slotTypes</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#translationKey">translationKey</a></span></code></th>
 <td class="colLast">&nbsp;</td>
@@ -243,22 +253,22 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </tr>
 <tr class="rowColor" id="i5">
 <td class="colFirst"><code>int</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getMaximumLevel()">getMaximumLevel</a></span>()</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getMaxLevel()">getMaxLevel</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i6">
 <td class="colFirst"><code>int</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getMaximumPower(int)">getMaximumPower</a></span>&#8203;(int&nbsp;level)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getMaxPower(int)">getMaxPower</a></span>&#8203;(int&nbsp;level)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i7">
 <td class="colFirst"><code>int</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getMinimumLevel()">getMinimumLevel</a></span>()</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getMinLevel()">getMinLevel</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i8">
 <td class="colFirst"><code>int</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getMinimumPower(int)">getMinimumPower</a></span>&#8203;(int&nbsp;level)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getMinPower(int)">getMinPower</a></span>&#8203;(int&nbsp;level)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i9">
@@ -356,15 +366,26 @@ int&nbsp;level)</code></th>
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
+<h3><a id="slotTypes">slotTypes</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../entity/EquipmentSlot.html" title="enum in net.minecraft.entity">EquipmentSlot</a>[]</span>&nbsp;<span class="memberName">slotTypes</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="rarity">rarity</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="Enchantment.Rarity.html" title="enum in net.minecraft.enchantment">Enchantment.Rarity</a></span>&nbsp;<span class="memberName">rarity</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="type">type</a></h3>
-<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="EnchantmentTarget.html" title="enum in net.minecraft.enchantment">EnchantmentTarget</a></span>&nbsp;<span class="memberName">type</span></div>
+<div class="memberSignature"><span class="modifiers">public final</span>&nbsp;<span class="returnType"><a href="EnchantmentTarget.html" title="enum in net.minecraft.enchantment">EnchantmentTarget</a></span>&nbsp;<span class="memberName">type</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="translationKey">translationKey</a></h3>
-<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 </span><span class="modifiers">protected</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></span>&nbsp;<span class="memberName">translationKey</span></div>
 </section>
 </li>
@@ -400,7 +421,7 @@ int&nbsp;level)</code></th>
 <section class="detail">
 <h3><a id="byRawId(int)">byRawId</a></h3>
 <div class="memberSignature"><span class="annotations">@Environment(CLIENT)
-<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 </span><span class="modifiers">public static</span>&nbsp;<span class="returnType"><a href="Enchantment.html" title="class in net.minecraft.enchantment">Enchantment</a></span>&nbsp;<span class="memberName">byRawId</span>&#8203;(<span class="arguments">int&nbsp;id)</span></div>
 </section>
 </li>
@@ -418,26 +439,26 @@ int&nbsp;level)</code></th>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="getMinimumLevel()">getMinimumLevel</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getMinimumLevel</span>()</div>
+<h3><a id="getMinLevel()">getMinLevel</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getMinLevel</span>()</div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="getMaximumLevel()">getMaximumLevel</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getMaximumLevel</span>()</div>
+<h3><a id="getMaxLevel()">getMaxLevel</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getMaxLevel</span>()</div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="getMinimumPower(int)">getMinimumPower</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getMinimumPower</span>&#8203;(<span class="arguments">int&nbsp;level)</span></div>
+<h3><a id="getMinPower(int)">getMinPower</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getMinPower</span>&#8203;(<span class="arguments">int&nbsp;level)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="getMaximumPower(int)">getMaximumPower</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getMaximumPower</span>&#8203;(<span class="arguments">int&nbsp;level)</span></div>
+<h3><a id="getMaxPower(int)">getMaxPower</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getMaxPower</span>&#8203;(<span class="arguments">int&nbsp;level)</span></div>
 </section>
 </li>
 <li class="blockList">

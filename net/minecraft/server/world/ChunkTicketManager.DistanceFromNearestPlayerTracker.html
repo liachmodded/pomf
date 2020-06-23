@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10};
+<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -126,7 +126,7 @@ extends <a href="../../world/ChunkPosDistanceLevelPropagator.html" title="class 
 </thead>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><code>protected it.unimi.dsi.fastutil.longs.Long2ByteMap</code></td>
+<td class="colFirst"><code>protected <a href="http://fastutil.di.unimi.it/docs/it/unimi/dsi/fastutil/longs/Long2ByteMap.html?is-external=true" title="class or interface in it.unimi.dsi.fastutil.longs" class="externalLink">Long2ByteMap</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#distanceFromNearestPlayer">distanceFromNearestPlayer</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -159,8 +159,7 @@ extends <a href="../../world/ChunkPosDistanceLevelPropagator.html" title="class 
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>protected </code></td>
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.server.world.ChunkTicketManager,int)">DistanceFromNearestPlayerTracker</a></span>&#8203;(<a href="ChunkTicketManager.html" title="class in net.minecraft.server.world">ChunkTicketManager</a>&nbsp;maxDistance,
-int&nbsp;int2)</code></th>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(int)">DistanceFromNearestPlayerTracker</a></span>&#8203;(int&nbsp;int2)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -197,19 +196,24 @@ int&nbsp;int2)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i2">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isPlayerInChunk(long)">isPlayerInChunk</a></span>&#8203;(long&nbsp;chunkPos)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i3">
 <td class="colFirst"><code>protected void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#onDistanceChange(long,int,int)">onDistanceChange</a></span>&#8203;(long&nbsp;pos,
 int&nbsp;oldDistance,
 int&nbsp;distance)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i3">
+<tr class="altColor" id="i4">
 <td class="colFirst"><code>protected void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setLevel(long,int)">setLevel</a></span>&#8203;(long&nbsp;id,
 int&nbsp;level)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i4">
+<tr class="rowColor" id="i5">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#updateLevels()">updateLevels</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
@@ -249,7 +253,7 @@ int&nbsp;level)</code></th>
 <li class="blockList">
 <section class="detail">
 <h3><a id="distanceFromNearestPlayer">distanceFromNearestPlayer</a></h3>
-<div class="memberSignature"><span class="modifiers">protected final</span>&nbsp;<span class="returnType">it.unimi.dsi.fastutil.longs.Long2ByteMap</span>&nbsp;<span class="memberName">distanceFromNearestPlayer</span></div>
+<div class="memberSignature"><span class="modifiers">protected final</span>&nbsp;<span class="returnType"><a href="http://fastutil.di.unimi.it/docs/it/unimi/dsi/fastutil/longs/Long2ByteMap.html?is-external=true" title="class or interface in it.unimi.dsi.fastutil.longs" class="externalLink">Long2ByteMap</a></span>&nbsp;<span class="memberName">distanceFromNearestPlayer</span></div>
 </section>
 </li>
 <li class="blockList">
@@ -270,9 +274,8 @@ int&nbsp;level)</code></th>
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="&lt;init&gt;(net.minecraft.server.world.ChunkTicketManager,int)">DistanceFromNearestPlayerTracker</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="memberName">DistanceFromNearestPlayerTracker</span>&#8203;(<span class="arguments"><a href="ChunkTicketManager.html" title="class in net.minecraft.server.world">ChunkTicketManager</a>&nbsp;maxDistance,
-int&nbsp;int2)</span></div>
+<h3><a id="&lt;init&gt;(int)">DistanceFromNearestPlayerTracker</a></h3>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="memberName">DistanceFromNearestPlayerTracker</span>&#8203;(<span class="arguments">int&nbsp;int2)</span></div>
 </section>
 </li>
 </ul>
@@ -322,6 +325,12 @@ int&nbsp;distance)</span></div>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../world/ChunkPosDistanceLevelPropagator.html#getInitialLevel(long)">getInitialLevel</a></code>&nbsp;in class&nbsp;<code><a href="../../world/ChunkPosDistanceLevelPropagator.html" title="class in net.minecraft.world">ChunkPosDistanceLevelPropagator</a></code></dd>
 </dl>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="isPlayerInChunk(long)">isPlayerInChunk</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isPlayerInChunk</span>&#8203;(<span class="arguments">long&nbsp;chunkPos)</span></div>
 </section>
 </li>
 <li class="blockList">

@@ -19,8 +19,8 @@
 <script type="text/javascript" src="../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10};
-var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
+<script type="text/javascript">var data = {"i0":9,"i1":10,"i2":10,"i3":10,"i4":10,"i5":9};
+var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
@@ -146,8 +146,38 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </thead>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code>private static <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util" class="externalLink">Map</a>&lt;<a href="../../block/Block.html" title="class in net.minecraft.block">Block</a>,&#8203;<a href="UpgradeData.Logic.html" title="interface in net.minecraft.world.chunk">UpgradeData.Logic</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#BLOCK_TO_LOGIC">BLOCK_TO_LOGIC</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="UpgradeData.Logic.html" title="interface in net.minecraft.world.chunk">UpgradeData.Logic</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#CALLBACK_LOGICS">CALLBACK_LOGICS</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int[][]</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#centerIndicesToUpgrade">centerIndicesToUpgrade</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static <a href="../../util/EightWayDirection.html" title="enum in net.minecraft.util">EightWayDirection</a>[]</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#EIGHT_WAYS">EIGHT_WAYS</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="https://logging.apache.org/log4j/2.x/log4j-api/apidocs/org/apache/logging/log4j/Logger.html?is-external=true" title="class or interface in org.apache.logging.log4j" class="externalLink">Logger</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#LOGGER">LOGGER</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="UpgradeData.html" title="class in net.minecraft.world.chunk">UpgradeData</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#NO_UPGRADE_DATA">NO_UPGRADE_DATA</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/EnumSet.html?is-external=true" title="class or interface in java.util" class="externalLink">EnumSet</a>&lt;<a href="../../util/EightWayDirection.html" title="enum in net.minecraft.util">EightWayDirection</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#sidesToUpgrade">sidesToUpgrade</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -166,12 +196,19 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
 <thead>
 <tr>
-<th class="colFirst" scope="col">Constructor</th>
+<th class="colFirst" scope="col">Modifier</th>
+<th class="colSecond" scope="col">Constructor</th>
 <th class="colLast" scope="col">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code>private </code></td>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E()">UpgradeData</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>&nbsp;</code></td>
 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.nbt.CompoundTag)">UpgradeData</a></span>&#8203;(<a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;tag)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -187,7 +224,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </a>
 <h2>Method Summary</h2>
 <div class="memberSummary">
-<div role="tablist" aria-orientation="horizontal"><button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t2" class="tableTab" onclick="show(2);">Instance Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t4" class="tableTab" onclick="show(8);">Concrete Methods</button></div>
+<div role="tablist" aria-orientation="horizontal"><button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t1" class="tableTab" onclick="show(1);">Static Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t2" class="tableTab" onclick="show(2);">Instance Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t4" class="tableTab" onclick="show(8);">Concrete Methods</button></div>
 <div id="memberSummary_tabpanel" role="tabpanel">
 <table aria-labelledby="t0">
 <thead>
@@ -199,18 +236,38 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </thead>
 <tbody>
 <tr class="altColor" id="i0">
+<td class="colFirst"><code>private static <a href="../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#applyAdjacentBlock(net.minecraft.block.BlockState,net.minecraft.util.math.Direction,net.minecraft.world.WorldAccess,net.minecraft.util.math.BlockPos,net.minecraft.util.math.BlockPos)">applyAdjacentBlock</a></span>&#8203;(<a href="../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;oldState,
+<a href="../../util/math/Direction.html" title="enum in net.minecraft.util.math">Direction</a>&nbsp;dir,
+<a href="../WorldAccess.html" title="interface in net.minecraft.world">WorldAccess</a>&nbsp;world,
+<a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;currentPos,
+<a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;otherPos)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i1">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isDone()">isDone</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i1">
+<tr class="altColor" id="i2">
 <td class="colFirst"><code><a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#toTag()">toTag</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i2">
+<tr class="rowColor" id="i3">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#upgrade(net.minecraft.world.chunk.WorldChunk)">upgrade</a></span>&#8203;(<a href="WorldChunk.html" title="class in net.minecraft.world.chunk">WorldChunk</a>&nbsp;chunk)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i4">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#upgradeCenter(net.minecraft.world.chunk.WorldChunk)">upgradeCenter</a></span>&#8203;(<a href="WorldChunk.html" title="class in net.minecraft.world.chunk">WorldChunk</a>&nbsp;chunk)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i5">
+<td class="colFirst"><code>private static void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#upgradeSide(net.minecraft.world.chunk.WorldChunk,net.minecraft.util.EightWayDirection)">upgradeSide</a></span>&#8203;(<a href="WorldChunk.html" title="class in net.minecraft.world.chunk">WorldChunk</a>&nbsp;chunk,
+<a href="../../util/EightWayDirection.html" title="enum in net.minecraft.util">EightWayDirection</a>&nbsp;side)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -237,8 +294,44 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
+<h3><a id="LOGGER">LOGGER</a></h3>
+<div class="memberSignature"><span class="modifiers">private static final</span>&nbsp;<span class="returnType"><a href="https://logging.apache.org/log4j/2.x/log4j-api/apidocs/org/apache/logging/log4j/Logger.html?is-external=true" title="class or interface in org.apache.logging.log4j" class="externalLink">Logger</a></span>&nbsp;<span class="memberName">LOGGER</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="NO_UPGRADE_DATA">NO_UPGRADE_DATA</a></h3>
 <div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="UpgradeData.html" title="class in net.minecraft.world.chunk">UpgradeData</a></span>&nbsp;<span class="memberName">NO_UPGRADE_DATA</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="EIGHT_WAYS">EIGHT_WAYS</a></h3>
+<div class="memberSignature"><span class="modifiers">private static final</span>&nbsp;<span class="returnType"><a href="../../util/EightWayDirection.html" title="enum in net.minecraft.util">EightWayDirection</a>[]</span>&nbsp;<span class="memberName">EIGHT_WAYS</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="BLOCK_TO_LOGIC">BLOCK_TO_LOGIC</a></h3>
+<div class="memberSignature"><span class="modifiers">private static final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util" class="externalLink">Map</a>&lt;<a href="../../block/Block.html" title="class in net.minecraft.block">Block</a>,&#8203;<a href="UpgradeData.Logic.html" title="interface in net.minecraft.world.chunk">UpgradeData.Logic</a>&gt;</span>&nbsp;<span class="memberName">BLOCK_TO_LOGIC</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="CALLBACK_LOGICS">CALLBACK_LOGICS</a></h3>
+<div class="memberSignature"><span class="modifiers">private static final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="UpgradeData.Logic.html" title="interface in net.minecraft.world.chunk">UpgradeData.Logic</a>&gt;</span>&nbsp;<span class="memberName">CALLBACK_LOGICS</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="sidesToUpgrade">sidesToUpgrade</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/EnumSet.html?is-external=true" title="class or interface in java.util" class="externalLink">EnumSet</a>&lt;<a href="../../util/EightWayDirection.html" title="enum in net.minecraft.util">EightWayDirection</a>&gt;</span>&nbsp;<span class="memberName">sidesToUpgrade</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="centerIndicesToUpgrade">centerIndicesToUpgrade</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType">int[][]</span>&nbsp;<span class="memberName">centerIndicesToUpgrade</span></div>
 </section>
 </li>
 </ul>
@@ -251,6 +344,12 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </a>
 <h2>Constructor Details</h2>
 <ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="&lt;init&gt;()">UpgradeData</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="memberName">UpgradeData</span>()</div>
+</section>
+</li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="&lt;init&gt;(net.minecraft.nbt.CompoundTag)">UpgradeData</a></h3>
@@ -271,6 +370,29 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <section class="detail">
 <h3><a id="upgrade(net.minecraft.world.chunk.WorldChunk)">upgrade</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">upgrade</span>&#8203;(<span class="arguments"><a href="WorldChunk.html" title="class in net.minecraft.world.chunk">WorldChunk</a>&nbsp;chunk)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="upgradeSide(net.minecraft.world.chunk.WorldChunk,net.minecraft.util.EightWayDirection)">upgradeSide</a></h3>
+<div class="memberSignature"><span class="modifiers">private static</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">upgradeSide</span>&#8203;(<span class="arguments"><a href="WorldChunk.html" title="class in net.minecraft.world.chunk">WorldChunk</a>&nbsp;chunk,
+<a href="../../util/EightWayDirection.html" title="enum in net.minecraft.util">EightWayDirection</a>&nbsp;side)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="applyAdjacentBlock(net.minecraft.block.BlockState,net.minecraft.util.math.Direction,net.minecraft.world.WorldAccess,net.minecraft.util.math.BlockPos,net.minecraft.util.math.BlockPos)">applyAdjacentBlock</a></h3>
+<div class="memberSignature"><span class="modifiers">private static</span>&nbsp;<span class="returnType"><a href="../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a></span>&nbsp;<span class="memberName">applyAdjacentBlock</span>&#8203;(<span class="arguments"><a href="../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;oldState,
+<a href="../../util/math/Direction.html" title="enum in net.minecraft.util.math">Direction</a>&nbsp;dir,
+<a href="../WorldAccess.html" title="interface in net.minecraft.world">WorldAccess</a>&nbsp;world,
+<a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;currentPos,
+<a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;otherPos)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="upgradeCenter(net.minecraft.world.chunk.WorldChunk)">upgradeCenter</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">upgradeCenter</span>&#8203;(<span class="arguments"><a href="WorldChunk.html" title="class in net.minecraft.world.chunk">WorldChunk</a>&nbsp;chunk)</span></div>
 </section>
 </li>
 <li class="blockList">

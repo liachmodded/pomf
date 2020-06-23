@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":9,"i1":10};
+<script type="text/javascript">var data = {"i0":9,"i1":10,"i2":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -57,13 +57,13 @@ loadScripts(document, 'script');</script>
 <li>Summary:&nbsp;</li>
 <li><a href="#nested.class.summary">Nested</a>&nbsp;|&nbsp;</li>
 <li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
 </div>
@@ -87,7 +87,7 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="contentContainer">
 <div class="inheritance" title="Inheritance Tree"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">java.lang.Object</a>
-<div class="inheritance"><a href="LootEntry.html" title="class in net.minecraft.loot.entry">net.minecraft.loot.entry.LootEntry</a>
+<div class="inheritance"><a href="LootPoolEntry.html" title="class in net.minecraft.loot.entry">net.minecraft.loot.entry.LootPoolEntry</a>
 <div class="inheritance"><a href="LeafEntry.html" title="class in net.minecraft.loot.entry">net.minecraft.loot.entry.LeafEntry</a>
 <div class="inheritance">net.minecraft.loot.entry.ItemEntry</div>
 </div>
@@ -142,21 +142,71 @@ extends <a href="LeafEntry.html" title="class in net.minecraft.loot.entry">LeafE
 <!--   -->
 </a>
 <h2>Field Summary</h2>
+<div class="memberSummary">
+<table>
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<thead>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colSecond" scope="col">Field</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../item/Item.html" title="class in net.minecraft.item">Item</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#item">item</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
 <div class="inheritedList">
 <h3>Fields inherited from class&nbsp;net.minecraft.loot.entry.<a href="LeafEntry.html" title="class in net.minecraft.loot.entry">LeafEntry</a></h3>
 <a id="fields.inherited.from.class.net.minecraft.loot.entry.LeafEntry">
 <!--   -->
 </a><code><a href="LeafEntry.html#functions">functions</a>, <a href="LeafEntry.html#quality">quality</a>, <a href="LeafEntry.html#weight">weight</a></code></div>
 <div class="inheritedList">
-<h3>Fields inherited from class&nbsp;net.minecraft.loot.entry.<a href="LootEntry.html" title="class in net.minecraft.loot.entry">LootEntry</a></h3>
-<a id="fields.inherited.from.class.net.minecraft.loot.entry.LootEntry">
+<h3>Fields inherited from class&nbsp;net.minecraft.loot.entry.<a href="LootPoolEntry.html" title="class in net.minecraft.loot.entry">LootPoolEntry</a></h3>
+<a id="fields.inherited.from.class.net.minecraft.loot.entry.LootPoolEntry">
 <!--   -->
-</a><code><a href="LootEntry.html#conditions">conditions</a></code></div>
+</a><code><a href="LootPoolEntry.html#conditions">conditions</a></code></div>
 <div class="inheritedList">
 <h3>Fields inherited from interface&nbsp;net.minecraft.loot.entry.<a href="EntryCombiner.html" title="interface in net.minecraft.loot.entry">EntryCombiner</a></h3>
 <a id="fields.inherited.from.class.net.minecraft.loot.entry.EntryCombiner">
 <!--   -->
 </a><code><a href="EntryCombiner.html#ALWAYS_FALSE">ALWAYS_FALSE</a>, <a href="EntryCombiner.html#ALWAYS_TRUE">ALWAYS_TRUE</a></code></div>
+</section>
+</li>
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<li class="blockList">
+<section class="constructorSummary"><a id="constructor.summary">
+<!--   -->
+</a>
+<h2>Constructor Summary</h2>
+<div class="memberSummary">
+<table>
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<thead>
+<tr>
+<th class="colFirst" scope="col">Modifier</th>
+<th class="colSecond" scope="col">Constructor</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private </code></td>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.item.Item,int,int,net.minecraft.loot.condition.LootCondition%5B%5D,net.minecraft.loot.function.LootFunction%5B%5D)">ItemEntry</a></span>&#8203;(<a href="../../item/Item.html" title="class in net.minecraft.item">Item</a>&nbsp;item,
+int&nbsp;weight,
+int&nbsp;quality,
+<a href="../condition/LootCondition.html" title="interface in net.minecraft.loot.condition">LootCondition</a>[]&nbsp;conditions,
+<a href="../function/LootFunction.html" title="interface in net.minecraft.loot.function">LootFunction</a>[]&nbsp;functions)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 </li>
 <!-- ========== METHOD SUMMARY =========== -->
@@ -179,13 +229,18 @@ extends <a href="LeafEntry.html" title="class in net.minecraft.loot.entry">LeafE
 <tbody>
 <tr class="altColor" id="i0">
 <td class="colFirst"><code>static <a href="LeafEntry.Builder.html" title="class in net.minecraft.loot.entry">LeafEntry.Builder</a>&lt;?&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#builder(net.minecraft.item.ItemConvertible)">builder</a></span>&#8203;(<a href="../../item/ItemConvertible.html" title="interface in net.minecraft.item">ItemConvertible</a>&nbsp;itemProvider)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#builder(net.minecraft.item.ItemConvertible)">builder</a></span>&#8203;(<a href="../../item/ItemConvertible.html" title="interface in net.minecraft.item">ItemConvertible</a>&nbsp;drop)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#drop(java.util.function.Consumer,net.minecraft.loot.context.LootContext)">drop</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Consumer.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Consumer</a>&lt;<a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&gt;&nbsp;itemDropper,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#generateLoot(java.util.function.Consumer,net.minecraft.loot.context.LootContext)">generateLoot</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Consumer.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Consumer</a>&lt;<a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&gt;&nbsp;lootConsumer,
 <a href="../context/LootContext.html" title="class in net.minecraft.loot.context">LootContext</a>&nbsp;context)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i2">
+<td class="colFirst"><code><a href="LootPoolEntryType.html" title="class in net.minecraft.loot.entry">LootPoolEntryType</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getType()">getType</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -196,12 +251,12 @@ extends <a href="LeafEntry.html" title="class in net.minecraft.loot.entry">LeafE
 <h3>Methods inherited from class&nbsp;net.minecraft.loot.entry.<a href="LeafEntry.html" title="class in net.minecraft.loot.entry">LeafEntry</a></h3>
 <a id="methods.inherited.from.class.net.minecraft.loot.entry.LeafEntry">
 <!--   -->
-</a><code><a href="LeafEntry.html#builder(net.minecraft.loot.entry.LeafEntry.Factory)">builder</a>, <a href="LeafEntry.html#check(net.minecraft.loot.LootTableReporter)">check</a>, <a href="LeafEntry.html#expand(net.minecraft.loot.context.LootContext,java.util.function.Consumer)">expand</a></code></div>
+</a><code><a href="LeafEntry.html#builder(net.minecraft.loot.entry.LeafEntry.Factory)">builder</a>, <a href="LeafEntry.html#expand(net.minecraft.loot.context.LootContext,java.util.function.Consumer)">expand</a>, <a href="LeafEntry.html#validate(net.minecraft.loot.LootTableReporter)">validate</a></code></div>
 <div class="inheritedList">
-<h3>Methods inherited from class&nbsp;net.minecraft.loot.entry.<a href="LootEntry.html" title="class in net.minecraft.loot.entry">LootEntry</a></h3>
-<a id="methods.inherited.from.class.net.minecraft.loot.entry.LootEntry">
+<h3>Methods inherited from class&nbsp;net.minecraft.loot.entry.<a href="LootPoolEntry.html" title="class in net.minecraft.loot.entry">LootPoolEntry</a></h3>
+<a id="methods.inherited.from.class.net.minecraft.loot.entry.LootPoolEntry">
 <!--   -->
-</a><code><a href="LootEntry.html#test(net.minecraft.loot.context.LootContext)">test</a></code></div>
+</a><code><a href="LootPoolEntry.html#test(net.minecraft.loot.context.LootContext)">test</a></code></div>
 <div class="inheritedList">
 <h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></h3>
 <a id="methods.inherited.from.class.java.lang.Object">
@@ -218,6 +273,42 @@ extends <a href="LeafEntry.html" title="class in net.minecraft.loot.entry">LeafE
 </section>
 <section class="details">
 <ul class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<li class="blockList">
+<section class="fieldDetails"><a id="field.detail">
+<!--   -->
+</a>
+<h2>Field Details</h2>
+<ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="item">item</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../../item/Item.html" title="class in net.minecraft.item">Item</a></span>&nbsp;<span class="memberName">item</span></div>
+</section>
+</li>
+</ul>
+</section>
+</li>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<li class="blockList">
+<section class="constructorDetails"><a id="constructor.detail">
+<!--   -->
+</a>
+<h2>Constructor Details</h2>
+<ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="&lt;init&gt;(net.minecraft.item.Item,int,int,net.minecraft.loot.condition.LootCondition[],net.minecraft.loot.function.LootFunction[])">ItemEntry</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="memberName">ItemEntry</span>&#8203;(<span class="arguments"><a href="../../item/Item.html" title="class in net.minecraft.item">Item</a>&nbsp;item,
+int&nbsp;weight,
+int&nbsp;quality,
+<a href="../condition/LootCondition.html" title="interface in net.minecraft.loot.condition">LootCondition</a>[]&nbsp;conditions,
+<a href="../function/LootFunction.html" title="interface in net.minecraft.loot.function">LootFunction</a>[]&nbsp;functions)</span></div>
+</section>
+</li>
+</ul>
+</section>
+</li>
 <!-- ============ METHOD DETAIL ========== -->
 <li class="blockList">
 <section class="methodDetails"><a id="method.detail">
@@ -227,19 +318,29 @@ extends <a href="LeafEntry.html" title="class in net.minecraft.loot.entry">LeafE
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="drop(java.util.function.Consumer,net.minecraft.loot.context.LootContext)">drop</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">drop</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Consumer.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Consumer</a>&lt;<a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&gt;&nbsp;itemDropper,
+<h3><a id="getType()">getType</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="LootPoolEntryType.html" title="class in net.minecraft.loot.entry">LootPoolEntryType</a></span>&nbsp;<span class="memberName">getType</span>()</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="LootPoolEntry.html#getType()">getType</a></code>&nbsp;in class&nbsp;<code><a href="LootPoolEntry.html" title="class in net.minecraft.loot.entry">LootPoolEntry</a></code></dd>
+</dl>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="generateLoot(java.util.function.Consumer,net.minecraft.loot.context.LootContext)">generateLoot</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">generateLoot</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Consumer.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Consumer</a>&lt;<a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&gt;&nbsp;lootConsumer,
 <a href="../context/LootContext.html" title="class in net.minecraft.loot.context">LootContext</a>&nbsp;context)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="LeafEntry.html#drop(java.util.function.Consumer,net.minecraft.loot.context.LootContext)">drop</a></code>&nbsp;in class&nbsp;<code><a href="LeafEntry.html" title="class in net.minecraft.loot.entry">LeafEntry</a></code></dd>
+<dd><code><a href="LeafEntry.html#generateLoot(java.util.function.Consumer,net.minecraft.loot.context.LootContext)">generateLoot</a></code>&nbsp;in class&nbsp;<code><a href="LeafEntry.html" title="class in net.minecraft.loot.entry">LeafEntry</a></code></dd>
 </dl>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="builder(net.minecraft.item.ItemConvertible)">builder</a></h3>
-<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType"><a href="LeafEntry.Builder.html" title="class in net.minecraft.loot.entry">LeafEntry.Builder</a>&lt;?&gt;</span>&nbsp;<span class="memberName">builder</span>&#8203;(<span class="arguments"><a href="../../item/ItemConvertible.html" title="interface in net.minecraft.item">ItemConvertible</a>&nbsp;itemProvider)</span></div>
+<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType"><a href="LeafEntry.Builder.html" title="class in net.minecraft.loot.entry">LeafEntry.Builder</a>&lt;?&gt;</span>&nbsp;<span class="memberName">builder</span>&#8203;(<span class="arguments"><a href="../../item/ItemConvertible.html" title="interface in net.minecraft.item">ItemConvertible</a>&nbsp;drop)</span></div>
 </section>
 </li>
 </ul>
@@ -276,13 +377,13 @@ extends <a href="LeafEntry.html" title="class in net.minecraft.loot.entry">LeafE
 <li>Summary:&nbsp;</li>
 <li><a href="#nested.class.summary">Nested</a>&nbsp;|&nbsp;</li>
 <li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
 </div>

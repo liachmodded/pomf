@@ -19,8 +19,8 @@
 <script type="text/javascript" src="../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10};
-var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
+<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":9,"i15":10,"i16":10,"i17":10};
+var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
@@ -150,6 +150,51 @@ implements <a href="PaletteResizeListener.html" title="interface in net.minecraf
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#data">data</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;<a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>,&#8203;<a href="PalettedContainer.html" title="type parameter in PalettedContainer">T</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#elementDeserializer">elementDeserializer</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;<a href="PalettedContainer.html" title="type parameter in PalettedContainer">T</a>,&#8203;<a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#elementSerializer">elementSerializer</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="Palette.html" title="interface in net.minecraft.world.chunk">Palette</a>&lt;<a href="PalettedContainer.html" title="type parameter in PalettedContainer">T</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#fallbackPalette">fallbackPalette</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="PalettedContainer.html" title="type parameter in PalettedContainer">T</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#field_12935">field_12935</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../util/collection/IdList.html" title="class in net.minecraft.util.collection">IdList</a>&lt;<a href="PalettedContainer.html" title="type parameter in PalettedContainer">T</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#idList">idList</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="PaletteResizeListener.html" title="interface in net.minecraft.world.chunk">PaletteResizeListener</a>&lt;<a href="PalettedContainer.html" title="type parameter in PalettedContainer">T</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#noOpPaletteResizeHandler">noOpPaletteResizeHandler</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="Palette.html" title="interface in net.minecraft.world.chunk">Palette</a>&lt;<a href="PalettedContainer.html" title="type parameter in PalettedContainer">T</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#palette">palette</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#paletteSize">paletteSize</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/locks/ReentrantLock.html?is-external=true" title="class or interface in java.util.concurrent.locks" class="externalLink">ReentrantLock</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#writeLock">writeLock</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -191,7 +236,7 @@ implements <a href="PaletteResizeListener.html" title="interface in net.minecraf
 </a>
 <h2>Method Summary</h2>
 <div class="memberSummary">
-<div role="tablist" aria-orientation="horizontal"><button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t2" class="tableTab" onclick="show(2);">Instance Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t4" class="tableTab" onclick="show(8);">Concrete Methods</button></div>
+<div role="tablist" aria-orientation="horizontal"><button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t1" class="tableTab" onclick="show(1);">Static Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t2" class="tableTab" onclick="show(2);">Instance Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t4" class="tableTab" onclick="show(8);">Concrete Methods</button></div>
 <div id="memberSummary_tabpanel" role="tabpanel">
 <table aria-labelledby="t0">
 <thead>
@@ -236,7 +281,7 @@ int&nbsp;z)</code></th>
 </tr>
 <tr class="altColor" id="i6">
 <td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_19526(T)">method_19526</a></span>&#8203;(<a href="PalettedContainer.html" title="type parameter in PalettedContainer">T</a>&nbsp;t)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_19526(java.util.function.Predicate)">method_19526</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Predicate</a>&lt;<a href="PalettedContainer.html" title="type parameter in PalettedContainer">T</a>&gt;&nbsp;predicate)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i7">
@@ -272,6 +317,11 @@ int&nbsp;z,
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i12">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setPaletteSize(int)">setPaletteSize</a></span>&#8203;(int&nbsp;size)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i13">
 <td class="colFirst"><code><a href="PalettedContainer.html" title="type parameter in PalettedContainer">T</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setSync(int,int,int,T)">setSync</a></span>&#8203;(int&nbsp;x,
 int&nbsp;y,
@@ -279,17 +329,24 @@ int&nbsp;z,
 <a href="PalettedContainer.html" title="type parameter in PalettedContainer">T</a>&nbsp;value)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i13">
+<tr class="altColor" id="i14">
+<td class="colFirst"><code>private static int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#toIndex(int,int,int)">toIndex</a></span>&#8203;(int&nbsp;x,
+int&nbsp;y,
+int&nbsp;z)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i15">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#toPacket(net.minecraft.network.PacketByteBuf)">toPacket</a></span>&#8203;(<a href="../../network/PacketByteBuf.html" title="class in net.minecraft.network">PacketByteBuf</a>&nbsp;buf)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i14">
+<tr class="altColor" id="i16">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#unlock()">unlock</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i15">
+<tr class="rowColor" id="i17">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#write(net.minecraft.nbt.CompoundTag,java.lang.String,java.lang.String)">write</a></span>&#8203;(<a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;compoundTag,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;string,
@@ -320,8 +377,62 @@ int&nbsp;z,
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
+<h3><a id="fallbackPalette">fallbackPalette</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="Palette.html" title="interface in net.minecraft.world.chunk">Palette</a>&lt;<a href="PalettedContainer.html" title="type parameter in PalettedContainer">T</a>&gt;</span>&nbsp;<span class="memberName">fallbackPalette</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="noOpPaletteResizeHandler">noOpPaletteResizeHandler</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="PaletteResizeListener.html" title="interface in net.minecraft.world.chunk">PaletteResizeListener</a>&lt;<a href="PalettedContainer.html" title="type parameter in PalettedContainer">T</a>&gt;</span>&nbsp;<span class="memberName">noOpPaletteResizeHandler</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="idList">idList</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../../util/collection/IdList.html" title="class in net.minecraft.util.collection">IdList</a>&lt;<a href="PalettedContainer.html" title="type parameter in PalettedContainer">T</a>&gt;</span>&nbsp;<span class="memberName">idList</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="elementDeserializer">elementDeserializer</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;<a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>,&#8203;<a href="PalettedContainer.html" title="type parameter in PalettedContainer">T</a>&gt;</span>&nbsp;<span class="memberName">elementDeserializer</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="elementSerializer">elementSerializer</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;<a href="PalettedContainer.html" title="type parameter in PalettedContainer">T</a>,&#8203;<a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&gt;</span>&nbsp;<span class="memberName">elementSerializer</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="field_12935">field_12935</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="PalettedContainer.html" title="type parameter in PalettedContainer">T</a></span>&nbsp;<span class="memberName">field_12935</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="data">data</a></h3>
 <div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType"><a href="../../util/collection/PackedIntegerArray.html" title="class in net.minecraft.util.collection">PackedIntegerArray</a></span>&nbsp;<span class="memberName">data</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="palette">palette</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="Palette.html" title="interface in net.minecraft.world.chunk">Palette</a>&lt;<a href="PalettedContainer.html" title="type parameter in PalettedContainer">T</a>&gt;</span>&nbsp;<span class="memberName">palette</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="paletteSize">paletteSize</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">paletteSize</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="writeLock">writeLock</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/locks/ReentrantLock.html?is-external=true" title="class or interface in java.util.concurrent.locks" class="externalLink">ReentrantLock</a></span>&nbsp;<span class="memberName">writeLock</span></div>
 </section>
 </li>
 </ul>
@@ -366,6 +477,20 @@ int&nbsp;z,
 <section class="detail">
 <h3><a id="unlock()">unlock</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">unlock</span>()</div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="toIndex(int,int,int)">toIndex</a></h3>
+<div class="memberSignature"><span class="modifiers">private static</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">toIndex</span>&#8203;(<span class="arguments">int&nbsp;x,
+int&nbsp;y,
+int&nbsp;z)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="setPaletteSize(int)">setPaletteSize</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setPaletteSize</span>&#8203;(<span class="arguments">int&nbsp;size)</span></div>
 </section>
 </li>
 <li class="blockList">
@@ -471,10 +596,8 @@ long[]&nbsp;data)</span></div>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="method_19526(java.lang.Object)">
-<!--   -->
-</a><a id="method_19526(T)">method_19526</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">method_19526</span>&#8203;(<span class="arguments"><a href="PalettedContainer.html" title="type parameter in PalettedContainer">T</a>&nbsp;t)</span></div>
+<h3><a id="method_19526(java.util.function.Predicate)">method_19526</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">method_19526</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Predicate</a>&lt;<a href="PalettedContainer.html" title="type parameter in PalettedContainer">T</a>&gt;&nbsp;predicate)</span></div>
 </section>
 </li>
 <li class="blockList">

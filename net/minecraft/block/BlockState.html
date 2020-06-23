@@ -19,8 +19,8 @@
 <script type="text/javascript" src="../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":10,"i1":9,"i2":9};
-var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
+<script type="text/javascript">var data = {"i0":10};
+var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
@@ -62,7 +62,7 @@ loadScripts(document, 'script');</script>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
@@ -87,17 +87,13 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="contentContainer">
 <div class="inheritance" title="Inheritance Tree"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">java.lang.Object</a>
-<div class="inheritance"><a href="../state/AbstractState.html" title="class in net.minecraft.state">net.minecraft.state.AbstractState</a>&lt;<a href="Block.html" title="class in net.minecraft.block">Block</a>,&#8203;<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&gt;
+<div class="inheritance"><a href="../state/State.html" title="class in net.minecraft.state">net.minecraft.state.State</a>&lt;<a href="Block.html" title="class in net.minecraft.block">Block</a>,&#8203;<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&gt;
 <div class="inheritance"><a href="AbstractBlock.AbstractBlockState.html" title="class in net.minecraft.block">net.minecraft.block.AbstractBlock.AbstractBlockState</a>
 <div class="inheritance">net.minecraft.block.BlockState</div>
 </div>
 </div>
 </div>
 <section class="description">
-<dl>
-<dt>All Implemented Interfaces:</dt>
-<dd><code><a href="../state/State.html" title="interface in net.minecraft.state">State</a>&lt;<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&gt;</code></dd>
-</dl>
 <hr>
 <pre>public class <span class="typeNameLabel">BlockState</span>
 extends <a href="AbstractBlock.AbstractBlockState.html" title="class in net.minecraft.block">AbstractBlock.AbstractBlockState</a></pre>
@@ -123,21 +119,35 @@ extends <a href="AbstractBlock.AbstractBlockState.html" title="class in net.mine
 <!--   -->
 </a>
 <h2>Field Summary</h2>
+<div class="memberSummary">
+<table>
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<thead>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colSecond" scope="col">Field</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>static com.mojang.serialization.Codec&lt;<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#CODEC">CODEC</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
 <div class="inheritedList">
 <h3>Fields inherited from class&nbsp;net.minecraft.block.<a href="AbstractBlock.AbstractBlockState.html" title="class in net.minecraft.block">AbstractBlock.AbstractBlockState</a></h3>
 <a id="fields.inherited.from.class.net.minecraft.block.AbstractBlock.AbstractBlockState">
 <!--   -->
 </a><code><a href="AbstractBlock.AbstractBlockState.html#shapeCache">shapeCache</a></code></div>
 <div class="inheritedList">
-<h3>Fields inherited from class&nbsp;net.minecraft.state.<a href="../state/AbstractState.html" title="class in net.minecraft.state">AbstractState</a></h3>
-<a id="fields.inherited.from.class.net.minecraft.state.AbstractState">
-<!--   -->
-</a><code><a href="../state/AbstractState.html#owner">owner</a></code></div>
-<div class="inheritedList">
-<h3>Fields inherited from interface&nbsp;net.minecraft.state.<a href="../state/State.html" title="interface in net.minecraft.state">State</a></h3>
+<h3>Fields inherited from class&nbsp;net.minecraft.state.<a href="../state/State.html" title="class in net.minecraft.state">State</a></h3>
 <a id="fields.inherited.from.class.net.minecraft.state.State">
 <!--   -->
-</a><code><a href="../state/State.html#LOGGER">LOGGER</a></code></div>
+</a><code><a href="../state/State.html#field_24740">field_24740</a>, <a href="../state/State.html#owner">owner</a></code></div>
 </section>
 </li>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
@@ -157,8 +167,9 @@ extends <a href="AbstractBlock.AbstractBlockState.html" title="class in net.mine
 </thead>
 <tbody>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.block.Block,com.google.common.collect.ImmutableMap)">BlockState</a></span>&#8203;(<a href="Block.html" title="class in net.minecraft.block">Block</a>&nbsp;block,
-<a href="https://guava.dev/releases/21.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect" class="externalLink">ImmutableMap</a>&lt;<a href="../state/property/Property.html" title="interface in net.minecraft.state.property">Property</a>&lt;?&gt;,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html?is-external=true" title="class or interface in java.lang" class="externalLink">Comparable</a>&lt;?&gt;&gt;&nbsp;propertyMap)</code></th>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.block.Block,com.google.common.collect.ImmutableMap,com.mojang.serialization.MapCodec)">BlockState</a></span>&#8203;(<a href="Block.html" title="class in net.minecraft.block">Block</a>&nbsp;block,
+<a href="https://guava.dev/releases/21.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect" class="externalLink">ImmutableMap</a>&lt;<a href="../state/property/Property.html" title="class in net.minecraft.state.property">Property</a>&lt;?&gt;,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html?is-external=true" title="class or interface in java.lang" class="externalLink">Comparable</a>&lt;?&gt;&gt;&nbsp;propertyMap,
+com.mojang.serialization.MapCodec&lt;<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&gt;&nbsp;mapCodec)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -173,7 +184,7 @@ extends <a href="AbstractBlock.AbstractBlockState.html" title="class in net.mine
 </a>
 <h2>Method Summary</h2>
 <div class="memberSummary">
-<div role="tablist" aria-orientation="horizontal"><button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t1" class="tableTab" onclick="show(1);">Static Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t2" class="tableTab" onclick="show(2);">Instance Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t4" class="tableTab" onclick="show(8);">Concrete Methods</button></div>
+<div role="tablist" aria-orientation="horizontal"><button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t2" class="tableTab" onclick="show(2);">Instance Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t4" class="tableTab" onclick="show(8);">Concrete Methods</button></div>
 <div id="memberSummary_tabpanel" role="tabpanel">
 <table aria-labelledby="t0">
 <thead>
@@ -189,17 +200,6 @@ extends <a href="AbstractBlock.AbstractBlockState.html" title="class in net.mine
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#asBlockState()">asBlockState</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i1">
-<td class="colFirst"><code>static &lt;T&gt;&nbsp;<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#deserialize(com.mojang.datafixers.Dynamic)">deserialize</a></span>&#8203;(com.mojang.datafixers.Dynamic&lt;T&gt;&nbsp;dynamic)</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="altColor" id="i2">
-<td class="colFirst"><code>static &lt;T&gt;&nbsp;com.mojang.datafixers.Dynamic&lt;T&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#serialize(com.mojang.datafixers.types.DynamicOps,net.minecraft.block.BlockState)">serialize</a></span>&#8203;(com.mojang.datafixers.types.DynamicOps&lt;T&gt;&nbsp;ops,
-<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state)</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
 </tbody>
 </table>
 </div>
@@ -208,28 +208,39 @@ extends <a href="AbstractBlock.AbstractBlockState.html" title="class in net.mine
 <h3>Methods inherited from class&nbsp;net.minecraft.block.<a href="AbstractBlock.AbstractBlockState.html" title="class in net.minecraft.block">AbstractBlock.AbstractBlockState</a></h3>
 <a id="methods.inherited.from.class.net.minecraft.block.AbstractBlock.AbstractBlockState">
 <!--   -->
-</a><code><a href="AbstractBlock.AbstractBlockState.html#allowsSpawning(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos,net.minecraft.entity.EntityType)">allowsSpawning</a>, <a href="AbstractBlock.AbstractBlockState.html#calcBlockBreakingDelta(net.minecraft.entity.player.PlayerEntity,net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos)">calcBlockBreakingDelta</a>, <a href="AbstractBlock.AbstractBlockState.html#canBucketPlace(net.minecraft.fluid.Fluid)">canBucketPlace</a>, <a href="AbstractBlock.AbstractBlockState.html#canPathfindThrough(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos,net.minecraft.entity.ai.pathing.NavigationType)">canPathfindThrough</a>, <a href="AbstractBlock.AbstractBlockState.html#canPlaceAt(net.minecraft.world.WorldView,net.minecraft.util.math.BlockPos)">canPlaceAt</a>, <a href="AbstractBlock.AbstractBlockState.html#canReplace(net.minecraft.item.ItemPlacementContext)">canReplace</a>, <a href="AbstractBlock.AbstractBlockState.html#createScreenHandlerFactory(net.minecraft.world.World,net.minecraft.util.math.BlockPos)">createScreenHandlerFactory</a>, <a href="AbstractBlock.AbstractBlockState.html#emitsRedstonePower()">emitsRedstonePower</a>, <a href="AbstractBlock.AbstractBlockState.html#exceedsCube()">exceedsCube</a>, <a href="AbstractBlock.AbstractBlockState.html#getAmbientOcclusionLightLevel(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos)">getAmbientOcclusionLightLevel</a>, <a href="AbstractBlock.AbstractBlockState.html#getBlock()">getBlock</a>, <a href="AbstractBlock.AbstractBlockState.html#getCollisionShape(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos)">getCollisionShape</a>, <a href="AbstractBlock.AbstractBlockState.html#getCollisionShape(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos,net.minecraft.block.ShapeContext)">getCollisionShape</a>, <a href="AbstractBlock.AbstractBlockState.html#getComparatorOutput(net.minecraft.world.World,net.minecraft.util.math.BlockPos)">getComparatorOutput</a>, <a href="AbstractBlock.AbstractBlockState.html#getCullingFace(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos,net.minecraft.util.math.Direction)">getCullingFace</a>, <a href="AbstractBlock.AbstractBlockState.html#getCullingShape(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos)">getCullingShape</a>, <a href="AbstractBlock.AbstractBlockState.html#getDroppedStacks(net.minecraft.loot.context.LootContext.Builder)">getDroppedStacks</a>, <a href="AbstractBlock.AbstractBlockState.html#getFluidState()">getFluidState</a>, <a href="AbstractBlock.AbstractBlockState.html#getHardness(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos)">getHardness</a>, <a href="AbstractBlock.AbstractBlockState.html#getLuminance()">getLuminance</a>, <a href="AbstractBlock.AbstractBlockState.html#getMaterial()">getMaterial</a>, <a href="AbstractBlock.AbstractBlockState.html#getModelOffset(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos)">getModelOffset</a>, <a href="AbstractBlock.AbstractBlockState.html#getOpacity(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos)">getOpacity</a>, <a href="AbstractBlock.AbstractBlockState.html#getOutlineShape(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos)">getOutlineShape</a>, <a href="AbstractBlock.AbstractBlockState.html#getOutlineShape(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos,net.minecraft.block.ShapeContext)">getOutlineShape</a>, <a href="AbstractBlock.AbstractBlockState.html#getPistonBehavior()">getPistonBehavior</a>, <a href="AbstractBlock.AbstractBlockState.html#getRayTraceShape(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos)">getRayTraceShape</a>, <a href="AbstractBlock.AbstractBlockState.html#getRenderingSeed(net.minecraft.util.math.BlockPos)">getRenderingSeed</a>, <a href="AbstractBlock.AbstractBlockState.html#getRenderType()">getRenderType</a>, <a href="AbstractBlock.AbstractBlockState.html#getSidesShape(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos)">getSidesShape</a>, <a href="AbstractBlock.AbstractBlockState.html#getSoundGroup()">getSoundGroup</a>, <a href="AbstractBlock.AbstractBlockState.html#getStateForNeighborUpdate(net.minecraft.util.math.Direction,net.minecraft.block.BlockState,net.minecraft.world.IWorld,net.minecraft.util.math.BlockPos,net.minecraft.util.math.BlockPos)">getStateForNeighborUpdate</a>, <a href="AbstractBlock.AbstractBlockState.html#getStrongRedstonePower(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos,net.minecraft.util.math.Direction)">getStrongRedstonePower</a>, <a href="AbstractBlock.AbstractBlockState.html#getTopMaterialColor(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos)">getTopMaterialColor</a>, <a href="AbstractBlock.AbstractBlockState.html#getVisualShape(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos,net.minecraft.block.ShapeContext)">getVisualShape</a>, <a href="AbstractBlock.AbstractBlockState.html#getWeakRedstonePower(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos,net.minecraft.util.math.Direction)">getWeakRedstonePower</a>, <a href="AbstractBlock.AbstractBlockState.html#hasComparatorOutput()">hasComparatorOutput</a>, <a href="AbstractBlock.AbstractBlockState.html#hasEmissiveLighting(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos)">hasEmissiveLighting</a>, <a href="AbstractBlock.AbstractBlockState.html#hasRandomTicks()">hasRandomTicks</a>, <a href="AbstractBlock.AbstractBlockState.html#hasSidedTransparency()">hasSidedTransparency</a>, <a href="AbstractBlock.AbstractBlockState.html#hasSolidTopSurface(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos,net.minecraft.entity.Entity)">hasSolidTopSurface</a>, <a href="AbstractBlock.AbstractBlockState.html#hasSolidTopSurface(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos,net.minecraft.entity.Entity,net.minecraft.util.math.Direction)">hasSolidTopSurface</a>, <a href="AbstractBlock.AbstractBlockState.html#initShapeCache()">initShapeCache</a>, <a href="AbstractBlock.AbstractBlockState.html#isAir()">isAir</a>, <a href="AbstractBlock.AbstractBlockState.html#isFullCube(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos)">isFullCube</a>, <a href="AbstractBlock.AbstractBlockState.html#isIn(net.minecraft.tag.Tag)">isIn</a>, <a href="AbstractBlock.AbstractBlockState.html#isOpaque()">isOpaque</a>, <a href="AbstractBlock.AbstractBlockState.html#isOpaqueFullCube(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos)">isOpaqueFullCube</a>, <a href="AbstractBlock.AbstractBlockState.html#isSideInvisible(net.minecraft.block.BlockState,net.minecraft.util.math.Direction)">isSideInvisible</a>, <a href="AbstractBlock.AbstractBlockState.html#isSideSolidFullSquare(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos,net.minecraft.util.math.Direction)">isSideSolidFullSquare</a>, <a href="AbstractBlock.AbstractBlockState.html#isSolidBlock(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos)">isSolidBlock</a>, <a href="AbstractBlock.AbstractBlockState.html#isTranslucent(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos)">isTranslucent</a>, <a href="AbstractBlock.AbstractBlockState.html#mirror(net.minecraft.util.BlockMirror)">mirror</a>, <a href="AbstractBlock.AbstractBlockState.html#neighborUpdate(net.minecraft.world.World,net.minecraft.util.math.BlockPos,net.minecraft.block.Block,net.minecraft.util.math.BlockPos,boolean)">neighborUpdate</a>, <a href="AbstractBlock.AbstractBlockState.html#onBlockAction(net.minecraft.world.World,net.minecraft.util.math.BlockPos,int,int)">onBlockAction</a>, <a href="AbstractBlock.AbstractBlockState.html#onBlockAdded(net.minecraft.world.World,net.minecraft.util.math.BlockPos,net.minecraft.block.BlockState,boolean)">onBlockAdded</a>, <a href="AbstractBlock.AbstractBlockState.html#onBlockBreakStart(net.minecraft.world.World,net.minecraft.util.math.BlockPos,net.minecraft.entity.player.PlayerEntity)">onBlockBreakStart</a>, <a href="AbstractBlock.AbstractBlockState.html#onBlockRemoved(net.minecraft.world.World,net.minecraft.util.math.BlockPos,net.minecraft.block.BlockState,boolean)">onBlockRemoved</a>, <a href="AbstractBlock.AbstractBlockState.html#onEntityCollision(net.minecraft.world.World,net.minecraft.util.math.BlockPos,net.minecraft.entity.Entity)">onEntityCollision</a>, <a href="AbstractBlock.AbstractBlockState.html#onProjectileHit(net.minecraft.world.World,net.minecraft.block.BlockState,net.minecraft.util.hit.BlockHitResult,net.minecraft.entity.projectile.ProjectileEntity)">onProjectileHit</a>, <a href="AbstractBlock.AbstractBlockState.html#onStacksDropped(net.minecraft.world.World,net.minecraft.util.math.BlockPos,net.minecraft.item.ItemStack)">onStacksDropped</a>, <a href="AbstractBlock.AbstractBlockState.html#onUse(net.minecraft.world.World,net.minecraft.entity.player.PlayerEntity,net.minecraft.util.Hand,net.minecraft.util.hit.BlockHitResult)">onUse</a>, <a href="AbstractBlock.AbstractBlockState.html#prepare(net.minecraft.world.IWorld,net.minecraft.util.math.BlockPos,int)">prepare</a>, <a href="AbstractBlock.AbstractBlockState.html#randomTick(net.minecraft.server.world.ServerWorld,net.minecraft.util.math.BlockPos,java.util.Random)">randomTick</a>, <a href="AbstractBlock.AbstractBlockState.html#rotate(net.minecraft.util.BlockRotation)">rotate</a>, <a href="AbstractBlock.AbstractBlockState.html#scheduledTick(net.minecraft.server.world.ServerWorld,net.minecraft.util.math.BlockPos,java.util.Random)">scheduledTick</a>, <a href="AbstractBlock.AbstractBlockState.html#shouldBlockVision(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos)">shouldBlockVision</a>, <a href="AbstractBlock.AbstractBlockState.html#shouldPostProcess(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos)">shouldPostProcess</a>, <a href="AbstractBlock.AbstractBlockState.html#shouldSuffocate(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos)">shouldSuffocate</a>, <a href="AbstractBlock.AbstractBlockState.html#updateNeighbors(net.minecraft.world.IWorld,net.minecraft.util.math.BlockPos,int)">updateNeighbors</a></code></div>
+</a><code><a href="AbstractBlock.AbstractBlockState.html#allowsSpawning(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos,net.minecraft.entity.EntityType)">allowsSpawning</a>, <a href="AbstractBlock.AbstractBlockState.html#calcBlockBreakingDelta(net.minecraft.entity.player.PlayerEntity,net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos)">calcBlockBreakingDelta</a>, <a href="AbstractBlock.AbstractBlockState.html#canBucketPlace(net.minecraft.fluid.Fluid)">canBucketPlace</a>, <a href="AbstractBlock.AbstractBlockState.html#canPathfindThrough(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos,net.minecraft.entity.ai.pathing.NavigationType)">canPathfindThrough</a>, <a href="AbstractBlock.AbstractBlockState.html#canPlaceAt(net.minecraft.world.WorldView,net.minecraft.util.math.BlockPos)">canPlaceAt</a>, <a href="AbstractBlock.AbstractBlockState.html#canReplace(net.minecraft.item.ItemPlacementContext)">canReplace</a>, <a href="AbstractBlock.AbstractBlockState.html#createScreenHandlerFactory(net.minecraft.world.World,net.minecraft.util.math.BlockPos)">createScreenHandlerFactory</a>, <a href="AbstractBlock.AbstractBlockState.html#emitsRedstonePower()">emitsRedstonePower</a>, <a href="AbstractBlock.AbstractBlockState.html#exceedsCube()">exceedsCube</a>, <a href="AbstractBlock.AbstractBlockState.html#getAmbientOcclusionLightLevel(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos)">getAmbientOcclusionLightLevel</a>, <a href="AbstractBlock.AbstractBlockState.html#getBlock()">getBlock</a>, <a href="AbstractBlock.AbstractBlockState.html#getCollisionShape(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos)">getCollisionShape</a>, <a href="AbstractBlock.AbstractBlockState.html#getCollisionShape(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos,net.minecraft.block.ShapeContext)">getCollisionShape</a>, <a href="AbstractBlock.AbstractBlockState.html#getComparatorOutput(net.minecraft.world.World,net.minecraft.util.math.BlockPos)">getComparatorOutput</a>, <a href="AbstractBlock.AbstractBlockState.html#getCullingFace(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos,net.minecraft.util.math.Direction)">getCullingFace</a>, <a href="AbstractBlock.AbstractBlockState.html#getCullingShape(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos)">getCullingShape</a>, <a href="AbstractBlock.AbstractBlockState.html#getDroppedStacks(net.minecraft.loot.context.LootContext.Builder)">getDroppedStacks</a>, <a href="AbstractBlock.AbstractBlockState.html#getFluidState()">getFluidState</a>, <a href="AbstractBlock.AbstractBlockState.html#getHardness(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos)">getHardness</a>, <a href="AbstractBlock.AbstractBlockState.html#getLuminance()">getLuminance</a>, <a href="AbstractBlock.AbstractBlockState.html#getMaterial()">getMaterial</a>, <a href="AbstractBlock.AbstractBlockState.html#getModelOffset(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos)">getModelOffset</a>, <a href="AbstractBlock.AbstractBlockState.html#getOpacity(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos)">getOpacity</a>, <a href="AbstractBlock.AbstractBlockState.html#getOutlineShape(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos)">getOutlineShape</a>, <a href="AbstractBlock.AbstractBlockState.html#getOutlineShape(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos,net.minecraft.block.ShapeContext)">getOutlineShape</a>, <a href="AbstractBlock.AbstractBlockState.html#getPistonBehavior()">getPistonBehavior</a>, <a href="AbstractBlock.AbstractBlockState.html#getRayTraceShape(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos)">getRayTraceShape</a>, <a href="AbstractBlock.AbstractBlockState.html#getRenderingSeed(net.minecraft.util.math.BlockPos)">getRenderingSeed</a>, <a href="AbstractBlock.AbstractBlockState.html#getRenderType()">getRenderType</a>, <a href="AbstractBlock.AbstractBlockState.html#getSidesShape(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos)">getSidesShape</a>, <a href="AbstractBlock.AbstractBlockState.html#getSoundGroup()">getSoundGroup</a>, <a href="AbstractBlock.AbstractBlockState.html#getStateForNeighborUpdate(net.minecraft.util.math.Direction,net.minecraft.block.BlockState,net.minecraft.world.WorldAccess,net.minecraft.util.math.BlockPos,net.minecraft.util.math.BlockPos)">getStateForNeighborUpdate</a>, <a href="AbstractBlock.AbstractBlockState.html#getStrongRedstonePower(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos,net.minecraft.util.math.Direction)">getStrongRedstonePower</a>, <a href="AbstractBlock.AbstractBlockState.html#getTopMaterialColor(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos)">getTopMaterialColor</a>, <a href="AbstractBlock.AbstractBlockState.html#getVisualShape(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos,net.minecraft.block.ShapeContext)">getVisualShape</a>, <a href="AbstractBlock.AbstractBlockState.html#getWeakRedstonePower(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos,net.minecraft.util.math.Direction)">getWeakRedstonePower</a>, <a href="AbstractBlock.AbstractBlockState.html#hasComparatorOutput()">hasComparatorOutput</a>, <a href="AbstractBlock.AbstractBlockState.html#hasEmissiveLighting(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos)">hasEmissiveLighting</a>, <a href="AbstractBlock.AbstractBlockState.html#hasRandomTicks()">hasRandomTicks</a>, <a href="AbstractBlock.AbstractBlockState.html#hasSidedTransparency()">hasSidedTransparency</a>, <a href="AbstractBlock.AbstractBlockState.html#hasSolidTopSurface(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos,net.minecraft.entity.Entity)">hasSolidTopSurface</a>, <a href="AbstractBlock.AbstractBlockState.html#hasSolidTopSurface(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos,net.minecraft.entity.Entity,net.minecraft.util.math.Direction)">hasSolidTopSurface</a>, <a href="AbstractBlock.AbstractBlockState.html#initShapeCache()">initShapeCache</a>, <a href="AbstractBlock.AbstractBlockState.html#isAir()">isAir</a>, <a href="AbstractBlock.AbstractBlockState.html#isFullCube(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos)">isFullCube</a>, <a href="AbstractBlock.AbstractBlockState.html#isIn(net.minecraft.tag.Tag)">isIn</a>, <a href="AbstractBlock.AbstractBlockState.html#isOf(net.minecraft.block.Block)">isOf</a>, <a href="AbstractBlock.AbstractBlockState.html#isOpaque()">isOpaque</a>, <a href="AbstractBlock.AbstractBlockState.html#isOpaqueFullCube(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos)">isOpaqueFullCube</a>, <a href="AbstractBlock.AbstractBlockState.html#isSideInvisible(net.minecraft.block.BlockState,net.minecraft.util.math.Direction)">isSideInvisible</a>, <a href="AbstractBlock.AbstractBlockState.html#isSideSolidFullSquare(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos,net.minecraft.util.math.Direction)">isSideSolidFullSquare</a>, <a href="AbstractBlock.AbstractBlockState.html#isSolidBlock(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos)">isSolidBlock</a>, <a href="AbstractBlock.AbstractBlockState.html#isToolRequired()">isToolRequired</a>, <a href="AbstractBlock.AbstractBlockState.html#isTranslucent(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos)">isTranslucent</a>, <a href="AbstractBlock.AbstractBlockState.html#method_27851(net.minecraft.tag.Tag,java.util.function.Predicate)">method_27851</a>, <a href="AbstractBlock.AbstractBlockState.html#method_30101(net.minecraft.world.WorldAccess,net.minecraft.util.math.BlockPos,int)">method_30101</a>, <a href="AbstractBlock.AbstractBlockState.html#method_30102(net.minecraft.world.WorldAccess,net.minecraft.util.math.BlockPos,int)">method_30102</a>, <a href="AbstractBlock.AbstractBlockState.html#mirror(net.minecraft.util.BlockMirror)">mirror</a>, <a href="AbstractBlock.AbstractBlockState.html#neighborUpdate(net.minecraft.world.World,net.minecraft.util.math.BlockPos,net.minecraft.block.Block,net.minecraft.util.math.BlockPos,boolean)">neighborUpdate</a>, <a href="AbstractBlock.AbstractBlockState.html#onBlockAdded(net.minecraft.world.World,net.minecraft.util.math.BlockPos,net.minecraft.block.BlockState,boolean)">onBlockAdded</a>, <a href="AbstractBlock.AbstractBlockState.html#onBlockBreakStart(net.minecraft.world.World,net.minecraft.util.math.BlockPos,net.minecraft.entity.player.PlayerEntity)">onBlockBreakStart</a>, <a href="AbstractBlock.AbstractBlockState.html#onEntityCollision(net.minecraft.world.World,net.minecraft.util.math.BlockPos,net.minecraft.entity.Entity)">onEntityCollision</a>, <a href="AbstractBlock.AbstractBlockState.html#onProjectileHit(net.minecraft.world.World,net.minecraft.block.BlockState,net.minecraft.util.hit.BlockHitResult,net.minecraft.entity.projectile.ProjectileEntity)">onProjectileHit</a>, <a href="AbstractBlock.AbstractBlockState.html#onStacksDropped(net.minecraft.world.World,net.minecraft.util.math.BlockPos,net.minecraft.item.ItemStack)">onStacksDropped</a>, <a href="AbstractBlock.AbstractBlockState.html#onStateReplaced(net.minecraft.world.World,net.minecraft.util.math.BlockPos,net.minecraft.block.BlockState,boolean)">onStateReplaced</a>, <a href="AbstractBlock.AbstractBlockState.html#onSyncedBlockEvent(net.minecraft.world.World,net.minecraft.util.math.BlockPos,int,int)">onSyncedBlockEvent</a>, <a href="AbstractBlock.AbstractBlockState.html#onUse(net.minecraft.world.World,net.minecraft.entity.player.PlayerEntity,net.minecraft.util.Hand,net.minecraft.util.hit.BlockHitResult)">onUse</a>, <a href="AbstractBlock.AbstractBlockState.html#prepare(net.minecraft.world.WorldAccess,net.minecraft.util.math.BlockPos,int,int)">prepare</a>, <a href="AbstractBlock.AbstractBlockState.html#randomTick(net.minecraft.server.world.ServerWorld,net.minecraft.util.math.BlockPos,java.util.Random)">randomTick</a>, <a href="AbstractBlock.AbstractBlockState.html#rotate(net.minecraft.util.BlockRotation)">rotate</a>, <a href="AbstractBlock.AbstractBlockState.html#scheduledTick(net.minecraft.server.world.ServerWorld,net.minecraft.util.math.BlockPos,java.util.Random)">scheduledTick</a>, <a href="AbstractBlock.AbstractBlockState.html#shouldBlockVision(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos)">shouldBlockVision</a>, <a href="AbstractBlock.AbstractBlockState.html#shouldPostProcess(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos)">shouldPostProcess</a>, <a href="AbstractBlock.AbstractBlockState.html#shouldSuffocate(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos)">shouldSuffocate</a>, <a href="AbstractBlock.AbstractBlockState.html#updateNeighbors(net.minecraft.world.WorldAccess,net.minecraft.util.math.BlockPos,int,int)">updateNeighbors</a></code></div>
 <div class="inheritedList">
-<h3>Methods inherited from class&nbsp;net.minecraft.state.<a href="../state/AbstractState.html" title="class in net.minecraft.state">AbstractState</a></h3>
-<a id="methods.inherited.from.class.net.minecraft.state.AbstractState">
+<h3>Methods inherited from class&nbsp;net.minecraft.state.<a href="../state/State.html" title="class in net.minecraft.state">State</a></h3>
+<a id="methods.inherited.from.class.net.minecraft.state.State">
 <!--   -->
-</a><code><a href="../state/AbstractState.html#contains(net.minecraft.state.property.Property)">contains</a>, <a href="../state/AbstractState.html#createWithTable(java.util.Map)">createWithTable</a>, <a href="../state/AbstractState.html#cycle(net.minecraft.state.property.Property)">cycle</a>, <a href="../state/AbstractState.html#get(net.minecraft.state.property.Property)">get</a>, <a href="../state/AbstractState.html#getEntries()">getEntries</a>, <a href="../state/AbstractState.html#getNext(java.util.Collection,T)">getNext</a>, <a href="../state/AbstractState.html#getProperties()">getProperties</a>, <a href="../state/AbstractState.html#toString()">toString</a>, <a href="../state/AbstractState.html#with(net.minecraft.state.property.Property,V)">with</a></code></div>
+</a><code><a href="../state/State.html#contains(net.minecraft.state.property.Property)">contains</a>, <a href="../state/State.html#createCodec(com.mojang.serialization.Codec,java.util.function.Function)">createCodec</a>, <a href="../state/State.html#createWithTable(java.util.Map)">createWithTable</a>, <a href="../state/State.html#cycle(net.minecraft.state.property.Property)">cycle</a>, <a href="../state/State.html#get(net.minecraft.state.property.Property)">get</a>, <a href="../state/State.html#getEntries()">getEntries</a>, <a href="../state/State.html#getNext(java.util.Collection,T)">getNext</a>, <a href="../state/State.html#getProperties()">getProperties</a>, <a href="../state/State.html#method_28500(net.minecraft.state.property.Property)">method_28500</a>, <a href="../state/State.html#toString()">toString</a>, <a href="../state/State.html#with(net.minecraft.state.property.Property,V)">with</a></code></div>
 <div class="inheritedList">
 <h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></h3>
 <a id="methods.inherited.from.class.java.lang.Object">
 <!--   -->
 </a><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang" class="externalLink">clone</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang" class="externalLink">equals</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang" class="externalLink">finalize</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang" class="externalLink">getClass</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang" class="externalLink">hashCode</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang" class="externalLink">notify</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang" class="externalLink">notifyAll</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang" class="externalLink">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang" class="externalLink">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait(long,int)" title="class or interface in java.lang" class="externalLink">wait</a></code></div>
-<div class="inheritedList">
-<h3>Methods inherited from interface&nbsp;net.minecraft.state.<a href="../state/State.html" title="interface in net.minecraft.state">State</a></h3>
-<a id="methods.inherited.from.class.net.minecraft.state.State">
-<!--   -->
-</a><code><a href="../state/State.html#get(net.minecraft.state.property.Property)">get</a>, <a href="../state/State.html#getEntries()">getEntries</a>, <a href="../state/State.html#with(net.minecraft.state.property.Property,V)">with</a></code></div>
 </section>
 </li>
 </ul>
 </section>
 <section class="details">
 <ul class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<li class="blockList">
+<section class="fieldDetails"><a id="field.detail">
+<!--   -->
+</a>
+<h2>Field Details</h2>
+<ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="CODEC">CODEC</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType">com.mojang.serialization.Codec&lt;<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&gt;</span>&nbsp;<span class="memberName">CODEC</span></div>
+</section>
+</li>
+</ul>
+</section>
+</li>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <li class="blockList">
 <section class="constructorDetails"><a id="constructor.detail">
@@ -239,9 +250,10 @@ extends <a href="AbstractBlock.AbstractBlockState.html" title="class in net.mine
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="&lt;init&gt;(net.minecraft.block.Block,com.google.common.collect.ImmutableMap)">BlockState</a></h3>
+<h3><a id="&lt;init&gt;(net.minecraft.block.Block,com.google.common.collect.ImmutableMap,com.mojang.serialization.MapCodec)">BlockState</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">BlockState</span>&#8203;(<span class="arguments"><a href="Block.html" title="class in net.minecraft.block">Block</a>&nbsp;block,
-<a href="https://guava.dev/releases/21.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect" class="externalLink">ImmutableMap</a>&lt;<a href="../state/property/Property.html" title="interface in net.minecraft.state.property">Property</a>&lt;?&gt;,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html?is-external=true" title="class or interface in java.lang" class="externalLink">Comparable</a>&lt;?&gt;&gt;&nbsp;propertyMap)</span></div>
+<a href="https://guava.dev/releases/21.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect" class="externalLink">ImmutableMap</a>&lt;<a href="../state/property/Property.html" title="class in net.minecraft.state.property">Property</a>&lt;?&gt;,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html?is-external=true" title="class or interface in java.lang" class="externalLink">Comparable</a>&lt;?&gt;&gt;&nbsp;propertyMap,
+com.mojang.serialization.MapCodec&lt;<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&gt;&nbsp;mapCodec)</span></div>
 </section>
 </li>
 </ul>
@@ -262,19 +274,6 @@ extends <a href="AbstractBlock.AbstractBlockState.html" title="class in net.mine
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="AbstractBlock.AbstractBlockState.html#asBlockState()">asBlockState</a></code>&nbsp;in class&nbsp;<code><a href="AbstractBlock.AbstractBlockState.html" title="class in net.minecraft.block">AbstractBlock.AbstractBlockState</a></code></dd>
 </dl>
-</section>
-</li>
-<li class="blockList">
-<section class="detail">
-<h3><a id="serialize(com.mojang.datafixers.types.DynamicOps,net.minecraft.block.BlockState)">serialize</a></h3>
-<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="typeParameters">&lt;T&gt;</span>&nbsp;<span class="returnType">com.mojang.datafixers.Dynamic&lt;T&gt;</span>&nbsp;<span class="memberName">serialize</span>&#8203;(<span class="arguments">com.mojang.datafixers.types.DynamicOps&lt;T&gt;&nbsp;ops,
-<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state)</span></div>
-</section>
-</li>
-<li class="blockList">
-<section class="detail">
-<h3><a id="deserialize(com.mojang.datafixers.Dynamic)">deserialize</a></h3>
-<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="typeParameters">&lt;T&gt;</span>&nbsp;<span class="returnType"><a href="BlockState.html" title="class in net.minecraft.block">BlockState</a></span>&nbsp;<span class="memberName">deserialize</span>&#8203;(<span class="arguments">com.mojang.datafixers.Dynamic&lt;T&gt;&nbsp;dynamic)</span></div>
 </section>
 </li>
 </ul>
@@ -316,7 +315,7 @@ extends <a href="AbstractBlock.AbstractBlockState.html" title="class in net.mine
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>

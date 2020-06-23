@@ -119,18 +119,38 @@ implements <a href="BiomeAccess.Storage.html" title="interface in net.minecraft.
 </thead>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><code>static int</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#DEFAULT_LENGTH">DEFAULT_LENGTH</a></span></code></th>
+<td class="colFirst"><code>private <a href="../Biome.html" title="class in net.minecraft.world.biome">Biome</a>[]</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#data">data</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#HORIZONTAL_BIT_MASK">HORIZONTAL_BIT_MASK</a></span></code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#DEFAULT_LENGTH">DEFAULT_LENGTH</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#HORIZONTAL_BIT_MASK">HORIZONTAL_BIT_MASK</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#HORIZONTAL_SECTION_COUNT">HORIZONTAL_SECTION_COUNT</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="https://logging.apache.org/log4j/2.x/log4j-api/apidocs/org/apache/logging/log4j/Logger.html?is-external=true" title="class or interface in org.apache.logging.log4j" class="externalLink">Logger</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#LOGGER">LOGGER</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#VERTICAL_BIT_MASK">VERTICAL_BIT_MASK</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#VERTICAL_SECTION_COUNT">VERTICAL_SECTION_COUNT</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -149,27 +169,37 @@ implements <a href="BiomeAccess.Storage.html" title="interface in net.minecraft.
 <caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
 <thead>
 <tr>
-<th class="colFirst" scope="col">Constructor</th>
+<th class="colFirst" scope="col">Modifier</th>
+<th class="colSecond" scope="col">Constructor</th>
 <th class="colLast" scope="col">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.network.PacketByteBuf)">BiomeArray</a></span>&#8203;(<a href="../../../network/PacketByteBuf.html" title="class in net.minecraft.network">PacketByteBuf</a>&nbsp;packetByteBuf)</code></th>
+<td class="colFirst"><code>private </code></td>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E()">BiomeArray</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>&nbsp;</code></td>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.network.PacketByteBuf)">BiomeArray</a></span>&#8203;(<a href="../../../network/PacketByteBuf.html" title="class in net.minecraft.network">PacketByteBuf</a>&nbsp;buf)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>&nbsp;</code></td>
 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.util.math.ChunkPos,net.minecraft.world.biome.source.BiomeSource)">BiomeArray</a></span>&#8203;(<a href="../../../util/math/ChunkPos.html" title="class in net.minecraft.util.math">ChunkPos</a>&nbsp;pos,
 <a href="BiomeSource.html" title="class in net.minecraft.world.biome.source">BiomeSource</a>&nbsp;source)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
+<td class="colFirst"><code>&nbsp;</code></td>
 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.util.math.ChunkPos,net.minecraft.world.biome.source.BiomeSource,int%5B%5D)">BiomeArray</a></span>&#8203;(<a href="../../../util/math/ChunkPos.html" title="class in net.minecraft.util.math">ChunkPos</a>&nbsp;pos,
 <a href="BiomeSource.html" title="class in net.minecraft.world.biome.source">BiomeSource</a>&nbsp;source,
 int[]&nbsp;rawIds)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
+<td class="colFirst"><code>&nbsp;</code></td>
 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.world.biome.Biome%5B%5D)">BiomeArray</a></span>&#8203;(<a href="../Biome.html" title="class in net.minecraft.world.biome">Biome</a>[]&nbsp;data)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -242,6 +272,24 @@ int&nbsp;biomeZ)</code></th>
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
+<h3><a id="LOGGER">LOGGER</a></h3>
+<div class="memberSignature"><span class="modifiers">private static final</span>&nbsp;<span class="returnType"><a href="https://logging.apache.org/log4j/2.x/log4j-api/apidocs/org/apache/logging/log4j/Logger.html?is-external=true" title="class or interface in org.apache.logging.log4j" class="externalLink">Logger</a></span>&nbsp;<span class="memberName">LOGGER</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="HORIZONTAL_SECTION_COUNT">HORIZONTAL_SECTION_COUNT</a></h3>
+<div class="memberSignature"><span class="modifiers">private static final</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">HORIZONTAL_SECTION_COUNT</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="VERTICAL_SECTION_COUNT">VERTICAL_SECTION_COUNT</a></h3>
+<div class="memberSignature"><span class="modifiers">private static final</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">VERTICAL_SECTION_COUNT</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="DEFAULT_LENGTH">DEFAULT_LENGTH</a></h3>
 <div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">DEFAULT_LENGTH</span></div>
 </section>
@@ -256,6 +304,12 @@ int&nbsp;biomeZ)</code></th>
 <section class="detail">
 <h3><a id="VERTICAL_BIT_MASK">VERTICAL_BIT_MASK</a></h3>
 <div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">VERTICAL_BIT_MASK</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="data">data</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../Biome.html" title="class in net.minecraft.world.biome">Biome</a>[]</span>&nbsp;<span class="memberName">data</span></div>
 </section>
 </li>
 </ul>
@@ -276,8 +330,14 @@ int&nbsp;biomeZ)</code></th>
 </li>
 <li class="blockList">
 <section class="detail">
+<h3><a id="&lt;init&gt;()">BiomeArray</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="memberName">BiomeArray</span>()</div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="&lt;init&gt;(net.minecraft.network.PacketByteBuf)">BiomeArray</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">BiomeArray</span>&#8203;(<span class="arguments"><a href="../../../network/PacketByteBuf.html" title="class in net.minecraft.network">PacketByteBuf</a>&nbsp;packetByteBuf)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">BiomeArray</span>&#8203;(<span class="arguments"><a href="../../../network/PacketByteBuf.html" title="class in net.minecraft.network">PacketByteBuf</a>&nbsp;buf)</span></div>
 </section>
 </li>
 <li class="blockList">
@@ -292,7 +352,7 @@ int&nbsp;biomeZ)</code></th>
 <h3><a id="&lt;init&gt;(net.minecraft.util.math.ChunkPos,net.minecraft.world.biome.source.BiomeSource,int[])">BiomeArray</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">BiomeArray</span>&#8203;(<span class="arguments"><a href="../../../util/math/ChunkPos.html" title="class in net.minecraft.util.math">ChunkPos</a>&nbsp;pos,
 <a href="BiomeSource.html" title="class in net.minecraft.world.biome.source">BiomeSource</a>&nbsp;source,
-<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 int[]&nbsp;rawIds)</span></div>
 </section>
 </li>

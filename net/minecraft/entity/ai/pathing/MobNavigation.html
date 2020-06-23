@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10};
+<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -62,7 +62,7 @@ loadScripts(document, 'script');</script>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
@@ -108,6 +108,25 @@ extends <a href="EntityNavigation.html" title="class in net.minecraft.entity.ai.
 <!--   -->
 </a>
 <h2>Field Summary</h2>
+<div class="memberSummary">
+<table>
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<thead>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colSecond" scope="col">Field</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#avoidSunlight">avoidSunlight</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
 <div class="inheritedList">
 <h3>Fields inherited from class&nbsp;net.minecraft.entity.ai.pathing.<a href="EntityNavigation.html" title="class in net.minecraft.entity.ai.pathing">EntityNavigation</a></h3>
 <a id="fields.inherited.from.class.net.minecraft.entity.ai.pathing.EntityNavigation">
@@ -167,11 +186,39 @@ extends <a href="EntityNavigation.html" title="class in net.minecraft.entity.ai.
 </td>
 </tr>
 <tr class="rowColor" id="i1">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#allVisibleArePassable(int,int,int,int,int,int,net.minecraft.util.math.Vec3d,double,double)">allVisibleArePassable</a></span>&#8203;(int&nbsp;x,
+int&nbsp;y,
+int&nbsp;z,
+int&nbsp;xSize,
+int&nbsp;ySize,
+int&nbsp;zSize,
+<a href="../../../util/math/Vec3d.html" title="class in net.minecraft.util.math">Vec3d</a>&nbsp;entityPos,
+double&nbsp;lookVecX,
+double&nbsp;lookVecZ)</code></th>
+<td class="colLast">
+<div class="block">Checks whether all blocks in the box which are visible (in front of) the mob can be pathed through</div>
+</td>
+</tr>
+<tr class="altColor" id="i2">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#allVisibleAreSafe(int,int,int,int,int,int,net.minecraft.util.math.Vec3d,double,double)">allVisibleAreSafe</a></span>&#8203;(int&nbsp;centerX,
+int&nbsp;centerY,
+int&nbsp;centerZ,
+int&nbsp;xSize,
+int&nbsp;ySize,
+int&nbsp;zSize,
+<a href="../../../util/math/Vec3d.html" title="class in net.minecraft.util.math">Vec3d</a>&nbsp;entityPos,
+double&nbsp;lookVecX,
+double&nbsp;lookVecZ)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i3">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#canEnterOpenDoors()">canEnterOpenDoors</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i2">
+<tr class="altColor" id="i4">
 <td class="colFirst"><code>protected boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#canPathDirectlyThrough(net.minecraft.util.math.Vec3d,net.minecraft.util.math.Vec3d,int,int,int)">canPathDirectlyThrough</a></span>&#8203;(<a href="../../../util/math/Vec3d.html" title="class in net.minecraft.util.math">Vec3d</a>&nbsp;origin,
 <a href="../../../util/math/Vec3d.html" title="class in net.minecraft.util.math">Vec3d</a>&nbsp;target,
@@ -180,46 +227,53 @@ int&nbsp;sizeY,
 int&nbsp;sizeZ)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i3">
+<tr class="rowColor" id="i5">
+<td class="colFirst"><code>protected boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#canWalkOnPath(net.minecraft.entity.ai.pathing.PathNodeType)">canWalkOnPath</a></span>&#8203;(<a href="PathNodeType.html" title="enum in net.minecraft.entity.ai.pathing">PathNodeType</a>&nbsp;pathType)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i6">
 <td class="colFirst"><code>protected <a href="PathNodeNavigator.html" title="class in net.minecraft.entity.ai.pathing">PathNodeNavigator</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createPathNodeNavigator(int)">createPathNodeNavigator</a></span>&#8203;(int&nbsp;range)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i4">
+<tr class="rowColor" id="i7">
 <td class="colFirst"><code><a href="Path.html" title="class in net.minecraft.entity.ai.pathing">Path</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#findPathTo(net.minecraft.entity.Entity,int)">findPathTo</a></span>&#8203;(<a href="../../Entity.html" title="class in net.minecraft.entity">Entity</a>&nbsp;entity,
 int&nbsp;distance)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i5">
+<tr class="altColor" id="i8">
 <td class="colFirst"><code><a href="Path.html" title="class in net.minecraft.entity.ai.pathing">Path</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#findPathTo(net.minecraft.util.math.BlockPos,int)">findPathTo</a></span>&#8203;(<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;target,
 int&nbsp;distance)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i6">
+<tr class="rowColor" id="i9">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPathfindingY()">getPathfindingY</a></span>()</code></th>
+<td class="colLast">
+<div class="block">The y-position to act as if the entity is at for pathfinding purposes</div>
+</td>
+</tr>
+<tr class="altColor" id="i10">
 <td class="colFirst"><code>protected <a href="../../../util/math/Vec3d.html" title="class in net.minecraft.util.math">Vec3d</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPos()">getPos</a></span>()</code></th>
 <td class="colLast">
 <div class="block">The position to act as if the entity is at for pathfinding purposes</div>
 </td>
 </tr>
-<tr class="rowColor" id="i7">
+<tr class="rowColor" id="i11">
 <td class="colFirst"><code>protected boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isAtValidPosition()">isAtValidPosition</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i8">
-<td class="colFirst"><code>protected boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_26338(net.minecraft.entity.ai.pathing.PathNodeType)">method_26338</a></span>&#8203;(<a href="PathNodeType.html" title="enum in net.minecraft.entity.ai.pathing">PathNodeType</a>&nbsp;pathNodeType)</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="rowColor" id="i9">
+<tr class="altColor" id="i12">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setAvoidSunlight(boolean)">setAvoidSunlight</a></span>&#8203;(boolean&nbsp;avoidSunlight)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i10">
+<tr class="rowColor" id="i13">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setCanPathThroughDoors(boolean)">setCanPathThroughDoors</a></span>&#8203;(boolean&nbsp;canPathThroughDoors)</code></th>
 <td class="colLast">&nbsp;</td>
@@ -232,7 +286,7 @@ int&nbsp;distance)</code></th>
 <h3>Methods inherited from class&nbsp;net.minecraft.entity.ai.pathing.<a href="EntityNavigation.html" title="class in net.minecraft.entity.ai.pathing">EntityNavigation</a></h3>
 <a id="methods.inherited.from.class.net.minecraft.entity.ai.pathing.EntityNavigation">
 <!--   -->
-</a><code><a href="EntityNavigation.html#canSwim()">canSwim</a>, <a href="EntityNavigation.html#checkTimeouts(net.minecraft.util.math.Vec3d)">checkTimeouts</a>, <a href="EntityNavigation.html#continueFollowingPath()">continueFollowingPath</a>, <a href="EntityNavigation.html#findPathTo(double,double,double,int)">findPathTo</a>, <a href="EntityNavigation.html#findPathToAny(java.util.Set,int,boolean,int)">findPathToAny</a>, <a href="EntityNavigation.html#findPathToAny(java.util.stream.Stream,int)">findPathToAny</a>, <a href="EntityNavigation.html#getCurrentPath()">getCurrentPath</a>, <a href="EntityNavigation.html#getNodeMaker()">getNodeMaker</a>, <a href="EntityNavigation.html#getTargetPos()">getTargetPos</a>, <a href="EntityNavigation.html#isFollowingPath()">isFollowingPath</a>, <a href="EntityNavigation.html#isIdle()">isIdle</a>, <a href="EntityNavigation.html#isInLiquid()">isInLiquid</a>, <a href="EntityNavigation.html#isValidPosition(net.minecraft.util.math.BlockPos)">isValidPosition</a>, <a href="EntityNavigation.html#onBlockChanged(net.minecraft.util.math.BlockPos)">onBlockChanged</a>, <a href="EntityNavigation.html#recalculatePath()">recalculatePath</a>, <a href="EntityNavigation.html#resetRangeMultiplier()">resetRangeMultiplier</a>, <a href="EntityNavigation.html#setCanSwim(boolean)">setCanSwim</a>, <a href="EntityNavigation.html#setRangeMultiplier(float)">setRangeMultiplier</a>, <a href="EntityNavigation.html#setSpeed(double)">setSpeed</a>, <a href="EntityNavigation.html#shouldRecalculatePath()">shouldRecalculatePath</a>, <a href="EntityNavigation.html#startMovingAlong(net.minecraft.entity.ai.pathing.Path,double)">startMovingAlong</a>, <a href="EntityNavigation.html#startMovingTo(double,double,double,double)">startMovingTo</a>, <a href="EntityNavigation.html#startMovingTo(net.minecraft.entity.Entity,double)">startMovingTo</a>, <a href="EntityNavigation.html#stop()">stop</a>, <a href="EntityNavigation.html#tick()">tick</a></code></div>
+</a><code><a href="EntityNavigation.html#canSwim()">canSwim</a>, <a href="EntityNavigation.html#checkTimeouts(net.minecraft.util.math.Vec3d)">checkTimeouts</a>, <a href="EntityNavigation.html#continueFollowingPath()">continueFollowingPath</a>, <a href="EntityNavigation.html#findPathTo(double,double,double,int)">findPathTo</a>, <a href="EntityNavigation.html#findPathToAny(java.util.Set,int,boolean,int)">findPathToAny</a>, <a href="EntityNavigation.html#findPathToAny(java.util.stream.Stream,int)">findPathToAny</a>, <a href="EntityNavigation.html#getCurrentPath()">getCurrentPath</a>, <a href="EntityNavigation.html#getNodeMaker()">getNodeMaker</a>, <a href="EntityNavigation.html#getTargetPos()">getTargetPos</a>, <a href="EntityNavigation.html#isFollowingPath()">isFollowingPath</a>, <a href="EntityNavigation.html#isIdle()">isIdle</a>, <a href="EntityNavigation.html#isInLiquid()">isInLiquid</a>, <a href="EntityNavigation.html#isValidPosition(net.minecraft.util.math.BlockPos)">isValidPosition</a>, <a href="EntityNavigation.html#method_29934(java.util.Set,int)">method_29934</a>, <a href="EntityNavigation.html#onBlockChanged(net.minecraft.util.math.BlockPos)">onBlockChanged</a>, <a href="EntityNavigation.html#recalculatePath()">recalculatePath</a>, <a href="EntityNavigation.html#resetRangeMultiplier()">resetRangeMultiplier</a>, <a href="EntityNavigation.html#setCanSwim(boolean)">setCanSwim</a>, <a href="EntityNavigation.html#setRangeMultiplier(float)">setRangeMultiplier</a>, <a href="EntityNavigation.html#setSpeed(double)">setSpeed</a>, <a href="EntityNavigation.html#shouldRecalculatePath()">shouldRecalculatePath</a>, <a href="EntityNavigation.html#startMovingAlong(net.minecraft.entity.ai.pathing.Path,double)">startMovingAlong</a>, <a href="EntityNavigation.html#startMovingTo(double,double,double,double)">startMovingTo</a>, <a href="EntityNavigation.html#startMovingTo(net.minecraft.entity.Entity,double)">startMovingTo</a>, <a href="EntityNavigation.html#stop()">stop</a>, <a href="EntityNavigation.html#tick()">tick</a></code></div>
 <div class="inheritedList">
 <h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></h3>
 <a id="methods.inherited.from.class.java.lang.Object">
@@ -244,6 +298,22 @@ int&nbsp;distance)</code></th>
 </section>
 <section class="details">
 <ul class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<li class="blockList">
+<section class="fieldDetails"><a id="field.detail">
+<!--   -->
+</a>
+<h2>Field Details</h2>
+<ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="avoidSunlight">avoidSunlight</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">avoidSunlight</span></div>
+</section>
+</li>
+</ul>
+</section>
+</li>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <li class="blockList">
 <section class="constructorDetails"><a id="constructor.detail">
@@ -323,6 +393,13 @@ int&nbsp;distance)</span></div>
 </li>
 <li class="blockList">
 <section class="detail">
+<h3><a id="getPathfindingY()">getPathfindingY</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getPathfindingY</span>()</div>
+<div class="block">The y-position to act as if the entity is at for pathfinding purposes</div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="adjustPath()">adjustPath</a></h3>
 <div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">adjustPath</span>()</div>
 <div class="block">Adjusts the current path according to various special obstacles that may be in the way, for example sunlight</div>
@@ -348,8 +425,37 @@ int&nbsp;sizeZ)</span></div>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="method_26338(net.minecraft.entity.ai.pathing.PathNodeType)">method_26338</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">method_26338</span>&#8203;(<span class="arguments"><a href="PathNodeType.html" title="enum in net.minecraft.entity.ai.pathing">PathNodeType</a>&nbsp;pathNodeType)</span></div>
+<h3><a id="allVisibleAreSafe(int,int,int,int,int,int,net.minecraft.util.math.Vec3d,double,double)">allVisibleAreSafe</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">allVisibleAreSafe</span>&#8203;(<span class="arguments">int&nbsp;centerX,
+int&nbsp;centerY,
+int&nbsp;centerZ,
+int&nbsp;xSize,
+int&nbsp;ySize,
+int&nbsp;zSize,
+<a href="../../../util/math/Vec3d.html" title="class in net.minecraft.util.math">Vec3d</a>&nbsp;entityPos,
+double&nbsp;lookVecX,
+double&nbsp;lookVecZ)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="canWalkOnPath(net.minecraft.entity.ai.pathing.PathNodeType)">canWalkOnPath</a></h3>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">canWalkOnPath</span>&#8203;(<span class="arguments"><a href="PathNodeType.html" title="enum in net.minecraft.entity.ai.pathing">PathNodeType</a>&nbsp;pathType)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="allVisibleArePassable(int,int,int,int,int,int,net.minecraft.util.math.Vec3d,double,double)">allVisibleArePassable</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">allVisibleArePassable</span>&#8203;(<span class="arguments">int&nbsp;x,
+int&nbsp;y,
+int&nbsp;z,
+int&nbsp;xSize,
+int&nbsp;ySize,
+int&nbsp;zSize,
+<a href="../../../util/math/Vec3d.html" title="class in net.minecraft.util.math">Vec3d</a>&nbsp;entityPos,
+double&nbsp;lookVecX,
+double&nbsp;lookVecZ)</span></div>
+<div class="block">Checks whether all blocks in the box which are visible (in front of) the mob can be pathed through</div>
 </section>
 </li>
 <li class="blockList">
@@ -409,7 +515,7 @@ int&nbsp;sizeZ)</span></div>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>

@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":6};
+<script type="text/javascript">var data = {"i0":6,"i1":6};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -91,17 +91,12 @@ loadScripts(document, 'script');</script>
 </div>
 <section class="description">
 <dl>
-<dt>All Implemented Interfaces:</dt>
-<dd><code><a href="../../../util/dynamic/DynamicSerializable.html" title="interface in net.minecraft.util.dynamic">DynamicSerializable</a></code></dd>
-</dl>
-<dl>
 <dt>Direct Known Subclasses:</dt>
 <dd><code><a href="ColumnPlacer.html" title="class in net.minecraft.world.gen.placer">ColumnPlacer</a></code>, <code><a href="DoublePlantPlacer.html" title="class in net.minecraft.world.gen.placer">DoublePlantPlacer</a></code>, <code><a href="SimpleBlockPlacer.html" title="class in net.minecraft.world.gen.placer">SimpleBlockPlacer</a></code></dd>
 </dl>
 <hr>
 <pre>public abstract class <span class="typeNameLabel">BlockPlacer</span>
-extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>
-implements <a href="../../../util/dynamic/DynamicSerializable.html" title="interface in net.minecraft.util.dynamic">DynamicSerializable</a></pre>
+extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></pre>
 </section>
 <section class="summary">
 <ul class="blockList">
@@ -123,8 +118,8 @@ implements <a href="../../../util/dynamic/DynamicSerializable.html" title="inter
 </thead>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><code>protected <a href="BlockPlacerType.html" title="class in net.minecraft.world.gen.placer">BlockPlacerType</a>&lt;?&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#type">type</a></span></code></th>
+<td class="colFirst"><code>static com.mojang.serialization.Codec&lt;<a href="BlockPlacer.html" title="class in net.minecraft.world.gen.placer">BlockPlacer</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#field_24865">field_24865</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -143,15 +138,13 @@ implements <a href="../../../util/dynamic/DynamicSerializable.html" title="inter
 <caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
 <thead>
 <tr>
-<th class="colFirst" scope="col">Modifier</th>
-<th class="colSecond" scope="col">Constructor</th>
+<th class="colFirst" scope="col">Constructor</th>
 <th class="colLast" scope="col">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><code>protected </code></td>
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.world.gen.placer.BlockPlacerType)">BlockPlacer</a></span>&#8203;(<a href="BlockPlacerType.html" title="class in net.minecraft.world.gen.placer">BlockPlacerType</a>&lt;?&gt;&nbsp;type)</code></th>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E()">BlockPlacer</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -179,10 +172,15 @@ implements <a href="../../../util/dynamic/DynamicSerializable.html" title="inter
 <tbody>
 <tr class="altColor" id="i0">
 <td class="colFirst"><code>abstract void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_23403(net.minecraft.world.IWorld,net.minecraft.util.math.BlockPos,net.minecraft.block.BlockState,java.util.Random)">method_23403</a></span>&#8203;(<a href="../../IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;iWorld,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_23403(net.minecraft.world.WorldAccess,net.minecraft.util.math.BlockPos,net.minecraft.block.BlockState,java.util.Random)">method_23403</a></span>&#8203;(<a href="../../WorldAccess.html" title="interface in net.minecraft.world">WorldAccess</a>&nbsp;worldAccess,
 <a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
 <a href="../../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i1">
+<td class="colFirst"><code>protected abstract <a href="BlockPlacerType.html" title="class in net.minecraft.world.gen.placer">BlockPlacerType</a>&lt;?&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_28673()">method_28673</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -194,11 +192,6 @@ implements <a href="../../../util/dynamic/DynamicSerializable.html" title="inter
 <a id="methods.inherited.from.class.java.lang.Object">
 <!--   -->
 </a><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang" class="externalLink">clone</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang" class="externalLink">equals</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang" class="externalLink">finalize</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang" class="externalLink">getClass</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang" class="externalLink">hashCode</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang" class="externalLink">notify</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang" class="externalLink">notifyAll</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang" class="externalLink">toString</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang" class="externalLink">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang" class="externalLink">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait(long,int)" title="class or interface in java.lang" class="externalLink">wait</a></code></div>
-<div class="inheritedList">
-<h3>Methods inherited from interface&nbsp;net.minecraft.util.dynamic.<a href="../../../util/dynamic/DynamicSerializable.html" title="interface in net.minecraft.util.dynamic">DynamicSerializable</a></h3>
-<a id="methods.inherited.from.class.net.minecraft.util.dynamic.DynamicSerializable">
-<!--   -->
-</a><code><a href="../../../util/dynamic/DynamicSerializable.html#serialize(com.mojang.datafixers.types.DynamicOps)">serialize</a></code></div>
 </section>
 </li>
 </ul>
@@ -214,8 +207,8 @@ implements <a href="../../../util/dynamic/DynamicSerializable.html" title="inter
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="type">type</a></h3>
-<div class="memberSignature"><span class="modifiers">protected final</span>&nbsp;<span class="returnType"><a href="BlockPlacerType.html" title="class in net.minecraft.world.gen.placer">BlockPlacerType</a>&lt;?&gt;</span>&nbsp;<span class="memberName">type</span></div>
+<h3><a id="field_24865">field_24865</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType">com.mojang.serialization.Codec&lt;<a href="BlockPlacer.html" title="class in net.minecraft.world.gen.placer">BlockPlacer</a>&gt;</span>&nbsp;<span class="memberName">field_24865</span></div>
 </section>
 </li>
 </ul>
@@ -230,8 +223,8 @@ implements <a href="../../../util/dynamic/DynamicSerializable.html" title="inter
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="&lt;init&gt;(net.minecraft.world.gen.placer.BlockPlacerType)">BlockPlacer</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="memberName">BlockPlacer</span>&#8203;(<span class="arguments"><a href="BlockPlacerType.html" title="class in net.minecraft.world.gen.placer">BlockPlacerType</a>&lt;?&gt;&nbsp;type)</span></div>
+<h3><a id="&lt;init&gt;()">BlockPlacer</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">BlockPlacer</span>()</div>
 </section>
 </li>
 </ul>
@@ -246,11 +239,17 @@ implements <a href="../../../util/dynamic/DynamicSerializable.html" title="inter
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="method_23403(net.minecraft.world.IWorld,net.minecraft.util.math.BlockPos,net.minecraft.block.BlockState,java.util.Random)">method_23403</a></h3>
-<div class="memberSignature"><span class="modifiers">public abstract</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">method_23403</span>&#8203;(<span class="arguments"><a href="../../IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;iWorld,
+<h3><a id="method_23403(net.minecraft.world.WorldAccess,net.minecraft.util.math.BlockPos,net.minecraft.block.BlockState,java.util.Random)">method_23403</a></h3>
+<div class="memberSignature"><span class="modifiers">public abstract</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">method_23403</span>&#8203;(<span class="arguments"><a href="../../WorldAccess.html" title="interface in net.minecraft.world">WorldAccess</a>&nbsp;worldAccess,
 <a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
 <a href="../../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="method_28673()">method_28673</a></h3>
+<div class="memberSignature"><span class="modifiers">protected abstract</span>&nbsp;<span class="returnType"><a href="BlockPlacerType.html" title="class in net.minecraft.world.gen.placer">BlockPlacerType</a>&lt;?&gt;</span>&nbsp;<span class="memberName">method_28673</span>()</div>
 </section>
 </li>
 </ul>

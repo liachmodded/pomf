@@ -119,6 +119,56 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#INSTANCE">INSTANCE</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../entity/model/ShieldEntityModel.html" title="class in net.minecraft.client.render.entity.model">ShieldEntityModel</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#modelShield">modelShield</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../entity/model/TridentEntityModel.html" title="class in net.minecraft.client.render.entity.model">TridentEntityModel</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#modelTrident">modelTrident</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static <a href="../../../block/entity/ShulkerBoxBlockEntity.html" title="class in net.minecraft.block.entity">ShulkerBoxBlockEntity</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#RENDER_SHULKER_BOX">RENDER_SHULKER_BOX</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="../../../block/entity/ShulkerBoxBlockEntity.html" title="class in net.minecraft.block.entity">ShulkerBoxBlockEntity</a>[]</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#RENDER_SHULKER_BOX_DYED">RENDER_SHULKER_BOX_DYED</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../block/entity/BannerBlockEntity.html" title="class in net.minecraft.block.entity">BannerBlockEntity</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#renderBanner">renderBanner</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../block/entity/BedBlockEntity.html" title="class in net.minecraft.block.entity">BedBlockEntity</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#renderBed">renderBed</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../block/entity/EnderChestBlockEntity.html" title="class in net.minecraft.block.entity">EnderChestBlockEntity</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#renderChestEnder">renderChestEnder</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../block/entity/ChestBlockEntity.html" title="class in net.minecraft.block.entity">ChestBlockEntity</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#renderChestNormal">renderChestNormal</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../block/entity/ChestBlockEntity.html" title="class in net.minecraft.block.entity">ChestBlockEntity</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#renderChestTrapped">renderChestTrapped</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../block/entity/ConduitBlockEntity.html" title="class in net.minecraft.block.entity">ConduitBlockEntity</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#renderConduit">renderConduit</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -169,11 +219,12 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tbody>
 <tr class="altColor" id="i0">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#render(net.minecraft.item.ItemStack,net.minecraft.client.util.math.MatrixStack,net.minecraft.client.render.VertexConsumerProvider,int,int)">render</a></span>&#8203;(<a href="../../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;stack,
-<a href="../../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrix,
-<a href="../VertexConsumerProvider.html" title="interface in net.minecraft.client.render">VertexConsumerProvider</a>&nbsp;vertexConsumers,
-int&nbsp;light,
-int&nbsp;overlay)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#render(net.minecraft.item.ItemStack,net.minecraft.client.render.model.json.ModelTransformation.Mode,net.minecraft.client.util.math.MatrixStack,net.minecraft.client.render.VertexConsumerProvider,int,int)">render</a></span>&#8203;(<a href="../../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;stack,
+<a href="../model/json/ModelTransformation.Mode.html" title="enum in net.minecraft.client.render.model.json">ModelTransformation.Mode</a>&nbsp;mode,
+<a href="../../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrixStack,
+<a href="../VertexConsumerProvider.html" title="interface in net.minecraft.client.render">VertexConsumerProvider</a>&nbsp;vertexConsumerProvider,
+int&nbsp;int2,
+int&nbsp;int3)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -200,8 +251,68 @@ int&nbsp;overlay)</code></th>
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
+<h3><a id="RENDER_SHULKER_BOX_DYED">RENDER_SHULKER_BOX_DYED</a></h3>
+<div class="memberSignature"><span class="modifiers">private static final</span>&nbsp;<span class="returnType"><a href="../../../block/entity/ShulkerBoxBlockEntity.html" title="class in net.minecraft.block.entity">ShulkerBoxBlockEntity</a>[]</span>&nbsp;<span class="memberName">RENDER_SHULKER_BOX_DYED</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="RENDER_SHULKER_BOX">RENDER_SHULKER_BOX</a></h3>
+<div class="memberSignature"><span class="modifiers">private static final</span>&nbsp;<span class="returnType"><a href="../../../block/entity/ShulkerBoxBlockEntity.html" title="class in net.minecraft.block.entity">ShulkerBoxBlockEntity</a></span>&nbsp;<span class="memberName">RENDER_SHULKER_BOX</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="INSTANCE">INSTANCE</a></h3>
 <div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="BuiltinModelItemRenderer.html" title="class in net.minecraft.client.render.item">BuiltinModelItemRenderer</a></span>&nbsp;<span class="memberName">INSTANCE</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="renderChestNormal">renderChestNormal</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../../../block/entity/ChestBlockEntity.html" title="class in net.minecraft.block.entity">ChestBlockEntity</a></span>&nbsp;<span class="memberName">renderChestNormal</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="renderChestTrapped">renderChestTrapped</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../../../block/entity/ChestBlockEntity.html" title="class in net.minecraft.block.entity">ChestBlockEntity</a></span>&nbsp;<span class="memberName">renderChestTrapped</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="renderChestEnder">renderChestEnder</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../../../block/entity/EnderChestBlockEntity.html" title="class in net.minecraft.block.entity">EnderChestBlockEntity</a></span>&nbsp;<span class="memberName">renderChestEnder</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="renderBanner">renderBanner</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../../../block/entity/BannerBlockEntity.html" title="class in net.minecraft.block.entity">BannerBlockEntity</a></span>&nbsp;<span class="memberName">renderBanner</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="renderBed">renderBed</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../../../block/entity/BedBlockEntity.html" title="class in net.minecraft.block.entity">BedBlockEntity</a></span>&nbsp;<span class="memberName">renderBed</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="renderConduit">renderConduit</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../../../block/entity/ConduitBlockEntity.html" title="class in net.minecraft.block.entity">ConduitBlockEntity</a></span>&nbsp;<span class="memberName">renderConduit</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="modelShield">modelShield</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../entity/model/ShieldEntityModel.html" title="class in net.minecraft.client.render.entity.model">ShieldEntityModel</a></span>&nbsp;<span class="memberName">modelShield</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="modelTrident">modelTrident</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../entity/model/TridentEntityModel.html" title="class in net.minecraft.client.render.entity.model">TridentEntityModel</a></span>&nbsp;<span class="memberName">modelTrident</span></div>
 </section>
 </li>
 </ul>
@@ -232,12 +343,13 @@ int&nbsp;overlay)</code></th>
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="render(net.minecraft.item.ItemStack,net.minecraft.client.util.math.MatrixStack,net.minecraft.client.render.VertexConsumerProvider,int,int)">render</a></h3>
+<h3><a id="render(net.minecraft.item.ItemStack,net.minecraft.client.render.model.json.ModelTransformation.Mode,net.minecraft.client.util.math.MatrixStack,net.minecraft.client.render.VertexConsumerProvider,int,int)">render</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">render</span>&#8203;(<span class="arguments"><a href="../../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;stack,
-<a href="../../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrix,
-<a href="../VertexConsumerProvider.html" title="interface in net.minecraft.client.render">VertexConsumerProvider</a>&nbsp;vertexConsumers,
-int&nbsp;light,
-int&nbsp;overlay)</span></div>
+<a href="../model/json/ModelTransformation.Mode.html" title="enum in net.minecraft.client.render.model.json">ModelTransformation.Mode</a>&nbsp;mode,
+<a href="../../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrixStack,
+<a href="../VertexConsumerProvider.html" title="interface in net.minecraft.client.render">VertexConsumerProvider</a>&nbsp;vertexConsumerProvider,
+int&nbsp;int2,
+int&nbsp;int3)</span></div>
 </section>
 </li>
 </ul>

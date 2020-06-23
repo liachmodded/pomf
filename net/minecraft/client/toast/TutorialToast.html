@@ -62,7 +62,7 @@ loadScripts(document, 'script');</script>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
@@ -140,11 +140,65 @@ implements <a href="Toast.html" title="interface in net.minecraft.client.toast">
 <!--   -->
 </a>
 <h2>Field Summary</h2>
+<div class="memberSummary">
+<table>
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<thead>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colSecond" scope="col">Field</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../text/Text.html" title="interface in net.minecraft.text">Text</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#description">description</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#hasProgressBar">hasProgressBar</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private float</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#lastProgress">lastProgress</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private long</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#lastTime">lastTime</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private float</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#progress">progress</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../text/Text.html" title="interface in net.minecraft.text">Text</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#title">title</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="TutorialToast.Type.html" title="enum in net.minecraft.client.toast">TutorialToast.Type</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#type">type</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="Toast.Visibility.html" title="enum in net.minecraft.client.toast">Toast.Visibility</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#visibility">visibility</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
 <div class="inheritedList">
 <h3>Fields inherited from interface&nbsp;net.minecraft.client.toast.<a href="Toast.html" title="interface in net.minecraft.client.toast">Toast</a></h3>
 <a id="fields.inherited.from.class.net.minecraft.client.toast.Toast">
 <!--   -->
-</a><code><a href="Toast.html#field_2208">field_2208</a>, <a href="Toast.html#TOASTS_TEX">TOASTS_TEX</a></code></div>
+</a><code><a href="Toast.html#TOASTS_TEX">TOASTS_TEX</a>, <a href="Toast.html#TYPE">TYPE</a></code></div>
 </section>
 </li>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
@@ -195,8 +249,9 @@ boolean&nbsp;hasProgressBar)</code></th>
 <tbody>
 <tr class="altColor" id="i0">
 <td class="colFirst"><code><a href="Toast.Visibility.html" title="enum in net.minecraft.client.toast">Toast.Visibility</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#draw(net.minecraft.client.toast.ToastManager,long)">draw</a></span>&#8203;(<a href="ToastManager.html" title="class in net.minecraft.client.toast">ToastManager</a>&nbsp;manager,
-long&nbsp;currentTime)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#draw(net.minecraft.client.util.math.MatrixStack,net.minecraft.client.toast.ToastManager,long)">draw</a></span>&#8203;(<a href="../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
+<a href="ToastManager.html" title="class in net.minecraft.client.toast">ToastManager</a>&nbsp;manager,
+long&nbsp;startTime)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
@@ -222,13 +277,71 @@ long&nbsp;currentTime)</code></th>
 <h3>Methods inherited from interface&nbsp;net.minecraft.client.toast.<a href="Toast.html" title="interface in net.minecraft.client.toast">Toast</a></h3>
 <a id="methods.inherited.from.class.net.minecraft.client.toast.Toast">
 <!--   -->
-</a><code><a href="Toast.html#getType()">getType</a></code></div>
+</a><code><a href="Toast.html#getType()">getType</a>, <a href="Toast.html#method_29049()">method_29049</a>, <a href="Toast.html#method_29050()">method_29050</a></code></div>
 </section>
 </li>
 </ul>
 </section>
 <section class="details">
 <ul class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<li class="blockList">
+<section class="fieldDetails"><a id="field.detail">
+<!--   -->
+</a>
+<h2>Field Details</h2>
+<ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="type">type</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="TutorialToast.Type.html" title="enum in net.minecraft.client.toast">TutorialToast.Type</a></span>&nbsp;<span class="memberName">type</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="title">title</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../../text/Text.html" title="interface in net.minecraft.text">Text</a></span>&nbsp;<span class="memberName">title</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="description">description</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../../text/Text.html" title="interface in net.minecraft.text">Text</a></span>&nbsp;<span class="memberName">description</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="visibility">visibility</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="Toast.Visibility.html" title="enum in net.minecraft.client.toast">Toast.Visibility</a></span>&nbsp;<span class="memberName">visibility</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="lastTime">lastTime</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">long</span>&nbsp;<span class="memberName">lastTime</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="lastProgress">lastProgress</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">float</span>&nbsp;<span class="memberName">lastProgress</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="progress">progress</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">float</span>&nbsp;<span class="memberName">progress</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="hasProgressBar">hasProgressBar</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">hasProgressBar</span></div>
+</section>
+</li>
+</ul>
+</section>
+</li>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <li class="blockList">
 <section class="constructorDetails"><a id="constructor.detail">
@@ -241,7 +354,7 @@ long&nbsp;currentTime)</code></th>
 <h3><a id="&lt;init&gt;(net.minecraft.client.toast.TutorialToast.Type,net.minecraft.text.Text,net.minecraft.text.Text,boolean)">TutorialToast</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">TutorialToast</span>&#8203;(<span class="arguments"><a href="TutorialToast.Type.html" title="enum in net.minecraft.client.toast">TutorialToast.Type</a>&nbsp;type,
 <a href="../../text/Text.html" title="interface in net.minecraft.text">Text</a>&nbsp;title,
-<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 <a href="../../text/Text.html" title="interface in net.minecraft.text">Text</a>&nbsp;description,
 boolean&nbsp;hasProgressBar)</span></div>
 </section>
@@ -258,12 +371,13 @@ boolean&nbsp;hasProgressBar)</span></div>
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="draw(net.minecraft.client.toast.ToastManager,long)">draw</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="Toast.Visibility.html" title="enum in net.minecraft.client.toast">Toast.Visibility</a></span>&nbsp;<span class="memberName">draw</span>&#8203;(<span class="arguments"><a href="ToastManager.html" title="class in net.minecraft.client.toast">ToastManager</a>&nbsp;manager,
-long&nbsp;currentTime)</span></div>
+<h3><a id="draw(net.minecraft.client.util.math.MatrixStack,net.minecraft.client.toast.ToastManager,long)">draw</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="Toast.Visibility.html" title="enum in net.minecraft.client.toast">Toast.Visibility</a></span>&nbsp;<span class="memberName">draw</span>&#8203;(<span class="arguments"><a href="../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
+<a href="ToastManager.html" title="class in net.minecraft.client.toast">ToastManager</a>&nbsp;manager,
+long&nbsp;startTime)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="Toast.html#draw(net.minecraft.client.toast.ToastManager,long)">draw</a></code>&nbsp;in interface&nbsp;<code><a href="Toast.html" title="interface in net.minecraft.client.toast">Toast</a></code></dd>
+<dd><code><a href="Toast.html#draw(net.minecraft.client.util.math.MatrixStack,net.minecraft.client.toast.ToastManager,long)">draw</a></code>&nbsp;in interface&nbsp;<code><a href="Toast.html" title="interface in net.minecraft.client.toast">Toast</a></code></dd>
 </dl>
 </section>
 </li>
@@ -318,7 +432,7 @@ long&nbsp;currentTime)</span></div>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>

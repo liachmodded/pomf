@@ -134,8 +134,18 @@ extends <a href="MultiplayerServerListWidget.Entry.html" title="class in net.min
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private <a href="MultiplayerScreen.html" title="class in net.minecraft.client.gui.screen.multiplayer">MultiplayerScreen</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#screen">screen</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../../network/LanServerInfo.html" title="class in net.minecraft.client.network">LanServerInfo</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#server">server</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private long</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#time">time</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -203,15 +213,16 @@ int&nbsp;button)</code></th>
 </tr>
 <tr class="altColor" id="i2">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#render(int,int,int,int,int,int,int,boolean,float)">render</a></span>&#8203;(int&nbsp;index,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#render(net.minecraft.client.util.math.MatrixStack,int,int,int,int,int,int,int,boolean,float)">render</a></span>&#8203;(<a href="../../../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
+int&nbsp;index,
 int&nbsp;y,
 int&nbsp;x,
-int&nbsp;width,
-int&nbsp;height,
+int&nbsp;entryWidth,
+int&nbsp;entryHeight,
 int&nbsp;mouseX,
 int&nbsp;mouseY,
-boolean&nbsp;hovering,
-float&nbsp;delta)</code></th>
+boolean&nbsp;hovered,
+float&nbsp;tickDelta)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -253,6 +264,12 @@ float&nbsp;delta)</code></th>
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
+<h3><a id="screen">screen</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="MultiplayerScreen.html" title="class in net.minecraft.client.gui.screen.multiplayer">MultiplayerScreen</a></span>&nbsp;<span class="memberName">screen</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="client">client</a></h3>
 <div class="memberSignature"><span class="modifiers">protected final</span>&nbsp;<span class="returnType"><a href="../../../MinecraftClient.html" title="class in net.minecraft.client">MinecraftClient</a></span>&nbsp;<span class="memberName">client</span></div>
 </section>
@@ -261,6 +278,12 @@ float&nbsp;delta)</code></th>
 <section class="detail">
 <h3><a id="server">server</a></h3>
 <div class="memberSignature"><span class="modifiers">protected final</span>&nbsp;<span class="returnType"><a href="../../../network/LanServerInfo.html" title="class in net.minecraft.client.network">LanServerInfo</a></span>&nbsp;<span class="memberName">server</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="time">time</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">long</span>&nbsp;<span class="memberName">time</span></div>
 </section>
 </li>
 </ul>
@@ -292,19 +315,20 @@ float&nbsp;delta)</code></th>
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="render(int,int,int,int,int,int,int,boolean,float)">render</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">render</span>&#8203;(<span class="arguments">int&nbsp;index,
+<h3><a id="render(net.minecraft.client.util.math.MatrixStack,int,int,int,int,int,int,int,boolean,float)">render</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">render</span>&#8203;(<span class="arguments"><a href="../../../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
+int&nbsp;index,
 int&nbsp;y,
 int&nbsp;x,
-int&nbsp;width,
-int&nbsp;height,
+int&nbsp;entryWidth,
+int&nbsp;entryHeight,
 int&nbsp;mouseX,
 int&nbsp;mouseY,
-boolean&nbsp;hovering,
-float&nbsp;delta)</span></div>
+boolean&nbsp;hovered,
+float&nbsp;tickDelta)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../widget/EntryListWidget.Entry.html#render(int,int,int,int,int,int,int,boolean,float)">render</a></code>&nbsp;in class&nbsp;<code><a href="../../widget/EntryListWidget.Entry.html" title="class in net.minecraft.client.gui.widget">EntryListWidget.Entry</a>&lt;<a href="MultiplayerServerListWidget.Entry.html" title="class in net.minecraft.client.gui.screen.multiplayer">MultiplayerServerListWidget.Entry</a>&gt;</code></dd>
+<dd><code><a href="../../widget/EntryListWidget.Entry.html#render(net.minecraft.client.util.math.MatrixStack,int,int,int,int,int,int,int,boolean,float)">render</a></code>&nbsp;in class&nbsp;<code><a href="../../widget/EntryListWidget.Entry.html" title="class in net.minecraft.client.gui.widget">EntryListWidget.Entry</a>&lt;<a href="MultiplayerServerListWidget.Entry.html" title="class in net.minecraft.client.gui.screen.multiplayer">MultiplayerServerListWidget.Entry</a>&gt;</code></dd>
 </dl>
 </section>
 </li>

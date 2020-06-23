@@ -118,13 +118,33 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </thead>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code>private <a href="../BlockState.html" title="class in net.minecraft.block">BlockState</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#cachedState">cachedState</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#invalid">invalid</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="https://logging.apache.org/log4j/2.x/log4j-api/apidocs/org/apache/logging/log4j/Logger.html?is-external=true" title="class or interface in org.apache.logging.log4j" class="externalLink">Logger</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#LOGGER">LOGGER</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#pos">pos</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#removed">removed</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="BlockEntityType.html" title="class in net.minecraft.block.entity">BlockEntityType</a>&lt;?&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#type">type</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
@@ -224,91 +244,89 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </tr>
 <tr class="altColor" id="i8">
 <td class="colFirst"><code>double</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getSquaredDistance(double,double,double)">getSquaredDistance</a></span>&#8203;(double&nbsp;x,
-double&nbsp;y,
-double&nbsp;z)</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="rowColor" id="i9">
-<td class="colFirst"><code>double</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getSquaredRenderDistance()">getSquaredRenderDistance</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i10">
+<tr class="rowColor" id="i9">
 <td class="colFirst"><code><a href="BlockEntityType.html" title="class in net.minecraft.block.entity">BlockEntityType</a>&lt;?&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getType()">getType</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i11">
+<tr class="altColor" id="i10">
 <td class="colFirst"><code><a href="../../world/World.html" title="class in net.minecraft.world">World</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getWorld()">getWorld</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i12">
+<tr class="rowColor" id="i11">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#hasWorld()">hasWorld</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i13">
+<tr class="altColor" id="i12">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isRemoved()">isRemoved</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i14">
+<tr class="rowColor" id="i13">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#markDirty()">markDirty</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i15">
+<tr class="altColor" id="i14">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#markInvalid()">markInvalid</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i16">
+<tr class="rowColor" id="i15">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#markRemoved()">markRemoved</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i17">
+<tr class="altColor" id="i16">
 <td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#onBlockAction(int,int)">onBlockAction</a></span>&#8203;(int&nbsp;int2,
-int&nbsp;int3)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#onSyncedBlockEvent(int,int)">onSyncedBlockEvent</a></span>&#8203;(int&nbsp;type,
+int&nbsp;data)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i18">
+<tr class="rowColor" id="i17">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#populateCrashReport(net.minecraft.util.crash.CrashReportSection)">populateCrashReport</a></span>&#8203;(<a href="../../util/crash/CrashReportSection.html" title="class in net.minecraft.util.crash">CrashReportSection</a>&nbsp;crashReportSection)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i19">
+<tr class="altColor" id="i18">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#resetBlock()">resetBlock</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i20">
+<tr class="rowColor" id="i19">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setLocation(net.minecraft.world.World,net.minecraft.util.math.BlockPos)">setLocation</a></span>&#8203;(<a href="../../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world,
 <a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i21">
+<tr class="altColor" id="i20">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setPos(net.minecraft.util.math.BlockPos)">setPos</a></span>&#8203;(<a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i22">
+<tr class="rowColor" id="i21">
 <td class="colFirst"><code><a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#toInitialChunkDataTag()">toInitialChunkDataTag</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i23">
+<tr class="altColor" id="i22">
 <td class="colFirst"><code><a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#toTag(net.minecraft.nbt.CompoundTag)">toTag</a></span>&#8203;(<a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;tag)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i24">
+<tr class="rowColor" id="i23">
 <td class="colFirst"><code><a href="../../network/packet/s2c/play/BlockEntityUpdateS2CPacket.html" title="class in net.minecraft.network.packet.s2c.play">BlockEntityUpdateS2CPacket</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#toUpdatePacket()">toUpdatePacket</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i24">
+<td class="colFirst"><code>private <a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#writeIdentifyingData(net.minecraft.nbt.CompoundTag)">writeIdentifyingData</a></span>&#8203;(<a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;tag)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -335,8 +353,20 @@ int&nbsp;int3)</code></th>
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
+<h3><a id="LOGGER">LOGGER</a></h3>
+<div class="memberSignature"><span class="modifiers">private static final</span>&nbsp;<span class="returnType"><a href="https://logging.apache.org/log4j/2.x/log4j-api/apidocs/org/apache/logging/log4j/Logger.html?is-external=true" title="class or interface in org.apache.logging.log4j" class="externalLink">Logger</a></span>&nbsp;<span class="memberName">LOGGER</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="type">type</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="BlockEntityType.html" title="class in net.minecraft.block.entity">BlockEntityType</a>&lt;?&gt;</span>&nbsp;<span class="memberName">type</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="world">world</a></h3>
-<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 </span><span class="modifiers">protected</span>&nbsp;<span class="returnType"><a href="../../world/World.html" title="class in net.minecraft.world">World</a></span>&nbsp;<span class="memberName">world</span></div>
 </section>
 </li>
@@ -350,6 +380,19 @@ int&nbsp;int3)</code></th>
 <section class="detail">
 <h3><a id="removed">removed</a></h3>
 <div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">removed</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="cachedState">cachedState</a></h3>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="../BlockState.html" title="class in net.minecraft.block">BlockState</a></span>&nbsp;<span class="memberName">cachedState</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="invalid">invalid</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">invalid</span></div>
 </section>
 </li>
 </ul>
@@ -381,7 +424,7 @@ int&nbsp;int3)</code></th>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getWorld()">getWorld</a></h3>
-<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 </span><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../world/World.html" title="class in net.minecraft.world">World</a></span>&nbsp;<span class="memberName">getWorld</span>()</div>
 </section>
 </li>
@@ -413,8 +456,14 @@ int&nbsp;int3)</code></th>
 </li>
 <li class="blockList">
 <section class="detail">
+<h3><a id="writeIdentifyingData(net.minecraft.nbt.CompoundTag)">writeIdentifyingData</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a></span>&nbsp;<span class="memberName">writeIdentifyingData</span>&#8203;(<span class="arguments"><a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;tag)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="createFromTag(net.minecraft.block.BlockState,net.minecraft.nbt.CompoundTag)">createFromTag</a></h3>
-<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 </span><span class="modifiers">public static</span>&nbsp;<span class="returnType"><a href="BlockEntity.html" title="class in net.minecraft.block.entity">BlockEntity</a></span>&nbsp;<span class="memberName">createFromTag</span>&#8203;(<span class="arguments"><a href="../BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state,
 <a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;tag)</span></div>
 </section>
@@ -423,15 +472,6 @@ int&nbsp;int3)</code></th>
 <section class="detail">
 <h3><a id="markDirty()">markDirty</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">markDirty</span>()</div>
-</section>
-</li>
-<li class="blockList">
-<section class="detail">
-<h3><a id="getSquaredDistance(double,double,double)">getSquaredDistance</a></h3>
-<div class="memberSignature"><span class="annotations">@Environment(CLIENT)
-</span><span class="modifiers">public</span>&nbsp;<span class="returnType">double</span>&nbsp;<span class="memberName">getSquaredDistance</span>&#8203;(<span class="arguments">double&nbsp;x,
-double&nbsp;y,
-double&nbsp;z)</span></div>
 </section>
 </li>
 <li class="blockList">
@@ -456,7 +496,7 @@ double&nbsp;z)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="toUpdatePacket()">toUpdatePacket</a></h3>
-<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 </span><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../network/packet/s2c/play/BlockEntityUpdateS2CPacket.html" title="class in net.minecraft.network.packet.s2c.play">BlockEntityUpdateS2CPacket</a></span>&nbsp;<span class="memberName">toUpdatePacket</span>()</div>
 </section>
 </li>
@@ -486,9 +526,9 @@ double&nbsp;z)</span></div>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="onBlockAction(int,int)">onBlockAction</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">onBlockAction</span>&#8203;(<span class="arguments">int&nbsp;int2,
-int&nbsp;int3)</span></div>
+<h3><a id="onSyncedBlockEvent(int,int)">onSyncedBlockEvent</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">onSyncedBlockEvent</span>&#8203;(<span class="arguments">int&nbsp;type,
+int&nbsp;data)</span></div>
 </section>
 </li>
 <li class="blockList">

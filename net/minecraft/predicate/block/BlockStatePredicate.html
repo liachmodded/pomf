@@ -57,13 +57,13 @@ loadScripts(document, 'script');</script>
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
 <li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
 <li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
 </div>
@@ -123,6 +123,43 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#ANY">ANY</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../state/StateManager.html" title="class in net.minecraft.state">StateManager</a>&lt;<a href="../../block/Block.html" title="class in net.minecraft.block">Block</a>,&#8203;<a href="../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#manager">manager</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util" class="externalLink">Map</a>&lt;<a href="../../state/property/Property.html" title="class in net.minecraft.state.property">Property</a>&lt;?&gt;,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Predicate</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#propertyTests">propertyTests</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</li>
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<li class="blockList">
+<section class="constructorSummary"><a id="constructor.summary">
+<!--   -->
+</a>
+<h2>Constructor Summary</h2>
+<div class="memberSummary">
+<table>
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<thead>
+<tr>
+<th class="colFirst" scope="col">Modifier</th>
+<th class="colSecond" scope="col">Constructor</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private </code></td>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.state.StateManager)">BlockStatePredicate</a></span>&#8203;(<a href="../../state/StateManager.html" title="class in net.minecraft.state">StateManager</a>&lt;<a href="../../block/Block.html" title="class in net.minecraft.block">Block</a>,&#8203;<a href="../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&gt;&nbsp;manager)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -159,13 +196,13 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function
 <tr class="altColor" id="i2">
 <td class="colFirst"><code>protected &lt;T extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html?is-external=true" title="class or interface in java.lang" class="externalLink">Comparable</a>&lt;T&gt;&gt;<br>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#testProperty(net.minecraft.block.BlockState,net.minecraft.state.property.Property,java.util.function.Predicate)">testProperty</a></span>&#8203;(<a href="../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState,
-<a href="../../state/property/Property.html" title="interface in net.minecraft.state.property">Property</a>&lt;T&gt;&nbsp;property,
+<a href="../../state/property/Property.html" title="class in net.minecraft.state.property">Property</a>&lt;T&gt;&nbsp;property,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Predicate</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&gt;&nbsp;predicate)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i3">
 <td class="colFirst"><code>&lt;V extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html?is-external=true" title="class or interface in java.lang" class="externalLink">Comparable</a>&lt;V&gt;&gt;<br><a href="BlockStatePredicate.html" title="class in net.minecraft.predicate.block">BlockStatePredicate</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#with(net.minecraft.state.property.Property,java.util.function.Predicate)">with</a></span>&#8203;(<a href="../../state/property/Property.html" title="interface in net.minecraft.state.property">Property</a>&lt;V&gt;&nbsp;property,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#with(net.minecraft.state.property.Property,java.util.function.Predicate)">with</a></span>&#8203;(<a href="../../state/property/Property.html" title="class in net.minecraft.state.property">Property</a>&lt;V&gt;&nbsp;property,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Predicate</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&gt;&nbsp;predicate)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -202,6 +239,34 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function
 <div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Predicate</a>&lt;<a href="../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&gt;</span>&nbsp;<span class="memberName">ANY</span></div>
 </section>
 </li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="manager">manager</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../../state/StateManager.html" title="class in net.minecraft.state">StateManager</a>&lt;<a href="../../block/Block.html" title="class in net.minecraft.block">Block</a>,&#8203;<a href="../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&gt;</span>&nbsp;<span class="memberName">manager</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="propertyTests">propertyTests</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util" class="externalLink">Map</a>&lt;<a href="../../state/property/Property.html" title="class in net.minecraft.state.property">Property</a>&lt;?&gt;,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Predicate</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&gt;&gt;</span>&nbsp;<span class="memberName">propertyTests</span></div>
+</section>
+</li>
+</ul>
+</section>
+</li>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<li class="blockList">
+<section class="constructorDetails"><a id="constructor.detail">
+<!--   -->
+</a>
+<h2>Constructor Details</h2>
+<ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="&lt;init&gt;(net.minecraft.state.StateManager)">BlockStatePredicate</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="memberName">BlockStatePredicate</span>&#8203;(<span class="arguments"><a href="../../state/StateManager.html" title="class in net.minecraft.state">StateManager</a>&lt;<a href="../../block/Block.html" title="class in net.minecraft.block">Block</a>,&#8203;<a href="../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&gt;&nbsp;manager)</span></div>
+</section>
+</li>
 </ul>
 </section>
 </li>
@@ -221,7 +286,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function
 <li class="blockList">
 <section class="detail">
 <h3><a id="test(net.minecraft.block.BlockState)">test</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">test</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">test</span>&#8203;(<span class="arguments"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 <a href="../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
@@ -233,7 +298,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function
 <section class="detail">
 <h3><a id="testProperty(net.minecraft.block.BlockState,net.minecraft.state.property.Property,java.util.function.Predicate)">testProperty</a></h3>
 <div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="typeParameters">&lt;T extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html?is-external=true" title="class or interface in java.lang" class="externalLink">Comparable</a>&lt;T&gt;&gt;</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">testProperty</span>&#8203;(<span class="arguments"><a href="../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState,
-<a href="../../state/property/Property.html" title="interface in net.minecraft.state.property">Property</a>&lt;T&gt;&nbsp;property,
+<a href="../../state/property/Property.html" title="class in net.minecraft.state.property">Property</a>&lt;T&gt;&nbsp;property,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Predicate</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&gt;&nbsp;predicate)</span></div>
 </section>
 </li>
@@ -241,7 +306,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function
 <section class="detail">
 <h3><a id="with(net.minecraft.state.property.Property,java.util.function.Predicate)">with</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="typeParameters">&lt;V extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html?is-external=true" title="class or interface in java.lang" class="externalLink">Comparable</a>&lt;V&gt;&gt;</span>
-<span class="returnType"><a href="BlockStatePredicate.html" title="class in net.minecraft.predicate.block">BlockStatePredicate</a></span>&nbsp;<span class="memberName">with</span>&#8203;(<span class="arguments"><a href="../../state/property/Property.html" title="interface in net.minecraft.state.property">Property</a>&lt;V&gt;&nbsp;property,
+<span class="returnType"><a href="BlockStatePredicate.html" title="class in net.minecraft.predicate.block">BlockStatePredicate</a></span>&nbsp;<span class="memberName">with</span>&#8203;(<span class="arguments"><a href="../../state/property/Property.html" title="class in net.minecraft.state.property">Property</a>&lt;V&gt;&nbsp;property,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Predicate</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&gt;&nbsp;predicate)</span></div>
 </section>
 </li>
@@ -279,13 +344,13 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
 <li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
 <li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
 </div>

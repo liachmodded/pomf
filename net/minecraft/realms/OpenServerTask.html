@@ -62,7 +62,7 @@ loadScripts(document, 'script');</script>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
@@ -94,7 +94,7 @@ loadScripts(document, 'script');</script>
 <section class="description">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang" class="externalLink">Runnable</a></code></dd>
+<dd><code><a href="../../../com/mojang/realmsclient/client/Errable.html" title="interface in com.mojang.realmsclient.client">Errable</a></code>, <code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang" class="externalLink">Runnable</a></code></dd>
 </dl>
 <hr>
 <pre>@Environment(CLIENT)
@@ -109,6 +109,40 @@ extends <a href="../../../com/mojang/realmsclient/gui/LongRunningTask.html" titl
 <!--   -->
 </a>
 <h2>Field Summary</h2>
+<div class="memberSummary">
+<table>
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<thead>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colSecond" scope="col">Field</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#join">join</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../com/mojang/realmsclient/RealmsMainScreen.html" title="class in com.mojang.realmsclient">RealmsMainScreen</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#mainScreen">mainScreen</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../client/gui/screen/Screen.html" title="class in net.minecraft.client.gui.screen">Screen</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#returnScreen">returnScreen</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../com/mojang/realmsclient/dto/RealmsServer.html" title="class in com.mojang.realmsclient.dto">RealmsServer</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#serverData">serverData</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
 <div class="inheritedList">
 <h3>Fields inherited from class&nbsp;com.mojang.realmsclient.gui.<a href="../../../com/mojang/realmsclient/gui/LongRunningTask.html" title="class in com.mojang.realmsclient.gui">LongRunningTask</a></h3>
 <a id="fields.inherited.from.class.com.mojang.realmsclient.gui.LongRunningTask">
@@ -175,18 +209,57 @@ boolean&nbsp;join)</code></th>
 <h3>Methods inherited from class&nbsp;com.mojang.realmsclient.gui.<a href="../../../com/mojang/realmsclient/gui/LongRunningTask.html" title="class in com.mojang.realmsclient.gui">LongRunningTask</a></h3>
 <a id="methods.inherited.from.class.com.mojang.realmsclient.gui.LongRunningTask">
 <!--   -->
-</a><code><a href="../../../com/mojang/realmsclient/gui/LongRunningTask.html#aborted()">aborted</a>, <a href="../../../com/mojang/realmsclient/gui/LongRunningTask.html#abortTask()">abortTask</a>, <a href="../../../com/mojang/realmsclient/gui/LongRunningTask.html#error(java.lang.String)">error</a>, <a href="../../../com/mojang/realmsclient/gui/LongRunningTask.html#init()">init</a>, <a href="../../../com/mojang/realmsclient/gui/LongRunningTask.html#pause(int)">pause</a>, <a href="../../../com/mojang/realmsclient/gui/LongRunningTask.html#setScreen(com.mojang.realmsclient.gui.screens.RealmsLongRunningMcoTaskScreen)">setScreen</a>, <a href="../../../com/mojang/realmsclient/gui/LongRunningTask.html#setScreen(net.minecraft.client.gui.screen.Screen)">setScreen</a>, <a href="../../../com/mojang/realmsclient/gui/LongRunningTask.html#setTitle(java.lang.String)">setTitle</a>, <a href="../../../com/mojang/realmsclient/gui/LongRunningTask.html#tick()">tick</a></code></div>
+</a><code><a href="../../../com/mojang/realmsclient/gui/LongRunningTask.html#aborted()">aborted</a>, <a href="../../../com/mojang/realmsclient/gui/LongRunningTask.html#abortTask()">abortTask</a>, <a href="../../../com/mojang/realmsclient/gui/LongRunningTask.html#error(net.minecraft.text.Text)">error</a>, <a href="../../../com/mojang/realmsclient/gui/LongRunningTask.html#init()">init</a>, <a href="../../../com/mojang/realmsclient/gui/LongRunningTask.html#pause(int)">pause</a>, <a href="../../../com/mojang/realmsclient/gui/LongRunningTask.html#setScreen(com.mojang.realmsclient.gui.screens.RealmsLongRunningMcoTaskScreen)">setScreen</a>, <a href="../../../com/mojang/realmsclient/gui/LongRunningTask.html#setScreen(net.minecraft.client.gui.screen.Screen)">setScreen</a>, <a href="../../../com/mojang/realmsclient/gui/LongRunningTask.html#setTitle(java.lang.String)">setTitle</a>, <a href="../../../com/mojang/realmsclient/gui/LongRunningTask.html#tick()">tick</a></code></div>
 <div class="inheritedList">
 <h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></h3>
 <a id="methods.inherited.from.class.java.lang.Object">
 <!--   -->
 </a><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang" class="externalLink">clone</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang" class="externalLink">equals</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang" class="externalLink">finalize</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang" class="externalLink">getClass</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang" class="externalLink">hashCode</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang" class="externalLink">notify</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang" class="externalLink">notifyAll</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang" class="externalLink">toString</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang" class="externalLink">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang" class="externalLink">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait(long,int)" title="class or interface in java.lang" class="externalLink">wait</a></code></div>
+<div class="inheritedList">
+<h3>Methods inherited from interface&nbsp;com.mojang.realmsclient.client.<a href="../../../com/mojang/realmsclient/client/Errable.html" title="interface in com.mojang.realmsclient.client">Errable</a></h3>
+<a id="methods.inherited.from.class.com.mojang.realmsclient.client.Errable">
+<!--   -->
+</a><code><a href="../../../com/mojang/realmsclient/client/Errable.html#error(java.lang.String)">error</a></code></div>
 </section>
 </li>
 </ul>
 </section>
 <section class="details">
 <ul class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<li class="blockList">
+<section class="fieldDetails"><a id="field.detail">
+<!--   -->
+</a>
+<h2>Field Details</h2>
+<ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="serverData">serverData</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../../../com/mojang/realmsclient/dto/RealmsServer.html" title="class in com.mojang.realmsclient.dto">RealmsServer</a></span>&nbsp;<span class="memberName">serverData</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="returnScreen">returnScreen</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../client/gui/screen/Screen.html" title="class in net.minecraft.client.gui.screen">Screen</a></span>&nbsp;<span class="memberName">returnScreen</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="join">join</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">join</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="mainScreen">mainScreen</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../../../com/mojang/realmsclient/RealmsMainScreen.html" title="class in com.mojang.realmsclient">RealmsMainScreen</a></span>&nbsp;<span class="memberName">mainScreen</span></div>
+</section>
+</li>
+</ul>
+</section>
+</li>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <li class="blockList">
 <section class="constructorDetails"><a id="constructor.detail">
@@ -258,7 +331,7 @@ boolean&nbsp;join)</span></div>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>

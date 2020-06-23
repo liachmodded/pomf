@@ -150,13 +150,38 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private static <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="../block/Block.html" title="class in net.minecraft.block">Block</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#BLOCKS_NEEDING_POST_PROCESSING">BLOCKS_NEEDING_POST_PROCESSING</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="../util/math/BlockBox.html" title="class in net.minecraft.util.math">BlockBox</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#boundingBox">boundingBox</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../util/math/Direction.html" title="enum in net.minecraft.util.math">Direction</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#facing">facing</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>protected int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#length">length</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../util/BlockMirror.html" title="enum in net.minecraft.util">BlockMirror</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#mirror">mirror</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../util/BlockRotation.html" title="enum in net.minecraft.util">BlockRotation</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#rotation">rotation</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="StructurePieceType.html" title="interface in net.minecraft.structure">StructurePieceType</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#type">type</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -218,7 +243,7 @@ int&nbsp;length)</code></th>
 <tbody>
 <tr class="altColor" id="i0">
 <td class="colFirst"><code>protected void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addBlock(net.minecraft.world.IWorld,net.minecraft.block.BlockState,int,int,int,net.minecraft.util.math.BlockBox)">addBlock</a></span>&#8203;(<a href="../world/IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;world,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addBlock(net.minecraft.world.WorldAccess,net.minecraft.block.BlockState,int,int,int,net.minecraft.util.math.BlockBox)">addBlock</a></span>&#8203;(<a href="../world/WorldAccess.html" title="interface in net.minecraft.world">WorldAccess</a>&nbsp;world,
 <a href="../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;block,
 int&nbsp;x,
 int&nbsp;y,
@@ -228,7 +253,7 @@ int&nbsp;z,
 </tr>
 <tr class="rowColor" id="i1">
 <td class="colFirst"><code>protected void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addBlockWithRandomThreshold(net.minecraft.world.IWorld,net.minecraft.util.math.BlockBox,java.util.Random,float,int,int,int,net.minecraft.block.BlockState)">addBlockWithRandomThreshold</a></span>&#8203;(<a href="../world/IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;world,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addBlockWithRandomThreshold(net.minecraft.world.WorldAccess,net.minecraft.util.math.BlockBox,java.util.Random,float,int,int,int,net.minecraft.block.BlockState)">addBlockWithRandomThreshold</a></span>&#8203;(<a href="../world/WorldAccess.html" title="interface in net.minecraft.world">WorldAccess</a>&nbsp;world,
 <a href="../util/math/BlockBox.html" title="class in net.minecraft.util.math">BlockBox</a>&nbsp;bounds,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random,
 float&nbsp;threshold,
@@ -240,7 +265,7 @@ int&nbsp;z,
 </tr>
 <tr class="altColor" id="i2">
 <td class="colFirst"><code>protected boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addChest(net.minecraft.world.IWorld,net.minecraft.util.math.BlockBox,java.util.Random,int,int,int,net.minecraft.util.Identifier)">addChest</a></span>&#8203;(<a href="../world/IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;world,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addChest(net.minecraft.world.WorldAccess,net.minecraft.util.math.BlockBox,java.util.Random,int,int,int,net.minecraft.util.Identifier)">addChest</a></span>&#8203;(<a href="../world/WorldAccess.html" title="interface in net.minecraft.world">WorldAccess</a>&nbsp;world,
 <a href="../util/math/BlockBox.html" title="class in net.minecraft.util.math">BlockBox</a>&nbsp;boundingBox,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random,
 int&nbsp;x,
@@ -251,7 +276,7 @@ int&nbsp;z,
 </tr>
 <tr class="rowColor" id="i3">
 <td class="colFirst"><code>protected boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addChest(net.minecraft.world.IWorld,net.minecraft.util.math.BlockBox,java.util.Random,net.minecraft.util.math.BlockPos,net.minecraft.util.Identifier,net.minecraft.block.BlockState)">addChest</a></span>&#8203;(<a href="../world/IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;world,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addChest(net.minecraft.world.WorldAccess,net.minecraft.util.math.BlockBox,java.util.Random,net.minecraft.util.math.BlockPos,net.minecraft.util.Identifier,net.minecraft.block.BlockState)">addChest</a></span>&#8203;(<a href="../world/WorldAccess.html" title="interface in net.minecraft.world">WorldAccess</a>&nbsp;world,
 <a href="../util/math/BlockBox.html" title="class in net.minecraft.util.math">BlockBox</a>&nbsp;boundingBox,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random,
 <a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
@@ -261,7 +286,7 @@ int&nbsp;z,
 </tr>
 <tr class="altColor" id="i4">
 <td class="colFirst"><code>protected boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addDispenser(net.minecraft.world.IWorld,net.minecraft.util.math.BlockBox,java.util.Random,int,int,int,net.minecraft.util.math.Direction,net.minecraft.util.Identifier)">addDispenser</a></span>&#8203;(<a href="../world/IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;world,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addDispenser(net.minecraft.world.WorldAccess,net.minecraft.util.math.BlockBox,java.util.Random,int,int,int,net.minecraft.util.math.Direction,net.minecraft.util.Identifier)">addDispenser</a></span>&#8203;(<a href="../world/WorldAccess.html" title="interface in net.minecraft.world">WorldAccess</a>&nbsp;world,
 <a href="../util/math/BlockBox.html" title="class in net.minecraft.util.math">BlockBox</a>&nbsp;boundingBox,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random,
 int&nbsp;x,
@@ -290,7 +315,7 @@ int&nbsp;int3)</code></th>
 </tr>
 <tr class="altColor" id="i8">
 <td class="colFirst"><code>protected void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#fill(net.minecraft.world.IWorld,net.minecraft.util.math.BlockBox,int,int,int,int,int,int)">fill</a></span>&#8203;(<a href="../world/IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;world,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#fill(net.minecraft.world.WorldAccess,net.minecraft.util.math.BlockBox,int,int,int,int,int,int)">fill</a></span>&#8203;(<a href="../world/WorldAccess.html" title="interface in net.minecraft.world">WorldAccess</a>&nbsp;world,
 <a href="../util/math/BlockBox.html" title="class in net.minecraft.util.math">BlockBox</a>&nbsp;bounds,
 int&nbsp;minX,
 int&nbsp;minY,
@@ -302,7 +327,7 @@ int&nbsp;int2)</code></th>
 </tr>
 <tr class="rowColor" id="i9">
 <td class="colFirst"><code>protected void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#fillWithOutline(net.minecraft.world.IWorld,net.minecraft.util.math.BlockBox,int,int,int,int,int,int,boolean,java.util.Random,net.minecraft.structure.StructurePiece.BlockRandomizer)">fillWithOutline</a></span>&#8203;(<a href="../world/IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;iWorld,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#fillWithOutline(net.minecraft.world.WorldAccess,net.minecraft.util.math.BlockBox,int,int,int,int,int,int,boolean,java.util.Random,net.minecraft.structure.StructurePiece.BlockRandomizer)">fillWithOutline</a></span>&#8203;(<a href="../world/WorldAccess.html" title="interface in net.minecraft.world">WorldAccess</a>&nbsp;worldAccess,
 <a href="../util/math/BlockBox.html" title="class in net.minecraft.util.math">BlockBox</a>&nbsp;blockBox,
 int&nbsp;minX,
 int&nbsp;minY,
@@ -317,7 +342,7 @@ boolean&nbsp;replaceBlocks,
 </tr>
 <tr class="altColor" id="i10">
 <td class="colFirst"><code>protected void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#fillWithOutline(net.minecraft.world.IWorld,net.minecraft.util.math.BlockBox,int,int,int,int,int,int,net.minecraft.block.BlockState,net.minecraft.block.BlockState,boolean)">fillWithOutline</a></span>&#8203;(<a href="../world/IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;world,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#fillWithOutline(net.minecraft.world.WorldAccess,net.minecraft.util.math.BlockBox,int,int,int,int,int,int,net.minecraft.block.BlockState,net.minecraft.block.BlockState,boolean)">fillWithOutline</a></span>&#8203;(<a href="../world/WorldAccess.html" title="interface in net.minecraft.world">WorldAccess</a>&nbsp;world,
 <a href="../util/math/BlockBox.html" title="class in net.minecraft.util.math">BlockBox</a>&nbsp;blockBox,
 int&nbsp;int2,
 int&nbsp;int3,
@@ -332,7 +357,7 @@ boolean&nbsp;bool)</code></th>
 </tr>
 <tr class="rowColor" id="i11">
 <td class="colFirst"><code>protected void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#fillWithOutlineUnderSealevel(net.minecraft.world.IWorld,net.minecraft.util.math.BlockBox,java.util.Random,float,int,int,int,int,int,int,net.minecraft.block.BlockState,net.minecraft.block.BlockState,boolean,boolean)">fillWithOutlineUnderSealevel</a></span>&#8203;(<a href="../world/IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;iWorld,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#fillWithOutlineUnderSealevel(net.minecraft.world.WorldAccess,net.minecraft.util.math.BlockBox,java.util.Random,float,int,int,int,int,int,int,net.minecraft.block.BlockState,net.minecraft.block.BlockState,boolean,boolean)">fillWithOutlineUnderSealevel</a></span>&#8203;(<a href="../world/WorldAccess.html" title="interface in net.minecraft.world">WorldAccess</a>&nbsp;worldAccess,
 <a href="../util/math/BlockBox.html" title="class in net.minecraft.util.math">BlockBox</a>&nbsp;blockBox,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random,
 float&nbsp;float2,
@@ -350,11 +375,11 @@ boolean&nbsp;bool2)</code></th>
 </tr>
 <tr class="altColor" id="i12">
 <td class="colFirst"><code>abstract boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#generate(net.minecraft.world.IWorld,net.minecraft.world.gen.StructureAccessor,net.minecraft.world.gen.chunk.ChunkGenerator,java.util.Random,net.minecraft.util.math.BlockBox,net.minecraft.util.math.ChunkPos,net.minecraft.util.math.BlockPos)">generate</a></span>&#8203;(<a href="../world/IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;world,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#generate(net.minecraft.world.ServerWorldAccess,net.minecraft.world.gen.StructureAccessor,net.minecraft.world.gen.chunk.ChunkGenerator,java.util.Random,net.minecraft.util.math.BlockBox,net.minecraft.util.math.ChunkPos,net.minecraft.util.math.BlockPos)">generate</a></span>&#8203;(<a href="../world/ServerWorldAccess.html" title="interface in net.minecraft.world">ServerWorldAccess</a>&nbsp;serverWorldAccess,
 <a href="../world/gen/StructureAccessor.html" title="class in net.minecraft.world.gen">StructureAccessor</a>&nbsp;structureAccessor,
-<a href="../world/gen/chunk/ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">ChunkGenerator</a>&lt;?&gt;&nbsp;chunkGenerator,
+<a href="../world/gen/chunk/ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">ChunkGenerator</a>&nbsp;chunkGenerator,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random,
-<a href="../util/math/BlockBox.html" title="class in net.minecraft.util.math">BlockBox</a>&nbsp;blockBox,
+<a href="../util/math/BlockBox.html" title="class in net.minecraft.util.math">BlockBox</a>&nbsp;boundingBox,
 <a href="../util/math/ChunkPos.html" title="class in net.minecraft.util.math">ChunkPos</a>&nbsp;chunkPos,
 <a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos)</code></th>
 <td class="colLast">&nbsp;</td>
@@ -428,7 +453,7 @@ int&nbsp;y,
 </tr>
 <tr class="altColor" id="i24">
 <td class="colFirst"><code>protected void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_14919(net.minecraft.world.IWorld,net.minecraft.util.math.BlockBox,int,int,int,int,int,int,net.minecraft.block.BlockState,boolean)">method_14919</a></span>&#8203;(<a href="../world/IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;world,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_14919(net.minecraft.world.WorldAccess,net.minecraft.util.math.BlockBox,int,int,int,int,int,int,net.minecraft.block.BlockState,boolean)">method_14919</a></span>&#8203;(<a href="../world/WorldAccess.html" title="interface in net.minecraft.world">WorldAccess</a>&nbsp;world,
 <a href="../util/math/BlockBox.html" title="class in net.minecraft.util.math">BlockBox</a>&nbsp;bounds,
 int&nbsp;minX,
 int&nbsp;minY,
@@ -442,7 +467,7 @@ boolean&nbsp;bool)</code></th>
 </tr>
 <tr class="rowColor" id="i25">
 <td class="colFirst"><code>protected void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_14936(net.minecraft.world.IWorld,net.minecraft.block.BlockState,int,int,int,net.minecraft.util.math.BlockBox)">method_14936</a></span>&#8203;(<a href="../world/IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;world,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_14936(net.minecraft.world.WorldAccess,net.minecraft.block.BlockState,int,int,int,net.minecraft.util.math.BlockBox)">method_14936</a></span>&#8203;(<a href="../world/WorldAccess.html" title="interface in net.minecraft.world">WorldAccess</a>&nbsp;world,
 <a href="../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState,
 int&nbsp;x,
 int&nbsp;y,
@@ -510,14 +535,45 @@ int&nbsp;z)</code></th>
 </li>
 <li class="blockList">
 <section class="detail">
+<h3><a id="BLOCKS_NEEDING_POST_PROCESSING">BLOCKS_NEEDING_POST_PROCESSING</a></h3>
+<div class="memberSignature"><span class="modifiers">private static final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="../block/Block.html" title="class in net.minecraft.block">Block</a>&gt;</span>&nbsp;<span class="memberName">BLOCKS_NEEDING_POST_PROCESSING</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="boundingBox">boundingBox</a></h3>
 <div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType"><a href="../util/math/BlockBox.html" title="class in net.minecraft.util.math">BlockBox</a></span>&nbsp;<span class="memberName">boundingBox</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
+<h3><a id="facing">facing</a></h3>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="../util/math/Direction.html" title="enum in net.minecraft.util.math">Direction</a></span>&nbsp;<span class="memberName">facing</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="mirror">mirror</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="../util/BlockMirror.html" title="enum in net.minecraft.util">BlockMirror</a></span>&nbsp;<span class="memberName">mirror</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="rotation">rotation</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="../util/BlockRotation.html" title="enum in net.minecraft.util">BlockRotation</a></span>&nbsp;<span class="memberName">rotation</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="length">length</a></h3>
 <div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">length</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="type">type</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="StructurePieceType.html" title="interface in net.minecraft.structure">StructurePieceType</a></span>&nbsp;<span class="memberName">type</span></div>
 </section>
 </li>
 </ul>
@@ -576,12 +632,12 @@ int&nbsp;length)</span></div>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="generate(net.minecraft.world.IWorld,net.minecraft.world.gen.StructureAccessor,net.minecraft.world.gen.chunk.ChunkGenerator,java.util.Random,net.minecraft.util.math.BlockBox,net.minecraft.util.math.ChunkPos,net.minecraft.util.math.BlockPos)">generate</a></h3>
-<div class="memberSignature"><span class="modifiers">public abstract</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">generate</span>&#8203;(<span class="arguments"><a href="../world/IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;world,
+<h3><a id="generate(net.minecraft.world.ServerWorldAccess,net.minecraft.world.gen.StructureAccessor,net.minecraft.world.gen.chunk.ChunkGenerator,java.util.Random,net.minecraft.util.math.BlockBox,net.minecraft.util.math.ChunkPos,net.minecraft.util.math.BlockPos)">generate</a></h3>
+<div class="memberSignature"><span class="modifiers">public abstract</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">generate</span>&#8203;(<span class="arguments"><a href="../world/ServerWorldAccess.html" title="interface in net.minecraft.world">ServerWorldAccess</a>&nbsp;serverWorldAccess,
 <a href="../world/gen/StructureAccessor.html" title="class in net.minecraft.world.gen">StructureAccessor</a>&nbsp;structureAccessor,
-<a href="../world/gen/chunk/ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">ChunkGenerator</a>&lt;?&gt;&nbsp;chunkGenerator,
+<a href="../world/gen/chunk/ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">ChunkGenerator</a>&nbsp;chunkGenerator,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random,
-<a href="../util/math/BlockBox.html" title="class in net.minecraft.util.math">BlockBox</a>&nbsp;blockBox,
+<a href="../util/math/BlockBox.html" title="class in net.minecraft.util.math">BlockBox</a>&nbsp;boundingBox,
 <a href="../util/math/ChunkPos.html" title="class in net.minecraft.util.math">ChunkPos</a>&nbsp;chunkPos,
 <a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos)</span></div>
 </section>
@@ -641,8 +697,8 @@ int&nbsp;int3)</span></div>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="addBlock(net.minecraft.world.IWorld,net.minecraft.block.BlockState,int,int,int,net.minecraft.util.math.BlockBox)">addBlock</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">addBlock</span>&#8203;(<span class="arguments"><a href="../world/IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;world,
+<h3><a id="addBlock(net.minecraft.world.WorldAccess,net.minecraft.block.BlockState,int,int,int,net.minecraft.util.math.BlockBox)">addBlock</a></h3>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">addBlock</span>&#8203;(<span class="arguments"><a href="../world/WorldAccess.html" title="interface in net.minecraft.world">WorldAccess</a>&nbsp;world,
 <a href="../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;block,
 int&nbsp;x,
 int&nbsp;y,
@@ -672,8 +728,8 @@ int&nbsp;y,
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="fill(net.minecraft.world.IWorld,net.minecraft.util.math.BlockBox,int,int,int,int,int,int)">fill</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">fill</span>&#8203;(<span class="arguments"><a href="../world/IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;world,
+<h3><a id="fill(net.minecraft.world.WorldAccess,net.minecraft.util.math.BlockBox,int,int,int,int,int,int)">fill</a></h3>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">fill</span>&#8203;(<span class="arguments"><a href="../world/WorldAccess.html" title="interface in net.minecraft.world">WorldAccess</a>&nbsp;world,
 <a href="../util/math/BlockBox.html" title="class in net.minecraft.util.math">BlockBox</a>&nbsp;bounds,
 int&nbsp;minX,
 int&nbsp;minY,
@@ -685,8 +741,8 @@ int&nbsp;int2)</span></div>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="fillWithOutline(net.minecraft.world.IWorld,net.minecraft.util.math.BlockBox,int,int,int,int,int,int,net.minecraft.block.BlockState,net.minecraft.block.BlockState,boolean)">fillWithOutline</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">fillWithOutline</span>&#8203;(<span class="arguments"><a href="../world/IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;world,
+<h3><a id="fillWithOutline(net.minecraft.world.WorldAccess,net.minecraft.util.math.BlockBox,int,int,int,int,int,int,net.minecraft.block.BlockState,net.minecraft.block.BlockState,boolean)">fillWithOutline</a></h3>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">fillWithOutline</span>&#8203;(<span class="arguments"><a href="../world/WorldAccess.html" title="interface in net.minecraft.world">WorldAccess</a>&nbsp;world,
 <a href="../util/math/BlockBox.html" title="class in net.minecraft.util.math">BlockBox</a>&nbsp;blockBox,
 int&nbsp;int2,
 int&nbsp;int3,
@@ -701,8 +757,8 @@ boolean&nbsp;bool)</span></div>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="fillWithOutline(net.minecraft.world.IWorld,net.minecraft.util.math.BlockBox,int,int,int,int,int,int,boolean,java.util.Random,net.minecraft.structure.StructurePiece.BlockRandomizer)">fillWithOutline</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">fillWithOutline</span>&#8203;(<span class="arguments"><a href="../world/IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;iWorld,
+<h3><a id="fillWithOutline(net.minecraft.world.WorldAccess,net.minecraft.util.math.BlockBox,int,int,int,int,int,int,boolean,java.util.Random,net.minecraft.structure.StructurePiece.BlockRandomizer)">fillWithOutline</a></h3>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">fillWithOutline</span>&#8203;(<span class="arguments"><a href="../world/WorldAccess.html" title="interface in net.minecraft.world">WorldAccess</a>&nbsp;worldAccess,
 <a href="../util/math/BlockBox.html" title="class in net.minecraft.util.math">BlockBox</a>&nbsp;blockBox,
 int&nbsp;minX,
 int&nbsp;minY,
@@ -717,8 +773,8 @@ boolean&nbsp;replaceBlocks,
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="fillWithOutlineUnderSealevel(net.minecraft.world.IWorld,net.minecraft.util.math.BlockBox,java.util.Random,float,int,int,int,int,int,int,net.minecraft.block.BlockState,net.minecraft.block.BlockState,boolean,boolean)">fillWithOutlineUnderSealevel</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">fillWithOutlineUnderSealevel</span>&#8203;(<span class="arguments"><a href="../world/IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;iWorld,
+<h3><a id="fillWithOutlineUnderSealevel(net.minecraft.world.WorldAccess,net.minecraft.util.math.BlockBox,java.util.Random,float,int,int,int,int,int,int,net.minecraft.block.BlockState,net.minecraft.block.BlockState,boolean,boolean)">fillWithOutlineUnderSealevel</a></h3>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">fillWithOutlineUnderSealevel</span>&#8203;(<span class="arguments"><a href="../world/WorldAccess.html" title="interface in net.minecraft.world">WorldAccess</a>&nbsp;worldAccess,
 <a href="../util/math/BlockBox.html" title="class in net.minecraft.util.math">BlockBox</a>&nbsp;blockBox,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random,
 float&nbsp;float2,
@@ -736,8 +792,8 @@ boolean&nbsp;bool2)</span></div>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="addBlockWithRandomThreshold(net.minecraft.world.IWorld,net.minecraft.util.math.BlockBox,java.util.Random,float,int,int,int,net.minecraft.block.BlockState)">addBlockWithRandomThreshold</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">addBlockWithRandomThreshold</span>&#8203;(<span class="arguments"><a href="../world/IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;world,
+<h3><a id="addBlockWithRandomThreshold(net.minecraft.world.WorldAccess,net.minecraft.util.math.BlockBox,java.util.Random,float,int,int,int,net.minecraft.block.BlockState)">addBlockWithRandomThreshold</a></h3>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">addBlockWithRandomThreshold</span>&#8203;(<span class="arguments"><a href="../world/WorldAccess.html" title="interface in net.minecraft.world">WorldAccess</a>&nbsp;world,
 <a href="../util/math/BlockBox.html" title="class in net.minecraft.util.math">BlockBox</a>&nbsp;bounds,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random,
 float&nbsp;threshold,
@@ -749,8 +805,8 @@ int&nbsp;z,
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="method_14919(net.minecraft.world.IWorld,net.minecraft.util.math.BlockBox,int,int,int,int,int,int,net.minecraft.block.BlockState,boolean)">method_14919</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">method_14919</span>&#8203;(<span class="arguments"><a href="../world/IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;world,
+<h3><a id="method_14919(net.minecraft.world.WorldAccess,net.minecraft.util.math.BlockBox,int,int,int,int,int,int,net.minecraft.block.BlockState,boolean)">method_14919</a></h3>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">method_14919</span>&#8203;(<span class="arguments"><a href="../world/WorldAccess.html" title="interface in net.minecraft.world">WorldAccess</a>&nbsp;world,
 <a href="../util/math/BlockBox.html" title="class in net.minecraft.util.math">BlockBox</a>&nbsp;bounds,
 int&nbsp;minX,
 int&nbsp;minY,
@@ -764,8 +820,8 @@ boolean&nbsp;bool)</span></div>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="method_14936(net.minecraft.world.IWorld,net.minecraft.block.BlockState,int,int,int,net.minecraft.util.math.BlockBox)">method_14936</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">method_14936</span>&#8203;(<span class="arguments"><a href="../world/IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;world,
+<h3><a id="method_14936(net.minecraft.world.WorldAccess,net.minecraft.block.BlockState,int,int,int,net.minecraft.util.math.BlockBox)">method_14936</a></h3>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">method_14936</span>&#8203;(<span class="arguments"><a href="../world/WorldAccess.html" title="interface in net.minecraft.world">WorldAccess</a>&nbsp;world,
 <a href="../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState,
 int&nbsp;x,
 int&nbsp;y,
@@ -775,8 +831,8 @@ int&nbsp;z,
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="addChest(net.minecraft.world.IWorld,net.minecraft.util.math.BlockBox,java.util.Random,int,int,int,net.minecraft.util.Identifier)">addChest</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">addChest</span>&#8203;(<span class="arguments"><a href="../world/IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;world,
+<h3><a id="addChest(net.minecraft.world.WorldAccess,net.minecraft.util.math.BlockBox,java.util.Random,int,int,int,net.minecraft.util.Identifier)">addChest</a></h3>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">addChest</span>&#8203;(<span class="arguments"><a href="../world/WorldAccess.html" title="interface in net.minecraft.world">WorldAccess</a>&nbsp;world,
 <a href="../util/math/BlockBox.html" title="class in net.minecraft.util.math">BlockBox</a>&nbsp;boundingBox,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random,
 int&nbsp;x,
@@ -795,20 +851,20 @@ int&nbsp;z,
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="addChest(net.minecraft.world.IWorld,net.minecraft.util.math.BlockBox,java.util.Random,net.minecraft.util.math.BlockPos,net.minecraft.util.Identifier,net.minecraft.block.BlockState)">addChest</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">addChest</span>&#8203;(<span class="arguments"><a href="../world/IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;world,
+<h3><a id="addChest(net.minecraft.world.WorldAccess,net.minecraft.util.math.BlockBox,java.util.Random,net.minecraft.util.math.BlockPos,net.minecraft.util.Identifier,net.minecraft.block.BlockState)">addChest</a></h3>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">addChest</span>&#8203;(<span class="arguments"><a href="../world/WorldAccess.html" title="interface in net.minecraft.world">WorldAccess</a>&nbsp;world,
 <a href="../util/math/BlockBox.html" title="class in net.minecraft.util.math">BlockBox</a>&nbsp;boundingBox,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random,
 <a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
 <a href="../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;lootTableId,
-<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 <a href="../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;block)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="addDispenser(net.minecraft.world.IWorld,net.minecraft.util.math.BlockBox,java.util.Random,int,int,int,net.minecraft.util.math.Direction,net.minecraft.util.Identifier)">addDispenser</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">addDispenser</span>&#8203;(<span class="arguments"><a href="../world/IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;world,
+<h3><a id="addDispenser(net.minecraft.world.WorldAccess,net.minecraft.util.math.BlockBox,java.util.Random,int,int,int,net.minecraft.util.math.Direction,net.minecraft.util.Identifier)">addDispenser</a></h3>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">addDispenser</span>&#8203;(<span class="arguments"><a href="../world/WorldAccess.html" title="interface in net.minecraft.world">WorldAccess</a>&nbsp;world,
 <a href="../util/math/BlockBox.html" title="class in net.minecraft.util.math">BlockBox</a>&nbsp;boundingBox,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random,
 int&nbsp;x,
@@ -829,14 +885,14 @@ int&nbsp;z)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getFacing()">getFacing</a></h3>
-<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 </span><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../util/math/Direction.html" title="enum in net.minecraft.util.math">Direction</a></span>&nbsp;<span class="memberName">getFacing</span>()</div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="setOrientation(net.minecraft.util.math.Direction)">setOrientation</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setOrientation</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setOrientation</span>&#8203;(<span class="arguments"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 <a href="../util/math/Direction.html" title="enum in net.minecraft.util.math">Direction</a>&nbsp;orientation)</span></div>
 </section>
 </li>

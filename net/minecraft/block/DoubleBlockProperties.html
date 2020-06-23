@@ -178,14 +178,14 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tbody>
 <tr class="altColor" id="i0">
 <td class="colFirst"><code>static &lt;S extends <a href="entity/BlockEntity.html" title="class in net.minecraft.block.entity">BlockEntity</a>&gt;<br><a href="DoubleBlockProperties.PropertySource.html" title="interface in net.minecraft.block">DoubleBlockProperties.PropertySource</a>&lt;S&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#toPropertySource(net.minecraft.block.entity.BlockEntityType,java.util.function.Function,java.util.function.Function,net.minecraft.state.property.DirectionProperty,net.minecraft.block.BlockState,net.minecraft.world.IWorld,net.minecraft.util.math.BlockPos,java.util.function.BiPredicate)">toPropertySource</a></span>&#8203;(<a href="entity/BlockEntityType.html" title="class in net.minecraft.block.entity">BlockEntityType</a>&lt;S&gt;&nbsp;blockEntityType,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#toPropertySource(net.minecraft.block.entity.BlockEntityType,java.util.function.Function,java.util.function.Function,net.minecraft.state.property.DirectionProperty,net.minecraft.block.BlockState,net.minecraft.world.WorldAccess,net.minecraft.util.math.BlockPos,java.util.function.BiPredicate)">toPropertySource</a></span>&#8203;(<a href="entity/BlockEntityType.html" title="class in net.minecraft.block.entity">BlockEntityType</a>&lt;S&gt;&nbsp;blockEntityType,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>,&#8203;<a href="DoubleBlockProperties.Type.html" title="enum in net.minecraft.block">DoubleBlockProperties.Type</a>&gt;&nbsp;typeMapper,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>,&#8203;<a href="../util/math/Direction.html" title="enum in net.minecraft.util.math">Direction</a>&gt;&nbsp;function,
 <a href="../state/property/DirectionProperty.html" title="class in net.minecraft.state.property">DirectionProperty</a>&nbsp;directionProperty,
 <a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state,
-<a href="../world/IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;world,
+<a href="../world/WorldAccess.html" title="interface in net.minecraft.world">WorldAccess</a>&nbsp;world,
 <a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/BiPredicate.html?is-external=true" title="class or interface in java.util.function" class="externalLink">BiPredicate</a>&lt;<a href="../world/IWorld.html" title="interface in net.minecraft.world">IWorld</a>,&#8203;<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;&nbsp;fallbackTester)</code></th>
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/BiPredicate.html?is-external=true" title="class or interface in java.util.function" class="externalLink">BiPredicate</a>&lt;<a href="../world/WorldAccess.html" title="interface in net.minecraft.world">WorldAccess</a>,&#8203;<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;&nbsp;fallbackTester)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -228,16 +228,16 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="toPropertySource(net.minecraft.block.entity.BlockEntityType,java.util.function.Function,java.util.function.Function,net.minecraft.state.property.DirectionProperty,net.minecraft.block.BlockState,net.minecraft.world.IWorld,net.minecraft.util.math.BlockPos,java.util.function.BiPredicate)">toPropertySource</a></h3>
+<h3><a id="toPropertySource(net.minecraft.block.entity.BlockEntityType,java.util.function.Function,java.util.function.Function,net.minecraft.state.property.DirectionProperty,net.minecraft.block.BlockState,net.minecraft.world.WorldAccess,net.minecraft.util.math.BlockPos,java.util.function.BiPredicate)">toPropertySource</a></h3>
 <div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="typeParameters">&lt;S extends <a href="entity/BlockEntity.html" title="class in net.minecraft.block.entity">BlockEntity</a>&gt;</span>
 <span class="returnType"><a href="DoubleBlockProperties.PropertySource.html" title="interface in net.minecraft.block">DoubleBlockProperties.PropertySource</a>&lt;S&gt;</span>&nbsp;<span class="memberName">toPropertySource</span>&#8203;(<span class="arguments"><a href="entity/BlockEntityType.html" title="class in net.minecraft.block.entity">BlockEntityType</a>&lt;S&gt;&nbsp;blockEntityType,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>,&#8203;<a href="DoubleBlockProperties.Type.html" title="enum in net.minecraft.block">DoubleBlockProperties.Type</a>&gt;&nbsp;typeMapper,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;<a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>,&#8203;<a href="../util/math/Direction.html" title="enum in net.minecraft.util.math">Direction</a>&gt;&nbsp;function,
 <a href="../state/property/DirectionProperty.html" title="class in net.minecraft.state.property">DirectionProperty</a>&nbsp;directionProperty,
 <a href="BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state,
-<a href="../world/IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;world,
+<a href="../world/WorldAccess.html" title="interface in net.minecraft.world">WorldAccess</a>&nbsp;world,
 <a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/BiPredicate.html?is-external=true" title="class or interface in java.util.function" class="externalLink">BiPredicate</a>&lt;<a href="../world/IWorld.html" title="interface in net.minecraft.world">IWorld</a>,&#8203;<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;&nbsp;fallbackTester)</span></div>
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/BiPredicate.html?is-external=true" title="class or interface in java.util.function" class="externalLink">BiPredicate</a>&lt;<a href="../world/WorldAccess.html" title="interface in net.minecraft.world">WorldAccess</a>,&#8203;<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;&nbsp;fallbackTester)</span></div>
 </section>
 </li>
 </ul>

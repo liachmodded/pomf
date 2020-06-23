@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../../../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10};
+<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -56,13 +56,13 @@ loadScripts(document, 'script');</script>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested.class.summary">Nested</a>&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
@@ -121,6 +121,33 @@ implements <a href="../../../Packet.html" title="interface in net.minecraft.netw
 <tr class="altColor">
 <td class="colFirst"><code>(package private) static class&nbsp;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="CommandTreeS2CPacket.CommandNodeData.html" title="class in net.minecraft.network.packet.s2c.play">CommandTreeS2CPacket.CommandNodeData</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</li>
+<!-- =========== FIELD SUMMARY =========== -->
+<li class="blockList">
+<section class="fieldSummary"><a id="field.summary">
+<!--   -->
+</a>
+<h2>Field Summary</h2>
+<div class="memberSummary">
+<table>
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<thead>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colSecond" scope="col">Field</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private com.mojang.brigadier.tree.RootCommandNode&lt;<a href="../../../../server/command/CommandSource.html" title="interface in net.minecraft.server.command">CommandSource</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#commandTree">commandTree</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -191,8 +218,26 @@ implements <a href="../../../Packet.html" title="interface in net.minecraft.netw
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i3">
+<td class="colFirst"><code>private com.mojang.brigadier.builder.ArgumentBuilder&lt;<a href="../../../../server/command/CommandSource.html" title="interface in net.minecraft.server.command">CommandSource</a>,&#8203;?&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#readArgumentBuilder(net.minecraft.network.PacketByteBuf,byte)">readArgumentBuilder</a></span>&#8203;(<a href="../../../PacketByteBuf.html" title="class in net.minecraft.network">PacketByteBuf</a>&nbsp;buf,
+byte&nbsp;byte2)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i4">
+<td class="colFirst"><code>private <a href="CommandTreeS2CPacket.CommandNodeData.html" title="class in net.minecraft.network.packet.s2c.play">CommandTreeS2CPacket.CommandNodeData</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#readCommandNode(net.minecraft.network.PacketByteBuf)">readCommandNode</a></span>&#8203;(<a href="../../../PacketByteBuf.html" title="class in net.minecraft.network">PacketByteBuf</a>&nbsp;buf)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i5">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#write(net.minecraft.network.PacketByteBuf)">write</a></span>&#8203;(<a href="../../../PacketByteBuf.html" title="class in net.minecraft.network">PacketByteBuf</a>&nbsp;buf)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i6">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#writeNode(net.minecraft.network.PacketByteBuf,com.mojang.brigadier.tree.CommandNode,java.util.Map)">writeNode</a></span>&#8203;(<a href="../../../PacketByteBuf.html" title="class in net.minecraft.network">PacketByteBuf</a>&nbsp;buf,
+com.mojang.brigadier.tree.CommandNode&lt;<a href="../../../../server/command/CommandSource.html" title="interface in net.minecraft.server.command">CommandSource</a>&gt;&nbsp;node,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util" class="externalLink">Map</a>&lt;com.mojang.brigadier.tree.CommandNode&lt;<a href="../../../../server/command/CommandSource.html" title="interface in net.minecraft.server.command">CommandSource</a>&gt;,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang" class="externalLink">Integer</a>&gt;&nbsp;map)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -215,6 +260,22 @@ implements <a href="../../../Packet.html" title="interface in net.minecraft.netw
 </section>
 <section class="details">
 <ul class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<li class="blockList">
+<section class="fieldDetails"><a id="field.detail">
+<!--   -->
+</a>
+<h2>Field Details</h2>
+<ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="commandTree">commandTree</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">com.mojang.brigadier.tree.RootCommandNode&lt;<a href="../../../../server/command/CommandSource.html" title="interface in net.minecraft.server.command">CommandSource</a>&gt;</span>&nbsp;<span class="memberName">commandTree</span></div>
+</section>
+</li>
+</ul>
+</section>
+</li>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <li class="blockList">
 <section class="constructorDetails"><a id="constructor.detail">
@@ -272,6 +333,28 @@ implements <a href="../../../Packet.html" title="interface in net.minecraft.netw
 </li>
 <li class="blockList">
 <section class="detail">
+<h3><a id="readCommandNode(net.minecraft.network.PacketByteBuf)">readCommandNode</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="CommandTreeS2CPacket.CommandNodeData.html" title="class in net.minecraft.network.packet.s2c.play">CommandTreeS2CPacket.CommandNodeData</a></span>&nbsp;<span class="memberName">readCommandNode</span>&#8203;(<span class="arguments"><a href="../../../PacketByteBuf.html" title="class in net.minecraft.network">PacketByteBuf</a>&nbsp;buf)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="readArgumentBuilder(net.minecraft.network.PacketByteBuf,byte)">readArgumentBuilder</a></h3>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">private</span>&nbsp;<span class="returnType">com.mojang.brigadier.builder.ArgumentBuilder&lt;<a href="../../../../server/command/CommandSource.html" title="interface in net.minecraft.server.command">CommandSource</a>,&#8203;?&gt;</span>&nbsp;<span class="memberName">readArgumentBuilder</span>&#8203;(<span class="arguments"><a href="../../../PacketByteBuf.html" title="class in net.minecraft.network">PacketByteBuf</a>&nbsp;buf,
+byte&nbsp;byte2)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="writeNode(net.minecraft.network.PacketByteBuf,com.mojang.brigadier.tree.CommandNode,java.util.Map)">writeNode</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">writeNode</span>&#8203;(<span class="arguments"><a href="../../../PacketByteBuf.html" title="class in net.minecraft.network">PacketByteBuf</a>&nbsp;buf,
+com.mojang.brigadier.tree.CommandNode&lt;<a href="../../../../server/command/CommandSource.html" title="interface in net.minecraft.server.command">CommandSource</a>&gt;&nbsp;node,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util" class="externalLink">Map</a>&lt;com.mojang.brigadier.tree.CommandNode&lt;<a href="../../../../server/command/CommandSource.html" title="interface in net.minecraft.server.command">CommandSource</a>&gt;,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang" class="externalLink">Integer</a>&gt;&nbsp;map)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="apply(net.minecraft.network.listener.ClientPlayPacketListener)">apply</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">apply</span>&#8203;(<span class="arguments"><a href="../../../listener/ClientPlayPacketListener.html" title="interface in net.minecraft.network.listener">ClientPlayPacketListener</a>&nbsp;clientPlayPacketListener)</span></div>
 <dl>
@@ -320,13 +403,13 @@ implements <a href="../../../Packet.html" title="interface in net.minecraft.netw
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested.class.summary">Nested</a>&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>

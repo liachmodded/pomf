@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10};
+<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -57,13 +57,13 @@ loadScripts(document, 'script');</script>
 <li>Summary:&nbsp;</li>
 <li><a href="#nested.class.summary">Nested</a>&nbsp;|&nbsp;</li>
 <li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
 <li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
 </div>
@@ -99,7 +99,7 @@ loadScripts(document, 'script');</script>
 <dd><a href="GlobalTagAccessor.html" title="class in net.minecraft.tag">GlobalTagAccessor</a>&lt;<a href="GlobalTagAccessor.html" title="type parameter in GlobalTagAccessor">T</a>&gt;</dd>
 </dl>
 <hr>
-<pre>static class <span class="typeNameLabel">GlobalTagAccessor.CachedTag&lt;T&gt;</span>
+<pre>public static class <span class="typeNameLabel">GlobalTagAccessor.CachedTag&lt;T&gt;</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>
 implements <a href="Tag.Identified.html" title="interface in net.minecraft.tag">Tag.Identified</a>&lt;T&gt;</pre>
 </section>
@@ -115,7 +115,7 @@ implements <a href="Tag.Identified.html" title="interface in net.minecraft.tag">
 <h2>Nested classes/interfaces inherited from interface&nbsp;net.minecraft.tag.<a href="Tag.html" title="interface in net.minecraft.tag">Tag</a></h2>
 <a id="nested.classes.inherited.from.class.net.minecraft.tag.Tag">
 <!--   -->
-</a><code><a href="Tag.Builder.html" title="class in net.minecraft.tag">Tag.Builder</a>, <a href="Tag.Entry.html" title="interface in net.minecraft.tag">Tag.Entry</a>, <a href="Tag.Identified.html" title="interface in net.minecraft.tag">Tag.Identified</a>&lt;<a href="Tag.Identified.html" title="type parameter in Tag.Identified">T</a>&gt;, <a href="Tag.ObjectBuilder.html" title="class in net.minecraft.tag">Tag.ObjectBuilder</a>&lt;<a href="Tag.ObjectBuilder.html" title="type parameter in Tag.ObjectBuilder">T</a>&gt;, <a href="Tag.ObjectEntry.html" title="class in net.minecraft.tag">Tag.ObjectEntry</a>, <a href="Tag.TagEntry.html" title="class in net.minecraft.tag">Tag.TagEntry</a></code></div>
+</a><code><a href="Tag.Builder.html" title="class in net.minecraft.tag">Tag.Builder</a>, <a href="Tag.Entry.html" title="interface in net.minecraft.tag">Tag.Entry</a>, <a href="Tag.Identified.html" title="interface in net.minecraft.tag">Tag.Identified</a>&lt;<a href="Tag.Identified.html" title="type parameter in Tag.Identified">T</a>&gt;, <a href="Tag.ObjectEntry.html" title="class in net.minecraft.tag">Tag.ObjectEntry</a>, <a href="Tag.TagEntry.html" title="class in net.minecraft.tag">Tag.TagEntry</a>, <a href="Tag.TrackedEntry.html" title="class in net.minecraft.tag">Tag.TrackedEntry</a></code></div>
 </section>
 </li>
 <!-- =========== FIELD SUMMARY =========== -->
@@ -136,8 +136,40 @@ implements <a href="Tag.Identified.html" title="interface in net.minecraft.tag">
 </thead>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code>private <a href="Tag.html" title="interface in net.minecraft.tag">Tag</a>&lt;<a href="GlobalTagAccessor.CachedTag.html" title="type parameter in GlobalTagAccessor.CachedTag">T</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#currentTag">currentTag</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../util/Identifier.html" title="class in net.minecraft.util">Identifier</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#id">id</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</li>
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<li class="blockList">
+<section class="constructorSummary"><a id="constructor.summary">
+<!--   -->
+</a>
+<h2>Constructor Summary</h2>
+<div class="memberSummary">
+<table>
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<thead>
+<tr>
+<th class="colFirst" scope="col">Modifier</th>
+<th class="colSecond" scope="col">Constructor</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private </code></td>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.util.Identifier)">CachedTag</a></span>&#8203;(<a href="../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;id)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -169,16 +201,21 @@ implements <a href="Tag.Identified.html" title="interface in net.minecraft.tag">
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
+<td class="colFirst"><code>private <a href="Tag.html" title="interface in net.minecraft.tag">Tag</a>&lt;<a href="GlobalTagAccessor.CachedTag.html" title="type parameter in GlobalTagAccessor.CachedTag">T</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#get()">get</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i2">
 <td class="colFirst"><code><a href="../util/Identifier.html" title="class in net.minecraft.util">Identifier</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getId()">getId</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i2">
+<tr class="rowColor" id="i3">
 <td class="colFirst"><code>(package private) void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#updateContainer(net.minecraft.tag.TagContainer)">updateContainer</a></span>&#8203;(<a href="TagContainer.html" title="class in net.minecraft.tag">TagContainer</a>&lt;<a href="GlobalTagAccessor.CachedTag.html" title="type parameter in GlobalTagAccessor.CachedTag">T</a>&gt;&nbsp;container)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#updateContainer(java.util.function.Function)">updateContainer</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;<a href="../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>,&#8203;<a href="Tag.html" title="interface in net.minecraft.tag">Tag</a>&lt;<a href="GlobalTagAccessor.CachedTag.html" title="type parameter in GlobalTagAccessor.CachedTag">T</a>&gt;&gt;&nbsp;tagFactory)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i3">
+<tr class="altColor" id="i4">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="GlobalTagAccessor.CachedTag.html" title="type parameter in GlobalTagAccessor.CachedTag">T</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#values()">values</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
@@ -212,8 +249,31 @@ implements <a href="Tag.Identified.html" title="interface in net.minecraft.tag">
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
+<h3><a id="currentTag">currentTag</a></h3>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="Tag.html" title="interface in net.minecraft.tag">Tag</a>&lt;<a href="GlobalTagAccessor.CachedTag.html" title="type parameter in GlobalTagAccessor.CachedTag">T</a>&gt;</span>&nbsp;<span class="memberName">currentTag</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="id">id</a></h3>
 <div class="memberSignature"><span class="modifiers">protected final</span>&nbsp;<span class="returnType"><a href="../util/Identifier.html" title="class in net.minecraft.util">Identifier</a></span>&nbsp;<span class="memberName">id</span></div>
+</section>
+</li>
+</ul>
+</section>
+</li>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<li class="blockList">
+<section class="constructorDetails"><a id="constructor.detail">
+<!--   -->
+</a>
+<h2>Constructor Details</h2>
+<ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="&lt;init&gt;(net.minecraft.util.Identifier)">CachedTag</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="memberName">CachedTag</span>&#8203;(<span class="arguments"><a href="../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;id)</span></div>
 </section>
 </li>
 </ul>
@@ -238,8 +298,14 @@ implements <a href="Tag.Identified.html" title="interface in net.minecraft.tag">
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="updateContainer(net.minecraft.tag.TagContainer)">updateContainer</a></h3>
-<div class="memberSignature"><span class="returnType">void</span>&nbsp;<span class="memberName">updateContainer</span>&#8203;(<span class="arguments"><a href="TagContainer.html" title="class in net.minecraft.tag">TagContainer</a>&lt;<a href="GlobalTagAccessor.CachedTag.html" title="type parameter in GlobalTagAccessor.CachedTag">T</a>&gt;&nbsp;container)</span></div>
+<h3><a id="get()">get</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="Tag.html" title="interface in net.minecraft.tag">Tag</a>&lt;<a href="GlobalTagAccessor.CachedTag.html" title="type parameter in GlobalTagAccessor.CachedTag">T</a>&gt;</span>&nbsp;<span class="memberName">get</span>()</div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="updateContainer(java.util.function.Function)">updateContainer</a></h3>
+<div class="memberSignature"><span class="returnType">void</span>&nbsp;<span class="memberName">updateContainer</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;<a href="../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>,&#8203;<a href="Tag.html" title="interface in net.minecraft.tag">Tag</a>&lt;<a href="GlobalTagAccessor.CachedTag.html" title="type parameter in GlobalTagAccessor.CachedTag">T</a>&gt;&gt;&nbsp;tagFactory)</span></div>
 </section>
 </li>
 <li class="blockList">
@@ -298,13 +364,13 @@ implements <a href="Tag.Identified.html" title="interface in net.minecraft.tag">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested.class.summary">Nested</a>&nbsp;|&nbsp;</li>
 <li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
 <li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
 </div>

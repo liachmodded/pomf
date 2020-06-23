@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10};
+<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -123,6 +123,26 @@ implements <a href="ShapeContext.html" title="interface in net.minecraft.block">
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#ABSENT">ABSENT</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#descending">descending</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Predicate</a>&lt;<a href="../fluid/Fluid.html" title="class in net.minecraft.fluid">Fluid</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#field_24425">field_24425</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../item/Item.html" title="class in net.minecraft.item">Item</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#heldItem">heldItem</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private double</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#minY">minY</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -147,9 +167,10 @@ implements <a href="ShapeContext.html" title="interface in net.minecraft.block">
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>protected </code></td>
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(boolean,double,net.minecraft.item.Item)">EntityShapeContext</a></span>&#8203;(boolean&nbsp;descending,
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(boolean,double,net.minecraft.item.Item,java.util.function.Predicate)">EntityShapeContext</a></span>&#8203;(boolean&nbsp;descending,
 double&nbsp;minY,
-<a href="../item/Item.html" title="class in net.minecraft.item">Item</a>&nbsp;heldItem)</code></th>
+<a href="../item/Item.html" title="class in net.minecraft.item">Item</a>&nbsp;heldItem,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Predicate</a>&lt;<a href="../fluid/Fluid.html" title="class in net.minecraft.fluid">Fluid</a>&gt;&nbsp;predicate)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
@@ -199,6 +220,12 @@ boolean&nbsp;defaultValue)</code></th>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isHolding(net.minecraft.item.Item)">isHolding</a></span>&#8203;(<a href="../item/Item.html" title="class in net.minecraft.item">Item</a>&nbsp;item)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
+<tr class="rowColor" id="i3">
+<td class="colFirst"><code>boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_27866(net.minecraft.fluid.FluidState,net.minecraft.fluid.FlowableFluid)">method_27866</a></span>&#8203;(<a href="../fluid/FluidState.html" title="class in net.minecraft.fluid">FluidState</a>&nbsp;state,
+<a href="../fluid/FlowableFluid.html" title="class in net.minecraft.fluid">FlowableFluid</a>&nbsp;fluid)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -227,6 +254,30 @@ boolean&nbsp;defaultValue)</code></th>
 <div class="memberSignature"><span class="modifiers">protected static final</span>&nbsp;<span class="returnType"><a href="ShapeContext.html" title="interface in net.minecraft.block">ShapeContext</a></span>&nbsp;<span class="memberName">ABSENT</span></div>
 </section>
 </li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="descending">descending</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">descending</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="minY">minY</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType">double</span>&nbsp;<span class="memberName">minY</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="heldItem">heldItem</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../item/Item.html" title="class in net.minecraft.item">Item</a></span>&nbsp;<span class="memberName">heldItem</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="field_24425">field_24425</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Predicate</a>&lt;<a href="../fluid/Fluid.html" title="class in net.minecraft.fluid">Fluid</a>&gt;</span>&nbsp;<span class="memberName">field_24425</span></div>
+</section>
+</li>
 </ul>
 </section>
 </li>
@@ -239,10 +290,11 @@ boolean&nbsp;defaultValue)</code></th>
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="&lt;init&gt;(boolean,double,net.minecraft.item.Item)">EntityShapeContext</a></h3>
+<h3><a id="&lt;init&gt;(boolean,double,net.minecraft.item.Item,java.util.function.Predicate)">EntityShapeContext</a></h3>
 <div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="memberName">EntityShapeContext</span>&#8203;(<span class="arguments">boolean&nbsp;descending,
 double&nbsp;minY,
-<a href="../item/Item.html" title="class in net.minecraft.item">Item</a>&nbsp;heldItem)</span></div>
+<a href="../item/Item.html" title="class in net.minecraft.item">Item</a>&nbsp;heldItem,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Predicate</a>&lt;<a href="../fluid/Fluid.html" title="class in net.minecraft.fluid">Fluid</a>&gt;&nbsp;predicate)</span></div>
 </section>
 </li>
 <li class="blockList">
@@ -270,6 +322,17 @@ double&nbsp;minY,
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="ShapeContext.html#isHolding(net.minecraft.item.Item)">isHolding</a></code>&nbsp;in interface&nbsp;<code><a href="ShapeContext.html" title="interface in net.minecraft.block">ShapeContext</a></code></dd>
+</dl>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="method_27866(net.minecraft.fluid.FluidState,net.minecraft.fluid.FlowableFluid)">method_27866</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">method_27866</span>&#8203;(<span class="arguments"><a href="../fluid/FluidState.html" title="class in net.minecraft.fluid">FluidState</a>&nbsp;state,
+<a href="../fluid/FlowableFluid.html" title="class in net.minecraft.fluid">FlowableFluid</a>&nbsp;fluid)</span></div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="ShapeContext.html#method_27866(net.minecraft.fluid.FluidState,net.minecraft.fluid.FlowableFluid)">method_27866</a></code>&nbsp;in interface&nbsp;<code><a href="ShapeContext.html" title="interface in net.minecraft.block">ShapeContext</a></code></dd>
 </dl>
 </section>
 </li>

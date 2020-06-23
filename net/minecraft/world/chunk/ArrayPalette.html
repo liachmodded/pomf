@@ -56,13 +56,13 @@ loadScripts(document, 'script');</script>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
@@ -101,6 +101,58 @@ implements <a href="Palette.html" title="interface in net.minecraft.world.chunk"
 </section>
 <section class="summary">
 <ul class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<li class="blockList">
+<section class="fieldSummary"><a id="field.summary">
+<!--   -->
+</a>
+<h2>Field Summary</h2>
+<div class="memberSummary">
+<table>
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<thead>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colSecond" scope="col">Field</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="ArrayPalette.html" title="type parameter in ArrayPalette">T</a>[]</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#array">array</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../util/collection/IdList.html" title="class in net.minecraft.util.collection">IdList</a>&lt;<a href="ArrayPalette.html" title="type parameter in ArrayPalette">T</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#idList">idList</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#indexBits">indexBits</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="PaletteResizeListener.html" title="interface in net.minecraft.world.chunk">PaletteResizeListener</a>&lt;<a href="ArrayPalette.html" title="type parameter in ArrayPalette">T</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#resizeListener">resizeListener</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#size">size</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;<a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>,&#8203;<a href="ArrayPalette.html" title="type parameter in ArrayPalette">T</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#valueDeserializer">valueDeserializer</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</li>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <li class="blockList">
 <section class="constructorSummary"><a id="constructor.summary">
@@ -149,7 +201,7 @@ int&nbsp;integer,
 <tbody>
 <tr class="altColor" id="i0">
 <td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#accepts(T)">accepts</a></span>&#8203;(<a href="ArrayPalette.html" title="type parameter in ArrayPalette">T</a>&nbsp;object)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#accepts(java.util.function.Predicate)">accepts</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Predicate</a>&lt;<a href="ArrayPalette.html" title="type parameter in ArrayPalette">T</a>&gt;&nbsp;predicate)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
@@ -202,6 +254,52 @@ int&nbsp;integer,
 </section>
 <section class="details">
 <ul class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<li class="blockList">
+<section class="fieldDetails"><a id="field.detail">
+<!--   -->
+</a>
+<h2>Field Details</h2>
+<ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="idList">idList</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../../util/collection/IdList.html" title="class in net.minecraft.util.collection">IdList</a>&lt;<a href="ArrayPalette.html" title="type parameter in ArrayPalette">T</a>&gt;</span>&nbsp;<span class="memberName">idList</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="array">array</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="ArrayPalette.html" title="type parameter in ArrayPalette">T</a>[]</span>&nbsp;<span class="memberName">array</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="resizeListener">resizeListener</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="PaletteResizeListener.html" title="interface in net.minecraft.world.chunk">PaletteResizeListener</a>&lt;<a href="ArrayPalette.html" title="type parameter in ArrayPalette">T</a>&gt;</span>&nbsp;<span class="memberName">resizeListener</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="valueDeserializer">valueDeserializer</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;<a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>,&#8203;<a href="ArrayPalette.html" title="type parameter in ArrayPalette">T</a>&gt;</span>&nbsp;<span class="memberName">valueDeserializer</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="indexBits">indexBits</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">indexBits</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="size">size</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">size</span></div>
+</section>
+</li>
+</ul>
+</section>
+</li>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <li class="blockList">
 <section class="constructorDetails"><a id="constructor.detail">
@@ -242,20 +340,18 @@ int&nbsp;integer,
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="accepts(java.lang.Object)">
-<!--   -->
-</a><a id="accepts(T)">accepts</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">accepts</span>&#8203;(<span class="arguments"><a href="ArrayPalette.html" title="type parameter in ArrayPalette">T</a>&nbsp;object)</span></div>
+<h3><a id="accepts(java.util.function.Predicate)">accepts</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">accepts</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Predicate</a>&lt;<a href="ArrayPalette.html" title="type parameter in ArrayPalette">T</a>&gt;&nbsp;predicate)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="Palette.html#accepts(T)">accepts</a></code>&nbsp;in interface&nbsp;<code><a href="Palette.html" title="interface in net.minecraft.world.chunk">Palette</a>&lt;<a href="ArrayPalette.html" title="type parameter in ArrayPalette">T</a>&gt;</code></dd>
+<dd><code><a href="Palette.html#accepts(java.util.function.Predicate)">accepts</a></code>&nbsp;in interface&nbsp;<code><a href="Palette.html" title="interface in net.minecraft.world.chunk">Palette</a>&lt;<a href="ArrayPalette.html" title="type parameter in ArrayPalette">T</a>&gt;</code></dd>
 </dl>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getByIndex(int)">getByIndex</a></h3>
-<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 </span><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="ArrayPalette.html" title="type parameter in ArrayPalette">T</a></span>&nbsp;<span class="memberName">getByIndex</span>&#8203;(<span class="arguments">int&nbsp;index)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
@@ -343,13 +439,13 @@ int&nbsp;integer,
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>

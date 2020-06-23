@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":6,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10};
+<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":6,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -118,6 +118,11 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </thead>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code>private <a href="VoxelShape.html" title="class in net.minecraft.util.shape">VoxelShape</a>[]</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#shapeCache">shapeCache</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="VoxelSet.html" title="class in net.minecraft.util.shape">VoxelSet</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#voxels">voxels</a></span></code></th>
 <td class="colLast">&nbsp;</td>
@@ -231,12 +236,12 @@ double&nbsp;to)</code></th>
 </tr>
 <tr class="altColor" id="i10">
 <td class="colFirst"><code>double</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getMaximum(net.minecraft.util.math.Direction.Axis)">getMaximum</a></span>&#8203;(<a href="../math/Direction.Axis.html" title="enum in net.minecraft.util.math">Direction.Axis</a>&nbsp;axis)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getMax(net.minecraft.util.math.Direction.Axis)">getMax</a></span>&#8203;(<a href="../math/Direction.Axis.html" title="enum in net.minecraft.util.math">Direction.Axis</a>&nbsp;axis)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i11">
 <td class="colFirst"><code>double</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getMinimum(net.minecraft.util.math.Direction.Axis)">getMinimum</a></span>&#8203;(<a href="../math/Direction.Axis.html" title="enum in net.minecraft.util.math">Direction.Axis</a>&nbsp;axis)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getMin(net.minecraft.util.math.Direction.Axis)">getMin</a></span>&#8203;(<a href="../math/Direction.Axis.html" title="enum in net.minecraft.util.math">Direction.Axis</a>&nbsp;axis)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i12">
@@ -246,35 +251,40 @@ int&nbsp;index)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i13">
-<td class="colFirst"><code>protected abstract it.unimi.dsi.fastutil.doubles.DoubleList</code></td>
+<td class="colFirst"><code>protected abstract <a href="http://fastutil.di.unimi.it/docs/it/unimi/dsi/fastutil/doubles/DoubleList.html?is-external=true" title="class or interface in it.unimi.dsi.fastutil.doubles" class="externalLink">DoubleList</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPointPositions(net.minecraft.util.math.Direction.Axis)">getPointPositions</a></span>&#8203;(<a href="../math/Direction.Axis.html" title="enum in net.minecraft.util.math">Direction.Axis</a>&nbsp;axis)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i14">
+<td class="colFirst"><code>private <a href="VoxelShape.html" title="class in net.minecraft.util.shape">VoxelShape</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getUncachedFace(net.minecraft.util.math.Direction)">getUncachedFace</a></span>&#8203;(<a href="../math/Direction.html" title="enum in net.minecraft.util.math">Direction</a>&nbsp;facing)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i15">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isEmpty()">isEmpty</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i15">
+<tr class="altColor" id="i16">
 <td class="colFirst"><code><a href="VoxelShape.html" title="class in net.minecraft.util.shape">VoxelShape</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#offset(double,double,double)">offset</a></span>&#8203;(double&nbsp;x,
 double&nbsp;y,
 double&nbsp;z)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i16">
+<tr class="rowColor" id="i17">
 <td class="colFirst"><code><a href="../hit/BlockHitResult.html" title="class in net.minecraft.util.hit">BlockHitResult</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#rayTrace(net.minecraft.util.math.Vec3d,net.minecraft.util.math.Vec3d,net.minecraft.util.math.BlockPos)">rayTrace</a></span>&#8203;(<a href="../math/Vec3d.html" title="class in net.minecraft.util.math">Vec3d</a>&nbsp;start,
 <a href="../math/Vec3d.html" title="class in net.minecraft.util.math">Vec3d</a>&nbsp;end,
 <a href="../math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i17">
+<tr class="altColor" id="i18">
 <td class="colFirst"><code><a href="VoxelShape.html" title="class in net.minecraft.util.shape">VoxelShape</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#simplify()">simplify</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i18">
+<tr class="rowColor" id="i19">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#toString()">toString</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
@@ -307,6 +317,13 @@ double&nbsp;z)</code></th>
 <div class="memberSignature"><span class="modifiers">protected final</span>&nbsp;<span class="returnType"><a href="VoxelSet.html" title="class in net.minecraft.util.shape">VoxelSet</a></span>&nbsp;<span class="memberName">voxels</span></div>
 </section>
 </li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="shapeCache">shapeCache</a></h3>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="VoxelShape.html" title="class in net.minecraft.util.shape">VoxelShape</a>[]</span>&nbsp;<span class="memberName">shapeCache</span></div>
+</section>
+</li>
 </ul>
 </section>
 </li>
@@ -335,14 +352,14 @@ double&nbsp;z)</code></th>
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="getMinimum(net.minecraft.util.math.Direction.Axis)">getMinimum</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">double</span>&nbsp;<span class="memberName">getMinimum</span>&#8203;(<span class="arguments"><a href="../math/Direction.Axis.html" title="enum in net.minecraft.util.math">Direction.Axis</a>&nbsp;axis)</span></div>
+<h3><a id="getMin(net.minecraft.util.math.Direction.Axis)">getMin</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">double</span>&nbsp;<span class="memberName">getMin</span>&#8203;(<span class="arguments"><a href="../math/Direction.Axis.html" title="enum in net.minecraft.util.math">Direction.Axis</a>&nbsp;axis)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="getMaximum(net.minecraft.util.math.Direction.Axis)">getMaximum</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">double</span>&nbsp;<span class="memberName">getMaximum</span>&#8203;(<span class="arguments"><a href="../math/Direction.Axis.html" title="enum in net.minecraft.util.math">Direction.Axis</a>&nbsp;axis)</span></div>
+<h3><a id="getMax(net.minecraft.util.math.Direction.Axis)">getMax</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">double</span>&nbsp;<span class="memberName">getMax</span>&#8203;(<span class="arguments"><a href="../math/Direction.Axis.html" title="enum in net.minecraft.util.math">Direction.Axis</a>&nbsp;axis)</span></div>
 </section>
 </li>
 <li class="blockList">
@@ -361,7 +378,7 @@ int&nbsp;index)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getPointPositions(net.minecraft.util.math.Direction.Axis)">getPointPositions</a></h3>
-<div class="memberSignature"><span class="modifiers">protected abstract</span>&nbsp;<span class="returnType">it.unimi.dsi.fastutil.doubles.DoubleList</span>&nbsp;<span class="memberName">getPointPositions</span>&#8203;(<span class="arguments"><a href="../math/Direction.Axis.html" title="enum in net.minecraft.util.math">Direction.Axis</a>&nbsp;axis)</span></div>
+<div class="memberSignature"><span class="modifiers">protected abstract</span>&nbsp;<span class="returnType"><a href="http://fastutil.di.unimi.it/docs/it/unimi/dsi/fastutil/doubles/DoubleList.html?is-external=true" title="class or interface in it.unimi.dsi.fastutil.doubles" class="externalLink">DoubleList</a></span>&nbsp;<span class="memberName">getPointPositions</span>&#8203;(<span class="arguments"><a href="../math/Direction.Axis.html" title="enum in net.minecraft.util.math">Direction.Axis</a>&nbsp;axis)</span></div>
 </section>
 </li>
 <li class="blockList">
@@ -430,7 +447,7 @@ double&nbsp;z)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="rayTrace(net.minecraft.util.math.Vec3d,net.minecraft.util.math.Vec3d,net.minecraft.util.math.BlockPos)">rayTrace</a></h3>
-<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 </span><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../hit/BlockHitResult.html" title="class in net.minecraft.util.hit">BlockHitResult</a></span>&nbsp;<span class="memberName">rayTrace</span>&#8203;(<span class="arguments"><a href="../math/Vec3d.html" title="class in net.minecraft.util.math">Vec3d</a>&nbsp;start,
 <a href="../math/Vec3d.html" title="class in net.minecraft.util.math">Vec3d</a>&nbsp;end,
 <a href="../math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</span></div>
@@ -440,6 +457,12 @@ double&nbsp;z)</span></div>
 <section class="detail">
 <h3><a id="getFace(net.minecraft.util.math.Direction)">getFace</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="VoxelShape.html" title="class in net.minecraft.util.shape">VoxelShape</a></span>&nbsp;<span class="memberName">getFace</span>&#8203;(<span class="arguments"><a href="../math/Direction.html" title="enum in net.minecraft.util.math">Direction</a>&nbsp;facing)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="getUncachedFace(net.minecraft.util.math.Direction)">getUncachedFace</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="VoxelShape.html" title="class in net.minecraft.util.shape">VoxelShape</a></span>&nbsp;<span class="memberName">getUncachedFace</span>&#8203;(<span class="arguments"><a href="../math/Direction.html" title="enum in net.minecraft.util.math">Direction</a>&nbsp;facing)</span></div>
 </section>
 </li>
 <li class="blockList">

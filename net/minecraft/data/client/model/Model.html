@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10};
+<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -56,13 +56,13 @@ loadScripts(document, 'script');</script>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
@@ -96,6 +96,43 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </section>
 <section class="summary">
 <ul class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<li class="blockList">
+<section class="fieldSummary"><a id="field.summary">
+<!--   -->
+</a>
+<h2>Field Summary</h2>
+<div class="memberSummary">
+<table>
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<thead>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colSecond" scope="col">Field</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util" class="externalLink">Optional</a>&lt;<a href="../../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#parent">parent</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="TextureKey.html" title="class in net.minecraft.data.client.model">TextureKey</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#requiredTextures">requiredTextures</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util" class="externalLink">Optional</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#variant">variant</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</li>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <li class="blockList">
 <section class="constructorSummary"><a id="constructor.summary">
@@ -142,33 +179,38 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </thead>
 <tbody>
 <tr class="altColor" id="i0">
-<td class="colFirst"><code><a href="../../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#upload(net.minecraft.block.Block,java.lang.String,net.minecraft.data.client.model.Texture,java.util.function.BiConsumer)">upload</a></span>&#8203;(<a href="../../../block/Block.html" title="class in net.minecraft.block">Block</a>&nbsp;block,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;suffix,
-<a href="Texture.html" title="class in net.minecraft.data.client.model">Texture</a>&nbsp;texture,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/BiConsumer.html?is-external=true" title="class or interface in java.util.function" class="externalLink">BiConsumer</a>&lt;<a href="../../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Supplier</a>&lt;com.google.gson.JsonElement&gt;&gt;&nbsp;modelCollector)</code></th>
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util" class="externalLink">Map</a>&lt;<a href="TextureKey.html" title="class in net.minecraft.data.client.model">TextureKey</a>,&#8203;<a href="../../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createTextureMap(net.minecraft.data.client.model.Texture)">createTextureMap</a></span>&#8203;(<a href="Texture.html" title="class in net.minecraft.data.client.model">Texture</a>&nbsp;texture)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
 <td class="colFirst"><code><a href="../../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#upload(net.minecraft.block.Block,net.minecraft.data.client.model.Texture,java.util.function.BiConsumer)">upload</a></span>&#8203;(<a href="../../../block/Block.html" title="class in net.minecraft.block">Block</a>&nbsp;block,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#upload(net.minecraft.block.Block,java.lang.String,net.minecraft.data.client.model.Texture,java.util.function.BiConsumer)">upload</a></span>&#8203;(<a href="../../../block/Block.html" title="class in net.minecraft.block">Block</a>&nbsp;block,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;suffix,
 <a href="Texture.html" title="class in net.minecraft.data.client.model">Texture</a>&nbsp;texture,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/BiConsumer.html?is-external=true" title="class or interface in java.util.function" class="externalLink">BiConsumer</a>&lt;<a href="../../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Supplier</a>&lt;com.google.gson.JsonElement&gt;&gt;&nbsp;modelCollector)</code></th>
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/BiConsumer.html?is-external=true" title="class or interface in java.util.function" class="externalLink">BiConsumer</a>&lt;<a href="../../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Supplier</a>&lt;<a href="https://www.javadoc.io/doc/com.google.code.gson/gson/2.8.0/com/google/gson/JsonElement.html?is-external=true" title="class or interface in com.google.gson" class="externalLink">JsonElement</a>&gt;&gt;&nbsp;modelCollector)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i2">
 <td class="colFirst"><code><a href="../../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#upload(net.minecraft.util.Identifier,net.minecraft.data.client.model.Texture,java.util.function.BiConsumer)">upload</a></span>&#8203;(<a href="../../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;id,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#upload(net.minecraft.block.Block,net.minecraft.data.client.model.Texture,java.util.function.BiConsumer)">upload</a></span>&#8203;(<a href="../../../block/Block.html" title="class in net.minecraft.block">Block</a>&nbsp;block,
 <a href="Texture.html" title="class in net.minecraft.data.client.model">Texture</a>&nbsp;texture,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/BiConsumer.html?is-external=true" title="class or interface in java.util.function" class="externalLink">BiConsumer</a>&lt;<a href="../../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Supplier</a>&lt;com.google.gson.JsonElement&gt;&gt;&nbsp;modelCollector)</code></th>
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/BiConsumer.html?is-external=true" title="class or interface in java.util.function" class="externalLink">BiConsumer</a>&lt;<a href="../../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Supplier</a>&lt;<a href="https://www.javadoc.io/doc/com.google.code.gson/gson/2.8.0/com/google/gson/JsonElement.html?is-external=true" title="class or interface in com.google.gson" class="externalLink">JsonElement</a>&gt;&gt;&nbsp;modelCollector)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i3">
 <td class="colFirst"><code><a href="../../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#upload(net.minecraft.util.Identifier,net.minecraft.data.client.model.Texture,java.util.function.BiConsumer)">upload</a></span>&#8203;(<a href="../../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;id,
+<a href="Texture.html" title="class in net.minecraft.data.client.model">Texture</a>&nbsp;texture,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/BiConsumer.html?is-external=true" title="class or interface in java.util.function" class="externalLink">BiConsumer</a>&lt;<a href="../../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Supplier</a>&lt;<a href="https://www.javadoc.io/doc/com.google.code.gson/gson/2.8.0/com/google/gson/JsonElement.html?is-external=true" title="class or interface in com.google.gson" class="externalLink">JsonElement</a>&gt;&gt;&nbsp;modelCollector)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i4">
+<td class="colFirst"><code><a href="../../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#uploadWithoutVariant(net.minecraft.block.Block,java.lang.String,net.minecraft.data.client.model.Texture,java.util.function.BiConsumer)">uploadWithoutVariant</a></span>&#8203;(<a href="../../../block/Block.html" title="class in net.minecraft.block">Block</a>&nbsp;block,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;suffix,
 <a href="Texture.html" title="class in net.minecraft.data.client.model">Texture</a>&nbsp;texture,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/BiConsumer.html?is-external=true" title="class or interface in java.util.function" class="externalLink">BiConsumer</a>&lt;<a href="../../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Supplier</a>&lt;com.google.gson.JsonElement&gt;&gt;&nbsp;modelCollector)</code></th>
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/BiConsumer.html?is-external=true" title="class or interface in java.util.function" class="externalLink">BiConsumer</a>&lt;<a href="../../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Supplier</a>&lt;<a href="https://www.javadoc.io/doc/com.google.code.gson/gson/2.8.0/com/google/gson/JsonElement.html?is-external=true" title="class or interface in com.google.gson" class="externalLink">JsonElement</a>&gt;&gt;&nbsp;modelCollector)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -186,6 +228,34 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </section>
 <section class="details">
 <ul class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<li class="blockList">
+<section class="fieldDetails"><a id="field.detail">
+<!--   -->
+</a>
+<h2>Field Details</h2>
+<ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="parent">parent</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util" class="externalLink">Optional</a>&lt;<a href="../../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&gt;</span>&nbsp;<span class="memberName">parent</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="requiredTextures">requiredTextures</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="TextureKey.html" title="class in net.minecraft.data.client.model">TextureKey</a>&gt;</span>&nbsp;<span class="memberName">requiredTextures</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="variant">variant</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util" class="externalLink">Optional</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&gt;</span>&nbsp;<span class="memberName">variant</span></div>
+</section>
+</li>
+</ul>
+</section>
+</li>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <li class="blockList">
 <section class="constructorDetails"><a id="constructor.detail">
@@ -216,7 +286,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h3><a id="upload(net.minecraft.block.Block,net.minecraft.data.client.model.Texture,java.util.function.BiConsumer)">upload</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a></span>&nbsp;<span class="memberName">upload</span>&#8203;(<span class="arguments"><a href="../../../block/Block.html" title="class in net.minecraft.block">Block</a>&nbsp;block,
 <a href="Texture.html" title="class in net.minecraft.data.client.model">Texture</a>&nbsp;texture,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/BiConsumer.html?is-external=true" title="class or interface in java.util.function" class="externalLink">BiConsumer</a>&lt;<a href="../../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Supplier</a>&lt;com.google.gson.JsonElement&gt;&gt;&nbsp;modelCollector)</span></div>
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/BiConsumer.html?is-external=true" title="class or interface in java.util.function" class="externalLink">BiConsumer</a>&lt;<a href="../../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Supplier</a>&lt;<a href="https://www.javadoc.io/doc/com.google.code.gson/gson/2.8.0/com/google/gson/JsonElement.html?is-external=true" title="class or interface in com.google.gson" class="externalLink">JsonElement</a>&gt;&gt;&nbsp;modelCollector)</span></div>
 </section>
 </li>
 <li class="blockList">
@@ -225,7 +295,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a></span>&nbsp;<span class="memberName">upload</span>&#8203;(<span class="arguments"><a href="../../../block/Block.html" title="class in net.minecraft.block">Block</a>&nbsp;block,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;suffix,
 <a href="Texture.html" title="class in net.minecraft.data.client.model">Texture</a>&nbsp;texture,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/BiConsumer.html?is-external=true" title="class or interface in java.util.function" class="externalLink">BiConsumer</a>&lt;<a href="../../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Supplier</a>&lt;com.google.gson.JsonElement&gt;&gt;&nbsp;modelCollector)</span></div>
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/BiConsumer.html?is-external=true" title="class or interface in java.util.function" class="externalLink">BiConsumer</a>&lt;<a href="../../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Supplier</a>&lt;<a href="https://www.javadoc.io/doc/com.google.code.gson/gson/2.8.0/com/google/gson/JsonElement.html?is-external=true" title="class or interface in com.google.gson" class="externalLink">JsonElement</a>&gt;&gt;&nbsp;modelCollector)</span></div>
 </section>
 </li>
 <li class="blockList">
@@ -234,7 +304,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a></span>&nbsp;<span class="memberName">uploadWithoutVariant</span>&#8203;(<span class="arguments"><a href="../../../block/Block.html" title="class in net.minecraft.block">Block</a>&nbsp;block,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;suffix,
 <a href="Texture.html" title="class in net.minecraft.data.client.model">Texture</a>&nbsp;texture,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/BiConsumer.html?is-external=true" title="class or interface in java.util.function" class="externalLink">BiConsumer</a>&lt;<a href="../../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Supplier</a>&lt;com.google.gson.JsonElement&gt;&gt;&nbsp;modelCollector)</span></div>
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/BiConsumer.html?is-external=true" title="class or interface in java.util.function" class="externalLink">BiConsumer</a>&lt;<a href="../../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Supplier</a>&lt;<a href="https://www.javadoc.io/doc/com.google.code.gson/gson/2.8.0/com/google/gson/JsonElement.html?is-external=true" title="class or interface in com.google.gson" class="externalLink">JsonElement</a>&gt;&gt;&nbsp;modelCollector)</span></div>
 </section>
 </li>
 <li class="blockList">
@@ -242,7 +312,13 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h3><a id="upload(net.minecraft.util.Identifier,net.minecraft.data.client.model.Texture,java.util.function.BiConsumer)">upload</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a></span>&nbsp;<span class="memberName">upload</span>&#8203;(<span class="arguments"><a href="../../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;id,
 <a href="Texture.html" title="class in net.minecraft.data.client.model">Texture</a>&nbsp;texture,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/BiConsumer.html?is-external=true" title="class or interface in java.util.function" class="externalLink">BiConsumer</a>&lt;<a href="../../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Supplier</a>&lt;com.google.gson.JsonElement&gt;&gt;&nbsp;modelCollector)</span></div>
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/BiConsumer.html?is-external=true" title="class or interface in java.util.function" class="externalLink">BiConsumer</a>&lt;<a href="../../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Supplier</a>&lt;<a href="https://www.javadoc.io/doc/com.google.code.gson/gson/2.8.0/com/google/gson/JsonElement.html?is-external=true" title="class or interface in com.google.gson" class="externalLink">JsonElement</a>&gt;&gt;&nbsp;modelCollector)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="createTextureMap(net.minecraft.data.client.model.Texture)">createTextureMap</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util" class="externalLink">Map</a>&lt;<a href="TextureKey.html" title="class in net.minecraft.data.client.model">TextureKey</a>,&#8203;<a href="../../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&gt;</span>&nbsp;<span class="memberName">createTextureMap</span>&#8203;(<span class="arguments"><a href="Texture.html" title="class in net.minecraft.data.client.model">Texture</a>&nbsp;texture)</span></div>
 </section>
 </li>
 </ul>
@@ -278,13 +354,13 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>

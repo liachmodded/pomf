@@ -118,6 +118,21 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#ANY">ANY</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../fluid/Fluid.html" title="class in net.minecraft.fluid">Fluid</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#fluid">fluid</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="StatePredicate.html" title="class in net.minecraft.predicate">StatePredicate</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#state">state</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../tag/Tag.html" title="interface in net.minecraft.tag">Tag</a>&lt;<a href="../fluid/Fluid.html" title="class in net.minecraft.fluid">Fluid</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#tag">tag</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -170,7 +185,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tbody>
 <tr class="altColor" id="i0">
 <td class="colFirst"><code>static <a href="FluidPredicate.html" title="class in net.minecraft.predicate">FluidPredicate</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#fromJson(com.google.gson.JsonElement)">fromJson</a></span>&#8203;(com.google.gson.JsonElement&nbsp;json)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#fromJson(com.google.gson.JsonElement)">fromJson</a></span>&#8203;(<a href="https://www.javadoc.io/doc/com.google.code.gson/gson/2.8.0/com/google/gson/JsonElement.html?is-external=true" title="class or interface in com.google.gson" class="externalLink">JsonElement</a>&nbsp;json)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
@@ -180,7 +195,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i2">
-<td class="colFirst"><code>com.google.gson.JsonElement</code></td>
+<td class="colFirst"><code><a href="https://www.javadoc.io/doc/com.google.code.gson/gson/2.8.0/com/google/gson/JsonElement.html?is-external=true" title="class or interface in com.google.gson" class="externalLink">JsonElement</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#toJson()">toJson</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -212,6 +227,26 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="FluidPredicate.html" title="class in net.minecraft.predicate">FluidPredicate</a></span>&nbsp;<span class="memberName">ANY</span></div>
 </section>
 </li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="tag">tag</a></h3>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../tag/Tag.html" title="interface in net.minecraft.tag">Tag</a>&lt;<a href="../fluid/Fluid.html" title="class in net.minecraft.fluid">Fluid</a>&gt;</span>&nbsp;<span class="memberName">tag</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="fluid">fluid</a></h3>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../fluid/Fluid.html" title="class in net.minecraft.fluid">Fluid</a></span>&nbsp;<span class="memberName">fluid</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="state">state</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="StatePredicate.html" title="class in net.minecraft.predicate">StatePredicate</a></span>&nbsp;<span class="memberName">state</span></div>
+</section>
+</li>
 </ul>
 </section>
 </li>
@@ -225,9 +260,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <section class="detail">
 <h3><a id="&lt;init&gt;(net.minecraft.tag.Tag,net.minecraft.fluid.Fluid,net.minecraft.predicate.StatePredicate)">FluidPredicate</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">FluidPredicate</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">FluidPredicate</span>&#8203;(<span class="arguments"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 <a href="../tag/Tag.html" title="interface in net.minecraft.tag">Tag</a>&lt;<a href="../fluid/Fluid.html" title="class in net.minecraft.fluid">Fluid</a>&gt;&nbsp;tag,
-<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 <a href="../fluid/Fluid.html" title="class in net.minecraft.fluid">Fluid</a>&nbsp;fluid,
 <a href="StatePredicate.html" title="class in net.minecraft.predicate">StatePredicate</a>&nbsp;state)</span></div>
 </section>
@@ -252,14 +287,14 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <section class="detail">
 <h3><a id="fromJson(com.google.gson.JsonElement)">fromJson</a></h3>
-<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType"><a href="FluidPredicate.html" title="class in net.minecraft.predicate">FluidPredicate</a></span>&nbsp;<span class="memberName">fromJson</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
-com.google.gson.JsonElement&nbsp;json)</span></div>
+<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType"><a href="FluidPredicate.html" title="class in net.minecraft.predicate">FluidPredicate</a></span>&nbsp;<span class="memberName">fromJson</span>&#8203;(<span class="arguments"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<a href="https://www.javadoc.io/doc/com.google.code.gson/gson/2.8.0/com/google/gson/JsonElement.html?is-external=true" title="class or interface in com.google.gson" class="externalLink">JsonElement</a>&nbsp;json)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="toJson()">toJson</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">com.google.gson.JsonElement</span>&nbsp;<span class="memberName">toJson</span>()</div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="https://www.javadoc.io/doc/com.google.code.gson/gson/2.8.0/com/google/gson/JsonElement.html?is-external=true" title="class or interface in com.google.gson" class="externalLink">JsonElement</a></span>&nbsp;<span class="memberName">toJson</span>()</div>
 </section>
 </li>
 </ul>

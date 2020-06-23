@@ -56,13 +56,13 @@ loadScripts(document, 'script');</script>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
@@ -111,6 +111,33 @@ extends <a href="MultiplayerServerListWidget.Entry.html" title="class in net.min
 </section>
 <section class="summary">
 <ul class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<li class="blockList">
+<section class="fieldSummary"><a id="field.summary">
+<!--   -->
+</a>
+<h2>Field Summary</h2>
+<div class="memberSummary">
+<table>
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<thead>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colSecond" scope="col">Field</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../MinecraftClient.html" title="class in net.minecraft.client">MinecraftClient</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#client">client</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</li>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <li class="blockList">
 <section class="constructorSummary"><a id="constructor.summary">
@@ -156,15 +183,16 @@ extends <a href="MultiplayerServerListWidget.Entry.html" title="class in net.min
 <tbody>
 <tr class="altColor" id="i0">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#render(int,int,int,int,int,int,int,boolean,float)">render</a></span>&#8203;(int&nbsp;index,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#render(net.minecraft.client.util.math.MatrixStack,int,int,int,int,int,int,int,boolean,float)">render</a></span>&#8203;(<a href="../../../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
+int&nbsp;index,
 int&nbsp;y,
 int&nbsp;x,
-int&nbsp;width,
-int&nbsp;height,
+int&nbsp;entryWidth,
+int&nbsp;entryHeight,
 int&nbsp;mouseX,
 int&nbsp;mouseY,
-boolean&nbsp;hovering,
-float&nbsp;delta)</code></th>
+boolean&nbsp;hovered,
+float&nbsp;tickDelta)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -197,6 +225,22 @@ float&nbsp;delta)</code></th>
 </section>
 <section class="details">
 <ul class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<li class="blockList">
+<section class="fieldDetails"><a id="field.detail">
+<!--   -->
+</a>
+<h2>Field Details</h2>
+<ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="client">client</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../../../MinecraftClient.html" title="class in net.minecraft.client">MinecraftClient</a></span>&nbsp;<span class="memberName">client</span></div>
+</section>
+</li>
+</ul>
+</section>
+</li>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <li class="blockList">
 <section class="constructorDetails"><a id="constructor.detail">
@@ -222,19 +266,20 @@ float&nbsp;delta)</code></th>
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="render(int,int,int,int,int,int,int,boolean,float)">render</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">render</span>&#8203;(<span class="arguments">int&nbsp;index,
+<h3><a id="render(net.minecraft.client.util.math.MatrixStack,int,int,int,int,int,int,int,boolean,float)">render</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">render</span>&#8203;(<span class="arguments"><a href="../../../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
+int&nbsp;index,
 int&nbsp;y,
 int&nbsp;x,
-int&nbsp;width,
-int&nbsp;height,
+int&nbsp;entryWidth,
+int&nbsp;entryHeight,
 int&nbsp;mouseX,
 int&nbsp;mouseY,
-boolean&nbsp;hovering,
-float&nbsp;delta)</span></div>
+boolean&nbsp;hovered,
+float&nbsp;tickDelta)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../widget/EntryListWidget.Entry.html#render(int,int,int,int,int,int,int,boolean,float)">render</a></code>&nbsp;in class&nbsp;<code><a href="../../widget/EntryListWidget.Entry.html" title="class in net.minecraft.client.gui.widget">EntryListWidget.Entry</a>&lt;<a href="MultiplayerServerListWidget.Entry.html" title="class in net.minecraft.client.gui.screen.multiplayer">MultiplayerServerListWidget.Entry</a>&gt;</code></dd>
+<dd><code><a href="../../widget/EntryListWidget.Entry.html#render(net.minecraft.client.util.math.MatrixStack,int,int,int,int,int,int,int,boolean,float)">render</a></code>&nbsp;in class&nbsp;<code><a href="../../widget/EntryListWidget.Entry.html" title="class in net.minecraft.client.gui.widget">EntryListWidget.Entry</a>&lt;<a href="MultiplayerServerListWidget.Entry.html" title="class in net.minecraft.client.gui.screen.multiplayer">MultiplayerServerListWidget.Entry</a>&gt;</code></dd>
 </dl>
 </section>
 </li>
@@ -271,13 +316,13 @@ float&nbsp;delta)</span></div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>

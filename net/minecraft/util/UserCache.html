@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":9};
+<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":9,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":9,"i10":9};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -146,13 +146,48 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </thead>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Deque.html?is-external=true" title="class or interface in java.util" class="externalLink">Deque</a>&lt;com.mojang.authlib.GameProfile&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#byAccessTime">byAccessTime</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util" class="externalLink">Map</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>,&#8203;<a href="UserCache.Entry.html" title="class in net.minecraft.util">UserCache.Entry</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#byName">byName</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util" class="externalLink">Map</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util" class="externalLink">UUID</a>,&#8203;<a href="UserCache.Entry.html" title="class in net.minecraft.util">UserCache.Entry</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#byUuid">byUuid</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io" class="externalLink">File</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#cacheFile">cacheFile</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="https://www.javadoc.io/doc/com.google.code.gson/gson/2.8.0/com/google/gson/reflect/TypeToken.html?is-external=true" title="class or interface in com.google.gson.reflect" class="externalLink">TypeToken</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="UserCache.Entry.html" title="class in net.minecraft.util">UserCache.Entry</a>&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#ENTRY_LIST_TYPE">ENTRY_LIST_TYPE</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/text/SimpleDateFormat.html?is-external=true" title="class or interface in java.text" class="externalLink">SimpleDateFormat</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#EXPIRATION_DATE_FORMAT">EXPIRATION_DATE_FORMAT</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
-<td class="colFirst"><code>protected com.google.gson.Gson</code></td>
+<tr class="altColor">
+<td class="colFirst"><code>protected <a href="https://www.javadoc.io/doc/com.google.code.gson/gson/2.8.0/com/google/gson/Gson.html?is-external=true" title="class or interface in com.google.gson" class="externalLink">Gson</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#gson">gson</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private com.mojang.authlib.GameProfileRepository</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#profileRepository">profileRepository</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#useRemote">useRemote</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -210,28 +245,55 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
-<td class="colFirst"><code>com.mojang.authlib.GameProfile</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#findByName(java.lang.String)">findByName</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;string)</code></th>
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#add(com.mojang.authlib.GameProfile,java.util.Date)">add</a></span>&#8203;(com.mojang.authlib.GameProfile&nbsp;profile,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Date.html?is-external=true" title="class or interface in java.util" class="externalLink">Date</a>&nbsp;date)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i2">
 <td class="colFirst"><code>com.mojang.authlib.GameProfile</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getByUuid(java.util.UUID)">getByUuid</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util" class="externalLink">UUID</a>&nbsp;uUID)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#findByName(java.lang.String)">findByName</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;string)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i3">
+<td class="colFirst"><code>private static com.mojang.authlib.GameProfile</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#findProfileByName(com.mojang.authlib.GameProfileRepository,java.lang.String)">findProfileByName</a></span>&#8203;(com.mojang.authlib.GameProfileRepository&nbsp;repository,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i4">
+<td class="colFirst"><code>com.mojang.authlib.GameProfile</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getByUuid(java.util.UUID)">getByUuid</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util" class="externalLink">UUID</a>&nbsp;uUID)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i5">
+<td class="colFirst"><code>private <a href="UserCache.Entry.html" title="class in net.minecraft.util">UserCache.Entry</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getEntry(java.util.UUID)">getEntry</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util" class="externalLink">UUID</a>&nbsp;uUID)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i6">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="UserCache.Entry.html" title="class in net.minecraft.util">UserCache.Entry</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getLastAccessedEntries(int)">getLastAccessedEntries</a></span>&#8203;(int&nbsp;int2)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i7">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#load()">load</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i4">
+<tr class="altColor" id="i8">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#save()">save</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i5">
+<tr class="rowColor" id="i9">
 <td class="colFirst"><code>static void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setUseRemote(boolean)">setUseRemote</a></span>&#8203;(boolean&nbsp;value)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i10">
+<td class="colFirst"><code>private static boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#shouldUseRemote()">shouldUseRemote</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -264,8 +326,50 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </li>
 <li class="blockList">
 <section class="detail">
+<h3><a id="useRemote">useRemote</a></h3>
+<div class="memberSignature"><span class="modifiers">private static</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">useRemote</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="ENTRY_LIST_TYPE">ENTRY_LIST_TYPE</a></h3>
+<div class="memberSignature"><span class="modifiers">private static final</span>&nbsp;<span class="returnType"><a href="https://www.javadoc.io/doc/com.google.code.gson/gson/2.8.0/com/google/gson/reflect/TypeToken.html?is-external=true" title="class or interface in com.google.gson.reflect" class="externalLink">TypeToken</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="UserCache.Entry.html" title="class in net.minecraft.util">UserCache.Entry</a>&gt;&gt;</span>&nbsp;<span class="memberName">ENTRY_LIST_TYPE</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="byName">byName</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util" class="externalLink">Map</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>,&#8203;<a href="UserCache.Entry.html" title="class in net.minecraft.util">UserCache.Entry</a>&gt;</span>&nbsp;<span class="memberName">byName</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="byUuid">byUuid</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util" class="externalLink">Map</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util" class="externalLink">UUID</a>,&#8203;<a href="UserCache.Entry.html" title="class in net.minecraft.util">UserCache.Entry</a>&gt;</span>&nbsp;<span class="memberName">byUuid</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="byAccessTime">byAccessTime</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Deque.html?is-external=true" title="class or interface in java.util" class="externalLink">Deque</a>&lt;com.mojang.authlib.GameProfile&gt;</span>&nbsp;<span class="memberName">byAccessTime</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="profileRepository">profileRepository</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType">com.mojang.authlib.GameProfileRepository</span>&nbsp;<span class="memberName">profileRepository</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="gson">gson</a></h3>
-<div class="memberSignature"><span class="modifiers">protected final</span>&nbsp;<span class="returnType">com.google.gson.Gson</span>&nbsp;<span class="memberName">gson</span></div>
+<div class="memberSignature"><span class="modifiers">protected final</span>&nbsp;<span class="returnType"><a href="https://www.javadoc.io/doc/com.google.code.gson/gson/2.8.0/com/google/gson/Gson.html?is-external=true" title="class or interface in com.google.gson" class="externalLink">Gson</a></span>&nbsp;<span class="memberName">gson</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="cacheFile">cacheFile</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io" class="externalLink">File</a></span>&nbsp;<span class="memberName">cacheFile</span></div>
 </section>
 </li>
 </ul>
@@ -297,8 +401,21 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
+<h3><a id="findProfileByName(com.mojang.authlib.GameProfileRepository,java.lang.String)">findProfileByName</a></h3>
+<div class="memberSignature"><span class="modifiers">private static</span>&nbsp;<span class="returnType">com.mojang.authlib.GameProfile</span>&nbsp;<span class="memberName">findProfileByName</span>&#8203;(<span class="arguments">com.mojang.authlib.GameProfileRepository&nbsp;repository,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="setUseRemote(boolean)">setUseRemote</a></h3>
 <div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setUseRemote</span>&#8203;(<span class="arguments">boolean&nbsp;value)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="shouldUseRemote()">shouldUseRemote</a></h3>
+<div class="memberSignature"><span class="modifiers">private static</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">shouldUseRemote</span>()</div>
 </section>
 </li>
 <li class="blockList">
@@ -309,16 +426,29 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </li>
 <li class="blockList">
 <section class="detail">
+<h3><a id="add(com.mojang.authlib.GameProfile,java.util.Date)">add</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">add</span>&#8203;(<span class="arguments">com.mojang.authlib.GameProfile&nbsp;profile,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Date.html?is-external=true" title="class or interface in java.util" class="externalLink">Date</a>&nbsp;date)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="findByName(java.lang.String)">findByName</a></h3>
-<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 </span><span class="modifiers">public</span>&nbsp;<span class="returnType">com.mojang.authlib.GameProfile</span>&nbsp;<span class="memberName">findByName</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;string)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getByUuid(java.util.UUID)">getByUuid</a></h3>
-<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 </span><span class="modifiers">public</span>&nbsp;<span class="returnType">com.mojang.authlib.GameProfile</span>&nbsp;<span class="memberName">getByUuid</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util" class="externalLink">UUID</a>&nbsp;uUID)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="getEntry(java.util.UUID)">getEntry</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="UserCache.Entry.html" title="class in net.minecraft.util">UserCache.Entry</a></span>&nbsp;<span class="memberName">getEntry</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util" class="externalLink">UUID</a>&nbsp;uUID)</span></div>
 </section>
 </li>
 <li class="blockList">
@@ -331,6 +461,12 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <section class="detail">
 <h3><a id="save()">save</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">save</span>()</div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="getLastAccessedEntries(int)">getLastAccessedEntries</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="UserCache.Entry.html" title="class in net.minecraft.util">UserCache.Entry</a>&gt;</span>&nbsp;<span class="memberName">getLastAccessedEntries</span>&#8203;(<span class="arguments">int&nbsp;int2)</span></div>
 </section>
 </li>
 </ul>

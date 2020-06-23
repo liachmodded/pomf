@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":10};
+<script type="text/javascript">var data = {"i0":10,"i1":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -56,13 +56,13 @@ loadScripts(document, 'script');</script>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
@@ -101,6 +101,43 @@ implements <a href="ResourcePackProvider.html" title="interface in net.minecraft
 </section>
 <section class="summary">
 <ul class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<li class="blockList">
+<section class="fieldSummary"><a id="field.summary">
+<!--   -->
+</a>
+<h2>Field Summary</h2>
+<div class="memberSummary">
+<table>
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<thead>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colSecond" scope="col">Field</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="ResourcePackSource.html" title="interface in net.minecraft.resource">ResourcePackSource</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#field_25345">field_25345</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io" class="externalLink">File</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#packsFolder">packsFolder</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="https://docs.oracle.com/javase/8/docs/api/java/io/FileFilter.html?is-external=true" title="class or interface in java.io" class="externalLink">FileFilter</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#POSSIBLE_PACK">POSSIBLE_PACK</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</li>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <li class="blockList">
 <section class="constructorSummary"><a id="constructor.summary">
@@ -118,7 +155,8 @@ implements <a href="ResourcePackProvider.html" title="interface in net.minecraft
 </thead>
 <tbody>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.io.File)">FileResourcePackProvider</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io" class="externalLink">File</a>&nbsp;packsFolder)</code></th>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.io.File,net.minecraft.resource.ResourcePackSource)">FileResourcePackProvider</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io" class="externalLink">File</a>&nbsp;packsFolder,
+<a href="ResourcePackSource.html" title="interface in net.minecraft.resource">ResourcePackSource</a>&nbsp;resourcePackSource)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -145,8 +183,13 @@ implements <a href="ResourcePackProvider.html" title="interface in net.minecraft
 </thead>
 <tbody>
 <tr class="altColor" id="i0">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Supplier</a>&lt;<a href="ResourcePack.html" title="interface in net.minecraft.resource">ResourcePack</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createResourcePack(java.io.File)">createResourcePack</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io" class="externalLink">File</a>&nbsp;file)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i1">
 <td class="colFirst"><code>&lt;T extends <a href="ResourcePackProfile.html" title="class in net.minecraft.resource">ResourcePackProfile</a>&gt;<br>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#register(java.util.Map,net.minecraft.resource.ResourcePackProfile.Factory)">register</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util" class="externalLink">Map</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>,&#8203;T&gt;&nbsp;registry,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#register(java.util.function.Consumer,net.minecraft.resource.ResourcePackProfile.Factory)">register</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Consumer.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Consumer</a>&lt;T&gt;&nbsp;consumer,
 <a href="ResourcePackProfile.Factory.html" title="interface in net.minecraft.resource">ResourcePackProfile.Factory</a>&lt;T&gt;&nbsp;factory)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -165,6 +208,34 @@ implements <a href="ResourcePackProvider.html" title="interface in net.minecraft
 </section>
 <section class="details">
 <ul class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<li class="blockList">
+<section class="fieldDetails"><a id="field.detail">
+<!--   -->
+</a>
+<h2>Field Details</h2>
+<ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="POSSIBLE_PACK">POSSIBLE_PACK</a></h3>
+<div class="memberSignature"><span class="modifiers">private static final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/io/FileFilter.html?is-external=true" title="class or interface in java.io" class="externalLink">FileFilter</a></span>&nbsp;<span class="memberName">POSSIBLE_PACK</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="packsFolder">packsFolder</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io" class="externalLink">File</a></span>&nbsp;<span class="memberName">packsFolder</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="field_25345">field_25345</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="ResourcePackSource.html" title="interface in net.minecraft.resource">ResourcePackSource</a></span>&nbsp;<span class="memberName">field_25345</span></div>
+</section>
+</li>
+</ul>
+</section>
+</li>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <li class="blockList">
 <section class="constructorDetails"><a id="constructor.detail">
@@ -174,8 +245,9 @@ implements <a href="ResourcePackProvider.html" title="interface in net.minecraft
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="&lt;init&gt;(java.io.File)">FileResourcePackProvider</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">FileResourcePackProvider</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io" class="externalLink">File</a>&nbsp;packsFolder)</span></div>
+<h3><a id="&lt;init&gt;(java.io.File,net.minecraft.resource.ResourcePackSource)">FileResourcePackProvider</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">FileResourcePackProvider</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io" class="externalLink">File</a>&nbsp;packsFolder,
+<a href="ResourcePackSource.html" title="interface in net.minecraft.resource">ResourcePackSource</a>&nbsp;resourcePackSource)</span></div>
 </section>
 </li>
 </ul>
@@ -190,13 +262,19 @@ implements <a href="ResourcePackProvider.html" title="interface in net.minecraft
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="register(java.util.Map,net.minecraft.resource.ResourcePackProfile.Factory)">register</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="typeParameters">&lt;T extends <a href="ResourcePackProfile.html" title="class in net.minecraft.resource">ResourcePackProfile</a>&gt;</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">register</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util" class="externalLink">Map</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>,&#8203;T&gt;&nbsp;registry,
+<h3><a id="register(java.util.function.Consumer,net.minecraft.resource.ResourcePackProfile.Factory)">register</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="typeParameters">&lt;T extends <a href="ResourcePackProfile.html" title="class in net.minecraft.resource">ResourcePackProfile</a>&gt;</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">register</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Consumer.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Consumer</a>&lt;T&gt;&nbsp;consumer,
 <a href="ResourcePackProfile.Factory.html" title="interface in net.minecraft.resource">ResourcePackProfile.Factory</a>&lt;T&gt;&nbsp;factory)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="ResourcePackProvider.html#register(java.util.Map,net.minecraft.resource.ResourcePackProfile.Factory)">register</a></code>&nbsp;in interface&nbsp;<code><a href="ResourcePackProvider.html" title="interface in net.minecraft.resource">ResourcePackProvider</a></code></dd>
+<dd><code><a href="ResourcePackProvider.html#register(java.util.function.Consumer,net.minecraft.resource.ResourcePackProfile.Factory)">register</a></code>&nbsp;in interface&nbsp;<code><a href="ResourcePackProvider.html" title="interface in net.minecraft.resource">ResourcePackProvider</a></code></dd>
 </dl>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="createResourcePack(java.io.File)">createResourcePack</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Supplier</a>&lt;<a href="ResourcePack.html" title="interface in net.minecraft.resource">ResourcePack</a>&gt;</span>&nbsp;<span class="memberName">createResourcePack</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io" class="externalLink">File</a>&nbsp;file)</span></div>
 </section>
 </li>
 </ul>
@@ -232,13 +310,13 @@ implements <a href="ResourcePackProvider.html" title="interface in net.minecraft
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>

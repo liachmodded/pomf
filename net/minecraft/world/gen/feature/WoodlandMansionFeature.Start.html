@@ -87,7 +87,7 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="contentContainer">
 <div class="inheritance" title="Inheritance Tree"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">java.lang.Object</a>
-<div class="inheritance"><a href="../../../structure/StructureStart.html" title="class in net.minecraft.structure">net.minecraft.structure.StructureStart</a>
+<div class="inheritance"><a href="../../../structure/StructureStart.html" title="class in net.minecraft.structure">net.minecraft.structure.StructureStart</a>&lt;<a href="DefaultFeatureConfig.html" title="class in net.minecraft.world.gen.feature">DefaultFeatureConfig</a>&gt;
 <div class="inheritance">net.minecraft.world.gen.feature.WoodlandMansionFeature.Start</div>
 </div>
 </div>
@@ -98,7 +98,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <pre>public static class <span class="typeNameLabel">WoodlandMansionFeature.Start</span>
-extends <a href="../../../structure/StructureStart.html" title="class in net.minecraft.structure">StructureStart</a></pre>
+extends <a href="../../../structure/StructureStart.html" title="class in net.minecraft.structure">StructureStart</a>&lt;<a href="DefaultFeatureConfig.html" title="class in net.minecraft.world.gen.feature">DefaultFeatureConfig</a>&gt;</pre>
 </section>
 <section class="summary">
 <ul class="blockList">
@@ -132,7 +132,7 @@ extends <a href="../../../structure/StructureStart.html" title="class in net.min
 </thead>
 <tbody>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.world.gen.feature.StructureFeature,int,int,net.minecraft.util.math.BlockBox,int,long)">Start</a></span>&#8203;(<a href="StructureFeature.html" title="class in net.minecraft.world.gen.feature">StructureFeature</a>&lt;?&gt;&nbsp;feature,
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.world.gen.feature.StructureFeature,int,int,net.minecraft.util.math.BlockBox,int,long)">Start</a></span>&#8203;(<a href="StructureFeature.html" title="class in net.minecraft.world.gen.feature">StructureFeature</a>&lt;<a href="DefaultFeatureConfig.html" title="class in net.minecraft.world.gen.feature">DefaultFeatureConfig</a>&gt;&nbsp;feature,
 int&nbsp;chunkX,
 int&nbsp;chunkZ,
 <a href="../../../util/math/BlockBox.html" title="class in net.minecraft.util.math">BlockBox</a>&nbsp;box,
@@ -165,9 +165,9 @@ long&nbsp;seed)</code></th>
 <tbody>
 <tr class="altColor" id="i0">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#generateStructure(net.minecraft.world.IWorld,net.minecraft.world.gen.StructureAccessor,net.minecraft.world.gen.chunk.ChunkGenerator,java.util.Random,net.minecraft.util.math.BlockBox,net.minecraft.util.math.ChunkPos)">generateStructure</a></span>&#8203;(<a href="../../IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;world,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#generateStructure(net.minecraft.world.ServerWorldAccess,net.minecraft.world.gen.StructureAccessor,net.minecraft.world.gen.chunk.ChunkGenerator,java.util.Random,net.minecraft.util.math.BlockBox,net.minecraft.util.math.ChunkPos)">generateStructure</a></span>&#8203;(<a href="../../ServerWorldAccess.html" title="interface in net.minecraft.world">ServerWorldAccess</a>&nbsp;serverWorldAccess,
 <a href="../StructureAccessor.html" title="class in net.minecraft.world.gen">StructureAccessor</a>&nbsp;structureAccessor,
-<a href="../chunk/ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">ChunkGenerator</a>&lt;?&gt;&nbsp;chunkGenerator,
+<a href="../chunk/ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">ChunkGenerator</a>&nbsp;chunkGenerator,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random,
 <a href="../../../util/math/BlockBox.html" title="class in net.minecraft.util.math">BlockBox</a>&nbsp;blockBox,
 <a href="../../../util/math/ChunkPos.html" title="class in net.minecraft.util.math">ChunkPos</a>&nbsp;chunkPos)</code></th>
@@ -175,11 +175,12 @@ long&nbsp;seed)</code></th>
 </tr>
 <tr class="rowColor" id="i1">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#initialize(net.minecraft.world.gen.chunk.ChunkGenerator,net.minecraft.structure.StructureManager,int,int,net.minecraft.world.biome.Biome)">initialize</a></span>&#8203;(<a href="../chunk/ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">ChunkGenerator</a>&lt;?&gt;&nbsp;chunkGenerator,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#init(net.minecraft.world.gen.chunk.ChunkGenerator,net.minecraft.structure.StructureManager,int,int,net.minecraft.world.biome.Biome,net.minecraft.world.gen.feature.DefaultFeatureConfig)">init</a></span>&#8203;(<a href="../chunk/ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">ChunkGenerator</a>&nbsp;chunkGenerator,
 <a href="../../../structure/StructureManager.html" title="class in net.minecraft.structure">StructureManager</a>&nbsp;structureManager,
-int&nbsp;x,
-int&nbsp;z,
-<a href="../../biome/Biome.html" title="class in net.minecraft.world.biome">Biome</a>&nbsp;biome)</code></th>
+int&nbsp;int2,
+int&nbsp;int3,
+<a href="../../biome/Biome.html" title="class in net.minecraft.world.biome">Biome</a>&nbsp;biome,
+<a href="DefaultFeatureConfig.html" title="class in net.minecraft.world.gen.feature">DefaultFeatureConfig</a>&nbsp;defaultFeatureConfig)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -212,7 +213,7 @@ int&nbsp;z,
 <li class="blockList">
 <section class="detail">
 <h3><a id="&lt;init&gt;(net.minecraft.world.gen.feature.StructureFeature,int,int,net.minecraft.util.math.BlockBox,int,long)">Start</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">Start</span>&#8203;(<span class="arguments"><a href="StructureFeature.html" title="class in net.minecraft.world.gen.feature">StructureFeature</a>&lt;?&gt;&nbsp;feature,
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">Start</span>&#8203;(<span class="arguments"><a href="StructureFeature.html" title="class in net.minecraft.world.gen.feature">StructureFeature</a>&lt;<a href="DefaultFeatureConfig.html" title="class in net.minecraft.world.gen.feature">DefaultFeatureConfig</a>&gt;&nbsp;feature,
 int&nbsp;chunkX,
 int&nbsp;chunkZ,
 <a href="../../../util/math/BlockBox.html" title="class in net.minecraft.util.math">BlockBox</a>&nbsp;box,
@@ -232,30 +233,31 @@ long&nbsp;seed)</span></div>
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="initialize(net.minecraft.world.gen.chunk.ChunkGenerator,net.minecraft.structure.StructureManager,int,int,net.minecraft.world.biome.Biome)">initialize</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">initialize</span>&#8203;(<span class="arguments"><a href="../chunk/ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">ChunkGenerator</a>&lt;?&gt;&nbsp;chunkGenerator,
+<h3><a id="init(net.minecraft.world.gen.chunk.ChunkGenerator,net.minecraft.structure.StructureManager,int,int,net.minecraft.world.biome.Biome,net.minecraft.world.gen.feature.DefaultFeatureConfig)">init</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">init</span>&#8203;(<span class="arguments"><a href="../chunk/ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">ChunkGenerator</a>&nbsp;chunkGenerator,
 <a href="../../../structure/StructureManager.html" title="class in net.minecraft.structure">StructureManager</a>&nbsp;structureManager,
-int&nbsp;x,
-int&nbsp;z,
-<a href="../../biome/Biome.html" title="class in net.minecraft.world.biome">Biome</a>&nbsp;biome)</span></div>
+int&nbsp;int2,
+int&nbsp;int3,
+<a href="../../biome/Biome.html" title="class in net.minecraft.world.biome">Biome</a>&nbsp;biome,
+<a href="DefaultFeatureConfig.html" title="class in net.minecraft.world.gen.feature">DefaultFeatureConfig</a>&nbsp;defaultFeatureConfig)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../structure/StructureStart.html#initialize(net.minecraft.world.gen.chunk.ChunkGenerator,net.minecraft.structure.StructureManager,int,int,net.minecraft.world.biome.Biome)">initialize</a></code>&nbsp;in class&nbsp;<code><a href="../../../structure/StructureStart.html" title="class in net.minecraft.structure">StructureStart</a></code></dd>
+<dd><code><a href="../../../structure/StructureStart.html#init(net.minecraft.world.gen.chunk.ChunkGenerator,net.minecraft.structure.StructureManager,int,int,net.minecraft.world.biome.Biome,C)">init</a></code>&nbsp;in class&nbsp;<code><a href="../../../structure/StructureStart.html" title="class in net.minecraft.structure">StructureStart</a>&lt;<a href="DefaultFeatureConfig.html" title="class in net.minecraft.world.gen.feature">DefaultFeatureConfig</a>&gt;</code></dd>
 </dl>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="generateStructure(net.minecraft.world.IWorld,net.minecraft.world.gen.StructureAccessor,net.minecraft.world.gen.chunk.ChunkGenerator,java.util.Random,net.minecraft.util.math.BlockBox,net.minecraft.util.math.ChunkPos)">generateStructure</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">generateStructure</span>&#8203;(<span class="arguments"><a href="../../IWorld.html" title="interface in net.minecraft.world">IWorld</a>&nbsp;world,
+<h3><a id="generateStructure(net.minecraft.world.ServerWorldAccess,net.minecraft.world.gen.StructureAccessor,net.minecraft.world.gen.chunk.ChunkGenerator,java.util.Random,net.minecraft.util.math.BlockBox,net.minecraft.util.math.ChunkPos)">generateStructure</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">generateStructure</span>&#8203;(<span class="arguments"><a href="../../ServerWorldAccess.html" title="interface in net.minecraft.world">ServerWorldAccess</a>&nbsp;serverWorldAccess,
 <a href="../StructureAccessor.html" title="class in net.minecraft.world.gen">StructureAccessor</a>&nbsp;structureAccessor,
-<a href="../chunk/ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">ChunkGenerator</a>&lt;?&gt;&nbsp;chunkGenerator,
+<a href="../chunk/ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">ChunkGenerator</a>&nbsp;chunkGenerator,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random,
 <a href="../../../util/math/BlockBox.html" title="class in net.minecraft.util.math">BlockBox</a>&nbsp;blockBox,
 <a href="../../../util/math/ChunkPos.html" title="class in net.minecraft.util.math">ChunkPos</a>&nbsp;chunkPos)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code><a href="../../../structure/StructureStart.html#generateStructure(net.minecraft.world.IWorld,net.minecraft.world.gen.StructureAccessor,net.minecraft.world.gen.chunk.ChunkGenerator,java.util.Random,net.minecraft.util.math.BlockBox,net.minecraft.util.math.ChunkPos)">generateStructure</a></code>&nbsp;in class&nbsp;<code><a href="../../../structure/StructureStart.html" title="class in net.minecraft.structure">StructureStart</a></code></dd>
+<dd><code><a href="../../../structure/StructureStart.html#generateStructure(net.minecraft.world.ServerWorldAccess,net.minecraft.world.gen.StructureAccessor,net.minecraft.world.gen.chunk.ChunkGenerator,java.util.Random,net.minecraft.util.math.BlockBox,net.minecraft.util.math.ChunkPos)">generateStructure</a></code>&nbsp;in class&nbsp;<code><a href="../../../structure/StructureStart.html" title="class in net.minecraft.structure">StructureStart</a>&lt;<a href="DefaultFeatureConfig.html" title="class in net.minecraft.world.gen.feature">DefaultFeatureConfig</a>&gt;</code></dd>
 </dl>
 </section>
 </li>

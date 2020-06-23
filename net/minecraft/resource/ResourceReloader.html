@@ -150,18 +150,48 @@ implements <a href="ResourceReloadMonitor.html" title="interface in net.minecraf
 </thead>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#appliedCount">appliedCount</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#applyingCount">applyingCount</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html?is-external=true" title="class or interface in java.util.concurrent" class="externalLink">CompletableFuture</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="ResourceReloader.html" title="type parameter in ResourceReloader">S</a>&gt;&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#applyStageFuture">applyStageFuture</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#listenerCount">listenerCount</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="ResourceManager.html" title="interface in net.minecraft.resource">ResourceManager</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#manager">manager</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic" class="externalLink">AtomicInteger</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#preparedCount">preparedCount</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>protected <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html?is-external=true" title="class or interface in java.util.concurrent" class="externalLink">CompletableFuture</a>&lt;<a href="../util/Unit.html" title="enum in net.minecraft.util">Unit</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#prepareStageFuture">prepareStageFuture</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic" class="externalLink">AtomicInteger</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#preparingCount">preparingCount</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="ResourceReloadListener.html" title="interface in net.minecraft.resource">ResourceReloadListener</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#waitingListeners">waitingListeners</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -291,6 +321,42 @@ implements <a href="ResourceReloadMonitor.html" title="interface in net.minecraf
 <section class="detail">
 <h3><a id="applyStageFuture">applyStageFuture</a></h3>
 <div class="memberSignature"><span class="modifiers">protected final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html?is-external=true" title="class or interface in java.util.concurrent" class="externalLink">CompletableFuture</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="ResourceReloader.html" title="type parameter in ResourceReloader">S</a>&gt;&gt;</span>&nbsp;<span class="memberName">applyStageFuture</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="waitingListeners">waitingListeners</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="ResourceReloadListener.html" title="interface in net.minecraft.resource">ResourceReloadListener</a>&gt;</span>&nbsp;<span class="memberName">waitingListeners</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="listenerCount">listenerCount</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">listenerCount</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="applyingCount">applyingCount</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">applyingCount</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="appliedCount">appliedCount</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">appliedCount</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="preparingCount">preparingCount</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic" class="externalLink">AtomicInteger</a></span>&nbsp;<span class="memberName">preparingCount</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="preparedCount">preparedCount</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic" class="externalLink">AtomicInteger</a></span>&nbsp;<span class="memberName">preparedCount</span></div>
 </section>
 </li>
 </ul>

@@ -19,8 +19,8 @@
 <script type="text/javascript" src="../../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10};
-var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
+<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":9,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10};
+var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
@@ -115,8 +115,18 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </thead>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><code>it.unimi.dsi.fastutil.ints.Int2ObjectMap&lt;<a href="../../util/ModelIdentifier.html" title="class in net.minecraft.client.util">ModelIdentifier</a>&gt;</code></td>
+<td class="colFirst"><code><a href="http://fastutil.di.unimi.it/docs/it/unimi/dsi/fastutil/ints/Int2ObjectMap.html?is-external=true" title="class or interface in it.unimi.dsi.fastutil.ints" class="externalLink">Int2ObjectMap</a>&lt;<a href="../../util/ModelIdentifier.html" title="class in net.minecraft.client.util">ModelIdentifier</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#modelIds">modelIds</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../model/BakedModelManager.html" title="class in net.minecraft.client.render.model">BakedModelManager</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#modelManager">modelManager</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://fastutil.di.unimi.it/docs/it/unimi/dsi/fastutil/ints/Int2ObjectMap.html?is-external=true" title="class or interface in it.unimi.dsi.fastutil.ints" class="externalLink">Int2ObjectMap</a>&lt;<a href="../model/BakedModel.html" title="interface in net.minecraft.client.render.model">BakedModel</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#models">models</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -156,7 +166,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </a>
 <h2>Method Summary</h2>
 <div class="memberSummary">
-<div role="tablist" aria-orientation="horizontal"><button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t2" class="tableTab" onclick="show(2);">Instance Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t4" class="tableTab" onclick="show(8);">Concrete Methods</button></div>
+<div role="tablist" aria-orientation="horizontal"><button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t1" class="tableTab" onclick="show(1);">Static Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t2" class="tableTab" onclick="show(2);">Instance Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t4" class="tableTab" onclick="show(8);">Concrete Methods</button></div>
 <div id="memberSummary_tabpanel" role="tabpanel">
 <table aria-labelledby="t0">
 <thead>
@@ -178,27 +188,32 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i2">
+<td class="colFirst"><code>private static int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getModelId(net.minecraft.item.Item)">getModelId</a></span>&#8203;(<a href="../../../item/Item.html" title="class in net.minecraft.item">Item</a>&nbsp;item)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i3">
 <td class="colFirst"><code><a href="../model/BakedModelManager.html" title="class in net.minecraft.client.render.model">BakedModelManager</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getModelManager()">getModelManager</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i3">
+<tr class="altColor" id="i4">
 <td class="colFirst"><code><a href="../../texture/Sprite.html" title="class in net.minecraft.client.texture">Sprite</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getSprite(net.minecraft.item.ItemConvertible)">getSprite</a></span>&#8203;(<a href="../../../item/ItemConvertible.html" title="interface in net.minecraft.item">ItemConvertible</a>&nbsp;itemConvertible)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i4">
+<tr class="rowColor" id="i5">
 <td class="colFirst"><code><a href="../../texture/Sprite.html" title="class in net.minecraft.client.texture">Sprite</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getSprite(net.minecraft.item.ItemStack)">getSprite</a></span>&#8203;(<a href="../../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;stack)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i5">
+<tr class="altColor" id="i6">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#putModel(net.minecraft.item.Item,net.minecraft.client.util.ModelIdentifier)">putModel</a></span>&#8203;(<a href="../../../item/Item.html" title="class in net.minecraft.item">Item</a>&nbsp;item,
 <a href="../../util/ModelIdentifier.html" title="class in net.minecraft.client.util">ModelIdentifier</a>&nbsp;modelId)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i6">
+<tr class="rowColor" id="i7">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#reloadModels()">reloadModels</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
@@ -228,7 +243,19 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <section class="detail">
 <h3><a id="modelIds">modelIds</a></h3>
-<div class="memberSignature"><span class="modifiers">public final</span>&nbsp;<span class="returnType">it.unimi.dsi.fastutil.ints.Int2ObjectMap&lt;<a href="../../util/ModelIdentifier.html" title="class in net.minecraft.client.util">ModelIdentifier</a>&gt;</span>&nbsp;<span class="memberName">modelIds</span></div>
+<div class="memberSignature"><span class="modifiers">public final</span>&nbsp;<span class="returnType"><a href="http://fastutil.di.unimi.it/docs/it/unimi/dsi/fastutil/ints/Int2ObjectMap.html?is-external=true" title="class or interface in it.unimi.dsi.fastutil.ints" class="externalLink">Int2ObjectMap</a>&lt;<a href="../../util/ModelIdentifier.html" title="class in net.minecraft.client.util">ModelIdentifier</a>&gt;</span>&nbsp;<span class="memberName">modelIds</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="models">models</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="http://fastutil.di.unimi.it/docs/it/unimi/dsi/fastutil/ints/Int2ObjectMap.html?is-external=true" title="class or interface in it.unimi.dsi.fastutil.ints" class="externalLink">Int2ObjectMap</a>&lt;<a href="../model/BakedModel.html" title="interface in net.minecraft.client.render.model">BakedModel</a>&gt;</span>&nbsp;<span class="memberName">models</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="modelManager">modelManager</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../model/BakedModelManager.html" title="class in net.minecraft.client.render.model">BakedModelManager</a></span>&nbsp;<span class="memberName">modelManager</span></div>
 </section>
 </li>
 </ul>
@@ -278,8 +305,14 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <section class="detail">
 <h3><a id="getModel(net.minecraft.item.Item)">getModel</a></h3>
-<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 </span><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../model/BakedModel.html" title="interface in net.minecraft.client.render.model">BakedModel</a></span>&nbsp;<span class="memberName">getModel</span>&#8203;(<span class="arguments"><a href="../../../item/Item.html" title="class in net.minecraft.item">Item</a>&nbsp;item)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="getModelId(net.minecraft.item.Item)">getModelId</a></h3>
+<div class="memberSignature"><span class="modifiers">private static</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getModelId</span>&#8203;(<span class="arguments"><a href="../../../item/Item.html" title="class in net.minecraft.item">Item</a>&nbsp;item)</span></div>
 </section>
 </li>
 <li class="blockList">

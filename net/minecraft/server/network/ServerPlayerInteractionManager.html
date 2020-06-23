@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10};
+<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -118,11 +118,66 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </thead>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#blockBreakingProgress">blockBreakingProgress</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#failedMiningPos">failedMiningPos</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#failedStartMiningTime">failedStartMiningTime</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#failedToMine">failedToMine</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../world/GameMode.html" title="enum in net.minecraft.world">GameMode</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#field_25715">field_25715</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../world/GameMode.html" title="enum in net.minecraft.world">GameMode</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#gameMode">gameMode</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="https://logging.apache.org/log4j/2.x/log4j-api/apidocs/org/apache/logging/log4j/Logger.html?is-external=true" title="class or interface in org.apache.logging.log4j" class="externalLink">Logger</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#LOGGER">LOGGER</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#mining">mining</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#miningPos">miningPos</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="ServerPlayerEntity.html" title="class in net.minecraft.server.network">ServerPlayerEntity</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#player">player</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#startMiningTime">startMiningTime</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#tickCounter">tickCounter</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code><a href="../world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#world">world</a></span></code></th>
 <td class="colLast">&nbsp;</td>
@@ -176,45 +231,62 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </thead>
 <tbody>
 <tr class="altColor" id="i0">
+<td class="colFirst"><code>private float</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#continueMining(net.minecraft.block.BlockState,net.minecraft.util.math.BlockPos,int)">continueMining</a></span>&#8203;(<a href="../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state,
+<a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+int&nbsp;int2)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i1">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#finishMining(net.minecraft.util.math.BlockPos,net.minecraft.network.packet.c2s.play.PlayerActionC2SPacket.Action,java.lang.String)">finishMining</a></span>&#8203;(<a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#finishMining(net.minecraft.util.math.BlockPos,net.minecraft.network.packet.c2s.play.PlayerActionC2SPacket.Action,java.lang.String)">finishMining</a></span>&#8203;(<a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
 <a href="../../network/packet/c2s/play/PlayerActionC2SPacket.Action.html" title="enum in net.minecraft.network.packet.c2s.play">PlayerActionC2SPacket.Action</a>&nbsp;action,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;reason)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i1">
+<tr class="altColor" id="i2">
 <td class="colFirst"><code><a href="../../world/GameMode.html" title="enum in net.minecraft.world">GameMode</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getGameMode()">getGameMode</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i2">
+<tr class="rowColor" id="i3">
 <td class="colFirst"><code><a href="../../util/ActionResult.html" title="enum in net.minecraft.util">ActionResult</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#interactBlock(net.minecraft.entity.player.PlayerEntity,net.minecraft.world.World,net.minecraft.item.ItemStack,net.minecraft.util.Hand,net.minecraft.util.hit.BlockHitResult)">interactBlock</a></span>&#8203;(<a href="../../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;player,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#interactBlock(net.minecraft.server.network.ServerPlayerEntity,net.minecraft.world.World,net.minecraft.item.ItemStack,net.minecraft.util.Hand,net.minecraft.util.hit.BlockHitResult)">interactBlock</a></span>&#8203;(<a href="ServerPlayerEntity.html" title="class in net.minecraft.server.network">ServerPlayerEntity</a>&nbsp;player,
 <a href="../../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world,
 <a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;stack,
 <a href="../../util/Hand.html" title="enum in net.minecraft.util">Hand</a>&nbsp;hand,
 <a href="../../util/hit/BlockHitResult.html" title="class in net.minecraft.util.hit">BlockHitResult</a>&nbsp;hitResult)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i3">
+<tr class="altColor" id="i4">
 <td class="colFirst"><code><a href="../../util/ActionResult.html" title="enum in net.minecraft.util">ActionResult</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#interactItem(net.minecraft.entity.player.PlayerEntity,net.minecraft.world.World,net.minecraft.item.ItemStack,net.minecraft.util.Hand)">interactItem</a></span>&#8203;(<a href="../../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;player,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#interactItem(net.minecraft.server.network.ServerPlayerEntity,net.minecraft.world.World,net.minecraft.item.ItemStack,net.minecraft.util.Hand)">interactItem</a></span>&#8203;(<a href="ServerPlayerEntity.html" title="class in net.minecraft.server.network">ServerPlayerEntity</a>&nbsp;player,
 <a href="../../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world,
 <a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;stack,
 <a href="../../util/Hand.html" title="enum in net.minecraft.util">Hand</a>&nbsp;hand)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i4">
+<tr class="rowColor" id="i5">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isCreative()">isCreative</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i5">
+<tr class="altColor" id="i6">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isSurvivalLike()">isSurvivalLike</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i6">
+<tr class="rowColor" id="i7">
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_30118(net.minecraft.world.GameMode)">method_30118</a></span>&#8203;(<a href="../../world/GameMode.html" title="enum in net.minecraft.world">GameMode</a>&nbsp;gameMode)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i8">
+<td class="colFirst"><code><a href="../../world/GameMode.html" title="enum in net.minecraft.world">GameMode</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_30119()">method_30119</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i9">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#processBlockBreakingAction(net.minecraft.util.math.BlockPos,net.minecraft.network.packet.c2s.play.PlayerActionC2SPacket.Action,net.minecraft.util.math.Direction,int)">processBlockBreakingAction</a></span>&#8203;(<a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
 <a href="../../network/packet/c2s/play/PlayerActionC2SPacket.Action.html" title="enum in net.minecraft.network.packet.c2s.play">PlayerActionC2SPacket.Action</a>&nbsp;action,
@@ -222,27 +294,28 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 int&nbsp;worldHeight)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i7">
+<tr class="altColor" id="i10">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setGameMode(net.minecraft.world.GameMode)">setGameMode</a></span>&#8203;(<a href="../../world/GameMode.html" title="enum in net.minecraft.world">GameMode</a>&nbsp;gameMode)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setGameMode(net.minecraft.world.GameMode,net.minecraft.world.GameMode)">setGameMode</a></span>&#8203;(<a href="../../world/GameMode.html" title="enum in net.minecraft.world">GameMode</a>&nbsp;gameMode,
+<a href="../../world/GameMode.html" title="enum in net.minecraft.world">GameMode</a>&nbsp;gameMode2)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i8">
+<tr class="rowColor" id="i11">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setGameModeIfNotPresent(net.minecraft.world.GameMode)">setGameModeIfNotPresent</a></span>&#8203;(<a href="../../world/GameMode.html" title="enum in net.minecraft.world">GameMode</a>&nbsp;gameMode)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i9">
+<tr class="altColor" id="i12">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setWorld(net.minecraft.server.world.ServerWorld)">setWorld</a></span>&#8203;(<a href="../world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a>&nbsp;world)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i10">
+<tr class="rowColor" id="i13">
 <td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#tryBreakBlock(net.minecraft.util.math.BlockPos)">tryBreakBlock</a></span>&#8203;(<a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#tryBreakBlock(net.minecraft.util.math.BlockPos)">tryBreakBlock</a></span>&#8203;(<a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i11">
+<tr class="altColor" id="i14">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#update()">update</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
@@ -271,6 +344,12 @@ int&nbsp;worldHeight)</code></th>
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
+<h3><a id="LOGGER">LOGGER</a></h3>
+<div class="memberSignature"><span class="modifiers">private static final</span>&nbsp;<span class="returnType"><a href="https://logging.apache.org/log4j/2.x/log4j-api/apidocs/org/apache/logging/log4j/Logger.html?is-external=true" title="class or interface in org.apache.logging.log4j" class="externalLink">Logger</a></span>&nbsp;<span class="memberName">LOGGER</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="world">world</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a></span>&nbsp;<span class="memberName">world</span></div>
 </section>
@@ -279,6 +358,66 @@ int&nbsp;worldHeight)</code></th>
 <section class="detail">
 <h3><a id="player">player</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="ServerPlayerEntity.html" title="class in net.minecraft.server.network">ServerPlayerEntity</a></span>&nbsp;<span class="memberName">player</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="gameMode">gameMode</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="../../world/GameMode.html" title="enum in net.minecraft.world">GameMode</a></span>&nbsp;<span class="memberName">gameMode</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="field_25715">field_25715</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="../../world/GameMode.html" title="enum in net.minecraft.world">GameMode</a></span>&nbsp;<span class="memberName">field_25715</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="mining">mining</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">mining</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="startMiningTime">startMiningTime</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">startMiningTime</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="miningPos">miningPos</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a></span>&nbsp;<span class="memberName">miningPos</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="tickCounter">tickCounter</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">tickCounter</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="failedToMine">failedToMine</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">failedToMine</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="failedMiningPos">failedMiningPos</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a></span>&nbsp;<span class="memberName">failedMiningPos</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="failedStartMiningTime">failedStartMiningTime</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">failedStartMiningTime</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="blockBreakingProgress">blockBreakingProgress</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">blockBreakingProgress</span></div>
 </section>
 </li>
 </ul>
@@ -309,14 +448,27 @@ int&nbsp;worldHeight)</code></th>
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="setGameMode(net.minecraft.world.GameMode)">setGameMode</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setGameMode</span>&#8203;(<span class="arguments"><a href="../../world/GameMode.html" title="enum in net.minecraft.world">GameMode</a>&nbsp;gameMode)</span></div>
+<h3><a id="method_30118(net.minecraft.world.GameMode)">method_30118</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">method_30118</span>&#8203;(<span class="arguments"><a href="../../world/GameMode.html" title="enum in net.minecraft.world">GameMode</a>&nbsp;gameMode)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="setGameMode(net.minecraft.world.GameMode,net.minecraft.world.GameMode)">setGameMode</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setGameMode</span>&#8203;(<span class="arguments"><a href="../../world/GameMode.html" title="enum in net.minecraft.world">GameMode</a>&nbsp;gameMode,
+<a href="../../world/GameMode.html" title="enum in net.minecraft.world">GameMode</a>&nbsp;gameMode2)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getGameMode()">getGameMode</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../world/GameMode.html" title="enum in net.minecraft.world">GameMode</a></span>&nbsp;<span class="memberName">getGameMode</span>()</div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="method_30119()">method_30119</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../world/GameMode.html" title="enum in net.minecraft.world">GameMode</a></span>&nbsp;<span class="memberName">method_30119</span>()</div>
 </section>
 </li>
 <li class="blockList">
@@ -345,6 +497,14 @@ int&nbsp;worldHeight)</code></th>
 </li>
 <li class="blockList">
 <section class="detail">
+<h3><a id="continueMining(net.minecraft.block.BlockState,net.minecraft.util.math.BlockPos,int)">continueMining</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">float</span>&nbsp;<span class="memberName">continueMining</span>&#8203;(<span class="arguments"><a href="../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state,
+<a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+int&nbsp;int2)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="processBlockBreakingAction(net.minecraft.util.math.BlockPos,net.minecraft.network.packet.c2s.play.PlayerActionC2SPacket.Action,net.minecraft.util.math.Direction,int)">processBlockBreakingAction</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">processBlockBreakingAction</span>&#8203;(<span class="arguments"><a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
 <a href="../../network/packet/c2s/play/PlayerActionC2SPacket.Action.html" title="enum in net.minecraft.network.packet.c2s.play">PlayerActionC2SPacket.Action</a>&nbsp;action,
@@ -355,7 +515,7 @@ int&nbsp;worldHeight)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="finishMining(net.minecraft.util.math.BlockPos,net.minecraft.network.packet.c2s.play.PlayerActionC2SPacket.Action,java.lang.String)">finishMining</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">finishMining</span>&#8203;(<span class="arguments"><a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">finishMining</span>&#8203;(<span class="arguments"><a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
 <a href="../../network/packet/c2s/play/PlayerActionC2SPacket.Action.html" title="enum in net.minecraft.network.packet.c2s.play">PlayerActionC2SPacket.Action</a>&nbsp;action,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;reason)</span></div>
 </section>
@@ -363,13 +523,13 @@ int&nbsp;worldHeight)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="tryBreakBlock(net.minecraft.util.math.BlockPos)">tryBreakBlock</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">tryBreakBlock</span>&#8203;(<span class="arguments"><a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">tryBreakBlock</span>&#8203;(<span class="arguments"><a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="interactItem(net.minecraft.entity.player.PlayerEntity,net.minecraft.world.World,net.minecraft.item.ItemStack,net.minecraft.util.Hand)">interactItem</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../util/ActionResult.html" title="enum in net.minecraft.util">ActionResult</a></span>&nbsp;<span class="memberName">interactItem</span>&#8203;(<span class="arguments"><a href="../../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;player,
+<h3><a id="interactItem(net.minecraft.server.network.ServerPlayerEntity,net.minecraft.world.World,net.minecraft.item.ItemStack,net.minecraft.util.Hand)">interactItem</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../util/ActionResult.html" title="enum in net.minecraft.util">ActionResult</a></span>&nbsp;<span class="memberName">interactItem</span>&#8203;(<span class="arguments"><a href="ServerPlayerEntity.html" title="class in net.minecraft.server.network">ServerPlayerEntity</a>&nbsp;player,
 <a href="../../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world,
 <a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;stack,
 <a href="../../util/Hand.html" title="enum in net.minecraft.util">Hand</a>&nbsp;hand)</span></div>
@@ -377,8 +537,8 @@ int&nbsp;worldHeight)</span></div>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="interactBlock(net.minecraft.entity.player.PlayerEntity,net.minecraft.world.World,net.minecraft.item.ItemStack,net.minecraft.util.Hand,net.minecraft.util.hit.BlockHitResult)">interactBlock</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../util/ActionResult.html" title="enum in net.minecraft.util">ActionResult</a></span>&nbsp;<span class="memberName">interactBlock</span>&#8203;(<span class="arguments"><a href="../../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;player,
+<h3><a id="interactBlock(net.minecraft.server.network.ServerPlayerEntity,net.minecraft.world.World,net.minecraft.item.ItemStack,net.minecraft.util.Hand,net.minecraft.util.hit.BlockHitResult)">interactBlock</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../util/ActionResult.html" title="enum in net.minecraft.util">ActionResult</a></span>&nbsp;<span class="memberName">interactBlock</span>&#8203;(<span class="arguments"><a href="ServerPlayerEntity.html" title="class in net.minecraft.server.network">ServerPlayerEntity</a>&nbsp;player,
 <a href="../../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world,
 <a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;stack,
 <a href="../../util/Hand.html" title="enum in net.minecraft.util">Hand</a>&nbsp;hand,

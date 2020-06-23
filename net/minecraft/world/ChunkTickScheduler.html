@@ -119,6 +119,16 @@ implements <a href="TickScheduler.html" title="interface in net.minecraft.world"
 </thead>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code>private <a href="../util/math/ChunkPos.html" title="class in net.minecraft.util.math">ChunkPos</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#pos">pos</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://fastutil.di.unimi.it/docs/it/unimi/dsi/fastutil/shorts/ShortList.html?is-external=true" title="class or interface in it.unimi.dsi.fastutil.shorts" class="externalLink">ShortList</a>[]</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#scheduledPositions">scheduledPositions</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Predicate</a>&lt;<a href="ChunkTickScheduler.html" title="type parameter in ChunkTickScheduler">T</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#shouldExclude">shouldExclude</a></span></code></th>
 <td class="colLast">&nbsp;</td>
@@ -152,7 +162,7 @@ implements <a href="TickScheduler.html" title="interface in net.minecraft.world"
 <tr class="rowColor">
 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.util.function.Predicate,net.minecraft.util.math.ChunkPos,net.minecraft.nbt.ListTag)">ChunkTickScheduler</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Predicate</a>&lt;<a href="ChunkTickScheduler.html" title="type parameter in ChunkTickScheduler">T</a>&gt;&nbsp;shouldExclude,
 <a href="../util/math/ChunkPos.html" title="class in net.minecraft.util.math">ChunkPos</a>&nbsp;pos,
-<a href="../nbt/ListTag.html" title="class in net.minecraft.nbt">ListTag</a>&nbsp;listTag)</code></th>
+<a href="../nbt/ListTag.html" title="class in net.minecraft.nbt">ListTag</a>&nbsp;tag)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -242,6 +252,18 @@ int&nbsp;delay,
 <div class="memberSignature"><span class="modifiers">protected final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Predicate</a>&lt;<a href="ChunkTickScheduler.html" title="type parameter in ChunkTickScheduler">T</a>&gt;</span>&nbsp;<span class="memberName">shouldExclude</span></div>
 </section>
 </li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="pos">pos</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../util/math/ChunkPos.html" title="class in net.minecraft.util.math">ChunkPos</a></span>&nbsp;<span class="memberName">pos</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="scheduledPositions">scheduledPositions</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="http://fastutil.di.unimi.it/docs/it/unimi/dsi/fastutil/shorts/ShortList.html?is-external=true" title="class or interface in it.unimi.dsi.fastutil.shorts" class="externalLink">ShortList</a>[]</span>&nbsp;<span class="memberName">scheduledPositions</span></div>
+</section>
+</li>
 </ul>
 </section>
 </li>
@@ -264,7 +286,7 @@ int&nbsp;delay,
 <h3><a id="&lt;init&gt;(java.util.function.Predicate,net.minecraft.util.math.ChunkPos,net.minecraft.nbt.ListTag)">ChunkTickScheduler</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">ChunkTickScheduler</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Predicate</a>&lt;<a href="ChunkTickScheduler.html" title="type parameter in ChunkTickScheduler">T</a>&gt;&nbsp;shouldExclude,
 <a href="../util/math/ChunkPos.html" title="class in net.minecraft.util.math">ChunkPos</a>&nbsp;pos,
-<a href="../nbt/ListTag.html" title="class in net.minecraft.nbt">ListTag</a>&nbsp;listTag)</span></div>
+<a href="../nbt/ListTag.html" title="class in net.minecraft.nbt">ListTag</a>&nbsp;tag)</span></div>
 </section>
 </li>
 </ul>

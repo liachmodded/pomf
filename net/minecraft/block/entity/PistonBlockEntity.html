@@ -19,8 +19,8 @@
 <script type="text/javascript" src="../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10};
-var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
+<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":9,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":9,"i18":9,"i19":10,"i20":10,"i21":10,"i22":10,"i23":10,"i24":10,"i25":10};
+var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
@@ -62,7 +62,7 @@ loadScripts(document, 'script');</script>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
@@ -100,6 +100,7 @@ loadScripts(document, 'script');</script>
 <pre>public class <span class="typeNameLabel">PistonBlockEntity</span>
 extends <a href="BlockEntity.html" title="class in net.minecraft.block.entity">BlockEntity</a>
 implements <a href="../../util/Tickable.html" title="interface in net.minecraft.util">Tickable</a></pre>
+<div class="block">A piston block entity represents the block being pushed by a piston.</div>
 </section>
 <section class="summary">
 <ul class="blockList">
@@ -109,6 +110,60 @@ implements <a href="../../util/Tickable.html" title="interface in net.minecraft.
 <!--   -->
 </a>
 <h2>Field Summary</h2>
+<div class="memberSummary">
+<table>
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<thead>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colSecond" scope="col">Field</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#extending">extending</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../util/math/Direction.html" title="enum in net.minecraft.util.math">Direction</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#facing">facing</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/ThreadLocal.html?is-external=true" title="class or interface in java.lang" class="externalLink">ThreadLocal</a>&lt;<a href="../../util/math/Direction.html" title="enum in net.minecraft.util.math">Direction</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#field_12205">field_12205</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private float</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#lastProgress">lastProgress</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private float</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#progress">progress</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../BlockState.html" title="class in net.minecraft.block">BlockState</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#pushedBlock">pushedBlock</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private long</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#savedWorldTime">savedWorldTime</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#source">source</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
 <div class="inheritedList">
 <h3>Fields inherited from class&nbsp;net.minecraft.block.entity.<a href="BlockEntity.html" title="class in net.minecraft.block.entity">BlockEntity</a></h3>
 <a id="fields.inherited.from.class.net.minecraft.block.entity.BlockEntity">
@@ -155,7 +210,7 @@ boolean&nbsp;source)</code></th>
 </a>
 <h2>Method Summary</h2>
 <div class="memberSummary">
-<div role="tablist" aria-orientation="horizontal"><button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t2" class="tableTab" onclick="show(2);">Instance Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t4" class="tableTab" onclick="show(8);">Concrete Methods</button></div>
+<div role="tablist" aria-orientation="horizontal"><button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t1" class="tableTab" onclick="show(1);">Static Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t2" class="tableTab" onclick="show(2);">Instance Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t4" class="tableTab" onclick="show(8);">Concrete Methods</button></div>
 <div id="memberSummary_tabpanel" role="tabpanel">
 <table aria-labelledby="t0">
 <thead>
@@ -178,72 +233,130 @@ boolean&nbsp;source)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i2">
+<td class="colFirst"><code>private float</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getAmountExtended(float)">getAmountExtended</a></span>&#8203;(float&nbsp;progress)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i3">
 <td class="colFirst"><code><a href="../../util/shape/VoxelShape.html" title="class in net.minecraft.util.shape">VoxelShape</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getCollisionShape(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos)">getCollisionShape</a></span>&#8203;(<a href="../../world/BlockView.html" title="interface in net.minecraft.world">BlockView</a>&nbsp;world,
 <a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i3">
+<tr class="altColor" id="i4">
 <td class="colFirst"><code><a href="../../util/math/Direction.html" title="enum in net.minecraft.util.math">Direction</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getFacing()">getFacing</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i4">
+<tr class="rowColor" id="i5">
+<td class="colFirst"><code>private <a href="../BlockState.html" title="class in net.minecraft.block">BlockState</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getHeadBlockState()">getHeadBlockState</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i6">
+<td class="colFirst"><code>private static double</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getIntersectionSize(net.minecraft.util.math.Box,net.minecraft.util.math.Direction,net.minecraft.util.math.Box)">getIntersectionSize</a></span>&#8203;(<a href="../../util/math/Box.html" title="class in net.minecraft.util.math">Box</a>&nbsp;box,
+<a href="../../util/math/Direction.html" title="enum in net.minecraft.util.math">Direction</a>&nbsp;direction,
+<a href="../../util/math/Box.html" title="class in net.minecraft.util.math">Box</a>&nbsp;box2)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i7">
 <td class="colFirst"><code><a href="../../util/math/Direction.html" title="enum in net.minecraft.util.math">Direction</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getMovementDirection()">getMovementDirection</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i5">
+<tr class="altColor" id="i8">
 <td class="colFirst"><code>float</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getProgress(float)">getProgress</a></span>&#8203;(float&nbsp;tickDelta)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i6">
+<tr class="rowColor" id="i9">
 <td class="colFirst"><code><a href="../BlockState.html" title="class in net.minecraft.block">BlockState</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPushedBlock()">getPushedBlock</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i7">
+<tr class="altColor" id="i10">
 <td class="colFirst"><code>float</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getRenderOffsetX(float)">getRenderOffsetX</a></span>&#8203;(float&nbsp;tickDelta)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i8">
+<tr class="rowColor" id="i11">
 <td class="colFirst"><code>float</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getRenderOffsetY(float)">getRenderOffsetY</a></span>&#8203;(float&nbsp;tickDelta)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i9">
+<tr class="altColor" id="i12">
 <td class="colFirst"><code>float</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getRenderOffsetZ(float)">getRenderOffsetZ</a></span>&#8203;(float&nbsp;tickDelta)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i10">
+<tr class="rowColor" id="i13">
 <td class="colFirst"><code>long</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getSavedWorldTime()">getSavedWorldTime</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i11">
+<tr class="altColor" id="i14">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isExtending()">isExtending</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i12">
+<tr class="rowColor" id="i15">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isPushingHoneyBlock()">isPushingHoneyBlock</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i16">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isSource()">isSource</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i13">
+<tr class="rowColor" id="i17">
+<td class="colFirst"><code>private static boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_23671(net.minecraft.util.math.Box,net.minecraft.entity.Entity)">method_23671</a></span>&#8203;(<a href="../../util/math/Box.html" title="class in net.minecraft.util.math">Box</a>&nbsp;box,
+<a href="../../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&nbsp;entity)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i18">
+<td class="colFirst"><code>private static void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_23672(net.minecraft.util.math.Direction,net.minecraft.entity.Entity,double,net.minecraft.util.math.Direction)">method_23672</a></span>&#8203;(<a href="../../util/math/Direction.html" title="enum in net.minecraft.util.math">Direction</a>&nbsp;direction,
+<a href="../../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&nbsp;entity,
+double&nbsp;double2,
+<a href="../../util/math/Direction.html" title="enum in net.minecraft.util.math">Direction</a>&nbsp;direction2)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i19">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_23674(float)">method_23674</a></span>&#8203;(float&nbsp;float2)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i20">
+<td class="colFirst"><code>private <a href="../../util/math/Box.html" title="class in net.minecraft.util.math">Box</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#offsetHeadBox(net.minecraft.util.math.Box)">offsetHeadBox</a></span>&#8203;(<a href="../../util/math/Box.html" title="class in net.minecraft.util.math">Box</a>&nbsp;box)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i21">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#push(net.minecraft.entity.Entity,net.minecraft.util.math.Direction,double)">push</a></span>&#8203;(<a href="../../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&nbsp;entity,
+<a href="../../util/math/Direction.html" title="enum in net.minecraft.util.math">Direction</a>&nbsp;direction,
+double&nbsp;amount)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i22">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#pushEntities(float)">pushEntities</a></span>&#8203;(float&nbsp;nextProgress)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i23">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#tick()">tick</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i14">
+<tr class="altColor" id="i24">
 <td class="colFirst"><code><a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#toInitialChunkDataTag()">toInitialChunkDataTag</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i15">
+<tr class="rowColor" id="i25">
 <td class="colFirst"><code><a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#toTag(net.minecraft.nbt.CompoundTag)">toTag</a></span>&#8203;(<a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;tag)</code></th>
 <td class="colLast">&nbsp;</td>
@@ -256,7 +369,7 @@ boolean&nbsp;source)</code></th>
 <h3>Methods inherited from class&nbsp;net.minecraft.block.entity.<a href="BlockEntity.html" title="class in net.minecraft.block.entity">BlockEntity</a></h3>
 <a id="methods.inherited.from.class.net.minecraft.block.entity.BlockEntity">
 <!--   -->
-</a><code><a href="BlockEntity.html#applyMirror(net.minecraft.util.BlockMirror)">applyMirror</a>, <a href="BlockEntity.html#applyRotation(net.minecraft.util.BlockRotation)">applyRotation</a>, <a href="BlockEntity.html#cancelRemoval()">cancelRemoval</a>, <a href="BlockEntity.html#copyItemDataRequiresOperator()">copyItemDataRequiresOperator</a>, <a href="BlockEntity.html#createFromTag(net.minecraft.block.BlockState,net.minecraft.nbt.CompoundTag)">createFromTag</a>, <a href="BlockEntity.html#getCachedState()">getCachedState</a>, <a href="BlockEntity.html#getPos()">getPos</a>, <a href="BlockEntity.html#getSquaredDistance(double,double,double)">getSquaredDistance</a>, <a href="BlockEntity.html#getSquaredRenderDistance()">getSquaredRenderDistance</a>, <a href="BlockEntity.html#getType()">getType</a>, <a href="BlockEntity.html#getWorld()">getWorld</a>, <a href="BlockEntity.html#hasWorld()">hasWorld</a>, <a href="BlockEntity.html#isRemoved()">isRemoved</a>, <a href="BlockEntity.html#markDirty()">markDirty</a>, <a href="BlockEntity.html#markInvalid()">markInvalid</a>, <a href="BlockEntity.html#markRemoved()">markRemoved</a>, <a href="BlockEntity.html#onBlockAction(int,int)">onBlockAction</a>, <a href="BlockEntity.html#populateCrashReport(net.minecraft.util.crash.CrashReportSection)">populateCrashReport</a>, <a href="BlockEntity.html#resetBlock()">resetBlock</a>, <a href="BlockEntity.html#setLocation(net.minecraft.world.World,net.minecraft.util.math.BlockPos)">setLocation</a>, <a href="BlockEntity.html#setPos(net.minecraft.util.math.BlockPos)">setPos</a>, <a href="BlockEntity.html#toUpdatePacket()">toUpdatePacket</a></code></div>
+</a><code><a href="BlockEntity.html#applyMirror(net.minecraft.util.BlockMirror)">applyMirror</a>, <a href="BlockEntity.html#applyRotation(net.minecraft.util.BlockRotation)">applyRotation</a>, <a href="BlockEntity.html#cancelRemoval()">cancelRemoval</a>, <a href="BlockEntity.html#copyItemDataRequiresOperator()">copyItemDataRequiresOperator</a>, <a href="BlockEntity.html#createFromTag(net.minecraft.block.BlockState,net.minecraft.nbt.CompoundTag)">createFromTag</a>, <a href="BlockEntity.html#getCachedState()">getCachedState</a>, <a href="BlockEntity.html#getPos()">getPos</a>, <a href="BlockEntity.html#getSquaredRenderDistance()">getSquaredRenderDistance</a>, <a href="BlockEntity.html#getType()">getType</a>, <a href="BlockEntity.html#getWorld()">getWorld</a>, <a href="BlockEntity.html#hasWorld()">hasWorld</a>, <a href="BlockEntity.html#isRemoved()">isRemoved</a>, <a href="BlockEntity.html#markDirty()">markDirty</a>, <a href="BlockEntity.html#markInvalid()">markInvalid</a>, <a href="BlockEntity.html#markRemoved()">markRemoved</a>, <a href="BlockEntity.html#onSyncedBlockEvent(int,int)">onSyncedBlockEvent</a>, <a href="BlockEntity.html#populateCrashReport(net.minecraft.util.crash.CrashReportSection)">populateCrashReport</a>, <a href="BlockEntity.html#resetBlock()">resetBlock</a>, <a href="BlockEntity.html#setLocation(net.minecraft.world.World,net.minecraft.util.math.BlockPos)">setLocation</a>, <a href="BlockEntity.html#setPos(net.minecraft.util.math.BlockPos)">setPos</a>, <a href="BlockEntity.html#toUpdatePacket()">toUpdatePacket</a></code></div>
 <div class="inheritedList">
 <h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></h3>
 <a id="methods.inherited.from.class.java.lang.Object">
@@ -268,6 +381,64 @@ boolean&nbsp;source)</code></th>
 </section>
 <section class="details">
 <ul class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<li class="blockList">
+<section class="fieldDetails"><a id="field.detail">
+<!--   -->
+</a>
+<h2>Field Details</h2>
+<ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="field_12205">field_12205</a></h3>
+<div class="memberSignature"><span class="modifiers">private static final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/ThreadLocal.html?is-external=true" title="class or interface in java.lang" class="externalLink">ThreadLocal</a>&lt;<a href="../../util/math/Direction.html" title="enum in net.minecraft.util.math">Direction</a>&gt;</span>&nbsp;<span class="memberName">field_12205</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="pushedBlock">pushedBlock</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="../BlockState.html" title="class in net.minecraft.block">BlockState</a></span>&nbsp;<span class="memberName">pushedBlock</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="facing">facing</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="../../util/math/Direction.html" title="enum in net.minecraft.util.math">Direction</a></span>&nbsp;<span class="memberName">facing</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="extending">extending</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">extending</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="source">source</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">source</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="progress">progress</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">float</span>&nbsp;<span class="memberName">progress</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="lastProgress">lastProgress</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">float</span>&nbsp;<span class="memberName">lastProgress</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="savedWorldTime">savedWorldTime</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">long</span>&nbsp;<span class="memberName">savedWorldTime</span></div>
+</section>
+</li>
+</ul>
+</section>
+</li>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <li class="blockList">
 <section class="constructorDetails"><a id="constructor.detail">
@@ -357,8 +528,76 @@ boolean&nbsp;source)</span></div>
 </li>
 <li class="blockList">
 <section class="detail">
+<h3><a id="getAmountExtended(float)">getAmountExtended</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">float</span>&nbsp;<span class="memberName">getAmountExtended</span>&#8203;(<span class="arguments">float&nbsp;progress)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="getHeadBlockState()">getHeadBlockState</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="../BlockState.html" title="class in net.minecraft.block">BlockState</a></span>&nbsp;<span class="memberName">getHeadBlockState</span>()</div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="pushEntities(float)">pushEntities</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">pushEntities</span>&#8203;(<span class="arguments">float&nbsp;nextProgress)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="method_23672(net.minecraft.util.math.Direction,net.minecraft.entity.Entity,double,net.minecraft.util.math.Direction)">method_23672</a></h3>
+<div class="memberSignature"><span class="modifiers">private static</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">method_23672</span>&#8203;(<span class="arguments"><a href="../../util/math/Direction.html" title="enum in net.minecraft.util.math">Direction</a>&nbsp;direction,
+<a href="../../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&nbsp;entity,
+double&nbsp;double2,
+<a href="../../util/math/Direction.html" title="enum in net.minecraft.util.math">Direction</a>&nbsp;direction2)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="method_23674(float)">method_23674</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">method_23674</span>&#8203;(<span class="arguments">float&nbsp;float2)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="method_23671(net.minecraft.util.math.Box,net.minecraft.entity.Entity)">method_23671</a></h3>
+<div class="memberSignature"><span class="modifiers">private static</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">method_23671</span>&#8203;(<span class="arguments"><a href="../../util/math/Box.html" title="class in net.minecraft.util.math">Box</a>&nbsp;box,
+<a href="../../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&nbsp;entity)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="isPushingHoneyBlock()">isPushingHoneyBlock</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isPushingHoneyBlock</span>()</div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="getMovementDirection()">getMovementDirection</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../util/math/Direction.html" title="enum in net.minecraft.util.math">Direction</a></span>&nbsp;<span class="memberName">getMovementDirection</span>()</div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="getIntersectionSize(net.minecraft.util.math.Box,net.minecraft.util.math.Direction,net.minecraft.util.math.Box)">getIntersectionSize</a></h3>
+<div class="memberSignature"><span class="modifiers">private static</span>&nbsp;<span class="returnType">double</span>&nbsp;<span class="memberName">getIntersectionSize</span>&#8203;(<span class="arguments"><a href="../../util/math/Box.html" title="class in net.minecraft.util.math">Box</a>&nbsp;box,
+<a href="../../util/math/Direction.html" title="enum in net.minecraft.util.math">Direction</a>&nbsp;direction,
+<a href="../../util/math/Box.html" title="class in net.minecraft.util.math">Box</a>&nbsp;box2)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="offsetHeadBox(net.minecraft.util.math.Box)">offsetHeadBox</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="../../util/math/Box.html" title="class in net.minecraft.util.math">Box</a></span>&nbsp;<span class="memberName">offsetHeadBox</span>&#8203;(<span class="arguments"><a href="../../util/math/Box.html" title="class in net.minecraft.util.math">Box</a>&nbsp;box)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="push(net.minecraft.entity.Entity,net.minecraft.util.math.Direction,double)">push</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">push</span>&#8203;(<span class="arguments"><a href="../../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&nbsp;entity,
+<a href="../../util/math/Direction.html" title="enum in net.minecraft.util.math">Direction</a>&nbsp;direction,
+double&nbsp;amount)</span></div>
 </section>
 </li>
 <li class="blockList">
@@ -456,7 +695,7 @@ boolean&nbsp;source)</span></div>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>

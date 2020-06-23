@@ -120,27 +120,27 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#blacklistedHives">blacklistedHives</a></span></code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#blacklist">blacklist</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#field_21542">field_21542</a></span></code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code><a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#flowerPos">flowerPos</a></span></code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#hivePos">hivePos</a></span></code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="altColor">
 <td class="colFirst"><code>int</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#id">id</a></span></code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#entityId">entityId</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#flower">flower</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#hive">hive</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#labels">labels</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
@@ -150,12 +150,12 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../util/math/Position.html" title="interface in net.minecraft.util.math">Position</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#pos">pos</a></span></code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#position">position</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#travellingTicks">travellingTicks</a></span></code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#travelTicks">travelTicks</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
@@ -186,12 +186,12 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tbody>
 <tr class="altColor">
 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.util.UUID,int,net.minecraft.util.math.Position,net.minecraft.entity.ai.pathing.Path,net.minecraft.util.math.BlockPos,net.minecraft.util.math.BlockPos,int)">Bee</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util" class="externalLink">UUID</a>&nbsp;uuid,
-int&nbsp;id,
-<a href="../../../util/math/Position.html" title="interface in net.minecraft.util.math">Position</a>&nbsp;pos,
+int&nbsp;entityId,
+<a href="../../../util/math/Position.html" title="interface in net.minecraft.util.math">Position</a>&nbsp;position,
 <a href="../../../entity/ai/pathing/Path.html" title="class in net.minecraft.entity.ai.pathing">Path</a>&nbsp;path,
-<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;hivePos,
-<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;flowerPos,
-int&nbsp;travellingTicks)</code></th>
+<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;hive,
+<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;flower,
+int&nbsp;travelTicks)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -234,7 +234,7 @@ int&nbsp;travellingTicks)</code></th>
 </tr>
 <tr class="rowColor" id="i3">
 <td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isHive(net.minecraft.util.math.BlockPos)">isHive</a></span>&#8203;(<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isHiveAt(net.minecraft.util.math.BlockPos)">isHiveAt</a></span>&#8203;(<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i4">
@@ -272,53 +272,53 @@ int&nbsp;travellingTicks)</code></th>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="id">id</a></h3>
-<div class="memberSignature"><span class="modifiers">public final</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">id</span></div>
+<h3><a id="entityId">entityId</a></h3>
+<div class="memberSignature"><span class="modifiers">public final</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">entityId</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="pos">pos</a></h3>
-<div class="memberSignature"><span class="modifiers">public final</span>&nbsp;<span class="returnType"><a href="../../../util/math/Position.html" title="interface in net.minecraft.util.math">Position</a></span>&nbsp;<span class="memberName">pos</span></div>
+<h3><a id="position">position</a></h3>
+<div class="memberSignature"><span class="modifiers">public final</span>&nbsp;<span class="returnType"><a href="../../../util/math/Position.html" title="interface in net.minecraft.util.math">Position</a></span>&nbsp;<span class="memberName">position</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="path">path</a></h3>
-<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 </span><span class="modifiers">public final</span>&nbsp;<span class="returnType"><a href="../../../entity/ai/pathing/Path.html" title="class in net.minecraft.entity.ai.pathing">Path</a></span>&nbsp;<span class="memberName">path</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="hivePos">hivePos</a></h3>
-<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
-</span><span class="modifiers">public final</span>&nbsp;<span class="returnType"><a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a></span>&nbsp;<span class="memberName">hivePos</span></div>
+<h3><a id="hive">hive</a></h3>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">public final</span>&nbsp;<span class="returnType"><a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a></span>&nbsp;<span class="memberName">hive</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="flowerPos">flowerPos</a></h3>
-<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
-</span><span class="modifiers">public final</span>&nbsp;<span class="returnType"><a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a></span>&nbsp;<span class="memberName">flowerPos</span></div>
+<h3><a id="flower">flower</a></h3>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">public final</span>&nbsp;<span class="returnType"><a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a></span>&nbsp;<span class="memberName">flower</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="travellingTicks">travellingTicks</a></h3>
-<div class="memberSignature"><span class="modifiers">public final</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">travellingTicks</span></div>
+<h3><a id="travelTicks">travelTicks</a></h3>
+<div class="memberSignature"><span class="modifiers">public final</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">travelTicks</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="field_21542">field_21542</a></h3>
-<div class="memberSignature"><span class="modifiers">public final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&gt;</span>&nbsp;<span class="memberName">field_21542</span></div>
+<h3><a id="labels">labels</a></h3>
+<div class="memberSignature"><span class="modifiers">public final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&gt;</span>&nbsp;<span class="memberName">labels</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="blacklistedHives">blacklistedHives</a></h3>
-<div class="memberSignature"><span class="modifiers">public final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;</span>&nbsp;<span class="memberName">blacklistedHives</span></div>
+<h3><a id="blacklist">blacklist</a></h3>
+<div class="memberSignature"><span class="modifiers">public final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;</span>&nbsp;<span class="memberName">blacklist</span></div>
 </section>
 </li>
 </ul>
@@ -335,12 +335,12 @@ int&nbsp;travellingTicks)</code></th>
 <section class="detail">
 <h3><a id="&lt;init&gt;(java.util.UUID,int,net.minecraft.util.math.Position,net.minecraft.entity.ai.pathing.Path,net.minecraft.util.math.BlockPos,net.minecraft.util.math.BlockPos,int)">Bee</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">Bee</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util" class="externalLink">UUID</a>&nbsp;uuid,
-int&nbsp;id,
-<a href="../../../util/math/Position.html" title="interface in net.minecraft.util.math">Position</a>&nbsp;pos,
+int&nbsp;entityId,
+<a href="../../../util/math/Position.html" title="interface in net.minecraft.util.math">Position</a>&nbsp;position,
 <a href="../../../entity/ai/pathing/Path.html" title="class in net.minecraft.entity.ai.pathing">Path</a>&nbsp;path,
-<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;hivePos,
-<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;flowerPos,
-int&nbsp;travellingTicks)</span></div>
+<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;hive,
+<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;flower,
+int&nbsp;travelTicks)</span></div>
 </section>
 </li>
 </ul>
@@ -355,8 +355,8 @@ int&nbsp;travellingTicks)</span></div>
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="isHive(net.minecraft.util.math.BlockPos)">isHive</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isHive</span>&#8203;(<span class="arguments"><a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</span></div>
+<h3><a id="isHiveAt(net.minecraft.util.math.BlockPos)">isHiveAt</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isHiveAt</span>&#8203;(<span class="arguments"><a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</span></div>
 </section>
 </li>
 <li class="blockList">

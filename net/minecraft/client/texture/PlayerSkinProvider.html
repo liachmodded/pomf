@@ -56,13 +56,13 @@ loadScripts(document, 'script');</script>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested.class.summary">Nested</a>&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
@@ -117,6 +117,48 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tr class="altColor">
 <td class="colFirst"><code>static interface&nbsp;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="PlayerSkinProvider.SkinTextureAvailableCallback.html" title="interface in net.minecraft.client.texture">PlayerSkinProvider.SkinTextureAvailableCallback</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</li>
+<!-- =========== FIELD SUMMARY =========== -->
+<li class="blockList">
+<section class="fieldSummary"><a id="field.summary">
+<!--   -->
+</a>
+<h2>Field Summary</h2>
+<div class="memberSummary">
+<table>
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<thead>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colSecond" scope="col">Field</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private com.mojang.authlib.minecraft.MinecraftSessionService</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#sessionService">sessionService</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="https://guava.dev/releases/21.0/api/docs/com/google/common/cache/LoadingCache.html?is-external=true" title="class or interface in com.google.common.cache" class="externalLink">LoadingCache</a>&lt;com.mojang.authlib.GameProfile,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util" class="externalLink">Map</a>&lt;com.mojang.authlib.minecraft.MinecraftProfileTexture.Type,&#8203;com.mojang.authlib.minecraft.MinecraftProfileTexture&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#skinCache">skinCache</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io" class="externalLink">File</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#skinCacheDir">skinCacheDir</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="TextureManager.html" title="class in net.minecraft.client.texture">TextureManager</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#textureManager">textureManager</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -209,6 +251,40 @@ com.mojang.authlib.minecraft.MinecraftProfileTexture.Type&nbsp;type,
 </section>
 <section class="details">
 <ul class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<li class="blockList">
+<section class="fieldDetails"><a id="field.detail">
+<!--   -->
+</a>
+<h2>Field Details</h2>
+<ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="textureManager">textureManager</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="TextureManager.html" title="class in net.minecraft.client.texture">TextureManager</a></span>&nbsp;<span class="memberName">textureManager</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="skinCacheDir">skinCacheDir</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io" class="externalLink">File</a></span>&nbsp;<span class="memberName">skinCacheDir</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="sessionService">sessionService</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType">com.mojang.authlib.minecraft.MinecraftSessionService</span>&nbsp;<span class="memberName">sessionService</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="skinCache">skinCache</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://guava.dev/releases/21.0/api/docs/com/google/common/cache/LoadingCache.html?is-external=true" title="class or interface in com.google.common.cache" class="externalLink">LoadingCache</a>&lt;com.mojang.authlib.GameProfile,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util" class="externalLink">Map</a>&lt;com.mojang.authlib.minecraft.MinecraftProfileTexture.Type,&#8203;com.mojang.authlib.minecraft.MinecraftProfileTexture&gt;&gt;</span>&nbsp;<span class="memberName">skinCache</span></div>
+</section>
+</li>
+</ul>
+</section>
+</li>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <li class="blockList">
 <section class="constructorDetails"><a id="constructor.detail">
@@ -246,7 +322,7 @@ com.mojang.authlib.minecraft.MinecraftProfileTexture.Type&nbsp;type)</span></div
 <h3><a id="loadSkin(com.mojang.authlib.minecraft.MinecraftProfileTexture,com.mojang.authlib.minecraft.MinecraftProfileTexture.Type,net.minecraft.client.texture.PlayerSkinProvider.SkinTextureAvailableCallback)">loadSkin</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a></span>&nbsp;<span class="memberName">loadSkin</span>&#8203;(<span class="arguments">com.mojang.authlib.minecraft.MinecraftProfileTexture&nbsp;profileTexture,
 com.mojang.authlib.minecraft.MinecraftProfileTexture.Type&nbsp;type,
-<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 <a href="PlayerSkinProvider.SkinTextureAvailableCallback.html" title="interface in net.minecraft.client.texture">PlayerSkinProvider.SkinTextureAvailableCallback</a>&nbsp;callback)</span></div>
 </section>
 </li>
@@ -297,13 +373,13 @@ boolean&nbsp;requireSecure)</span></div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested.class.summary">Nested</a>&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>

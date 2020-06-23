@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10};
+<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -62,7 +62,7 @@ loadScripts(document, 'script');</script>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
@@ -108,6 +108,25 @@ extends <a href="Carver.html" title="class in net.minecraft.world.gen.carver">Ca
 <!--   -->
 </a>
 <h2>Field Summary</h2>
+<div class="memberSummary">
+<table>
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<thead>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colSecond" scope="col">Field</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private float[]</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#heightToHorizontalStretchFactor">heightToHorizontalStretchFactor</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
 <div class="inheritedList">
 <h3>Fields inherited from class&nbsp;net.minecraft.world.gen.carver.<a href="Carver.html" title="class in net.minecraft.world.gen.carver">Carver</a></h3>
 <a id="fields.inherited.from.class.net.minecraft.world.gen.carver.Carver">
@@ -132,7 +151,7 @@ extends <a href="Carver.html" title="class in net.minecraft.world.gen.carver">Ca
 </thead>
 <tbody>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.util.function.Function)">RavineCarver</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;com.mojang.datafixers.Dynamic&lt;?&gt;,&#8203;? extends <a href="../ProbabilityConfig.html" title="class in net.minecraft.world.gen">ProbabilityConfig</a>&gt;&nbsp;configDeserializer)</code></th>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(com.mojang.serialization.Codec)">RavineCarver</a></span>&#8203;(com.mojang.serialization.Codec&lt;<a href="../ProbabilityConfig.html" title="class in net.minecraft.world.gen">ProbabilityConfig</a>&gt;&nbsp;codec)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -173,6 +192,26 @@ int&nbsp;int6,
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#carveRavine(net.minecraft.world.chunk.Chunk,java.util.function.Function,long,int,int,int,double,double,double,float,float,float,int,int,double,java.util.BitSet)">carveRavine</a></span>&#8203;(<a href="../../chunk/Chunk.html" title="interface in net.minecraft.world.chunk">Chunk</a>&nbsp;chunk,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>,&#8203;<a href="../../biome/Biome.html" title="class in net.minecraft.world.biome">Biome</a>&gt;&nbsp;posToBiome,
+long&nbsp;seed,
+int&nbsp;seaLevel,
+int&nbsp;mainChunkX,
+int&nbsp;mainChunkZ,
+double&nbsp;x,
+double&nbsp;y,
+double&nbsp;z,
+float&nbsp;width,
+float&nbsp;yaw,
+float&nbsp;pitch,
+int&nbsp;branchStartIndex,
+int&nbsp;branchCount,
+double&nbsp;yawPitchRatio,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/BitSet.html?is-external=true" title="class or interface in java.util" class="externalLink">BitSet</a>&nbsp;carvingMask)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i2">
 <td class="colFirst"><code>protected boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isPositionExcluded(double,double,double,int)">isPositionExcluded</a></span>&#8203;(double&nbsp;scaledRelativeX,
 double&nbsp;scaledRelativeY,
@@ -180,7 +219,7 @@ double&nbsp;scaledRelativeZ,
 int&nbsp;y)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i2">
+<tr class="rowColor" id="i3">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#shouldCarve(java.util.Random,int,int,net.minecraft.world.gen.ProbabilityConfig)">shouldCarve</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random,
 int&nbsp;int2,
@@ -196,7 +235,7 @@ int&nbsp;int3,
 <h3>Methods inherited from class&nbsp;net.minecraft.world.gen.carver.<a href="Carver.html" title="class in net.minecraft.world.gen.carver">Carver</a></h3>
 <a id="methods.inherited.from.class.net.minecraft.world.gen.carver.Carver">
 <!--   -->
-</a><code><a href="Carver.html#canAlwaysCarveBlock(net.minecraft.block.BlockState)">canAlwaysCarveBlock</a>, <a href="Carver.html#canCarveBlock(net.minecraft.block.BlockState,net.minecraft.block.BlockState)">canCarveBlock</a>, <a href="Carver.html#canCarveBranch(int,int,double,double,int,int,float)">canCarveBranch</a>, <a href="Carver.html#carveAtPoint(net.minecraft.world.chunk.Chunk,java.util.function.Function,java.util.BitSet,java.util.Random,net.minecraft.util.math.BlockPos.Mutable,net.minecraft.util.math.BlockPos.Mutable,net.minecraft.util.math.BlockPos.Mutable,int,int,int,int,int,int,int,int,java.util.concurrent.atomic.AtomicBoolean)">carveAtPoint</a>, <a href="Carver.html#carveRegion(net.minecraft.world.chunk.Chunk,java.util.function.Function,long,int,int,int,double,double,double,double,double,java.util.BitSet)">carveRegion</a>, <a href="Carver.html#getBranchFactor()">getBranchFactor</a>, <a href="Carver.html#isRegionUncarvable(net.minecraft.world.chunk.Chunk,int,int,int,int,int,int,int,int)">isRegionUncarvable</a></code></div>
+</a><code><a href="Carver.html#canAlwaysCarveBlock(net.minecraft.block.BlockState)">canAlwaysCarveBlock</a>, <a href="Carver.html#canCarveBlock(net.minecraft.block.BlockState,net.minecraft.block.BlockState)">canCarveBlock</a>, <a href="Carver.html#canCarveBranch(int,int,double,double,int,int,float)">canCarveBranch</a>, <a href="Carver.html#carveAtPoint(net.minecraft.world.chunk.Chunk,java.util.function.Function,java.util.BitSet,java.util.Random,net.minecraft.util.math.BlockPos.Mutable,net.minecraft.util.math.BlockPos.Mutable,net.minecraft.util.math.BlockPos.Mutable,int,int,int,int,int,int,int,int,org.apache.commons.lang3.mutable.MutableBoolean)">carveAtPoint</a>, <a href="Carver.html#carveRegion(net.minecraft.world.chunk.Chunk,java.util.function.Function,long,int,int,int,double,double,double,double,double,java.util.BitSet)">carveRegion</a>, <a href="Carver.html#getBranchFactor()">getBranchFactor</a>, <a href="Carver.html#isRegionUncarvable(net.minecraft.world.chunk.Chunk,int,int,int,int,int,int,int,int)">isRegionUncarvable</a>, <a href="Carver.html#method_28616()">method_28616</a></code></div>
 <div class="inheritedList">
 <h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></h3>
 <a id="methods.inherited.from.class.java.lang.Object">
@@ -208,6 +247,22 @@ int&nbsp;int3,
 </section>
 <section class="details">
 <ul class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<li class="blockList">
+<section class="fieldDetails"><a id="field.detail">
+<!--   -->
+</a>
+<h2>Field Details</h2>
+<ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="heightToHorizontalStretchFactor">heightToHorizontalStretchFactor</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType">float[]</span>&nbsp;<span class="memberName">heightToHorizontalStretchFactor</span></div>
+</section>
+</li>
+</ul>
+</section>
+</li>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <li class="blockList">
 <section class="constructorDetails"><a id="constructor.detail">
@@ -217,8 +272,8 @@ int&nbsp;int3,
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="&lt;init&gt;(java.util.function.Function)">RavineCarver</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">RavineCarver</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;com.mojang.datafixers.Dynamic&lt;?&gt;,&#8203;? extends <a href="../ProbabilityConfig.html" title="class in net.minecraft.world.gen">ProbabilityConfig</a>&gt;&nbsp;configDeserializer)</span></div>
+<h3><a id="&lt;init&gt;(com.mojang.serialization.Codec)">RavineCarver</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">RavineCarver</span>&#8203;(<span class="arguments">com.mojang.serialization.Codec&lt;<a href="../ProbabilityConfig.html" title="class in net.minecraft.world.gen">ProbabilityConfig</a>&gt;&nbsp;codec)</span></div>
 </section>
 </li>
 </ul>
@@ -261,6 +316,27 @@ int&nbsp;int6,
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="Carver.html#carve(net.minecraft.world.chunk.Chunk,java.util.function.Function,java.util.Random,int,int,int,int,int,java.util.BitSet,C)">carve</a></code>&nbsp;in class&nbsp;<code><a href="Carver.html" title="class in net.minecraft.world.gen.carver">Carver</a>&lt;<a href="../ProbabilityConfig.html" title="class in net.minecraft.world.gen">ProbabilityConfig</a>&gt;</code></dd>
 </dl>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="carveRavine(net.minecraft.world.chunk.Chunk,java.util.function.Function,long,int,int,int,double,double,double,float,float,float,int,int,double,java.util.BitSet)">carveRavine</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">carveRavine</span>&#8203;(<span class="arguments"><a href="../../chunk/Chunk.html" title="interface in net.minecraft.world.chunk">Chunk</a>&nbsp;chunk,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>,&#8203;<a href="../../biome/Biome.html" title="class in net.minecraft.world.biome">Biome</a>&gt;&nbsp;posToBiome,
+long&nbsp;seed,
+int&nbsp;seaLevel,
+int&nbsp;mainChunkX,
+int&nbsp;mainChunkZ,
+double&nbsp;x,
+double&nbsp;y,
+double&nbsp;z,
+float&nbsp;width,
+float&nbsp;yaw,
+float&nbsp;pitch,
+int&nbsp;branchStartIndex,
+int&nbsp;branchCount,
+double&nbsp;yawPitchRatio,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/BitSet.html?is-external=true" title="class or interface in java.util" class="externalLink">BitSet</a>&nbsp;carvingMask)</span></div>
 </section>
 </li>
 <li class="blockList">
@@ -315,7 +391,7 @@ int&nbsp;y)</span></div>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>

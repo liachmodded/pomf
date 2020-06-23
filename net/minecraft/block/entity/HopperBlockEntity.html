@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":10,"i1":9,"i2":9,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":9,"i9":9,"i10":9,"i11":9,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":9};
+<script type="text/javascript">var data = {"i0":9,"i1":9,"i2":9,"i3":10,"i4":9,"i5":9,"i6":9,"i7":10,"i8":9,"i9":10,"i10":10,"i11":10,"i12":10,"i13":9,"i14":9,"i15":9,"i16":9,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10,"i23":9,"i24":10,"i25":10,"i26":10,"i27":10,"i28":10,"i29":10,"i30":10,"i31":10,"i32":10,"i33":10,"i34":9,"i35":9};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -62,7 +62,7 @@ loadScripts(document, 'script');</script>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
@@ -113,6 +113,35 @@ implements <a href="Hopper.html" title="interface in net.minecraft.block.entity"
 <!--   -->
 </a>
 <h2>Field Summary</h2>
+<div class="memberSummary">
+<table>
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<thead>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colSecond" scope="col">Field</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../util/collection/DefaultedList.html" title="class in net.minecraft.util.collection">DefaultedList</a>&lt;<a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#inventory">inventory</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private long</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#lastTickTime">lastTickTime</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#transferCooldown">transferCooldown</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
 <div class="inheritedList">
 <h3>Fields inherited from class&nbsp;net.minecraft.block.entity.<a href="LootableContainerBlockEntity.html" title="class in net.minecraft.block.entity">LootableContainerBlockEntity</a></h3>
 <a id="fields.inherited.from.class.net.minecraft.block.entity.LootableContainerBlockEntity">
@@ -174,59 +203,95 @@ implements <a href="Hopper.html" title="interface in net.minecraft.block.entity"
 </thead>
 <tbody>
 <tr class="altColor" id="i0">
-<td class="colFirst"><code>protected <a href="../../screen/ScreenHandler.html" title="class in net.minecraft.screen">ScreenHandler</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createContainer(int,net.minecraft.entity.player.PlayerInventory)">createContainer</a></span>&#8203;(int&nbsp;int2,
-<a href="../../entity/player/PlayerInventory.html" title="class in net.minecraft.entity.player">PlayerInventory</a>&nbsp;playerInventory)</code></th>
+<td class="colFirst"><code>private static boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#canExtract(net.minecraft.inventory.Inventory,net.minecraft.item.ItemStack,int,net.minecraft.util.math.Direction)">canExtract</a></span>&#8203;(<a href="../../inventory/Inventory.html" title="interface in net.minecraft.inventory">Inventory</a>&nbsp;inv,
+<a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;stack,
+int&nbsp;slot,
+<a href="../../util/math/Direction.html" title="enum in net.minecraft.util.math">Direction</a>&nbsp;facing)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
+<td class="colFirst"><code>private static boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#canInsert(net.minecraft.inventory.Inventory,net.minecraft.item.ItemStack,int,net.minecraft.util.math.Direction)">canInsert</a></span>&#8203;(<a href="../../inventory/Inventory.html" title="interface in net.minecraft.inventory">Inventory</a>&nbsp;inventory,
+<a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;stack,
+int&nbsp;slot,
+<a href="../../util/math/Direction.html" title="enum in net.minecraft.util.math">Direction</a>&nbsp;side)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i2">
+<td class="colFirst"><code>private static boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#canMergeItems(net.minecraft.item.ItemStack,net.minecraft.item.ItemStack)">canMergeItems</a></span>&#8203;(<a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;first,
+<a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;second)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i3">
+<td class="colFirst"><code>protected <a href="../../screen/ScreenHandler.html" title="class in net.minecraft.screen">ScreenHandler</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createScreenHandler(int,net.minecraft.entity.player.PlayerInventory)">createScreenHandler</a></span>&#8203;(int&nbsp;syncId,
+<a href="../../entity/player/PlayerInventory.html" title="class in net.minecraft.entity.player">PlayerInventory</a>&nbsp;playerInventory)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i4">
 <td class="colFirst"><code>static boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#extract(net.minecraft.block.entity.Hopper)">extract</a></span>&#8203;(<a href="Hopper.html" title="interface in net.minecraft.block.entity">Hopper</a>&nbsp;hopper)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i2">
+<tr class="rowColor" id="i5">
+<td class="colFirst"><code>private static boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#extract(net.minecraft.block.entity.Hopper,net.minecraft.inventory.Inventory,int,net.minecraft.util.math.Direction)">extract</a></span>&#8203;(<a href="Hopper.html" title="interface in net.minecraft.block.entity">Hopper</a>&nbsp;hopper,
+<a href="../../inventory/Inventory.html" title="interface in net.minecraft.inventory">Inventory</a>&nbsp;inventory,
+int&nbsp;slot,
+<a href="../../util/math/Direction.html" title="enum in net.minecraft.util.math">Direction</a>&nbsp;side)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i6">
 <td class="colFirst"><code>static boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#extract(net.minecraft.inventory.Inventory,net.minecraft.entity.ItemEntity)">extract</a></span>&#8203;(<a href="../../inventory/Inventory.html" title="interface in net.minecraft.inventory">Inventory</a>&nbsp;inventory,
 <a href="../../entity/ItemEntity.html" title="class in net.minecraft.entity">ItemEntity</a>&nbsp;itemEntity)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i3">
+<tr class="rowColor" id="i7">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#fromTag(net.minecraft.block.BlockState,net.minecraft.nbt.CompoundTag)">fromTag</a></span>&#8203;(<a href="../BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state,
 <a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;tag)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i4">
+<tr class="altColor" id="i8">
+<td class="colFirst"><code>private static <a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/IntStream.html?is-external=true" title="class or interface in java.util.stream" class="externalLink">IntStream</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getAvailableSlots(net.minecraft.inventory.Inventory,net.minecraft.util.math.Direction)">getAvailableSlots</a></span>&#8203;(<a href="../../inventory/Inventory.html" title="interface in net.minecraft.inventory">Inventory</a>&nbsp;inventory,
+<a href="../../util/math/Direction.html" title="enum in net.minecraft.util.math">Direction</a>&nbsp;side)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i9">
 <td class="colFirst"><code>protected <a href="../../text/Text.html" title="interface in net.minecraft.text">Text</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getContainerName()">getContainerName</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i5">
+<tr class="altColor" id="i10">
 <td class="colFirst"><code>double</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getHopperX()">getHopperX</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i6">
+<tr class="rowColor" id="i11">
 <td class="colFirst"><code>double</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getHopperY()">getHopperY</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i7">
+<tr class="altColor" id="i12">
 <td class="colFirst"><code>double</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getHopperZ()">getHopperZ</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i8">
+<tr class="rowColor" id="i13">
 <td class="colFirst"><code>static <a href="../../inventory/Inventory.html" title="interface in net.minecraft.inventory">Inventory</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getInputInventory(net.minecraft.block.entity.Hopper)">getInputInventory</a></span>&#8203;(<a href="Hopper.html" title="interface in net.minecraft.block.entity">Hopper</a>&nbsp;hopper)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i9">
+<tr class="altColor" id="i14">
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../../entity/ItemEntity.html" title="class in net.minecraft.entity">ItemEntity</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getInputItemEntities(net.minecraft.block.entity.Hopper)">getInputItemEntities</a></span>&#8203;(<a href="Hopper.html" title="interface in net.minecraft.block.entity">Hopper</a>&nbsp;hopper)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i10">
+<tr class="rowColor" id="i15">
 <td class="colFirst"><code>static <a href="../../inventory/Inventory.html" title="interface in net.minecraft.inventory">Inventory</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getInventoryAt(net.minecraft.world.World,double,double,double)">getInventoryAt</a></span>&#8203;(<a href="../../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world,
 double&nbsp;x,
@@ -234,23 +299,65 @@ double&nbsp;y,
 double&nbsp;z)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i11">
+<tr class="altColor" id="i16">
 <td class="colFirst"><code>static <a href="../../inventory/Inventory.html" title="interface in net.minecraft.inventory">Inventory</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getInventoryAt(net.minecraft.world.World,net.minecraft.util.math.BlockPos)">getInventoryAt</a></span>&#8203;(<a href="../../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world,
 <a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i12">
+<tr class="rowColor" id="i17">
 <td class="colFirst"><code>protected <a href="../../util/collection/DefaultedList.html" title="class in net.minecraft.util.collection">DefaultedList</a>&lt;<a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getInvStackList()">getInvStackList</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i13">
+<tr class="altColor" id="i18">
+<td class="colFirst"><code>private <a href="../../inventory/Inventory.html" title="interface in net.minecraft.inventory">Inventory</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getOutputInventory()">getOutputInventory</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i19">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#insert()">insert</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i20">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#insertAndExtract(java.util.function.Supplier)">insertAndExtract</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang" class="externalLink">Boolean</a>&gt;&nbsp;extractMethod)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i21">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isDisabled()">isDisabled</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i22">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isFull()">isFull</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i23">
+<td class="colFirst"><code>private static boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isInventoryEmpty(net.minecraft.inventory.Inventory,net.minecraft.util.math.Direction)">isInventoryEmpty</a></span>&#8203;(<a href="../../inventory/Inventory.html" title="interface in net.minecraft.inventory">Inventory</a>&nbsp;inv,
+<a href="../../util/math/Direction.html" title="enum in net.minecraft.util.math">Direction</a>&nbsp;facing)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i24">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isInventoryFull(net.minecraft.inventory.Inventory,net.minecraft.util.math.Direction)">isInventoryFull</a></span>&#8203;(<a href="../../inventory/Inventory.html" title="interface in net.minecraft.inventory">Inventory</a>&nbsp;inv,
+<a href="../../util/math/Direction.html" title="enum in net.minecraft.util.math">Direction</a>&nbsp;direction)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i25">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#needsCooldown()">needsCooldown</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i26">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#onEntityCollided(net.minecraft.entity.Entity)">onEntityCollided</a></span>&#8203;(<a href="../../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&nbsp;entity)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i14">
+<tr class="rowColor" id="i27">
 <td class="colFirst"><code><a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#removeStack(int,int)">removeStack</a></span>&#8203;(int&nbsp;slot,
 int&nbsp;amount)</code></th>
@@ -258,33 +365,47 @@ int&nbsp;amount)</code></th>
 <div class="block">Removes a specific number of items from the given slot.</div>
 </td>
 </tr>
-<tr class="rowColor" id="i15">
+<tr class="altColor" id="i28">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setCooldown(int)">setCooldown</a></span>&#8203;(int&nbsp;cooldown)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i29">
 <td class="colFirst"><code>protected void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setInvStackList(net.minecraft.util.collection.DefaultedList)">setInvStackList</a></span>&#8203;(<a href="../../util/collection/DefaultedList.html" title="class in net.minecraft.util.collection">DefaultedList</a>&lt;<a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&gt;&nbsp;list)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i16">
+<tr class="altColor" id="i30">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setStack(int,net.minecraft.item.ItemStack)">setStack</a></span>&#8203;(int&nbsp;slot,
 <a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;stack)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i17">
+<tr class="rowColor" id="i31">
 <td class="colFirst"><code>int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#size()">size</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i18">
+<tr class="altColor" id="i32">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#tick()">tick</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i19">
+<tr class="rowColor" id="i33">
 <td class="colFirst"><code><a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#toTag(net.minecraft.nbt.CompoundTag)">toTag</a></span>&#8203;(<a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;tag)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i20">
+<tr class="altColor" id="i34">
+<td class="colFirst"><code>private static <a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#transfer(net.minecraft.inventory.Inventory,net.minecraft.inventory.Inventory,net.minecraft.item.ItemStack,int,net.minecraft.util.math.Direction)">transfer</a></span>&#8203;(<a href="../../inventory/Inventory.html" title="interface in net.minecraft.inventory">Inventory</a>&nbsp;from,
+<a href="../../inventory/Inventory.html" title="interface in net.minecraft.inventory">Inventory</a>&nbsp;to,
+<a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;stack,
+int&nbsp;slot,
+<a href="../../util/math/Direction.html" title="enum in net.minecraft.util.math">Direction</a>&nbsp;direction)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i35">
 <td class="colFirst"><code>static <a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#transfer(net.minecraft.inventory.Inventory,net.minecraft.inventory.Inventory,net.minecraft.item.ItemStack,net.minecraft.util.math.Direction)">transfer</a></span>&#8203;(<a href="../../inventory/Inventory.html" title="interface in net.minecraft.inventory">Inventory</a>&nbsp;from,
 <a href="../../inventory/Inventory.html" title="interface in net.minecraft.inventory">Inventory</a>&nbsp;to,
@@ -310,7 +431,7 @@ int&nbsp;amount)</code></th>
 <h3>Methods inherited from class&nbsp;net.minecraft.block.entity.<a href="BlockEntity.html" title="class in net.minecraft.block.entity">BlockEntity</a></h3>
 <a id="methods.inherited.from.class.net.minecraft.block.entity.BlockEntity">
 <!--   -->
-</a><code><a href="BlockEntity.html#applyMirror(net.minecraft.util.BlockMirror)">applyMirror</a>, <a href="BlockEntity.html#applyRotation(net.minecraft.util.BlockRotation)">applyRotation</a>, <a href="BlockEntity.html#cancelRemoval()">cancelRemoval</a>, <a href="BlockEntity.html#copyItemDataRequiresOperator()">copyItemDataRequiresOperator</a>, <a href="BlockEntity.html#createFromTag(net.minecraft.block.BlockState,net.minecraft.nbt.CompoundTag)">createFromTag</a>, <a href="BlockEntity.html#getCachedState()">getCachedState</a>, <a href="BlockEntity.html#getPos()">getPos</a>, <a href="BlockEntity.html#getSquaredDistance(double,double,double)">getSquaredDistance</a>, <a href="BlockEntity.html#getSquaredRenderDistance()">getSquaredRenderDistance</a>, <a href="BlockEntity.html#getType()">getType</a>, <a href="BlockEntity.html#getWorld()">getWorld</a>, <a href="BlockEntity.html#hasWorld()">hasWorld</a>, <a href="BlockEntity.html#isRemoved()">isRemoved</a>, <a href="BlockEntity.html#markDirty()">markDirty</a>, <a href="BlockEntity.html#markInvalid()">markInvalid</a>, <a href="BlockEntity.html#markRemoved()">markRemoved</a>, <a href="BlockEntity.html#onBlockAction(int,int)">onBlockAction</a>, <a href="BlockEntity.html#populateCrashReport(net.minecraft.util.crash.CrashReportSection)">populateCrashReport</a>, <a href="BlockEntity.html#resetBlock()">resetBlock</a>, <a href="BlockEntity.html#setLocation(net.minecraft.world.World,net.minecraft.util.math.BlockPos)">setLocation</a>, <a href="BlockEntity.html#setPos(net.minecraft.util.math.BlockPos)">setPos</a>, <a href="BlockEntity.html#toInitialChunkDataTag()">toInitialChunkDataTag</a>, <a href="BlockEntity.html#toUpdatePacket()">toUpdatePacket</a></code></div>
+</a><code><a href="BlockEntity.html#applyMirror(net.minecraft.util.BlockMirror)">applyMirror</a>, <a href="BlockEntity.html#applyRotation(net.minecraft.util.BlockRotation)">applyRotation</a>, <a href="BlockEntity.html#cancelRemoval()">cancelRemoval</a>, <a href="BlockEntity.html#copyItemDataRequiresOperator()">copyItemDataRequiresOperator</a>, <a href="BlockEntity.html#createFromTag(net.minecraft.block.BlockState,net.minecraft.nbt.CompoundTag)">createFromTag</a>, <a href="BlockEntity.html#getCachedState()">getCachedState</a>, <a href="BlockEntity.html#getPos()">getPos</a>, <a href="BlockEntity.html#getSquaredRenderDistance()">getSquaredRenderDistance</a>, <a href="BlockEntity.html#getType()">getType</a>, <a href="BlockEntity.html#getWorld()">getWorld</a>, <a href="BlockEntity.html#hasWorld()">hasWorld</a>, <a href="BlockEntity.html#isRemoved()">isRemoved</a>, <a href="BlockEntity.html#markDirty()">markDirty</a>, <a href="BlockEntity.html#markInvalid()">markInvalid</a>, <a href="BlockEntity.html#markRemoved()">markRemoved</a>, <a href="BlockEntity.html#onSyncedBlockEvent(int,int)">onSyncedBlockEvent</a>, <a href="BlockEntity.html#populateCrashReport(net.minecraft.util.crash.CrashReportSection)">populateCrashReport</a>, <a href="BlockEntity.html#resetBlock()">resetBlock</a>, <a href="BlockEntity.html#setLocation(net.minecraft.world.World,net.minecraft.util.math.BlockPos)">setLocation</a>, <a href="BlockEntity.html#setPos(net.minecraft.util.math.BlockPos)">setPos</a>, <a href="BlockEntity.html#toInitialChunkDataTag()">toInitialChunkDataTag</a>, <a href="BlockEntity.html#toUpdatePacket()">toUpdatePacket</a></code></div>
 <div class="inheritedList">
 <h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></h3>
 <a id="methods.inherited.from.class.java.lang.Object">
@@ -342,6 +463,34 @@ int&nbsp;amount)</code></th>
 </section>
 <section class="details">
 <ul class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<li class="blockList">
+<section class="fieldDetails"><a id="field.detail">
+<!--   -->
+</a>
+<h2>Field Details</h2>
+<ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="inventory">inventory</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="../../util/collection/DefaultedList.html" title="class in net.minecraft.util.collection">DefaultedList</a>&lt;<a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&gt;</span>&nbsp;<span class="memberName">inventory</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="transferCooldown">transferCooldown</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">transferCooldown</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="lastTickTime">lastTickTime</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">long</span>&nbsp;<span class="memberName">lastTickTime</span></div>
+</section>
+</li>
+</ul>
+</section>
+</li>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <li class="blockList">
 <section class="constructorDetails"><a id="constructor.detail">
@@ -447,8 +596,56 @@ int&nbsp;amount)</span></div>
 </li>
 <li class="blockList">
 <section class="detail">
+<h3><a id="insertAndExtract(java.util.function.Supplier)">insertAndExtract</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">insertAndExtract</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang" class="externalLink">Boolean</a>&gt;&nbsp;extractMethod)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="isFull()">isFull</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isFull</span>()</div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="insert()">insert</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">insert</span>()</div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="getAvailableSlots(net.minecraft.inventory.Inventory,net.minecraft.util.math.Direction)">getAvailableSlots</a></h3>
+<div class="memberSignature"><span class="modifiers">private static</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/IntStream.html?is-external=true" title="class or interface in java.util.stream" class="externalLink">IntStream</a></span>&nbsp;<span class="memberName">getAvailableSlots</span>&#8203;(<span class="arguments"><a href="../../inventory/Inventory.html" title="interface in net.minecraft.inventory">Inventory</a>&nbsp;inventory,
+<a href="../../util/math/Direction.html" title="enum in net.minecraft.util.math">Direction</a>&nbsp;side)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="isInventoryFull(net.minecraft.inventory.Inventory,net.minecraft.util.math.Direction)">isInventoryFull</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isInventoryFull</span>&#8203;(<span class="arguments"><a href="../../inventory/Inventory.html" title="interface in net.minecraft.inventory">Inventory</a>&nbsp;inv,
+<a href="../../util/math/Direction.html" title="enum in net.minecraft.util.math">Direction</a>&nbsp;direction)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="isInventoryEmpty(net.minecraft.inventory.Inventory,net.minecraft.util.math.Direction)">isInventoryEmpty</a></h3>
+<div class="memberSignature"><span class="modifiers">private static</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isInventoryEmpty</span>&#8203;(<span class="arguments"><a href="../../inventory/Inventory.html" title="interface in net.minecraft.inventory">Inventory</a>&nbsp;inv,
+<a href="../../util/math/Direction.html" title="enum in net.minecraft.util.math">Direction</a>&nbsp;facing)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="extract(net.minecraft.block.entity.Hopper)">extract</a></h3>
 <div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">extract</span>&#8203;(<span class="arguments"><a href="Hopper.html" title="interface in net.minecraft.block.entity">Hopper</a>&nbsp;hopper)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="extract(net.minecraft.block.entity.Hopper,net.minecraft.inventory.Inventory,int,net.minecraft.util.math.Direction)">extract</a></h3>
+<div class="memberSignature"><span class="modifiers">private static</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">extract</span>&#8203;(<span class="arguments"><a href="Hopper.html" title="interface in net.minecraft.block.entity">Hopper</a>&nbsp;hopper,
+<a href="../../inventory/Inventory.html" title="interface in net.minecraft.inventory">Inventory</a>&nbsp;inventory,
+int&nbsp;slot,
+<a href="../../util/math/Direction.html" title="enum in net.minecraft.util.math">Direction</a>&nbsp;side)</span></div>
 </section>
 </li>
 <li class="blockList">
@@ -461,18 +658,56 @@ int&nbsp;amount)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="transfer(net.minecraft.inventory.Inventory,net.minecraft.inventory.Inventory,net.minecraft.item.ItemStack,net.minecraft.util.math.Direction)">transfer</a></h3>
-<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType"><a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a></span>&nbsp;<span class="memberName">transfer</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType"><a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a></span>&nbsp;<span class="memberName">transfer</span>&#8203;(<span class="arguments"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 <a href="../../inventory/Inventory.html" title="interface in net.minecraft.inventory">Inventory</a>&nbsp;from,
 <a href="../../inventory/Inventory.html" title="interface in net.minecraft.inventory">Inventory</a>&nbsp;to,
 <a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;stack,
-<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 <a href="../../util/math/Direction.html" title="enum in net.minecraft.util.math">Direction</a>&nbsp;side)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
+<h3><a id="canInsert(net.minecraft.inventory.Inventory,net.minecraft.item.ItemStack,int,net.minecraft.util.math.Direction)">canInsert</a></h3>
+<div class="memberSignature"><span class="modifiers">private static</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">canInsert</span>&#8203;(<span class="arguments"><a href="../../inventory/Inventory.html" title="interface in net.minecraft.inventory">Inventory</a>&nbsp;inventory,
+<a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;stack,
+int&nbsp;slot,
+<a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<a href="../../util/math/Direction.html" title="enum in net.minecraft.util.math">Direction</a>&nbsp;side)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="canExtract(net.minecraft.inventory.Inventory,net.minecraft.item.ItemStack,int,net.minecraft.util.math.Direction)">canExtract</a></h3>
+<div class="memberSignature"><span class="modifiers">private static</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">canExtract</span>&#8203;(<span class="arguments"><a href="../../inventory/Inventory.html" title="interface in net.minecraft.inventory">Inventory</a>&nbsp;inv,
+<a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;stack,
+int&nbsp;slot,
+<a href="../../util/math/Direction.html" title="enum in net.minecraft.util.math">Direction</a>&nbsp;facing)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="transfer(net.minecraft.inventory.Inventory,net.minecraft.inventory.Inventory,net.minecraft.item.ItemStack,int,net.minecraft.util.math.Direction)">transfer</a></h3>
+<div class="memberSignature"><span class="modifiers">private static</span>&nbsp;<span class="returnType"><a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a></span>&nbsp;<span class="memberName">transfer</span>&#8203;(<span class="arguments"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<a href="../../inventory/Inventory.html" title="interface in net.minecraft.inventory">Inventory</a>&nbsp;from,
+<a href="../../inventory/Inventory.html" title="interface in net.minecraft.inventory">Inventory</a>&nbsp;to,
+<a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;stack,
+int&nbsp;slot,
+<a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<a href="../../util/math/Direction.html" title="enum in net.minecraft.util.math">Direction</a>&nbsp;direction)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="getOutputInventory()">getOutputInventory</a></h3>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="../../inventory/Inventory.html" title="interface in net.minecraft.inventory">Inventory</a></span>&nbsp;<span class="memberName">getOutputInventory</span>()</div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="getInputInventory(net.minecraft.block.entity.Hopper)">getInputInventory</a></h3>
-<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 </span><span class="modifiers">public static</span>&nbsp;<span class="returnType"><a href="../../inventory/Inventory.html" title="interface in net.minecraft.inventory">Inventory</a></span>&nbsp;<span class="memberName">getInputInventory</span>&#8203;(<span class="arguments"><a href="Hopper.html" title="interface in net.minecraft.block.entity">Hopper</a>&nbsp;hopper)</span></div>
 </section>
 </li>
@@ -485,7 +720,7 @@ int&nbsp;amount)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getInventoryAt(net.minecraft.world.World,net.minecraft.util.math.BlockPos)">getInventoryAt</a></h3>
-<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 </span><span class="modifiers">public static</span>&nbsp;<span class="returnType"><a href="../../inventory/Inventory.html" title="interface in net.minecraft.inventory">Inventory</a></span>&nbsp;<span class="memberName">getInventoryAt</span>&#8203;(<span class="arguments"><a href="../../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world,
 <a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos)</span></div>
 </section>
@@ -493,11 +728,18 @@ int&nbsp;amount)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getInventoryAt(net.minecraft.world.World,double,double,double)">getInventoryAt</a></h3>
-<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 </span><span class="modifiers">public static</span>&nbsp;<span class="returnType"><a href="../../inventory/Inventory.html" title="interface in net.minecraft.inventory">Inventory</a></span>&nbsp;<span class="memberName">getInventoryAt</span>&#8203;(<span class="arguments"><a href="../../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world,
 double&nbsp;x,
 double&nbsp;y,
 double&nbsp;z)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="canMergeItems(net.minecraft.item.ItemStack,net.minecraft.item.ItemStack)">canMergeItems</a></h3>
+<div class="memberSignature"><span class="modifiers">private static</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">canMergeItems</span>&#8203;(<span class="arguments"><a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;first,
+<a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;second)</span></div>
 </section>
 </li>
 <li class="blockList">
@@ -532,6 +774,24 @@ double&nbsp;z)</span></div>
 </li>
 <li class="blockList">
 <section class="detail">
+<h3><a id="setCooldown(int)">setCooldown</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setCooldown</span>&#8203;(<span class="arguments">int&nbsp;cooldown)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="needsCooldown()">needsCooldown</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">needsCooldown</span>()</div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="isDisabled()">isDisabled</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isDisabled</span>()</div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="getInvStackList()">getInvStackList</a></h3>
 <div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType"><a href="../../util/collection/DefaultedList.html" title="class in net.minecraft.util.collection">DefaultedList</a>&lt;<a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&gt;</span>&nbsp;<span class="memberName">getInvStackList</span>()</div>
 <dl>
@@ -558,12 +818,12 @@ double&nbsp;z)</span></div>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="createContainer(int,net.minecraft.entity.player.PlayerInventory)">createContainer</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType"><a href="../../screen/ScreenHandler.html" title="class in net.minecraft.screen">ScreenHandler</a></span>&nbsp;<span class="memberName">createContainer</span>&#8203;(<span class="arguments">int&nbsp;int2,
+<h3><a id="createScreenHandler(int,net.minecraft.entity.player.PlayerInventory)">createScreenHandler</a></h3>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType"><a href="../../screen/ScreenHandler.html" title="class in net.minecraft.screen">ScreenHandler</a></span>&nbsp;<span class="memberName">createScreenHandler</span>&#8203;(<span class="arguments">int&nbsp;syncId,
 <a href="../../entity/player/PlayerInventory.html" title="class in net.minecraft.entity.player">PlayerInventory</a>&nbsp;playerInventory)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="LockableContainerBlockEntity.html#createContainer(int,net.minecraft.entity.player.PlayerInventory)">createContainer</a></code>&nbsp;in class&nbsp;<code><a href="LockableContainerBlockEntity.html" title="class in net.minecraft.block.entity">LockableContainerBlockEntity</a></code></dd>
+<dd><code><a href="LockableContainerBlockEntity.html#createScreenHandler(int,net.minecraft.entity.player.PlayerInventory)">createScreenHandler</a></code>&nbsp;in class&nbsp;<code><a href="LockableContainerBlockEntity.html" title="class in net.minecraft.block.entity">LockableContainerBlockEntity</a></code></dd>
 </dl>
 </section>
 </li>
@@ -606,7 +866,7 @@ double&nbsp;z)</span></div>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>

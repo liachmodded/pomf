@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":9,"i1":10,"i2":9,"i3":9,"i4":9,"i5":9,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":9,"i21":9,"i22":9,"i23":9,"i24":9,"i25":10,"i26":10,"i27":10,"i28":10,"i29":10,"i30":10,"i31":10,"i32":10,"i33":9,"i34":9,"i35":9,"i36":10,"i37":9};
+<script type="text/javascript">var data = {"i0":9,"i1":9,"i2":10,"i3":9,"i4":9,"i5":9,"i6":9,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":9,"i22":9,"i23":9,"i24":9,"i25":10,"i26":10,"i27":10,"i28":10,"i29":10,"i30":10,"i31":10,"i32":10,"i33":9,"i34":9,"i35":9,"i36":10,"i37":9,"i38":9};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -92,7 +92,7 @@ loadScripts(document, 'script');</script>
 <section class="description">
 <dl>
 <dt>Direct Known Subclasses:</dt>
-<dd><code><a href="EntityDamageSource.html" title="class in net.minecraft.entity.damage">EntityDamageSource</a></code>, <code><a href="NetherBedDamageSource.html" title="class in net.minecraft.entity.damage">NetherBedDamageSource</a></code></dd>
+<dd><code><a href="BadRespawnPointDamageSource.html" title="class in net.minecraft.entity.damage">BadRespawnPointDamageSource</a></code>, <code><a href="EntityDamageSource.html" title="class in net.minecraft.entity.damage">EntityDamageSource</a></code></dd>
 </dl>
 <hr>
 <pre>public class <span class="typeNameLabel">DamageSource</span>
@@ -123,38 +123,58 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#bypassesArmor">bypassesArmor</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#CACTUS">CACTUS</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#CRAMMING">CRAMMING</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#DRAGON_BREATH">DRAGON_BREATH</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#DROWN">DROWN</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#DRYOUT">DRYOUT</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private float</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#exhaustion">exhaustion</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
 <tr class="altColor">
-<td class="colFirst"><code>static <a href="DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#FALL">FALL</a></span></code></th>
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#explosive">explosive</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static <a href="DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#FALL">FALL</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#FALLING_BLOCK">FALLING_BLOCK</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#fire">fire</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
@@ -193,23 +213,43 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#magic">magic</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#MAGIC">MAGIC</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#name">name</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#ON_FIRE">ON_FIRE</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#OUT_OF_WORLD">OUT_OF_WORLD</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#outOfWorld">outOfWorld</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#projectile">projectile</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#scaleWithDifficulty">scaleWithDifficulty</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
@@ -223,6 +263,11 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#unblockable">unblockable</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#WITHER">WITHER</a></span></code></th>
 <td class="colLast">&nbsp;</td>
@@ -284,122 +329,122 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
+<td class="colFirst"><code>static <a href="DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#badRespawnPoint()">badRespawnPoint</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i2">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#bypassesArmor()">bypassesArmor</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i2">
+<tr class="rowColor" id="i3">
 <td class="colFirst"><code>static <a href="DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#explosion(net.minecraft.entity.LivingEntity)">explosion</a></span>&#8203;(<a href="../LivingEntity.html" title="class in net.minecraft.entity">LivingEntity</a>&nbsp;attacker)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i3">
+<tr class="altColor" id="i4">
 <td class="colFirst"><code>static <a href="DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#explosion(net.minecraft.world.explosion.Explosion)">explosion</a></span>&#8203;(<a href="../../world/explosion/Explosion.html" title="class in net.minecraft.world.explosion">Explosion</a>&nbsp;explosion)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i4">
+<tr class="rowColor" id="i5">
 <td class="colFirst"><code>static <a href="DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#explosiveProjectile(net.minecraft.entity.projectile.ExplosiveProjectileEntity,net.minecraft.entity.Entity)">explosiveProjectile</a></span>&#8203;(<a href="../projectile/ExplosiveProjectileEntity.html" title="class in net.minecraft.entity.projectile">ExplosiveProjectileEntity</a>&nbsp;projectile,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#fireball(net.minecraft.entity.projectile.AbstractFireballEntity,net.minecraft.entity.Entity)">fireball</a></span>&#8203;(<a href="../projectile/AbstractFireballEntity.html" title="class in net.minecraft.entity.projectile">AbstractFireballEntity</a>&nbsp;fireball,
 <a href="../Entity.html" title="class in net.minecraft.entity">Entity</a>&nbsp;attacker)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i5">
+<tr class="altColor" id="i6">
 <td class="colFirst"><code>static <a href="DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#firework(net.minecraft.entity.projectile.FireworkRocketEntity,net.minecraft.entity.Entity)">firework</a></span>&#8203;(<a href="../projectile/FireworkRocketEntity.html" title="class in net.minecraft.entity.projectile">FireworkRocketEntity</a>&nbsp;firework,
 <a href="../Entity.html" title="class in net.minecraft.entity">Entity</a>&nbsp;attacker)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i6">
+<tr class="rowColor" id="i7">
 <td class="colFirst"><code><a href="../Entity.html" title="class in net.minecraft.entity">Entity</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getAttacker()">getAttacker</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i7">
+<tr class="altColor" id="i8">
 <td class="colFirst"><code><a href="../../text/Text.html" title="interface in net.minecraft.text">Text</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getDeathMessage(net.minecraft.entity.LivingEntity)">getDeathMessage</a></span>&#8203;(<a href="../LivingEntity.html" title="class in net.minecraft.entity">LivingEntity</a>&nbsp;entity)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i8">
+<tr class="rowColor" id="i9">
 <td class="colFirst"><code>float</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getExhaustion()">getExhaustion</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i9">
+<tr class="altColor" id="i10">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getMagic()">getMagic</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i10">
+<tr class="rowColor" id="i11">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getName()">getName</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i11">
+<tr class="altColor" id="i12">
 <td class="colFirst"><code><a href="../../util/math/Vec3d.html" title="class in net.minecraft.util.math">Vec3d</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPosition()">getPosition</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i12">
+<tr class="rowColor" id="i13">
 <td class="colFirst"><code><a href="../Entity.html" title="class in net.minecraft.entity">Entity</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getSource()">getSource</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i13">
+<tr class="altColor" id="i14">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isExplosive()">isExplosive</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i14">
+<tr class="rowColor" id="i15">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isFire()">isFire</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i15">
+<tr class="altColor" id="i16">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isOutOfWorld()">isOutOfWorld</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i16">
+<tr class="rowColor" id="i17">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isProjectile()">isProjectile</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i17">
+<tr class="altColor" id="i18">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isScaledWithDifficulty()">isScaledWithDifficulty</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i18">
+<tr class="rowColor" id="i19">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isSourceCreativePlayer()">isSourceCreativePlayer</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i19">
+<tr class="altColor" id="i20">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isUnblockable()">isUnblockable</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i20">
+<tr class="rowColor" id="i21">
 <td class="colFirst"><code>static <a href="DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#magic(net.minecraft.entity.Entity,net.minecraft.entity.Entity)">magic</a></span>&#8203;(<a href="../Entity.html" title="class in net.minecraft.entity">Entity</a>&nbsp;magic,
 <a href="../Entity.html" title="class in net.minecraft.entity">Entity</a>&nbsp;attacker)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i21">
+<tr class="altColor" id="i22">
 <td class="colFirst"><code>static <a href="DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#mob(net.minecraft.entity.LivingEntity)">mob</a></span>&#8203;(<a href="../LivingEntity.html" title="class in net.minecraft.entity">LivingEntity</a>&nbsp;attacker)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i22">
+<tr class="rowColor" id="i23">
 <td class="colFirst"><code>static <a href="DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#mobProjectile(net.minecraft.entity.Entity,net.minecraft.entity.LivingEntity)">mobProjectile</a></span>&#8203;(<a href="../Entity.html" title="class in net.minecraft.entity">Entity</a>&nbsp;projectile,
 <a href="../LivingEntity.html" title="class in net.minecraft.entity">LivingEntity</a>&nbsp;attacker)</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="rowColor" id="i23">
-<td class="colFirst"><code>static <a href="DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#netherBed()">netherBed</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i24">
@@ -471,6 +516,12 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tr class="rowColor" id="i37">
 <td class="colFirst"><code>static <a href="DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#trident(net.minecraft.entity.Entity,net.minecraft.entity.Entity)">trident</a></span>&#8203;(<a href="../Entity.html" title="class in net.minecraft.entity">Entity</a>&nbsp;trident,
+<a href="../Entity.html" title="class in net.minecraft.entity">Entity</a>&nbsp;attacker)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i38">
+<td class="colFirst"><code>static <a href="DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#witherSkull(net.minecraft.entity.projectile.WitherSkullEntity,net.minecraft.entity.Entity)">witherSkull</a></span>&#8203;(<a href="../projectile/WitherSkullEntity.html" title="class in net.minecraft.entity.projectile">WitherSkullEntity</a>&nbsp;witherSkull,
 <a href="../Entity.html" title="class in net.minecraft.entity">Entity</a>&nbsp;attacker)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -624,6 +675,60 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </li>
 <li class="blockList">
 <section class="detail">
+<h3><a id="bypassesArmor">bypassesArmor</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">bypassesArmor</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="outOfWorld">outOfWorld</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">outOfWorld</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="unblockable">unblockable</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">unblockable</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="exhaustion">exhaustion</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">float</span>&nbsp;<span class="memberName">exhaustion</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="fire">fire</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">fire</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="projectile">projectile</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">projectile</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="scaleWithDifficulty">scaleWithDifficulty</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">scaleWithDifficulty</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="magic">magic</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">magic</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="explosive">explosive</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">explosive</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="name">name</a></h3>
 <div class="memberSignature"><span class="modifiers">public final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></span>&nbsp;<span class="memberName">name</span></div>
 </section>
@@ -683,7 +788,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <section class="detail">
 <h3><a id="arrow(net.minecraft.entity.projectile.PersistentProjectileEntity,net.minecraft.entity.Entity)">arrow</a></h3>
 <div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType"><a href="DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a></span>&nbsp;<span class="memberName">arrow</span>&#8203;(<span class="arguments"><a href="../projectile/PersistentProjectileEntity.html" title="class in net.minecraft.entity.projectile">PersistentProjectileEntity</a>&nbsp;projectile,
-<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 <a href="../Entity.html" title="class in net.minecraft.entity">Entity</a>&nbsp;attacker)</span></div>
 </section>
 </li>
@@ -691,7 +796,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <section class="detail">
 <h3><a id="trident(net.minecraft.entity.Entity,net.minecraft.entity.Entity)">trident</a></h3>
 <div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType"><a href="DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a></span>&nbsp;<span class="memberName">trident</span>&#8203;(<span class="arguments"><a href="../Entity.html" title="class in net.minecraft.entity">Entity</a>&nbsp;trident,
-<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 <a href="../Entity.html" title="class in net.minecraft.entity">Entity</a>&nbsp;attacker)</span></div>
 </section>
 </li>
@@ -699,15 +804,22 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <section class="detail">
 <h3><a id="firework(net.minecraft.entity.projectile.FireworkRocketEntity,net.minecraft.entity.Entity)">firework</a></h3>
 <div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType"><a href="DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a></span>&nbsp;<span class="memberName">firework</span>&#8203;(<span class="arguments"><a href="../projectile/FireworkRocketEntity.html" title="class in net.minecraft.entity.projectile">FireworkRocketEntity</a>&nbsp;firework,
-<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 <a href="../Entity.html" title="class in net.minecraft.entity">Entity</a>&nbsp;attacker)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="explosiveProjectile(net.minecraft.entity.projectile.ExplosiveProjectileEntity,net.minecraft.entity.Entity)">explosiveProjectile</a></h3>
-<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType"><a href="DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a></span>&nbsp;<span class="memberName">explosiveProjectile</span>&#8203;(<span class="arguments"><a href="../projectile/ExplosiveProjectileEntity.html" title="class in net.minecraft.entity.projectile">ExplosiveProjectileEntity</a>&nbsp;projectile,
-<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<h3><a id="fireball(net.minecraft.entity.projectile.AbstractFireballEntity,net.minecraft.entity.Entity)">fireball</a></h3>
+<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType"><a href="DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a></span>&nbsp;<span class="memberName">fireball</span>&#8203;(<span class="arguments"><a href="../projectile/AbstractFireballEntity.html" title="class in net.minecraft.entity.projectile">AbstractFireballEntity</a>&nbsp;fireball,
+<a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<a href="../Entity.html" title="class in net.minecraft.entity">Entity</a>&nbsp;attacker)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="witherSkull(net.minecraft.entity.projectile.WitherSkullEntity,net.minecraft.entity.Entity)">witherSkull</a></h3>
+<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType"><a href="DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a></span>&nbsp;<span class="memberName">witherSkull</span>&#8203;(<span class="arguments"><a href="../projectile/WitherSkullEntity.html" title="class in net.minecraft.entity.projectile">WitherSkullEntity</a>&nbsp;witherSkull,
 <a href="../Entity.html" title="class in net.minecraft.entity">Entity</a>&nbsp;attacker)</span></div>
 </section>
 </li>
@@ -715,7 +827,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <section class="detail">
 <h3><a id="thrownProjectile(net.minecraft.entity.Entity,net.minecraft.entity.Entity)">thrownProjectile</a></h3>
 <div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType"><a href="DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a></span>&nbsp;<span class="memberName">thrownProjectile</span>&#8203;(<span class="arguments"><a href="../Entity.html" title="class in net.minecraft.entity">Entity</a>&nbsp;projectile,
-<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 <a href="../Entity.html" title="class in net.minecraft.entity">Entity</a>&nbsp;attacker)</span></div>
 </section>
 </li>
@@ -723,7 +835,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <section class="detail">
 <h3><a id="magic(net.minecraft.entity.Entity,net.minecraft.entity.Entity)">magic</a></h3>
 <div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType"><a href="DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a></span>&nbsp;<span class="memberName">magic</span>&#8203;(<span class="arguments"><a href="../Entity.html" title="class in net.minecraft.entity">Entity</a>&nbsp;magic,
-<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 <a href="../Entity.html" title="class in net.minecraft.entity">Entity</a>&nbsp;attacker)</span></div>
 </section>
 </li>
@@ -736,21 +848,21 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <section class="detail">
 <h3><a id="explosion(net.minecraft.world.explosion.Explosion)">explosion</a></h3>
-<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType"><a href="DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a></span>&nbsp;<span class="memberName">explosion</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType"><a href="DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a></span>&nbsp;<span class="memberName">explosion</span>&#8203;(<span class="arguments"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 <a href="../../world/explosion/Explosion.html" title="class in net.minecraft.world.explosion">Explosion</a>&nbsp;explosion)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="explosion(net.minecraft.entity.LivingEntity)">explosion</a></h3>
-<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType"><a href="DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a></span>&nbsp;<span class="memberName">explosion</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType"><a href="DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a></span>&nbsp;<span class="memberName">explosion</span>&#8203;(<span class="arguments"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 <a href="../LivingEntity.html" title="class in net.minecraft.entity">LivingEntity</a>&nbsp;attacker)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="netherBed()">netherBed</a></h3>
-<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType"><a href="DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a></span>&nbsp;<span class="memberName">netherBed</span>()</div>
+<h3><a id="badRespawnPoint()">badRespawnPoint</a></h3>
+<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType"><a href="DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a></span>&nbsp;<span class="memberName">badRespawnPoint</span>()</div>
 </section>
 </li>
 <li class="blockList">
@@ -814,14 +926,14 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <section class="detail">
 <h3><a id="getSource()">getSource</a></h3>
-<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 </span><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../Entity.html" title="class in net.minecraft.entity">Entity</a></span>&nbsp;<span class="memberName">getSource</span>()</div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getAttacker()">getAttacker</a></h3>
-<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 </span><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../Entity.html" title="class in net.minecraft.entity">Entity</a></span>&nbsp;<span class="memberName">getAttacker</span>()</div>
 </section>
 </li>
@@ -900,7 +1012,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <section class="detail">
 <h3><a id="getPosition()">getPosition</a></h3>
-<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 </span><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../util/math/Vec3d.html" title="class in net.minecraft.util.math">Vec3d</a></span>&nbsp;<span class="memberName">getPosition</span>()</div>
 </section>
 </li>

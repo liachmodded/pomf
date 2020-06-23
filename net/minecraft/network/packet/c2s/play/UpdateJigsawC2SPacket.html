@@ -56,13 +56,13 @@ loadScripts(document, 'script');</script>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
@@ -101,6 +101,58 @@ implements <a href="../../../Packet.html" title="interface in net.minecraft.netw
 </section>
 <section class="summary">
 <ul class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<li class="blockList">
+<section class="fieldSummary"><a id="field.summary">
+<!--   -->
+</a>
+<h2>Field Summary</h2>
+<div class="memberSummary">
+<table>
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<thead>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colSecond" scope="col">Field</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#attachmentType">attachmentType</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#finalState">finalState</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../block/entity/JigsawBlockEntity.Joint.html" title="enum in net.minecraft.block.entity">JigsawBlockEntity.Joint</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#jointType">jointType</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#pool">pool</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#pos">pos</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#targetPool">targetPool</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</li>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <li class="blockList">
 <section class="constructorSummary"><a id="constructor.summary">
@@ -125,9 +177,9 @@ implements <a href="../../../Packet.html" title="interface in net.minecraft.netw
 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.util.math.BlockPos,net.minecraft.util.Identifier,net.minecraft.util.Identifier,net.minecraft.util.Identifier,java.lang.String,net.minecraft.block.entity.JigsawBlockEntity.Joint)">UpdateJigsawC2SPacket</a></span>&#8203;(<a href="../../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
 <a href="../../../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;attachmentType,
 <a href="../../../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;targetPool,
-<a href="../../../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;identifier,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;string,
-<a href="../../../../block/entity/JigsawBlockEntity.Joint.html" title="enum in net.minecraft.block.entity">JigsawBlockEntity.Joint</a>&nbsp;joint)</code></th>
+<a href="../../../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;pool,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;finalState,
+<a href="../../../../block/entity/JigsawBlockEntity.Joint.html" title="enum in net.minecraft.block.entity">JigsawBlockEntity.Joint</a>&nbsp;jointType)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -169,23 +221,23 @@ implements <a href="../../../Packet.html" title="interface in net.minecraft.netw
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i3">
-<td class="colFirst"><code><a href="../../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPos()">getPos</a></span>()</code></th>
+<td class="colFirst"><code><a href="../../../../block/entity/JigsawBlockEntity.Joint.html" title="enum in net.minecraft.block.entity">JigsawBlockEntity.Joint</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getJointType()">getJointType</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i4">
 <td class="colFirst"><code><a href="../../../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getTargetPool()">getTargetPool</a></span>()</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPool()">getPool</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i5">
-<td class="colFirst"><code><a href="../../../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_26435()">method_26435</a></span>()</code></th>
+<td class="colFirst"><code><a href="../../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPos()">getPos</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i6">
-<td class="colFirst"><code><a href="../../../../block/entity/JigsawBlockEntity.Joint.html" title="enum in net.minecraft.block.entity">JigsawBlockEntity.Joint</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_26436()">method_26436</a></span>()</code></th>
+<td class="colFirst"><code><a href="../../../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getTargetPool()">getTargetPool</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i7">
@@ -218,6 +270,52 @@ implements <a href="../../../Packet.html" title="interface in net.minecraft.netw
 </section>
 <section class="details">
 <ul class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<li class="blockList">
+<section class="fieldDetails"><a id="field.detail">
+<!--   -->
+</a>
+<h2>Field Details</h2>
+<ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="pos">pos</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="../../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a></span>&nbsp;<span class="memberName">pos</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="attachmentType">attachmentType</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="../../../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a></span>&nbsp;<span class="memberName">attachmentType</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="targetPool">targetPool</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="../../../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a></span>&nbsp;<span class="memberName">targetPool</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="pool">pool</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="../../../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a></span>&nbsp;<span class="memberName">pool</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="finalState">finalState</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></span>&nbsp;<span class="memberName">finalState</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="jointType">jointType</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="../../../../block/entity/JigsawBlockEntity.Joint.html" title="enum in net.minecraft.block.entity">JigsawBlockEntity.Joint</a></span>&nbsp;<span class="memberName">jointType</span></div>
+</section>
+</li>
+</ul>
+</section>
+</li>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <li class="blockList">
 <section class="constructorDetails"><a id="constructor.detail">
@@ -238,9 +336,9 @@ implements <a href="../../../Packet.html" title="interface in net.minecraft.netw
 </span><span class="modifiers">public</span>&nbsp;<span class="memberName">UpdateJigsawC2SPacket</span>&#8203;(<span class="arguments"><a href="../../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
 <a href="../../../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;attachmentType,
 <a href="../../../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;targetPool,
-<a href="../../../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;identifier,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;string,
-<a href="../../../../block/entity/JigsawBlockEntity.Joint.html" title="enum in net.minecraft.block.entity">JigsawBlockEntity.Joint</a>&nbsp;joint)</span></div>
+<a href="../../../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;pool,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;finalState,
+<a href="../../../../block/entity/JigsawBlockEntity.Joint.html" title="enum in net.minecraft.block.entity">JigsawBlockEntity.Joint</a>&nbsp;jointType)</span></div>
 </section>
 </li>
 </ul>
@@ -309,8 +407,8 @@ implements <a href="../../../Packet.html" title="interface in net.minecraft.netw
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="method_26435()">method_26435</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a></span>&nbsp;<span class="memberName">method_26435</span>()</div>
+<h3><a id="getPool()">getPool</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a></span>&nbsp;<span class="memberName">getPool</span>()</div>
 </section>
 </li>
 <li class="blockList">
@@ -321,8 +419,8 @@ implements <a href="../../../Packet.html" title="interface in net.minecraft.netw
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="method_26436()">method_26436</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../../../block/entity/JigsawBlockEntity.Joint.html" title="enum in net.minecraft.block.entity">JigsawBlockEntity.Joint</a></span>&nbsp;<span class="memberName">method_26436</span>()</div>
+<h3><a id="getJointType()">getJointType</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../../../block/entity/JigsawBlockEntity.Joint.html" title="enum in net.minecraft.block.entity">JigsawBlockEntity.Joint</a></span>&nbsp;<span class="memberName">getJointType</span>()</div>
 </section>
 </li>
 </ul>
@@ -358,13 +456,13 @@ implements <a href="../../../Packet.html" title="interface in net.minecraft.netw
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>

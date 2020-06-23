@@ -127,6 +127,16 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/AutoClos
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#dataFixer">dataFixer</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../FeatureUpdater.html" title="class in net.minecraft.world">FeatureUpdater</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#featureUpdater">featureUpdater</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="StorageIoWorker.html" title="class in net.minecraft.world.storage">StorageIoWorker</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#worker">worker</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -205,7 +215,7 @@ boolean&nbsp;bool)</code></th>
 </tr>
 <tr class="rowColor" id="i5">
 <td class="colFirst"><code><a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#updateChunkTag(net.minecraft.world.dimension.DimensionType,java.util.function.Supplier,net.minecraft.nbt.CompoundTag)">updateChunkTag</a></span>&#8203;(<a href="../dimension/DimensionType.html" title="class in net.minecraft.world.dimension">DimensionType</a>&nbsp;dimensionType,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#updateChunkTag(net.minecraft.util.registry.RegistryKey,java.util.function.Supplier,net.minecraft.nbt.CompoundTag)">updateChunkTag</a></span>&#8203;(<a href="../../util/registry/RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="../World.html" title="class in net.minecraft.world">World</a>&gt;&nbsp;registryKey,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Supplier</a>&lt;<a href="../PersistentStateManager.html" title="class in net.minecraft.world">PersistentStateManager</a>&gt;&nbsp;persistentStateManagerFactory,
 <a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;tag)</code></th>
 <td class="colLast">&nbsp;</td>
@@ -234,8 +244,21 @@ boolean&nbsp;bool)</code></th>
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
+<h3><a id="worker">worker</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="StorageIoWorker.html" title="class in net.minecraft.world.storage">StorageIoWorker</a></span>&nbsp;<span class="memberName">worker</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="dataFixer">dataFixer</a></h3>
 <div class="memberSignature"><span class="modifiers">protected final</span>&nbsp;<span class="returnType">com.mojang.datafixers.DataFixer</span>&nbsp;<span class="memberName">dataFixer</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="featureUpdater">featureUpdater</a></h3>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="../FeatureUpdater.html" title="class in net.minecraft.world">FeatureUpdater</a></span>&nbsp;<span class="memberName">featureUpdater</span></div>
 </section>
 </li>
 </ul>
@@ -268,8 +291,8 @@ boolean&nbsp;bool)</span></div>
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="updateChunkTag(net.minecraft.world.dimension.DimensionType,java.util.function.Supplier,net.minecraft.nbt.CompoundTag)">updateChunkTag</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a></span>&nbsp;<span class="memberName">updateChunkTag</span>&#8203;(<span class="arguments"><a href="../dimension/DimensionType.html" title="class in net.minecraft.world.dimension">DimensionType</a>&nbsp;dimensionType,
+<h3><a id="updateChunkTag(net.minecraft.util.registry.RegistryKey,java.util.function.Supplier,net.minecraft.nbt.CompoundTag)">updateChunkTag</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a></span>&nbsp;<span class="memberName">updateChunkTag</span>&#8203;(<span class="arguments"><a href="../../util/registry/RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="../World.html" title="class in net.minecraft.world">World</a>&gt;&nbsp;registryKey,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Supplier</a>&lt;<a href="../PersistentStateManager.html" title="class in net.minecraft.world">PersistentStateManager</a>&gt;&nbsp;persistentStateManagerFactory,
 <a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;tag)</span></div>
 </section>
@@ -283,7 +306,7 @@ boolean&nbsp;bool)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getNbt(net.minecraft.util.math.ChunkPos)">getNbt</a></h3>
-<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 </span><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a></span>&nbsp;<span class="memberName">getNbt</span>&#8203;(<span class="arguments"><a href="../../util/math/ChunkPos.html" title="class in net.minecraft.util.math">ChunkPos</a>&nbsp;chunkPos)</span>
                    throws <span class="exceptions"><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></span></div>
 <dl>

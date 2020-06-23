@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10};
+<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -138,8 +138,28 @@ extends <a href="Goal.html" title="class in net.minecraft.entity.ai.goal">Goal</
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private double</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#chance">chance</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang" class="externalLink">Class</a>&lt;? extends <a href="../../passive/AnimalEntity.html" title="class in net.minecraft.entity.passive">AnimalEntity</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#entityClass">entityClass</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../passive/AnimalEntity.html" title="class in net.minecraft.entity.passive">AnimalEntity</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#mate">mate</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#timer">timer</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static <a href="../TargetPredicate.html" title="class in net.minecraft.entity.ai">TargetPredicate</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#VALID_MATE_PREDICATE">VALID_MATE_PREDICATE</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
@@ -213,16 +233,21 @@ double&nbsp;chance,
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i2">
+<td class="colFirst"><code>private <a href="../../passive/AnimalEntity.html" title="class in net.minecraft.entity.passive">AnimalEntity</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#findMate()">findMate</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i3">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#shouldContinue()">shouldContinue</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i3">
+<tr class="altColor" id="i4">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#stop()">stop</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i4">
+<tr class="rowColor" id="i5">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#tick()">tick</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
@@ -256,8 +281,20 @@ double&nbsp;chance,
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
+<h3><a id="VALID_MATE_PREDICATE">VALID_MATE_PREDICATE</a></h3>
+<div class="memberSignature"><span class="modifiers">private static final</span>&nbsp;<span class="returnType"><a href="../TargetPredicate.html" title="class in net.minecraft.entity.ai">TargetPredicate</a></span>&nbsp;<span class="memberName">VALID_MATE_PREDICATE</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="animal">animal</a></h3>
 <div class="memberSignature"><span class="modifiers">protected final</span>&nbsp;<span class="returnType"><a href="../../passive/AnimalEntity.html" title="class in net.minecraft.entity.passive">AnimalEntity</a></span>&nbsp;<span class="memberName">animal</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="entityClass">entityClass</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang" class="externalLink">Class</a>&lt;? extends <a href="../../passive/AnimalEntity.html" title="class in net.minecraft.entity.passive">AnimalEntity</a>&gt;</span>&nbsp;<span class="memberName">entityClass</span></div>
 </section>
 </li>
 <li class="blockList">
@@ -270,6 +307,18 @@ double&nbsp;chance,
 <section class="detail">
 <h3><a id="mate">mate</a></h3>
 <div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType"><a href="../../passive/AnimalEntity.html" title="class in net.minecraft.entity.passive">AnimalEntity</a></span>&nbsp;<span class="memberName">mate</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="timer">timer</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">timer</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="chance">chance</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType">double</span>&nbsp;<span class="memberName">chance</span></div>
 </section>
 </li>
 </ul>
@@ -345,6 +394,13 @@ double&nbsp;chance,
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="Goal.html#tick()">tick</a></code>&nbsp;in class&nbsp;<code><a href="Goal.html" title="class in net.minecraft.entity.ai.goal">Goal</a></code></dd>
 </dl>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="findMate()">findMate</a></h3>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="../../passive/AnimalEntity.html" title="class in net.minecraft.entity.passive">AnimalEntity</a></span>&nbsp;<span class="memberName">findMate</span>()</div>
 </section>
 </li>
 <li class="blockList">

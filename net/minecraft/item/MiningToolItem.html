@@ -96,7 +96,7 @@ loadScripts(document, 'script');</script>
 <section class="description">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="ItemConvertible.html" title="interface in net.minecraft.item">ItemConvertible</a></code></dd>
+<dd><code><a href="ItemConvertible.html" title="interface in net.minecraft.item">ItemConvertible</a></code>, <code><a href="Vanishable.html" title="interface in net.minecraft.item">Vanishable</a></code></dd>
 </dl>
 <dl>
 <dt>Direct Known Subclasses:</dt>
@@ -104,7 +104,8 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <pre>public class <span class="typeNameLabel">MiningToolItem</span>
-extends <a href="ToolItem.html" title="class in net.minecraft.item">ToolItem</a></pre>
+extends <a href="ToolItem.html" title="class in net.minecraft.item">ToolItem</a>
+implements <a href="Vanishable.html" title="interface in net.minecraft.item">Vanishable</a></pre>
 </section>
 <section class="summary">
 <ul class="blockList">
@@ -139,6 +140,21 @@ extends <a href="ToolItem.html" title="class in net.minecraft.item">ToolItem</a>
 </thead>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code>private float</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#attackDamage">attackDamage</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="https://guava.dev/releases/21.0/api/docs/com/google/common/collect/Multimap.html?is-external=true" title="class or interface in com.google.common.collect" class="externalLink">Multimap</a>&lt;<a href="../entity/attribute/EntityAttribute.html" title="class in net.minecraft.entity.attribute">EntityAttribute</a>,&#8203;<a href="../entity/attribute/EntityAttributeModifier.html" title="class in net.minecraft.entity.attribute">EntityAttributeModifier</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#attributeModifiers">attributeModifiers</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="../block/Block.html" title="class in net.minecraft.block">Block</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#effectiveBlocks">effectiveBlocks</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>protected float</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#miningSpeed">miningSpeed</a></span></code></th>
 <td class="colLast">&nbsp;</td>
@@ -150,7 +166,7 @@ extends <a href="ToolItem.html" title="class in net.minecraft.item">ToolItem</a>
 <h3>Fields inherited from class&nbsp;net.minecraft.item.<a href="Item.html" title="class in net.minecraft.item">Item</a></h3>
 <a id="fields.inherited.from.class.net.minecraft.item.Item">
 <!--   -->
-</a><code><a href="Item.html#ATTACK_DAMAGE_MODIFIER_UUID">ATTACK_DAMAGE_MODIFIER_UUID</a>, <a href="Item.html#ATTACK_SPEED_MODIFIER_UUID">ATTACK_SPEED_MODIFIER_UUID</a>, <a href="Item.html#BLOCK_ITEMS">BLOCK_ITEMS</a>, <a href="Item.html#group">group</a>, <a href="Item.html#RANDOM">RANDOM</a></code></div>
+</a><code><a href="Item.html#ATTACK_DAMAGE_MODIFIER_ID">ATTACK_DAMAGE_MODIFIER_ID</a>, <a href="Item.html#ATTACK_SPEED_MODIFIER_ID">ATTACK_SPEED_MODIFIER_ID</a>, <a href="Item.html#BLOCK_ITEMS">BLOCK_ITEMS</a>, <a href="Item.html#group">group</a>, <a href="Item.html#RANDOM">RANDOM</a></code></div>
 </section>
 </li>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
@@ -204,18 +220,18 @@ float&nbsp;attackSpeed,
 <tbody>
 <tr class="altColor" id="i0">
 <td class="colFirst"><code>float</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getMiningSpeedMultiplier(net.minecraft.item.ItemStack,net.minecraft.block.BlockState)">getMiningSpeedMultiplier</a></span>&#8203;(<a href="ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;stack,
-<a href="../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getAttackDamage()">getAttackDamage</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
 <td class="colFirst"><code><a href="https://guava.dev/releases/21.0/api/docs/com/google/common/collect/Multimap.html?is-external=true" title="class or interface in com.google.common.collect" class="externalLink">Multimap</a>&lt;<a href="../entity/attribute/EntityAttribute.html" title="class in net.minecraft.entity.attribute">EntityAttribute</a>,&#8203;<a href="../entity/attribute/EntityAttributeModifier.html" title="class in net.minecraft.entity.attribute">EntityAttributeModifier</a>&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getModifiers(net.minecraft.entity.EquipmentSlot)">getModifiers</a></span>&#8203;(<a href="../entity/EquipmentSlot.html" title="enum in net.minecraft.entity">EquipmentSlot</a>&nbsp;equipmentSlot)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getAttributeModifiers(net.minecraft.entity.EquipmentSlot)">getAttributeModifiers</a></span>&#8203;(<a href="../entity/EquipmentSlot.html" title="enum in net.minecraft.entity">EquipmentSlot</a>&nbsp;slot)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i2">
 <td class="colFirst"><code>float</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_26366()">method_26366</a></span>()</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getMiningSpeedMultiplier(net.minecraft.item.ItemStack,net.minecraft.block.BlockState)">getMiningSpeedMultiplier</a></span>&#8203;(<a href="ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;stack,
+<a href="../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i3">
@@ -247,7 +263,7 @@ float&nbsp;attackSpeed,
 <h3>Methods inherited from class&nbsp;net.minecraft.item.<a href="Item.html" title="class in net.minecraft.item">Item</a></h3>
 <a id="methods.inherited.from.class.net.minecraft.item.Item">
 <!--   -->
-</a><code><a href="Item.html#addPropertyGetter(net.minecraft.util.Identifier,net.minecraft.item.ItemPropertyGetter)">addPropertyGetter</a>, <a href="Item.html#appendStacks(net.minecraft.item.ItemGroup,net.minecraft.util.collection.DefaultedList)">appendStacks</a>, <a href="Item.html#appendTooltip(net.minecraft.item.ItemStack,net.minecraft.world.World,java.util.List,net.minecraft.client.item.TooltipContext)">appendTooltip</a>, <a href="Item.html#asItem()">asItem</a>, <a href="Item.html#byRawId(int)">byRawId</a>, <a href="Item.html#canMine(net.minecraft.block.BlockState,net.minecraft.world.World,net.minecraft.util.math.BlockPos,net.minecraft.entity.player.PlayerEntity)">canMine</a>, <a href="Item.html#damage(net.minecraft.entity.damage.DamageSource)">damage</a>, <a href="Item.html#finishUsing(net.minecraft.item.ItemStack,net.minecraft.world.World,net.minecraft.entity.LivingEntity)">finishUsing</a>, <a href="Item.html#fromBlock(net.minecraft.block.Block)">fromBlock</a>, <a href="Item.html#getDrinkSound()">getDrinkSound</a>, <a href="Item.html#getEatSound()">getEatSound</a>, <a href="Item.html#getFoodComponent()">getFoodComponent</a>, <a href="Item.html#getGroup()">getGroup</a>, <a href="Item.html#getMaxCount()">getMaxCount</a>, <a href="Item.html#getMaxDamage()">getMaxDamage</a>, <a href="Item.html#getMaxUseTime(net.minecraft.item.ItemStack)">getMaxUseTime</a>, <a href="Item.html#getName()">getName</a>, <a href="Item.html#getName(net.minecraft.item.ItemStack)">getName</a>, <a href="Item.html#getOrCreateTranslationKey()">getOrCreateTranslationKey</a>, <a href="Item.html#getPropertyGetter(net.minecraft.util.Identifier)">getPropertyGetter</a>, <a href="Item.html#getRarity(net.minecraft.item.ItemStack)">getRarity</a>, <a href="Item.html#getRawId(net.minecraft.item.Item)">getRawId</a>, <a href="Item.html#getRecipeRemainder()">getRecipeRemainder</a>, <a href="Item.html#getStackForRender()">getStackForRender</a>, <a href="Item.html#getTranslationKey()">getTranslationKey</a>, <a href="Item.html#getTranslationKey(net.minecraft.item.ItemStack)">getTranslationKey</a>, <a href="Item.html#getUseAction(net.minecraft.item.ItemStack)">getUseAction</a>, <a href="Item.html#hasEnchantmentGlint(net.minecraft.item.ItemStack)">hasEnchantmentGlint</a>, <a href="Item.html#hasPropertyGetters()">hasPropertyGetters</a>, <a href="Item.html#hasRecipeRemainder()">hasRecipeRemainder</a>, <a href="Item.html#inventoryTick(net.minecraft.item.ItemStack,net.minecraft.world.World,net.minecraft.entity.Entity,int,boolean)">inventoryTick</a>, <a href="Item.html#isDamageable()">isDamageable</a>, <a href="Item.html#isEffectiveOn(net.minecraft.block.BlockState)">isEffectiveOn</a>, <a href="Item.html#isEnchantable(net.minecraft.item.ItemStack)">isEnchantable</a>, <a href="Item.html#isFireproof()">isFireproof</a>, <a href="Item.html#isFood()">isFood</a>, <a href="Item.html#isIn(net.minecraft.item.ItemGroup)">isIn</a>, <a href="Item.html#isIn(net.minecraft.tag.Tag)">isIn</a>, <a href="Item.html#isNetworkSynced()">isNetworkSynced</a>, <a href="Item.html#isUsedOnRelease(net.minecraft.item.ItemStack)">isUsedOnRelease</a>, <a href="Item.html#onCraft(net.minecraft.item.ItemStack,net.minecraft.world.World,net.minecraft.entity.player.PlayerEntity)">onCraft</a>, <a href="Item.html#onStoppedUsing(net.minecraft.item.ItemStack,net.minecraft.world.World,net.minecraft.entity.LivingEntity,int)">onStoppedUsing</a>, <a href="Item.html#postProcessTag(net.minecraft.nbt.CompoundTag)">postProcessTag</a>, <a href="Item.html#rayTrace(net.minecraft.world.World,net.minecraft.entity.player.PlayerEntity,net.minecraft.world.RayTraceContext.FluidHandling)">rayTrace</a>, <a href="Item.html#shouldSyncTagToClient()">shouldSyncTagToClient</a>, <a href="Item.html#toString()">toString</a>, <a href="Item.html#usageTick(net.minecraft.world.World,net.minecraft.entity.LivingEntity,net.minecraft.item.ItemStack,int)">usageTick</a>, <a href="Item.html#use(net.minecraft.world.World,net.minecraft.entity.player.PlayerEntity,net.minecraft.util.Hand)">use</a>, <a href="Item.html#useOnBlock(net.minecraft.item.ItemUsageContext)">useOnBlock</a>, <a href="Item.html#useOnEntity(net.minecraft.item.ItemStack,net.minecraft.entity.player.PlayerEntity,net.minecraft.entity.LivingEntity,net.minecraft.util.Hand)">useOnEntity</a></code></div>
+</a><code><a href="Item.html#appendStacks(net.minecraft.item.ItemGroup,net.minecraft.util.collection.DefaultedList)">appendStacks</a>, <a href="Item.html#appendTooltip(net.minecraft.item.ItemStack,net.minecraft.world.World,java.util.List,net.minecraft.client.item.TooltipContext)">appendTooltip</a>, <a href="Item.html#asItem()">asItem</a>, <a href="Item.html#byRawId(int)">byRawId</a>, <a href="Item.html#canMine(net.minecraft.block.BlockState,net.minecraft.world.World,net.minecraft.util.math.BlockPos,net.minecraft.entity.player.PlayerEntity)">canMine</a>, <a href="Item.html#damage(net.minecraft.entity.damage.DamageSource)">damage</a>, <a href="Item.html#finishUsing(net.minecraft.item.ItemStack,net.minecraft.world.World,net.minecraft.entity.LivingEntity)">finishUsing</a>, <a href="Item.html#fromBlock(net.minecraft.block.Block)">fromBlock</a>, <a href="Item.html#getDrinkSound()">getDrinkSound</a>, <a href="Item.html#getEatSound()">getEatSound</a>, <a href="Item.html#getFoodComponent()">getFoodComponent</a>, <a href="Item.html#getGroup()">getGroup</a>, <a href="Item.html#getMaxCount()">getMaxCount</a>, <a href="Item.html#getMaxDamage()">getMaxDamage</a>, <a href="Item.html#getMaxUseTime(net.minecraft.item.ItemStack)">getMaxUseTime</a>, <a href="Item.html#getName()">getName</a>, <a href="Item.html#getName(net.minecraft.item.ItemStack)">getName</a>, <a href="Item.html#getOrCreateTranslationKey()">getOrCreateTranslationKey</a>, <a href="Item.html#getRarity(net.minecraft.item.ItemStack)">getRarity</a>, <a href="Item.html#getRawId(net.minecraft.item.Item)">getRawId</a>, <a href="Item.html#getRecipeRemainder()">getRecipeRemainder</a>, <a href="Item.html#getStackForRender()">getStackForRender</a>, <a href="Item.html#getTranslationKey()">getTranslationKey</a>, <a href="Item.html#getTranslationKey(net.minecraft.item.ItemStack)">getTranslationKey</a>, <a href="Item.html#getUseAction(net.minecraft.item.ItemStack)">getUseAction</a>, <a href="Item.html#hasEnchantmentGlint(net.minecraft.item.ItemStack)">hasEnchantmentGlint</a>, <a href="Item.html#hasRecipeRemainder()">hasRecipeRemainder</a>, <a href="Item.html#inventoryTick(net.minecraft.item.ItemStack,net.minecraft.world.World,net.minecraft.entity.Entity,int,boolean)">inventoryTick</a>, <a href="Item.html#isDamageable()">isDamageable</a>, <a href="Item.html#isEffectiveOn(net.minecraft.block.BlockState)">isEffectiveOn</a>, <a href="Item.html#isEnchantable(net.minecraft.item.ItemStack)">isEnchantable</a>, <a href="Item.html#isFireproof()">isFireproof</a>, <a href="Item.html#isFood()">isFood</a>, <a href="Item.html#isIn(net.minecraft.item.ItemGroup)">isIn</a>, <a href="Item.html#isIn(net.minecraft.tag.Tag)">isIn</a>, <a href="Item.html#isNetworkSynced()">isNetworkSynced</a>, <a href="Item.html#isUsedOnRelease(net.minecraft.item.ItemStack)">isUsedOnRelease</a>, <a href="Item.html#onCraft(net.minecraft.item.ItemStack,net.minecraft.world.World,net.minecraft.entity.player.PlayerEntity)">onCraft</a>, <a href="Item.html#onStoppedUsing(net.minecraft.item.ItemStack,net.minecraft.world.World,net.minecraft.entity.LivingEntity,int)">onStoppedUsing</a>, <a href="Item.html#postProcessTag(net.minecraft.nbt.CompoundTag)">postProcessTag</a>, <a href="Item.html#rayTrace(net.minecraft.world.World,net.minecraft.entity.player.PlayerEntity,net.minecraft.world.RayTraceContext.FluidHandling)">rayTrace</a>, <a href="Item.html#shouldSyncTagToClient()">shouldSyncTagToClient</a>, <a href="Item.html#toString()">toString</a>, <a href="Item.html#usageTick(net.minecraft.world.World,net.minecraft.entity.LivingEntity,net.minecraft.item.ItemStack,int)">usageTick</a>, <a href="Item.html#use(net.minecraft.world.World,net.minecraft.entity.player.PlayerEntity,net.minecraft.util.Hand)">use</a>, <a href="Item.html#useOnBlock(net.minecraft.item.ItemUsageContext)">useOnBlock</a>, <a href="Item.html#useOnEntity(net.minecraft.item.ItemStack,net.minecraft.entity.player.PlayerEntity,net.minecraft.entity.LivingEntity,net.minecraft.util.Hand)">useOnEntity</a></code></div>
 <div class="inheritedList">
 <h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></h3>
 <a id="methods.inherited.from.class.java.lang.Object">
@@ -268,8 +284,26 @@ float&nbsp;attackSpeed,
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
+<h3><a id="effectiveBlocks">effectiveBlocks</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="../block/Block.html" title="class in net.minecraft.block">Block</a>&gt;</span>&nbsp;<span class="memberName">effectiveBlocks</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="miningSpeed">miningSpeed</a></h3>
 <div class="memberSignature"><span class="modifiers">protected final</span>&nbsp;<span class="returnType">float</span>&nbsp;<span class="memberName">miningSpeed</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="attackDamage">attackDamage</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType">float</span>&nbsp;<span class="memberName">attackDamage</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="attributeModifiers">attributeModifiers</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://guava.dev/releases/21.0/api/docs/com/google/common/collect/Multimap.html?is-external=true" title="class or interface in com.google.common.collect" class="externalLink">Multimap</a>&lt;<a href="../entity/attribute/EntityAttribute.html" title="class in net.minecraft.entity.attribute">EntityAttribute</a>,&#8203;<a href="../entity/attribute/EntityAttributeModifier.html" title="class in net.minecraft.entity.attribute">EntityAttributeModifier</a>&gt;</span>&nbsp;<span class="memberName">attributeModifiers</span></div>
 </section>
 </li>
 </ul>
@@ -341,18 +375,18 @@ float&nbsp;attackSpeed,
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="getModifiers(net.minecraft.entity.EquipmentSlot)">getModifiers</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="https://guava.dev/releases/21.0/api/docs/com/google/common/collect/Multimap.html?is-external=true" title="class or interface in com.google.common.collect" class="externalLink">Multimap</a>&lt;<a href="../entity/attribute/EntityAttribute.html" title="class in net.minecraft.entity.attribute">EntityAttribute</a>,&#8203;<a href="../entity/attribute/EntityAttributeModifier.html" title="class in net.minecraft.entity.attribute">EntityAttributeModifier</a>&gt;</span>&nbsp;<span class="memberName">getModifiers</span>&#8203;(<span class="arguments"><a href="../entity/EquipmentSlot.html" title="enum in net.minecraft.entity">EquipmentSlot</a>&nbsp;equipmentSlot)</span></div>
+<h3><a id="getAttributeModifiers(net.minecraft.entity.EquipmentSlot)">getAttributeModifiers</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="https://guava.dev/releases/21.0/api/docs/com/google/common/collect/Multimap.html?is-external=true" title="class or interface in com.google.common.collect" class="externalLink">Multimap</a>&lt;<a href="../entity/attribute/EntityAttribute.html" title="class in net.minecraft.entity.attribute">EntityAttribute</a>,&#8203;<a href="../entity/attribute/EntityAttributeModifier.html" title="class in net.minecraft.entity.attribute">EntityAttributeModifier</a>&gt;</span>&nbsp;<span class="memberName">getAttributeModifiers</span>&#8203;(<span class="arguments"><a href="../entity/EquipmentSlot.html" title="enum in net.minecraft.entity">EquipmentSlot</a>&nbsp;slot)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code><a href="Item.html#getModifiers(net.minecraft.entity.EquipmentSlot)">getModifiers</a></code>&nbsp;in class&nbsp;<code><a href="Item.html" title="class in net.minecraft.item">Item</a></code></dd>
+<dd><code><a href="Item.html#getAttributeModifiers(net.minecraft.entity.EquipmentSlot)">getAttributeModifiers</a></code>&nbsp;in class&nbsp;<code><a href="Item.html" title="class in net.minecraft.item">Item</a></code></dd>
 </dl>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="method_26366()">method_26366</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">float</span>&nbsp;<span class="memberName">method_26366</span>()</div>
+<h3><a id="getAttackDamage()">getAttackDamage</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">float</span>&nbsp;<span class="memberName">getAttackDamage</span>()</div>
 </section>
 </li>
 </ul>

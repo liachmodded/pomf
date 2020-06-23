@@ -19,8 +19,8 @@
 <script type="text/javascript" src="../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":9,"i1":9,"i2":10,"i3":9,"i4":9,"i5":10,"i6":9,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10};
-var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
+<script type="text/javascript">var data = {"i0":9,"i1":9,"i2":9,"i3":10,"i4":10,"i5":10,"i6":9,"i7":9,"i8":9,"i9":42,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":9,"i22":10,"i23":9,"i24":41,"i25":10,"i26":10};
+var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"],32:["t6","Deprecated Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
@@ -90,14 +90,9 @@ loadScripts(document, 'script');</script>
 <div class="inheritance">net.minecraft.world.dimension.DimensionType</div>
 </div>
 <section class="description">
-<dl>
-<dt>All Implemented Interfaces:</dt>
-<dd><code><a href="../../util/dynamic/DynamicSerializable.html" title="interface in net.minecraft.util.dynamic">DynamicSerializable</a></code></dd>
-</dl>
 <hr>
 <pre>public class <span class="typeNameLabel">DimensionType</span>
-extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>
-implements <a href="../../util/dynamic/DynamicSerializable.html" title="interface in net.minecraft.util.dynamic">DynamicSerializable</a></pre>
+extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></pre>
 </section>
 <section class="summary">
 <ul class="blockList">
@@ -119,18 +114,138 @@ implements <a href="../../util/dynamic/DynamicSerializable.html" title="interfac
 </thead>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><code>static <a href="DimensionType.html" title="class in net.minecraft.world.dimension">DimensionType</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#OVERWORLD">OVERWORLD</a></span></code></th>
+<td class="colFirst"><code>private float</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#ambientLight">ambientLight</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>static <a href="DimensionType.html" title="class in net.minecraft.world.dimension">DimensionType</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#THE_END">THE_END</a></span></code></th>
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#bedWorks">bedWorks</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>static <a href="DimensionType.html" title="class in net.minecraft.world.dimension">DimensionType</a></code></td>
+<td class="colFirst"><code>private <a href="../biome/source/BiomeAccessType.html" title="interface in net.minecraft.world.biome.source">BiomeAccessType</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#biomeAccessType">biomeAccessType</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static com.mojang.serialization.MapCodec&lt;<a href="DimensionType.html" title="class in net.minecraft.world.dimension">DimensionType</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#CODEC">CODEC</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static float[]</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#field_24752">field_24752</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static com.mojang.serialization.Codec&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Supplier</a>&lt;<a href="DimensionType.html" title="class in net.minecraft.world.dimension">DimensionType</a>&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#field_24756">field_24756</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private float[]</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#field_24767">field_24767</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/OptionalLong.html?is-external=true" title="class or interface in java.util" class="externalLink">OptionalLong</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#fixedTime">fixedTime</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#hasCeiling">hasCeiling</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#hasEnderDragonFight">hasEnderDragonFight</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#hasRaids">hasRaids</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#hasSkyLight">hasSkyLight</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#infiniburn">infiniburn</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#logicalHeight">logicalHeight</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#natural">natural</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected static <a href="DimensionType.html" title="class in net.minecraft.world.dimension">DimensionType</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#OVERWORLD">OVERWORLD</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected static <a href="DimensionType.html" title="class in net.minecraft.world.dimension">DimensionType</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#OVERWORLD_CAVES">OVERWORLD_CAVES</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../util/registry/RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="DimensionType.html" title="class in net.minecraft.world.dimension">DimensionType</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#OVERWORLD_CAVES_REGISTRY_KEY">OVERWORLD_CAVES_REGISTRY_KEY</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../util/registry/RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="DimensionType.html" title="class in net.minecraft.world.dimension">DimensionType</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#OVERWORLD_REGISTRY_KEY">OVERWORLD_REGISTRY_KEY</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#piglinSafe">piglinSafe</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#respawnAnchorWorks">respawnAnchorWorks</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#shrunk">shrunk</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected static <a href="DimensionType.html" title="class in net.minecraft.world.dimension">DimensionType</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#THE_END">THE_END</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../util/registry/RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="DimensionType.html" title="class in net.minecraft.world.dimension">DimensionType</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#THE_END_REGISTRY_KEY">THE_END_REGISTRY_KEY</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected static <a href="DimensionType.html" title="class in net.minecraft.world.dimension">DimensionType</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#THE_NETHER">THE_NETHER</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../util/registry/RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="DimensionType.html" title="class in net.minecraft.world.dimension">DimensionType</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#THE_NETHER_REGISTRY_KEY">THE_NETHER_REGISTRY_KEY</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#ultrawarm">ultrawarm</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -157,12 +272,38 @@ implements <a href="../../util/dynamic/DynamicSerializable.html" title="interfac
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>protected </code></td>
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(int,java.lang.String,java.lang.String,java.util.function.BiFunction,boolean,net.minecraft.world.biome.source.BiomeAccessType)">DimensionType</a></span>&#8203;(int&nbsp;dimensionId,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;suffix,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;saveDir,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/BiFunction.html?is-external=true" title="class or interface in java.util.function" class="externalLink">BiFunction</a>&lt;<a href="../World.html" title="class in net.minecraft.world">World</a>,&#8203;<a href="DimensionType.html" title="class in net.minecraft.world.dimension">DimensionType</a>,&#8203;? extends <a href="Dimension.html" title="class in net.minecraft.world.dimension">Dimension</a>&gt;&nbsp;factory,
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.util.OptionalLong,boolean,boolean,boolean,boolean,boolean,boolean,boolean,boolean,boolean,boolean,int,net.minecraft.world.biome.source.BiomeAccessType,net.minecraft.util.Identifier,float)">DimensionType</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/OptionalLong.html?is-external=true" title="class or interface in java.util" class="externalLink">OptionalLong</a>&nbsp;fixedTime,
 boolean&nbsp;hasSkylight,
-<a href="../biome/source/BiomeAccessType.html" title="interface in net.minecraft.world.biome.source">BiomeAccessType</a>&nbsp;biomeAccessType)</code></th>
+boolean&nbsp;hasCeiling,
+boolean&nbsp;ultrawarm,
+boolean&nbsp;natural,
+boolean&nbsp;shrunk,
+boolean&nbsp;hasEnderDragonFight,
+boolean&nbsp;piglinSafe,
+boolean&nbsp;bedWorks,
+boolean&nbsp;respawnAnchorWorks,
+boolean&nbsp;hasRaids,
+int&nbsp;logicalHeight,
+<a href="../biome/source/BiomeAccessType.html" title="interface in net.minecraft.world.biome.source">BiomeAccessType</a>&nbsp;biomeAccessType,
+<a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;infiniburn,
+float&nbsp;ambientLight)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected </code></td>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.util.OptionalLong,boolean,boolean,boolean,boolean,boolean,boolean,boolean,boolean,boolean,int,net.minecraft.util.Identifier,float)">DimensionType</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/OptionalLong.html?is-external=true" title="class or interface in java.util" class="externalLink">OptionalLong</a>&nbsp;fixedTime,
+boolean&nbsp;hasSkylight,
+boolean&nbsp;hasCeiling,
+boolean&nbsp;ultrawarm,
+boolean&nbsp;natural,
+boolean&nbsp;shrunk,
+boolean&nbsp;piglinSafe,
+boolean&nbsp;bedWorks,
+boolean&nbsp;respawnAnchorWorks,
+boolean&nbsp;hasRaids,
+int&nbsp;logicalHeight,
+<a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;infiniburn,
+float&nbsp;ambientLight)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -177,7 +318,7 @@ boolean&nbsp;hasSkylight,
 </a>
 <h2>Method Summary</h2>
 <div class="memberSummary">
-<div role="tablist" aria-orientation="horizontal"><button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t1" class="tableTab" onclick="show(1);">Static Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t2" class="tableTab" onclick="show(2);">Instance Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t4" class="tableTab" onclick="show(8);">Concrete Methods</button></div>
+<div role="tablist" aria-orientation="horizontal"><button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t1" class="tableTab" onclick="show(1);">Static Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t2" class="tableTab" onclick="show(2);">Instance Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t4" class="tableTab" onclick="show(8);">Concrete Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t6" class="tableTab" onclick="show(32);">Deprecated Methods</button></div>
 <div id="memberSummary_tabpanel" role="tabpanel">
 <table aria-labelledby="t0">
 <thead>
@@ -189,68 +330,143 @@ boolean&nbsp;hasSkylight,
 </thead>
 <tbody>
 <tr class="altColor" id="i0">
-<td class="colFirst"><code>static <a href="DimensionType.html" title="class in net.minecraft.world.dimension">DimensionType</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#byId(net.minecraft.util.Identifier)">byId</a></span>&#8203;(<a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;identifier)</code></th>
+<td class="colFirst"><code>static <a href="../../util/registry/RegistryTracker.Modifiable.html" title="class in net.minecraft.util.registry">RegistryTracker.Modifiable</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addRegistryDefaults(net.minecraft.util.registry.RegistryTracker.Modifiable)">addRegistryDefaults</a></span>&#8203;(<a href="../../util/registry/RegistryTracker.Modifiable.html" title="class in net.minecraft.util.registry">RegistryTracker.Modifiable</a>&nbsp;registryTracker)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
-<td class="colFirst"><code>static <a href="DimensionType.html" title="class in net.minecraft.world.dimension">DimensionType</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#byRawId(int)">byRawId</a></span>&#8203;(int&nbsp;id)</code></th>
+<td class="colFirst"><code>private static <a href="../gen/chunk/ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">ChunkGenerator</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createEndGenerator(long)">createEndGenerator</a></span>&#8203;(long&nbsp;seed)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i2">
-<td class="colFirst"><code><a href="Dimension.html" title="class in net.minecraft.world.dimension">Dimension</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#create(net.minecraft.world.World)">create</a></span>&#8203;(<a href="../World.html" title="class in net.minecraft.world">World</a>&nbsp;world)</code></th>
+<td class="colFirst"><code>private static <a href="../gen/chunk/ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">ChunkGenerator</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createNetherGenerator(long)">createNetherGenerator</a></span>&#8203;(long&nbsp;seed)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i3">
-<td class="colFirst"><code>static <a href="DimensionType.html" title="class in net.minecraft.world.dimension">DimensionType</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#deserialize(com.mojang.datafixers.Dynamic)">deserialize</a></span>&#8203;(com.mojang.datafixers.Dynamic&lt;?&gt;&nbsp;dynamic)</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="altColor" id="i4">
-<td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html?is-external=true" title="class or interface in java.lang" class="externalLink">Iterable</a>&lt;<a href="DimensionType.html" title="class in net.minecraft.world.dimension">DimensionType</a>&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getAll()">getAll</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="rowColor" id="i5">
 <td class="colFirst"><code><a href="../biome/source/BiomeAccessType.html" title="interface in net.minecraft.world.biome.source">BiomeAccessType</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getBiomeAccessType()">getBiomeAccessType</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
+<tr class="altColor" id="i4">
+<td class="colFirst"><code><a href="../../tag/Tag.html" title="interface in net.minecraft.tag">Tag</a>&lt;<a href="../../block/Block.html" title="class in net.minecraft.block">Block</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getInfiniburnBlocks()">getInfiniburnBlocks</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i5">
+<td class="colFirst"><code>int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getLogicalHeight()">getLogicalHeight</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
 <tr class="altColor" id="i6">
-<td class="colFirst"><code>static <a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getId(net.minecraft.world.dimension.DimensionType)">getId</a></span>&#8203;(<a href="DimensionType.html" title="class in net.minecraft.world.dimension">DimensionType</a>&nbsp;type)</code></th>
+<td class="colFirst"><code>static <a href="DimensionType.html" title="class in net.minecraft.world.dimension">DimensionType</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getOverworldCavesDimensionType()">getOverworldCavesDimensionType</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i7">
-<td class="colFirst"><code>int</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getRawId()">getRawId</a></span>()</code></th>
+<td class="colFirst"><code>static <a href="DimensionType.html" title="class in net.minecraft.world.dimension">DimensionType</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getOverworldDimensionType()">getOverworldDimensionType</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i8">
-<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io" class="externalLink">File</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getSaveDirectory(java.io.File)">getSaveDirectory</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io" class="externalLink">File</a>&nbsp;root)</code></th>
+<td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io" class="externalLink">File</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getSaveDirectory(net.minecraft.util.registry.RegistryKey,java.io.File)">getSaveDirectory</a></span>&#8203;(<a href="../../util/registry/RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="../World.html" title="class in net.minecraft.world">World</a>&gt;&nbsp;worldRef,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io" class="externalLink">File</a>&nbsp;root)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i9">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getSuffix()">getSuffix</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
+</td>
 </tr>
 <tr class="altColor" id="i10">
+<td class="colFirst"><code>boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#hasCeiling()">hasCeiling</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i11">
+<td class="colFirst"><code>boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#hasEnderDragonFight()">hasEnderDragonFight</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i12">
+<td class="colFirst"><code>boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#hasFixedTime()">hasFixedTime</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i13">
+<td class="colFirst"><code>boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#hasRaids()">hasRaids</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i14">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#hasSkyLight()">hasSkyLight</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i11">
-<td class="colFirst"><code>&lt;T&gt;&nbsp;T</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#serialize(com.mojang.datafixers.types.DynamicOps)">serialize</a></span>&#8203;(com.mojang.datafixers.types.DynamicOps&lt;T&gt;&nbsp;ops)</code></th>
+<tr class="rowColor" id="i15">
+<td class="colFirst"><code>boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isBedWorking()">isBedWorking</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i12">
-<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#toString()">toString</a></span>()</code></th>
+<tr class="altColor" id="i16">
+<td class="colFirst"><code>boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isNatural()">isNatural</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i17">
+<td class="colFirst"><code>boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isPiglinSafe()">isPiglinSafe</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i18">
+<td class="colFirst"><code>boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isRespawnAnchorWorking()">isRespawnAnchorWorking</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i19">
+<td class="colFirst"><code>boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isShrunk()">isShrunk</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i20">
+<td class="colFirst"><code>boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isUltrawarm()">isUltrawarm</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i21">
+<td class="colFirst"><code>private static float[]</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_28515(float)">method_28515</a></span>&#8203;(float&nbsp;float2)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i22">
+<td class="colFirst"><code>float</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_28516(int)">method_28516</a></span>&#8203;(int&nbsp;int2)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i23">
+<td class="colFirst"><code>static <a href="../../util/registry/SimpleRegistry.html" title="class in net.minecraft.util.registry">SimpleRegistry</a>&lt;<a href="DimensionOptions.html" title="class in net.minecraft.world.dimension">DimensionOptions</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_28517(long)">method_28517</a></span>&#8203;(long&nbsp;seed)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i24">
+<td class="colFirst"><code>static com.mojang.serialization.DataResult&lt;<a href="../../util/registry/RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="../World.html" title="class in net.minecraft.world">World</a>&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_28521(com.mojang.serialization.Dynamic)">method_28521</a></span>&#8203;(com.mojang.serialization.Dynamic&lt;?&gt;&nbsp;dynamic)</code></th>
+<td class="colLast">
+<div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
+</td>
+</tr>
+<tr class="rowColor" id="i25">
+<td class="colFirst"><code>float</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_28528(long)">method_28528</a></span>&#8203;(long&nbsp;long2)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i26">
+<td class="colFirst"><code>int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_28531(long)">method_28531</a></span>&#8203;(long&nbsp;long2)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -261,7 +477,7 @@ boolean&nbsp;hasSkylight,
 <h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></h3>
 <a id="methods.inherited.from.class.java.lang.Object">
 <!--   -->
-</a><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang" class="externalLink">clone</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang" class="externalLink">equals</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang" class="externalLink">finalize</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang" class="externalLink">getClass</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang" class="externalLink">hashCode</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang" class="externalLink">notify</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang" class="externalLink">notifyAll</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang" class="externalLink">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang" class="externalLink">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait(long,int)" title="class or interface in java.lang" class="externalLink">wait</a></code></div>
+</a><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang" class="externalLink">clone</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang" class="externalLink">equals</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang" class="externalLink">finalize</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang" class="externalLink">getClass</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang" class="externalLink">hashCode</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang" class="externalLink">notify</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang" class="externalLink">notifyAll</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang" class="externalLink">toString</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang" class="externalLink">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang" class="externalLink">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait(long,int)" title="class or interface in java.lang" class="externalLink">wait</a></code></div>
 </section>
 </li>
 </ul>
@@ -277,20 +493,164 @@ boolean&nbsp;hasSkylight,
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
+<h3><a id="CODEC">CODEC</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType">com.mojang.serialization.MapCodec&lt;<a href="DimensionType.html" title="class in net.minecraft.world.dimension">DimensionType</a>&gt;</span>&nbsp;<span class="memberName">CODEC</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="field_24752">field_24752</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType">float[]</span>&nbsp;<span class="memberName">field_24752</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="OVERWORLD_REGISTRY_KEY">OVERWORLD_REGISTRY_KEY</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="../../util/registry/RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="DimensionType.html" title="class in net.minecraft.world.dimension">DimensionType</a>&gt;</span>&nbsp;<span class="memberName">OVERWORLD_REGISTRY_KEY</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="THE_NETHER_REGISTRY_KEY">THE_NETHER_REGISTRY_KEY</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="../../util/registry/RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="DimensionType.html" title="class in net.minecraft.world.dimension">DimensionType</a>&gt;</span>&nbsp;<span class="memberName">THE_NETHER_REGISTRY_KEY</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="THE_END_REGISTRY_KEY">THE_END_REGISTRY_KEY</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="../../util/registry/RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="DimensionType.html" title="class in net.minecraft.world.dimension">DimensionType</a>&gt;</span>&nbsp;<span class="memberName">THE_END_REGISTRY_KEY</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="OVERWORLD">OVERWORLD</a></h3>
-<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="DimensionType.html" title="class in net.minecraft.world.dimension">DimensionType</a></span>&nbsp;<span class="memberName">OVERWORLD</span></div>
+<div class="memberSignature"><span class="modifiers">protected static final</span>&nbsp;<span class="returnType"><a href="DimensionType.html" title="class in net.minecraft.world.dimension">DimensionType</a></span>&nbsp;<span class="memberName">OVERWORLD</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="THE_NETHER">THE_NETHER</a></h3>
-<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="DimensionType.html" title="class in net.minecraft.world.dimension">DimensionType</a></span>&nbsp;<span class="memberName">THE_NETHER</span></div>
+<div class="memberSignature"><span class="modifiers">protected static final</span>&nbsp;<span class="returnType"><a href="DimensionType.html" title="class in net.minecraft.world.dimension">DimensionType</a></span>&nbsp;<span class="memberName">THE_NETHER</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="THE_END">THE_END</a></h3>
-<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="DimensionType.html" title="class in net.minecraft.world.dimension">DimensionType</a></span>&nbsp;<span class="memberName">THE_END</span></div>
+<div class="memberSignature"><span class="modifiers">protected static final</span>&nbsp;<span class="returnType"><a href="DimensionType.html" title="class in net.minecraft.world.dimension">DimensionType</a></span>&nbsp;<span class="memberName">THE_END</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="OVERWORLD_CAVES_REGISTRY_KEY">OVERWORLD_CAVES_REGISTRY_KEY</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="../../util/registry/RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="DimensionType.html" title="class in net.minecraft.world.dimension">DimensionType</a>&gt;</span>&nbsp;<span class="memberName">OVERWORLD_CAVES_REGISTRY_KEY</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="OVERWORLD_CAVES">OVERWORLD_CAVES</a></h3>
+<div class="memberSignature"><span class="modifiers">protected static final</span>&nbsp;<span class="returnType"><a href="DimensionType.html" title="class in net.minecraft.world.dimension">DimensionType</a></span>&nbsp;<span class="memberName">OVERWORLD_CAVES</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="field_24756">field_24756</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType">com.mojang.serialization.Codec&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Supplier</a>&lt;<a href="DimensionType.html" title="class in net.minecraft.world.dimension">DimensionType</a>&gt;&gt;</span>&nbsp;<span class="memberName">field_24756</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="fixedTime">fixedTime</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/OptionalLong.html?is-external=true" title="class or interface in java.util" class="externalLink">OptionalLong</a></span>&nbsp;<span class="memberName">fixedTime</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="hasSkyLight">hasSkyLight</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">hasSkyLight</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="hasCeiling">hasCeiling</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">hasCeiling</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="ultrawarm">ultrawarm</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">ultrawarm</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="natural">natural</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">natural</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="shrunk">shrunk</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">shrunk</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="hasEnderDragonFight">hasEnderDragonFight</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">hasEnderDragonFight</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="piglinSafe">piglinSafe</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">piglinSafe</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="bedWorks">bedWorks</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">bedWorks</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="respawnAnchorWorks">respawnAnchorWorks</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">respawnAnchorWorks</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="hasRaids">hasRaids</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">hasRaids</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="logicalHeight">logicalHeight</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">logicalHeight</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="biomeAccessType">biomeAccessType</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../biome/source/BiomeAccessType.html" title="interface in net.minecraft.world.biome.source">BiomeAccessType</a></span>&nbsp;<span class="memberName">biomeAccessType</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="infiniburn">infiniburn</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a></span>&nbsp;<span class="memberName">infiniburn</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="ambientLight">ambientLight</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType">float</span>&nbsp;<span class="memberName">ambientLight</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="field_24767">field_24767</a></h3>
+<div class="memberSignature"><span class="modifiers">private final transient</span>&nbsp;<span class="returnType">float[]</span>&nbsp;<span class="memberName">field_24767</span></div>
 </section>
 </li>
 </ul>
@@ -305,13 +665,40 @@ boolean&nbsp;hasSkylight,
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="&lt;init&gt;(int,java.lang.String,java.lang.String,java.util.function.BiFunction,boolean,net.minecraft.world.biome.source.BiomeAccessType)">DimensionType</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="memberName">DimensionType</span>&#8203;(<span class="arguments">int&nbsp;dimensionId,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;suffix,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;saveDir,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/BiFunction.html?is-external=true" title="class or interface in java.util.function" class="externalLink">BiFunction</a>&lt;<a href="../World.html" title="class in net.minecraft.world">World</a>,&#8203;<a href="DimensionType.html" title="class in net.minecraft.world.dimension">DimensionType</a>,&#8203;? extends <a href="Dimension.html" title="class in net.minecraft.world.dimension">Dimension</a>&gt;&nbsp;factory,
+<h3><a id="&lt;init&gt;(java.util.OptionalLong,boolean,boolean,boolean,boolean,boolean,boolean,boolean,boolean,boolean,int,net.minecraft.util.Identifier,float)">DimensionType</a></h3>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="memberName">DimensionType</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/OptionalLong.html?is-external=true" title="class or interface in java.util" class="externalLink">OptionalLong</a>&nbsp;fixedTime,
 boolean&nbsp;hasSkylight,
-<a href="../biome/source/BiomeAccessType.html" title="interface in net.minecraft.world.biome.source">BiomeAccessType</a>&nbsp;biomeAccessType)</span></div>
+boolean&nbsp;hasCeiling,
+boolean&nbsp;ultrawarm,
+boolean&nbsp;natural,
+boolean&nbsp;shrunk,
+boolean&nbsp;piglinSafe,
+boolean&nbsp;bedWorks,
+boolean&nbsp;respawnAnchorWorks,
+boolean&nbsp;hasRaids,
+int&nbsp;logicalHeight,
+<a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;infiniburn,
+float&nbsp;ambientLight)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="&lt;init&gt;(java.util.OptionalLong,boolean,boolean,boolean,boolean,boolean,boolean,boolean,boolean,boolean,boolean,int,net.minecraft.world.biome.source.BiomeAccessType,net.minecraft.util.Identifier,float)">DimensionType</a></h3>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="memberName">DimensionType</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/OptionalLong.html?is-external=true" title="class or interface in java.util" class="externalLink">OptionalLong</a>&nbsp;fixedTime,
+boolean&nbsp;hasSkylight,
+boolean&nbsp;hasCeiling,
+boolean&nbsp;ultrawarm,
+boolean&nbsp;natural,
+boolean&nbsp;shrunk,
+boolean&nbsp;hasEnderDragonFight,
+boolean&nbsp;piglinSafe,
+boolean&nbsp;bedWorks,
+boolean&nbsp;respawnAnchorWorks,
+boolean&nbsp;hasRaids,
+int&nbsp;logicalHeight,
+<a href="../biome/source/BiomeAccessType.html" title="interface in net.minecraft.world.biome.source">BiomeAccessType</a>&nbsp;biomeAccessType,
+<a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;infiniburn,
+float&nbsp;ambientLight)</span></div>
 </section>
 </li>
 </ul>
@@ -326,69 +713,68 @@ boolean&nbsp;hasSkylight,
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="deserialize(com.mojang.datafixers.Dynamic)">deserialize</a></h3>
-<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType"><a href="DimensionType.html" title="class in net.minecraft.world.dimension">DimensionType</a></span>&nbsp;<span class="memberName">deserialize</span>&#8203;(<span class="arguments">com.mojang.datafixers.Dynamic&lt;?&gt;&nbsp;dynamic)</span></div>
+<h3><a id="getOverworldDimensionType()">getOverworldDimensionType</a></h3>
+<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType"><a href="DimensionType.html" title="class in net.minecraft.world.dimension">DimensionType</a></span>&nbsp;<span class="memberName">getOverworldDimensionType</span>()</div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="getAll()">getAll</a></h3>
-<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html?is-external=true" title="class or interface in java.lang" class="externalLink">Iterable</a>&lt;<a href="DimensionType.html" title="class in net.minecraft.world.dimension">DimensionType</a>&gt;</span>&nbsp;<span class="memberName">getAll</span>()</div>
+<h3><a id="getOverworldCavesDimensionType()">getOverworldCavesDimensionType</a></h3>
+<div class="memberSignature"><span class="annotations">@Environment(CLIENT)
+</span><span class="modifiers">public static</span>&nbsp;<span class="returnType"><a href="DimensionType.html" title="class in net.minecraft.world.dimension">DimensionType</a></span>&nbsp;<span class="memberName">getOverworldCavesDimensionType</span>()</div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="getRawId()">getRawId</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getRawId</span>()</div>
+<h3><a id="method_28515(float)">method_28515</a></h3>
+<div class="memberSignature"><span class="modifiers">private static</span>&nbsp;<span class="returnType">float[]</span>&nbsp;<span class="memberName">method_28515</span>&#8203;(<span class="arguments">float&nbsp;float2)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="method_28521(com.mojang.serialization.Dynamic)">method_28521</a></h3>
+<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang" class="externalLink">@Deprecated</a>
+</span><span class="modifiers">public static</span>&nbsp;<span class="returnType">com.mojang.serialization.DataResult&lt;<a href="../../util/registry/RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="../World.html" title="class in net.minecraft.world">World</a>&gt;&gt;</span>&nbsp;<span class="memberName">method_28521</span>&#8203;(<span class="arguments">com.mojang.serialization.Dynamic&lt;?&gt;&nbsp;dynamic)</span></div>
+<div class="deprecationBlock"><span class="deprecatedLabel">Deprecated.</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="addRegistryDefaults(net.minecraft.util.registry.RegistryTracker.Modifiable)">addRegistryDefaults</a></h3>
+<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType"><a href="../../util/registry/RegistryTracker.Modifiable.html" title="class in net.minecraft.util.registry">RegistryTracker.Modifiable</a></span>&nbsp;<span class="memberName">addRegistryDefaults</span>&#8203;(<span class="arguments"><a href="../../util/registry/RegistryTracker.Modifiable.html" title="class in net.minecraft.util.registry">RegistryTracker.Modifiable</a>&nbsp;registryTracker)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="createEndGenerator(long)">createEndGenerator</a></h3>
+<div class="memberSignature"><span class="modifiers">private static</span>&nbsp;<span class="returnType"><a href="../gen/chunk/ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">ChunkGenerator</a></span>&nbsp;<span class="memberName">createEndGenerator</span>&#8203;(<span class="arguments">long&nbsp;seed)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="createNetherGenerator(long)">createNetherGenerator</a></h3>
+<div class="memberSignature"><span class="modifiers">private static</span>&nbsp;<span class="returnType"><a href="../gen/chunk/ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">ChunkGenerator</a></span>&nbsp;<span class="memberName">createNetherGenerator</span>&#8203;(<span class="arguments">long&nbsp;seed)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="method_28517(long)">method_28517</a></h3>
+<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType"><a href="../../util/registry/SimpleRegistry.html" title="class in net.minecraft.util.registry">SimpleRegistry</a>&lt;<a href="DimensionOptions.html" title="class in net.minecraft.world.dimension">DimensionOptions</a>&gt;</span>&nbsp;<span class="memberName">method_28517</span>&#8203;(<span class="arguments">long&nbsp;seed)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getSuffix()">getSuffix</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></span>&nbsp;<span class="memberName">getSuffix</span>()</div>
+<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang" class="externalLink">@Deprecated</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></span>&nbsp;<span class="memberName">getSuffix</span>()</div>
+<div class="deprecationBlock"><span class="deprecatedLabel">Deprecated.</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="getSaveDirectory(java.io.File)">getSaveDirectory</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io" class="externalLink">File</a></span>&nbsp;<span class="memberName">getSaveDirectory</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io" class="externalLink">File</a>&nbsp;root)</span></div>
-</section>
-</li>
-<li class="blockList">
-<section class="detail">
-<h3><a id="create(net.minecraft.world.World)">create</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="Dimension.html" title="class in net.minecraft.world.dimension">Dimension</a></span>&nbsp;<span class="memberName">create</span>&#8203;(<span class="arguments"><a href="../World.html" title="class in net.minecraft.world">World</a>&nbsp;world)</span></div>
-</section>
-</li>
-<li class="blockList">
-<section class="detail">
-<h3><a id="toString()">toString</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></span>&nbsp;<span class="memberName">toString</span>()</div>
-<dl>
-<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang" class="externalLink">toString</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></code></dd>
-</dl>
-</section>
-</li>
-<li class="blockList">
-<section class="detail">
-<h3><a id="byRawId(int)">byRawId</a></h3>
-<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
-</span><span class="modifiers">public static</span>&nbsp;<span class="returnType"><a href="DimensionType.html" title="class in net.minecraft.world.dimension">DimensionType</a></span>&nbsp;<span class="memberName">byRawId</span>&#8203;(<span class="arguments">int&nbsp;id)</span></div>
-</section>
-</li>
-<li class="blockList">
-<section class="detail">
-<h3><a id="byId(net.minecraft.util.Identifier)">byId</a></h3>
-<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
-</span><span class="modifiers">public static</span>&nbsp;<span class="returnType"><a href="DimensionType.html" title="class in net.minecraft.world.dimension">DimensionType</a></span>&nbsp;<span class="memberName">byId</span>&#8203;(<span class="arguments"><a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;identifier)</span></div>
-</section>
-</li>
-<li class="blockList">
-<section class="detail">
-<h3><a id="getId(net.minecraft.world.dimension.DimensionType)">getId</a></h3>
-<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
-</span><span class="modifiers">public static</span>&nbsp;<span class="returnType"><a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a></span>&nbsp;<span class="memberName">getId</span>&#8203;(<span class="arguments"><a href="DimensionType.html" title="class in net.minecraft.world.dimension">DimensionType</a>&nbsp;type)</span></div>
+<h3><a id="getSaveDirectory(net.minecraft.util.registry.RegistryKey,java.io.File)">getSaveDirectory</a></h3>
+<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io" class="externalLink">File</a></span>&nbsp;<span class="memberName">getSaveDirectory</span>&#8203;(<span class="arguments"><a href="../../util/registry/RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="../World.html" title="class in net.minecraft.world">World</a>&gt;&nbsp;worldRef,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io" class="externalLink">File</a>&nbsp;root)</span></div>
 </section>
 </li>
 <li class="blockList">
@@ -399,18 +785,98 @@ boolean&nbsp;hasSkylight,
 </li>
 <li class="blockList">
 <section class="detail">
+<h3><a id="hasCeiling()">hasCeiling</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">hasCeiling</span>()</div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="isUltrawarm()">isUltrawarm</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isUltrawarm</span>()</div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="isNatural()">isNatural</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isNatural</span>()</div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="isShrunk()">isShrunk</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isShrunk</span>()</div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="isPiglinSafe()">isPiglinSafe</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isPiglinSafe</span>()</div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="isBedWorking()">isBedWorking</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isBedWorking</span>()</div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="isRespawnAnchorWorking()">isRespawnAnchorWorking</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isRespawnAnchorWorking</span>()</div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="hasRaids()">hasRaids</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">hasRaids</span>()</div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="getLogicalHeight()">getLogicalHeight</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getLogicalHeight</span>()</div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="hasEnderDragonFight()">hasEnderDragonFight</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">hasEnderDragonFight</span>()</div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="getBiomeAccessType()">getBiomeAccessType</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../biome/source/BiomeAccessType.html" title="interface in net.minecraft.world.biome.source">BiomeAccessType</a></span>&nbsp;<span class="memberName">getBiomeAccessType</span>()</div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="serialize(com.mojang.datafixers.types.DynamicOps)">serialize</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="typeParameters">&lt;T&gt;</span>&nbsp;<span class="returnType">T</span>&nbsp;<span class="memberName">serialize</span>&#8203;(<span class="arguments">com.mojang.datafixers.types.DynamicOps&lt;T&gt;&nbsp;ops)</span></div>
-<dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../util/dynamic/DynamicSerializable.html#serialize(com.mojang.datafixers.types.DynamicOps)">serialize</a></code>&nbsp;in interface&nbsp;<code><a href="../../util/dynamic/DynamicSerializable.html" title="interface in net.minecraft.util.dynamic">DynamicSerializable</a></code></dd>
-</dl>
+<h3><a id="hasFixedTime()">hasFixedTime</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">hasFixedTime</span>()</div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="method_28528(long)">method_28528</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">float</span>&nbsp;<span class="memberName">method_28528</span>&#8203;(<span class="arguments">long&nbsp;long2)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="method_28531(long)">method_28531</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">method_28531</span>&#8203;(<span class="arguments">long&nbsp;long2)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="method_28516(int)">method_28516</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">float</span>&nbsp;<span class="memberName">method_28516</span>&#8203;(<span class="arguments">int&nbsp;int2)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="getInfiniburnBlocks()">getInfiniburnBlocks</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../tag/Tag.html" title="interface in net.minecraft.tag">Tag</a>&lt;<a href="../../block/Block.html" title="class in net.minecraft.block">Block</a>&gt;</span>&nbsp;<span class="memberName">getInfiniburnBlocks</span>()</div>
 </section>
 </li>
 </ul>

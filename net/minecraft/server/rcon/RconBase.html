@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10};
+<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -96,7 +96,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <dl>
 <dt>Direct Known Subclasses:</dt>
-<dd><code><a href="QueryResponseHandler.html" title="class in net.minecraft.server.rcon">QueryResponseHandler</a></code>, <code><a href="RconClient.html" title="class in net.minecraft.server.rcon">RconClient</a></code>, <code><a href="RconServer.html" title="class in net.minecraft.server.rcon">RconServer</a></code></dd>
+<dd><code><a href="QueryResponseHandler.html" title="class in net.minecraft.server.rcon">QueryResponseHandler</a></code>, <code><a href="RconClient.html" title="class in net.minecraft.server.rcon">RconClient</a></code>, <code><a href="RconListener.html" title="class in net.minecraft.server.rcon">RconListener</a></code></dd>
 </dl>
 <hr>
 <pre>public abstract class <span class="typeNameLabel">RconBase</span>
@@ -128,8 +128,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>protected int</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#field_14427">field_14427</a></span></code></th>
+<td class="colFirst"><code>private static <a href="https://logging.apache.org/log4j/2.x/log4j-api/apidocs/org/apache/logging/log4j/Logger.html?is-external=true" title="class or interface in org.apache.logging.log4j" class="externalLink">Logger</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#LOGGER">LOGGER</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
@@ -138,23 +138,13 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>protected <a href="../dedicated/DedicatedServer.html" title="interface in net.minecraft.server.dedicated">DedicatedServer</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#server">server</a></span></code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>protected <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/net/ServerSocket.html?is-external=true" title="class or interface in java.net" class="externalLink">ServerSocket</a>&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#serverSockets">serverSockets</a></span></code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>protected <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/net/DatagramSocket.html?is-external=true" title="class or interface in java.net" class="externalLink">DatagramSocket</a>&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#sockets">sockets</a></span></code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="altColor">
 <td class="colFirst"><code>protected <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Thread.html?is-external=true" title="class or interface in java.lang" class="externalLink">Thread</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#thread">thread</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic" class="externalLink">AtomicInteger</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#THREAD_COUNTER">THREAD_COUNTER</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -181,8 +171,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>protected </code></td>
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.server.dedicated.DedicatedServer,java.lang.String)">RconBase</a></span>&#8203;(<a href="../dedicated/DedicatedServer.html" title="interface in net.minecraft.server.dedicated">DedicatedServer</a>&nbsp;dedicatedServer,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;string)</code></th>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.lang.String)">RconBase</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;description)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -209,75 +198,18 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable
 </thead>
 <tbody>
 <tr class="altColor" id="i0">
-<td class="colFirst"><code>protected boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#closeSocket(java.net.DatagramSocket,boolean)">closeSocket</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/net/DatagramSocket.html?is-external=true" title="class or interface in java.net" class="externalLink">DatagramSocket</a>&nbsp;socket,
-boolean&nbsp;bool)</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="rowColor" id="i1">
-<td class="colFirst"><code>protected boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#closeSocket(java.net.ServerSocket)">closeSocket</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/net/ServerSocket.html?is-external=true" title="class or interface in java.net" class="externalLink">ServerSocket</a>&nbsp;serverSocket)</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="altColor" id="i2">
-<td class="colFirst"><code>protected boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#closeSocket(java.net.ServerSocket,boolean)">closeSocket</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/net/ServerSocket.html?is-external=true" title="class or interface in java.net" class="externalLink">ServerSocket</a>&nbsp;socket,
-boolean&nbsp;bool)</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="rowColor" id="i3">
-<td class="colFirst"><code>protected void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#forceClose()">forceClose</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="altColor" id="i4">
-<td class="colFirst"><code>protected void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#forceClose(boolean)">forceClose</a></span>&#8203;(boolean&nbsp;bool)</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="rowColor" id="i5">
-<td class="colFirst"><code>protected int</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getCurrentPlayerCount()">getCurrentPlayerCount</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="altColor" id="i6">
-<td class="colFirst"><code>protected void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#info(java.lang.String)">info</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;string)</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="rowColor" id="i7">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isRunning()">isRunning</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i8">
-<td class="colFirst"><code>protected void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#log(java.lang.String)">log</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;string)</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="rowColor" id="i9">
-<td class="colFirst"><code>protected void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#logError(java.lang.String)">logError</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;string)</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="altColor" id="i10">
-<td class="colFirst"><code>protected void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#registerSocket(java.net.DatagramSocket)">registerSocket</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/net/DatagramSocket.html?is-external=true" title="class or interface in java.net" class="externalLink">DatagramSocket</a>&nbsp;datagramSocket)</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="rowColor" id="i11">
+<tr class="rowColor" id="i1">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#start()">start</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i12">
+<tr class="altColor" id="i2">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#stop()">stop</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="rowColor" id="i13">
-<td class="colFirst"><code>protected void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#warn(java.lang.String)">warn</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;string)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -309,14 +241,20 @@ boolean&nbsp;bool)</code></th>
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="running">running</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">running</span></div>
+<h3><a id="LOGGER">LOGGER</a></h3>
+<div class="memberSignature"><span class="modifiers">private static final</span>&nbsp;<span class="returnType"><a href="https://logging.apache.org/log4j/2.x/log4j-api/apidocs/org/apache/logging/log4j/Logger.html?is-external=true" title="class or interface in org.apache.logging.log4j" class="externalLink">Logger</a></span>&nbsp;<span class="memberName">LOGGER</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="server">server</a></h3>
-<div class="memberSignature"><span class="modifiers">protected final</span>&nbsp;<span class="returnType"><a href="../dedicated/DedicatedServer.html" title="interface in net.minecraft.server.dedicated">DedicatedServer</a></span>&nbsp;<span class="memberName">server</span></div>
+<h3><a id="THREAD_COUNTER">THREAD_COUNTER</a></h3>
+<div class="memberSignature"><span class="modifiers">private static final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic" class="externalLink">AtomicInteger</a></span>&nbsp;<span class="memberName">THREAD_COUNTER</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="running">running</a></h3>
+<div class="memberSignature"><span class="modifiers">protected volatile</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">running</span></div>
 </section>
 </li>
 <li class="blockList">
@@ -331,28 +269,6 @@ boolean&nbsp;bool)</code></th>
 <div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Thread.html?is-external=true" title="class or interface in java.lang" class="externalLink">Thread</a></span>&nbsp;<span class="memberName">thread</span></div>
 </section>
 </li>
-<li class="blockList">
-<section class="detail">
-<h3><a id="field_14427">field_14427</a></h3>
-<div class="memberSignature"><span class="modifiers">protected final</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">field_14427</span></div>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../../constant-values.html#net.minecraft.server.rcon.RconBase.field_14427">Constant Field Values</a></dd>
-</dl>
-</section>
-</li>
-<li class="blockList">
-<section class="detail">
-<h3><a id="sockets">sockets</a></h3>
-<div class="memberSignature"><span class="modifiers">protected final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/net/DatagramSocket.html?is-external=true" title="class or interface in java.net" class="externalLink">DatagramSocket</a>&gt;</span>&nbsp;<span class="memberName">sockets</span></div>
-</section>
-</li>
-<li class="blockList">
-<section class="detail">
-<h3><a id="serverSockets">serverSockets</a></h3>
-<div class="memberSignature"><span class="modifiers">protected final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/net/ServerSocket.html?is-external=true" title="class or interface in java.net" class="externalLink">ServerSocket</a>&gt;</span>&nbsp;<span class="memberName">serverSockets</span></div>
-</section>
-</li>
 </ul>
 </section>
 </li>
@@ -365,9 +281,8 @@ boolean&nbsp;bool)</code></th>
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="&lt;init&gt;(net.minecraft.server.dedicated.DedicatedServer,java.lang.String)">RconBase</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="memberName">RconBase</span>&#8203;(<span class="arguments"><a href="../dedicated/DedicatedServer.html" title="interface in net.minecraft.server.dedicated">DedicatedServer</a>&nbsp;dedicatedServer,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;string)</span></div>
+<h3><a id="&lt;init&gt;(java.lang.String)">RconBase</a></h3>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="memberName">RconBase</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;description)</span></div>
 </section>
 </li>
 </ul>
@@ -396,74 +311,6 @@ boolean&nbsp;bool)</code></th>
 <section class="detail">
 <h3><a id="isRunning()">isRunning</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isRunning</span>()</div>
-</section>
-</li>
-<li class="blockList">
-<section class="detail">
-<h3><a id="log(java.lang.String)">log</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">log</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;string)</span></div>
-</section>
-</li>
-<li class="blockList">
-<section class="detail">
-<h3><a id="info(java.lang.String)">info</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">info</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;string)</span></div>
-</section>
-</li>
-<li class="blockList">
-<section class="detail">
-<h3><a id="warn(java.lang.String)">warn</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">warn</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;string)</span></div>
-</section>
-</li>
-<li class="blockList">
-<section class="detail">
-<h3><a id="logError(java.lang.String)">logError</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">logError</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;string)</span></div>
-</section>
-</li>
-<li class="blockList">
-<section class="detail">
-<h3><a id="getCurrentPlayerCount()">getCurrentPlayerCount</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getCurrentPlayerCount</span>()</div>
-</section>
-</li>
-<li class="blockList">
-<section class="detail">
-<h3><a id="registerSocket(java.net.DatagramSocket)">registerSocket</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">registerSocket</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/net/DatagramSocket.html?is-external=true" title="class or interface in java.net" class="externalLink">DatagramSocket</a>&nbsp;datagramSocket)</span></div>
-</section>
-</li>
-<li class="blockList">
-<section class="detail">
-<h3><a id="closeSocket(java.net.DatagramSocket,boolean)">closeSocket</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">closeSocket</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/net/DatagramSocket.html?is-external=true" title="class or interface in java.net" class="externalLink">DatagramSocket</a>&nbsp;socket,
-boolean&nbsp;bool)</span></div>
-</section>
-</li>
-<li class="blockList">
-<section class="detail">
-<h3><a id="closeSocket(java.net.ServerSocket)">closeSocket</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">closeSocket</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/net/ServerSocket.html?is-external=true" title="class or interface in java.net" class="externalLink">ServerSocket</a>&nbsp;serverSocket)</span></div>
-</section>
-</li>
-<li class="blockList">
-<section class="detail">
-<h3><a id="closeSocket(java.net.ServerSocket,boolean)">closeSocket</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">closeSocket</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/net/ServerSocket.html?is-external=true" title="class or interface in java.net" class="externalLink">ServerSocket</a>&nbsp;socket,
-boolean&nbsp;bool)</span></div>
-</section>
-</li>
-<li class="blockList">
-<section class="detail">
-<h3><a id="forceClose()">forceClose</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">forceClose</span>()</div>
-</section>
-</li>
-<li class="blockList">
-<section class="detail">
-<h3><a id="forceClose(boolean)">forceClose</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">forceClose</span>&#8203;(<span class="arguments">boolean&nbsp;bool)</span></div>
 </section>
 </li>
 </ul>

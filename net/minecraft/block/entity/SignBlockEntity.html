@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10};
+<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -116,8 +116,28 @@ extends <a href="BlockEntity.html" title="class in net.minecraft.block.entity">B
 </thead>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../../text/Text.html" title="interface in net.minecraft.text">Text</a>[]</code></td>
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#editable">editable</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#editor">editor</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../text/Text.html" title="interface in net.minecraft.text">Text</a>[]</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#text">text</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../text/StringRenderable.html" title="interface in net.minecraft.text">StringRenderable</a>[]</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#textBeingEdited">textBeingEdited</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../util/DyeColor.html" title="enum in net.minecraft.util">DyeColor</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#textColor">textColor</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -195,9 +215,9 @@ extends <a href="BlockEntity.html" title="class in net.minecraft.block.entity">B
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i4">
-<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getTextBeingEditedOnRow(int,java.util.function.Function)">getTextBeingEditedOnRow</a></span>&#8203;(int&nbsp;row,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;<a href="../../text/Text.html" title="interface in net.minecraft.text">Text</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&gt;&nbsp;function)</code></th>
+<td class="colFirst"><code><a href="../../text/StringRenderable.html" title="interface in net.minecraft.text">StringRenderable</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getTextBeingEditedOnRow(int,java.util.function.UnaryOperator)">getTextBeingEditedOnRow</a></span>&#8203;(int&nbsp;row,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/UnaryOperator.html?is-external=true" title="class or interface in java.util.function" class="externalLink">UnaryOperator</a>&lt;<a href="../../text/StringRenderable.html" title="interface in net.minecraft.text">StringRenderable</a>&gt;&nbsp;unaryOperator)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i5">
@@ -206,52 +226,47 @@ extends <a href="BlockEntity.html" title="class in net.minecraft.block.entity">B
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i6">
-<td class="colFirst"><code><a href="../../text/Text.html" title="interface in net.minecraft.text">Text</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getTextOnRow(int)">getTextOnRow</a></span>&#8203;(int&nbsp;row)</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="rowColor" id="i7">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isEditable()">isEditable</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i8">
+<tr class="rowColor" id="i7">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#onActivate(net.minecraft.entity.player.PlayerEntity)">onActivate</a></span>&#8203;(<a href="../../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;player)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i9">
+<tr class="altColor" id="i8">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setEditable(boolean)">setEditable</a></span>&#8203;(boolean&nbsp;bool)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i10">
+<tr class="rowColor" id="i9">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setEditor(net.minecraft.entity.player.PlayerEntity)">setEditor</a></span>&#8203;(<a href="../../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;player)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i11">
+<tr class="altColor" id="i10">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setTextColor(net.minecraft.util.DyeColor)">setTextColor</a></span>&#8203;(<a href="../../util/DyeColor.html" title="enum in net.minecraft.util">DyeColor</a>&nbsp;value)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i12">
+<tr class="rowColor" id="i11">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setTextOnRow(int,net.minecraft.text.Text)">setTextOnRow</a></span>&#8203;(int&nbsp;row,
 <a href="../../text/Text.html" title="interface in net.minecraft.text">Text</a>&nbsp;text)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i13">
+<tr class="altColor" id="i12">
 <td class="colFirst"><code><a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#toInitialChunkDataTag()">toInitialChunkDataTag</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i14">
+<tr class="rowColor" id="i13">
 <td class="colFirst"><code><a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#toTag(net.minecraft.nbt.CompoundTag)">toTag</a></span>&#8203;(<a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;tag)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i15">
+<tr class="altColor" id="i14">
 <td class="colFirst"><code><a href="../../network/packet/s2c/play/BlockEntityUpdateS2CPacket.html" title="class in net.minecraft.network.packet.s2c.play">BlockEntityUpdateS2CPacket</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#toUpdatePacket()">toUpdatePacket</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
@@ -264,7 +279,7 @@ extends <a href="BlockEntity.html" title="class in net.minecraft.block.entity">B
 <h3>Methods inherited from class&nbsp;net.minecraft.block.entity.<a href="BlockEntity.html" title="class in net.minecraft.block.entity">BlockEntity</a></h3>
 <a id="methods.inherited.from.class.net.minecraft.block.entity.BlockEntity">
 <!--   -->
-</a><code><a href="BlockEntity.html#applyMirror(net.minecraft.util.BlockMirror)">applyMirror</a>, <a href="BlockEntity.html#applyRotation(net.minecraft.util.BlockRotation)">applyRotation</a>, <a href="BlockEntity.html#cancelRemoval()">cancelRemoval</a>, <a href="BlockEntity.html#createFromTag(net.minecraft.block.BlockState,net.minecraft.nbt.CompoundTag)">createFromTag</a>, <a href="BlockEntity.html#getCachedState()">getCachedState</a>, <a href="BlockEntity.html#getPos()">getPos</a>, <a href="BlockEntity.html#getSquaredDistance(double,double,double)">getSquaredDistance</a>, <a href="BlockEntity.html#getSquaredRenderDistance()">getSquaredRenderDistance</a>, <a href="BlockEntity.html#getType()">getType</a>, <a href="BlockEntity.html#getWorld()">getWorld</a>, <a href="BlockEntity.html#hasWorld()">hasWorld</a>, <a href="BlockEntity.html#isRemoved()">isRemoved</a>, <a href="BlockEntity.html#markDirty()">markDirty</a>, <a href="BlockEntity.html#markInvalid()">markInvalid</a>, <a href="BlockEntity.html#markRemoved()">markRemoved</a>, <a href="BlockEntity.html#onBlockAction(int,int)">onBlockAction</a>, <a href="BlockEntity.html#populateCrashReport(net.minecraft.util.crash.CrashReportSection)">populateCrashReport</a>, <a href="BlockEntity.html#resetBlock()">resetBlock</a>, <a href="BlockEntity.html#setLocation(net.minecraft.world.World,net.minecraft.util.math.BlockPos)">setLocation</a>, <a href="BlockEntity.html#setPos(net.minecraft.util.math.BlockPos)">setPos</a></code></div>
+</a><code><a href="BlockEntity.html#applyMirror(net.minecraft.util.BlockMirror)">applyMirror</a>, <a href="BlockEntity.html#applyRotation(net.minecraft.util.BlockRotation)">applyRotation</a>, <a href="BlockEntity.html#cancelRemoval()">cancelRemoval</a>, <a href="BlockEntity.html#createFromTag(net.minecraft.block.BlockState,net.minecraft.nbt.CompoundTag)">createFromTag</a>, <a href="BlockEntity.html#getCachedState()">getCachedState</a>, <a href="BlockEntity.html#getPos()">getPos</a>, <a href="BlockEntity.html#getSquaredRenderDistance()">getSquaredRenderDistance</a>, <a href="BlockEntity.html#getType()">getType</a>, <a href="BlockEntity.html#getWorld()">getWorld</a>, <a href="BlockEntity.html#hasWorld()">hasWorld</a>, <a href="BlockEntity.html#isRemoved()">isRemoved</a>, <a href="BlockEntity.html#markDirty()">markDirty</a>, <a href="BlockEntity.html#markInvalid()">markInvalid</a>, <a href="BlockEntity.html#markRemoved()">markRemoved</a>, <a href="BlockEntity.html#onSyncedBlockEvent(int,int)">onSyncedBlockEvent</a>, <a href="BlockEntity.html#populateCrashReport(net.minecraft.util.crash.CrashReportSection)">populateCrashReport</a>, <a href="BlockEntity.html#resetBlock()">resetBlock</a>, <a href="BlockEntity.html#setLocation(net.minecraft.world.World,net.minecraft.util.math.BlockPos)">setLocation</a>, <a href="BlockEntity.html#setPos(net.minecraft.util.math.BlockPos)">setPos</a></code></div>
 <div class="inheritedList">
 <h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></h3>
 <a id="methods.inherited.from.class.java.lang.Object">
@@ -286,7 +301,31 @@ extends <a href="BlockEntity.html" title="class in net.minecraft.block.entity">B
 <li class="blockList">
 <section class="detail">
 <h3><a id="text">text</a></h3>
-<div class="memberSignature"><span class="modifiers">public final</span>&nbsp;<span class="returnType"><a href="../../text/Text.html" title="interface in net.minecraft.text">Text</a>[]</span>&nbsp;<span class="memberName">text</span></div>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../../text/Text.html" title="interface in net.minecraft.text">Text</a>[]</span>&nbsp;<span class="memberName">text</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="editable">editable</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">editable</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="editor">editor</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="../../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a></span>&nbsp;<span class="memberName">editor</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="textBeingEdited">textBeingEdited</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../../text/StringRenderable.html" title="interface in net.minecraft.text">StringRenderable</a>[]</span>&nbsp;<span class="memberName">textBeingEdited</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="textColor">textColor</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="../../util/DyeColor.html" title="enum in net.minecraft.util">DyeColor</a></span>&nbsp;<span class="memberName">textColor</span></div>
 </section>
 </li>
 </ul>
@@ -338,13 +377,6 @@ extends <a href="BlockEntity.html" title="class in net.minecraft.block.entity">B
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="getTextOnRow(int)">getTextOnRow</a></h3>
-<div class="memberSignature"><span class="annotations">@Environment(CLIENT)
-</span><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../text/Text.html" title="interface in net.minecraft.text">Text</a></span>&nbsp;<span class="memberName">getTextOnRow</span>&#8203;(<span class="arguments">int&nbsp;row)</span></div>
-</section>
-</li>
-<li class="blockList">
-<section class="detail">
 <h3><a id="setTextOnRow(int,net.minecraft.text.Text)">setTextOnRow</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setTextOnRow</span>&#8203;(<span class="arguments">int&nbsp;row,
 <a href="../../text/Text.html" title="interface in net.minecraft.text">Text</a>&nbsp;text)</span></div>
@@ -352,17 +384,17 @@ extends <a href="BlockEntity.html" title="class in net.minecraft.block.entity">B
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="getTextBeingEditedOnRow(int,java.util.function.Function)">getTextBeingEditedOnRow</a></h3>
+<h3><a id="getTextBeingEditedOnRow(int,java.util.function.UnaryOperator)">getTextBeingEditedOnRow</a></h3>
 <div class="memberSignature"><span class="annotations">@Environment(CLIENT)
-<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></span>&nbsp;<span class="memberName">getTextBeingEditedOnRow</span>&#8203;(<span class="arguments">int&nbsp;row,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;<a href="../../text/Text.html" title="interface in net.minecraft.text">Text</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&gt;&nbsp;function)</span></div>
+<a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../text/StringRenderable.html" title="interface in net.minecraft.text">StringRenderable</a></span>&nbsp;<span class="memberName">getTextBeingEditedOnRow</span>&#8203;(<span class="arguments">int&nbsp;row,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/UnaryOperator.html?is-external=true" title="class or interface in java.util.function" class="externalLink">UnaryOperator</a>&lt;<a href="../../text/StringRenderable.html" title="interface in net.minecraft.text">StringRenderable</a>&gt;&nbsp;unaryOperator)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="toUpdatePacket()">toUpdatePacket</a></h3>
-<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 </span><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../network/packet/s2c/play/BlockEntityUpdateS2CPacket.html" title="class in net.minecraft.network.packet.s2c.play">BlockEntityUpdateS2CPacket</a></span>&nbsp;<span class="memberName">toUpdatePacket</span>()</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
@@ -424,7 +456,7 @@ extends <a href="BlockEntity.html" title="class in net.minecraft.block.entity">B
 <li class="blockList">
 <section class="detail">
 <h3><a id="getCommandSource(net.minecraft.server.network.ServerPlayerEntity)">getCommandSource</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../server/command/ServerCommandSource.html" title="class in net.minecraft.server.command">ServerCommandSource</a></span>&nbsp;<span class="memberName">getCommandSource</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../server/command/ServerCommandSource.html" title="class in net.minecraft.server.command">ServerCommandSource</a></span>&nbsp;<span class="memberName">getCommandSource</span>&#8203;(<span class="arguments"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 <a href="../../server/network/ServerPlayerEntity.html" title="class in net.minecraft.server.network">ServerPlayerEntity</a>&nbsp;player)</span></div>
 </section>
 </li>

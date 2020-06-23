@@ -88,7 +88,7 @@ loadScripts(document, 'script');</script>
 <div class="contentContainer">
 <div class="inheritance" title="Inheritance Tree"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">java.lang.Object</a>
 <div class="inheritance"><a href="Fluid.html" title="class in net.minecraft.fluid">net.minecraft.fluid.Fluid</a>
-<div class="inheritance"><a href="BaseFluid.html" title="class in net.minecraft.fluid">net.minecraft.fluid.BaseFluid</a>
+<div class="inheritance"><a href="FlowableFluid.html" title="class in net.minecraft.fluid">net.minecraft.fluid.FlowableFluid</a>
 <div class="inheritance"><a href="WaterFluid.html" title="class in net.minecraft.fluid">net.minecraft.fluid.WaterFluid</a>
 <div class="inheritance">net.minecraft.fluid.WaterFluid.Still</div>
 </div>
@@ -126,10 +126,10 @@ extends <a href="WaterFluid.html" title="class in net.minecraft.fluid">WaterFlui
 </a>
 <h2>Field Summary</h2>
 <div class="inheritedList">
-<h3>Fields inherited from class&nbsp;net.minecraft.fluid.<a href="BaseFluid.html" title="class in net.minecraft.fluid">BaseFluid</a></h3>
-<a id="fields.inherited.from.class.net.minecraft.fluid.BaseFluid">
+<h3>Fields inherited from class&nbsp;net.minecraft.fluid.<a href="FlowableFluid.html" title="class in net.minecraft.fluid">FlowableFluid</a></h3>
+<a id="fields.inherited.from.class.net.minecraft.fluid.FlowableFluid">
 <!--   -->
-</a><code><a href="BaseFluid.html#FALLING">FALLING</a>, <a href="BaseFluid.html#LEVEL">LEVEL</a></code></div>
+</a><code><a href="FlowableFluid.html#FALLING">FALLING</a>, <a href="FlowableFluid.html#LEVEL">LEVEL</a></code></div>
 <div class="inheritedList">
 <h3>Fields inherited from class&nbsp;net.minecraft.fluid.<a href="Fluid.html" title="class in net.minecraft.fluid">Fluid</a></h3>
 <a id="fields.inherited.from.class.net.minecraft.fluid.Fluid">
@@ -182,12 +182,12 @@ extends <a href="WaterFluid.html" title="class in net.minecraft.fluid">WaterFlui
 <tbody>
 <tr class="altColor" id="i0">
 <td class="colFirst"><code>int</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getLevel(net.minecraft.fluid.FluidState)">getLevel</a></span>&#8203;(<a href="FluidState.html" title="interface in net.minecraft.fluid">FluidState</a>&nbsp;state)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getLevel(net.minecraft.fluid.FluidState)">getLevel</a></span>&#8203;(<a href="FluidState.html" title="class in net.minecraft.fluid">FluidState</a>&nbsp;state)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
 <td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isStill(net.minecraft.fluid.FluidState)">isStill</a></span>&#8203;(<a href="FluidState.html" title="interface in net.minecraft.fluid">FluidState</a>&nbsp;state)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isStill(net.minecraft.fluid.FluidState)">isStill</a></span>&#8203;(<a href="FluidState.html" title="class in net.minecraft.fluid">FluidState</a>&nbsp;state)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -198,12 +198,12 @@ extends <a href="WaterFluid.html" title="class in net.minecraft.fluid">WaterFlui
 <h3>Methods inherited from class&nbsp;net.minecraft.fluid.<a href="WaterFluid.html" title="class in net.minecraft.fluid">WaterFluid</a></h3>
 <a id="methods.inherited.from.class.net.minecraft.fluid.WaterFluid">
 <!--   -->
-</a><code><a href="WaterFluid.html#beforeBreakingBlock(net.minecraft.world.IWorld,net.minecraft.util.math.BlockPos,net.minecraft.block.BlockState)">beforeBreakingBlock</a>, <a href="WaterFluid.html#canBeReplacedWith(net.minecraft.fluid.FluidState,net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos,net.minecraft.fluid.Fluid,net.minecraft.util.math.Direction)">canBeReplacedWith</a>, <a href="WaterFluid.html#getBlastResistance()">getBlastResistance</a>, <a href="WaterFluid.html#getBucketItem()">getBucketItem</a>, <a href="WaterFluid.html#getFlowing()">getFlowing</a>, <a href="WaterFluid.html#getFlowSpeed(net.minecraft.world.WorldView)">getFlowSpeed</a>, <a href="WaterFluid.html#getLevelDecreasePerBlock(net.minecraft.world.WorldView)">getLevelDecreasePerBlock</a>, <a href="WaterFluid.html#getParticle()">getParticle</a>, <a href="WaterFluid.html#getStill()">getStill</a>, <a href="WaterFluid.html#getTickRate(net.minecraft.world.WorldView)">getTickRate</a>, <a href="WaterFluid.html#isInfinite()">isInfinite</a>, <a href="WaterFluid.html#matchesType(net.minecraft.fluid.Fluid)">matchesType</a>, <a href="WaterFluid.html#randomDisplayTick(net.minecraft.world.World,net.minecraft.util.math.BlockPos,net.minecraft.fluid.FluidState,java.util.Random)">randomDisplayTick</a>, <a href="WaterFluid.html#toBlockState(net.minecraft.fluid.FluidState)">toBlockState</a></code></div>
+</a><code><a href="WaterFluid.html#beforeBreakingBlock(net.minecraft.world.WorldAccess,net.minecraft.util.math.BlockPos,net.minecraft.block.BlockState)">beforeBreakingBlock</a>, <a href="WaterFluid.html#canBeReplacedWith(net.minecraft.fluid.FluidState,net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos,net.minecraft.fluid.Fluid,net.minecraft.util.math.Direction)">canBeReplacedWith</a>, <a href="WaterFluid.html#getBlastResistance()">getBlastResistance</a>, <a href="WaterFluid.html#getBucketItem()">getBucketItem</a>, <a href="WaterFluid.html#getFlowing()">getFlowing</a>, <a href="WaterFluid.html#getFlowSpeed(net.minecraft.world.WorldView)">getFlowSpeed</a>, <a href="WaterFluid.html#getLevelDecreasePerBlock(net.minecraft.world.WorldView)">getLevelDecreasePerBlock</a>, <a href="WaterFluid.html#getParticle()">getParticle</a>, <a href="WaterFluid.html#getStill()">getStill</a>, <a href="WaterFluid.html#getTickRate(net.minecraft.world.WorldView)">getTickRate</a>, <a href="WaterFluid.html#isInfinite()">isInfinite</a>, <a href="WaterFluid.html#matchesType(net.minecraft.fluid.Fluid)">matchesType</a>, <a href="WaterFluid.html#randomDisplayTick(net.minecraft.world.World,net.minecraft.util.math.BlockPos,net.minecraft.fluid.FluidState,java.util.Random)">randomDisplayTick</a>, <a href="WaterFluid.html#toBlockState(net.minecraft.fluid.FluidState)">toBlockState</a></code></div>
 <div class="inheritedList">
-<h3>Methods inherited from class&nbsp;net.minecraft.fluid.<a href="BaseFluid.html" title="class in net.minecraft.fluid">BaseFluid</a></h3>
-<a id="methods.inherited.from.class.net.minecraft.fluid.BaseFluid">
+<h3>Methods inherited from class&nbsp;net.minecraft.fluid.<a href="FlowableFluid.html" title="class in net.minecraft.fluid">FlowableFluid</a></h3>
+<a id="methods.inherited.from.class.net.minecraft.fluid.FlowableFluid">
 <!--   -->
-</a><code><a href="BaseFluid.html#appendProperties(net.minecraft.state.StateManager.Builder)">appendProperties</a>, <a href="BaseFluid.html#canFlow(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos,net.minecraft.block.BlockState,net.minecraft.util.math.Direction,net.minecraft.util.math.BlockPos,net.minecraft.block.BlockState,net.minecraft.fluid.FluidState,net.minecraft.fluid.Fluid)">canFlow</a>, <a href="BaseFluid.html#flow(net.minecraft.world.IWorld,net.minecraft.util.math.BlockPos,net.minecraft.block.BlockState,net.minecraft.util.math.Direction,net.minecraft.fluid.FluidState)">flow</a>, <a href="BaseFluid.html#getFlowing(int,boolean)">getFlowing</a>, <a href="BaseFluid.html#getHeight(net.minecraft.fluid.FluidState)">getHeight</a>, <a href="BaseFluid.html#getHeight(net.minecraft.fluid.FluidState,net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos)">getHeight</a>, <a href="BaseFluid.html#getNextTickDelay(net.minecraft.world.World,net.minecraft.util.math.BlockPos,net.minecraft.fluid.FluidState,net.minecraft.fluid.FluidState)">getNextTickDelay</a>, <a href="BaseFluid.html#getShape(net.minecraft.fluid.FluidState,net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos)">getShape</a>, <a href="BaseFluid.html#getSpread(net.minecraft.world.WorldView,net.minecraft.util.math.BlockPos,net.minecraft.block.BlockState)">getSpread</a>, <a href="BaseFluid.html#getStill(boolean)">getStill</a>, <a href="BaseFluid.html#getUpdatedState(net.minecraft.world.WorldView,net.minecraft.util.math.BlockPos,net.minecraft.block.BlockState)">getUpdatedState</a>, <a href="BaseFluid.html#getVelocity(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos,net.minecraft.fluid.FluidState)">getVelocity</a>, <a href="BaseFluid.html#method_15741(net.minecraft.fluid.FluidState)">method_15741</a>, <a href="BaseFluid.html#method_15742(net.minecraft.world.WorldView,net.minecraft.util.math.BlockPos,int,net.minecraft.util.math.Direction,net.minecraft.block.BlockState,net.minecraft.util.math.BlockPos,it.unimi.dsi.fastutil.shorts.Short2ObjectMap,it.unimi.dsi.fastutil.shorts.Short2BooleanMap)">method_15742</a>, <a href="BaseFluid.html#method_15749(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos,net.minecraft.util.math.Direction)">method_15749</a>, <a href="BaseFluid.html#onScheduledTick(net.minecraft.world.World,net.minecraft.util.math.BlockPos,net.minecraft.fluid.FluidState)">onScheduledTick</a>, <a href="BaseFluid.html#tryFlow(net.minecraft.world.IWorld,net.minecraft.util.math.BlockPos,net.minecraft.fluid.FluidState)">tryFlow</a></code></div>
+</a><code><a href="FlowableFluid.html#appendProperties(net.minecraft.state.StateManager.Builder)">appendProperties</a>, <a href="FlowableFluid.html#canFlow(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos,net.minecraft.block.BlockState,net.minecraft.util.math.Direction,net.minecraft.util.math.BlockPos,net.minecraft.block.BlockState,net.minecraft.fluid.FluidState,net.minecraft.fluid.Fluid)">canFlow</a>, <a href="FlowableFluid.html#flow(net.minecraft.world.WorldAccess,net.minecraft.util.math.BlockPos,net.minecraft.block.BlockState,net.minecraft.util.math.Direction,net.minecraft.fluid.FluidState)">flow</a>, <a href="FlowableFluid.html#getFlowing(int,boolean)">getFlowing</a>, <a href="FlowableFluid.html#getHeight(net.minecraft.fluid.FluidState)">getHeight</a>, <a href="FlowableFluid.html#getHeight(net.minecraft.fluid.FluidState,net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos)">getHeight</a>, <a href="FlowableFluid.html#getNextTickDelay(net.minecraft.world.World,net.minecraft.util.math.BlockPos,net.minecraft.fluid.FluidState,net.minecraft.fluid.FluidState)">getNextTickDelay</a>, <a href="FlowableFluid.html#getShape(net.minecraft.fluid.FluidState,net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos)">getShape</a>, <a href="FlowableFluid.html#getSpread(net.minecraft.world.WorldView,net.minecraft.util.math.BlockPos,net.minecraft.block.BlockState)">getSpread</a>, <a href="FlowableFluid.html#getStill(boolean)">getStill</a>, <a href="FlowableFluid.html#getUpdatedState(net.minecraft.world.WorldView,net.minecraft.util.math.BlockPos,net.minecraft.block.BlockState)">getUpdatedState</a>, <a href="FlowableFluid.html#getVelocity(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos,net.minecraft.fluid.FluidState)">getVelocity</a>, <a href="FlowableFluid.html#method_15741(net.minecraft.fluid.FluidState)">method_15741</a>, <a href="FlowableFluid.html#method_15742(net.minecraft.world.WorldView,net.minecraft.util.math.BlockPos,int,net.minecraft.util.math.Direction,net.minecraft.block.BlockState,net.minecraft.util.math.BlockPos,it.unimi.dsi.fastutil.shorts.Short2ObjectMap,it.unimi.dsi.fastutil.shorts.Short2BooleanMap)">method_15742</a>, <a href="FlowableFluid.html#method_15749(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos,net.minecraft.util.math.Direction)">method_15749</a>, <a href="FlowableFluid.html#onScheduledTick(net.minecraft.world.World,net.minecraft.util.math.BlockPos,net.minecraft.fluid.FluidState)">onScheduledTick</a>, <a href="FlowableFluid.html#tryFlow(net.minecraft.world.WorldAccess,net.minecraft.util.math.BlockPos,net.minecraft.fluid.FluidState)">tryFlow</a></code></div>
 <div class="inheritedList">
 <h3>Methods inherited from class&nbsp;net.minecraft.fluid.<a href="Fluid.html" title="class in net.minecraft.fluid">Fluid</a></h3>
 <a id="methods.inherited.from.class.net.minecraft.fluid.Fluid">
@@ -246,7 +246,7 @@ extends <a href="WaterFluid.html" title="class in net.minecraft.fluid">WaterFlui
 <li class="blockList">
 <section class="detail">
 <h3><a id="getLevel(net.minecraft.fluid.FluidState)">getLevel</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getLevel</span>&#8203;(<span class="arguments"><a href="FluidState.html" title="interface in net.minecraft.fluid">FluidState</a>&nbsp;state)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getLevel</span>&#8203;(<span class="arguments"><a href="FluidState.html" title="class in net.minecraft.fluid">FluidState</a>&nbsp;state)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="Fluid.html#getLevel(net.minecraft.fluid.FluidState)">getLevel</a></code>&nbsp;in class&nbsp;<code><a href="Fluid.html" title="class in net.minecraft.fluid">Fluid</a></code></dd>
@@ -256,7 +256,7 @@ extends <a href="WaterFluid.html" title="class in net.minecraft.fluid">WaterFlui
 <li class="blockList">
 <section class="detail">
 <h3><a id="isStill(net.minecraft.fluid.FluidState)">isStill</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isStill</span>&#8203;(<span class="arguments"><a href="FluidState.html" title="interface in net.minecraft.fluid">FluidState</a>&nbsp;state)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isStill</span>&#8203;(<span class="arguments"><a href="FluidState.html" title="class in net.minecraft.fluid">FluidState</a>&nbsp;state)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="Fluid.html#isStill(net.minecraft.fluid.FluidState)">isStill</a></code>&nbsp;in class&nbsp;<code><a href="Fluid.html" title="class in net.minecraft.fluid">Fluid</a></code></dd>

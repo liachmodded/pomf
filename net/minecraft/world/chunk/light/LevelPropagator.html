@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":10,"i1":6,"i2":6,"i3":10,"i4":6,"i5":10,"i6":10,"i7":6,"i8":10,"i9":6,"i10":10,"i11":10,"i12":6,"i13":10};
+<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":6,"i3":6,"i4":10,"i5":10,"i6":6,"i7":10,"i8":10,"i9":10,"i10":6,"i11":10,"i12":6,"i13":10,"i14":10,"i15":10,"i16":6,"i17":10,"i18":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -56,13 +56,13 @@ loadScripts(document, 'script');</script>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
@@ -100,6 +100,53 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </section>
 <section class="summary">
 <ul class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<li class="blockList">
+<section class="fieldSummary"><a id="field.summary">
+<!--   -->
+</a>
+<h2>Field Summary</h2>
+<div class="memberSummary">
+<table>
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<thead>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colSecond" scope="col">Field</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#hasPendingUpdates">hasPendingUpdates</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#levelCount">levelCount</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#minPendingLevel">minPendingLevel</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://fastutil.di.unimi.it/docs/it/unimi/dsi/fastutil/longs/LongLinkedOpenHashSet.html?is-external=true" title="class or interface in it.unimi.dsi.fastutil.longs" class="externalLink">LongLinkedOpenHashSet</a>[]</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#pendingIdUpdatesByLevel">pendingIdUpdatesByLevel</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://fastutil.di.unimi.it/docs/it/unimi/dsi/fastutil/longs/Long2ByteMap.html?is-external=true" title="class or interface in it.unimi.dsi.fastutil.longs" class="externalLink">Long2ByteMap</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#pendingUpdates">pendingUpdates</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</li>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <li class="blockList">
 <section class="constructorSummary"><a id="constructor.summary">
@@ -148,50 +195,68 @@ int&nbsp;expectedTotalSize)</code></th>
 </thead>
 <tbody>
 <tr class="altColor" id="i0">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addPendingUpdate(long,int,int)">addPendingUpdate</a></span>&#8203;(long&nbsp;id,
+int&nbsp;level,
+int&nbsp;targetLevel)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i1">
 <td class="colFirst"><code>protected int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#applyPendingUpdates(int)">applyPendingUpdates</a></span>&#8203;(int&nbsp;maxSteps)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i1">
+<tr class="altColor" id="i2">
 <td class="colFirst"><code>protected abstract int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getLevel(long)">getLevel</a></span>&#8203;(long&nbsp;id)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i2">
+<tr class="rowColor" id="i3">
 <td class="colFirst"><code>protected abstract int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPropagatedLevel(long,long,int)">getPropagatedLevel</a></span>&#8203;(long&nbsp;sourceId,
 long&nbsp;targetId,
 int&nbsp;level)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i3">
+<tr class="altColor" id="i4">
 <td class="colFirst"><code>protected boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#hasPendingUpdates()">hasPendingUpdates</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i4">
+<tr class="rowColor" id="i5">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#increaseMinPendingLevel(int)">increaseMinPendingLevel</a></span>&#8203;(int&nbsp;maxLevel)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i6">
 <td class="colFirst"><code>protected abstract boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isMarker(long)">isMarker</a></span>&#8203;(long&nbsp;id)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i5">
+<tr class="rowColor" id="i7">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_24206(java.util.function.LongPredicate)">method_24206</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/LongPredicate.html?is-external=true" title="class or interface in java.util.function" class="externalLink">LongPredicate</a>&nbsp;longPredicate)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i6">
+<tr class="altColor" id="i8">
 <td class="colFirst"><code>int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_24208()">method_24208</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i7">
+<tr class="rowColor" id="i9">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#minLevel(int,int)">minLevel</a></span>&#8203;(int&nbsp;a,
+int&nbsp;b)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i10">
 <td class="colFirst"><code>protected abstract void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#propagateLevel(long,int,boolean)">propagateLevel</a></span>&#8203;(long&nbsp;id,
 int&nbsp;level,
 boolean&nbsp;decrease)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i8">
+<tr class="rowColor" id="i11">
 <td class="colFirst"><code>protected void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#propagateLevel(long,long,int,boolean)">propagateLevel</a></span>&#8203;(long&nbsp;sourceId,
 long&nbsp;targetId,
@@ -199,34 +264,52 @@ int&nbsp;level,
 boolean&nbsp;decrease)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i9">
+<tr class="altColor" id="i12">
 <td class="colFirst"><code>protected abstract int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#recalculateLevel(long,long,int)">recalculateLevel</a></span>&#8203;(long&nbsp;id,
 long&nbsp;excludedId,
 int&nbsp;maxLevel)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i10">
+<tr class="rowColor" id="i13">
 <td class="colFirst"><code>protected void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#removePendingUpdate(long)">removePendingUpdate</a></span>&#8203;(long&nbsp;id)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i11">
+<tr class="altColor" id="i14">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#removePendingUpdate(long,int,int,boolean)">removePendingUpdate</a></span>&#8203;(long&nbsp;id,
+int&nbsp;level,
+int&nbsp;levelCount,
+boolean&nbsp;removeFully)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i15">
 <td class="colFirst"><code>protected void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#resetLevel(long)">resetLevel</a></span>&#8203;(long&nbsp;id)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i12">
+<tr class="altColor" id="i16">
 <td class="colFirst"><code>protected abstract void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setLevel(long,int)">setLevel</a></span>&#8203;(long&nbsp;id,
 int&nbsp;level)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i13">
+<tr class="rowColor" id="i17">
 <td class="colFirst"><code>protected void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#updateLevel(long,long,int,boolean)">updateLevel</a></span>&#8203;(long&nbsp;sourceId,
 long&nbsp;id,
 int&nbsp;level,
+boolean&nbsp;decrease)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i18">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#updateLevel(long,long,int,int,int,boolean)">updateLevel</a></span>&#8203;(long&nbsp;sourceId,
+long&nbsp;id,
+int&nbsp;level,
+int&nbsp;currentLevel,
+int&nbsp;pendingLevel,
 boolean&nbsp;decrease)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -245,6 +328,46 @@ boolean&nbsp;decrease)</code></th>
 </section>
 <section class="details">
 <ul class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<li class="blockList">
+<section class="fieldDetails"><a id="field.detail">
+<!--   -->
+</a>
+<h2>Field Details</h2>
+<ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="levelCount">levelCount</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">levelCount</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="pendingIdUpdatesByLevel">pendingIdUpdatesByLevel</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="http://fastutil.di.unimi.it/docs/it/unimi/dsi/fastutil/longs/LongLinkedOpenHashSet.html?is-external=true" title="class or interface in it.unimi.dsi.fastutil.longs" class="externalLink">LongLinkedOpenHashSet</a>[]</span>&nbsp;<span class="memberName">pendingIdUpdatesByLevel</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="pendingUpdates">pendingUpdates</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="http://fastutil.di.unimi.it/docs/it/unimi/dsi/fastutil/longs/Long2ByteMap.html?is-external=true" title="class or interface in it.unimi.dsi.fastutil.longs" class="externalLink">Long2ByteMap</a></span>&nbsp;<span class="memberName">pendingUpdates</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="minPendingLevel">minPendingLevel</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">minPendingLevel</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="hasPendingUpdates">hasPendingUpdates</a></h3>
+<div class="memberSignature"><span class="modifiers">private volatile</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">hasPendingUpdates</span></div>
+</section>
+</li>
+</ul>
+</section>
+</li>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <li class="blockList">
 <section class="constructorDetails"><a id="constructor.detail">
@@ -272,6 +395,19 @@ int&nbsp;expectedTotalSize)</span></div>
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
+<h3><a id="minLevel(int,int)">minLevel</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">minLevel</span>&#8203;(<span class="arguments">int&nbsp;a,
+int&nbsp;b)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="increaseMinPendingLevel(int)">increaseMinPendingLevel</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">increaseMinPendingLevel</span>&#8203;(<span class="arguments">int&nbsp;maxLevel)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="removePendingUpdate(long)">removePendingUpdate</a></h3>
 <div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">removePendingUpdate</span>&#8203;(<span class="arguments">long&nbsp;id)</span></div>
 </section>
@@ -280,6 +416,23 @@ int&nbsp;expectedTotalSize)</span></div>
 <section class="detail">
 <h3><a id="method_24206(java.util.function.LongPredicate)">method_24206</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">method_24206</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/LongPredicate.html?is-external=true" title="class or interface in java.util.function" class="externalLink">LongPredicate</a>&nbsp;longPredicate)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="removePendingUpdate(long,int,int,boolean)">removePendingUpdate</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">removePendingUpdate</span>&#8203;(<span class="arguments">long&nbsp;id,
+int&nbsp;level,
+int&nbsp;levelCount,
+boolean&nbsp;removeFully)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="addPendingUpdate(long,int,int)">addPendingUpdate</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">addPendingUpdate</span>&#8203;(<span class="arguments">long&nbsp;id,
+int&nbsp;level,
+int&nbsp;targetLevel)</span></div>
 </section>
 </li>
 <li class="blockList">
@@ -294,6 +447,17 @@ int&nbsp;expectedTotalSize)</span></div>
 <div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">updateLevel</span>&#8203;(<span class="arguments">long&nbsp;sourceId,
 long&nbsp;id,
 int&nbsp;level,
+boolean&nbsp;decrease)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="updateLevel(long,long,int,int,int,boolean)">updateLevel</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">updateLevel</span>&#8203;(<span class="arguments">long&nbsp;sourceId,
+long&nbsp;id,
+int&nbsp;level,
+int&nbsp;currentLevel,
+int&nbsp;pendingLevel,
 boolean&nbsp;decrease)</span></div>
 </section>
 </li>
@@ -400,13 +564,13 @@ int&nbsp;level)</span></div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>

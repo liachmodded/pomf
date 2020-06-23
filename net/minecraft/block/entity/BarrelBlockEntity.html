@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10};
+<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -62,7 +62,7 @@ loadScripts(document, 'script');</script>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
@@ -112,6 +112,30 @@ extends <a href="LootableContainerBlockEntity.html" title="class in net.minecraf
 <!--   -->
 </a>
 <h2>Field Summary</h2>
+<div class="memberSummary">
+<table>
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<thead>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colSecond" scope="col">Field</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../util/collection/DefaultedList.html" title="class in net.minecraft.util.collection">DefaultedList</a>&lt;<a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#inventory">inventory</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#viewerCount">viewerCount</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
 <div class="inheritedList">
 <h3>Fields inherited from class&nbsp;net.minecraft.block.entity.<a href="LootableContainerBlockEntity.html" title="class in net.minecraft.block.entity">LootableContainerBlockEntity</a></h3>
 <a id="fields.inherited.from.class.net.minecraft.block.entity.LootableContainerBlockEntity">
@@ -135,13 +159,20 @@ extends <a href="LootableContainerBlockEntity.html" title="class in net.minecraf
 <caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
 <thead>
 <tr>
-<th class="colFirst" scope="col">Constructor</th>
+<th class="colFirst" scope="col">Modifier</th>
+<th class="colSecond" scope="col">Constructor</th>
 <th class="colLast" scope="col">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code>&nbsp;</code></td>
 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E()">BarrelBlockEntity</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private </code></td>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.block.entity.BlockEntityType)">BarrelBlockEntity</a></span>&#8203;(<a href="BlockEntityType.html" title="class in net.minecraft.block.entity">BlockEntityType</a>&lt;?&gt;&nbsp;type)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -169,7 +200,7 @@ extends <a href="LootableContainerBlockEntity.html" title="class in net.minecraf
 <tbody>
 <tr class="altColor" id="i0">
 <td class="colFirst"><code>protected <a href="../../screen/ScreenHandler.html" title="class in net.minecraft.screen">ScreenHandler</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createContainer(int,net.minecraft.entity.player.PlayerInventory)">createContainer</a></span>&#8203;(int&nbsp;int2,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createScreenHandler(int,net.minecraft.entity.player.PlayerInventory)">createScreenHandler</a></span>&#8203;(int&nbsp;syncId,
 <a href="../../entity/player/PlayerInventory.html" title="class in net.minecraft.entity.player">PlayerInventory</a>&nbsp;playerInventory)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -200,21 +231,38 @@ extends <a href="LootableContainerBlockEntity.html" title="class in net.minecraf
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i6">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#playSound(net.minecraft.block.BlockState,net.minecraft.sound.SoundEvent)">playSound</a></span>&#8203;(<a href="../BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState,
+<a href="../../sound/SoundEvent.html" title="class in net.minecraft.sound">SoundEvent</a>&nbsp;soundEvent)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i7">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#scheduleUpdate()">scheduleUpdate</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i8">
 <td class="colFirst"><code>protected void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setInvStackList(net.minecraft.util.collection.DefaultedList)">setInvStackList</a></span>&#8203;(<a href="../../util/collection/DefaultedList.html" title="class in net.minecraft.util.collection">DefaultedList</a>&lt;<a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&gt;&nbsp;list)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i7">
+<tr class="rowColor" id="i9">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setOpen(net.minecraft.block.BlockState,boolean)">setOpen</a></span>&#8203;(<a href="../BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state,
+boolean&nbsp;open)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i10">
 <td class="colFirst"><code>int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#size()">size</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i8">
+<tr class="rowColor" id="i11">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#tick()">tick</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i9">
+<tr class="altColor" id="i12">
 <td class="colFirst"><code><a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#toTag(net.minecraft.nbt.CompoundTag)">toTag</a></span>&#8203;(<a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;tag)</code></th>
 <td class="colLast">&nbsp;</td>
@@ -237,7 +285,7 @@ extends <a href="LootableContainerBlockEntity.html" title="class in net.minecraf
 <h3>Methods inherited from class&nbsp;net.minecraft.block.entity.<a href="BlockEntity.html" title="class in net.minecraft.block.entity">BlockEntity</a></h3>
 <a id="methods.inherited.from.class.net.minecraft.block.entity.BlockEntity">
 <!--   -->
-</a><code><a href="BlockEntity.html#applyMirror(net.minecraft.util.BlockMirror)">applyMirror</a>, <a href="BlockEntity.html#applyRotation(net.minecraft.util.BlockRotation)">applyRotation</a>, <a href="BlockEntity.html#cancelRemoval()">cancelRemoval</a>, <a href="BlockEntity.html#copyItemDataRequiresOperator()">copyItemDataRequiresOperator</a>, <a href="BlockEntity.html#createFromTag(net.minecraft.block.BlockState,net.minecraft.nbt.CompoundTag)">createFromTag</a>, <a href="BlockEntity.html#getCachedState()">getCachedState</a>, <a href="BlockEntity.html#getPos()">getPos</a>, <a href="BlockEntity.html#getSquaredDistance(double,double,double)">getSquaredDistance</a>, <a href="BlockEntity.html#getSquaredRenderDistance()">getSquaredRenderDistance</a>, <a href="BlockEntity.html#getType()">getType</a>, <a href="BlockEntity.html#getWorld()">getWorld</a>, <a href="BlockEntity.html#hasWorld()">hasWorld</a>, <a href="BlockEntity.html#isRemoved()">isRemoved</a>, <a href="BlockEntity.html#markDirty()">markDirty</a>, <a href="BlockEntity.html#markInvalid()">markInvalid</a>, <a href="BlockEntity.html#markRemoved()">markRemoved</a>, <a href="BlockEntity.html#onBlockAction(int,int)">onBlockAction</a>, <a href="BlockEntity.html#populateCrashReport(net.minecraft.util.crash.CrashReportSection)">populateCrashReport</a>, <a href="BlockEntity.html#resetBlock()">resetBlock</a>, <a href="BlockEntity.html#setLocation(net.minecraft.world.World,net.minecraft.util.math.BlockPos)">setLocation</a>, <a href="BlockEntity.html#setPos(net.minecraft.util.math.BlockPos)">setPos</a>, <a href="BlockEntity.html#toInitialChunkDataTag()">toInitialChunkDataTag</a>, <a href="BlockEntity.html#toUpdatePacket()">toUpdatePacket</a></code></div>
+</a><code><a href="BlockEntity.html#applyMirror(net.minecraft.util.BlockMirror)">applyMirror</a>, <a href="BlockEntity.html#applyRotation(net.minecraft.util.BlockRotation)">applyRotation</a>, <a href="BlockEntity.html#cancelRemoval()">cancelRemoval</a>, <a href="BlockEntity.html#copyItemDataRequiresOperator()">copyItemDataRequiresOperator</a>, <a href="BlockEntity.html#createFromTag(net.minecraft.block.BlockState,net.minecraft.nbt.CompoundTag)">createFromTag</a>, <a href="BlockEntity.html#getCachedState()">getCachedState</a>, <a href="BlockEntity.html#getPos()">getPos</a>, <a href="BlockEntity.html#getSquaredRenderDistance()">getSquaredRenderDistance</a>, <a href="BlockEntity.html#getType()">getType</a>, <a href="BlockEntity.html#getWorld()">getWorld</a>, <a href="BlockEntity.html#hasWorld()">hasWorld</a>, <a href="BlockEntity.html#isRemoved()">isRemoved</a>, <a href="BlockEntity.html#markDirty()">markDirty</a>, <a href="BlockEntity.html#markInvalid()">markInvalid</a>, <a href="BlockEntity.html#markRemoved()">markRemoved</a>, <a href="BlockEntity.html#onSyncedBlockEvent(int,int)">onSyncedBlockEvent</a>, <a href="BlockEntity.html#populateCrashReport(net.minecraft.util.crash.CrashReportSection)">populateCrashReport</a>, <a href="BlockEntity.html#resetBlock()">resetBlock</a>, <a href="BlockEntity.html#setLocation(net.minecraft.world.World,net.minecraft.util.math.BlockPos)">setLocation</a>, <a href="BlockEntity.html#setPos(net.minecraft.util.math.BlockPos)">setPos</a>, <a href="BlockEntity.html#toInitialChunkDataTag()">toInitialChunkDataTag</a>, <a href="BlockEntity.html#toUpdatePacket()">toUpdatePacket</a></code></div>
 <div class="inheritedList">
 <h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></h3>
 <a id="methods.inherited.from.class.java.lang.Object">
@@ -259,6 +307,28 @@ extends <a href="LootableContainerBlockEntity.html" title="class in net.minecraf
 </section>
 <section class="details">
 <ul class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<li class="blockList">
+<section class="fieldDetails"><a id="field.detail">
+<!--   -->
+</a>
+<h2>Field Details</h2>
+<ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="inventory">inventory</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="../../util/collection/DefaultedList.html" title="class in net.minecraft.util.collection">DefaultedList</a>&lt;<a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&gt;</span>&nbsp;<span class="memberName">inventory</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="viewerCount">viewerCount</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">viewerCount</span></div>
+</section>
+</li>
+</ul>
+</section>
+</li>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <li class="blockList">
 <section class="constructorDetails"><a id="constructor.detail">
@@ -266,6 +336,12 @@ extends <a href="LootableContainerBlockEntity.html" title="class in net.minecraf
 </a>
 <h2>Constructor Details</h2>
 <ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="&lt;init&gt;(net.minecraft.block.entity.BlockEntityType)">BarrelBlockEntity</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="memberName">BarrelBlockEntity</span>&#8203;(<span class="arguments"><a href="BlockEntityType.html" title="class in net.minecraft.block.entity">BlockEntityType</a>&lt;?&gt;&nbsp;type)</span></div>
+</section>
+</li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="&lt;init&gt;()">BarrelBlockEntity</a></h3>
@@ -341,12 +417,12 @@ extends <a href="LootableContainerBlockEntity.html" title="class in net.minecraf
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="createContainer(int,net.minecraft.entity.player.PlayerInventory)">createContainer</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType"><a href="../../screen/ScreenHandler.html" title="class in net.minecraft.screen">ScreenHandler</a></span>&nbsp;<span class="memberName">createContainer</span>&#8203;(<span class="arguments">int&nbsp;int2,
+<h3><a id="createScreenHandler(int,net.minecraft.entity.player.PlayerInventory)">createScreenHandler</a></h3>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType"><a href="../../screen/ScreenHandler.html" title="class in net.minecraft.screen">ScreenHandler</a></span>&nbsp;<span class="memberName">createScreenHandler</span>&#8203;(<span class="arguments">int&nbsp;syncId,
 <a href="../../entity/player/PlayerInventory.html" title="class in net.minecraft.entity.player">PlayerInventory</a>&nbsp;playerInventory)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="LockableContainerBlockEntity.html#createContainer(int,net.minecraft.entity.player.PlayerInventory)">createContainer</a></code>&nbsp;in class&nbsp;<code><a href="LockableContainerBlockEntity.html" title="class in net.minecraft.block.entity">LockableContainerBlockEntity</a></code></dd>
+<dd><code><a href="LockableContainerBlockEntity.html#createScreenHandler(int,net.minecraft.entity.player.PlayerInventory)">createScreenHandler</a></code>&nbsp;in class&nbsp;<code><a href="LockableContainerBlockEntity.html" title="class in net.minecraft.block.entity">LockableContainerBlockEntity</a></code></dd>
 </dl>
 </section>
 </li>
@@ -354,6 +430,12 @@ extends <a href="LootableContainerBlockEntity.html" title="class in net.minecraf
 <section class="detail">
 <h3><a id="onOpen(net.minecraft.entity.player.PlayerEntity)">onOpen</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">onOpen</span>&#8203;(<span class="arguments"><a href="../../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;player)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="scheduleUpdate()">scheduleUpdate</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">scheduleUpdate</span>()</div>
 </section>
 </li>
 <li class="blockList">
@@ -366,6 +448,20 @@ extends <a href="LootableContainerBlockEntity.html" title="class in net.minecraf
 <section class="detail">
 <h3><a id="onClose(net.minecraft.entity.player.PlayerEntity)">onClose</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">onClose</span>&#8203;(<span class="arguments"><a href="../../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;player)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="setOpen(net.minecraft.block.BlockState,boolean)">setOpen</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setOpen</span>&#8203;(<span class="arguments"><a href="../BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state,
+boolean&nbsp;open)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="playSound(net.minecraft.block.BlockState,net.minecraft.sound.SoundEvent)">playSound</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">playSound</span>&#8203;(<span class="arguments"><a href="../BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState,
+<a href="../../sound/SoundEvent.html" title="class in net.minecraft.sound">SoundEvent</a>&nbsp;soundEvent)</span></div>
 </section>
 </li>
 </ul>
@@ -407,7 +503,7 @@ extends <a href="LootableContainerBlockEntity.html" title="class in net.minecraf
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>

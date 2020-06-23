@@ -19,8 +19,8 @@
 <script type="text/javascript" src="../../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":6,"i1":10,"i2":6,"i3":6,"i4":6,"i5":6,"i6":10,"i7":10};
-var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],8:["t4","Concrete Methods"]};
+<script type="text/javascript">var data = {"i0":6,"i1":10,"i2":10,"i3":6,"i4":10,"i5":6,"i6":10,"i7":10,"i8":6,"i9":9};
+var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
@@ -55,7 +55,7 @@ loadScripts(document, 'script');</script>
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#nested.class.summary">Nested</a>&nbsp;|&nbsp;</li>
 <li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
@@ -91,20 +91,44 @@ loadScripts(document, 'script');</script>
 </div>
 <section class="description">
 <dl>
-<dt>All Implemented Interfaces:</dt>
-<dd><code><a href="../../../util/dynamic/DynamicSerializable.html" title="interface in net.minecraft.util.dynamic">DynamicSerializable</a></code></dd>
-</dl>
-<dl>
 <dt>Direct Known Subclasses:</dt>
-<dd><code><a href="AcaciaFoliagePlacer.html" title="class in net.minecraft.world.gen.foliage">AcaciaFoliagePlacer</a></code>, <code><a href="BlobFoliagePlacer.html" title="class in net.minecraft.world.gen.foliage">BlobFoliagePlacer</a></code>, <code><a href="PineFoliagePlacer.html" title="class in net.minecraft.world.gen.foliage">PineFoliagePlacer</a></code>, <code><a href="SpruceFoliagePlacer.html" title="class in net.minecraft.world.gen.foliage">SpruceFoliagePlacer</a></code></dd>
+<dd><code><a href="AcaciaFoliagePlacer.html" title="class in net.minecraft.world.gen.foliage">AcaciaFoliagePlacer</a></code>, <code><a href="BlobFoliagePlacer.html" title="class in net.minecraft.world.gen.foliage">BlobFoliagePlacer</a></code>, <code><a href="DarkOakFoliagePlacer.html" title="class in net.minecraft.world.gen.foliage">DarkOakFoliagePlacer</a></code>, <code><a href="../feature/JungleFoliagePlacer.html" title="class in net.minecraft.world.gen.feature">JungleFoliagePlacer</a></code>, <code><a href="../feature/MegaPineFoliagePlacer.html" title="class in net.minecraft.world.gen.feature">MegaPineFoliagePlacer</a></code>, <code><a href="PineFoliagePlacer.html" title="class in net.minecraft.world.gen.foliage">PineFoliagePlacer</a></code>, <code><a href="SpruceFoliagePlacer.html" title="class in net.minecraft.world.gen.foliage">SpruceFoliagePlacer</a></code></dd>
 </dl>
 <hr>
 <pre>public abstract class <span class="typeNameLabel">FoliagePlacer</span>
-extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>
-implements <a href="../../../util/dynamic/DynamicSerializable.html" title="interface in net.minecraft.util.dynamic">DynamicSerializable</a></pre>
+extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></pre>
 </section>
 <section class="summary">
 <ul class="blockList">
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+<li class="blockList">
+<section class="nestedClassSummary"><a id="nested.class.summary">
+<!--   -->
+</a>
+<h2>Nested Class Summary</h2>
+<div class="memberSummary">
+<table>
+<caption><span>Nested Classes</span><span class="tabEnd">&nbsp;</span></caption>
+<thead>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colSecond" scope="col">Class</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>static class&nbsp;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="FoliagePlacer.TreeNode.html" title="class in net.minecraft.world.gen.foliage">FoliagePlacer.TreeNode</a></span></code></th>
+<td class="colLast">
+<div class="block">A point on a tree to generate foliage around</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</li>
 <!-- =========== FIELD SUMMARY =========== -->
 <li class="blockList">
 <section class="fieldSummary"><a id="field.summary">
@@ -123,28 +147,28 @@ implements <a href="../../../util/dynamic/DynamicSerializable.html" title="inter
 </thead>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code>static com.mojang.serialization.Codec&lt;<a href="FoliagePlacer.html" title="class in net.minecraft.world.gen.foliage">FoliagePlacer</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#field_24931">field_24931</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>protected int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#offset">offset</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#radius">radius</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#randomOffset">randomOffset</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#randomRadius">randomRadius</a></span></code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>protected <a href="FoliagePlacerType.html" title="class in net.minecraft.world.gen.foliage">FoliagePlacerType</a>&lt;?&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#type">type</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -169,11 +193,10 @@ implements <a href="../../../util/dynamic/DynamicSerializable.html" title="inter
 </thead>
 <tbody>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(int,int,int,int,net.minecraft.world.gen.foliage.FoliagePlacerType)">FoliagePlacer</a></span>&#8203;(int&nbsp;radius,
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(int,int,int,int)">FoliagePlacer</a></span>&#8203;(int&nbsp;radius,
 int&nbsp;randomRadius,
 int&nbsp;offset,
-int&nbsp;randomOffset,
-<a href="FoliagePlacerType.html" title="class in net.minecraft.world.gen.foliage">FoliagePlacerType</a>&lt;?&gt;&nbsp;type)</code></th>
+int&nbsp;randomOffset)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -188,7 +211,7 @@ int&nbsp;randomOffset,
 </a>
 <h2>Method Summary</h2>
 <div class="memberSummary">
-<div role="tablist" aria-orientation="horizontal"><button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t2" class="tableTab" onclick="show(2);">Instance Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t3" class="tableTab" onclick="show(4);">Abstract Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t4" class="tableTab" onclick="show(8);">Concrete Methods</button></div>
+<div role="tablist" aria-orientation="horizontal"><button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t1" class="tableTab" onclick="show(1);">Static Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t2" class="tableTab" onclick="show(2);">Instance Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t3" class="tableTab" onclick="show(4);">Abstract Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t4" class="tableTab" onclick="show(8);">Concrete Methods</button></div>
 <div id="memberSummary_tabpanel" role="tabpanel">
 <table aria-labelledby="t0">
 <thead>
@@ -200,75 +223,93 @@ int&nbsp;randomOffset,
 </thead>
 <tbody>
 <tr class="altColor" id="i0">
-<td class="colFirst"><code>abstract void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#generate(net.minecraft.world.ModifiableTestableWorld,java.util.Random,net.minecraft.world.gen.feature.BranchedTreeFeatureConfig,int,net.minecraft.util.math.BlockPos,int,int,java.util.Set)">generate</a></span>&#8203;(<a href="../../ModifiableTestableWorld.html" title="interface in net.minecraft.world">ModifiableTestableWorld</a>&nbsp;world,
+<td class="colFirst"><code>protected abstract void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#generate(net.minecraft.world.ModifiableTestableWorld,java.util.Random,net.minecraft.world.gen.feature.TreeFeatureConfig,int,net.minecraft.world.gen.foliage.FoliagePlacer.TreeNode,int,int,java.util.Set,int,net.minecraft.util.math.BlockBox)">generate</a></span>&#8203;(<a href="../../ModifiableTestableWorld.html" title="interface in net.minecraft.world">ModifiableTestableWorld</a>&nbsp;world,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random,
-<a href="../feature/BranchedTreeFeatureConfig.html" title="class in net.minecraft.world.gen.feature">BranchedTreeFeatureConfig</a>&nbsp;config,
+<a href="../feature/TreeFeatureConfig.html" title="class in net.minecraft.world.gen.feature">TreeFeatureConfig</a>&nbsp;config,
 int&nbsp;trunkHeight,
-<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<a href="FoliagePlacer.TreeNode.html" title="class in net.minecraft.world.gen.foliage">FoliagePlacer.TreeNode</a>&nbsp;treeNode,
 int&nbsp;foliageHeight,
 int&nbsp;radius,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;&nbsp;leaves)</code></th>
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;&nbsp;leaves,
+int&nbsp;int2,
+<a href="../../../util/math/BlockBox.html" title="class in net.minecraft.util.math">BlockBox</a>&nbsp;blockBox)</code></th>
 <td class="colLast">
 <div class="block">This is the main method used to generate foliage.</div>
 </td>
 </tr>
 <tr class="rowColor" id="i1">
-<td class="colFirst"><code>protected void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#generate(net.minecraft.world.ModifiableTestableWorld,java.util.Random,net.minecraft.world.gen.feature.BranchedTreeFeatureConfig,net.minecraft.util.math.BlockPos,int,int,int,java.util.Set)">generate</a></span>&#8203;(<a href="../../ModifiableTestableWorld.html" title="interface in net.minecraft.world">ModifiableTestableWorld</a>&nbsp;world,
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#generate(net.minecraft.world.ModifiableTestableWorld,java.util.Random,net.minecraft.world.gen.feature.TreeFeatureConfig,int,net.minecraft.world.gen.foliage.FoliagePlacer.TreeNode,int,int,java.util.Set,net.minecraft.util.math.BlockBox)">generate</a></span>&#8203;(<a href="../../ModifiableTestableWorld.html" title="interface in net.minecraft.world">ModifiableTestableWorld</a>&nbsp;world,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random,
-<a href="../feature/BranchedTreeFeatureConfig.html" title="class in net.minecraft.world.gen.feature">BranchedTreeFeatureConfig</a>&nbsp;config,
-<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
-int&nbsp;baseHeight,
-int&nbsp;y,
+<a href="../feature/TreeFeatureConfig.html" title="class in net.minecraft.world.gen.feature">TreeFeatureConfig</a>&nbsp;config,
+int&nbsp;trunkHeight,
+<a href="FoliagePlacer.TreeNode.html" title="class in net.minecraft.world.gen.foliage">FoliagePlacer.TreeNode</a>&nbsp;treeNode,
+int&nbsp;foliageHeight,
 int&nbsp;radius,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;&nbsp;leaves)</code></th>
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;&nbsp;leaves,
+<a href="../../../util/math/BlockBox.html" title="class in net.minecraft.util.math">BlockBox</a>&nbsp;blockBox)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i2">
-<td class="colFirst"><code>abstract int</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getHeight(java.util.Random,int)">getHeight</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random,
-int&nbsp;trunkHeight)</code></th>
+<td class="colFirst"><code>protected void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#generate(net.minecraft.world.ModifiableTestableWorld,java.util.Random,net.minecraft.world.gen.feature.TreeFeatureConfig,net.minecraft.util.math.BlockPos,int,java.util.Set,int,boolean,net.minecraft.util.math.BlockBox)">generate</a></span>&#8203;(<a href="../../ModifiableTestableWorld.html" title="interface in net.minecraft.world">ModifiableTestableWorld</a>&nbsp;world,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random,
+<a href="../feature/TreeFeatureConfig.html" title="class in net.minecraft.world.gen.feature">TreeFeatureConfig</a>&nbsp;config,
+<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
+int&nbsp;baseHeight,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;&nbsp;set,
+int&nbsp;int2,
+boolean&nbsp;giantTrunk,
+<a href="../../../util/math/BlockBox.html" title="class in net.minecraft.util.math">BlockBox</a>&nbsp;blockBox)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i3">
 <td class="colFirst"><code>abstract int</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getRadius(java.util.Random,int,net.minecraft.world.gen.feature.BranchedTreeFeatureConfig)">getRadius</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random,
-int&nbsp;baseHeight,
-<a href="../feature/BranchedTreeFeatureConfig.html" title="class in net.minecraft.world.gen.feature">BranchedTreeFeatureConfig</a>&nbsp;config)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getHeight(java.util.Random,int,net.minecraft.world.gen.feature.TreeFeatureConfig)">getHeight</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random,
+int&nbsp;trunkHeight,
+<a href="../feature/TreeFeatureConfig.html" title="class in net.minecraft.world.gen.feature">TreeFeatureConfig</a>&nbsp;config)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i4">
-<td class="colFirst"><code>abstract int</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getRadiusForPlacement(int,int,int)">getRadiusForPlacement</a></span>&#8203;(int&nbsp;trunkHeight,
-int&nbsp;baseHeight,
-int&nbsp;radius)</code></th>
-<td class="colLast">
-<div class="block">This method is used to ensure that a tree can place foliage when it generates.</div>
-</td>
+<td class="colFirst"><code>int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getRadius(java.util.Random,int)">getRadius</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random,
+int&nbsp;baseHeight)</code></th>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i5">
 <td class="colFirst"><code>protected abstract boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isInvalidForLeaves(java.util.Random,int,int,int,int,int)">isInvalidForLeaves</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isInvalidForLeaves(java.util.Random,int,int,int,int,boolean)">isInvalidForLeaves</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random,
 int&nbsp;baseHeight,
 int&nbsp;dx,
 int&nbsp;dy,
 int&nbsp;dz,
-int&nbsp;radius)</code></th>
+boolean&nbsp;bool)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i6">
-<td class="colFirst"><code>protected void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#placeLeaves(net.minecraft.world.ModifiableTestableWorld,java.util.Random,net.minecraft.util.math.BlockPos,net.minecraft.world.gen.feature.BranchedTreeFeatureConfig,java.util.Set)">placeLeaves</a></span>&#8203;(<a href="../../ModifiableTestableWorld.html" title="interface in net.minecraft.world">ModifiableTestableWorld</a>&nbsp;world,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random,
-<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
-<a href="../feature/BranchedTreeFeatureConfig.html" title="class in net.minecraft.world.gen.feature">BranchedTreeFeatureConfig</a>&nbsp;config,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;&nbsp;leaves)</code></th>
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_27386(java.util.Random)">method_27386</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i7">
-<td class="colFirst"><code>&lt;T&gt;&nbsp;T</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#serialize(com.mojang.datafixers.types.DynamicOps)">serialize</a></span>&#8203;(com.mojang.datafixers.types.DynamicOps&lt;T&gt;&nbsp;ops)</code></th>
+<td class="colFirst"><code>protected boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_27387(java.util.Random,int,int,int,int,boolean)">method_27387</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random,
+int&nbsp;int2,
+int&nbsp;int3,
+int&nbsp;int4,
+int&nbsp;int5,
+boolean&nbsp;bool)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i8">
+<td class="colFirst"><code>protected abstract <a href="FoliagePlacerType.html" title="class in net.minecraft.world.gen.foliage">FoliagePlacerType</a>&lt;?&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_28843()">method_28843</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i9">
+<td class="colFirst"><code>protected static &lt;P extends <a href="FoliagePlacer.html" title="class in net.minecraft.world.gen.foliage">FoliagePlacer</a>&gt;<br>com.mojang.datafixers.Products.P4&lt;com.mojang.serialization.codecs.RecordCodecBuilder.Mu&lt;P&gt;,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang" class="externalLink">Integer</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang" class="externalLink">Integer</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang" class="externalLink">Integer</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang" class="externalLink">Integer</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_28846(com.mojang.serialization.codecs.RecordCodecBuilder.Instance)">method_28846</a></span>&#8203;(com.mojang.serialization.codecs.RecordCodecBuilder.Instance&lt;P&gt;&nbsp;instance)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -295,6 +336,12 @@ int&nbsp;radius)</code></th>
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
+<h3><a id="field_24931">field_24931</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType">com.mojang.serialization.Codec&lt;<a href="FoliagePlacer.html" title="class in net.minecraft.world.gen.foliage">FoliagePlacer</a>&gt;</span>&nbsp;<span class="memberName">field_24931</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="radius">radius</a></h3>
 <div class="memberSignature"><span class="modifiers">protected final</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">radius</span></div>
 </section>
@@ -317,12 +364,6 @@ int&nbsp;radius)</code></th>
 <div class="memberSignature"><span class="modifiers">protected final</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">randomOffset</span></div>
 </section>
 </li>
-<li class="blockList">
-<section class="detail">
-<h3><a id="type">type</a></h3>
-<div class="memberSignature"><span class="modifiers">protected final</span>&nbsp;<span class="returnType"><a href="FoliagePlacerType.html" title="class in net.minecraft.world.gen.foliage">FoliagePlacerType</a>&lt;?&gt;</span>&nbsp;<span class="memberName">type</span></div>
-</section>
-</li>
 </ul>
 </section>
 </li>
@@ -335,12 +376,11 @@ int&nbsp;radius)</code></th>
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="&lt;init&gt;(int,int,int,int,net.minecraft.world.gen.foliage.FoliagePlacerType)">FoliagePlacer</a></h3>
+<h3><a id="&lt;init&gt;(int,int,int,int)">FoliagePlacer</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">FoliagePlacer</span>&#8203;(<span class="arguments">int&nbsp;radius,
 int&nbsp;randomRadius,
 int&nbsp;offset,
-int&nbsp;randomOffset,
-<a href="FoliagePlacerType.html" title="class in net.minecraft.world.gen.foliage">FoliagePlacerType</a>&lt;?&gt;&nbsp;type)</span></div>
+int&nbsp;randomOffset)</span></div>
 </section>
 </li>
 </ul>
@@ -355,92 +395,102 @@ int&nbsp;randomOffset,
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="generate(net.minecraft.world.ModifiableTestableWorld,java.util.Random,net.minecraft.world.gen.feature.BranchedTreeFeatureConfig,int,net.minecraft.util.math.BlockPos,int,int,java.util.Set)">generate</a></h3>
-<div class="memberSignature"><span class="modifiers">public abstract</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">generate</span>&#8203;(<span class="arguments"><a href="../../ModifiableTestableWorld.html" title="interface in net.minecraft.world">ModifiableTestableWorld</a>&nbsp;world,
+<h3><a id="method_28846(com.mojang.serialization.codecs.RecordCodecBuilder.Instance)">method_28846</a></h3>
+<div class="memberSignature"><span class="modifiers">protected static</span>&nbsp;<span class="typeParameters">&lt;P extends <a href="FoliagePlacer.html" title="class in net.minecraft.world.gen.foliage">FoliagePlacer</a>&gt;</span>
+<span class="returnType">com.mojang.datafixers.Products.P4&lt;com.mojang.serialization.codecs.RecordCodecBuilder.Mu&lt;P&gt;,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang" class="externalLink">Integer</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang" class="externalLink">Integer</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang" class="externalLink">Integer</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang" class="externalLink">Integer</a>&gt;</span>&nbsp;<span class="memberName">method_28846</span>&#8203;(<span class="arguments">com.mojang.serialization.codecs.RecordCodecBuilder.Instance&lt;P&gt;&nbsp;instance)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="method_28843()">method_28843</a></h3>
+<div class="memberSignature"><span class="modifiers">protected abstract</span>&nbsp;<span class="returnType"><a href="FoliagePlacerType.html" title="class in net.minecraft.world.gen.foliage">FoliagePlacerType</a>&lt;?&gt;</span>&nbsp;<span class="memberName">method_28843</span>()</div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="generate(net.minecraft.world.ModifiableTestableWorld,java.util.Random,net.minecraft.world.gen.feature.TreeFeatureConfig,int,net.minecraft.world.gen.foliage.FoliagePlacer.TreeNode,int,int,java.util.Set,net.minecraft.util.math.BlockBox)">generate</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">generate</span>&#8203;(<span class="arguments"><a href="../../ModifiableTestableWorld.html" title="interface in net.minecraft.world">ModifiableTestableWorld</a>&nbsp;world,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random,
-<a href="../feature/BranchedTreeFeatureConfig.html" title="class in net.minecraft.world.gen.feature">BranchedTreeFeatureConfig</a>&nbsp;config,
+<a href="../feature/TreeFeatureConfig.html" title="class in net.minecraft.world.gen.feature">TreeFeatureConfig</a>&nbsp;config,
 int&nbsp;trunkHeight,
-<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<a href="FoliagePlacer.TreeNode.html" title="class in net.minecraft.world.gen.foliage">FoliagePlacer.TreeNode</a>&nbsp;treeNode,
 int&nbsp;foliageHeight,
 int&nbsp;radius,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;&nbsp;leaves)</span></div>
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;&nbsp;leaves,
+<a href="../../../util/math/BlockBox.html" title="class in net.minecraft.util.math">BlockBox</a>&nbsp;blockBox)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="generate(net.minecraft.world.ModifiableTestableWorld,java.util.Random,net.minecraft.world.gen.feature.TreeFeatureConfig,int,net.minecraft.world.gen.foliage.FoliagePlacer.TreeNode,int,int,java.util.Set,int,net.minecraft.util.math.BlockBox)">generate</a></h3>
+<div class="memberSignature"><span class="modifiers">protected abstract</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">generate</span>&#8203;(<span class="arguments"><a href="../../ModifiableTestableWorld.html" title="interface in net.minecraft.world">ModifiableTestableWorld</a>&nbsp;world,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random,
+<a href="../feature/TreeFeatureConfig.html" title="class in net.minecraft.world.gen.feature">TreeFeatureConfig</a>&nbsp;config,
+int&nbsp;trunkHeight,
+<a href="FoliagePlacer.TreeNode.html" title="class in net.minecraft.world.gen.foliage">FoliagePlacer.TreeNode</a>&nbsp;treeNode,
+int&nbsp;foliageHeight,
+int&nbsp;radius,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;&nbsp;leaves,
+int&nbsp;int2,
+<a href="../../../util/math/BlockBox.html" title="class in net.minecraft.util.math">BlockBox</a>&nbsp;blockBox)</span></div>
 <div class="block">This is the main method used to generate foliage.</div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="getHeight(java.util.Random,int)">getHeight</a></h3>
+<h3><a id="getHeight(java.util.Random,int,net.minecraft.world.gen.feature.TreeFeatureConfig)">getHeight</a></h3>
 <div class="memberSignature"><span class="modifiers">public abstract</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getHeight</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random,
-int&nbsp;trunkHeight)</span></div>
+int&nbsp;trunkHeight,
+<a href="../feature/TreeFeatureConfig.html" title="class in net.minecraft.world.gen.feature">TreeFeatureConfig</a>&nbsp;config)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="getRadius(java.util.Random,int,net.minecraft.world.gen.feature.BranchedTreeFeatureConfig)">getRadius</a></h3>
-<div class="memberSignature"><span class="modifiers">public abstract</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getRadius</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random,
-int&nbsp;baseHeight,
-<a href="../feature/BranchedTreeFeatureConfig.html" title="class in net.minecraft.world.gen.feature">BranchedTreeFeatureConfig</a>&nbsp;config)</span></div>
+<h3><a id="getRadius(java.util.Random,int)">getRadius</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getRadius</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random,
+int&nbsp;baseHeight)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="isInvalidForLeaves(java.util.Random,int,int,int,int,int)">isInvalidForLeaves</a></h3>
+<h3><a id="method_27386(java.util.Random)">method_27386</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">method_27386</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="isInvalidForLeaves(java.util.Random,int,int,int,int,boolean)">isInvalidForLeaves</a></h3>
 <div class="memberSignature"><span class="modifiers">protected abstract</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isInvalidForLeaves</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random,
 int&nbsp;baseHeight,
 int&nbsp;dx,
 int&nbsp;dy,
 int&nbsp;dz,
-int&nbsp;radius)</span></div>
+boolean&nbsp;bool)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="getRadiusForPlacement(int,int,int)">getRadiusForPlacement</a></h3>
-<div class="memberSignature"><span class="modifiers">public abstract</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getRadiusForPlacement</span>&#8203;(<span class="arguments">int&nbsp;trunkHeight,
-int&nbsp;baseHeight,
-int&nbsp;radius)</span></div>
-<div class="block">This method is used to ensure that a tree can place foliage when it generates.
-
- <p>It runs for every y-level of the tree being generated.</div>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>trunkHeight</code> - the height of the trunk</dd>
-<dd><code>baseHeight</code> - the height of the full tree</dd>
-<dd><code>radius</code> - the radius of the foliage</dd>
-</dl>
+<h3><a id="method_27387(java.util.Random,int,int,int,int,boolean)">method_27387</a></h3>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">method_27387</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random,
+int&nbsp;int2,
+int&nbsp;int3,
+int&nbsp;int4,
+int&nbsp;int5,
+boolean&nbsp;bool)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="generate(net.minecraft.world.ModifiableTestableWorld,java.util.Random,net.minecraft.world.gen.feature.BranchedTreeFeatureConfig,net.minecraft.util.math.BlockPos,int,int,int,java.util.Set)">generate</a></h3>
+<h3><a id="generate(net.minecraft.world.ModifiableTestableWorld,java.util.Random,net.minecraft.world.gen.feature.TreeFeatureConfig,net.minecraft.util.math.BlockPos,int,java.util.Set,int,boolean,net.minecraft.util.math.BlockBox)">generate</a></h3>
 <div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">generate</span>&#8203;(<span class="arguments"><a href="../../ModifiableTestableWorld.html" title="interface in net.minecraft.world">ModifiableTestableWorld</a>&nbsp;world,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random,
-<a href="../feature/BranchedTreeFeatureConfig.html" title="class in net.minecraft.world.gen.feature">BranchedTreeFeatureConfig</a>&nbsp;config,
-<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<a href="../feature/TreeFeatureConfig.html" title="class in net.minecraft.world.gen.feature">TreeFeatureConfig</a>&nbsp;config,
+<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
 int&nbsp;baseHeight,
-int&nbsp;y,
-int&nbsp;radius,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;&nbsp;leaves)</span></div>
-</section>
-</li>
-<li class="blockList">
-<section class="detail">
-<h3><a id="placeLeaves(net.minecraft.world.ModifiableTestableWorld,java.util.Random,net.minecraft.util.math.BlockPos,net.minecraft.world.gen.feature.BranchedTreeFeatureConfig,java.util.Set)">placeLeaves</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">placeLeaves</span>&#8203;(<span class="arguments"><a href="../../ModifiableTestableWorld.html" title="interface in net.minecraft.world">ModifiableTestableWorld</a>&nbsp;world,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random,
-<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
-<a href="../feature/BranchedTreeFeatureConfig.html" title="class in net.minecraft.world.gen.feature">BranchedTreeFeatureConfig</a>&nbsp;config,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;&nbsp;leaves)</span></div>
-</section>
-</li>
-<li class="blockList">
-<section class="detail">
-<h3><a id="serialize(com.mojang.datafixers.types.DynamicOps)">serialize</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="typeParameters">&lt;T&gt;</span>&nbsp;<span class="returnType">T</span>&nbsp;<span class="memberName">serialize</span>&#8203;(<span class="arguments">com.mojang.datafixers.types.DynamicOps&lt;T&gt;&nbsp;ops)</span></div>
-<dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../util/dynamic/DynamicSerializable.html#serialize(com.mojang.datafixers.types.DynamicOps)">serialize</a></code>&nbsp;in interface&nbsp;<code><a href="../../../util/dynamic/DynamicSerializable.html" title="interface in net.minecraft.util.dynamic">DynamicSerializable</a></code></dd>
-</dl>
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;&nbsp;set,
+int&nbsp;int2,
+boolean&nbsp;giantTrunk,
+<a href="../../../util/math/BlockBox.html" title="class in net.minecraft.util.math">BlockBox</a>&nbsp;blockBox)</span></div>
 </section>
 </li>
 </ul>
@@ -475,7 +525,7 @@ int&nbsp;radius,
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#nested.class.summary">Nested</a>&nbsp;|&nbsp;</li>
 <li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>

@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../../../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":10,"i1":6,"i2":10,"i3":6,"i4":6,"i5":6,"i6":10,"i7":10,"i8":6,"i9":6,"i10":10,"i11":10,"i12":10,"i13":10};
+<script type="text/javascript">var data = {"i0":10,"i1":6,"i2":10,"i3":10,"i4":6,"i5":6,"i6":6,"i7":10,"i8":10,"i9":6,"i10":6,"i11":10,"i12":10,"i13":10,"i14":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -62,7 +62,7 @@ loadScripts(document, 'script');</script>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
@@ -115,6 +115,45 @@ extends <a href="RecipeBookWidget.html" title="class in net.minecraft.client.gui
 <!--   -->
 </a>
 <h2>Field Summary</h2>
+<div class="memberSummary">
+<table>
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<thead>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colSecond" scope="col">Field</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../item/Item.html" title="class in net.minecraft.item">Item</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#currentItem">currentItem</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private float</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#frameTime">frameTime</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util" class="externalLink">Iterator</a>&lt;<a href="../../../../item/Item.html" title="class in net.minecraft.item">Item</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#fuelIterator">fuelIterator</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="../../../../item/Item.html" title="class in net.minecraft.item">Item</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#fuels">fuels</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../screen/slot/Slot.html" title="class in net.minecraft.screen.slot">Slot</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#outputSlot">outputSlot</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
 <div class="inheritedList">
 <h3>Fields inherited from class&nbsp;net.minecraft.client.gui.screen.recipebook.<a href="RecipeBookWidget.html" title="class in net.minecraft.client.gui.screen.recipebook">RecipeBookWidget</a></h3>
 <a id="fields.inherited.from.class.net.minecraft.client.gui.screen.recipebook.RecipeBookWidget">
@@ -172,10 +211,11 @@ extends <a href="RecipeBookWidget.html" title="class in net.minecraft.client.gui
 <tbody>
 <tr class="altColor" id="i0">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#drawGhostSlots(int,int,boolean,float)">drawGhostSlots</a></span>&#8203;(int&nbsp;left,
-int&nbsp;top,
-boolean&nbsp;isBig,
-float&nbsp;lastFrameDuration)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#drawGhostSlots(net.minecraft.client.util.math.MatrixStack,int,int,boolean,float)">drawGhostSlots</a></span>&#8203;(<a href="../../../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrixStack,
+int&nbsp;int2,
+int&nbsp;int3,
+boolean&nbsp;bool,
+float&nbsp;float2)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
@@ -184,62 +224,67 @@ float&nbsp;lastFrameDuration)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i2">
-<td class="colFirst"><code>protected <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
+<td class="colFirst"><code>protected <a href="../../../../text/Text.html" title="interface in net.minecraft.text">Text</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getCraftableButtonText()">getCraftableButtonText</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i3">
-<td class="colFirst"><code>protected abstract <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getToggleCraftableButtonText()">getToggleCraftableButtonText</a></span>()</code></th>
+<td class="colFirst"><code>private <a href="../../../../item/Item.html" title="class in net.minecraft.item">Item</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getItem()">getItem</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i4">
-<td class="colFirst"><code>protected abstract boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isFilteringCraftable()">isFilteringCraftable</a></span>()</code></th>
+<td class="colFirst"><code>protected abstract <a href="../../../../text/Text.html" title="interface in net.minecraft.text">Text</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getToggleCraftableButtonText()">getToggleCraftableButtonText</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i5">
 <td class="colFirst"><code>protected abstract boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isGuiOpen()">isGuiOpen</a></span>()</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isFilteringCraftable()">isFilteringCraftable</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i6">
+<td class="colFirst"><code>protected abstract boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isGuiOpen()">isGuiOpen</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i7">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isOpen()">isOpen</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i7">
+<tr class="altColor" id="i8">
 <td class="colFirst"><code>protected void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setBookButtonTexture()">setBookButtonTexture</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i8">
+<tr class="rowColor" id="i9">
 <td class="colFirst"><code>protected abstract void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setFilteringCraftable(boolean)">setFilteringCraftable</a></span>&#8203;(boolean&nbsp;filteringCraftable)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i9">
+<tr class="altColor" id="i10">
 <td class="colFirst"><code>protected abstract void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setGuiOpen(boolean)">setGuiOpen</a></span>&#8203;(boolean&nbsp;opened)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i10">
+<tr class="rowColor" id="i11">
 <td class="colFirst"><code>protected void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setOpen(boolean)">setOpen</a></span>&#8203;(boolean&nbsp;opened)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i11">
+<tr class="altColor" id="i12">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#showGhostRecipe(net.minecraft.recipe.Recipe,java.util.List)">showGhostRecipe</a></span>&#8203;(<a href="../../../../recipe/Recipe.html" title="interface in net.minecraft.recipe">Recipe</a>&lt;?&gt;&nbsp;recipe,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../../../../screen/slot/Slot.html" title="class in net.minecraft.screen.slot">Slot</a>&gt;&nbsp;slots)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i12">
+<tr class="rowColor" id="i13">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#slotClicked(net.minecraft.screen.slot.Slot)">slotClicked</a></span>&#8203;(<a href="../../../../screen/slot/Slot.html" title="class in net.minecraft.screen.slot">Slot</a>&nbsp;slot)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i13">
+<tr class="altColor" id="i14">
 <td class="colFirst"><code>protected boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#toggleFilteringCraftable()">toggleFilteringCraftable</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
@@ -252,12 +297,12 @@ float&nbsp;lastFrameDuration)</code></th>
 <h3>Methods inherited from class&nbsp;net.minecraft.client.gui.screen.recipebook.<a href="RecipeBookWidget.html" title="class in net.minecraft.client.gui.screen.recipebook">RecipeBookWidget</a></h3>
 <a id="methods.inherited.from.class.net.minecraft.client.gui.screen.recipebook.RecipeBookWidget">
 <!--   -->
-</a><code><a href="RecipeBookWidget.html#acceptAlignedInput(java.util.Iterator,int,int,int,int)">acceptAlignedInput</a>, <a href="RecipeBookWidget.html#changeFocus(boolean)">changeFocus</a>, <a href="RecipeBookWidget.html#charTyped(char,int)">charTyped</a>, <a href="RecipeBookWidget.html#close()">close</a>, <a href="RecipeBookWidget.html#drawTooltip(int,int,int,int)">drawTooltip</a>, <a href="RecipeBookWidget.html#findLeftEdge(boolean,int,int)">findLeftEdge</a>, <a href="RecipeBookWidget.html#initialize(int,int,net.minecraft.client.MinecraftClient,boolean,net.minecraft.screen.AbstractRecipeScreenHandler)">initialize</a>, <a href="RecipeBookWidget.html#isClickOutsideBounds(double,double,int,int,int,int,int)">isClickOutsideBounds</a>, <a href="RecipeBookWidget.html#isMouseOver(double,double)">isMouseOver</a>, <a href="RecipeBookWidget.html#keyPressed(int,int,int)">keyPressed</a>, <a href="RecipeBookWidget.html#keyReleased(int,int,int)">keyReleased</a>, <a href="RecipeBookWidget.html#mouseClicked(double,double,int)">mouseClicked</a>, <a href="RecipeBookWidget.html#onRecipesDisplayed(java.util.List)">onRecipesDisplayed</a>, <a href="RecipeBookWidget.html#refresh()">refresh</a>, <a href="RecipeBookWidget.html#render(int,int,float)">render</a>, <a href="RecipeBookWidget.html#reset(boolean)">reset</a>, <a href="RecipeBookWidget.html#sendBookDataPacket()">sendBookDataPacket</a>, <a href="RecipeBookWidget.html#toggleOpen()">toggleOpen</a>, <a href="RecipeBookWidget.html#update()">update</a></code></div>
+</a><code><a href="RecipeBookWidget.html#acceptAlignedInput(java.util.Iterator,int,int,int,int)">acceptAlignedInput</a>, <a href="RecipeBookWidget.html#changeFocus(boolean)">changeFocus</a>, <a href="RecipeBookWidget.html#charTyped(char,int)">charTyped</a>, <a href="RecipeBookWidget.html#close()">close</a>, <a href="RecipeBookWidget.html#drawTooltip(net.minecraft.client.util.math.MatrixStack,int,int,int,int)">drawTooltip</a>, <a href="RecipeBookWidget.html#findLeftEdge(boolean,int,int)">findLeftEdge</a>, <a href="RecipeBookWidget.html#initialize(int,int,net.minecraft.client.MinecraftClient,boolean,net.minecraft.screen.AbstractRecipeScreenHandler)">initialize</a>, <a href="RecipeBookWidget.html#isClickOutsideBounds(double,double,int,int,int,int,int)">isClickOutsideBounds</a>, <a href="RecipeBookWidget.html#isMouseOver(double,double)">isMouseOver</a>, <a href="RecipeBookWidget.html#keyPressed(int,int,int)">keyPressed</a>, <a href="RecipeBookWidget.html#keyReleased(int,int,int)">keyReleased</a>, <a href="RecipeBookWidget.html#mouseClicked(double,double,int)">mouseClicked</a>, <a href="RecipeBookWidget.html#onRecipesDisplayed(java.util.List)">onRecipesDisplayed</a>, <a href="RecipeBookWidget.html#refresh()">refresh</a>, <a href="RecipeBookWidget.html#render(net.minecraft.client.util.math.MatrixStack,int,int,float)">render</a>, <a href="RecipeBookWidget.html#reset(boolean)">reset</a>, <a href="RecipeBookWidget.html#sendBookDataPacket()">sendBookDataPacket</a>, <a href="RecipeBookWidget.html#toggleOpen()">toggleOpen</a>, <a href="RecipeBookWidget.html#update()">update</a></code></div>
 <div class="inheritedList">
 <h3>Methods inherited from class&nbsp;net.minecraft.client.gui.<a href="../../DrawableHelper.html" title="class in net.minecraft.client.gui">DrawableHelper</a></h3>
 <a id="methods.inherited.from.class.net.minecraft.client.gui.DrawableHelper">
 <!--   -->
-</a><code><a href="../../DrawableHelper.html#drawCenteredString(net.minecraft.client.font.TextRenderer,java.lang.String,int,int,int)">drawCenteredString</a>, <a href="../../DrawableHelper.html#drawHorizontalLine(int,int,int,int)">drawHorizontalLine</a>, <a href="../../DrawableHelper.html#drawSprite(int,int,int,int,int,net.minecraft.client.texture.Sprite)">drawSprite</a>, <a href="../../DrawableHelper.html#drawString(net.minecraft.client.font.TextRenderer,java.lang.String,int,int,int)">drawString</a>, <a href="../../DrawableHelper.html#drawTexture(int,int,float,float,int,int,int,int)">drawTexture</a>, <a href="../../DrawableHelper.html#drawTexture(int,int,int,float,float,int,int,int,int)">drawTexture</a>, <a href="../../DrawableHelper.html#drawTexture(int,int,int,int,float,float,int,int,int,int)">drawTexture</a>, <a href="../../DrawableHelper.html#drawTexture(int,int,int,int,int,int)">drawTexture</a>, <a href="../../DrawableHelper.html#drawTexturedQuad(int,int,int,int,int,float,float,float,float)">drawTexturedQuad</a>, <a href="../../DrawableHelper.html#drawVerticalLine(int,int,int,int)">drawVerticalLine</a>, <a href="../../DrawableHelper.html#fill(int,int,int,int,int)">fill</a>, <a href="../../DrawableHelper.html#fill(net.minecraft.util.math.Matrix4f,int,int,int,int,int)">fill</a>, <a href="../../DrawableHelper.html#fillGradient(int,int,int,int,int,int)">fillGradient</a>, <a href="../../DrawableHelper.html#getZOffset()">getZOffset</a>, <a href="../../DrawableHelper.html#setZOffset(int)">setZOffset</a></code></div>
+</a><code><a href="../../DrawableHelper.html#drawCenteredString(net.minecraft.client.util.math.MatrixStack,net.minecraft.client.font.TextRenderer,java.lang.String,int,int,int)">drawCenteredString</a>, <a href="../../DrawableHelper.html#drawCenteredText(net.minecraft.client.util.math.MatrixStack,net.minecraft.client.font.TextRenderer,net.minecraft.text.StringRenderable,int,int,int)">drawCenteredText</a>, <a href="../../DrawableHelper.html#drawHorizontalLine(net.minecraft.client.util.math.MatrixStack,int,int,int,int)">drawHorizontalLine</a>, <a href="../../DrawableHelper.html#drawSprite(net.minecraft.client.util.math.MatrixStack,int,int,int,int,int,net.minecraft.client.texture.Sprite)">drawSprite</a>, <a href="../../DrawableHelper.html#drawStringWithShadow(net.minecraft.client.util.math.MatrixStack,net.minecraft.client.font.TextRenderer,java.lang.String,int,int,int)">drawStringWithShadow</a>, <a href="../../DrawableHelper.html#drawTexture(net.minecraft.client.util.math.MatrixStack,int,int,float,float,int,int,int,int)">drawTexture</a>, <a href="../../DrawableHelper.html#drawTexture(net.minecraft.client.util.math.MatrixStack,int,int,int,float,float,int,int,int,int)">drawTexture</a>, <a href="../../DrawableHelper.html#drawTexture(net.minecraft.client.util.math.MatrixStack,int,int,int,int,float,float,int,int,int,int)">drawTexture</a>, <a href="../../DrawableHelper.html#drawTexture(net.minecraft.client.util.math.MatrixStack,int,int,int,int,int,int)">drawTexture</a>, <a href="../../DrawableHelper.html#drawTextWithShadow(net.minecraft.client.util.math.MatrixStack,net.minecraft.client.font.TextRenderer,net.minecraft.text.StringRenderable,int,int,int)">drawTextWithShadow</a>, <a href="../../DrawableHelper.html#drawVerticalLine(net.minecraft.client.util.math.MatrixStack,int,int,int,int)">drawVerticalLine</a>, <a href="../../DrawableHelper.html#fill(net.minecraft.client.util.math.MatrixStack,int,int,int,int,int)">fill</a>, <a href="../../DrawableHelper.html#fillGradient(net.minecraft.client.util.math.MatrixStack,int,int,int,int,int,int)">fillGradient</a>, <a href="../../DrawableHelper.html#fillGradient(net.minecraft.util.math.Matrix4f,net.minecraft.client.render.BufferBuilder,int,int,int,int,int,int,int)">fillGradient</a>, <a href="../../DrawableHelper.html#getZOffset()">getZOffset</a>, <a href="../../DrawableHelper.html#method_29343(int,int,java.util.function.BiConsumer)">method_29343</a>, <a href="../../DrawableHelper.html#setZOffset(int)">setZOffset</a></code></div>
 <div class="inheritedList">
 <h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></h3>
 <a id="methods.inherited.from.class.java.lang.Object">
@@ -279,6 +324,46 @@ float&nbsp;lastFrameDuration)</code></th>
 </section>
 <section class="details">
 <ul class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<li class="blockList">
+<section class="fieldDetails"><a id="field.detail">
+<!--   -->
+</a>
+<h2>Field Details</h2>
+<ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="fuelIterator">fuelIterator</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util" class="externalLink">Iterator</a>&lt;<a href="../../../../item/Item.html" title="class in net.minecraft.item">Item</a>&gt;</span>&nbsp;<span class="memberName">fuelIterator</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="fuels">fuels</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="../../../../item/Item.html" title="class in net.minecraft.item">Item</a>&gt;</span>&nbsp;<span class="memberName">fuels</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="outputSlot">outputSlot</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="../../../../screen/slot/Slot.html" title="class in net.minecraft.screen.slot">Slot</a></span>&nbsp;<span class="memberName">outputSlot</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="currentItem">currentItem</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="../../../../item/Item.html" title="class in net.minecraft.item">Item</a></span>&nbsp;<span class="memberName">currentItem</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="frameTime">frameTime</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">float</span>&nbsp;<span class="memberName">frameTime</span></div>
+</section>
+</li>
+</ul>
+</section>
+</li>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <li class="blockList">
 <section class="constructorDetails"><a id="constructor.detail">
@@ -369,7 +454,7 @@ float&nbsp;lastFrameDuration)</code></th>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getCraftableButtonText()">getCraftableButtonText</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></span>&nbsp;<span class="memberName">getCraftableButtonText</span>()</div>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType"><a href="../../../../text/Text.html" title="interface in net.minecraft.text">Text</a></span>&nbsp;<span class="memberName">getCraftableButtonText</span>()</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="RecipeBookWidget.html#getCraftableButtonText()">getCraftableButtonText</a></code>&nbsp;in class&nbsp;<code><a href="RecipeBookWidget.html" title="class in net.minecraft.client.gui.screen.recipebook">RecipeBookWidget</a></code></dd>
@@ -379,13 +464,13 @@ float&nbsp;lastFrameDuration)</code></th>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getToggleCraftableButtonText()">getToggleCraftableButtonText</a></h3>
-<div class="memberSignature"><span class="modifiers">protected abstract</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></span>&nbsp;<span class="memberName">getToggleCraftableButtonText</span>()</div>
+<div class="memberSignature"><span class="modifiers">protected abstract</span>&nbsp;<span class="returnType"><a href="../../../../text/Text.html" title="interface in net.minecraft.text">Text</a></span>&nbsp;<span class="memberName">getToggleCraftableButtonText</span>()</div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="slotClicked(net.minecraft.screen.slot.Slot)">slotClicked</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">slotClicked</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">slotClicked</span>&#8203;(<span class="arguments"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 <a href="../../../../screen/slot/Slot.html" title="class in net.minecraft.screen.slot">Slot</a>&nbsp;slot)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
@@ -412,15 +497,22 @@ float&nbsp;lastFrameDuration)</code></th>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="drawGhostSlots(int,int,boolean,float)">drawGhostSlots</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">drawGhostSlots</span>&#8203;(<span class="arguments">int&nbsp;left,
-int&nbsp;top,
-boolean&nbsp;isBig,
-float&nbsp;lastFrameDuration)</span></div>
+<h3><a id="drawGhostSlots(net.minecraft.client.util.math.MatrixStack,int,int,boolean,float)">drawGhostSlots</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">drawGhostSlots</span>&#8203;(<span class="arguments"><a href="../../../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrixStack,
+int&nbsp;int2,
+int&nbsp;int3,
+boolean&nbsp;bool,
+float&nbsp;float2)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code><a href="RecipeBookWidget.html#drawGhostSlots(int,int,boolean,float)">drawGhostSlots</a></code>&nbsp;in class&nbsp;<code><a href="RecipeBookWidget.html" title="class in net.minecraft.client.gui.screen.recipebook">RecipeBookWidget</a></code></dd>
+<dd><code><a href="RecipeBookWidget.html#drawGhostSlots(net.minecraft.client.util.math.MatrixStack,int,int,boolean,float)">drawGhostSlots</a></code>&nbsp;in class&nbsp;<code><a href="RecipeBookWidget.html" title="class in net.minecraft.client.gui.screen.recipebook">RecipeBookWidget</a></code></dd>
 </dl>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="getItem()">getItem</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="../../../../item/Item.html" title="class in net.minecraft.item">Item</a></span>&nbsp;<span class="memberName">getItem</span>()</div>
 </section>
 </li>
 </ul>
@@ -462,7 +554,7 @@ float&nbsp;lastFrameDuration)</span></div>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>

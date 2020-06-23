@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":9,"i3":9,"i4":10,"i5":9,"i6":10,"i7":10};
+<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":9,"i3":9,"i4":10,"i5":9,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -56,13 +56,13 @@ loadScripts(document, 'script');</script>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested.class.summary">Nested</a>&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
@@ -126,6 +126,48 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/AutoClos
 <tr class="rowColor">
 <td class="colFirst"><code>static class&nbsp;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="ChunkTaskPrioritySystem.Task.html" title="class in net.minecraft.server.world">ChunkTaskPrioritySystem.Task</a>&lt;<a href="ChunkTaskPrioritySystem.Task.html" title="type parameter in ChunkTaskPrioritySystem.Task">T</a>&gt;</span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</li>
+<!-- =========== FIELD SUMMARY =========== -->
+<li class="blockList">
+<section class="fieldSummary"><a id="field.summary">
+<!--   -->
+</a>
+<h2>Field Summary</h2>
+<div class="memberSummary">
+<table>
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<thead>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colSecond" scope="col">Field</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="../../util/thread/MessageListener.html" title="interface in net.minecraft.util.thread">MessageListener</a>&lt;?&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#actors">actors</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static <a href="https://logging.apache.org/log4j/2.x/log4j-api/apidocs/org/apache/logging/log4j/Logger.html?is-external=true" title="class or interface in org.apache.logging.log4j" class="externalLink">Logger</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#LOGGER">LOGGER</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util" class="externalLink">Map</a>&lt;<a href="../../util/thread/MessageListener.html" title="interface in net.minecraft.util.thread">MessageListener</a>&lt;?&gt;,&#8203;<a href="LevelPrioritizedQueue.html" title="class in net.minecraft.server.world">LevelPrioritizedQueue</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;<a href="../../util/thread/MessageListener.html" title="interface in net.minecraft.util.thread">MessageListener</a>&lt;<a href="../../util/Unit.html" title="enum in net.minecraft.util">Unit</a>&gt;,&#8203;?&gt;&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#queues">queues</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../util/thread/TaskExecutor.html" title="class in net.minecraft.util.thread">TaskExecutor</a>&lt;<a href="../../util/thread/TaskQueue.PrioritizedTask.html" title="class in net.minecraft.util.thread">TaskQueue.PrioritizedTask</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#sorter">sorter</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -215,11 +257,39 @@ boolean&nbsp;bool)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i6">
+<td class="colFirst"><code>private &lt;T&gt;&nbsp;void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#execute(net.minecraft.util.thread.MessageListener,java.util.function.Function,long,java.util.function.IntSupplier,boolean)">execute</a></span>&#8203;(<a href="../../util/thread/MessageListener.html" title="interface in net.minecraft.util.thread">MessageListener</a>&lt;T&gt;&nbsp;actor,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;<a href="../../util/thread/MessageListener.html" title="interface in net.minecraft.util.thread">MessageListener</a>&lt;<a href="../../util/Unit.html" title="enum in net.minecraft.util">Unit</a>&gt;,&#8203;T&gt;&nbsp;function,
+long&nbsp;long2,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/IntSupplier.html?is-external=true" title="class or interface in java.util.function" class="externalLink">IntSupplier</a>&nbsp;lastLevelUpdatedToProvider,
+boolean&nbsp;bool)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i7">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getDebugString()">getDebugString</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i7">
+<tr class="altColor" id="i8">
+<td class="colFirst"><code>private &lt;T&gt;&nbsp;<a href="LevelPrioritizedQueue.html" title="class in net.minecraft.server.world">LevelPrioritizedQueue</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;<a href="../../util/thread/MessageListener.html" title="interface in net.minecraft.util.thread">MessageListener</a>&lt;<a href="../../util/Unit.html" title="enum in net.minecraft.util">Unit</a>&gt;,&#8203;T&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getQueue(net.minecraft.util.thread.MessageListener)">getQueue</a></span>&#8203;(<a href="../../util/thread/MessageListener.html" title="interface in net.minecraft.util.thread">MessageListener</a>&lt;T&gt;&nbsp;actor)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i9">
+<td class="colFirst"><code>private &lt;T&gt;&nbsp;void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_17630(net.minecraft.server.world.LevelPrioritizedQueue,net.minecraft.util.thread.MessageListener)">method_17630</a></span>&#8203;(<a href="LevelPrioritizedQueue.html" title="class in net.minecraft.server.world">LevelPrioritizedQueue</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;<a href="../../util/thread/MessageListener.html" title="interface in net.minecraft.util.thread">MessageListener</a>&lt;<a href="../../util/Unit.html" title="enum in net.minecraft.util">Unit</a>&gt;,&#8203;T&gt;&gt;&nbsp;levelPrioritizedQueue,
+<a href="../../util/thread/MessageListener.html" title="interface in net.minecraft.util.thread">MessageListener</a>&lt;T&gt;&nbsp;actor)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i10">
+<td class="colFirst"><code>private &lt;T&gt;&nbsp;void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#sort(net.minecraft.util.thread.MessageListener,long,java.lang.Runnable,boolean)">sort</a></span>&#8203;(<a href="../../util/thread/MessageListener.html" title="interface in net.minecraft.util.thread">MessageListener</a>&lt;T&gt;&nbsp;messageListener,
+long&nbsp;long2,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang" class="externalLink">Runnable</a>&nbsp;runnable,
+boolean&nbsp;bool)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i11">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#updateLevel(net.minecraft.util.math.ChunkPos,java.util.function.IntSupplier,int,java.util.function.IntConsumer)">updateLevel</a></span>&#8203;(<a href="../../util/math/ChunkPos.html" title="class in net.minecraft.util.math">ChunkPos</a>&nbsp;pos,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/IntSupplier.html?is-external=true" title="class or interface in java.util.function" class="externalLink">IntSupplier</a>&nbsp;levelGetter,
@@ -242,6 +312,40 @@ int&nbsp;targetLevel,
 </section>
 <section class="details">
 <ul class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<li class="blockList">
+<section class="fieldDetails"><a id="field.detail">
+<!--   -->
+</a>
+<h2>Field Details</h2>
+<ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="LOGGER">LOGGER</a></h3>
+<div class="memberSignature"><span class="modifiers">private static final</span>&nbsp;<span class="returnType"><a href="https://logging.apache.org/log4j/2.x/log4j-api/apidocs/org/apache/logging/log4j/Logger.html?is-external=true" title="class or interface in org.apache.logging.log4j" class="externalLink">Logger</a></span>&nbsp;<span class="memberName">LOGGER</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="queues">queues</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util" class="externalLink">Map</a>&lt;<a href="../../util/thread/MessageListener.html" title="interface in net.minecraft.util.thread">MessageListener</a>&lt;?&gt;,&#8203;<a href="LevelPrioritizedQueue.html" title="class in net.minecraft.server.world">LevelPrioritizedQueue</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;<a href="../../util/thread/MessageListener.html" title="interface in net.minecraft.util.thread">MessageListener</a>&lt;<a href="../../util/Unit.html" title="enum in net.minecraft.util">Unit</a>&gt;,&#8203;?&gt;&gt;&gt;</span>&nbsp;<span class="memberName">queues</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="actors">actors</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="../../util/thread/MessageListener.html" title="interface in net.minecraft.util.thread">MessageListener</a>&lt;?&gt;&gt;</span>&nbsp;<span class="memberName">actors</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="sorter">sorter</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../../util/thread/TaskExecutor.html" title="class in net.minecraft.util.thread">TaskExecutor</a>&lt;<a href="../../util/thread/TaskQueue.PrioritizedTask.html" title="class in net.minecraft.util.thread">TaskQueue.PrioritizedTask</a>&gt;</span>&nbsp;<span class="memberName">sorter</span></div>
+</section>
+</li>
+</ul>
+</section>
+</li>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <li class="blockList">
 <section class="constructorDetails"><a id="constructor.detail">
@@ -319,6 +423,39 @@ int&nbsp;targetLevel,
 </li>
 <li class="blockList">
 <section class="detail">
+<h3><a id="sort(net.minecraft.util.thread.MessageListener,long,java.lang.Runnable,boolean)">sort</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="typeParameters">&lt;T&gt;</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">sort</span>&#8203;(<span class="arguments"><a href="../../util/thread/MessageListener.html" title="interface in net.minecraft.util.thread">MessageListener</a>&lt;T&gt;&nbsp;messageListener,
+long&nbsp;long2,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang" class="externalLink">Runnable</a>&nbsp;runnable,
+boolean&nbsp;bool)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="execute(net.minecraft.util.thread.MessageListener,java.util.function.Function,long,java.util.function.IntSupplier,boolean)">execute</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="typeParameters">&lt;T&gt;</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">execute</span>&#8203;(<span class="arguments"><a href="../../util/thread/MessageListener.html" title="interface in net.minecraft.util.thread">MessageListener</a>&lt;T&gt;&nbsp;actor,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;<a href="../../util/thread/MessageListener.html" title="interface in net.minecraft.util.thread">MessageListener</a>&lt;<a href="../../util/Unit.html" title="enum in net.minecraft.util">Unit</a>&gt;,&#8203;T&gt;&nbsp;function,
+long&nbsp;long2,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/IntSupplier.html?is-external=true" title="class or interface in java.util.function" class="externalLink">IntSupplier</a>&nbsp;lastLevelUpdatedToProvider,
+boolean&nbsp;bool)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="method_17630(net.minecraft.server.world.LevelPrioritizedQueue,net.minecraft.util.thread.MessageListener)">method_17630</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="typeParameters">&lt;T&gt;</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">method_17630</span>&#8203;(<span class="arguments"><a href="LevelPrioritizedQueue.html" title="class in net.minecraft.server.world">LevelPrioritizedQueue</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;<a href="../../util/thread/MessageListener.html" title="interface in net.minecraft.util.thread">MessageListener</a>&lt;<a href="../../util/Unit.html" title="enum in net.minecraft.util">Unit</a>&gt;,&#8203;T&gt;&gt;&nbsp;levelPrioritizedQueue,
+<a href="../../util/thread/MessageListener.html" title="interface in net.minecraft.util.thread">MessageListener</a>&lt;T&gt;&nbsp;actor)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="getQueue(net.minecraft.util.thread.MessageListener)">getQueue</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="typeParameters">&lt;T&gt;</span>
+<span class="returnType"><a href="LevelPrioritizedQueue.html" title="class in net.minecraft.server.world">LevelPrioritizedQueue</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;<a href="../../util/thread/MessageListener.html" title="interface in net.minecraft.util.thread">MessageListener</a>&lt;<a href="../../util/Unit.html" title="enum in net.minecraft.util">Unit</a>&gt;,&#8203;T&gt;&gt;</span>&nbsp;<span class="memberName">getQueue</span>&#8203;(<span class="arguments"><a href="../../util/thread/MessageListener.html" title="interface in net.minecraft.util.thread">MessageListener</a>&lt;T&gt;&nbsp;actor)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="getDebugString()">getDebugString</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></span>&nbsp;<span class="memberName">getDebugString</span>()</div>
 </section>
@@ -366,13 +503,13 @@ int&nbsp;targetLevel,
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested.class.summary">Nested</a>&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>

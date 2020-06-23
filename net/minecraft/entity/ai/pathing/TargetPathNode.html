@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":9,"i1":10,"i2":10,"i3":10,"i4":10};
+<script type="text/javascript">var data = {"i0":9,"i1":10,"i2":10,"i3":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -62,7 +62,7 @@ loadScripts(document, 'script');</script>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
@@ -104,6 +104,35 @@ extends <a href="PathNode.html" title="class in net.minecraft.entity.ai.pathing"
 <!--   -->
 </a>
 <h2>Field Summary</h2>
+<div class="memberSummary">
+<table>
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<thead>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colSecond" scope="col">Field</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="PathNode.html" title="class in net.minecraft.entity.ai.pathing">PathNode</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#nearestNode">nearestNode</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private float</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#nearestNodeDistance">nearestNodeDistance</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#reached">reached</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
 <div class="inheritedList">
 <h3>Fields inherited from class&nbsp;net.minecraft.entity.ai.pathing.<a href="PathNode.html" title="class in net.minecraft.entity.ai.pathing">PathNode</a></h3>
 <a id="fields.inherited.from.class.net.minecraft.entity.ai.pathing.PathNode">
@@ -171,16 +200,11 @@ int&nbsp;z)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i2">
-<td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isReached()">isReached</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="rowColor" id="i3">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#markReached()">markReached</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i4">
+<tr class="rowColor" id="i3">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#updateNearestNode(float,net.minecraft.entity.ai.pathing.PathNode)">updateNearestNode</a></span>&#8203;(float&nbsp;distance,
 <a href="PathNode.html" title="class in net.minecraft.entity.ai.pathing">PathNode</a>&nbsp;node)</code></th>
@@ -206,6 +230,34 @@ int&nbsp;z)</code></th>
 </section>
 <section class="details">
 <ul class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<li class="blockList">
+<section class="fieldDetails"><a id="field.detail">
+<!--   -->
+</a>
+<h2>Field Details</h2>
+<ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="nearestNodeDistance">nearestNodeDistance</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">float</span>&nbsp;<span class="memberName">nearestNodeDistance</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="nearestNode">nearestNode</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="PathNode.html" title="class in net.minecraft.entity.ai.pathing">PathNode</a></span>&nbsp;<span class="memberName">nearestNode</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="reached">reached</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">reached</span></div>
+</section>
+</li>
+</ul>
+</section>
+</li>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <li class="blockList">
 <section class="constructorDetails"><a id="constructor.detail">
@@ -259,12 +311,6 @@ int&nbsp;z)</span></div>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="isReached()">isReached</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isReached</span>()</div>
-</section>
-</li>
-<li class="blockList">
-<section class="detail">
 <h3><a id="fromBuffer(net.minecraft.network.PacketByteBuf)">fromBuffer</a></h3>
 <div class="memberSignature"><span class="annotations">@Environment(CLIENT)
 </span><span class="modifiers">public static</span>&nbsp;<span class="returnType"><a href="TargetPathNode.html" title="class in net.minecraft.entity.ai.pathing">TargetPathNode</a></span>&nbsp;<span class="memberName">fromBuffer</span>&#8203;(<span class="arguments"><a href="../../../network/PacketByteBuf.html" title="class in net.minecraft.network">PacketByteBuf</a>&nbsp;buffer)</span></div>
@@ -309,7 +355,7 @@ int&nbsp;z)</span></div>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>

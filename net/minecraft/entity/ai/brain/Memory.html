@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":9,"i5":10,"i6":9,"i7":10};
+<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":9,"i4":9,"i5":10,"i6":9,"i7":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -56,13 +56,13 @@ loadScripts(document, 'script');</script>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
@@ -90,17 +90,44 @@ loadScripts(document, 'script');</script>
 <div class="inheritance">net.minecraft.entity.ai.brain.Memory&lt;T&gt;</div>
 </div>
 <section class="description">
-<dl>
-<dt>All Implemented Interfaces:</dt>
-<dd><code><a href="../../../util/dynamic/DynamicSerializable.html" title="interface in net.minecraft.util.dynamic">DynamicSerializable</a></code></dd>
-</dl>
 <hr>
 <pre>public class <span class="typeNameLabel">Memory&lt;T&gt;</span>
-extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>
-implements <a href="../../../util/dynamic/DynamicSerializable.html" title="interface in net.minecraft.util.dynamic">DynamicSerializable</a></pre>
+extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></pre>
 </section>
 <section class="summary">
 <ul class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<li class="blockList">
+<section class="fieldSummary"><a id="field.summary">
+<!--   -->
+</a>
+<h2>Field Summary</h2>
+<div class="memberSummary">
+<table>
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<thead>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colSecond" scope="col">Field</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private long</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#expiry">expiry</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="Memory.html" title="type parameter in Memory">T</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#value">value</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</li>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <li class="blockList">
 <section class="constructorSummary"><a id="constructor.summary">
@@ -118,17 +145,8 @@ implements <a href="../../../util/dynamic/DynamicSerializable.html" title="inter
 </thead>
 <tbody>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.util.function.Function,com.mojang.datafixers.Dynamic)">Memory</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;com.mojang.datafixers.Dynamic&lt;?&gt;,&#8203;<a href="Memory.html" title="type parameter in Memory">T</a>&gt;&nbsp;valueReader,
-com.mojang.datafixers.Dynamic&lt;?&gt;&nbsp;data)</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(T)">Memory</a></span>&#8203;(<a href="Memory.html" title="type parameter in Memory">T</a>&nbsp;value)</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(T,long)">Memory</a></span>&#8203;(<a href="Memory.html" title="type parameter in Memory">T</a>&nbsp;value,
-long&nbsp;expiry)</code></th>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(T,long)">Memory</a></span>&#8203;(<a href="Memory.html" title="type parameter in Memory">T</a>&nbsp;t,
+long&nbsp;long2)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -165,25 +183,23 @@ long&nbsp;expiry)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i2">
-<td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_24913()">method_24913</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="rowColor" id="i3">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_24914()">method_24914</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
+<tr class="rowColor" id="i3">
+<td class="colFirst"><code>static &lt;T&gt;&nbsp;com.mojang.serialization.Codec&lt;<a href="Memory.html" title="class in net.minecraft.entity.ai.brain">Memory</a>&lt;T&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_28353(com.mojang.serialization.Codec)">method_28353</a></span>&#8203;(com.mojang.serialization.Codec&lt;T&gt;&nbsp;codec)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
 <tr class="altColor" id="i4">
 <td class="colFirst"><code>static &lt;T&gt;&nbsp;<a href="Memory.html" title="class in net.minecraft.entity.ai.brain">Memory</a>&lt;T&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#permanent(T)">permanent</a></span>&#8203;(T&nbsp;value)</code></th>
-<td class="colLast">
-<div class="block">Creates a permanent memory.</div>
-</td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_28355(T)">method_28355</a></span>&#8203;(T&nbsp;t)</code></th>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i5">
-<td class="colFirst"><code>&lt;T&gt;&nbsp;T</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#serialize(com.mojang.datafixers.types.DynamicOps)">serialize</a></span>&#8203;(com.mojang.datafixers.types.DynamicOps&lt;T&gt;&nbsp;ops)</code></th>
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#tick()">tick</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i6">
@@ -214,6 +230,28 @@ long&nbsp;expiry)</code></th>
 </section>
 <section class="details">
 <ul class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<li class="blockList">
+<section class="fieldDetails"><a id="field.detail">
+<!--   -->
+</a>
+<h2>Field Details</h2>
+<ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="value">value</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="Memory.html" title="type parameter in Memory">T</a></span>&nbsp;<span class="memberName">value</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="expiry">expiry</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">long</span>&nbsp;<span class="memberName">expiry</span></div>
+</section>
+</li>
+</ul>
+</section>
+</li>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <li class="blockList">
 <section class="constructorDetails"><a id="constructor.detail">
@@ -226,23 +264,8 @@ long&nbsp;expiry)</code></th>
 <h3><a id="&lt;init&gt;(java.lang.Object,long)">
 <!--   -->
 </a><a id="&lt;init&gt;(T,long)">Memory</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">Memory</span>&#8203;(<span class="arguments"><a href="Memory.html" title="type parameter in Memory">T</a>&nbsp;value,
-long&nbsp;expiry)</span></div>
-</section>
-</li>
-<li class="blockList">
-<section class="detail">
-<h3><a id="&lt;init&gt;(java.lang.Object)">
-<!--   -->
-</a><a id="&lt;init&gt;(T)">Memory</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">Memory</span>&#8203;(<span class="arguments"><a href="Memory.html" title="type parameter in Memory">T</a>&nbsp;value)</span></div>
-</section>
-</li>
-<li class="blockList">
-<section class="detail">
-<h3><a id="&lt;init&gt;(java.util.function.Function,com.mojang.datafixers.Dynamic)">Memory</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">Memory</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;com.mojang.datafixers.Dynamic&lt;?&gt;,&#8203;<a href="Memory.html" title="type parameter in Memory">T</a>&gt;&nbsp;valueReader,
-com.mojang.datafixers.Dynamic&lt;?&gt;&nbsp;data)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">Memory</span>&#8203;(<span class="arguments"><a href="Memory.html" title="type parameter in Memory">T</a>&nbsp;t,
+long&nbsp;long2)</span></div>
 </section>
 </li>
 </ul>
@@ -257,17 +280,16 @@ com.mojang.datafixers.Dynamic&lt;?&gt;&nbsp;data)</span></div>
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="method_24913()">method_24913</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">method_24913</span>()</div>
+<h3><a id="tick()">tick</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">tick</span>()</div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="permanent(java.lang.Object)">
+<h3><a id="method_28355(java.lang.Object)">
 <!--   -->
-</a><a id="permanent(T)">permanent</a></h3>
-<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="typeParameters">&lt;T&gt;</span>&nbsp;<span class="returnType"><a href="Memory.html" title="class in net.minecraft.entity.ai.brain">Memory</a>&lt;T&gt;</span>&nbsp;<span class="memberName">permanent</span>&#8203;(<span class="arguments">T&nbsp;value)</span></div>
-<div class="block">Creates a permanent memory.</div>
+</a><a id="method_28355(T)">method_28355</a></h3>
+<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="typeParameters">&lt;T&gt;</span>&nbsp;<span class="returnType"><a href="Memory.html" title="class in net.minecraft.entity.ai.brain">Memory</a>&lt;T&gt;</span>&nbsp;<span class="memberName">method_28355</span>&#8203;(<span class="arguments">T&nbsp;t)</span></div>
 </section>
 </li>
 <li class="blockList">
@@ -310,12 +332,9 @@ long&nbsp;expiry)</span></div>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="serialize(com.mojang.datafixers.types.DynamicOps)">serialize</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="typeParameters">&lt;T&gt;</span>&nbsp;<span class="returnType">T</span>&nbsp;<span class="memberName">serialize</span>&#8203;(<span class="arguments">com.mojang.datafixers.types.DynamicOps&lt;T&gt;&nbsp;ops)</span></div>
-<dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../util/dynamic/DynamicSerializable.html#serialize(com.mojang.datafixers.types.DynamicOps)">serialize</a></code>&nbsp;in interface&nbsp;<code><a href="../../../util/dynamic/DynamicSerializable.html" title="interface in net.minecraft.util.dynamic">DynamicSerializable</a></code></dd>
-</dl>
+<h3><a id="method_28353(com.mojang.serialization.Codec)">method_28353</a></h3>
+<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="typeParameters">&lt;T&gt;</span>
+<span class="returnType">com.mojang.serialization.Codec&lt;<a href="Memory.html" title="class in net.minecraft.entity.ai.brain">Memory</a>&lt;T&gt;&gt;</span>&nbsp;<span class="memberName">method_28353</span>&#8203;(<span class="arguments">com.mojang.serialization.Codec&lt;T&gt;&nbsp;codec)</span></div>
 </section>
 </li>
 </ul>
@@ -351,13 +370,13 @@ long&nbsp;expiry)</span></div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>

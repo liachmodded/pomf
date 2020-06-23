@@ -56,13 +56,13 @@ loadScripts(document, 'script');</script>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested.class.summary">Nested</a>&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
@@ -124,6 +124,43 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </div>
 </section>
 </li>
+<!-- =========== FIELD SUMMARY =========== -->
+<li class="blockList">
+<section class="fieldSummary"><a id="field.summary">
+<!--   -->
+</a>
+<h2>Field Summary</h2>
+<div class="memberSummary">
+<table>
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<thead>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colSecond" scope="col">Field</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../recipe/Recipe.html" title="interface in net.minecraft.recipe">Recipe</a>&lt;?&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#recipe">recipe</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="RecipeBookGhostSlots.GhostInputSlot.html" title="class in net.minecraft.client.gui.screen.recipebook">RecipeBookGhostSlots.GhostInputSlot</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#slots">slots</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private float</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#time">time</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</li>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <li class="blockList">
 <section class="constructorSummary"><a id="constructor.summary">
@@ -176,11 +213,12 @@ int&nbsp;y)</code></th>
 </tr>
 <tr class="rowColor" id="i1">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#draw(net.minecraft.client.MinecraftClient,int,int,boolean,float)">draw</a></span>&#8203;(<a href="../../../MinecraftClient.html" title="class in net.minecraft.client">MinecraftClient</a>&nbsp;client,
-int&nbsp;x,
-int&nbsp;y,
-boolean&nbsp;isBig,
-float&nbsp;lastFrameDuration)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#draw(net.minecraft.client.util.math.MatrixStack,net.minecraft.client.MinecraftClient,int,int,boolean,float)">draw</a></span>&#8203;(<a href="../../../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrixStack,
+<a href="../../../MinecraftClient.html" title="class in net.minecraft.client">MinecraftClient</a>&nbsp;minecraftClient,
+int&nbsp;int2,
+int&nbsp;int3,
+boolean&nbsp;bool,
+float&nbsp;float2)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i2">
@@ -223,6 +261,34 @@ float&nbsp;lastFrameDuration)</code></th>
 </section>
 <section class="details">
 <ul class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<li class="blockList">
+<section class="fieldDetails"><a id="field.detail">
+<!--   -->
+</a>
+<h2>Field Details</h2>
+<ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="recipe">recipe</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="../../../../recipe/Recipe.html" title="interface in net.minecraft.recipe">Recipe</a>&lt;?&gt;</span>&nbsp;<span class="memberName">recipe</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="slots">slots</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="RecipeBookGhostSlots.GhostInputSlot.html" title="class in net.minecraft.client.gui.screen.recipebook">RecipeBookGhostSlots.GhostInputSlot</a>&gt;</span>&nbsp;<span class="memberName">slots</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="time">time</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">float</span>&nbsp;<span class="memberName">time</span></div>
+</section>
+</li>
+</ul>
+</section>
+</li>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <li class="blockList">
 <section class="constructorDetails"><a id="constructor.detail">
@@ -275,7 +341,7 @@ int&nbsp;y)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getRecipe()">getRecipe</a></h3>
-<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 </span><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../../../recipe/Recipe.html" title="interface in net.minecraft.recipe">Recipe</a>&lt;?&gt;</span>&nbsp;<span class="memberName">getRecipe</span>()</div>
 </section>
 </li>
@@ -287,12 +353,13 @@ int&nbsp;y)</span></div>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="draw(net.minecraft.client.MinecraftClient,int,int,boolean,float)">draw</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">draw</span>&#8203;(<span class="arguments"><a href="../../../MinecraftClient.html" title="class in net.minecraft.client">MinecraftClient</a>&nbsp;client,
-int&nbsp;x,
-int&nbsp;y,
-boolean&nbsp;isBig,
-float&nbsp;lastFrameDuration)</span></div>
+<h3><a id="draw(net.minecraft.client.util.math.MatrixStack,net.minecraft.client.MinecraftClient,int,int,boolean,float)">draw</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">draw</span>&#8203;(<span class="arguments"><a href="../../../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrixStack,
+<a href="../../../MinecraftClient.html" title="class in net.minecraft.client">MinecraftClient</a>&nbsp;minecraftClient,
+int&nbsp;int2,
+int&nbsp;int3,
+boolean&nbsp;bool,
+float&nbsp;float2)</span></div>
 </section>
 </li>
 </ul>
@@ -328,13 +395,13 @@ float&nbsp;lastFrameDuration)</span></div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested.class.summary">Nested</a>&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>

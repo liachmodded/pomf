@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":9,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":9,"i7":10};
+<script type="text/javascript">var data = {"i0":9,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":9,"i7":10,"i8":10,"i9":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -57,13 +57,13 @@ loadScripts(document, 'script');</script>
 <li>Summary:&nbsp;</li>
 <li><a href="#nested.class.summary">Nested</a>&nbsp;|&nbsp;</li>
 <li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
 <li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
 </div>
@@ -146,13 +146,67 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </thead>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/BiFunction.html?is-external=true" title="class or interface in java.util.function" class="externalLink">BiFunction</a>&lt;<a href="../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>,&#8203;<a href="context/LootContext.html" title="class in net.minecraft.loot.context">LootContext</a>,&#8203;<a href="../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#combinedFunction">combinedFunction</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="LootTable.html" title="class in net.minecraft.loot">LootTable</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#EMPTY">EMPTY</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="function/LootFunction.html" title="interface in net.minecraft.loot.function">LootFunction</a>[]</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#functions">functions</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static <a href="context/LootContextType.html" title="class in net.minecraft.loot.context">LootContextType</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#GENERIC">GENERIC</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="https://logging.apache.org/log4j/2.x/log4j-api/apidocs/org/apache/logging/log4j/Logger.html?is-external=true" title="class or interface in org.apache.logging.log4j" class="externalLink">Logger</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#LOGGER">LOGGER</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="LootPool.html" title="class in net.minecraft.loot">LootPool</a>[]</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#pools">pools</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="context/LootContextType.html" title="class in net.minecraft.loot.context">LootContextType</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#type">type</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</li>
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<li class="blockList">
+<section class="constructorSummary"><a id="constructor.summary">
+<!--   -->
+</a>
+<h2>Constructor Summary</h2>
+<div class="memberSummary">
+<table>
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<thead>
+<tr>
+<th class="colFirst" scope="col">Modifier</th>
+<th class="colSecond" scope="col">Constructor</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private </code></td>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.loot.context.LootContextType,net.minecraft.loot.LootPool%5B%5D,net.minecraft.loot.function.LootFunction%5B%5D)">LootTable</a></span>&#8203;(<a href="context/LootContextType.html" title="class in net.minecraft.loot.context">LootContextType</a>&nbsp;type,
+<a href="LootPool.html" title="class in net.minecraft.loot">LootPool</a>[]&nbsp;pools,
+<a href="function/LootFunction.html" title="interface in net.minecraft.loot.function">LootFunction</a>[]&nbsp;functions)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -184,25 +238,26 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
-<td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#check(net.minecraft.loot.LootTableReporter)">check</a></span>&#8203;(<a href="LootTableReporter.html" title="class in net.minecraft.loot">LootTableReporter</a>&nbsp;reporter)</code></th>
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#generateLoot(net.minecraft.loot.context.LootContext)">generateLoot</a></span>&#8203;(<a href="context/LootContext.html" title="class in net.minecraft.loot.context">LootContext</a>&nbsp;context)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i2">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#drop(net.minecraft.loot.context.LootContext,java.util.function.Consumer)">drop</a></span>&#8203;(<a href="context/LootContext.html" title="class in net.minecraft.loot.context">LootContext</a>&nbsp;context,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Consumer.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Consumer</a>&lt;<a href="../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&gt;&nbsp;itemDropper)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#generateLoot(net.minecraft.loot.context.LootContext,java.util.function.Consumer)">generateLoot</a></span>&#8203;(<a href="context/LootContext.html" title="class in net.minecraft.loot.context">LootContext</a>&nbsp;context,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Consumer.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Consumer</a>&lt;<a href="../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&gt;&nbsp;lootConsumer)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i3">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#dropLimited(net.minecraft.loot.context.LootContext,java.util.function.Consumer)">dropLimited</a></span>&#8203;(<a href="context/LootContext.html" title="class in net.minecraft.loot.context">LootContext</a>&nbsp;context,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Consumer.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Consumer</a>&lt;<a href="../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&gt;&nbsp;dropItemConsumer)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#generateUnprocessedLoot(net.minecraft.loot.context.LootContext,java.util.function.Consumer)">generateUnprocessedLoot</a></span>&#8203;(<a href="context/LootContext.html" title="class in net.minecraft.loot.context">LootContext</a>&nbsp;context,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Consumer.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Consumer</a>&lt;<a href="../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&gt;&nbsp;lootConsumer)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i4">
-<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getDrops(net.minecraft.loot.context.LootContext)">getDrops</a></span>&#8203;(<a href="context/LootContext.html" title="class in net.minecraft.loot.context">LootContext</a>&nbsp;context)</code></th>
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang" class="externalLink">Integer</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getFreeSlots(net.minecraft.inventory.Inventory,java.util.Random)">getFreeSlots</a></span>&#8203;(<a href="../inventory/Inventory.html" title="interface in net.minecraft.inventory">Inventory</a>&nbsp;inventory,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i5">
@@ -212,13 +267,25 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </tr>
 <tr class="altColor" id="i6">
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Consumer.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Consumer</a>&lt;<a href="../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#limitedConsumer(java.util.function.Consumer)">limitedConsumer</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Consumer.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Consumer</a>&lt;<a href="../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&gt;&nbsp;itemDropper)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#processStacks(java.util.function.Consumer)">processStacks</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Consumer.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Consumer</a>&lt;<a href="../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&gt;&nbsp;lootConsumer)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i7">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#shuffle(java.util.List,int,java.util.Random)">shuffle</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&gt;&nbsp;drops,
+int&nbsp;freeSlots,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i8">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#supplyInventory(net.minecraft.inventory.Inventory,net.minecraft.loot.context.LootContext)">supplyInventory</a></span>&#8203;(<a href="../inventory/Inventory.html" title="interface in net.minecraft.inventory">Inventory</a>&nbsp;inventory,
 <a href="context/LootContext.html" title="class in net.minecraft.loot.context">LootContext</a>&nbsp;context)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i9">
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#validate(net.minecraft.loot.LootTableReporter)">validate</a></span>&#8203;(<a href="LootTableReporter.html" title="class in net.minecraft.loot">LootTableReporter</a>&nbsp;reporter)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -245,6 +312,12 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
+<h3><a id="LOGGER">LOGGER</a></h3>
+<div class="memberSignature"><span class="modifiers">private static final</span>&nbsp;<span class="returnType"><a href="https://logging.apache.org/log4j/2.x/log4j-api/apidocs/org/apache/logging/log4j/Logger.html?is-external=true" title="class or interface in org.apache.logging.log4j" class="externalLink">Logger</a></span>&nbsp;<span class="memberName">LOGGER</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="EMPTY">EMPTY</a></h3>
 <div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="LootTable.html" title="class in net.minecraft.loot">LootTable</a></span>&nbsp;<span class="memberName">EMPTY</span></div>
 </section>
@@ -253,6 +326,48 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <section class="detail">
 <h3><a id="GENERIC">GENERIC</a></h3>
 <div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="context/LootContextType.html" title="class in net.minecraft.loot.context">LootContextType</a></span>&nbsp;<span class="memberName">GENERIC</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="type">type</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="context/LootContextType.html" title="class in net.minecraft.loot.context">LootContextType</a></span>&nbsp;<span class="memberName">type</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="pools">pools</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="LootPool.html" title="class in net.minecraft.loot">LootPool</a>[]</span>&nbsp;<span class="memberName">pools</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="functions">functions</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="function/LootFunction.html" title="interface in net.minecraft.loot.function">LootFunction</a>[]</span>&nbsp;<span class="memberName">functions</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="combinedFunction">combinedFunction</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/BiFunction.html?is-external=true" title="class or interface in java.util.function" class="externalLink">BiFunction</a>&lt;<a href="../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>,&#8203;<a href="context/LootContext.html" title="class in net.minecraft.loot.context">LootContext</a>,&#8203;<a href="../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&gt;</span>&nbsp;<span class="memberName">combinedFunction</span></div>
+</section>
+</li>
+</ul>
+</section>
+</li>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<li class="blockList">
+<section class="constructorDetails"><a id="constructor.detail">
+<!--   -->
+</a>
+<h2>Constructor Details</h2>
+<ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="&lt;init&gt;(net.minecraft.loot.context.LootContextType,net.minecraft.loot.LootPool[],net.minecraft.loot.function.LootFunction[])">LootTable</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="memberName">LootTable</span>&#8203;(<span class="arguments"><a href="context/LootContextType.html" title="class in net.minecraft.loot.context">LootContextType</a>&nbsp;type,
+<a href="LootPool.html" title="class in net.minecraft.loot">LootPool</a>[]&nbsp;pools,
+<a href="function/LootFunction.html" title="interface in net.minecraft.loot.function">LootFunction</a>[]&nbsp;functions)</span></div>
 </section>
 </li>
 </ul>
@@ -267,28 +382,28 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="limitedConsumer(java.util.function.Consumer)">limitedConsumer</a></h3>
-<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Consumer.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Consumer</a>&lt;<a href="../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&gt;</span>&nbsp;<span class="memberName">limitedConsumer</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Consumer.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Consumer</a>&lt;<a href="../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&gt;&nbsp;itemDropper)</span></div>
+<h3><a id="processStacks(java.util.function.Consumer)">processStacks</a></h3>
+<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Consumer.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Consumer</a>&lt;<a href="../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&gt;</span>&nbsp;<span class="memberName">processStacks</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Consumer.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Consumer</a>&lt;<a href="../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&gt;&nbsp;lootConsumer)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="drop(net.minecraft.loot.context.LootContext,java.util.function.Consumer)">drop</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">drop</span>&#8203;(<span class="arguments"><a href="context/LootContext.html" title="class in net.minecraft.loot.context">LootContext</a>&nbsp;context,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Consumer.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Consumer</a>&lt;<a href="../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&gt;&nbsp;itemDropper)</span></div>
+<h3><a id="generateUnprocessedLoot(net.minecraft.loot.context.LootContext,java.util.function.Consumer)">generateUnprocessedLoot</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">generateUnprocessedLoot</span>&#8203;(<span class="arguments"><a href="context/LootContext.html" title="class in net.minecraft.loot.context">LootContext</a>&nbsp;context,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Consumer.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Consumer</a>&lt;<a href="../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&gt;&nbsp;lootConsumer)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="dropLimited(net.minecraft.loot.context.LootContext,java.util.function.Consumer)">dropLimited</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">dropLimited</span>&#8203;(<span class="arguments"><a href="context/LootContext.html" title="class in net.minecraft.loot.context">LootContext</a>&nbsp;context,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Consumer.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Consumer</a>&lt;<a href="../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&gt;&nbsp;dropItemConsumer)</span></div>
+<h3><a id="generateLoot(net.minecraft.loot.context.LootContext,java.util.function.Consumer)">generateLoot</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">generateLoot</span>&#8203;(<span class="arguments"><a href="context/LootContext.html" title="class in net.minecraft.loot.context">LootContext</a>&nbsp;context,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Consumer.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Consumer</a>&lt;<a href="../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&gt;&nbsp;lootConsumer)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="getDrops(net.minecraft.loot.context.LootContext)">getDrops</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&gt;</span>&nbsp;<span class="memberName">getDrops</span>&#8203;(<span class="arguments"><a href="context/LootContext.html" title="class in net.minecraft.loot.context">LootContext</a>&nbsp;context)</span></div>
+<h3><a id="generateLoot(net.minecraft.loot.context.LootContext)">generateLoot</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&gt;</span>&nbsp;<span class="memberName">generateLoot</span>&#8203;(<span class="arguments"><a href="context/LootContext.html" title="class in net.minecraft.loot.context">LootContext</a>&nbsp;context)</span></div>
 </section>
 </li>
 <li class="blockList">
@@ -299,8 +414,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="check(net.minecraft.loot.LootTableReporter)">check</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">check</span>&#8203;(<span class="arguments"><a href="LootTableReporter.html" title="class in net.minecraft.loot">LootTableReporter</a>&nbsp;reporter)</span></div>
+<h3><a id="validate(net.minecraft.loot.LootTableReporter)">validate</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">validate</span>&#8203;(<span class="arguments"><a href="LootTableReporter.html" title="class in net.minecraft.loot">LootTableReporter</a>&nbsp;reporter)</span></div>
 </section>
 </li>
 <li class="blockList">
@@ -308,6 +423,21 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h3><a id="supplyInventory(net.minecraft.inventory.Inventory,net.minecraft.loot.context.LootContext)">supplyInventory</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">supplyInventory</span>&#8203;(<span class="arguments"><a href="../inventory/Inventory.html" title="interface in net.minecraft.inventory">Inventory</a>&nbsp;inventory,
 <a href="context/LootContext.html" title="class in net.minecraft.loot.context">LootContext</a>&nbsp;context)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="shuffle(java.util.List,int,java.util.Random)">shuffle</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">shuffle</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&gt;&nbsp;drops,
+int&nbsp;freeSlots,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="getFreeSlots(net.minecraft.inventory.Inventory,java.util.Random)">getFreeSlots</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang" class="externalLink">Integer</a>&gt;</span>&nbsp;<span class="memberName">getFreeSlots</span>&#8203;(<span class="arguments"><a href="../inventory/Inventory.html" title="interface in net.minecraft.inventory">Inventory</a>&nbsp;inventory,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random)</span></div>
 </section>
 </li>
 <li class="blockList">
@@ -350,13 +480,13 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li>Summary:&nbsp;</li>
 <li><a href="#nested.class.summary">Nested</a>&nbsp;|&nbsp;</li>
 <li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
 <li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
 </div>

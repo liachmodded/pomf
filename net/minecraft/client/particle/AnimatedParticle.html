@@ -125,8 +125,38 @@ extends <a href="SpriteBillboardParticle.html" title="class in net.minecraft.cli
 </thead>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#changesColor">changesColor</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private float</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#resistance">resistance</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="SpriteProvider.html" title="interface in net.minecraft.client.particle">SpriteProvider</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#spriteProvider">spriteProvider</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private float</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#targetColorBlue">targetColorBlue</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private float</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#targetColorGreen">targetColorGreen</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private float</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#targetColorRed">targetColorRed</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private float</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#upwardsAcceleration">upwardsAcceleration</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -168,7 +198,7 @@ extends <a href="SpriteBillboardParticle.html" title="class in net.minecraft.cli
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>protected </code></td>
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.world.World,double,double,double,net.minecraft.client.particle.SpriteProvider,float)">AnimatedParticle</a></span>&#8203;(<a href="../../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world,
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.client.world.ClientWorld,double,double,double,net.minecraft.client.particle.SpriteProvider,float)">AnimatedParticle</a></span>&#8203;(<a href="../world/ClientWorld.html" title="class in net.minecraft.client.world">ClientWorld</a>&nbsp;world,
 double&nbsp;x,
 double&nbsp;y,
 double&nbsp;z,
@@ -272,6 +302,42 @@ float&nbsp;upwardsAcceleration)</code></th>
 <div class="memberSignature"><span class="modifiers">protected final</span>&nbsp;<span class="returnType"><a href="SpriteProvider.html" title="interface in net.minecraft.client.particle">SpriteProvider</a></span>&nbsp;<span class="memberName">spriteProvider</span></div>
 </section>
 </li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="upwardsAcceleration">upwardsAcceleration</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType">float</span>&nbsp;<span class="memberName">upwardsAcceleration</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="resistance">resistance</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">float</span>&nbsp;<span class="memberName">resistance</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="targetColorRed">targetColorRed</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">float</span>&nbsp;<span class="memberName">targetColorRed</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="targetColorGreen">targetColorGreen</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">float</span>&nbsp;<span class="memberName">targetColorGreen</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="targetColorBlue">targetColorBlue</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">float</span>&nbsp;<span class="memberName">targetColorBlue</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="changesColor">changesColor</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">changesColor</span></div>
+</section>
+</li>
 </ul>
 </section>
 </li>
@@ -284,8 +350,8 @@ float&nbsp;upwardsAcceleration)</code></th>
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="&lt;init&gt;(net.minecraft.world.World,double,double,double,net.minecraft.client.particle.SpriteProvider,float)">AnimatedParticle</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="memberName">AnimatedParticle</span>&#8203;(<span class="arguments"><a href="../../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world,
+<h3><a id="&lt;init&gt;(net.minecraft.client.world.ClientWorld,double,double,double,net.minecraft.client.particle.SpriteProvider,float)">AnimatedParticle</a></h3>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="memberName">AnimatedParticle</span>&#8203;(<span class="arguments"><a href="../world/ClientWorld.html" title="class in net.minecraft.client.world">ClientWorld</a>&nbsp;world,
 double&nbsp;x,
 double&nbsp;y,
 double&nbsp;z,

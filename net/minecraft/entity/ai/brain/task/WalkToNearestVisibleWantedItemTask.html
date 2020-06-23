@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../../../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":10,"i1":10};
+<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -62,7 +62,7 @@ loadScripts(document, 'script');</script>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
@@ -117,6 +117,35 @@ extends <a href="Task.html" title="class in net.minecraft.entity.ai.brain.task">
 <!--   -->
 </a>
 <h2>Field Summary</h2>
+<div class="memberSummary">
+<table>
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<thead>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colSecond" scope="col">Field</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private float</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#field_23131">field_23131</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#radius">radius</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Predicate</a>&lt;<a href="WalkToNearestVisibleWantedItemTask.html" title="type parameter in WalkToNearestVisibleWantedItemTask">E</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#startCondition">startCondition</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
 <div class="inheritedList">
 <h3>Fields inherited from class&nbsp;net.minecraft.entity.ai.brain.task.<a href="Task.html" title="class in net.minecraft.entity.ai.brain.task">Task</a></h3>
 <a id="fields.inherited.from.class.net.minecraft.entity.ai.brain.task.Task">
@@ -177,13 +206,18 @@ int&nbsp;int2)</code></th>
 </thead>
 <tbody>
 <tr class="altColor" id="i0">
+<td class="colFirst"><code>private <a href="../../../ItemEntity.html" title="class in net.minecraft.entity">ItemEntity</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getNearestVisibleWantedItem(E)">getNearestVisibleWantedItem</a></span>&#8203;(<a href="WalkToNearestVisibleWantedItemTask.html" title="type parameter in WalkToNearestVisibleWantedItemTask">E</a>&nbsp;entity)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i1">
 <td class="colFirst"><code>protected void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#run(net.minecraft.server.world.ServerWorld,E,long)">run</a></span>&#8203;(<a href="../../../../server/world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a>&nbsp;world,
 <a href="WalkToNearestVisibleWantedItemTask.html" title="type parameter in WalkToNearestVisibleWantedItemTask">E</a>&nbsp;entity,
 long&nbsp;time)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i1">
+<tr class="altColor" id="i2">
 <td class="colFirst"><code>protected boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#shouldRun(net.minecraft.server.world.ServerWorld,E)">shouldRun</a></span>&#8203;(<a href="../../../../server/world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a>&nbsp;world,
 <a href="WalkToNearestVisibleWantedItemTask.html" title="type parameter in WalkToNearestVisibleWantedItemTask">E</a>&nbsp;entity)</code></th>
@@ -209,6 +243,34 @@ long&nbsp;time)</code></th>
 </section>
 <section class="details">
 <ul class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<li class="blockList">
+<section class="fieldDetails"><a id="field.detail">
+<!--   -->
+</a>
+<h2>Field Details</h2>
+<ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="startCondition">startCondition</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Predicate</a>&lt;<a href="WalkToNearestVisibleWantedItemTask.html" title="type parameter in WalkToNearestVisibleWantedItemTask">E</a> extends <a href="../../../LivingEntity.html" title="class in net.minecraft.entity">LivingEntity</a>&gt;</span>&nbsp;<span class="memberName">startCondition</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="radius">radius</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">radius</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="field_23131">field_23131</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType">float</span>&nbsp;<span class="memberName">field_23131</span></div>
+</section>
+</li>
+</ul>
+</section>
+</li>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <li class="blockList">
 <section class="constructorDetails"><a id="constructor.detail">
@@ -270,6 +332,14 @@ long&nbsp;time)</span></div>
 </dl>
 </section>
 </li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="getNearestVisibleWantedItem(net.minecraft.entity.LivingEntity)">
+<!--   -->
+</a><a id="getNearestVisibleWantedItem(E)">getNearestVisibleWantedItem</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="../../../ItemEntity.html" title="class in net.minecraft.entity">ItemEntity</a></span>&nbsp;<span class="memberName">getNearestVisibleWantedItem</span>&#8203;(<span class="arguments"><a href="WalkToNearestVisibleWantedItemTask.html" title="type parameter in WalkToNearestVisibleWantedItemTask">E</a>&nbsp;entity)</span></div>
+</section>
+</li>
 </ul>
 </section>
 </li>
@@ -309,7 +379,7 @@ long&nbsp;time)</span></div>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>

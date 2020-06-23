@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":10,"i1":10};
+<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -56,13 +56,13 @@ loadScripts(document, 'script');</script>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
@@ -83,7 +83,7 @@ loadScripts(document, 'script');</script>
 <!-- ======== START OF CLASS DATA ======== -->
 <div class="header">
 <div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html">net.minecraft.state</a></div>
-<h1 title="Class StateManager.Builder" class="title">Class StateManager.Builder&lt;O,&#8203;S extends <a href="State.html" title="interface in net.minecraft.state">State</a>&lt;S&gt;&gt;</h1>
+<h1 title="Class StateManager.Builder" class="title">Class StateManager.Builder&lt;O,&#8203;S extends <a href="State.html" title="class in net.minecraft.state">State</a>&lt;O,&#8203;S&gt;&gt;</h1>
 </div>
 <div class="contentContainer">
 <div class="inheritance" title="Inheritance Tree"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">java.lang.Object</a>
@@ -92,14 +92,46 @@ loadScripts(document, 'script');</script>
 <section class="description">
 <dl>
 <dt>Enclosing class:</dt>
-<dd><a href="StateManager.html" title="class in net.minecraft.state">StateManager</a>&lt;<a href="StateManager.html" title="type parameter in StateManager">O</a>,&#8203;<a href="StateManager.html" title="type parameter in StateManager">S</a> extends <a href="State.html" title="interface in net.minecraft.state">State</a>&lt;<a href="StateManager.html" title="type parameter in StateManager">S</a>&gt;&gt;</dd>
+<dd><a href="StateManager.html" title="class in net.minecraft.state">StateManager</a>&lt;<a href="StateManager.html" title="type parameter in StateManager">O</a>,&#8203;<a href="StateManager.html" title="type parameter in StateManager">S</a> extends <a href="State.html" title="class in net.minecraft.state">State</a>&lt;<a href="StateManager.html" title="type parameter in StateManager">O</a>,&#8203;<a href="StateManager.html" title="type parameter in StateManager">S</a>&gt;&gt;</dd>
 </dl>
 <hr>
-<pre>public static class <span class="typeNameLabel">StateManager.Builder&lt;O,&#8203;S extends <a href="State.html" title="interface in net.minecraft.state">State</a>&lt;S&gt;&gt;</span>
+<pre>public static class <span class="typeNameLabel">StateManager.Builder&lt;O,&#8203;S extends <a href="State.html" title="class in net.minecraft.state">State</a>&lt;O,&#8203;S&gt;&gt;</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></pre>
 </section>
 <section class="summary">
 <ul class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<li class="blockList">
+<section class="fieldSummary"><a id="field.summary">
+<!--   -->
+</a>
+<h2>Field Summary</h2>
+<div class="memberSummary">
+<table>
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<thead>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colSecond" scope="col">Field</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util" class="externalLink">Map</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>,&#8203;<a href="property/Property.html" title="class in net.minecraft.state.property">Property</a>&lt;?&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#namedProperties">namedProperties</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="StateManager.Builder.html" title="type parameter in StateManager.Builder">O</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#owner">owner</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</li>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <li class="blockList">
 <section class="constructorSummary"><a id="constructor.summary">
@@ -145,13 +177,18 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tbody>
 <tr class="altColor" id="i0">
 <td class="colFirst"><code><a href="StateManager.Builder.html" title="class in net.minecraft.state">StateManager.Builder</a>&lt;<a href="StateManager.Builder.html" title="type parameter in StateManager.Builder">O</a>,&#8203;<a href="StateManager.Builder.html" title="type parameter in StateManager.Builder">S</a>&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#add(net.minecraft.state.property.Property%5B%5D)">add</a></span>&#8203;(<a href="property/Property.html" title="interface in net.minecraft.state.property">Property</a>&lt;?&gt;[]&nbsp;properties)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#add(net.minecraft.state.property.Property%5B%5D)">add</a></span>&#8203;(<a href="property/Property.html" title="class in net.minecraft.state.property">Property</a>&lt;?&gt;[]&nbsp;properties)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
-<td class="colFirst"><code>&lt;A extends <a href="AbstractState.html" title="class in net.minecraft.state">AbstractState</a>&lt;<a href="StateManager.Builder.html" title="type parameter in StateManager.Builder">O</a>,&#8203;
-<a href="StateManager.Builder.html" title="type parameter in StateManager.Builder">S</a>&gt;&gt;<br><a href="StateManager.html" title="class in net.minecraft.state">StateManager</a>&lt;<a href="StateManager.Builder.html" title="type parameter in StateManager.Builder">O</a>,&#8203;<a href="StateManager.Builder.html" title="type parameter in StateManager.Builder">S</a>&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#build(net.minecraft.state.StateManager.Factory)">build</a></span>&#8203;(<a href="StateManager.Factory.html" title="interface in net.minecraft.state">StateManager.Factory</a>&lt;<a href="StateManager.Builder.html" title="type parameter in StateManager.Builder">O</a>,&#8203;<a href="StateManager.Builder.html" title="type parameter in StateManager.Builder">S</a>,&#8203;A&gt;&nbsp;factory)</code></th>
+<td class="colFirst"><code><a href="StateManager.html" title="class in net.minecraft.state">StateManager</a>&lt;<a href="StateManager.Builder.html" title="type parameter in StateManager.Builder">O</a>,&#8203;<a href="StateManager.Builder.html" title="type parameter in StateManager.Builder">S</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#build(java.util.function.Function,net.minecraft.state.StateManager.Factory)">build</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;<a href="StateManager.Builder.html" title="type parameter in StateManager.Builder">O</a>,&#8203;<a href="StateManager.Builder.html" title="type parameter in StateManager.Builder">S</a>&gt;&nbsp;ownerToStateFunction,
+<a href="StateManager.Factory.html" title="interface in net.minecraft.state">StateManager.Factory</a>&lt;<a href="StateManager.Builder.html" title="type parameter in StateManager.Builder">O</a>,&#8203;<a href="StateManager.Builder.html" title="type parameter in StateManager.Builder">S</a>&gt;&nbsp;factory)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i2">
+<td class="colFirst"><code>private &lt;T extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html?is-external=true" title="class or interface in java.lang" class="externalLink">Comparable</a>&lt;T&gt;&gt;<br>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#validate(net.minecraft.state.property.Property)">validate</a></span>&#8203;(<a href="property/Property.html" title="class in net.minecraft.state.property">Property</a>&lt;T&gt;&nbsp;property)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -169,6 +206,28 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </section>
 <section class="details">
 <ul class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<li class="blockList">
+<section class="fieldDetails"><a id="field.detail">
+<!--   -->
+</a>
+<h2>Field Details</h2>
+<ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="owner">owner</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="StateManager.Builder.html" title="type parameter in StateManager.Builder">O</a></span>&nbsp;<span class="memberName">owner</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="namedProperties">namedProperties</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util" class="externalLink">Map</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>,&#8203;<a href="property/Property.html" title="class in net.minecraft.state.property">Property</a>&lt;?&gt;&gt;</span>&nbsp;<span class="memberName">namedProperties</span></div>
+</section>
+</li>
+</ul>
+</section>
+</li>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <li class="blockList">
 <section class="constructorDetails"><a id="constructor.detail">
@@ -197,15 +256,20 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <section class="detail">
 <h3><a id="add(net.minecraft.state.property.Property[])">add</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="StateManager.Builder.html" title="class in net.minecraft.state">StateManager.Builder</a>&lt;<a href="StateManager.Builder.html" title="type parameter in StateManager.Builder">O</a>,&#8203;<a href="StateManager.Builder.html" title="type parameter in StateManager.Builder">S</a>&gt;</span>&nbsp;<span class="memberName">add</span>&#8203;(<span class="arguments"><a href="property/Property.html" title="interface in net.minecraft.state.property">Property</a>&lt;?&gt;[]&nbsp;properties)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="StateManager.Builder.html" title="class in net.minecraft.state">StateManager.Builder</a>&lt;<a href="StateManager.Builder.html" title="type parameter in StateManager.Builder">O</a>,&#8203;<a href="StateManager.Builder.html" title="type parameter in StateManager.Builder">S</a>&gt;</span>&nbsp;<span class="memberName">add</span>&#8203;(<span class="arguments"><a href="property/Property.html" title="class in net.minecraft.state.property">Property</a>&lt;?&gt;[]&nbsp;properties)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="build(net.minecraft.state.StateManager.Factory)">build</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="typeParameters">&lt;A extends <a href="AbstractState.html" title="class in net.minecraft.state">AbstractState</a>&lt;<a href="StateManager.Builder.html" title="type parameter in StateManager.Builder">O</a>,&#8203;
-<a href="StateManager.Builder.html" title="type parameter in StateManager.Builder">S</a>&gt;&gt;</span>
-<span class="returnType"><a href="StateManager.html" title="class in net.minecraft.state">StateManager</a>&lt;<a href="StateManager.Builder.html" title="type parameter in StateManager.Builder">O</a>,&#8203;<a href="StateManager.Builder.html" title="type parameter in StateManager.Builder">S</a>&gt;</span>&nbsp;<span class="memberName">build</span>&#8203;(<span class="arguments"><a href="StateManager.Factory.html" title="interface in net.minecraft.state">StateManager.Factory</a>&lt;<a href="StateManager.Builder.html" title="type parameter in StateManager.Builder">O</a>,&#8203;<a href="StateManager.Builder.html" title="type parameter in StateManager.Builder">S</a>,&#8203;A&gt;&nbsp;factory)</span></div>
+<h3><a id="validate(net.minecraft.state.property.Property)">validate</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="typeParameters">&lt;T extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html?is-external=true" title="class or interface in java.lang" class="externalLink">Comparable</a>&lt;T&gt;&gt;</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">validate</span>&#8203;(<span class="arguments"><a href="property/Property.html" title="class in net.minecraft.state.property">Property</a>&lt;T&gt;&nbsp;property)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="build(java.util.function.Function,net.minecraft.state.StateManager.Factory)">build</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="StateManager.html" title="class in net.minecraft.state">StateManager</a>&lt;<a href="StateManager.Builder.html" title="type parameter in StateManager.Builder">O</a>,&#8203;<a href="StateManager.Builder.html" title="type parameter in StateManager.Builder">S</a>&gt;</span>&nbsp;<span class="memberName">build</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;<a href="StateManager.Builder.html" title="type parameter in StateManager.Builder">O</a>,&#8203;<a href="StateManager.Builder.html" title="type parameter in StateManager.Builder">S</a>&gt;&nbsp;ownerToStateFunction,
+<a href="StateManager.Factory.html" title="interface in net.minecraft.state">StateManager.Factory</a>&lt;<a href="StateManager.Builder.html" title="type parameter in StateManager.Builder">O</a>,&#8203;<a href="StateManager.Builder.html" title="type parameter in StateManager.Builder">S</a>&gt;&nbsp;factory)</span></div>
 </section>
 </li>
 </ul>
@@ -241,13 +305,13 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>

@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":18,"i1":6,"i2":18,"i3":6,"i4":18,"i5":50,"i6":18,"i7":18,"i8":6,"i9":18,"i10":18,"i11":6,"i12":18,"i13":6,"i14":18,"i15":18,"i16":6,"i17":18,"i18":18,"i19":6,"i20":18,"i21":38,"i22":50,"i23":6,"i24":50,"i25":50,"i26":18,"i27":18};
+<script type="text/javascript">var data = {"i0":18,"i1":6,"i2":18,"i3":6,"i4":18,"i5":50,"i6":18,"i7":18,"i8":6,"i9":18,"i10":18,"i11":6,"i12":18,"i13":6,"i14":18,"i15":18,"i16":38,"i17":18,"i18":18,"i19":6,"i20":18,"i21":38,"i22":50,"i23":6,"i24":50,"i25":50,"i26":18,"i27":18,"i28":18};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"],32:["t6","Deprecated Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -93,15 +93,16 @@ loadScripts(document, 'script');</script>
 </dl>
 <dl>
 <dt>All Known Subinterfaces:</dt>
-<dd><code><a href="IWorld.html" title="interface in net.minecraft.world">IWorld</a></code></dd>
+<dd><code><a href="ServerWorldAccess.html" title="interface in net.minecraft.world">ServerWorldAccess</a></code>, <code><a href="WorldAccess.html" title="interface in net.minecraft.world">WorldAccess</a></code></dd>
 </dl>
 <dl>
 <dt>All Known Implementing Classes:</dt>
-<dd><code><a href="ChunkRegion.html" title="class in net.minecraft.world">ChunkRegion</a></code>, <code><a href="../client/world/ClientWorld.html" title="class in net.minecraft.client.world">ClientWorld</a></code>, <code><a href="../server/world/SecondaryServerWorld.html" title="class in net.minecraft.server.world">SecondaryServerWorld</a></code>, <code><a href="../server/world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a></code>, <code><a href="World.html" title="class in net.minecraft.world">World</a></code></dd>
+<dd><code><a href="ChunkRegion.html" title="class in net.minecraft.world">ChunkRegion</a></code>, <code><a href="../client/world/ClientWorld.html" title="class in net.minecraft.client.world">ClientWorld</a></code>, <code><a href="../server/world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a></code>, <code><a href="World.html" title="class in net.minecraft.world">World</a></code></dd>
 </dl>
 <hr>
 <pre>public interface <span class="typeNameLabel">WorldView</span>
 extends <a href="BlockRenderView.html" title="interface in net.minecraft.world">BlockRenderView</a>, <a href="CollisionView.html" title="interface in net.minecraft.world">CollisionView</a>, <a href="biome/source/BiomeAccess.Storage.html" title="interface in net.minecraft.world.biome.source">BiomeAccess.Storage</a></pre>
+<div class="block">Represents a scoped, read-only view of a world like structure that contains biomes, chunks and is bound to a dimension.</div>
 </section>
 <section class="summary">
 <ul class="blockList">
@@ -190,7 +191,7 @@ boolean&nbsp;create)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i11">
-<td class="colFirst"><code><a href="dimension/Dimension.html" title="class in net.minecraft.world.dimension">Dimension</a></code></td>
+<td class="colFirst"><code><a href="dimension/DimensionType.html" title="class in net.minecraft.world.dimension">DimensionType</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getDimension()">getDimension</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -221,7 +222,9 @@ int&nbsp;ambientDarkness)</code></th>
 <tr class="altColor" id="i16">
 <td class="colFirst"><code>int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getSeaLevel()">getSeaLevel</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
+</td>
 </tr>
 <tr class="rowColor" id="i17">
 <td class="colFirst"><code>default int</code></td>
@@ -265,7 +268,9 @@ int&nbsp;chunkZ)</code></th>
 <tr class="rowColor" id="i23">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isClient()">isClient</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Checks if this world view is on the logical client.</div>
+</td>
 </tr>
 <tr class="altColor" id="i24">
 <td class="colFirst"><code>default boolean</code></td>
@@ -297,6 +302,11 @@ int&nbsp;maxZ)</code></th>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isWater(net.minecraft.util.math.BlockPos)">isWater</a></span>&#8203;(<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
+<tr class="altColor" id="i28">
+<td class="colFirst"><code>default <a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html?is-external=true" title="class or interface in java.util.stream" class="externalLink">Stream</a>&lt;<a href="../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_29556(net.minecraft.util.math.Box)">method_29556</a></span>&#8203;(<a href="../util/math/Box.html" title="class in net.minecraft.util.math">Box</a>&nbsp;box)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -310,12 +320,12 @@ int&nbsp;maxZ)</code></th>
 <h3>Methods inherited from interface&nbsp;net.minecraft.world.<a href="BlockView.html" title="interface in net.minecraft.world">BlockView</a></h3>
 <a id="methods.inherited.from.class.net.minecraft.world.BlockView">
 <!--   -->
-</a><code><a href="BlockView.html#getBlockEntity(net.minecraft.util.math.BlockPos)">getBlockEntity</a>, <a href="BlockView.html#getBlockState(net.minecraft.util.math.BlockPos)">getBlockState</a>, <a href="BlockView.html#getFluidState(net.minecraft.util.math.BlockPos)">getFluidState</a>, <a href="BlockView.html#getHeight()">getHeight</a>, <a href="BlockView.html#getLuminance(net.minecraft.util.math.BlockPos)">getLuminance</a>, <a href="BlockView.html#getMaxLightLevel()">getMaxLightLevel</a>, <a href="BlockView.html#rayTrace(net.minecraft.world.RayTraceContext)">rayTrace</a>, <a href="BlockView.html#rayTraceBlock(net.minecraft.util.math.Vec3d,net.minecraft.util.math.Vec3d,net.minecraft.util.math.BlockPos,net.minecraft.util.shape.VoxelShape,net.minecraft.block.BlockState)">rayTraceBlock</a></code></div>
+</a><code><a href="BlockView.html#getBlockEntity(net.minecraft.util.math.BlockPos)">getBlockEntity</a>, <a href="BlockView.html#getBlockState(net.minecraft.util.math.BlockPos)">getBlockState</a>, <a href="BlockView.html#getFluidState(net.minecraft.util.math.BlockPos)">getFluidState</a>, <a href="BlockView.html#getHeight()">getHeight</a>, <a href="BlockView.html#getLuminance(net.minecraft.util.math.BlockPos)">getLuminance</a>, <a href="BlockView.html#getMaxLightLevel()">getMaxLightLevel</a>, <a href="BlockView.html#method_29546(net.minecraft.util.math.Box)">method_29546</a>, <a href="BlockView.html#rayTrace(net.minecraft.world.RayTraceContext)">rayTrace</a>, <a href="BlockView.html#rayTraceBlock(net.minecraft.util.math.Vec3d,net.minecraft.util.math.Vec3d,net.minecraft.util.math.BlockPos,net.minecraft.util.shape.VoxelShape,net.minecraft.block.BlockState)">rayTraceBlock</a></code></div>
 <div class="inheritedList">
 <h3>Methods inherited from interface&nbsp;net.minecraft.world.<a href="CollisionView.html" title="interface in net.minecraft.world">CollisionView</a></h3>
 <a id="methods.inherited.from.class.net.minecraft.world.CollisionView">
 <!--   -->
-</a><code><a href="CollisionView.html#canPlace(net.minecraft.block.BlockState,net.minecraft.util.math.BlockPos,net.minecraft.block.ShapeContext)">canPlace</a>, <a href="CollisionView.html#doesNotCollide(net.minecraft.entity.Entity)">doesNotCollide</a>, <a href="CollisionView.html#doesNotCollide(net.minecraft.entity.Entity,net.minecraft.util.math.Box)">doesNotCollide</a>, <a href="CollisionView.html#doesNotCollide(net.minecraft.entity.Entity,net.minecraft.util.math.Box,java.util.function.Predicate)">doesNotCollide</a>, <a href="CollisionView.html#doesNotCollide(net.minecraft.util.math.Box)">doesNotCollide</a>, <a href="CollisionView.html#getBlockCollisions(net.minecraft.entity.Entity,net.minecraft.util.math.Box)">getBlockCollisions</a>, <a href="CollisionView.html#getCollisions(net.minecraft.entity.Entity,net.minecraft.util.math.Box,java.util.function.Predicate)">getCollisions</a>, <a href="CollisionView.html#getEntityCollisions(net.minecraft.entity.Entity,net.minecraft.util.math.Box,java.util.function.Predicate)">getEntityCollisions</a>, <a href="CollisionView.html#getWorldBorder()">getWorldBorder</a>, <a href="CollisionView.html#intersectsEntities(net.minecraft.entity.Entity)">intersectsEntities</a>, <a href="CollisionView.html#intersectsEntities(net.minecraft.entity.Entity,net.minecraft.util.shape.VoxelShape)">intersectsEntities</a></code></div>
+</a><code><a href="CollisionView.html#canPlace(net.minecraft.block.BlockState,net.minecraft.util.math.BlockPos,net.minecraft.block.ShapeContext)">canPlace</a>, <a href="CollisionView.html#doesNotCollide(net.minecraft.entity.Entity)">doesNotCollide</a>, <a href="CollisionView.html#doesNotCollide(net.minecraft.entity.Entity,net.minecraft.util.math.Box)">doesNotCollide</a>, <a href="CollisionView.html#doesNotCollide(net.minecraft.entity.Entity,net.minecraft.util.math.Box,java.util.function.Predicate)">doesNotCollide</a>, <a href="CollisionView.html#doesNotCollide(net.minecraft.util.math.Box)">doesNotCollide</a>, <a href="CollisionView.html#getBlockCollisions(net.minecraft.entity.Entity,net.minecraft.util.math.Box)">getBlockCollisions</a>, <a href="CollisionView.html#getCollisions(net.minecraft.entity.Entity,net.minecraft.util.math.Box,java.util.function.Predicate)">getCollisions</a>, <a href="CollisionView.html#getEntityCollisions(net.minecraft.entity.Entity,net.minecraft.util.math.Box,java.util.function.Predicate)">getEntityCollisions</a>, <a href="CollisionView.html#getWorldBorder()">getWorldBorder</a>, <a href="CollisionView.html#intersectsEntities(net.minecraft.entity.Entity)">intersectsEntities</a>, <a href="CollisionView.html#intersectsEntities(net.minecraft.entity.Entity,net.minecraft.util.shape.VoxelShape)">intersectsEntities</a>, <a href="CollisionView.html#method_30030(net.minecraft.entity.Entity,net.minecraft.util.math.Box,java.util.function.BiPredicate)">method_30030</a></code></div>
 </section>
 </li>
 </ul>
@@ -332,7 +342,7 @@ int&nbsp;maxZ)</code></th>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getChunk(int,int,net.minecraft.world.chunk.ChunkStatus,boolean)">getChunk</a></h3>
-<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 </span><span class="returnType"><a href="chunk/Chunk.html" title="interface in net.minecraft.world.chunk">Chunk</a></span>&nbsp;<span class="memberName">getChunk</span>&#8203;(<span class="arguments">int&nbsp;chunkX,
 int&nbsp;chunkZ,
 <a href="chunk/ChunkStatus.html" title="class in net.minecraft.world.chunk">ChunkStatus</a>&nbsp;leastStatus,
@@ -376,6 +386,12 @@ int&nbsp;z)</span></div>
 </li>
 <li class="blockList">
 <section class="detail">
+<h3><a id="method_29556(net.minecraft.util.math.Box)">method_29556</a></h3>
+<div class="memberSignature"><span class="modifiers">default</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html?is-external=true" title="class or interface in java.util.stream" class="externalLink">Stream</a>&lt;<a href="../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&gt;</span>&nbsp;<span class="memberName">method_29556</span>&#8203;(<span class="arguments"><a href="../util/math/Box.html" title="class in net.minecraft.util.math">Box</a>&nbsp;box)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="getColor(net.minecraft.util.math.BlockPos,net.minecraft.world.level.ColorResolver)">getColor</a></h3>
 <div class="memberSignature"><span class="annotations">@Environment(CLIENT)
 </span><span class="modifiers">default</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getColor</span>&#8203;(<span class="arguments"><a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
@@ -410,18 +426,23 @@ int&nbsp;biomeZ)</span></div>
 <section class="detail">
 <h3><a id="isClient()">isClient</a></h3>
 <div class="memberSignature"><span class="returnType">boolean</span>&nbsp;<span class="memberName">isClient</span>()</div>
+<div class="block">Checks if this world view is on the logical client.
+
+ <p>If the value returned is false, it is expected that this world is present on a logical server.</div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getSeaLevel()">getSeaLevel</a></h3>
-<div class="memberSignature"><span class="returnType">int</span>&nbsp;<span class="memberName">getSeaLevel</span>()</div>
+<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang" class="externalLink">@Deprecated</a>
+</span><span class="returnType">int</span>&nbsp;<span class="memberName">getSeaLevel</span>()</div>
+<div class="deprecationBlock"><span class="deprecatedLabel">Deprecated.</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getDimension()">getDimension</a></h3>
-<div class="memberSignature"><span class="returnType"><a href="dimension/Dimension.html" title="class in net.minecraft.world.dimension">Dimension</a></span>&nbsp;<span class="memberName">getDimension</span>()</div>
+<div class="memberSignature"><span class="returnType"><a href="dimension/DimensionType.html" title="class in net.minecraft.world.dimension">DimensionType</a></span>&nbsp;<span class="memberName">getDimension</span>()</div>
 </section>
 </li>
 <li class="blockList">
@@ -482,7 +503,7 @@ int&nbsp;chunkZ,
 <li class="blockList">
 <section class="detail">
 <h3><a id="getExistingChunk(int,int)">getExistingChunk</a></h3>
-<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 </span><span class="modifiers">default</span>&nbsp;<span class="returnType"><a href="BlockView.html" title="interface in net.minecraft.world">BlockView</a></span>&nbsp;<span class="memberName">getExistingChunk</span>&#8203;(<span class="arguments">int&nbsp;chunkX,
 int&nbsp;chunkZ)</span></div>
 <dl>

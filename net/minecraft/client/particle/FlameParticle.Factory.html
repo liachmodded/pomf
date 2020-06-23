@@ -56,13 +56,13 @@ loadScripts(document, 'script');</script>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
@@ -106,6 +106,33 @@ implements <a href="ParticleFactory.html" title="interface in net.minecraft.clie
 </section>
 <section class="summary">
 <ul class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<li class="blockList">
+<section class="fieldSummary"><a id="field.summary">
+<!--   -->
+</a>
+<h2>Field Summary</h2>
+<div class="memberSummary">
+<table>
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<thead>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colSecond" scope="col">Field</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="SpriteProvider.html" title="interface in net.minecraft.client.particle">SpriteProvider</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#spriteProvider">spriteProvider</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</li>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <li class="blockList">
 <section class="constructorSummary"><a id="constructor.summary">
@@ -151,8 +178,8 @@ implements <a href="ParticleFactory.html" title="interface in net.minecraft.clie
 <tbody>
 <tr class="altColor" id="i0">
 <td class="colFirst"><code><a href="Particle.html" title="class in net.minecraft.client.particle">Particle</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createParticle(net.minecraft.particle.DefaultParticleType,net.minecraft.world.World,double,double,double,double,double,double)">createParticle</a></span>&#8203;(<a href="../../particle/DefaultParticleType.html" title="class in net.minecraft.particle">DefaultParticleType</a>&nbsp;defaultParticleType,
-<a href="../../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createParticle(net.minecraft.particle.DefaultParticleType,net.minecraft.client.world.ClientWorld,double,double,double,double,double,double)">createParticle</a></span>&#8203;(<a href="../../particle/DefaultParticleType.html" title="class in net.minecraft.particle">DefaultParticleType</a>&nbsp;defaultParticleType,
+<a href="../world/ClientWorld.html" title="class in net.minecraft.client.world">ClientWorld</a>&nbsp;clientWorld,
 double&nbsp;double2,
 double&nbsp;double3,
 double&nbsp;double4,
@@ -176,6 +203,22 @@ double&nbsp;double7)</code></th>
 </section>
 <section class="details">
 <ul class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<li class="blockList">
+<section class="fieldDetails"><a id="field.detail">
+<!--   -->
+</a>
+<h2>Field Details</h2>
+<ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="spriteProvider">spriteProvider</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="SpriteProvider.html" title="interface in net.minecraft.client.particle">SpriteProvider</a></span>&nbsp;<span class="memberName">spriteProvider</span></div>
+</section>
+</li>
+</ul>
+</section>
+</li>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <li class="blockList">
 <section class="constructorDetails"><a id="constructor.detail">
@@ -201,9 +244,9 @@ double&nbsp;double7)</code></th>
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="createParticle(net.minecraft.particle.DefaultParticleType,net.minecraft.world.World,double,double,double,double,double,double)">createParticle</a></h3>
+<h3><a id="createParticle(net.minecraft.particle.DefaultParticleType,net.minecraft.client.world.ClientWorld,double,double,double,double,double,double)">createParticle</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="Particle.html" title="class in net.minecraft.client.particle">Particle</a></span>&nbsp;<span class="memberName">createParticle</span>&#8203;(<span class="arguments"><a href="../../particle/DefaultParticleType.html" title="class in net.minecraft.particle">DefaultParticleType</a>&nbsp;defaultParticleType,
-<a href="../../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world,
+<a href="../world/ClientWorld.html" title="class in net.minecraft.client.world">ClientWorld</a>&nbsp;clientWorld,
 double&nbsp;double2,
 double&nbsp;double3,
 double&nbsp;double4,
@@ -212,7 +255,7 @@ double&nbsp;double6,
 double&nbsp;double7)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="ParticleFactory.html#createParticle(T,net.minecraft.world.World,double,double,double,double,double,double)">createParticle</a></code>&nbsp;in interface&nbsp;<code><a href="ParticleFactory.html" title="interface in net.minecraft.client.particle">ParticleFactory</a>&lt;<a href="../../particle/DefaultParticleType.html" title="class in net.minecraft.particle">DefaultParticleType</a>&gt;</code></dd>
+<dd><code><a href="ParticleFactory.html#createParticle(T,net.minecraft.client.world.ClientWorld,double,double,double,double,double,double)">createParticle</a></code>&nbsp;in interface&nbsp;<code><a href="ParticleFactory.html" title="interface in net.minecraft.client.particle">ParticleFactory</a>&lt;<a href="../../particle/DefaultParticleType.html" title="class in net.minecraft.particle">DefaultParticleType</a>&gt;</code></dd>
 </dl>
 </section>
 </li>
@@ -249,13 +292,13 @@ double&nbsp;double7)</span></div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>

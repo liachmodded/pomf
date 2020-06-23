@@ -19,8 +19,8 @@
 <script type="text/javascript" src="../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":9,"i1":10,"i2":10,"i3":10,"i4":10};
-var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
+<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10};
+var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
@@ -56,13 +56,13 @@ loadScripts(document, 'script');</script>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
@@ -96,6 +96,58 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </section>
 <section class="summary">
 <ul class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<li class="blockList">
+<section class="fieldSummary"><a id="field.summary">
+<!--   -->
+</a>
+<h2>Field Summary</h2>
+<div class="memberSummary">
+<table>
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<thead>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colSecond" scope="col">Field</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>static com.mojang.serialization.Codec&lt;<a href="StructureProcessorRule.html" title="class in net.minecraft.structure.processor">StructureProcessorRule</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#CODEC">CODEC</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../rule/RuleTest.html" title="class in net.minecraft.structure.rule">RuleTest</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#inputPredicate">inputPredicate</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../rule/RuleTest.html" title="class in net.minecraft.structure.rule">RuleTest</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#locationPredicate">locationPredicate</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#outputState">outputState</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../rule/PosRuleTest.html" title="class in net.minecraft.structure.rule">PosRuleTest</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#positionPredicate">positionPredicate</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#tag">tag</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</li>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <li class="blockList">
 <section class="constructorSummary"><a id="constructor.summary">
@@ -119,11 +171,18 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.structure.rule.RuleTest,net.minecraft.structure.rule.RuleTest,net.minecraft.structure.rule.PosRuleTest,net.minecraft.block.BlockState,net.minecraft.nbt.CompoundTag)">StructureProcessorRule</a></span>&#8203;(<a href="../rule/RuleTest.html" title="class in net.minecraft.structure.rule">RuleTest</a>&nbsp;ruleTest,
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.structure.rule.RuleTest,net.minecraft.structure.rule.RuleTest,net.minecraft.structure.rule.PosRuleTest,net.minecraft.block.BlockState)">StructureProcessorRule</a></span>&#8203;(<a href="../rule/RuleTest.html" title="class in net.minecraft.structure.rule">RuleTest</a>&nbsp;ruleTest,
+<a href="../rule/RuleTest.html" title="class in net.minecraft.structure.rule">RuleTest</a>&nbsp;ruleTest2,
+<a href="../rule/PosRuleTest.html" title="class in net.minecraft.structure.rule">PosRuleTest</a>&nbsp;posRuleTest,
+<a href="../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.structure.rule.RuleTest,net.minecraft.structure.rule.RuleTest,net.minecraft.structure.rule.PosRuleTest,net.minecraft.block.BlockState,java.util.Optional)">StructureProcessorRule</a></span>&#8203;(<a href="../rule/RuleTest.html" title="class in net.minecraft.structure.rule">RuleTest</a>&nbsp;ruleTest,
 <a href="../rule/RuleTest.html" title="class in net.minecraft.structure.rule">RuleTest</a>&nbsp;ruleTest2,
 <a href="../rule/PosRuleTest.html" title="class in net.minecraft.structure.rule">PosRuleTest</a>&nbsp;posRuleTest,
 <a href="../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState,
-<a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;compoundTag)</code></th>
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util" class="externalLink">Optional</a>&lt;<a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&gt;&nbsp;optional)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -138,7 +197,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </a>
 <h2>Method Summary</h2>
 <div class="memberSummary">
-<div role="tablist" aria-orientation="horizontal"><button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t1" class="tableTab" onclick="show(1);">Static Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t2" class="tableTab" onclick="show(2);">Instance Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t4" class="tableTab" onclick="show(8);">Concrete Methods</button></div>
+<div role="tablist" aria-orientation="horizontal"><button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t2" class="tableTab" onclick="show(2);">Instance Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t4" class="tableTab" onclick="show(8);">Concrete Methods</button></div>
 <div id="memberSummary_tabpanel" role="tabpanel">
 <table aria-labelledby="t0">
 <thead>
@@ -150,21 +209,16 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </thead>
 <tbody>
 <tr class="altColor" id="i0">
-<td class="colFirst"><code>static &lt;T&gt;&nbsp;<a href="StructureProcessorRule.html" title="class in net.minecraft.structure.processor">StructureProcessorRule</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#fromDynamic(com.mojang.datafixers.Dynamic)">fromDynamic</a></span>&#8203;(com.mojang.datafixers.Dynamic&lt;T&gt;&nbsp;dynamic)</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="rowColor" id="i1">
 <td class="colFirst"><code><a href="../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getOutputState()">getOutputState</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i2">
+<tr class="rowColor" id="i1">
 <td class="colFirst"><code><a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getTag()">getTag</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i3">
+<tr class="altColor" id="i2">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#test(net.minecraft.block.BlockState,net.minecraft.block.BlockState,net.minecraft.util.math.BlockPos,net.minecraft.util.math.BlockPos,net.minecraft.util.math.BlockPos,java.util.Random)">test</a></span>&#8203;(<a href="../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;input,
 <a href="../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;location,
@@ -172,11 +226,6 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos2,
 <a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos3,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random)</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="altColor" id="i4">
-<td class="colFirst"><code>&lt;T&gt;&nbsp;com.mojang.datafixers.Dynamic&lt;T&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#toDynamic(com.mojang.datafixers.types.DynamicOps)">toDynamic</a></span>&#8203;(com.mojang.datafixers.types.DynamicOps&lt;T&gt;&nbsp;dynamicOps)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -194,6 +243,53 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </section>
 <section class="details">
 <ul class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<li class="blockList">
+<section class="fieldDetails"><a id="field.detail">
+<!--   -->
+</a>
+<h2>Field Details</h2>
+<ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="CODEC">CODEC</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType">com.mojang.serialization.Codec&lt;<a href="StructureProcessorRule.html" title="class in net.minecraft.structure.processor">StructureProcessorRule</a>&gt;</span>&nbsp;<span class="memberName">CODEC</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="inputPredicate">inputPredicate</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../rule/RuleTest.html" title="class in net.minecraft.structure.rule">RuleTest</a></span>&nbsp;<span class="memberName">inputPredicate</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="locationPredicate">locationPredicate</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../rule/RuleTest.html" title="class in net.minecraft.structure.rule">RuleTest</a></span>&nbsp;<span class="memberName">locationPredicate</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="positionPredicate">positionPredicate</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../rule/PosRuleTest.html" title="class in net.minecraft.structure.rule">PosRuleTest</a></span>&nbsp;<span class="memberName">positionPredicate</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="outputState">outputState</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a></span>&nbsp;<span class="memberName">outputState</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="tag">tag</a></h3>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a></span>&nbsp;<span class="memberName">tag</span></div>
+</section>
+</li>
+</ul>
+</section>
+</li>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <li class="blockList">
 <section class="constructorDetails"><a id="constructor.detail">
@@ -211,13 +307,21 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="&lt;init&gt;(net.minecraft.structure.rule.RuleTest,net.minecraft.structure.rule.RuleTest,net.minecraft.structure.rule.PosRuleTest,net.minecraft.block.BlockState,net.minecraft.nbt.CompoundTag)">StructureProcessorRule</a></h3>
+<h3><a id="&lt;init&gt;(net.minecraft.structure.rule.RuleTest,net.minecraft.structure.rule.RuleTest,net.minecraft.structure.rule.PosRuleTest,net.minecraft.block.BlockState)">StructureProcessorRule</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">StructureProcessorRule</span>&#8203;(<span class="arguments"><a href="../rule/RuleTest.html" title="class in net.minecraft.structure.rule">RuleTest</a>&nbsp;ruleTest,
+<a href="../rule/RuleTest.html" title="class in net.minecraft.structure.rule">RuleTest</a>&nbsp;ruleTest2,
+<a href="../rule/PosRuleTest.html" title="class in net.minecraft.structure.rule">PosRuleTest</a>&nbsp;posRuleTest,
+<a href="../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="&lt;init&gt;(net.minecraft.structure.rule.RuleTest,net.minecraft.structure.rule.RuleTest,net.minecraft.structure.rule.PosRuleTest,net.minecraft.block.BlockState,java.util.Optional)">StructureProcessorRule</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">StructureProcessorRule</span>&#8203;(<span class="arguments"><a href="../rule/RuleTest.html" title="class in net.minecraft.structure.rule">RuleTest</a>&nbsp;ruleTest,
 <a href="../rule/RuleTest.html" title="class in net.minecraft.structure.rule">RuleTest</a>&nbsp;ruleTest2,
 <a href="../rule/PosRuleTest.html" title="class in net.minecraft.structure.rule">PosRuleTest</a>&nbsp;posRuleTest,
 <a href="../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState,
-<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
-<a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;compoundTag)</span></div>
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util" class="externalLink">Optional</a>&lt;<a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&gt;&nbsp;optional)</span></div>
 </section>
 </li>
 </ul>
@@ -250,20 +354,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <section class="detail">
 <h3><a id="getTag()">getTag</a></h3>
-<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 </span><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a></span>&nbsp;<span class="memberName">getTag</span>()</div>
-</section>
-</li>
-<li class="blockList">
-<section class="detail">
-<h3><a id="toDynamic(com.mojang.datafixers.types.DynamicOps)">toDynamic</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="typeParameters">&lt;T&gt;</span>&nbsp;<span class="returnType">com.mojang.datafixers.Dynamic&lt;T&gt;</span>&nbsp;<span class="memberName">toDynamic</span>&#8203;(<span class="arguments">com.mojang.datafixers.types.DynamicOps&lt;T&gt;&nbsp;dynamicOps)</span></div>
-</section>
-</li>
-<li class="blockList">
-<section class="detail">
-<h3><a id="fromDynamic(com.mojang.datafixers.Dynamic)">fromDynamic</a></h3>
-<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="typeParameters">&lt;T&gt;</span>&nbsp;<span class="returnType"><a href="StructureProcessorRule.html" title="class in net.minecraft.structure.processor">StructureProcessorRule</a></span>&nbsp;<span class="memberName">fromDynamic</span>&#8203;(<span class="arguments">com.mojang.datafixers.Dynamic&lt;T&gt;&nbsp;dynamic)</span></div>
 </section>
 </li>
 </ul>
@@ -299,13 +391,13 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>

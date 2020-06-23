@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10};
+<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -118,6 +118,21 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#INSTANCE">INSTANCE</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static <a href="https://logging.apache.org/log4j/2.x/log4j-api/apidocs/org/apache/logging/log4j/Logger.html?is-external=true" title="class or interface in org.apache.logging.log4j" class="externalLink">Logger</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#LOGGER">LOGGER</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util" class="externalLink">Map</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang" class="externalLink">Class</a>&lt;?&gt;,&#8203;<a href="TimerCallback.Serializer.html" title="class in net.minecraft.world.timer">TimerCallback.Serializer</a>&lt;<a href="TimerCallbackSerializer.html" title="type parameter in TimerCallbackSerializer">C</a>,&#8203;?&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#serializersByClass">serializersByClass</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util" class="externalLink">Map</a>&lt;<a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>,&#8203;<a href="TimerCallback.Serializer.html" title="class in net.minecraft.world.timer">TimerCallback.Serializer</a>&lt;<a href="TimerCallbackSerializer.html" title="type parameter in TimerCallbackSerializer">C</a>,&#8203;?&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#serializersByType">serializersByType</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -172,11 +187,16 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
+<td class="colFirst"><code>private &lt;T extends <a href="TimerCallback.html" title="interface in net.minecraft.world.timer">TimerCallback</a>&lt;<a href="TimerCallbackSerializer.html" title="type parameter in TimerCallbackSerializer">C</a>&gt;&gt;<br><a href="TimerCallback.Serializer.html" title="class in net.minecraft.world.timer">TimerCallback.Serializer</a>&lt;<a href="TimerCallbackSerializer.html" title="type parameter in TimerCallbackSerializer">C</a>,&#8203;T&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getSerializer(java.lang.Class)">getSerializer</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang" class="externalLink">Class</a>&lt;?&gt;&nbsp;class2)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i2">
 <td class="colFirst"><code><a href="TimerCallbackSerializer.html" title="class in net.minecraft.world.timer">TimerCallbackSerializer</a>&lt;<a href="TimerCallbackSerializer.html" title="type parameter in TimerCallbackSerializer">C</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#registerSerializer(net.minecraft.world.timer.TimerCallback.Serializer)">registerSerializer</a></span>&#8203;(<a href="TimerCallback.Serializer.html" title="class in net.minecraft.world.timer">TimerCallback.Serializer</a>&lt;<a href="TimerCallbackSerializer.html" title="type parameter in TimerCallbackSerializer">C</a>,&#8203;?&gt;&nbsp;serializer)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i2">
+<tr class="rowColor" id="i3">
 <td class="colFirst"><code>&lt;T extends <a href="TimerCallback.html" title="interface in net.minecraft.world.timer">TimerCallback</a>&lt;<a href="TimerCallbackSerializer.html" title="type parameter in TimerCallbackSerializer">C</a>&gt;&gt;<br><a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#serialize(T)">serialize</a></span>&#8203;(T&nbsp;callback)</code></th>
 <td class="colLast">&nbsp;</td>
@@ -205,8 +225,26 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
+<h3><a id="LOGGER">LOGGER</a></h3>
+<div class="memberSignature"><span class="modifiers">private static final</span>&nbsp;<span class="returnType"><a href="https://logging.apache.org/log4j/2.x/log4j-api/apidocs/org/apache/logging/log4j/Logger.html?is-external=true" title="class or interface in org.apache.logging.log4j" class="externalLink">Logger</a></span>&nbsp;<span class="memberName">LOGGER</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="INSTANCE">INSTANCE</a></h3>
 <div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="TimerCallbackSerializer.html" title="class in net.minecraft.world.timer">TimerCallbackSerializer</a>&lt;<a href="../../server/MinecraftServer.html" title="class in net.minecraft.server">MinecraftServer</a>&gt;</span>&nbsp;<span class="memberName">INSTANCE</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="serializersByType">serializersByType</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util" class="externalLink">Map</a>&lt;<a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>,&#8203;<a href="TimerCallback.Serializer.html" title="class in net.minecraft.world.timer">TimerCallback.Serializer</a>&lt;<a href="TimerCallbackSerializer.html" title="type parameter in TimerCallbackSerializer">C</a>,&#8203;?&gt;&gt;</span>&nbsp;<span class="memberName">serializersByType</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="serializersByClass">serializersByClass</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util" class="externalLink">Map</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang" class="externalLink">Class</a>&lt;?&gt;,&#8203;<a href="TimerCallback.Serializer.html" title="class in net.minecraft.world.timer">TimerCallback.Serializer</a>&lt;<a href="TimerCallbackSerializer.html" title="type parameter in TimerCallbackSerializer">C</a>,&#8203;?&gt;&gt;</span>&nbsp;<span class="memberName">serializersByClass</span></div>
 </section>
 </li>
 </ul>
@@ -243,6 +281,13 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </li>
 <li class="blockList">
 <section class="detail">
+<h3><a id="getSerializer(java.lang.Class)">getSerializer</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="typeParameters">&lt;T extends <a href="TimerCallback.html" title="interface in net.minecraft.world.timer">TimerCallback</a>&lt;<a href="TimerCallbackSerializer.html" title="type parameter in TimerCallbackSerializer">C</a>&gt;&gt;</span>
+<span class="returnType"><a href="TimerCallback.Serializer.html" title="class in net.minecraft.world.timer">TimerCallback.Serializer</a>&lt;<a href="TimerCallbackSerializer.html" title="type parameter in TimerCallbackSerializer">C</a>,&#8203;T&gt;</span>&nbsp;<span class="memberName">getSerializer</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang" class="externalLink">Class</a>&lt;?&gt;&nbsp;class2)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="serialize(net.minecraft.world.timer.TimerCallback)">
 <!--   -->
 </a><a id="serialize(T)">serialize</a></h3>
@@ -252,7 +297,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <section class="detail">
 <h3><a id="deserialize(net.minecraft.nbt.CompoundTag)">deserialize</a></h3>
-<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 </span><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="TimerCallback.html" title="interface in net.minecraft.world.timer">TimerCallback</a>&lt;<a href="TimerCallbackSerializer.html" title="type parameter in TimerCallbackSerializer">C</a>&gt;</span>&nbsp;<span class="memberName">deserialize</span>&#8203;(<span class="arguments"><a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;tag)</span></div>
 </section>
 </li>

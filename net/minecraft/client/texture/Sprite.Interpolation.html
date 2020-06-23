@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":10};
+<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -56,14 +56,14 @@ loadScripts(document, 'script');</script>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
 </div>
@@ -106,6 +106,61 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/AutoClos
 </section>
 <section class="summary">
 <ul class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<li class="blockList">
+<section class="fieldSummary"><a id="field.summary">
+<!--   -->
+</a>
+<h2>Field Summary</h2>
+<div class="memberSummary">
+<table>
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<thead>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colSecond" scope="col">Field</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="NativeImage.html" title="class in net.minecraft.client.texture">NativeImage</a>[]</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#images">images</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</li>
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<li class="blockList">
+<section class="constructorSummary"><a id="constructor.summary">
+<!--   -->
+</a>
+<h2>Constructor Summary</h2>
+<div class="memberSummary">
+<table>
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<thead>
+<tr>
+<th class="colFirst" scope="col">Modifier</th>
+<th class="colSecond" scope="col">Constructor</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private </code></td>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.client.texture.Sprite.Info,int)">Interpolation</a></span>&#8203;(<a href="Sprite.Info.html" title="class in net.minecraft.client.texture">Sprite.Info</a>&nbsp;info,
+int&nbsp;mipmap)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</li>
 <!-- ========== METHOD SUMMARY =========== -->
 <li class="blockList">
 <section class="methodSummary"><a id="method.summary">
@@ -125,9 +180,37 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/AutoClos
 </thead>
 <tbody>
 <tr class="altColor" id="i0">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#apply()">apply</a></span>()</code></th>
+<td class="colLast">
+<div class="block">Linearly interpolate between the current and next frame on all miplevels
+ based on the tick position within the current frame,
+ and upload the results to the currently bound texture to the frame slot at position (0,0).</div>
+</td>
+</tr>
+<tr class="rowColor" id="i1">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#close()">close</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i2">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPixelColor(int,int,int,int)">getPixelColor</a></span>&#8203;(int&nbsp;frameIndex,
+int&nbsp;layer,
+int&nbsp;x,
+int&nbsp;y)</code></th>
+<td class="colLast">
+<div class="block">Returns the pixel color at frame <code>frameIndex</code> within mipmap <code>layer</code> at sprite relative coordinates.</div>
+</td>
+</tr>
+<tr class="rowColor" id="i3">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#lerp(double,int,int)">lerp</a></span>&#8203;(double&nbsp;delta,
+int&nbsp;to,
+int&nbsp;from)</code></th>
+<td class="colLast">
+<div class="block">Purely mathematical single-value linear interpolation.</div>
+</td>
 </tr>
 </tbody>
 </table>
@@ -144,6 +227,39 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/AutoClos
 </section>
 <section class="details">
 <ul class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<li class="blockList">
+<section class="fieldDetails"><a id="field.detail">
+<!--   -->
+</a>
+<h2>Field Details</h2>
+<ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="images">images</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="NativeImage.html" title="class in net.minecraft.client.texture">NativeImage</a>[]</span>&nbsp;<span class="memberName">images</span></div>
+</section>
+</li>
+</ul>
+</section>
+</li>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<li class="blockList">
+<section class="constructorDetails"><a id="constructor.detail">
+<!--   -->
+</a>
+<h2>Constructor Details</h2>
+<ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="&lt;init&gt;(net.minecraft.client.texture.Sprite.Info,int)">Interpolation</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="memberName">Interpolation</span>&#8203;(<span class="arguments"><a href="Sprite.Info.html" title="class in net.minecraft.client.texture">Sprite.Info</a>&nbsp;info,
+int&nbsp;mipmap)</span></div>
+</section>
+</li>
+</ul>
+</section>
+</li>
 <!-- ============ METHOD DETAIL ========== -->
 <li class="blockList">
 <section class="methodDetails"><a id="method.detail">
@@ -151,6 +267,35 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/AutoClos
 </a>
 <h2>Method Details</h2>
 <ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="apply()">apply</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">apply</span>()</div>
+<div class="block">Linearly interpolate between the current and next frame on all miplevels
+ based on the tick position within the current frame,
+ and upload the results to the currently bound texture to the frame slot at position (0,0).</div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="getPixelColor(int,int,int,int)">getPixelColor</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getPixelColor</span>&#8203;(<span class="arguments">int&nbsp;frameIndex,
+int&nbsp;layer,
+int&nbsp;x,
+int&nbsp;y)</span></div>
+<div class="block">Returns the pixel color at frame <code>frameIndex</code> within mipmap <code>layer</code> at sprite relative coordinates.</div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="lerp(double,int,int)">lerp</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">lerp</span>&#8203;(<span class="arguments">double&nbsp;delta,
+int&nbsp;to,
+int&nbsp;from)</span></div>
+<div class="block">Purely mathematical single-value linear interpolation.
+ <code>lerp(0, a, b) == b</code>, <code>lerp(1, a, b) == a</code>.</div>
+</section>
+</li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="close()">close</a></h3>
@@ -194,14 +339,14 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/AutoClos
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
 </div>

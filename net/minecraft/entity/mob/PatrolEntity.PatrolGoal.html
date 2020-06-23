@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10};
+<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -56,13 +56,13 @@ loadScripts(document, 'script');</script>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested.class.summary">Nested</a>&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
@@ -115,6 +115,48 @@ extends <a href="../ai/goal/Goal.html" title="class in net.minecraft.entity.ai.g
 </a><code><a href="../ai/goal/Goal.Control.html" title="enum in net.minecraft.entity.ai.goal">Goal.Control</a></code></div>
 </section>
 </li>
+<!-- =========== FIELD SUMMARY =========== -->
+<li class="blockList">
+<section class="fieldSummary"><a id="field.summary">
+<!--   -->
+</a>
+<h2>Field Summary</h2>
+<div class="memberSummary">
+<table>
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<thead>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colSecond" scope="col">Field</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="PatrolEntity.PatrolGoal.html" title="type parameter in PatrolEntity.PatrolGoal">T</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#entity">entity</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private double</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#followSpeed">followSpeed</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private double</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#leaderSpeed">leaderSpeed</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private long</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#nextPatrolSearchTime">nextPatrolSearchTime</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</li>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <li class="blockList">
 <section class="constructorSummary"><a id="constructor.summary">
@@ -132,9 +174,9 @@ extends <a href="../ai/goal/Goal.html" title="class in net.minecraft.entity.ai.g
 </thead>
 <tbody>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(T,double,double)">PatrolGoal</a></span>&#8203;(<a href="PatrolEntity.PatrolGoal.html" title="type parameter in PatrolEntity.PatrolGoal">T</a>&nbsp;actor,
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(T,double,double)">PatrolGoal</a></span>&#8203;(<a href="PatrolEntity.PatrolGoal.html" title="type parameter in PatrolEntity.PatrolGoal">T</a>&nbsp;entity,
 double&nbsp;leaderSpeed,
-double&nbsp;fellowSpeed)</code></th>
+double&nbsp;followSpeed)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -166,18 +208,28 @@ double&nbsp;fellowSpeed)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
-<td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#start()">start</a></span>()</code></th>
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="PatrolEntity.html" title="class in net.minecraft.entity.mob">PatrolEntity</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#findPatrolTargets()">findPatrolTargets</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i2">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#stop()">stop</a></span>()</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#start()">start</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i3">
 <td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#stop()">stop</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i4">
+<td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#tick()">tick</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i5">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#wander()">wander</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -200,6 +252,40 @@ double&nbsp;fellowSpeed)</code></th>
 </section>
 <section class="details">
 <ul class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<li class="blockList">
+<section class="fieldDetails"><a id="field.detail">
+<!--   -->
+</a>
+<h2>Field Details</h2>
+<ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="entity">entity</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="PatrolEntity.PatrolGoal.html" title="type parameter in PatrolEntity.PatrolGoal">T</a> extends <a href="PatrolEntity.html" title="class in net.minecraft.entity.mob">PatrolEntity</a></span>&nbsp;<span class="memberName">entity</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="leaderSpeed">leaderSpeed</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType">double</span>&nbsp;<span class="memberName">leaderSpeed</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="followSpeed">followSpeed</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType">double</span>&nbsp;<span class="memberName">followSpeed</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="nextPatrolSearchTime">nextPatrolSearchTime</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">long</span>&nbsp;<span class="memberName">nextPatrolSearchTime</span></div>
+</section>
+</li>
+</ul>
+</section>
+</li>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <li class="blockList">
 <section class="constructorDetails"><a id="constructor.detail">
@@ -212,9 +298,9 @@ double&nbsp;fellowSpeed)</code></th>
 <h3><a id="&lt;init&gt;(net.minecraft.entity.mob.PatrolEntity,double,double)">
 <!--   -->
 </a><a id="&lt;init&gt;(T,double,double)">PatrolGoal</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">PatrolGoal</span>&#8203;(<span class="arguments"><a href="PatrolEntity.PatrolGoal.html" title="type parameter in PatrolEntity.PatrolGoal">T</a>&nbsp;actor,
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">PatrolGoal</span>&#8203;(<span class="arguments"><a href="PatrolEntity.PatrolGoal.html" title="type parameter in PatrolEntity.PatrolGoal">T</a>&nbsp;entity,
 double&nbsp;leaderSpeed,
-double&nbsp;fellowSpeed)</span></div>
+double&nbsp;followSpeed)</span></div>
 </section>
 </li>
 </ul>
@@ -267,6 +353,18 @@ double&nbsp;fellowSpeed)</span></div>
 </dl>
 </section>
 </li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="findPatrolTargets()">findPatrolTargets</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="PatrolEntity.html" title="class in net.minecraft.entity.mob">PatrolEntity</a>&gt;</span>&nbsp;<span class="memberName">findPatrolTargets</span>()</div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="wander()">wander</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">wander</span>()</div>
+</section>
+</li>
 </ul>
 </section>
 </li>
@@ -300,13 +398,13 @@ double&nbsp;fellowSpeed)</span></div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested.class.summary">Nested</a>&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>

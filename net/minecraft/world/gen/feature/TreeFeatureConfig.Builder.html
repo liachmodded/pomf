@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":10,"i1":10};
+<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -91,10 +91,6 @@ loadScripts(document, 'script');</script>
 </div>
 <section class="description">
 <dl>
-<dt>Direct Known Subclasses:</dt>
-<dd><code><a href="BranchedTreeFeatureConfig.Builder.html" title="class in net.minecraft.world.gen.feature">BranchedTreeFeatureConfig.Builder</a></code>, <code><a href="MegaTreeFeatureConfig.Builder.html" title="class in net.minecraft.world.gen.feature">MegaTreeFeatureConfig.Builder</a></code></dd>
-</dl>
-<dl>
 <dt>Enclosing class:</dt>
 <dd><a href="TreeFeatureConfig.html" title="class in net.minecraft.world.gen.feature">TreeFeatureConfig</a></dd>
 </dl>
@@ -122,11 +118,46 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </thead>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../decorator/TreeDecorator.html" title="class in net.minecraft.world.gen.decorator">TreeDecorator</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#decorators">decorators</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../foliage/FoliagePlacer.html" title="class in net.minecraft.world.gen.foliage">FoliagePlacer</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#foliagePlacer">foliagePlacer</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../Heightmap.Type.html" title="enum in net.minecraft.world">Heightmap.Type</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#heightmap">heightmap</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#ignoreVines">ignoreVines</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code><a href="../stateprovider/BlockStateProvider.html" title="class in net.minecraft.world.gen.stateprovider">BlockStateProvider</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#leavesProvider">leavesProvider</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#maxWaterDepth">maxWaterDepth</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="size/FeatureSize.html" title="class in net.minecraft.world.gen.feature.size">FeatureSize</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#minimumSize">minimumSize</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../trunk/TrunkPlacer.html" title="class in net.minecraft.world.gen.trunk">TrunkPlacer</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#trunkPlacer">trunkPlacer</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code><a href="../stateprovider/BlockStateProvider.html" title="class in net.minecraft.world.gen.stateprovider">BlockStateProvider</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#trunkProvider">trunkProvider</a></span></code></th>
 <td class="colLast">&nbsp;</td>
@@ -153,8 +184,11 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </thead>
 <tbody>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.world.gen.stateprovider.BlockStateProvider,net.minecraft.world.gen.stateprovider.BlockStateProvider)">Builder</a></span>&#8203;(<a href="../stateprovider/BlockStateProvider.html" title="class in net.minecraft.world.gen.stateprovider">BlockStateProvider</a>&nbsp;trunkProvider,
-<a href="../stateprovider/BlockStateProvider.html" title="class in net.minecraft.world.gen.stateprovider">BlockStateProvider</a>&nbsp;leavesProvider)</code></th>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.world.gen.stateprovider.BlockStateProvider,net.minecraft.world.gen.stateprovider.BlockStateProvider,net.minecraft.world.gen.foliage.FoliagePlacer,net.minecraft.world.gen.trunk.TrunkPlacer,net.minecraft.world.gen.feature.size.FeatureSize)">Builder</a></span>&#8203;(<a href="../stateprovider/BlockStateProvider.html" title="class in net.minecraft.world.gen.stateprovider">BlockStateProvider</a>&nbsp;trunkProvider,
+<a href="../stateprovider/BlockStateProvider.html" title="class in net.minecraft.world.gen.stateprovider">BlockStateProvider</a>&nbsp;leavesProvider,
+<a href="../foliage/FoliagePlacer.html" title="class in net.minecraft.world.gen.foliage">FoliagePlacer</a>&nbsp;foliagePlacer,
+<a href="../trunk/TrunkPlacer.html" title="class in net.minecraft.world.gen.trunk">TrunkPlacer</a>&nbsp;trunkPlacer,
+<a href="size/FeatureSize.html" title="class in net.minecraft.world.gen.feature.size">FeatureSize</a>&nbsp;minimumSize)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -181,13 +215,28 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </thead>
 <tbody>
 <tr class="altColor" id="i0">
-<td class="colFirst"><code><a href="TreeFeatureConfig.Builder.html" title="class in net.minecraft.world.gen.feature">TreeFeatureConfig.Builder</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#baseHeight(int)">baseHeight</a></span>&#8203;(int&nbsp;baseHeight)</code></th>
+<td class="colFirst"><code><a href="TreeFeatureConfig.html" title="class in net.minecraft.world.gen.feature">TreeFeatureConfig</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#build()">build</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
-<td class="colFirst"><code><a href="TreeFeatureConfig.html" title="class in net.minecraft.world.gen.feature">TreeFeatureConfig</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#build()">build</a></span>()</code></th>
+<td class="colFirst"><code><a href="TreeFeatureConfig.Builder.html" title="class in net.minecraft.world.gen.feature">TreeFeatureConfig.Builder</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#decorators(java.util.List)">decorators</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../decorator/TreeDecorator.html" title="class in net.minecraft.world.gen.decorator">TreeDecorator</a>&gt;&nbsp;decorators)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i2">
+<td class="colFirst"><code><a href="TreeFeatureConfig.Builder.html" title="class in net.minecraft.world.gen.feature">TreeFeatureConfig.Builder</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#heightmap(net.minecraft.world.Heightmap.Type)">heightmap</a></span>&#8203;(<a href="../../Heightmap.Type.html" title="enum in net.minecraft.world">Heightmap.Type</a>&nbsp;heightmap)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i3">
+<td class="colFirst"><code><a href="TreeFeatureConfig.Builder.html" title="class in net.minecraft.world.gen.feature">TreeFeatureConfig.Builder</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#ignoreVines()">ignoreVines</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i4">
+<td class="colFirst"><code><a href="TreeFeatureConfig.Builder.html" title="class in net.minecraft.world.gen.feature">TreeFeatureConfig.Builder</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#maxWaterDepth(int)">maxWaterDepth</a></span>&#8203;(int&nbsp;maxWaterDepth)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -224,6 +273,48 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="memberSignature"><span class="modifiers">public final</span>&nbsp;<span class="returnType"><a href="../stateprovider/BlockStateProvider.html" title="class in net.minecraft.world.gen.stateprovider">BlockStateProvider</a></span>&nbsp;<span class="memberName">leavesProvider</span></div>
 </section>
 </li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="foliagePlacer">foliagePlacer</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../foliage/FoliagePlacer.html" title="class in net.minecraft.world.gen.foliage">FoliagePlacer</a></span>&nbsp;<span class="memberName">foliagePlacer</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="trunkPlacer">trunkPlacer</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../trunk/TrunkPlacer.html" title="class in net.minecraft.world.gen.trunk">TrunkPlacer</a></span>&nbsp;<span class="memberName">trunkPlacer</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="minimumSize">minimumSize</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="size/FeatureSize.html" title="class in net.minecraft.world.gen.feature.size">FeatureSize</a></span>&nbsp;<span class="memberName">minimumSize</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="decorators">decorators</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../decorator/TreeDecorator.html" title="class in net.minecraft.world.gen.decorator">TreeDecorator</a>&gt;</span>&nbsp;<span class="memberName">decorators</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="maxWaterDepth">maxWaterDepth</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">maxWaterDepth</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="ignoreVines">ignoreVines</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">ignoreVines</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="heightmap">heightmap</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="../../Heightmap.Type.html" title="enum in net.minecraft.world">Heightmap.Type</a></span>&nbsp;<span class="memberName">heightmap</span></div>
+</section>
+</li>
 </ul>
 </section>
 </li>
@@ -236,9 +327,12 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="&lt;init&gt;(net.minecraft.world.gen.stateprovider.BlockStateProvider,net.minecraft.world.gen.stateprovider.BlockStateProvider)">Builder</a></h3>
+<h3><a id="&lt;init&gt;(net.minecraft.world.gen.stateprovider.BlockStateProvider,net.minecraft.world.gen.stateprovider.BlockStateProvider,net.minecraft.world.gen.foliage.FoliagePlacer,net.minecraft.world.gen.trunk.TrunkPlacer,net.minecraft.world.gen.feature.size.FeatureSize)">Builder</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">Builder</span>&#8203;(<span class="arguments"><a href="../stateprovider/BlockStateProvider.html" title="class in net.minecraft.world.gen.stateprovider">BlockStateProvider</a>&nbsp;trunkProvider,
-<a href="../stateprovider/BlockStateProvider.html" title="class in net.minecraft.world.gen.stateprovider">BlockStateProvider</a>&nbsp;leavesProvider)</span></div>
+<a href="../stateprovider/BlockStateProvider.html" title="class in net.minecraft.world.gen.stateprovider">BlockStateProvider</a>&nbsp;leavesProvider,
+<a href="../foliage/FoliagePlacer.html" title="class in net.minecraft.world.gen.foliage">FoliagePlacer</a>&nbsp;foliagePlacer,
+<a href="../trunk/TrunkPlacer.html" title="class in net.minecraft.world.gen.trunk">TrunkPlacer</a>&nbsp;trunkPlacer,
+<a href="size/FeatureSize.html" title="class in net.minecraft.world.gen.feature.size">FeatureSize</a>&nbsp;minimumSize)</span></div>
 </section>
 </li>
 </ul>
@@ -253,8 +347,26 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="baseHeight(int)">baseHeight</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="TreeFeatureConfig.Builder.html" title="class in net.minecraft.world.gen.feature">TreeFeatureConfig.Builder</a></span>&nbsp;<span class="memberName">baseHeight</span>&#8203;(<span class="arguments">int&nbsp;baseHeight)</span></div>
+<h3><a id="decorators(java.util.List)">decorators</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="TreeFeatureConfig.Builder.html" title="class in net.minecraft.world.gen.feature">TreeFeatureConfig.Builder</a></span>&nbsp;<span class="memberName">decorators</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../decorator/TreeDecorator.html" title="class in net.minecraft.world.gen.decorator">TreeDecorator</a>&gt;&nbsp;decorators)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="maxWaterDepth(int)">maxWaterDepth</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="TreeFeatureConfig.Builder.html" title="class in net.minecraft.world.gen.feature">TreeFeatureConfig.Builder</a></span>&nbsp;<span class="memberName">maxWaterDepth</span>&#8203;(<span class="arguments">int&nbsp;maxWaterDepth)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="ignoreVines()">ignoreVines</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="TreeFeatureConfig.Builder.html" title="class in net.minecraft.world.gen.feature">TreeFeatureConfig.Builder</a></span>&nbsp;<span class="memberName">ignoreVines</span>()</div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="heightmap(net.minecraft.world.Heightmap.Type)">heightmap</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="TreeFeatureConfig.Builder.html" title="class in net.minecraft.world.gen.feature">TreeFeatureConfig.Builder</a></span>&nbsp;<span class="memberName">heightmap</span>&#8203;(<span class="arguments"><a href="../../Heightmap.Type.html" title="enum in net.minecraft.world">Heightmap.Type</a>&nbsp;heightmap)</span></div>
 </section>
 </li>
 <li class="blockList">

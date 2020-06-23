@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":10,"i1":10};
+<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -126,7 +126,7 @@ extends <a href="../widget/AlwaysSelectedEntryListWidget.Entry.html" title="clas
 </thead>
 <tbody>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.client.gui.screen.PresetsScreen.SuperflatPresetsListWidget)">SuperflatPresetEntry</a></span>&#8203;(<a href="PresetsScreen.SuperflatPresetsListWidget.html" title="class in net.minecraft.client.gui.screen">PresetsScreen.SuperflatPresetsListWidget</a>&nbsp;superflatPresetsListWidget)</code></th>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E()">SuperflatPresetEntry</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -153,23 +153,44 @@ extends <a href="../widget/AlwaysSelectedEntryListWidget.Entry.html" title="clas
 </thead>
 <tbody>
 <tr class="altColor" id="i0">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_2198(net.minecraft.client.util.math.MatrixStack,int,int)">method_2198</a></span>&#8203;(<a href="../../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrixStack,
+int&nbsp;int2,
+int&nbsp;int3)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i1">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_2200(net.minecraft.client.util.math.MatrixStack,int,int,net.minecraft.item.Item)">method_2200</a></span>&#8203;(<a href="../../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrixStack,
+int&nbsp;int2,
+int&nbsp;int3,
+<a href="../../../item/Item.html" title="class in net.minecraft.item">Item</a>&nbsp;item)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i2">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#mouseClicked(double,double,int)">mouseClicked</a></span>&#8203;(double&nbsp;mouseX,
 double&nbsp;mouseY,
 int&nbsp;button)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i1">
+<tr class="rowColor" id="i3">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#render(int,int,int,int,int,int,int,boolean,float)">render</a></span>&#8203;(int&nbsp;index,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#render(net.minecraft.client.util.math.MatrixStack,int,int,int,int,int,int,int,boolean,float)">render</a></span>&#8203;(<a href="../../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
+int&nbsp;index,
 int&nbsp;y,
 int&nbsp;x,
-int&nbsp;width,
-int&nbsp;height,
+int&nbsp;entryWidth,
+int&nbsp;entryHeight,
 int&nbsp;mouseX,
 int&nbsp;mouseY,
-boolean&nbsp;hovering,
-float&nbsp;delta)</code></th>
+boolean&nbsp;hovered,
+float&nbsp;tickDelta)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i4">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setPreset()">setPreset</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -211,8 +232,8 @@ float&nbsp;delta)</code></th>
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="&lt;init&gt;(net.minecraft.client.gui.screen.PresetsScreen.SuperflatPresetsListWidget)">SuperflatPresetEntry</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">SuperflatPresetEntry</span>&#8203;(<span class="arguments"><a href="PresetsScreen.SuperflatPresetsListWidget.html" title="class in net.minecraft.client.gui.screen">PresetsScreen.SuperflatPresetsListWidget</a>&nbsp;superflatPresetsListWidget)</span></div>
+<h3><a id="&lt;init&gt;()">SuperflatPresetEntry</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">SuperflatPresetEntry</span>()</div>
 </section>
 </li>
 </ul>
@@ -227,19 +248,20 @@ float&nbsp;delta)</code></th>
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="render(int,int,int,int,int,int,int,boolean,float)">render</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">render</span>&#8203;(<span class="arguments">int&nbsp;index,
+<h3><a id="render(net.minecraft.client.util.math.MatrixStack,int,int,int,int,int,int,int,boolean,float)">render</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">render</span>&#8203;(<span class="arguments"><a href="../../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
+int&nbsp;index,
 int&nbsp;y,
 int&nbsp;x,
-int&nbsp;width,
-int&nbsp;height,
+int&nbsp;entryWidth,
+int&nbsp;entryHeight,
 int&nbsp;mouseX,
 int&nbsp;mouseY,
-boolean&nbsp;hovering,
-float&nbsp;delta)</span></div>
+boolean&nbsp;hovered,
+float&nbsp;tickDelta)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../widget/EntryListWidget.Entry.html#render(int,int,int,int,int,int,int,boolean,float)">render</a></code>&nbsp;in class&nbsp;<code><a href="../widget/EntryListWidget.Entry.html" title="class in net.minecraft.client.gui.widget">EntryListWidget.Entry</a>&lt;<a href="PresetsScreen.SuperflatPresetsListWidget.SuperflatPresetEntry.html" title="class in net.minecraft.client.gui.screen">PresetsScreen.SuperflatPresetsListWidget.SuperflatPresetEntry</a>&gt;</code></dd>
+<dd><code><a href="../widget/EntryListWidget.Entry.html#render(net.minecraft.client.util.math.MatrixStack,int,int,int,int,int,int,int,boolean,float)">render</a></code>&nbsp;in class&nbsp;<code><a href="../widget/EntryListWidget.Entry.html" title="class in net.minecraft.client.gui.widget">EntryListWidget.Entry</a>&lt;<a href="PresetsScreen.SuperflatPresetsListWidget.SuperflatPresetEntry.html" title="class in net.minecraft.client.gui.screen">PresetsScreen.SuperflatPresetsListWidget.SuperflatPresetEntry</a>&gt;</code></dd>
 </dl>
 </section>
 </li>
@@ -249,6 +271,29 @@ float&nbsp;delta)</span></div>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">mouseClicked</span>&#8203;(<span class="arguments">double&nbsp;mouseX,
 double&nbsp;mouseY,
 int&nbsp;button)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="setPreset()">setPreset</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setPreset</span>()</div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="method_2200(net.minecraft.client.util.math.MatrixStack,int,int,net.minecraft.item.Item)">method_2200</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">method_2200</span>&#8203;(<span class="arguments"><a href="../../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrixStack,
+int&nbsp;int2,
+int&nbsp;int3,
+<a href="../../../item/Item.html" title="class in net.minecraft.item">Item</a>&nbsp;item)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="method_2198(net.minecraft.client.util.math.MatrixStack,int,int)">method_2198</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">method_2198</span>&#8203;(<span class="arguments"><a href="../../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrixStack,
+int&nbsp;int2,
+int&nbsp;int3)</span></div>
 </section>
 </li>
 </ul>

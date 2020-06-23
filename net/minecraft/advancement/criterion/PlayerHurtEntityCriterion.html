@@ -56,13 +56,13 @@ loadScripts(document, 'script');</script>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested.class.summary">Nested</a>&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
@@ -134,6 +134,33 @@ extends <a href="AbstractCriterion.html" title="class in net.minecraft.advanceme
 </a><code><a href="Criterion.ConditionsContainer.html" title="class in net.minecraft.advancement.criterion">Criterion.ConditionsContainer</a>&lt;<a href="Criterion.ConditionsContainer.html" title="type parameter in Criterion.ConditionsContainer">T</a> extends <a href="CriterionConditions.html" title="interface in net.minecraft.advancement.criterion">CriterionConditions</a>&gt;</code></div>
 </section>
 </li>
+<!-- =========== FIELD SUMMARY =========== -->
+<li class="blockList">
+<section class="fieldSummary"><a id="field.summary">
+<!--   -->
+</a>
+<h2>Field Summary</h2>
+<div class="memberSummary">
+<table>
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<thead>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colSecond" scope="col">Field</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#ID">ID</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</li>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <li class="blockList">
 <section class="constructorSummary"><a id="constructor.summary">
@@ -179,8 +206,9 @@ extends <a href="AbstractCriterion.html" title="class in net.minecraft.advanceme
 <tbody>
 <tr class="altColor" id="i0">
 <td class="colFirst"><code><a href="PlayerHurtEntityCriterion.Conditions.html" title="class in net.minecraft.advancement.criterion">PlayerHurtEntityCriterion.Conditions</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#conditionsFromJson(com.google.gson.JsonObject,com.google.gson.JsonDeserializationContext)">conditionsFromJson</a></span>&#8203;(com.google.gson.JsonObject&nbsp;jsonObject,
-com.google.gson.JsonDeserializationContext&nbsp;jsonDeserializationContext)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#conditionsFromJson(com.google.gson.JsonObject,net.minecraft.predicate.entity.EntityPredicate.Extended,net.minecraft.predicate.entity.AdvancementEntityPredicateDeserializer)">conditionsFromJson</a></span>&#8203;(<a href="https://www.javadoc.io/doc/com.google.code.gson/gson/2.8.0/com/google/gson/JsonObject.html?is-external=true" title="class or interface in com.google.gson" class="externalLink">JsonObject</a>&nbsp;jsonObject,
+<a href="../../predicate/entity/EntityPredicate.Extended.html" title="class in net.minecraft.predicate.entity">EntityPredicate.Extended</a>&nbsp;extended,
+<a href="../../predicate/entity/AdvancementEntityPredicateDeserializer.html" title="class in net.minecraft.predicate.entity">AdvancementEntityPredicateDeserializer</a>&nbsp;advancementEntityPredicateDeserializer)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
@@ -192,7 +220,7 @@ com.google.gson.JsonDeserializationContext&nbsp;jsonDeserializationContext)</cod
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#trigger(net.minecraft.server.network.ServerPlayerEntity,net.minecraft.entity.Entity,net.minecraft.entity.damage.DamageSource,float,float,boolean)">trigger</a></span>&#8203;(<a href="../../server/network/ServerPlayerEntity.html" title="class in net.minecraft.server.network">ServerPlayerEntity</a>&nbsp;player,
 <a href="../../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&nbsp;entity,
-<a href="../../entity/damage/DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a>&nbsp;source,
+<a href="../../entity/damage/DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a>&nbsp;damage,
 float&nbsp;dealt,
 float&nbsp;taken,
 boolean&nbsp;blocked)</code></th>
@@ -206,7 +234,7 @@ boolean&nbsp;blocked)</code></th>
 <h3>Methods inherited from class&nbsp;net.minecraft.advancement.criterion.<a href="AbstractCriterion.html" title="class in net.minecraft.advancement.criterion">AbstractCriterion</a></h3>
 <a id="methods.inherited.from.class.net.minecraft.advancement.criterion.AbstractCriterion">
 <!--   -->
-</a><code><a href="AbstractCriterion.html#beginTrackingCondition(net.minecraft.advancement.PlayerAdvancementTracker,net.minecraft.advancement.criterion.Criterion.ConditionsContainer)">beginTrackingCondition</a>, <a href="AbstractCriterion.html#endTracking(net.minecraft.advancement.PlayerAdvancementTracker)">endTracking</a>, <a href="AbstractCriterion.html#endTrackingCondition(net.minecraft.advancement.PlayerAdvancementTracker,net.minecraft.advancement.criterion.Criterion.ConditionsContainer)">endTrackingCondition</a>, <a href="AbstractCriterion.html#grant(net.minecraft.advancement.PlayerAdvancementTracker)">grant</a>, <a href="AbstractCriterion.html#test(net.minecraft.advancement.PlayerAdvancementTracker,java.util.function.Predicate)">test</a></code></div>
+</a><code><a href="AbstractCriterion.html#beginTrackingCondition(net.minecraft.advancement.PlayerAdvancementTracker,net.minecraft.advancement.criterion.Criterion.ConditionsContainer)">beginTrackingCondition</a>, <a href="AbstractCriterion.html#conditionsFromJson(com.google.gson.JsonObject,net.minecraft.predicate.entity.AdvancementEntityPredicateDeserializer)">conditionsFromJson</a>, <a href="AbstractCriterion.html#endTracking(net.minecraft.advancement.PlayerAdvancementTracker)">endTracking</a>, <a href="AbstractCriterion.html#endTrackingCondition(net.minecraft.advancement.PlayerAdvancementTracker,net.minecraft.advancement.criterion.Criterion.ConditionsContainer)">endTrackingCondition</a>, <a href="AbstractCriterion.html#test(net.minecraft.server.network.ServerPlayerEntity,java.util.function.Predicate)">test</a></code></div>
 <div class="inheritedList">
 <h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></h3>
 <a id="methods.inherited.from.class.java.lang.Object">
@@ -218,6 +246,22 @@ boolean&nbsp;blocked)</code></th>
 </section>
 <section class="details">
 <ul class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<li class="blockList">
+<section class="fieldDetails"><a id="field.detail">
+<!--   -->
+</a>
+<h2>Field Details</h2>
+<ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="ID">ID</a></h3>
+<div class="memberSignature"><span class="modifiers">private static final</span>&nbsp;<span class="returnType"><a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a></span>&nbsp;<span class="memberName">ID</span></div>
+</section>
+</li>
+</ul>
+</section>
+</li>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <li class="blockList">
 <section class="constructorDetails"><a id="constructor.detail">
@@ -249,9 +293,14 @@ boolean&nbsp;blocked)</code></th>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="conditionsFromJson(com.google.gson.JsonObject,com.google.gson.JsonDeserializationContext)">conditionsFromJson</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="PlayerHurtEntityCriterion.Conditions.html" title="class in net.minecraft.advancement.criterion">PlayerHurtEntityCriterion.Conditions</a></span>&nbsp;<span class="memberName">conditionsFromJson</span>&#8203;(<span class="arguments">com.google.gson.JsonObject&nbsp;jsonObject,
-com.google.gson.JsonDeserializationContext&nbsp;jsonDeserializationContext)</span></div>
+<h3><a id="conditionsFromJson(com.google.gson.JsonObject,net.minecraft.predicate.entity.EntityPredicate.Extended,net.minecraft.predicate.entity.AdvancementEntityPredicateDeserializer)">conditionsFromJson</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="PlayerHurtEntityCriterion.Conditions.html" title="class in net.minecraft.advancement.criterion">PlayerHurtEntityCriterion.Conditions</a></span>&nbsp;<span class="memberName">conditionsFromJson</span>&#8203;(<span class="arguments"><a href="https://www.javadoc.io/doc/com.google.code.gson/gson/2.8.0/com/google/gson/JsonObject.html?is-external=true" title="class or interface in com.google.gson" class="externalLink">JsonObject</a>&nbsp;jsonObject,
+<a href="../../predicate/entity/EntityPredicate.Extended.html" title="class in net.minecraft.predicate.entity">EntityPredicate.Extended</a>&nbsp;extended,
+<a href="../../predicate/entity/AdvancementEntityPredicateDeserializer.html" title="class in net.minecraft.predicate.entity">AdvancementEntityPredicateDeserializer</a>&nbsp;advancementEntityPredicateDeserializer)</span></div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="AbstractCriterion.html#conditionsFromJson(com.google.gson.JsonObject,net.minecraft.predicate.entity.EntityPredicate.Extended,net.minecraft.predicate.entity.AdvancementEntityPredicateDeserializer)">conditionsFromJson</a></code>&nbsp;in class&nbsp;<code><a href="AbstractCriterion.html" title="class in net.minecraft.advancement.criterion">AbstractCriterion</a>&lt;<a href="PlayerHurtEntityCriterion.Conditions.html" title="class in net.minecraft.advancement.criterion">PlayerHurtEntityCriterion.Conditions</a>&gt;</code></dd>
+</dl>
 </section>
 </li>
 <li class="blockList">
@@ -259,7 +308,7 @@ com.google.gson.JsonDeserializationContext&nbsp;jsonDeserializationContext)</spa
 <h3><a id="trigger(net.minecraft.server.network.ServerPlayerEntity,net.minecraft.entity.Entity,net.minecraft.entity.damage.DamageSource,float,float,boolean)">trigger</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">trigger</span>&#8203;(<span class="arguments"><a href="../../server/network/ServerPlayerEntity.html" title="class in net.minecraft.server.network">ServerPlayerEntity</a>&nbsp;player,
 <a href="../../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&nbsp;entity,
-<a href="../../entity/damage/DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a>&nbsp;source,
+<a href="../../entity/damage/DamageSource.html" title="class in net.minecraft.entity.damage">DamageSource</a>&nbsp;damage,
 float&nbsp;dealt,
 float&nbsp;taken,
 boolean&nbsp;blocked)</span></div>
@@ -298,13 +347,13 @@ boolean&nbsp;blocked)</span></div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested.class.summary">Nested</a>&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>

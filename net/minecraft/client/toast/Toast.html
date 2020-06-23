@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":6,"i1":18};
+<script type="text/javascript">var data = {"i0":6,"i1":18,"i2":18,"i3":18};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -142,13 +142,13 @@ public interface <span class="typeNameLabel">Toast</span></pre>
 </thead>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#field_2208">field_2208</a></span></code></th>
+<td class="colFirst"><code>static <a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#TOASTS_TEX">TOASTS_TEX</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>static <a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#TOASTS_TEX">TOASTS_TEX</a></span></code></th>
+<td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#TYPE">TYPE</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -176,13 +176,24 @@ public interface <span class="typeNameLabel">Toast</span></pre>
 <tbody>
 <tr class="altColor" id="i0">
 <td class="colFirst"><code><a href="Toast.Visibility.html" title="enum in net.minecraft.client.toast">Toast.Visibility</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#draw(net.minecraft.client.toast.ToastManager,long)">draw</a></span>&#8203;(<a href="ToastManager.html" title="class in net.minecraft.client.toast">ToastManager</a>&nbsp;manager,
-long&nbsp;currentTime)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#draw(net.minecraft.client.util.math.MatrixStack,net.minecraft.client.toast.ToastManager,long)">draw</a></span>&#8203;(<a href="../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
+<a href="ToastManager.html" title="class in net.minecraft.client.toast">ToastManager</a>&nbsp;manager,
+long&nbsp;startTime)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
 <td class="colFirst"><code>default <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getType()">getType</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i2">
+<td class="colFirst"><code>default int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_29049()">method_29049</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i3">
+<td class="colFirst"><code>default int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_29050()">method_29050</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -210,8 +221,8 @@ long&nbsp;currentTime)</code></th>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="field_2208">field_2208</a></h3>
-<div class="memberSignature"><span class="modifiers">static final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></span>&nbsp;<span class="memberName">field_2208</span></div>
+<h3><a id="TYPE">TYPE</a></h3>
+<div class="memberSignature"><span class="modifiers">static final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></span>&nbsp;<span class="memberName">TYPE</span></div>
 </section>
 </li>
 </ul>
@@ -226,15 +237,28 @@ long&nbsp;currentTime)</code></th>
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="draw(net.minecraft.client.toast.ToastManager,long)">draw</a></h3>
-<div class="memberSignature"><span class="returnType"><a href="Toast.Visibility.html" title="enum in net.minecraft.client.toast">Toast.Visibility</a></span>&nbsp;<span class="memberName">draw</span>&#8203;(<span class="arguments"><a href="ToastManager.html" title="class in net.minecraft.client.toast">ToastManager</a>&nbsp;manager,
-long&nbsp;currentTime)</span></div>
+<h3><a id="draw(net.minecraft.client.util.math.MatrixStack,net.minecraft.client.toast.ToastManager,long)">draw</a></h3>
+<div class="memberSignature"><span class="returnType"><a href="Toast.Visibility.html" title="enum in net.minecraft.client.toast">Toast.Visibility</a></span>&nbsp;<span class="memberName">draw</span>&#8203;(<span class="arguments"><a href="../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
+<a href="ToastManager.html" title="class in net.minecraft.client.toast">ToastManager</a>&nbsp;manager,
+long&nbsp;startTime)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getType()">getType</a></h3>
 <div class="memberSignature"><span class="modifiers">default</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></span>&nbsp;<span class="memberName">getType</span>()</div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="method_29049()">method_29049</a></h3>
+<div class="memberSignature"><span class="modifiers">default</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">method_29049</span>()</div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="method_29050()">method_29050</a></h3>
+<div class="memberSignature"><span class="modifiers">default</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">method_29050</span>()</div>
 </section>
 </li>
 </ul>

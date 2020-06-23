@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":9,"i7":9,"i8":9,"i9":10};
+<script type="text/javascript">var data = {"i0":6,"i1":6,"i2":9,"i3":9,"i4":9,"i5":9,"i6":9,"i7":9,"i8":10,"i9":10,"i10":6,"i11":6,"i12":6,"i13":6,"i14":6,"i15":6,"i16":6,"i17":6,"i18":10,"i19":9,"i20":9,"i21":9,"i22":10,"i23":10,"i24":9};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -55,7 +55,7 @@ loadScripts(document, 'script');</script>
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#nested.class.summary">Nested</a>&nbsp;|&nbsp;</li>
 <li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
@@ -92,7 +92,7 @@ loadScripts(document, 'script');</script>
 <section class="description">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html?is-external=true" title="class or interface in java.lang" class="externalLink">Iterable</a>&lt;T&gt;</code>, <code><a href="../collection/IndexedIterable.html" title="interface in net.minecraft.util.collection">IndexedIterable</a>&lt;T&gt;</code></dd>
+<dd><code>com.mojang.serialization.Codec&lt;T&gt;</code>, <code>com.mojang.serialization.Decoder&lt;T&gt;</code>, <code>com.mojang.serialization.Encoder&lt;T&gt;</code>, <code>com.mojang.serialization.Keyable</code>, <code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html?is-external=true" title="class or interface in java.lang" class="externalLink">Iterable</a>&lt;T&gt;</code>, <code><a href="../collection/IndexedIterable.html" title="interface in net.minecraft.util.collection">IndexedIterable</a>&lt;T&gt;</code></dd>
 </dl>
 <dl>
 <dt>Direct Known Subclasses:</dt>
@@ -101,10 +101,28 @@ loadScripts(document, 'script');</script>
 <hr>
 <pre>public abstract class <span class="typeNameLabel">Registry&lt;T&gt;</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>
-implements <a href="../collection/IndexedIterable.html" title="interface in net.minecraft.util.collection">IndexedIterable</a>&lt;T&gt;</pre>
+implements com.mojang.serialization.Codec&lt;T&gt;, com.mojang.serialization.Keyable, <a href="../collection/IndexedIterable.html" title="interface in net.minecraft.util.collection">IndexedIterable</a>&lt;T&gt;</pre>
 </section>
 <section class="summary">
 <ul class="blockList">
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+<li class="blockList">
+<section class="nestedClassSummary"><a id="nested.class.summary">
+<!--   -->
+</a>
+<h2>Nested Class Summary</h2>
+<div class="inheritedList">
+<h2>Nested classes/interfaces inherited from interface&nbsp;com.mojang.serialization.Codec</h2>
+<a id="nested.classes.inherited.from.class.com.mojang.serialization.Codec">
+<!--   -->
+</a><code>com.mojang.serialization.Codec.ResultFunction&lt;A extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&gt;</code></div>
+<div class="inheritedList">
+<h2>Nested classes/interfaces inherited from interface&nbsp;com.mojang.serialization.Decoder</h2>
+<a id="nested.classes.inherited.from.class.com.mojang.serialization.Decoder">
+<!--   -->
+</a><code>com.mojang.serialization.Decoder.Boxed&lt;A extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&gt;, com.mojang.serialization.Decoder.Simple&lt;A extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&gt;, com.mojang.serialization.Decoder.Terminal&lt;A extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&gt;</code></div>
+</section>
+</li>
 <!-- =========== FIELD SUMMARY =========== -->
 <li class="blockList">
 <section class="fieldSummary"><a id="field.summary">
@@ -128,8 +146,18 @@ implements <a href="../collection/IndexedIterable.html" title="interface in net.
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>static <a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../entity/ai/brain/Activity.html" title="class in net.minecraft.entity.ai.brain">Activity</a>&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#ACTIVITY_KEY">ACTIVITY_KEY</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../entity/attribute/EntityAttribute.html" title="class in net.minecraft.entity.attribute">EntityAttribute</a>&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#ATTRIBUTES">ATTRIBUTES</a></span></code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#ATTRIBUTE">ATTRIBUTE</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../entity/attribute/EntityAttribute.html" title="class in net.minecraft.entity.attribute">EntityAttribute</a>&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#ATTRIBUTE_KEY">ATTRIBUTE_KEY</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
@@ -138,8 +166,18 @@ implements <a href="../collection/IndexedIterable.html" title="interface in net.
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>static <a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../world/biome/source/BiomeSourceType.html" title="class in net.minecraft.world.biome.source">BiomeSourceType</a>&lt;?,&#8203;?&gt;&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#BIOME_SOURCE_TYPE">BIOME_SOURCE_TYPE</a></span></code></th>
+<td class="colFirst"><code>static <a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../world/biome/Biome.html" title="class in net.minecraft.world.biome">Biome</a>&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#BIOME_KEY">BIOME_KEY</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;com.mojang.serialization.Codec&lt;? extends <a href="../../world/biome/source/BiomeSource.html" title="class in net.minecraft.world.biome.source">BiomeSource</a>&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#BIOME_SOURCE">BIOME_SOURCE</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;com.mojang.serialization.Codec&lt;? extends <a href="../../world/biome/source/BiomeSource.html" title="class in net.minecraft.world.biome.source">BiomeSource</a>&gt;&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#BIOME_SOURCE_KEY">BIOME_SOURCE_KEY</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
@@ -153,13 +191,33 @@ implements <a href="../collection/IndexedIterable.html" title="interface in net.
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>static <a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../block/entity/BlockEntityType.html" title="class in net.minecraft.block.entity">BlockEntityType</a>&lt;?&gt;&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#BLOCK_ENTITY_TYPE_KEY">BLOCK_ENTITY_TYPE_KEY</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../block/Block.html" title="class in net.minecraft.block">Block</a>&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#BLOCK_KEY">BLOCK_KEY</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../world/gen/placer/BlockPlacerType.html" title="class in net.minecraft.world.gen.placer">BlockPlacerType</a>&lt;?&gt;&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#BLOCK_PLACER_TYPE">BLOCK_PLACER_TYPE</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>static <a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../world/gen/placer/BlockPlacerType.html" title="class in net.minecraft.world.gen.placer">BlockPlacerType</a>&lt;?&gt;&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#BLOCK_PLACER_TYPE_KEY">BLOCK_PLACER_TYPE_KEY</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../world/gen/stateprovider/BlockStateProviderType.html" title="class in net.minecraft.world.gen.stateprovider">BlockStateProviderType</a>&lt;?&gt;&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#BLOCK_STATE_PROVIDER_TYPE">BLOCK_STATE_PROVIDER_TYPE</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../world/gen/stateprovider/BlockStateProviderType.html" title="class in net.minecraft.world.gen.stateprovider">BlockStateProviderType</a>&lt;?&gt;&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#BLOCK_STATE_PROVIDER_TYPE_KEY">BLOCK_STATE_PROVIDER_TYPE_KEY</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
@@ -168,8 +226,18 @@ implements <a href="../collection/IndexedIterable.html" title="interface in net.
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>static <a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../world/gen/chunk/ChunkGeneratorType.html" title="class in net.minecraft.world.gen.chunk">ChunkGeneratorType</a>&lt;?,&#8203;?&gt;&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#CHUNK_GENERATOR_TYPE">CHUNK_GENERATOR_TYPE</a></span></code></th>
+<td class="colFirst"><code>static <a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../world/gen/carver/Carver.html" title="class in net.minecraft.world.gen.carver">Carver</a>&lt;?&gt;&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#CARVER_KEY">CARVER_KEY</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;com.mojang.serialization.Codec&lt;? extends <a href="../../world/gen/chunk/ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">ChunkGenerator</a>&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#CHUNK_GENERATOR">CHUNK_GENERATOR</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;com.mojang.serialization.Codec&lt;? extends <a href="../../world/gen/chunk/ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">ChunkGenerator</a>&gt;&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#CHUNK_GENERATOR_KEY">CHUNK_GENERATOR_KEY</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
@@ -178,8 +246,18 @@ implements <a href="../collection/IndexedIterable.html" title="interface in net.
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>static <a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../world/chunk/ChunkStatus.html" title="class in net.minecraft.world.chunk">ChunkStatus</a>&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#CHUNK_STATUS_KEY">CHUNK_STATUS_KEY</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../Identifier.html" title="class in net.minecraft.util">Identifier</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#CUSTOM_STAT">CUSTOM_STAT</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../Identifier.html" title="class in net.minecraft.util">Identifier</a>&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#CUSTOM_STAT_KEY">CUSTOM_STAT_KEY</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
@@ -188,8 +266,28 @@ implements <a href="../collection/IndexedIterable.html" title="interface in net.
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>static <a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../world/dimension/DimensionType.html" title="class in net.minecraft.world.dimension">DimensionType</a>&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#DIMENSION_TYPE">DIMENSION_TYPE</a></span></code></th>
+<td class="colFirst"><code>static <a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../world/gen/decorator/Decorator.html" title="class in net.minecraft.world.gen.decorator">Decorator</a>&lt;?&gt;&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#DECORATOR_KEY">DECORATOR_KEY</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util" class="externalLink">Map</a>&lt;<a href="../Identifier.html" title="class in net.minecraft.util">Identifier</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Supplier</a>&lt;?&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#DEFAULT_ENTRIES">DEFAULT_ENTRIES</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../world/World.html" title="class in net.minecraft.world">World</a>&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#DIMENSION">DIMENSION</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../world/dimension/DimensionOptions.html" title="class in net.minecraft.world.dimension">DimensionOptions</a>&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#DIMENSION_OPTIONS">DIMENSION_OPTIONS</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../world/dimension/DimensionType.html" title="class in net.minecraft.world.dimension">DimensionType</a>&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#DIMENSION_TYPE_KEY">DIMENSION_TYPE_KEY</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
@@ -198,8 +296,18 @@ implements <a href="../collection/IndexedIterable.html" title="interface in net.
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>static <a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../enchantment/Enchantment.html" title="class in net.minecraft.enchantment">Enchantment</a>&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#ENCHANTMENT_KEY">ENCHANTMENT_KEY</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="DefaultedRegistry.html" title="class in net.minecraft.util.registry">DefaultedRegistry</a>&lt;<a href="../../entity/EntityType.html" title="class in net.minecraft.entity">EntityType</a>&lt;?&gt;&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#ENTITY_TYPE">ENTITY_TYPE</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../entity/EntityType.html" title="class in net.minecraft.entity">EntityType</a>&lt;?&gt;&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#ENTITY_TYPE_KEY">ENTITY_TYPE_KEY</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
@@ -208,8 +316,28 @@ implements <a href="../collection/IndexedIterable.html" title="interface in net.
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>static <a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../world/gen/feature/Feature.html" title="class in net.minecraft.world.gen.feature">Feature</a>&lt;?&gt;&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#FEATURE_KEY">FEATURE_KEY</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../world/gen/feature/size/FeatureSizeType.html" title="class in net.minecraft.world.gen.feature.size">FeatureSizeType</a>&lt;?&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#FEATURE_SIZE_TYPE">FEATURE_SIZE_TYPE</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../world/gen/feature/size/FeatureSizeType.html" title="class in net.minecraft.world.gen.feature.size">FeatureSizeType</a>&lt;?&gt;&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#FEATURE_SIZE_TYPE_KEY">FEATURE_SIZE_TYPE_KEY</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="DefaultedRegistry.html" title="class in net.minecraft.util.registry">DefaultedRegistry</a>&lt;<a href="../../fluid/Fluid.html" title="class in net.minecraft.fluid">Fluid</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#FLUID">FLUID</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../fluid/Fluid.html" title="class in net.minecraft.fluid">Fluid</a>&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#FLUID_KEY">FLUID_KEY</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
@@ -218,30 +346,98 @@ implements <a href="../collection/IndexedIterable.html" title="interface in net.
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>static <a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../world/gen/foliage/FoliagePlacerType.html" title="class in net.minecraft.world.gen.foliage">FoliagePlacerType</a>&lt;?&gt;&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#FOLIAGE_PLACER_TYPE_KEY">FOLIAGE_PLACER_TYPE_KEY</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="DefaultedRegistry.html" title="class in net.minecraft.util.registry">DefaultedRegistry</a>&lt;<a href="../../item/Item.html" title="class in net.minecraft.item">Item</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#ITEM">ITEM</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../item/Item.html" title="class in net.minecraft.item">Item</a>&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#ITEM_KEY">ITEM_KEY</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
 <tr class="altColor">
+<td class="colFirst"><code>private com.mojang.serialization.Lifecycle</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#lifecycle">lifecycle</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>protected static <a href="https://logging.apache.org/log4j/2.x/log4j-api/apidocs/org/apache/logging/log4j/Logger.html?is-external=true" title="class or interface in org.apache.logging.log4j" class="externalLink">Logger</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#LOGGER">LOGGER</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../loot/condition/LootConditionType.html" title="class in net.minecraft.loot.condition">LootConditionType</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#LOOT_CONDITION_TYPE">LOOT_CONDITION_TYPE</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
 <tr class="rowColor">
+<td class="colFirst"><code>static <a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../loot/condition/LootConditionType.html" title="class in net.minecraft.loot.condition">LootConditionType</a>&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#LOOT_CONDITION_TYPE_KEY">LOOT_CONDITION_TYPE_KEY</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../loot/function/LootFunctionType.html" title="class in net.minecraft.loot.function">LootFunctionType</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#LOOT_FUNCTION_TYPE">LOOT_FUNCTION_TYPE</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../loot/function/LootFunctionType.html" title="class in net.minecraft.loot.function">LootFunctionType</a>&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#LOOT_FUNCTION_TYPE_KEY">LOOT_FUNCTION_TYPE_KEY</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../loot/entry/LootPoolEntryType.html" title="class in net.minecraft.loot.entry">LootPoolEntryType</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#LOOT_POOL_ENTRY_TYPE">LOOT_POOL_ENTRY_TYPE</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../loot/entry/LootPoolEntryType.html" title="class in net.minecraft.loot.entry">LootPoolEntryType</a>&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#LOOT_POOL_ENTRY_TYPE_KEY">LOOT_POOL_ENTRY_TYPE_KEY</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="DefaultedRegistry.html" title="class in net.minecraft.util.registry">DefaultedRegistry</a>&lt;<a href="../../entity/ai/brain/MemoryModuleType.html" title="class in net.minecraft.entity.ai.brain">MemoryModuleType</a>&lt;?&gt;&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#MEMORY_MODULE_TYPE">MEMORY_MODULE_TYPE</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../entity/ai/brain/MemoryModuleType.html" title="class in net.minecraft.entity.ai.brain">MemoryModuleType</a>&lt;?&gt;&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#MEMORY_MODULE_TYPE_KEY">MEMORY_MODULE_TYPE_KEY</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
 <tr class="altColor">
-<td class="colFirst"><code>static <a href="DefaultedRegistry.html" title="class in net.minecraft.util.registry">DefaultedRegistry</a>&lt;<a href="../../entity/decoration/painting/PaintingMotive.html" title="class in net.minecraft.entity.decoration.painting">PaintingMotive</a>&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#PAINTING_MOTIVE">PAINTING_MOTIVE</a></span></code></th>
-<td class="colLast">
-<div class="block">The painting motive (theme, motif) registry</div>
-</td>
+<td class="colFirst"><code>static <a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../screen/ScreenHandlerType.html" title="class in net.minecraft.screen">ScreenHandlerType</a>&lt;?&gt;&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#MENU_KEY">MENU_KEY</a></span></code></th>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>static <a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../particle/ParticleType.html" title="class in net.minecraft.particle">ParticleType</a>&lt;? extends <a href="../../particle/ParticleEffect.html" title="interface in net.minecraft.particle">ParticleEffect</a>&gt;&gt;</code></td>
+<td class="colFirst"><code>static <a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../entity/effect/StatusEffect.html" title="class in net.minecraft.entity.effect">StatusEffect</a>&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#MOB_EFFECT_KEY">MOB_EFFECT_KEY</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../entity/decoration/painting/PaintingMotive.html" title="class in net.minecraft.entity.decoration.painting">PaintingMotive</a>&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#MOTIVE_KEY">MOTIVE_KEY</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="DefaultedRegistry.html" title="class in net.minecraft.util.registry">DefaultedRegistry</a>&lt;<a href="../../entity/decoration/painting/PaintingMotive.html" title="class in net.minecraft.entity.decoration.painting">PaintingMotive</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#PAINTING_MOTIVE">PAINTING_MOTIVE</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../particle/ParticleType.html" title="class in net.minecraft.particle">ParticleType</a>&lt;?&gt;&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#PARTICLE_TYPE">PARTICLE_TYPE</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../particle/ParticleType.html" title="class in net.minecraft.particle">ParticleType</a>&lt;?&gt;&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#PARTICLE_TYPE_KEY">PARTICLE_TYPE_KEY</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
@@ -250,8 +446,18 @@ implements <a href="../collection/IndexedIterable.html" title="interface in net.
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>static <a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../structure/rule/PosRuleTestType.html" title="interface in net.minecraft.structure.rule">PosRuleTestType</a>&gt;</code></td>
+<td class="colFirst"><code>static <a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../world/poi/PointOfInterestType.html" title="class in net.minecraft.world.poi">PointOfInterestType</a>&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#POINT_OF_INTEREST_TYPE_KEY">POINT_OF_INTEREST_TYPE_KEY</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../structure/rule/PosRuleTestType.html" title="interface in net.minecraft.structure.rule">PosRuleTestType</a>&lt;?&gt;&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#POS_RULE_TEST">POS_RULE_TEST</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../structure/rule/PosRuleTestType.html" title="interface in net.minecraft.structure.rule">PosRuleTestType</a>&lt;?&gt;&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#POS_RULE_TEST_KEY">POS_RULE_TEST_KEY</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
@@ -260,8 +466,18 @@ implements <a href="../collection/IndexedIterable.html" title="interface in net.
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>static <a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../potion/Potion.html" title="class in net.minecraft.potion">Potion</a>&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#POTION_KEY">POTION_KEY</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../recipe/RecipeSerializer.html" title="interface in net.minecraft.recipe">RecipeSerializer</a>&lt;?&gt;&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#RECIPE_SERIALIZER">RECIPE_SERIALIZER</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../recipe/RecipeSerializer.html" title="interface in net.minecraft.recipe">RecipeSerializer</a>&lt;?&gt;&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#RECIPE_SERIALIZER_KEY">RECIPE_SERIALIZER_KEY</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
@@ -270,18 +486,50 @@ implements <a href="../collection/IndexedIterable.html" title="interface in net.
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>static <a href="MutableRegistry.html" title="class in net.minecraft.util.registry">MutableRegistry</a>&lt;<a href="MutableRegistry.html" title="class in net.minecraft.util.registry">MutableRegistry</a>&lt;?&gt;&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#REGISTRIES">REGISTRIES</a></span></code></th>
+<td class="colFirst"><code>static <a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../recipe/RecipeType.html" title="interface in net.minecraft.recipe">RecipeType</a>&lt;?&gt;&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#RECIPE_TYPE_KEY">RECIPE_TYPE_KEY</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>static <a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../structure/rule/RuleTestType.html" title="interface in net.minecraft.structure.rule">RuleTestType</a>&gt;</code></td>
+<td class="colFirst"><code>static <a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;? extends <a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;?&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#REGISTRIES">REGISTRIES</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="Registry.html" title="type parameter in Registry">T</a>&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#registryKey">registryKey</a></span></code></th>
+<td class="colLast">
+<div class="block">The <a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a> representing the ID of the actual registry.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected static <a href="MutableRegistry.html" title="class in net.minecraft.util.registry">MutableRegistry</a>&lt;<a href="MutableRegistry.html" title="class in net.minecraft.util.registry">MutableRegistry</a>&lt;?&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#ROOT">ROOT</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../Identifier.html" title="class in net.minecraft.util">Identifier</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#ROOT_KEY">ROOT_KEY</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../structure/rule/RuleTestType.html" title="interface in net.minecraft.structure.rule">RuleTestType</a>&lt;?&gt;&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#RULE_TEST">RULE_TEST</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>static <a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../structure/rule/RuleTestType.html" title="interface in net.minecraft.structure.rule">RuleTestType</a>&lt;?&gt;&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#RULE_TEST_KEY">RULE_TEST_KEY</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../entity/ai/brain/Schedule.html" title="class in net.minecraft.entity.ai.brain">Schedule</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#SCHEDULE">SCHEDULE</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../entity/ai/brain/Schedule.html" title="class in net.minecraft.entity.ai.brain">Schedule</a>&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#SCHEDULE_KEY">SCHEDULE_KEY</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
@@ -295,8 +543,18 @@ implements <a href="../collection/IndexedIterable.html" title="interface in net.
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>static <a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../entity/ai/brain/sensor/SensorType.html" title="class in net.minecraft.entity.ai.brain.sensor">SensorType</a>&lt;?&gt;&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#SENSOR_TYPE_KEY">SENSOR_TYPE_KEY</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../sound/SoundEvent.html" title="class in net.minecraft.sound">SoundEvent</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#SOUND_EVENT">SOUND_EVENT</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../sound/SoundEvent.html" title="class in net.minecraft.sound">SoundEvent</a>&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#SOUND_EVENT_KEY">SOUND_EVENT_KEY</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
@@ -305,13 +563,23 @@ implements <a href="../collection/IndexedIterable.html" title="interface in net.
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>static <a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../stat/StatType.html" title="class in net.minecraft.stat">StatType</a>&lt;?&gt;&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#STAT_TYPE_KEY">STAT_TYPE_KEY</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../entity/effect/StatusEffect.html" title="class in net.minecraft.entity.effect">StatusEffect</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#STATUS_EFFECT">STATUS_EFFECT</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../world/gen/feature/StructureFeature.html" title="class in net.minecraft.world.gen.feature">StructureFeature</a>&lt;?&gt;&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#STRUCTURE_FEATURE">STRUCTURE_FEATURE</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../world/gen/feature/StructureFeature.html" title="class in net.minecraft.world.gen.feature">StructureFeature</a>&lt;?&gt;&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#STRUCTURE_FEATURE_KEY">STRUCTURE_FEATURE_KEY</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
@@ -320,13 +588,33 @@ implements <a href="../collection/IndexedIterable.html" title="interface in net.
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>static <a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../structure/pool/StructurePoolElementType.html" title="interface in net.minecraft.structure.pool">StructurePoolElementType</a>&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#STRUCTURE_POOL_ELEMENT">STRUCTURE_POOL_ELEMENT</a></span></code></th>
+<td class="colFirst"><code>static <a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../structure/StructurePieceType.html" title="interface in net.minecraft.structure">StructurePieceType</a>&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#STRUCTURE_PIECE_KEY">STRUCTURE_PIECE_KEY</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>static <a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../structure/processor/StructureProcessorType.html" title="interface in net.minecraft.structure.processor">StructureProcessorType</a>&gt;</code></td>
+<td class="colFirst"><code>static <a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../structure/pool/StructurePoolElementType.html" title="interface in net.minecraft.structure.pool">StructurePoolElementType</a>&lt;?&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#STRUCTURE_POOL_ELEMENT">STRUCTURE_POOL_ELEMENT</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../structure/pool/StructurePoolElementType.html" title="interface in net.minecraft.structure.pool">StructurePoolElementType</a>&lt;?&gt;&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#STRUCTURE_POOL_ELEMENT_KEY">STRUCTURE_POOL_ELEMENT_KEY</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../structure/processor/StructureProcessorType.html" title="interface in net.minecraft.structure.processor">StructureProcessorType</a>&lt;?&gt;&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#STRUCTURE_PROCESSOR">STRUCTURE_PROCESSOR</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../structure/processor/StructureProcessorType.html" title="interface in net.minecraft.structure.processor">StructureProcessorType</a>&lt;?&gt;&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#STRUCTURE_PROCESSOR_KEY">STRUCTURE_PROCESSOR_KEY</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../world/gen/surfacebuilder/SurfaceBuilder.html" title="class in net.minecraft.world.gen.surfacebuilder">SurfaceBuilder</a>&lt;?&gt;&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#SURFACE_BUILD_KEY">SURFACE_BUILD_KEY</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
@@ -340,8 +628,18 @@ implements <a href="../collection/IndexedIterable.html" title="interface in net.
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>static <a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../world/gen/decorator/TreeDecoratorType.html" title="class in net.minecraft.world.gen.decorator">TreeDecoratorType</a>&lt;?&gt;&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#TREE_DECORATOR_TYPE_KEY">TREE_DECORATOR_TYPE_KEY</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../world/gen/trunk/TrunkPlacerType.html" title="class in net.minecraft.world.gen.trunk">TrunkPlacerType</a>&lt;?&gt;&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#TRUNK_PLACER_TYPE">TRUNK_PLACER_TYPE</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../world/gen/trunk/TrunkPlacerType.html" title="class in net.minecraft.world.gen.trunk">TrunkPlacerType</a>&lt;?&gt;&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#TRUNK_PLACER_TYPE_KEY">TRUNK_PLACER_TYPE_KEY</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
@@ -350,13 +648,28 @@ implements <a href="../collection/IndexedIterable.html" title="interface in net.
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>static <a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../village/VillagerProfession.html" title="class in net.minecraft.village">VillagerProfession</a>&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#VILLAGER_PROFESSION_KEY">VILLAGER_PROFESSION_KEY</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="DefaultedRegistry.html" title="class in net.minecraft.util.registry">DefaultedRegistry</a>&lt;<a href="../../village/VillagerType.html" title="interface in net.minecraft.village">VillagerType</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#VILLAGER_TYPE">VILLAGER_TYPE</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../village/VillagerType.html" title="interface in net.minecraft.village">VillagerType</a>&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#VILLAGER_TYPE_KEY">VILLAGER_TYPE_KEY</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
 </table>
 </div>
+<div class="inheritedList">
+<h3>Fields inherited from interface&nbsp;com.mojang.serialization.Codec</h3>
+<a id="fields.inherited.from.class.com.mojang.serialization.Codec">
+<!--   -->
+</a><code>BOOL, BYTE, BYTE_BUFFER, DOUBLE, EMPTY, FLOAT, INT, INT_STREAM, LONG, LONG_STREAM, PASSTHROUGH, SHORT, STRING</code></div>
 </section>
 </li>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
@@ -370,13 +683,16 @@ implements <a href="../collection/IndexedIterable.html" title="interface in net.
 <caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
 <thead>
 <tr>
-<th class="colFirst" scope="col">Constructor</th>
+<th class="colFirst" scope="col">Modifier</th>
+<th class="colSecond" scope="col">Constructor</th>
 <th class="colLast" scope="col">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E()">Registry</a></span>()</code></th>
+<td class="colFirst"><code>protected </code></td>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.util.registry.RegistryKey,com.mojang.serialization.Lifecycle)">Registry</a></span>&#8203;(<a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="Registry.html" title="type parameter in Registry">T</a>&gt;&gt;&nbsp;registryKey,
+com.mojang.serialization.Lifecycle&nbsp;lifecycle)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -404,59 +720,150 @@ implements <a href="../collection/IndexedIterable.html" title="interface in net.
 <tbody>
 <tr class="altColor" id="i0">
 <td class="colFirst"><code>abstract boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#containsId(net.minecraft.util.Identifier)">containsId</a></span>&#8203;(<a href="../Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;id)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#containsId(int)">containsId</a></span>&#8203;(int&nbsp;id)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
+<td class="colFirst"><code>abstract boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#containsId(net.minecraft.util.Identifier)">containsId</a></span>&#8203;(<a href="../Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;id)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i2">
+<td class="colFirst"><code>private static &lt;T&gt;&nbsp;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;T&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#create(net.minecraft.util.registry.RegistryKey,com.mojang.serialization.Lifecycle,java.util.function.Supplier)">create</a></span>&#8203;(<a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;T&gt;&gt;&nbsp;registryKey,
+com.mojang.serialization.Lifecycle&nbsp;lifecycle,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Supplier</a>&lt;T&gt;&nbsp;defaultEntry)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i3">
+<td class="colFirst"><code>private static &lt;T&gt;&nbsp;<a href="DefaultedRegistry.html" title="class in net.minecraft.util.registry">DefaultedRegistry</a>&lt;T&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#create(net.minecraft.util.registry.RegistryKey,java.lang.String,com.mojang.serialization.Lifecycle,java.util.function.Supplier)">create</a></span>&#8203;(<a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;T&gt;&gt;&nbsp;registryKey,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;defaultId,
+com.mojang.serialization.Lifecycle&nbsp;lifecycle,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Supplier</a>&lt;T&gt;&nbsp;defaultEntry)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i4">
+<td class="colFirst"><code>private static &lt;T&gt;&nbsp;<a href="DefaultedRegistry.html" title="class in net.minecraft.util.registry">DefaultedRegistry</a>&lt;T&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#create(net.minecraft.util.registry.RegistryKey,java.lang.String,java.util.function.Supplier)">create</a></span>&#8203;(<a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;T&gt;&gt;&nbsp;registryKey,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;defaultId,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Supplier</a>&lt;T&gt;&nbsp;defaultEntry)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i5">
+<td class="colFirst"><code>private static &lt;T&gt;&nbsp;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;T&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#create(net.minecraft.util.registry.RegistryKey,java.util.function.Supplier)">create</a></span>&#8203;(<a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;T&gt;&gt;&nbsp;registryKey,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Supplier</a>&lt;T&gt;&nbsp;defaultEntry)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i6">
+<td class="colFirst"><code>private static &lt;T,&#8203;
+R extends <a href="MutableRegistry.html" title="class in net.minecraft.util.registry">MutableRegistry</a>&lt;T&gt;&gt;<br>R</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#create(net.minecraft.util.registry.RegistryKey,R,java.util.function.Supplier)">create</a></span>&#8203;(<a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;T&gt;&gt;&nbsp;registryKey,
+R&nbsp;registry,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Supplier</a>&lt;T&gt;&nbsp;defaultEntry)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i7">
+<td class="colFirst"><code>private static &lt;T&gt;&nbsp;<a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;T&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createRegistryKey(java.lang.String)">createRegistryKey</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;registryId)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i8">
+<td class="colFirst"><code>&lt;U&gt;&nbsp;com.mojang.serialization.DataResult&lt;com.mojang.datafixers.util.Pair&lt;<a href="Registry.html" title="type parameter in Registry">T</a>,&#8203;U&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#decode(com.mojang.serialization.DynamicOps,U)">decode</a></span>&#8203;(com.mojang.serialization.DynamicOps&lt;U&gt;&nbsp;dynamicOps,
+U&nbsp;u)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i9">
+<td class="colFirst"><code>&lt;U&gt;&nbsp;com.mojang.serialization.DataResult&lt;U&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#encode(T,com.mojang.serialization.DynamicOps,U)">encode</a></span>&#8203;(<a href="Registry.html" title="type parameter in Registry">T</a>&nbsp;t,
+com.mojang.serialization.DynamicOps&lt;U&gt;&nbsp;dynamicOps,
+U&nbsp;u)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i10">
 <td class="colFirst"><code>abstract <a href="Registry.html" title="type parameter in Registry">T</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#get(net.minecraft.util.Identifier)">get</a></span>&#8203;(<a href="../Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;id)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i2">
+<tr class="rowColor" id="i11">
+<td class="colFirst"><code>abstract <a href="Registry.html" title="type parameter in Registry">T</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#get(net.minecraft.util.registry.RegistryKey)">get</a></span>&#8203;(<a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="type parameter in Registry">T</a>&gt;&nbsp;key)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i12">
 <td class="colFirst"><code>abstract <a href="../Identifier.html" title="class in net.minecraft.util">Identifier</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getId(T)">getId</a></span>&#8203;(<a href="Registry.html" title="type parameter in Registry">T</a>&nbsp;entry)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i3">
+<tr class="rowColor" id="i13">
 <td class="colFirst"><code>abstract <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="../Identifier.html" title="class in net.minecraft.util">Identifier</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getIds()">getIds</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i4">
+<tr class="altColor" id="i14">
+<td class="colFirst"><code>abstract <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util" class="externalLink">Optional</a>&lt;<a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="type parameter in Registry">T</a>&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getKey(T)">getKey</a></span>&#8203;(<a href="Registry.html" title="type parameter in Registry">T</a>&nbsp;value)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i15">
 <td class="colFirst"><code>abstract <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util" class="externalLink">Optional</a>&lt;<a href="Registry.html" title="type parameter in Registry">T</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getOrEmpty(net.minecraft.util.Identifier)">getOrEmpty</a></span>&#8203;(<a href="../Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;id)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i5">
+<tr class="altColor" id="i16">
 <td class="colFirst"><code>abstract int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getRawId(T)">getRawId</a></span>&#8203;(<a href="Registry.html" title="type parameter in Registry">T</a>&nbsp;entry)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i6">
-<td class="colFirst"><code>static &lt;T&gt;&nbsp;T</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#register(net.minecraft.util.registry.Registry,int,java.lang.String,T)">register</a></span>&#8203;(<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;? super T&gt;&nbsp;registry,
-int&nbsp;rawId,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;id,
-T&nbsp;entry)</code></th>
+<tr class="rowColor" id="i17">
+<td class="colFirst"><code>abstract boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isLoaded(net.minecraft.util.registry.RegistryKey)">isLoaded</a></span>&#8203;(<a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="type parameter in Registry">T</a>&gt;&nbsp;registryKey)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i7">
+<tr class="altColor" id="i18">
+<td class="colFirst"><code>&lt;U&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html?is-external=true" title="class or interface in java.util.stream" class="externalLink">Stream</a>&lt;U&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#keys(com.mojang.serialization.DynamicOps)">keys</a></span>&#8203;(com.mojang.serialization.DynamicOps&lt;U&gt;&nbsp;dynamicOps)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i19">
 <td class="colFirst"><code>static &lt;T&gt;&nbsp;T</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#register(net.minecraft.util.registry.Registry,java.lang.String,T)">register</a></span>&#8203;(<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;? super T&gt;&nbsp;registry,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;id,
 T&nbsp;entry)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i8">
-<td class="colFirst"><code>static &lt;T&gt;&nbsp;T</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#register(net.minecraft.util.registry.Registry,net.minecraft.util.Identifier,T)">register</a></span>&#8203;(<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;? super T&gt;&nbsp;registry,
+<tr class="altColor" id="i20">
+<td class="colFirst"><code>static &lt;V,&#8203;
+T extends V&gt;<br>T</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#register(net.minecraft.util.registry.Registry,int,java.lang.String,T)">register</a></span>&#8203;(<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;V&gt;&nbsp;registry,
+int&nbsp;rawId,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;id,
+T&nbsp;entry)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i21">
+<td class="colFirst"><code>static &lt;V,&#8203;
+T extends V&gt;<br>T</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#register(net.minecraft.util.registry.Registry,net.minecraft.util.Identifier,T)">register</a></span>&#8203;(<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;V&gt;&nbsp;registry,
 <a href="../Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;id,
 T&nbsp;entry)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i9">
+<tr class="altColor" id="i22">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html?is-external=true" title="class or interface in java.util.stream" class="externalLink">Stream</a>&lt;<a href="Registry.html" title="type parameter in Registry">T</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#stream()">stream</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i23">
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#toString()">toString</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i24">
+<td class="colFirst"><code>private static &lt;T extends <a href="MutableRegistry.html" title="class in net.minecraft.util.registry">MutableRegistry</a>&lt;?&gt;&gt;<br>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#validate(net.minecraft.util.registry.MutableRegistry)">validate</a></span>&#8203;(<a href="MutableRegistry.html" title="class in net.minecraft.util.registry">MutableRegistry</a>&lt;T&gt;&nbsp;registry)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -467,7 +874,22 @@ T&nbsp;entry)</code></th>
 <h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></h3>
 <a id="methods.inherited.from.class.java.lang.Object">
 <!--   -->
-</a><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang" class="externalLink">clone</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang" class="externalLink">equals</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang" class="externalLink">finalize</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang" class="externalLink">getClass</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang" class="externalLink">hashCode</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang" class="externalLink">notify</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang" class="externalLink">notifyAll</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang" class="externalLink">toString</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang" class="externalLink">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang" class="externalLink">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait(long,int)" title="class or interface in java.lang" class="externalLink">wait</a></code></div>
+</a><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang" class="externalLink">clone</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang" class="externalLink">equals</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang" class="externalLink">finalize</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang" class="externalLink">getClass</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang" class="externalLink">hashCode</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang" class="externalLink">notify</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang" class="externalLink">notifyAll</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang" class="externalLink">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang" class="externalLink">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait(long,int)" title="class or interface in java.lang" class="externalLink">wait</a></code></div>
+<div class="inheritedList">
+<h3>Methods inherited from interface&nbsp;com.mojang.serialization.Codec</h3>
+<a id="methods.inherited.from.class.com.mojang.serialization.Codec">
+<!--   -->
+</a><code>comapFlatMap, deprecated, dispatch, dispatch, dispatchDeprecated, dispatchDeprecated, dispatchDeprecatedMap, dispatchDeprecatedMap, dispatchMap, dispatchMap, dispatchStable, dispatchStable, dispatchStableMap, dispatchStableMap, fieldOf, flatComapMap, flatXmap, listOf, mapResult, optionalFieldOf, optionalFieldOf, optionalFieldOf, optionalFieldOf, partialDispatch, partialDispatchMap, promotePartial, stable, withDefault, withDefault, withDefault, withDefault, withDefault, withDefault, withLifecycle, xmap</code></div>
+<div class="inheritedList">
+<h3>Methods inherited from interface&nbsp;com.mojang.serialization.Decoder</h3>
+<a id="methods.inherited.from.class.com.mojang.serialization.Decoder">
+<!--   -->
+</a><code>boxed, decode, flatMap, map, parse, parse, simple, terminal</code></div>
+<div class="inheritedList">
+<h3>Methods inherited from interface&nbsp;com.mojang.serialization.Encoder</h3>
+<a id="methods.inherited.from.class.com.mojang.serialization.Encoder">
+<!--   -->
+</a><code>comap, encodeStart, flatComap</code></div>
 <div class="inheritedList">
 <h3>Methods inherited from interface&nbsp;net.minecraft.util.collection.<a href="../collection/IndexedIterable.html" title="interface in net.minecraft.util.collection">IndexedIterable</a></h3>
 <a id="methods.inherited.from.class.net.minecraft.util.collection.IndexedIterable">
@@ -499,8 +921,326 @@ T&nbsp;entry)</code></th>
 </li>
 <li class="blockList">
 <section class="detail">
+<h3><a id="DEFAULT_ENTRIES">DEFAULT_ENTRIES</a></h3>
+<div class="memberSignature"><span class="modifiers">private static final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util" class="externalLink">Map</a>&lt;<a href="../Identifier.html" title="class in net.minecraft.util">Identifier</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Supplier</a>&lt;?&gt;&gt;</span>&nbsp;<span class="memberName">DEFAULT_ENTRIES</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="ROOT_KEY">ROOT_KEY</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="../Identifier.html" title="class in net.minecraft.util">Identifier</a></span>&nbsp;<span class="memberName">ROOT_KEY</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="ROOT">ROOT</a></h3>
+<div class="memberSignature"><span class="modifiers">protected static final</span>&nbsp;<span class="returnType"><a href="MutableRegistry.html" title="class in net.minecraft.util.registry">MutableRegistry</a>&lt;<a href="MutableRegistry.html" title="class in net.minecraft.util.registry">MutableRegistry</a>&lt;?&gt;&gt;</span>&nbsp;<span class="memberName">ROOT</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="REGISTRIES">REGISTRIES</a></h3>
-<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="MutableRegistry.html" title="class in net.minecraft.util.registry">MutableRegistry</a>&lt;<a href="MutableRegistry.html" title="class in net.minecraft.util.registry">MutableRegistry</a>&lt;?&gt;&gt;</span>&nbsp;<span class="memberName">REGISTRIES</span></div>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;? extends <a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;?&gt;&gt;</span>&nbsp;<span class="memberName">REGISTRIES</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="SOUND_EVENT_KEY">SOUND_EVENT_KEY</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../sound/SoundEvent.html" title="class in net.minecraft.sound">SoundEvent</a>&gt;&gt;</span>&nbsp;<span class="memberName">SOUND_EVENT_KEY</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="FLUID_KEY">FLUID_KEY</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../fluid/Fluid.html" title="class in net.minecraft.fluid">Fluid</a>&gt;&gt;</span>&nbsp;<span class="memberName">FLUID_KEY</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="MOB_EFFECT_KEY">MOB_EFFECT_KEY</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../entity/effect/StatusEffect.html" title="class in net.minecraft.entity.effect">StatusEffect</a>&gt;&gt;</span>&nbsp;<span class="memberName">MOB_EFFECT_KEY</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="BLOCK_KEY">BLOCK_KEY</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../block/Block.html" title="class in net.minecraft.block">Block</a>&gt;&gt;</span>&nbsp;<span class="memberName">BLOCK_KEY</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="ENCHANTMENT_KEY">ENCHANTMENT_KEY</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../enchantment/Enchantment.html" title="class in net.minecraft.enchantment">Enchantment</a>&gt;&gt;</span>&nbsp;<span class="memberName">ENCHANTMENT_KEY</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="ENTITY_TYPE_KEY">ENTITY_TYPE_KEY</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../entity/EntityType.html" title="class in net.minecraft.entity">EntityType</a>&lt;?&gt;&gt;&gt;</span>&nbsp;<span class="memberName">ENTITY_TYPE_KEY</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="ITEM_KEY">ITEM_KEY</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../item/Item.html" title="class in net.minecraft.item">Item</a>&gt;&gt;</span>&nbsp;<span class="memberName">ITEM_KEY</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="POTION_KEY">POTION_KEY</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../potion/Potion.html" title="class in net.minecraft.potion">Potion</a>&gt;&gt;</span>&nbsp;<span class="memberName">POTION_KEY</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="CARVER_KEY">CARVER_KEY</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../world/gen/carver/Carver.html" title="class in net.minecraft.world.gen.carver">Carver</a>&lt;?&gt;&gt;&gt;</span>&nbsp;<span class="memberName">CARVER_KEY</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="SURFACE_BUILD_KEY">SURFACE_BUILD_KEY</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../world/gen/surfacebuilder/SurfaceBuilder.html" title="class in net.minecraft.world.gen.surfacebuilder">SurfaceBuilder</a>&lt;?&gt;&gt;&gt;</span>&nbsp;<span class="memberName">SURFACE_BUILD_KEY</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="FEATURE_KEY">FEATURE_KEY</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../world/gen/feature/Feature.html" title="class in net.minecraft.world.gen.feature">Feature</a>&lt;?&gt;&gt;&gt;</span>&nbsp;<span class="memberName">FEATURE_KEY</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="DECORATOR_KEY">DECORATOR_KEY</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../world/gen/decorator/Decorator.html" title="class in net.minecraft.world.gen.decorator">Decorator</a>&lt;?&gt;&gt;&gt;</span>&nbsp;<span class="memberName">DECORATOR_KEY</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="BIOME_KEY">BIOME_KEY</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../world/biome/Biome.html" title="class in net.minecraft.world.biome">Biome</a>&gt;&gt;</span>&nbsp;<span class="memberName">BIOME_KEY</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="BLOCK_STATE_PROVIDER_TYPE_KEY">BLOCK_STATE_PROVIDER_TYPE_KEY</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../world/gen/stateprovider/BlockStateProviderType.html" title="class in net.minecraft.world.gen.stateprovider">BlockStateProviderType</a>&lt;?&gt;&gt;&gt;</span>&nbsp;<span class="memberName">BLOCK_STATE_PROVIDER_TYPE_KEY</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="BLOCK_PLACER_TYPE_KEY">BLOCK_PLACER_TYPE_KEY</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../world/gen/placer/BlockPlacerType.html" title="class in net.minecraft.world.gen.placer">BlockPlacerType</a>&lt;?&gt;&gt;&gt;</span>&nbsp;<span class="memberName">BLOCK_PLACER_TYPE_KEY</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="FOLIAGE_PLACER_TYPE_KEY">FOLIAGE_PLACER_TYPE_KEY</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../world/gen/foliage/FoliagePlacerType.html" title="class in net.minecraft.world.gen.foliage">FoliagePlacerType</a>&lt;?&gt;&gt;&gt;</span>&nbsp;<span class="memberName">FOLIAGE_PLACER_TYPE_KEY</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="TRUNK_PLACER_TYPE_KEY">TRUNK_PLACER_TYPE_KEY</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../world/gen/trunk/TrunkPlacerType.html" title="class in net.minecraft.world.gen.trunk">TrunkPlacerType</a>&lt;?&gt;&gt;&gt;</span>&nbsp;<span class="memberName">TRUNK_PLACER_TYPE_KEY</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="TREE_DECORATOR_TYPE_KEY">TREE_DECORATOR_TYPE_KEY</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../world/gen/decorator/TreeDecoratorType.html" title="class in net.minecraft.world.gen.decorator">TreeDecoratorType</a>&lt;?&gt;&gt;&gt;</span>&nbsp;<span class="memberName">TREE_DECORATOR_TYPE_KEY</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="FEATURE_SIZE_TYPE_KEY">FEATURE_SIZE_TYPE_KEY</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../world/gen/feature/size/FeatureSizeType.html" title="class in net.minecraft.world.gen.feature.size">FeatureSizeType</a>&lt;?&gt;&gt;&gt;</span>&nbsp;<span class="memberName">FEATURE_SIZE_TYPE_KEY</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="PARTICLE_TYPE_KEY">PARTICLE_TYPE_KEY</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../particle/ParticleType.html" title="class in net.minecraft.particle">ParticleType</a>&lt;?&gt;&gt;&gt;</span>&nbsp;<span class="memberName">PARTICLE_TYPE_KEY</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="BIOME_SOURCE_KEY">BIOME_SOURCE_KEY</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;com.mojang.serialization.Codec&lt;? extends <a href="../../world/biome/source/BiomeSource.html" title="class in net.minecraft.world.biome.source">BiomeSource</a>&gt;&gt;&gt;</span>&nbsp;<span class="memberName">BIOME_SOURCE_KEY</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="CHUNK_GENERATOR_KEY">CHUNK_GENERATOR_KEY</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;com.mojang.serialization.Codec&lt;? extends <a href="../../world/gen/chunk/ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">ChunkGenerator</a>&gt;&gt;&gt;</span>&nbsp;<span class="memberName">CHUNK_GENERATOR_KEY</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="BLOCK_ENTITY_TYPE_KEY">BLOCK_ENTITY_TYPE_KEY</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../block/entity/BlockEntityType.html" title="class in net.minecraft.block.entity">BlockEntityType</a>&lt;?&gt;&gt;&gt;</span>&nbsp;<span class="memberName">BLOCK_ENTITY_TYPE_KEY</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="MOTIVE_KEY">MOTIVE_KEY</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../entity/decoration/painting/PaintingMotive.html" title="class in net.minecraft.entity.decoration.painting">PaintingMotive</a>&gt;&gt;</span>&nbsp;<span class="memberName">MOTIVE_KEY</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="CUSTOM_STAT_KEY">CUSTOM_STAT_KEY</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../Identifier.html" title="class in net.minecraft.util">Identifier</a>&gt;&gt;</span>&nbsp;<span class="memberName">CUSTOM_STAT_KEY</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="CHUNK_STATUS_KEY">CHUNK_STATUS_KEY</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../world/chunk/ChunkStatus.html" title="class in net.minecraft.world.chunk">ChunkStatus</a>&gt;&gt;</span>&nbsp;<span class="memberName">CHUNK_STATUS_KEY</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="STRUCTURE_FEATURE_KEY">STRUCTURE_FEATURE_KEY</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../world/gen/feature/StructureFeature.html" title="class in net.minecraft.world.gen.feature">StructureFeature</a>&lt;?&gt;&gt;&gt;</span>&nbsp;<span class="memberName">STRUCTURE_FEATURE_KEY</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="STRUCTURE_PIECE_KEY">STRUCTURE_PIECE_KEY</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../structure/StructurePieceType.html" title="interface in net.minecraft.structure">StructurePieceType</a>&gt;&gt;</span>&nbsp;<span class="memberName">STRUCTURE_PIECE_KEY</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="RULE_TEST_KEY">RULE_TEST_KEY</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../structure/rule/RuleTestType.html" title="interface in net.minecraft.structure.rule">RuleTestType</a>&lt;?&gt;&gt;&gt;</span>&nbsp;<span class="memberName">RULE_TEST_KEY</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="POS_RULE_TEST_KEY">POS_RULE_TEST_KEY</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../structure/rule/PosRuleTestType.html" title="interface in net.minecraft.structure.rule">PosRuleTestType</a>&lt;?&gt;&gt;&gt;</span>&nbsp;<span class="memberName">POS_RULE_TEST_KEY</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="STRUCTURE_PROCESSOR_KEY">STRUCTURE_PROCESSOR_KEY</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../structure/processor/StructureProcessorType.html" title="interface in net.minecraft.structure.processor">StructureProcessorType</a>&lt;?&gt;&gt;&gt;</span>&nbsp;<span class="memberName">STRUCTURE_PROCESSOR_KEY</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="STRUCTURE_POOL_ELEMENT_KEY">STRUCTURE_POOL_ELEMENT_KEY</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../structure/pool/StructurePoolElementType.html" title="interface in net.minecraft.structure.pool">StructurePoolElementType</a>&lt;?&gt;&gt;&gt;</span>&nbsp;<span class="memberName">STRUCTURE_POOL_ELEMENT_KEY</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="MENU_KEY">MENU_KEY</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../screen/ScreenHandlerType.html" title="class in net.minecraft.screen">ScreenHandlerType</a>&lt;?&gt;&gt;&gt;</span>&nbsp;<span class="memberName">MENU_KEY</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="RECIPE_TYPE_KEY">RECIPE_TYPE_KEY</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../recipe/RecipeType.html" title="interface in net.minecraft.recipe">RecipeType</a>&lt;?&gt;&gt;&gt;</span>&nbsp;<span class="memberName">RECIPE_TYPE_KEY</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="RECIPE_SERIALIZER_KEY">RECIPE_SERIALIZER_KEY</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../recipe/RecipeSerializer.html" title="interface in net.minecraft.recipe">RecipeSerializer</a>&lt;?&gt;&gt;&gt;</span>&nbsp;<span class="memberName">RECIPE_SERIALIZER_KEY</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="ATTRIBUTE_KEY">ATTRIBUTE_KEY</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../entity/attribute/EntityAttribute.html" title="class in net.minecraft.entity.attribute">EntityAttribute</a>&gt;&gt;</span>&nbsp;<span class="memberName">ATTRIBUTE_KEY</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="STAT_TYPE_KEY">STAT_TYPE_KEY</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../stat/StatType.html" title="class in net.minecraft.stat">StatType</a>&lt;?&gt;&gt;&gt;</span>&nbsp;<span class="memberName">STAT_TYPE_KEY</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="VILLAGER_TYPE_KEY">VILLAGER_TYPE_KEY</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../village/VillagerType.html" title="interface in net.minecraft.village">VillagerType</a>&gt;&gt;</span>&nbsp;<span class="memberName">VILLAGER_TYPE_KEY</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="VILLAGER_PROFESSION_KEY">VILLAGER_PROFESSION_KEY</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../village/VillagerProfession.html" title="class in net.minecraft.village">VillagerProfession</a>&gt;&gt;</span>&nbsp;<span class="memberName">VILLAGER_PROFESSION_KEY</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="POINT_OF_INTEREST_TYPE_KEY">POINT_OF_INTEREST_TYPE_KEY</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../world/poi/PointOfInterestType.html" title="class in net.minecraft.world.poi">PointOfInterestType</a>&gt;&gt;</span>&nbsp;<span class="memberName">POINT_OF_INTEREST_TYPE_KEY</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="MEMORY_MODULE_TYPE_KEY">MEMORY_MODULE_TYPE_KEY</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../entity/ai/brain/MemoryModuleType.html" title="class in net.minecraft.entity.ai.brain">MemoryModuleType</a>&lt;?&gt;&gt;&gt;</span>&nbsp;<span class="memberName">MEMORY_MODULE_TYPE_KEY</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="SENSOR_TYPE_KEY">SENSOR_TYPE_KEY</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../entity/ai/brain/sensor/SensorType.html" title="class in net.minecraft.entity.ai.brain.sensor">SensorType</a>&lt;?&gt;&gt;&gt;</span>&nbsp;<span class="memberName">SENSOR_TYPE_KEY</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="SCHEDULE_KEY">SCHEDULE_KEY</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../entity/ai/brain/Schedule.html" title="class in net.minecraft.entity.ai.brain">Schedule</a>&gt;&gt;</span>&nbsp;<span class="memberName">SCHEDULE_KEY</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="ACTIVITY_KEY">ACTIVITY_KEY</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../entity/ai/brain/Activity.html" title="class in net.minecraft.entity.ai.brain">Activity</a>&gt;&gt;</span>&nbsp;<span class="memberName">ACTIVITY_KEY</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="LOOT_POOL_ENTRY_TYPE_KEY">LOOT_POOL_ENTRY_TYPE_KEY</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../loot/entry/LootPoolEntryType.html" title="class in net.minecraft.loot.entry">LootPoolEntryType</a>&gt;&gt;</span>&nbsp;<span class="memberName">LOOT_POOL_ENTRY_TYPE_KEY</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="LOOT_FUNCTION_TYPE_KEY">LOOT_FUNCTION_TYPE_KEY</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../loot/function/LootFunctionType.html" title="class in net.minecraft.loot.function">LootFunctionType</a>&gt;&gt;</span>&nbsp;<span class="memberName">LOOT_FUNCTION_TYPE_KEY</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="LOOT_CONDITION_TYPE_KEY">LOOT_CONDITION_TYPE_KEY</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../loot/condition/LootConditionType.html" title="class in net.minecraft.loot.condition">LootConditionType</a>&gt;&gt;</span>&nbsp;<span class="memberName">LOOT_CONDITION_TYPE_KEY</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="DIMENSION_TYPE_KEY">DIMENSION_TYPE_KEY</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../world/dimension/DimensionType.html" title="class in net.minecraft.world.dimension">DimensionType</a>&gt;&gt;</span>&nbsp;<span class="memberName">DIMENSION_TYPE_KEY</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="DIMENSION">DIMENSION</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../world/World.html" title="class in net.minecraft.world">World</a>&gt;&gt;</span>&nbsp;<span class="memberName">DIMENSION</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="DIMENSION_OPTIONS">DIMENSION_OPTIONS</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../world/dimension/DimensionOptions.html" title="class in net.minecraft.world.dimension">DimensionOptions</a>&gt;&gt;</span>&nbsp;<span class="memberName">DIMENSION_OPTIONS</span></div>
 </section>
 </li>
 <li class="blockList">
@@ -613,14 +1353,26 @@ T&nbsp;entry)</code></th>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="PARTICLE_TYPE">PARTICLE_TYPE</a></h3>
-<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../particle/ParticleType.html" title="class in net.minecraft.particle">ParticleType</a>&lt;? extends <a href="../../particle/ParticleEffect.html" title="interface in net.minecraft.particle">ParticleEffect</a>&gt;&gt;</span>&nbsp;<span class="memberName">PARTICLE_TYPE</span></div>
+<h3><a id="FEATURE_SIZE_TYPE">FEATURE_SIZE_TYPE</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../world/gen/feature/size/FeatureSizeType.html" title="class in net.minecraft.world.gen.feature.size">FeatureSizeType</a>&lt;?&gt;&gt;</span>&nbsp;<span class="memberName">FEATURE_SIZE_TYPE</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="BIOME_SOURCE_TYPE">BIOME_SOURCE_TYPE</a></h3>
-<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../world/biome/source/BiomeSourceType.html" title="class in net.minecraft.world.biome.source">BiomeSourceType</a>&lt;?,&#8203;?&gt;&gt;</span>&nbsp;<span class="memberName">BIOME_SOURCE_TYPE</span></div>
+<h3><a id="PARTICLE_TYPE">PARTICLE_TYPE</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../particle/ParticleType.html" title="class in net.minecraft.particle">ParticleType</a>&lt;?&gt;&gt;</span>&nbsp;<span class="memberName">PARTICLE_TYPE</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="BIOME_SOURCE">BIOME_SOURCE</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;com.mojang.serialization.Codec&lt;? extends <a href="../../world/biome/source/BiomeSource.html" title="class in net.minecraft.world.biome.source">BiomeSource</a>&gt;&gt;</span>&nbsp;<span class="memberName">BIOME_SOURCE</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="CHUNK_GENERATOR">CHUNK_GENERATOR</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;com.mojang.serialization.Codec&lt;? extends <a href="../../world/gen/chunk/ChunkGenerator.html" title="class in net.minecraft.world.gen.chunk">ChunkGenerator</a>&gt;&gt;</span>&nbsp;<span class="memberName">CHUNK_GENERATOR</span></div>
 </section>
 </li>
 <li class="blockList">
@@ -631,21 +1383,8 @@ T&nbsp;entry)</code></th>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="CHUNK_GENERATOR_TYPE">CHUNK_GENERATOR_TYPE</a></h3>
-<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../world/gen/chunk/ChunkGeneratorType.html" title="class in net.minecraft.world.gen.chunk">ChunkGeneratorType</a>&lt;?,&#8203;?&gt;&gt;</span>&nbsp;<span class="memberName">CHUNK_GENERATOR_TYPE</span></div>
-</section>
-</li>
-<li class="blockList">
-<section class="detail">
-<h3><a id="DIMENSION_TYPE">DIMENSION_TYPE</a></h3>
-<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../world/dimension/DimensionType.html" title="class in net.minecraft.world.dimension">DimensionType</a>&gt;</span>&nbsp;<span class="memberName">DIMENSION_TYPE</span></div>
-</section>
-</li>
-<li class="blockList">
-<section class="detail">
 <h3><a id="PAINTING_MOTIVE">PAINTING_MOTIVE</a></h3>
 <div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="DefaultedRegistry.html" title="class in net.minecraft.util.registry">DefaultedRegistry</a>&lt;<a href="../../entity/decoration/painting/PaintingMotive.html" title="class in net.minecraft.entity.decoration.painting">PaintingMotive</a>&gt;</span>&nbsp;<span class="memberName">PAINTING_MOTIVE</span></div>
-<div class="block">The painting motive (theme, motif) registry</div>
 </section>
 </li>
 <li class="blockList">
@@ -675,25 +1414,25 @@ T&nbsp;entry)</code></th>
 <li class="blockList">
 <section class="detail">
 <h3><a id="RULE_TEST">RULE_TEST</a></h3>
-<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../structure/rule/RuleTestType.html" title="interface in net.minecraft.structure.rule">RuleTestType</a>&gt;</span>&nbsp;<span class="memberName">RULE_TEST</span></div>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../structure/rule/RuleTestType.html" title="interface in net.minecraft.structure.rule">RuleTestType</a>&lt;?&gt;&gt;</span>&nbsp;<span class="memberName">RULE_TEST</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="POS_RULE_TEST">POS_RULE_TEST</a></h3>
-<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../structure/rule/PosRuleTestType.html" title="interface in net.minecraft.structure.rule">PosRuleTestType</a>&gt;</span>&nbsp;<span class="memberName">POS_RULE_TEST</span></div>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../structure/rule/PosRuleTestType.html" title="interface in net.minecraft.structure.rule">PosRuleTestType</a>&lt;?&gt;&gt;</span>&nbsp;<span class="memberName">POS_RULE_TEST</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="STRUCTURE_PROCESSOR">STRUCTURE_PROCESSOR</a></h3>
-<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../structure/processor/StructureProcessorType.html" title="interface in net.minecraft.structure.processor">StructureProcessorType</a>&gt;</span>&nbsp;<span class="memberName">STRUCTURE_PROCESSOR</span></div>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../structure/processor/StructureProcessorType.html" title="interface in net.minecraft.structure.processor">StructureProcessorType</a>&lt;?&gt;&gt;</span>&nbsp;<span class="memberName">STRUCTURE_PROCESSOR</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="STRUCTURE_POOL_ELEMENT">STRUCTURE_POOL_ELEMENT</a></h3>
-<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../structure/pool/StructurePoolElementType.html" title="interface in net.minecraft.structure.pool">StructurePoolElementType</a>&gt;</span>&nbsp;<span class="memberName">STRUCTURE_POOL_ELEMENT</span></div>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../structure/pool/StructurePoolElementType.html" title="interface in net.minecraft.structure.pool">StructurePoolElementType</a>&lt;?&gt;&gt;</span>&nbsp;<span class="memberName">STRUCTURE_POOL_ELEMENT</span></div>
 </section>
 </li>
 <li class="blockList">
@@ -716,8 +1455,8 @@ T&nbsp;entry)</code></th>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="ATTRIBUTES">ATTRIBUTES</a></h3>
-<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../entity/attribute/EntityAttribute.html" title="class in net.minecraft.entity.attribute">EntityAttribute</a>&gt;</span>&nbsp;<span class="memberName">ATTRIBUTES</span></div>
+<h3><a id="ATTRIBUTE">ATTRIBUTE</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../entity/attribute/EntityAttribute.html" title="class in net.minecraft.entity.attribute">EntityAttribute</a>&gt;</span>&nbsp;<span class="memberName">ATTRIBUTE</span></div>
 </section>
 </li>
 <li class="blockList">
@@ -768,6 +1507,37 @@ T&nbsp;entry)</code></th>
 <div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../entity/ai/brain/Activity.html" title="class in net.minecraft.entity.ai.brain">Activity</a>&gt;</span>&nbsp;<span class="memberName">ACTIVITY</span></div>
 </section>
 </li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="LOOT_POOL_ENTRY_TYPE">LOOT_POOL_ENTRY_TYPE</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../loot/entry/LootPoolEntryType.html" title="class in net.minecraft.loot.entry">LootPoolEntryType</a>&gt;</span>&nbsp;<span class="memberName">LOOT_POOL_ENTRY_TYPE</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="LOOT_FUNCTION_TYPE">LOOT_FUNCTION_TYPE</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../loot/function/LootFunctionType.html" title="class in net.minecraft.loot.function">LootFunctionType</a>&gt;</span>&nbsp;<span class="memberName">LOOT_FUNCTION_TYPE</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="LOOT_CONDITION_TYPE">LOOT_CONDITION_TYPE</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="../../loot/condition/LootConditionType.html" title="class in net.minecraft.loot.condition">LootConditionType</a>&gt;</span>&nbsp;<span class="memberName">LOOT_CONDITION_TYPE</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="registryKey">registryKey</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="Registry.html" title="type parameter in Registry">T</a>&gt;&gt;</span>&nbsp;<span class="memberName">registryKey</span></div>
+<div class="block">The <a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a> representing the ID of the actual registry.</div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="lifecycle">lifecycle</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType">com.mojang.serialization.Lifecycle</span>&nbsp;<span class="memberName">lifecycle</span></div>
+</section>
+</li>
 </ul>
 </section>
 </li>
@@ -780,8 +1550,9 @@ T&nbsp;entry)</code></th>
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="&lt;init&gt;()">Registry</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">Registry</span>()</div>
+<h3><a id="&lt;init&gt;(net.minecraft.util.registry.RegistryKey,com.mojang.serialization.Lifecycle)">Registry</a></h3>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="memberName">Registry</span>&#8203;(<span class="arguments"><a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;<a href="Registry.html" title="type parameter in Registry">T</a>&gt;&gt;&nbsp;registryKey,
+com.mojang.serialization.Lifecycle&nbsp;lifecycle)</span></div>
 </section>
 </li>
 </ul>
@@ -796,11 +1567,122 @@ T&nbsp;entry)</code></th>
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
+<h3><a id="createRegistryKey(java.lang.String)">createRegistryKey</a></h3>
+<div class="memberSignature"><span class="modifiers">private static</span>&nbsp;<span class="typeParameters">&lt;T&gt;</span>&nbsp;<span class="returnType"><a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;T&gt;&gt;</span>&nbsp;<span class="memberName">createRegistryKey</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;registryId)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="validate(net.minecraft.util.registry.MutableRegistry)">validate</a></h3>
+<div class="memberSignature"><span class="modifiers">private static</span>&nbsp;<span class="typeParameters">&lt;T extends <a href="MutableRegistry.html" title="class in net.minecraft.util.registry">MutableRegistry</a>&lt;?&gt;&gt;</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">validate</span>&#8203;(<span class="arguments"><a href="MutableRegistry.html" title="class in net.minecraft.util.registry">MutableRegistry</a>&lt;T&gt;&nbsp;registry)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="create(net.minecraft.util.registry.RegistryKey,java.util.function.Supplier)">create</a></h3>
+<div class="memberSignature"><span class="modifiers">private static</span>&nbsp;<span class="typeParameters">&lt;T&gt;</span>&nbsp;<span class="returnType"><a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;T&gt;</span>&nbsp;<span class="memberName">create</span>&#8203;(<span class="arguments"><a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;T&gt;&gt;&nbsp;registryKey,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Supplier</a>&lt;T&gt;&nbsp;defaultEntry)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="create(net.minecraft.util.registry.RegistryKey,java.lang.String,java.util.function.Supplier)">create</a></h3>
+<div class="memberSignature"><span class="modifiers">private static</span>&nbsp;<span class="typeParameters">&lt;T&gt;</span>&nbsp;<span class="returnType"><a href="DefaultedRegistry.html" title="class in net.minecraft.util.registry">DefaultedRegistry</a>&lt;T&gt;</span>&nbsp;<span class="memberName">create</span>&#8203;(<span class="arguments"><a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;T&gt;&gt;&nbsp;registryKey,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;defaultId,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Supplier</a>&lt;T&gt;&nbsp;defaultEntry)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="create(net.minecraft.util.registry.RegistryKey,com.mojang.serialization.Lifecycle,java.util.function.Supplier)">create</a></h3>
+<div class="memberSignature"><span class="modifiers">private static</span>&nbsp;<span class="typeParameters">&lt;T&gt;</span>&nbsp;<span class="returnType"><a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;T&gt;</span>&nbsp;<span class="memberName">create</span>&#8203;(<span class="arguments"><a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;T&gt;&gt;&nbsp;registryKey,
+com.mojang.serialization.Lifecycle&nbsp;lifecycle,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Supplier</a>&lt;T&gt;&nbsp;defaultEntry)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="create(net.minecraft.util.registry.RegistryKey,java.lang.String,com.mojang.serialization.Lifecycle,java.util.function.Supplier)">create</a></h3>
+<div class="memberSignature"><span class="modifiers">private static</span>&nbsp;<span class="typeParameters">&lt;T&gt;</span>&nbsp;<span class="returnType"><a href="DefaultedRegistry.html" title="class in net.minecraft.util.registry">DefaultedRegistry</a>&lt;T&gt;</span>&nbsp;<span class="memberName">create</span>&#8203;(<span class="arguments"><a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;T&gt;&gt;&nbsp;registryKey,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;defaultId,
+com.mojang.serialization.Lifecycle&nbsp;lifecycle,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Supplier</a>&lt;T&gt;&nbsp;defaultEntry)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="create(net.minecraft.util.registry.RegistryKey,net.minecraft.util.registry.MutableRegistry,java.util.function.Supplier)">
+<!--   -->
+</a><a id="create(net.minecraft.util.registry.RegistryKey,R,java.util.function.Supplier)">create</a></h3>
+<div class="memberSignature"><span class="modifiers">private static</span>&nbsp;<span class="typeParameters">&lt;T,&#8203;
+R extends <a href="MutableRegistry.html" title="class in net.minecraft.util.registry">MutableRegistry</a>&lt;T&gt;&gt;</span>&nbsp;<span class="returnType">R</span>&nbsp;<span class="memberName">create</span>&#8203;(<span class="arguments"><a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;T&gt;&gt;&nbsp;registryKey,
+R&nbsp;registry,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Supplier</a>&lt;T&gt;&nbsp;defaultEntry)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="toString()">toString</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></span>&nbsp;<span class="memberName">toString</span>()</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang" class="externalLink">toString</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></code></dd>
+</dl>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="decode(com.mojang.serialization.DynamicOps,java.lang.Object)">
+<!--   -->
+</a><a id="decode(com.mojang.serialization.DynamicOps,U)">decode</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="typeParameters">&lt;U&gt;</span>
+<span class="returnType">com.mojang.serialization.DataResult&lt;com.mojang.datafixers.util.Pair&lt;<a href="Registry.html" title="type parameter in Registry">T</a>,&#8203;U&gt;&gt;</span>&nbsp;<span class="memberName">decode</span>&#8203;(<span class="arguments">com.mojang.serialization.DynamicOps&lt;U&gt;&nbsp;dynamicOps,
+U&nbsp;u)</span></div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code>decode</code>&nbsp;in interface&nbsp;<code>com.mojang.serialization.Decoder&lt;<a href="Registry.html" title="type parameter in Registry">T</a>&gt;</code></dd>
+</dl>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="encode(java.lang.Object,com.mojang.serialization.DynamicOps,java.lang.Object)">
+<!--   -->
+</a><a id="encode(T,com.mojang.serialization.DynamicOps,U)">encode</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="typeParameters">&lt;U&gt;</span>&nbsp;<span class="returnType">com.mojang.serialization.DataResult&lt;U&gt;</span>&nbsp;<span class="memberName">encode</span>&#8203;(<span class="arguments"><a href="Registry.html" title="type parameter in Registry">T</a>&nbsp;t,
+com.mojang.serialization.DynamicOps&lt;U&gt;&nbsp;dynamicOps,
+U&nbsp;u)</span></div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code>encode</code>&nbsp;in interface&nbsp;<code>com.mojang.serialization.Encoder&lt;<a href="Registry.html" title="type parameter in Registry">T</a>&gt;</code></dd>
+</dl>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="keys(com.mojang.serialization.DynamicOps)">keys</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="typeParameters">&lt;U&gt;</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html?is-external=true" title="class or interface in java.util.stream" class="externalLink">Stream</a>&lt;U&gt;</span>&nbsp;<span class="memberName">keys</span>&#8203;(<span class="arguments">com.mojang.serialization.DynamicOps&lt;U&gt;&nbsp;dynamicOps)</span></div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code>keys</code>&nbsp;in interface&nbsp;<code>com.mojang.serialization.Keyable</code></dd>
+</dl>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="getId(java.lang.Object)">
 <!--   -->
 </a><a id="getId(T)">getId</a></h3>
-<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 </span><span class="modifiers">public abstract</span>&nbsp;<span class="returnType"><a href="../Identifier.html" title="class in net.minecraft.util">Identifier</a></span>&nbsp;<span class="memberName">getId</span>&#8203;(<span class="arguments"><a href="Registry.html" title="type parameter in Registry">T</a>&nbsp;entry)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="getKey(java.lang.Object)">
+<!--   -->
+</a><a id="getKey(T)">getKey</a></h3>
+<div class="memberSignature"><span class="modifiers">public abstract</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util" class="externalLink">Optional</a>&lt;<a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="type parameter in Registry">T</a>&gt;&gt;</span>&nbsp;<span class="memberName">getKey</span>&#8203;(<span class="arguments"><a href="Registry.html" title="type parameter in Registry">T</a>&nbsp;value)</span></div>
 </section>
 </li>
 <li class="blockList">
@@ -808,22 +1690,30 @@ T&nbsp;entry)</code></th>
 <h3><a id="getRawId(java.lang.Object)">
 <!--   -->
 </a><a id="getRawId(T)">getRawId</a></h3>
-<div class="memberSignature"><span class="modifiers">public abstract</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getRawId</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<div class="memberSignature"><span class="modifiers">public abstract</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getRawId</span>&#8203;(<span class="arguments"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 <a href="Registry.html" title="type parameter in Registry">T</a>&nbsp;entry)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
+<h3><a id="get(net.minecraft.util.registry.RegistryKey)">get</a></h3>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">public abstract</span>&nbsp;<span class="returnType"><a href="Registry.html" title="type parameter in Registry">T</a></span>&nbsp;<span class="memberName">get</span>&#8203;(<span class="arguments"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="type parameter in Registry">T</a>&gt;&nbsp;key)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="get(net.minecraft.util.Identifier)">get</a></h3>
-<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
-</span><span class="modifiers">public abstract</span>&nbsp;<span class="returnType"><a href="Registry.html" title="type parameter in Registry">T</a></span>&nbsp;<span class="memberName">get</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">public abstract</span>&nbsp;<span class="returnType"><a href="Registry.html" title="type parameter in Registry">T</a></span>&nbsp;<span class="memberName">get</span>&#8203;(<span class="arguments"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 <a href="../Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;id)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getOrEmpty(net.minecraft.util.Identifier)">getOrEmpty</a></h3>
-<div class="memberSignature"><span class="modifiers">public abstract</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util" class="externalLink">Optional</a>&lt;<a href="Registry.html" title="type parameter in Registry">T</a>&gt;</span>&nbsp;<span class="memberName">getOrEmpty</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<div class="memberSignature"><span class="modifiers">public abstract</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util" class="externalLink">Optional</a>&lt;<a href="Registry.html" title="type parameter in Registry">T</a>&gt;</span>&nbsp;<span class="memberName">getOrEmpty</span>&#8203;(<span class="arguments"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 <a href="../Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;id)</span></div>
 </section>
 </li>
@@ -842,8 +1732,19 @@ T&nbsp;entry)</code></th>
 <li class="blockList">
 <section class="detail">
 <h3><a id="containsId(net.minecraft.util.Identifier)">containsId</a></h3>
-<div class="memberSignature"><span class="annotations">@Environment(CLIENT)
-</span><span class="modifiers">public abstract</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">containsId</span>&#8203;(<span class="arguments"><a href="../Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;id)</span></div>
+<div class="memberSignature"><span class="modifiers">public abstract</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">containsId</span>&#8203;(<span class="arguments"><a href="../Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;id)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="isLoaded(net.minecraft.util.registry.RegistryKey)">isLoaded</a></h3>
+<div class="memberSignature"><span class="modifiers">public abstract</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isLoaded</span>&#8203;(<span class="arguments"><a href="RegistryKey.html" title="class in net.minecraft.util.registry">RegistryKey</a>&lt;<a href="Registry.html" title="type parameter in Registry">T</a>&gt;&nbsp;registryKey)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="containsId(int)">containsId</a></h3>
+<div class="memberSignature"><span class="modifiers">public abstract</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">containsId</span>&#8203;(<span class="arguments">int&nbsp;id)</span></div>
 </section>
 </li>
 <li class="blockList">
@@ -861,7 +1762,8 @@ T&nbsp;entry)</span></div>
 <h3><a id="register(net.minecraft.util.registry.Registry,net.minecraft.util.Identifier,java.lang.Object)">
 <!--   -->
 </a><a id="register(net.minecraft.util.registry.Registry,net.minecraft.util.Identifier,T)">register</a></h3>
-<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="typeParameters">&lt;T&gt;</span>&nbsp;<span class="returnType">T</span>&nbsp;<span class="memberName">register</span>&#8203;(<span class="arguments"><a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;? super T&gt;&nbsp;registry,
+<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="typeParameters">&lt;V,&#8203;
+T extends V&gt;</span>&nbsp;<span class="returnType">T</span>&nbsp;<span class="memberName">register</span>&#8203;(<span class="arguments"><a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;V&gt;&nbsp;registry,
 <a href="../Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;id,
 T&nbsp;entry)</span></div>
 </section>
@@ -871,7 +1773,8 @@ T&nbsp;entry)</span></div>
 <h3><a id="register(net.minecraft.util.registry.Registry,int,java.lang.String,java.lang.Object)">
 <!--   -->
 </a><a id="register(net.minecraft.util.registry.Registry,int,java.lang.String,T)">register</a></h3>
-<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="typeParameters">&lt;T&gt;</span>&nbsp;<span class="returnType">T</span>&nbsp;<span class="memberName">register</span>&#8203;(<span class="arguments"><a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;? super T&gt;&nbsp;registry,
+<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="typeParameters">&lt;V,&#8203;
+T extends V&gt;</span>&nbsp;<span class="returnType">T</span>&nbsp;<span class="memberName">register</span>&#8203;(<span class="arguments"><a href="Registry.html" title="class in net.minecraft.util.registry">Registry</a>&lt;V&gt;&nbsp;registry,
 int&nbsp;rawId,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;id,
 T&nbsp;entry)</span></div>
@@ -909,7 +1812,7 @@ T&nbsp;entry)</span></div>
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#nested.class.summary">Nested</a>&nbsp;|&nbsp;</li>
 <li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>

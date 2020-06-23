@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":10,"i1":9,"i2":9};
+<script type="text/javascript">var data = {"i0":9,"i1":9,"i2":10,"i3":9,"i4":9,"i5":9};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -141,6 +141,33 @@ implements <a href="BiomeAccessType.html" title="interface in net.minecraft.worl
 </div>
 </section>
 </li>
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<li class="blockList">
+<section class="constructorSummary"><a id="constructor.summary">
+<!--   -->
+</a>
+<h2>Constructor Summary</h2>
+<div class="memberSummary">
+<table>
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<thead>
+<tr>
+<th class="colFirst" scope="col">Modifier</th>
+<th class="colSecond" scope="col">Constructor</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private </code></td>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E()">VoronoiBiomeAccessType</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</li>
 <!-- ========== METHOD SUMMARY =========== -->
 <li class="blockList">
 <section class="methodSummary"><a id="method.summary">
@@ -160,6 +187,22 @@ implements <a href="BiomeAccessType.html" title="interface in net.minecraft.worl
 </thead>
 <tbody>
 <tr class="altColor" id="i0">
+<td class="colFirst"><code>private static double</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#calcSquaredDistance(long,int,int,int,double,double,double)">calcSquaredDistance</a></span>&#8203;(long&nbsp;seed,
+int&nbsp;x,
+int&nbsp;y,
+int&nbsp;z,
+double&nbsp;xFraction,
+double&nbsp;yFraction,
+double&nbsp;zFraction)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i1">
+<td class="colFirst"><code>private static double</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#distribute(long)">distribute</a></span>&#8203;(long&nbsp;seed)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i2">
 <td class="colFirst"><code><a href="../Biome.html" title="class in net.minecraft.world.biome">Biome</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getBiome(long,int,int,int,net.minecraft.world.biome.source.BiomeAccess.Storage)">getBiome</a></span>&#8203;(long&nbsp;seed,
 int&nbsp;x,
@@ -168,14 +211,19 @@ int&nbsp;z,
 <a href="BiomeAccess.Storage.html" title="interface in net.minecraft.world.biome.source">BiomeAccess.Storage</a>&nbsp;storage)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i1">
+<tr class="rowColor" id="i3">
+<td class="colFirst"><code>private static double</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#square(double)">square</a></span>&#8203;(double&nbsp;d)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i4">
 <td class="colFirst"><code>static <a href="VoronoiBiomeAccessType.html" title="enum in net.minecraft.world.biome.source">VoronoiBiomeAccessType</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#valueOf(java.lang.String)">valueOf</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name)</code></th>
 <td class="colLast">
 <div class="block">Returns the enum constant of this type with the specified name.</div>
 </td>
 </tr>
-<tr class="altColor" id="i2">
+<tr class="rowColor" id="i5">
 <td class="colFirst"><code>static <a href="VoronoiBiomeAccessType.html" title="enum in net.minecraft.world.biome.source">VoronoiBiomeAccessType</a>[]</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#values()">values</a></span>()</code></th>
 <td class="colLast">
@@ -214,6 +262,22 @@ the order they are declared.</div>
 <section class="detail">
 <h3><a id="INSTANCE">INSTANCE</a></h3>
 <div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="VoronoiBiomeAccessType.html" title="enum in net.minecraft.world.biome.source">VoronoiBiomeAccessType</a></span>&nbsp;<span class="memberName">INSTANCE</span></div>
+</section>
+</li>
+</ul>
+</section>
+</li>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<li class="blockList">
+<section class="constructorDetails"><a id="constructor.detail">
+<!--   -->
+</a>
+<h2>Constructor Details</h2>
+<ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="&lt;init&gt;()">VoronoiBiomeAccessType</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="memberName">VoronoiBiomeAccessType</span>()</div>
 </section>
 </li>
 </ul>
@@ -269,6 +333,30 @@ int&nbsp;z,
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="BiomeAccessType.html#getBiome(long,int,int,int,net.minecraft.world.biome.source.BiomeAccess.Storage)">getBiome</a></code>&nbsp;in interface&nbsp;<code><a href="BiomeAccessType.html" title="interface in net.minecraft.world.biome.source">BiomeAccessType</a></code></dd>
 </dl>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="calcSquaredDistance(long,int,int,int,double,double,double)">calcSquaredDistance</a></h3>
+<div class="memberSignature"><span class="modifiers">private static</span>&nbsp;<span class="returnType">double</span>&nbsp;<span class="memberName">calcSquaredDistance</span>&#8203;(<span class="arguments">long&nbsp;seed,
+int&nbsp;x,
+int&nbsp;y,
+int&nbsp;z,
+double&nbsp;xFraction,
+double&nbsp;yFraction,
+double&nbsp;zFraction)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="distribute(long)">distribute</a></h3>
+<div class="memberSignature"><span class="modifiers">private static</span>&nbsp;<span class="returnType">double</span>&nbsp;<span class="memberName">distribute</span>&#8203;(<span class="arguments">long&nbsp;seed)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="square(double)">square</a></h3>
+<div class="memberSignature"><span class="modifiers">private static</span>&nbsp;<span class="returnType">double</span>&nbsp;<span class="memberName">square</span>&#8203;(<span class="arguments">double&nbsp;d)</span></div>
 </section>
 </li>
 </ul>

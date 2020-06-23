@@ -19,8 +19,8 @@
 <script type="text/javascript" src="../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":6,"i1":6,"i2":6,"i3":10};
-var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],8:["t4","Concrete Methods"]};
+<script type="text/javascript">var data = {"i0":6,"i1":6};
+var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
@@ -92,7 +92,7 @@ loadScripts(document, 'script');</script>
 <section class="description">
 <dl>
 <dt>Direct Known Subclasses:</dt>
-<dd><code><a href="BlockIgnoreStructureProcessor.html" title="class in net.minecraft.structure.processor">BlockIgnoreStructureProcessor</a></code>, <code><a href="BlockRotStructureProcessor.html" title="class in net.minecraft.structure.processor">BlockRotStructureProcessor</a></code>, <code><a href="GravityStructureProcessor.html" title="class in net.minecraft.structure.processor">GravityStructureProcessor</a></code>, <code><a href="JigsawReplacementStructureProcessor.html" title="class in net.minecraft.structure.processor">JigsawReplacementStructureProcessor</a></code>, <code><a href="NopStructureProcessor.html" title="class in net.minecraft.structure.processor">NopStructureProcessor</a></code>, <code><a href="RuleStructureProcessor.html" title="class in net.minecraft.structure.processor">RuleStructureProcessor</a></code></dd>
+<dd><code><a href="BlackstoneReplacementStructureProcessor.html" title="class in net.minecraft.structure.processor">BlackstoneReplacementStructureProcessor</a></code>, <code><a href="BlockAgeStructureProcessor.html" title="class in net.minecraft.structure.processor">BlockAgeStructureProcessor</a></code>, <code><a href="BlockIgnoreStructureProcessor.html" title="class in net.minecraft.structure.processor">BlockIgnoreStructureProcessor</a></code>, <code><a href="BlockRotStructureProcessor.html" title="class in net.minecraft.structure.processor">BlockRotStructureProcessor</a></code>, <code><a href="GravityStructureProcessor.html" title="class in net.minecraft.structure.processor">GravityStructureProcessor</a></code>, <code><a href="JigsawReplacementStructureProcessor.html" title="class in net.minecraft.structure.processor">JigsawReplacementStructureProcessor</a></code>, <code><a href="LavaSubmergedBlockStructureProcessor.html" title="class in net.minecraft.structure.processor">LavaSubmergedBlockStructureProcessor</a></code>, <code><a href="NopStructureProcessor.html" title="class in net.minecraft.structure.processor">NopStructureProcessor</a></code>, <code><a href="RuleStructureProcessor.html" title="class in net.minecraft.structure.processor">RuleStructureProcessor</a></code></dd>
 </dl>
 <hr>
 <pre>public abstract class <span class="typeNameLabel">StructureProcessor</span>
@@ -132,7 +132,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </a>
 <h2>Method Summary</h2>
 <div class="memberSummary">
-<div role="tablist" aria-orientation="horizontal"><button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t2" class="tableTab" onclick="show(2);">Instance Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t3" class="tableTab" onclick="show(4);">Abstract Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t4" class="tableTab" onclick="show(8);">Concrete Methods</button></div>
+<div role="tablist" aria-orientation="horizontal"><button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t2" class="tableTab" onclick="show(2);">Instance Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t3" class="tableTab" onclick="show(4);">Abstract Methods</button></div>
 <div id="memberSummary_tabpanel" role="tabpanel">
 <table aria-labelledby="t0">
 <thead>
@@ -144,7 +144,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </thead>
 <tbody>
 <tr class="altColor" id="i0">
-<td class="colFirst"><code>protected abstract <a href="StructureProcessorType.html" title="interface in net.minecraft.structure.processor">StructureProcessorType</a></code></td>
+<td class="colFirst"><code>protected abstract <a href="StructureProcessorType.html" title="interface in net.minecraft.structure.processor">StructureProcessorType</a>&lt;?&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getType()">getType</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -156,16 +156,6 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <a href="../Structure.StructureBlockInfo.html" title="class in net.minecraft.structure">Structure.StructureBlockInfo</a>&nbsp;structureBlockInfo,
 <a href="../Structure.StructureBlockInfo.html" title="class in net.minecraft.structure">Structure.StructureBlockInfo</a>&nbsp;structureBlockInfo2,
 <a href="../StructurePlacementData.html" title="class in net.minecraft.structure">StructurePlacementData</a>&nbsp;structurePlacementData)</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="altColor" id="i2">
-<td class="colFirst"><code>protected abstract &lt;T&gt;&nbsp;com.mojang.datafixers.Dynamic&lt;T&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#rawToDynamic(com.mojang.datafixers.types.DynamicOps)">rawToDynamic</a></span>&#8203;(com.mojang.datafixers.types.DynamicOps&lt;T&gt;&nbsp;dynamicOps)</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="rowColor" id="i3">
-<td class="colFirst"><code>&lt;T&gt;&nbsp;com.mojang.datafixers.Dynamic&lt;T&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#toDynamic(com.mojang.datafixers.types.DynamicOps)">toDynamic</a></span>&#8203;(com.mojang.datafixers.types.DynamicOps&lt;T&gt;&nbsp;dynamicOps)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -209,7 +199,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <section class="detail">
 <h3><a id="process(net.minecraft.world.WorldView,net.minecraft.util.math.BlockPos,net.minecraft.util.math.BlockPos,net.minecraft.structure.Structure.StructureBlockInfo,net.minecraft.structure.Structure.StructureBlockInfo,net.minecraft.structure.StructurePlacementData)">process</a></h3>
-<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 </span><span class="modifiers">public abstract</span>&nbsp;<span class="returnType"><a href="../Structure.StructureBlockInfo.html" title="class in net.minecraft.structure">Structure.StructureBlockInfo</a></span>&nbsp;<span class="memberName">process</span>&#8203;(<span class="arguments"><a href="../../world/WorldView.html" title="interface in net.minecraft.world">WorldView</a>&nbsp;worldView,
 <a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
 <a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
@@ -221,20 +211,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <section class="detail">
 <h3><a id="getType()">getType</a></h3>
-<div class="memberSignature"><span class="modifiers">protected abstract</span>&nbsp;<span class="returnType"><a href="StructureProcessorType.html" title="interface in net.minecraft.structure.processor">StructureProcessorType</a></span>&nbsp;<span class="memberName">getType</span>()</div>
-</section>
-</li>
-<li class="blockList">
-<section class="detail">
-<h3><a id="rawToDynamic(com.mojang.datafixers.types.DynamicOps)">rawToDynamic</a></h3>
-<div class="memberSignature"><span class="modifiers">protected abstract</span>&nbsp;<span class="typeParameters">&lt;T&gt;</span>
-<span class="returnType">com.mojang.datafixers.Dynamic&lt;T&gt;</span>&nbsp;<span class="memberName">rawToDynamic</span>&#8203;(<span class="arguments">com.mojang.datafixers.types.DynamicOps&lt;T&gt;&nbsp;dynamicOps)</span></div>
-</section>
-</li>
-<li class="blockList">
-<section class="detail">
-<h3><a id="toDynamic(com.mojang.datafixers.types.DynamicOps)">toDynamic</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="typeParameters">&lt;T&gt;</span>&nbsp;<span class="returnType">com.mojang.datafixers.Dynamic&lt;T&gt;</span>&nbsp;<span class="memberName">toDynamic</span>&#8203;(<span class="arguments">com.mojang.datafixers.types.DynamicOps&lt;T&gt;&nbsp;dynamicOps)</span></div>
+<div class="memberSignature"><span class="modifiers">protected abstract</span>&nbsp;<span class="returnType"><a href="StructureProcessorType.html" title="interface in net.minecraft.structure.processor">StructureProcessorType</a>&lt;?&gt;</span>&nbsp;<span class="memberName">getType</span>()</div>
 </section>
 </li>
 </ul>

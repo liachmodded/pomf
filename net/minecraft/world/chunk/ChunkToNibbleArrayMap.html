@@ -118,8 +118,23 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </thead>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><code>protected it.unimi.dsi.fastutil.longs.Long2ObjectOpenHashMap&lt;<a href="ChunkNibbleArray.html" title="class in net.minecraft.world.chunk">ChunkNibbleArray</a>&gt;</code></td>
+<td class="colFirst"><code>protected <a href="http://fastutil.di.unimi.it/docs/it/unimi/dsi/fastutil/longs/Long2ObjectOpenHashMap.html?is-external=true" title="class or interface in it.unimi.dsi.fastutil.longs" class="externalLink">Long2ObjectOpenHashMap</a>&lt;<a href="ChunkNibbleArray.html" title="class in net.minecraft.world.chunk">ChunkNibbleArray</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#arrays">arrays</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="ChunkNibbleArray.html" title="class in net.minecraft.world.chunk">ChunkNibbleArray</a>[]</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#cacheArrays">cacheArrays</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#cacheEnabled">cacheEnabled</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private long[]</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#cachePositions">cachePositions</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -146,7 +161,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>protected </code></td>
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(it.unimi.dsi.fastutil.longs.Long2ObjectOpenHashMap)">ChunkToNibbleArrayMap</a></span>&#8203;(it.unimi.dsi.fastutil.longs.Long2ObjectOpenHashMap&lt;<a href="ChunkNibbleArray.html" title="class in net.minecraft.world.chunk">ChunkNibbleArray</a>&gt;&nbsp;arrays)</code></th>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(it.unimi.dsi.fastutil.longs.Long2ObjectOpenHashMap)">ChunkToNibbleArrayMap</a></span>&#8203;(<a href="http://fastutil.di.unimi.it/docs/it/unimi/dsi/fastutil/longs/Long2ObjectOpenHashMap.html?is-external=true" title="class or interface in it.unimi.dsi.fastutil.longs" class="externalLink">Long2ObjectOpenHashMap</a>&lt;<a href="ChunkNibbleArray.html" title="class in net.minecraft.world.chunk">ChunkNibbleArray</a>&gt;&nbsp;arrays)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -237,8 +252,26 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
+<h3><a id="cachePositions">cachePositions</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType">long[]</span>&nbsp;<span class="memberName">cachePositions</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="cacheArrays">cacheArrays</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="ChunkNibbleArray.html" title="class in net.minecraft.world.chunk">ChunkNibbleArray</a>[]</span>&nbsp;<span class="memberName">cacheArrays</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="cacheEnabled">cacheEnabled</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">cacheEnabled</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="arrays">arrays</a></h3>
-<div class="memberSignature"><span class="modifiers">protected final</span>&nbsp;<span class="returnType">it.unimi.dsi.fastutil.longs.Long2ObjectOpenHashMap&lt;<a href="ChunkNibbleArray.html" title="class in net.minecraft.world.chunk">ChunkNibbleArray</a>&gt;</span>&nbsp;<span class="memberName">arrays</span></div>
+<div class="memberSignature"><span class="modifiers">protected final</span>&nbsp;<span class="returnType"><a href="http://fastutil.di.unimi.it/docs/it/unimi/dsi/fastutil/longs/Long2ObjectOpenHashMap.html?is-external=true" title="class or interface in it.unimi.dsi.fastutil.longs" class="externalLink">Long2ObjectOpenHashMap</a>&lt;<a href="ChunkNibbleArray.html" title="class in net.minecraft.world.chunk">ChunkNibbleArray</a>&gt;</span>&nbsp;<span class="memberName">arrays</span></div>
 </section>
 </li>
 </ul>
@@ -254,7 +287,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <section class="detail">
 <h3><a id="&lt;init&gt;(it.unimi.dsi.fastutil.longs.Long2ObjectOpenHashMap)">ChunkToNibbleArrayMap</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="memberName">ChunkToNibbleArrayMap</span>&#8203;(<span class="arguments">it.unimi.dsi.fastutil.longs.Long2ObjectOpenHashMap&lt;<a href="ChunkNibbleArray.html" title="class in net.minecraft.world.chunk">ChunkNibbleArray</a>&gt;&nbsp;arrays)</span></div>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="memberName">ChunkToNibbleArrayMap</span>&#8203;(<span class="arguments"><a href="http://fastutil.di.unimi.it/docs/it/unimi/dsi/fastutil/longs/Long2ObjectOpenHashMap.html?is-external=true" title="class or interface in it.unimi.dsi.fastutil.longs" class="externalLink">Long2ObjectOpenHashMap</a>&lt;<a href="ChunkNibbleArray.html" title="class in net.minecraft.world.chunk">ChunkNibbleArray</a>&gt;&nbsp;arrays)</span></div>
 </section>
 </li>
 </ul>
@@ -288,14 +321,14 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <section class="detail">
 <h3><a id="get(long)">get</a></h3>
-<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 </span><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="ChunkNibbleArray.html" title="class in net.minecraft.world.chunk">ChunkNibbleArray</a></span>&nbsp;<span class="memberName">get</span>&#8203;(<span class="arguments">long&nbsp;chunkPos)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="removeChunk(long)">removeChunk</a></h3>
-<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 </span><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="ChunkNibbleArray.html" title="class in net.minecraft.world.chunk">ChunkNibbleArray</a></span>&nbsp;<span class="memberName">removeChunk</span>&#8203;(<span class="arguments">long&nbsp;chunkPos)</span></div>
 </section>
 </li>

@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10};
+<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -116,18 +116,38 @@ extends <a href="ScreenHandler.html" title="class in net.minecraft.screen">Scree
 </thead>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><code>int[]</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#enchantmentId">enchantmentId</a></span></code></th>
+<td class="colFirst"><code>private <a href="ScreenHandlerContext.html" title="interface in net.minecraft.screen">ScreenHandlerContext</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#context">context</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>int[]</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#enchantmentLevel">enchantmentLevel</a></span></code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#enchantmentId">enchantmentId</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>int[]</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#enchantmentLevel">enchantmentLevel</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>int[]</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#enchantmentPower">enchantmentPower</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../inventory/Inventory.html" title="interface in net.minecraft.inventory">Inventory</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#inventory">inventory</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#random">random</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="Property.html" title="class in net.minecraft.screen">Property</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#seed">seed</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -201,27 +221,34 @@ extends <a href="ScreenHandler.html" title="class in net.minecraft.screen">Scree
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i2">
-<td class="colFirst"><code>int</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getLapisCount()">getLapisCount</a></span>()</code></th>
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../enchantment/EnchantmentLevelEntry.html" title="class in net.minecraft.enchantment">EnchantmentLevelEntry</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#generateEnchantments(net.minecraft.item.ItemStack,int,int)">generateEnchantments</a></span>&#8203;(<a href="../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;stack,
+int&nbsp;slot,
+int&nbsp;level)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i3">
 <td class="colFirst"><code>int</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getSeed()">getSeed</a></span>()</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getLapisCount()">getLapisCount</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i4">
+<td class="colFirst"><code>int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getSeed()">getSeed</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i5">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#onButtonClick(net.minecraft.entity.player.PlayerEntity,int)">onButtonClick</a></span>&#8203;(<a href="../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;player,
 int&nbsp;id)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i5">
+<tr class="altColor" id="i6">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#onContentChanged(net.minecraft.inventory.Inventory)">onContentChanged</a></span>&#8203;(<a href="../inventory/Inventory.html" title="interface in net.minecraft.inventory">Inventory</a>&nbsp;inventory)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i6">
+<tr class="rowColor" id="i7">
 <td class="colFirst"><code><a href="../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#transferSlot(net.minecraft.entity.player.PlayerEntity,int)">transferSlot</a></span>&#8203;(<a href="../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;player,
 int&nbsp;index)</code></th>
@@ -254,6 +281,30 @@ int&nbsp;index)</code></th>
 </a>
 <h2>Field Details</h2>
 <ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="inventory">inventory</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../inventory/Inventory.html" title="interface in net.minecraft.inventory">Inventory</a></span>&nbsp;<span class="memberName">inventory</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="context">context</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="ScreenHandlerContext.html" title="interface in net.minecraft.screen">ScreenHandlerContext</a></span>&nbsp;<span class="memberName">context</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="random">random</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a></span>&nbsp;<span class="memberName">random</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="seed">seed</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="Property.html" title="class in net.minecraft.screen">Property</a></span>&nbsp;<span class="memberName">seed</span></div>
+</section>
+</li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="enchantmentPower">enchantmentPower</a></h3>
@@ -326,6 +377,14 @@ int&nbsp;id)</span></div>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="ScreenHandler.html#onButtonClick(net.minecraft.entity.player.PlayerEntity,int)">onButtonClick</a></code>&nbsp;in class&nbsp;<code><a href="ScreenHandler.html" title="class in net.minecraft.screen">ScreenHandler</a></code></dd>
 </dl>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="generateEnchantments(net.minecraft.item.ItemStack,int,int)">generateEnchantments</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../enchantment/EnchantmentLevelEntry.html" title="class in net.minecraft.enchantment">EnchantmentLevelEntry</a>&gt;</span>&nbsp;<span class="memberName">generateEnchantments</span>&#8203;(<span class="arguments"><a href="../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;stack,
+int&nbsp;slot,
+int&nbsp;level)</span></div>
 </section>
 </li>
 <li class="blockList">

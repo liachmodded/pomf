@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":9,"i1":10,"i2":10};
+<script type="text/javascript">var data = {"i0":9,"i1":10,"i2":10,"i3":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -57,13 +57,13 @@ loadScripts(document, 'script');</script>
 <li>Summary:&nbsp;</li>
 <li><a href="#nested.class.summary">Nested</a>&nbsp;|&nbsp;</li>
 <li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
 <li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
 </div>
@@ -126,7 +126,7 @@ extends <a href="ConditionalLootFunction.html" title="class in net.minecraft.loo
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static class&nbsp;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="ExplorationMapLootFunction.Factory.html" title="class in net.minecraft.loot.function">ExplorationMapLootFunction.Factory</a></span></code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="ExplorationMapLootFunction.Serializer.html" title="class in net.minecraft.loot.function">ExplorationMapLootFunction.Serializer</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -157,8 +157,43 @@ extends <a href="ConditionalLootFunction.html" title="class in net.minecraft.loo
 </thead>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code>private <a href="../../item/map/MapIcon.Type.html" title="enum in net.minecraft.item.map">MapIcon.Type</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#decoration">decoration</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../item/map/MapIcon.Type.html" title="enum in net.minecraft.item.map">MapIcon.Type</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#DEFAULT_DECORATION">DEFAULT_DECORATION</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../world/gen/feature/StructureFeature.html" title="class in net.minecraft.world.gen.feature">StructureFeature</a>&lt;?&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#destination">destination</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../world/gen/feature/StructureFeature.html" title="class in net.minecraft.world.gen.feature">StructureFeature</a>&lt;?&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#field_25032">field_25032</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="https://logging.apache.org/log4j/2.x/log4j-api/apidocs/org/apache/logging/log4j/Logger.html?is-external=true" title="class or interface in org.apache.logging.log4j" class="externalLink">Logger</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#LOGGER">LOGGER</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#searchRadius">searchRadius</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#skipExistingChunks">skipExistingChunks</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private byte</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#zoom">zoom</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -169,6 +204,38 @@ extends <a href="ConditionalLootFunction.html" title="class in net.minecraft.loo
 <a id="fields.inherited.from.class.net.minecraft.loot.function.ConditionalLootFunction">
 <!--   -->
 </a><code><a href="ConditionalLootFunction.html#conditions">conditions</a></code></div>
+</section>
+</li>
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<li class="blockList">
+<section class="constructorSummary"><a id="constructor.summary">
+<!--   -->
+</a>
+<h2>Constructor Summary</h2>
+<div class="memberSummary">
+<table>
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<thead>
+<tr>
+<th class="colFirst" scope="col">Modifier</th>
+<th class="colSecond" scope="col">Constructor</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private </code></td>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.loot.condition.LootCondition%5B%5D,net.minecraft.world.gen.feature.StructureFeature,net.minecraft.item.map.MapIcon.Type,byte,int,boolean)">ExplorationMapLootFunction</a></span>&#8203;(<a href="../condition/LootCondition.html" title="interface in net.minecraft.loot.condition">LootCondition</a>[]&nbsp;conditions,
+<a href="../../world/gen/feature/StructureFeature.html" title="class in net.minecraft.world.gen.feature">StructureFeature</a>&lt;?&gt;&nbsp;structureFeature,
+<a href="../../item/map/MapIcon.Type.html" title="enum in net.minecraft.item.map">MapIcon.Type</a>&nbsp;decoration,
+byte&nbsp;zoom,
+int&nbsp;searchRadius,
+boolean&nbsp;skipExistingChunks)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 </li>
 <!-- ========== METHOD SUMMARY =========== -->
@@ -200,6 +267,11 @@ extends <a href="ConditionalLootFunction.html" title="class in net.minecraft.loo
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i2">
+<td class="colFirst"><code><a href="LootFunctionType.html" title="class in net.minecraft.loot.function">LootFunctionType</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getType()">getType</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i3">
 <td class="colFirst"><code><a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#process(net.minecraft.item.ItemStack,net.minecraft.loot.context.LootContext)">process</a></span>&#8203;(<a href="../../item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;stack,
 <a href="../context/LootContext.html" title="class in net.minecraft.loot.context">LootContext</a>&nbsp;context)</code></th>
@@ -213,7 +285,7 @@ extends <a href="ConditionalLootFunction.html" title="class in net.minecraft.loo
 <h3>Methods inherited from class&nbsp;net.minecraft.loot.function.<a href="ConditionalLootFunction.html" title="class in net.minecraft.loot.function">ConditionalLootFunction</a></h3>
 <a id="methods.inherited.from.class.net.minecraft.loot.function.ConditionalLootFunction">
 <!--   -->
-</a><code><a href="ConditionalLootFunction.html#apply(net.minecraft.item.ItemStack,net.minecraft.loot.context.LootContext)">apply</a>, <a href="ConditionalLootFunction.html#builder(java.util.function.Function)">builder</a>, <a href="ConditionalLootFunction.html#check(net.minecraft.loot.LootTableReporter)">check</a></code></div>
+</a><code><a href="ConditionalLootFunction.html#apply(net.minecraft.item.ItemStack,net.minecraft.loot.context.LootContext)">apply</a>, <a href="ConditionalLootFunction.html#builder(java.util.function.Function)">builder</a>, <a href="ConditionalLootFunction.html#validate(net.minecraft.loot.LootTableReporter)">validate</a></code></div>
 <div class="inheritedList">
 <h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></h3>
 <a id="methods.inherited.from.class.java.lang.Object">
@@ -239,8 +311,71 @@ extends <a href="ConditionalLootFunction.html" title="class in net.minecraft.loo
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
+<h3><a id="LOGGER">LOGGER</a></h3>
+<div class="memberSignature"><span class="modifiers">private static final</span>&nbsp;<span class="returnType"><a href="https://logging.apache.org/log4j/2.x/log4j-api/apidocs/org/apache/logging/log4j/Logger.html?is-external=true" title="class or interface in org.apache.logging.log4j" class="externalLink">Logger</a></span>&nbsp;<span class="memberName">LOGGER</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="field_25032">field_25032</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="../../world/gen/feature/StructureFeature.html" title="class in net.minecraft.world.gen.feature">StructureFeature</a>&lt;?&gt;</span>&nbsp;<span class="memberName">field_25032</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="DEFAULT_DECORATION">DEFAULT_DECORATION</a></h3>
 <div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="../../item/map/MapIcon.Type.html" title="enum in net.minecraft.item.map">MapIcon.Type</a></span>&nbsp;<span class="memberName">DEFAULT_DECORATION</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="destination">destination</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../../world/gen/feature/StructureFeature.html" title="class in net.minecraft.world.gen.feature">StructureFeature</a>&lt;?&gt;</span>&nbsp;<span class="memberName">destination</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="decoration">decoration</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../../item/map/MapIcon.Type.html" title="enum in net.minecraft.item.map">MapIcon.Type</a></span>&nbsp;<span class="memberName">decoration</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="zoom">zoom</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType">byte</span>&nbsp;<span class="memberName">zoom</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="searchRadius">searchRadius</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">searchRadius</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="skipExistingChunks">skipExistingChunks</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">skipExistingChunks</span></div>
+</section>
+</li>
+</ul>
+</section>
+</li>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<li class="blockList">
+<section class="constructorDetails"><a id="constructor.detail">
+<!--   -->
+</a>
+<h2>Constructor Details</h2>
+<ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="&lt;init&gt;(net.minecraft.loot.condition.LootCondition[],net.minecraft.world.gen.feature.StructureFeature,net.minecraft.item.map.MapIcon.Type,byte,int,boolean)">ExplorationMapLootFunction</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="memberName">ExplorationMapLootFunction</span>&#8203;(<span class="arguments"><a href="../condition/LootCondition.html" title="interface in net.minecraft.loot.condition">LootCondition</a>[]&nbsp;conditions,
+<a href="../../world/gen/feature/StructureFeature.html" title="class in net.minecraft.world.gen.feature">StructureFeature</a>&lt;?&gt;&nbsp;structureFeature,
+<a href="../../item/map/MapIcon.Type.html" title="enum in net.minecraft.item.map">MapIcon.Type</a>&nbsp;decoration,
+byte&nbsp;zoom,
+int&nbsp;searchRadius,
+boolean&nbsp;skipExistingChunks)</span></div>
 </section>
 </li>
 </ul>
@@ -253,6 +388,12 @@ extends <a href="ConditionalLootFunction.html" title="class in net.minecraft.loo
 </a>
 <h2>Method Details</h2>
 <ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="getType()">getType</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="LootFunctionType.html" title="class in net.minecraft.loot.function">LootFunctionType</a></span>&nbsp;<span class="memberName">getType</span>()</div>
+</section>
+</li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getRequiredParameters()">getRequiredParameters</a></h3>
@@ -310,13 +451,13 @@ extends <a href="ConditionalLootFunction.html" title="class in net.minecraft.loo
 <li>Summary:&nbsp;</li>
 <li><a href="#nested.class.summary">Nested</a>&nbsp;|&nbsp;</li>
 <li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
 <li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
 </div>

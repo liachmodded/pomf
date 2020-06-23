@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../../../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10};
+<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -62,7 +62,7 @@ loadScripts(document, 'script');</script>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
@@ -117,6 +117,45 @@ extends <a href="Task.html" title="class in net.minecraft.entity.ai.brain.task">
 <!--   -->
 </a>
 <h2>Field Summary</h2>
+<div class="memberSummary">
+<table>
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<thead>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colSecond" scope="col">Field</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#bedPos">bedPos</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#jumpsRemaining">jumpsRemaining</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#ticksOutOfBedUntilStopped">ticksOutOfBedUntilStopped</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#ticksToNextJump">ticksToNextJump</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private float</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#walkSpeed">walkSpeed</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
 <div class="inheritedList">
 <h3>Fields inherited from class&nbsp;net.minecraft.entity.ai.brain.task.<a href="Task.html" title="class in net.minecraft.entity.ai.brain.task">Task</a></h3>
 <a id="fields.inherited.from.class.net.minecraft.entity.ai.brain.task.Task">
@@ -175,35 +214,82 @@ long&nbsp;long2)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util" class="externalLink">Optional</a>&lt;<a href="../../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getNearestBed(net.minecraft.entity.mob.MobEntity)">getNearestBed</a></span>&#8203;(<a href="../../../mob/MobEntity.html" title="class in net.minecraft.entity.mob">MobEntity</a>&nbsp;mob)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i2">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isAboveBed(net.minecraft.server.world.ServerWorld,net.minecraft.entity.mob.MobEntity)">isAboveBed</a></span>&#8203;(<a href="../../../../server/world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a>&nbsp;world,
+<a href="../../../mob/MobEntity.html" title="class in net.minecraft.entity.mob">MobEntity</a>&nbsp;mob)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i3">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isBedAt(net.minecraft.server.world.ServerWorld,net.minecraft.util.math.BlockPos)">isBedAt</a></span>&#8203;(<a href="../../../../server/world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a>&nbsp;world,
+<a href="../../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i4">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isBedGoneTooLong(net.minecraft.server.world.ServerWorld,net.minecraft.entity.mob.MobEntity)">isBedGoneTooLong</a></span>&#8203;(<a href="../../../../server/world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a>&nbsp;world,
+<a href="../../../mob/MobEntity.html" title="class in net.minecraft.entity.mob">MobEntity</a>&nbsp;mob)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i5">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isDoneJumping(net.minecraft.server.world.ServerWorld,net.minecraft.entity.mob.MobEntity)">isDoneJumping</a></span>&#8203;(<a href="../../../../server/world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a>&nbsp;world,
+<a href="../../../mob/MobEntity.html" title="class in net.minecraft.entity.mob">MobEntity</a>&nbsp;mob)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i6">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isOnBed(net.minecraft.server.world.ServerWorld,net.minecraft.entity.mob.MobEntity)">isOnBed</a></span>&#8203;(<a href="../../../../server/world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a>&nbsp;world,
+<a href="../../../mob/MobEntity.html" title="class in net.minecraft.entity.mob">MobEntity</a>&nbsp;mob)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i7">
 <td class="colFirst"><code>protected boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isTimeLimitExceeded(long)">isTimeLimitExceeded</a></span>&#8203;(long&nbsp;time)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i2">
+<tr class="altColor" id="i8">
 <td class="colFirst"><code>protected void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#keepRunning(net.minecraft.server.world.ServerWorld,net.minecraft.entity.mob.MobEntity,long)">keepRunning</a></span>&#8203;(<a href="../../../../server/world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a>&nbsp;serverWorld,
 <a href="../../../mob/MobEntity.html" title="class in net.minecraft.entity.mob">MobEntity</a>&nbsp;mobEntity,
 long&nbsp;long2)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i3">
+<tr class="rowColor" id="i9">
 <td class="colFirst"><code>protected void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#run(net.minecraft.server.world.ServerWorld,net.minecraft.entity.mob.MobEntity,long)">run</a></span>&#8203;(<a href="../../../../server/world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a>&nbsp;serverWorld,
 <a href="../../../mob/MobEntity.html" title="class in net.minecraft.entity.mob">MobEntity</a>&nbsp;mobEntity,
 long&nbsp;long2)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i4">
+<tr class="altColor" id="i10">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setWalkTarget(net.minecraft.entity.mob.MobEntity,net.minecraft.util.math.BlockPos)">setWalkTarget</a></span>&#8203;(<a href="../../../mob/MobEntity.html" title="class in net.minecraft.entity.mob">MobEntity</a>&nbsp;mob,
+<a href="../../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i11">
 <td class="colFirst"><code>protected boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#shouldKeepRunning(net.minecraft.server.world.ServerWorld,net.minecraft.entity.mob.MobEntity,long)">shouldKeepRunning</a></span>&#8203;(<a href="../../../../server/world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a>&nbsp;serverWorld,
 <a href="../../../mob/MobEntity.html" title="class in net.minecraft.entity.mob">MobEntity</a>&nbsp;mobEntity,
 long&nbsp;long2)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i5">
+<tr class="altColor" id="i12">
 <td class="colFirst"><code>protected boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#shouldRun(net.minecraft.server.world.ServerWorld,net.minecraft.entity.mob.MobEntity)">shouldRun</a></span>&#8203;(<a href="../../../../server/world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a>&nbsp;serverWorld,
 <a href="../../../mob/MobEntity.html" title="class in net.minecraft.entity.mob">MobEntity</a>&nbsp;mobEntity)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i13">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#shouldStartJumping(net.minecraft.server.world.ServerWorld,net.minecraft.entity.mob.MobEntity)">shouldStartJumping</a></span>&#8203;(<a href="../../../../server/world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a>&nbsp;world,
+<a href="../../../mob/MobEntity.html" title="class in net.minecraft.entity.mob">MobEntity</a>&nbsp;mob)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -226,6 +312,47 @@ long&nbsp;long2)</code></th>
 </section>
 <section class="details">
 <ul class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<li class="blockList">
+<section class="fieldDetails"><a id="field.detail">
+<!--   -->
+</a>
+<h2>Field Details</h2>
+<ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="walkSpeed">walkSpeed</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType">float</span>&nbsp;<span class="memberName">walkSpeed</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="bedPos">bedPos</a></h3>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="../../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a></span>&nbsp;<span class="memberName">bedPos</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="ticksOutOfBedUntilStopped">ticksOutOfBedUntilStopped</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">ticksOutOfBedUntilStopped</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="jumpsRemaining">jumpsRemaining</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">jumpsRemaining</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="ticksToNextJump">ticksToNextJump</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">ticksToNextJump</span></div>
+</section>
+</li>
+</ul>
+</section>
+</li>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <li class="blockList">
 <section class="constructorDetails"><a id="constructor.detail">
@@ -318,6 +445,61 @@ long&nbsp;long2)</span></div>
 </dl>
 </section>
 </li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="setWalkTarget(net.minecraft.entity.mob.MobEntity,net.minecraft.util.math.BlockPos)">setWalkTarget</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setWalkTarget</span>&#8203;(<span class="arguments"><a href="../../../mob/MobEntity.html" title="class in net.minecraft.entity.mob">MobEntity</a>&nbsp;mob,
+<a href="../../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="shouldStartJumping(net.minecraft.server.world.ServerWorld,net.minecraft.entity.mob.MobEntity)">shouldStartJumping</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">shouldStartJumping</span>&#8203;(<span class="arguments"><a href="../../../../server/world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a>&nbsp;world,
+<a href="../../../mob/MobEntity.html" title="class in net.minecraft.entity.mob">MobEntity</a>&nbsp;mob)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="isAboveBed(net.minecraft.server.world.ServerWorld,net.minecraft.entity.mob.MobEntity)">isAboveBed</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isAboveBed</span>&#8203;(<span class="arguments"><a href="../../../../server/world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a>&nbsp;world,
+<a href="../../../mob/MobEntity.html" title="class in net.minecraft.entity.mob">MobEntity</a>&nbsp;mob)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="isOnBed(net.minecraft.server.world.ServerWorld,net.minecraft.entity.mob.MobEntity)">isOnBed</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isOnBed</span>&#8203;(<span class="arguments"><a href="../../../../server/world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a>&nbsp;world,
+<a href="../../../mob/MobEntity.html" title="class in net.minecraft.entity.mob">MobEntity</a>&nbsp;mob)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="isBedAt(net.minecraft.server.world.ServerWorld,net.minecraft.util.math.BlockPos)">isBedAt</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isBedAt</span>&#8203;(<span class="arguments"><a href="../../../../server/world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a>&nbsp;world,
+<a href="../../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="getNearestBed(net.minecraft.entity.mob.MobEntity)">getNearestBed</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util" class="externalLink">Optional</a>&lt;<a href="../../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;</span>&nbsp;<span class="memberName">getNearestBed</span>&#8203;(<span class="arguments"><a href="../../../mob/MobEntity.html" title="class in net.minecraft.entity.mob">MobEntity</a>&nbsp;mob)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="isBedGoneTooLong(net.minecraft.server.world.ServerWorld,net.minecraft.entity.mob.MobEntity)">isBedGoneTooLong</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isBedGoneTooLong</span>&#8203;(<span class="arguments"><a href="../../../../server/world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a>&nbsp;world,
+<a href="../../../mob/MobEntity.html" title="class in net.minecraft.entity.mob">MobEntity</a>&nbsp;mob)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="isDoneJumping(net.minecraft.server.world.ServerWorld,net.minecraft.entity.mob.MobEntity)">isDoneJumping</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isDoneJumping</span>&#8203;(<span class="arguments"><a href="../../../../server/world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a>&nbsp;world,
+<a href="../../../mob/MobEntity.html" title="class in net.minecraft.entity.mob">MobEntity</a>&nbsp;mob)</span></div>
+</section>
+</li>
 </ul>
 </section>
 </li>
@@ -357,7 +539,7 @@ long&nbsp;long2)</span></div>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>

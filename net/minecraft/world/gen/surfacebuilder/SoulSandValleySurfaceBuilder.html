@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":10,"i1":10};
+<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -62,7 +62,7 @@ loadScripts(document, 'script');</script>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
@@ -88,13 +88,15 @@ loadScripts(document, 'script');</script>
 <div class="contentContainer">
 <div class="inheritance" title="Inheritance Tree"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">java.lang.Object</a>
 <div class="inheritance"><a href="SurfaceBuilder.html" title="class in net.minecraft.world.gen.surfacebuilder">net.minecraft.world.gen.surfacebuilder.SurfaceBuilder</a>&lt;<a href="TernarySurfaceConfig.html" title="class in net.minecraft.world.gen.surfacebuilder">TernarySurfaceConfig</a>&gt;
+<div class="inheritance"><a href="AbstractNetherSurfaceBuilder.html" title="class in net.minecraft.world.gen.surfacebuilder">net.minecraft.world.gen.surfacebuilder.AbstractNetherSurfaceBuilder</a>
 <div class="inheritance">net.minecraft.world.gen.surfacebuilder.SoulSandValleySurfaceBuilder</div>
+</div>
 </div>
 </div>
 <section class="description">
 <hr>
 <pre>public class <span class="typeNameLabel">SoulSandValleySurfaceBuilder</span>
-extends <a href="SurfaceBuilder.html" title="class in net.minecraft.world.gen.surfacebuilder">SurfaceBuilder</a>&lt;<a href="TernarySurfaceConfig.html" title="class in net.minecraft.world.gen.surfacebuilder">TernarySurfaceConfig</a>&gt;</pre>
+extends <a href="AbstractNetherSurfaceBuilder.html" title="class in net.minecraft.world.gen.surfacebuilder">AbstractNetherSurfaceBuilder</a></pre>
 </section>
 <section class="summary">
 <ul class="blockList">
@@ -104,11 +106,45 @@ extends <a href="SurfaceBuilder.html" title="class in net.minecraft.world.gen.su
 <!--   -->
 </a>
 <h2>Field Summary</h2>
+<div class="memberSummary">
+<table>
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<thead>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colSecond" scope="col">Field</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="https://guava.dev/releases/21.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect" class="externalLink">ImmutableList</a>&lt;<a href="../../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#field_23924">field_23924</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static <a href="../../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#GRAVEL">GRAVEL</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="../../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#SOUL_SAND">SOUL_SAND</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static <a href="../../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#SOUL_SOIL">SOUL_SOIL</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
 <div class="inheritedList">
 <h3>Fields inherited from class&nbsp;net.minecraft.world.gen.surfacebuilder.<a href="SurfaceBuilder.html" title="class in net.minecraft.world.gen.surfacebuilder">SurfaceBuilder</a></h3>
 <a id="fields.inherited.from.class.net.minecraft.world.gen.surfacebuilder.SurfaceBuilder">
 <!--   -->
-</a><code><a href="SurfaceBuilder.html#AIR">AIR</a>, <a href="SurfaceBuilder.html#AIR_CONFIG">AIR_CONFIG</a>, <a href="SurfaceBuilder.html#BADLANDS">BADLANDS</a>, <a href="SurfaceBuilder.html#BADLANDS_CONFIG">BADLANDS_CONFIG</a>, <a href="SurfaceBuilder.html#COARSE_DIRT">COARSE_DIRT</a>, <a href="SurfaceBuilder.html#COARSE_DIRT_CONFIG">COARSE_DIRT_CONFIG</a>, <a href="SurfaceBuilder.html#CRIMSON_NYLIUM">CRIMSON_NYLIUM</a>, <a href="SurfaceBuilder.html#CRIMSON_NYLIUM_CONFIG">CRIMSON_NYLIUM_CONFIG</a>, <a href="SurfaceBuilder.html#DEFAULT">DEFAULT</a>, <a href="SurfaceBuilder.html#DIRT">DIRT</a>, <a href="SurfaceBuilder.html#DIRT_CONFIG">DIRT_CONFIG</a>, <a href="SurfaceBuilder.html#END_CONFIG">END_CONFIG</a>, <a href="SurfaceBuilder.html#END_STONE">END_STONE</a>, <a href="SurfaceBuilder.html#ERODED_BADLANDS">ERODED_BADLANDS</a>, <a href="SurfaceBuilder.html#FROZEN_OCEAN">FROZEN_OCEAN</a>, <a href="SurfaceBuilder.html#GIANT_TREE_TAIGA">GIANT_TREE_TAIGA</a>, <a href="SurfaceBuilder.html#GRASS_BLOCK">GRASS_BLOCK</a>, <a href="SurfaceBuilder.html#GRASS_CONFIG">GRASS_CONFIG</a>, <a href="SurfaceBuilder.html#GRASS_SAND_UNDERWATER_CONFIG">GRASS_SAND_UNDERWATER_CONFIG</a>, <a href="SurfaceBuilder.html#GRAVEL_CONFIG">GRAVEL_CONFIG</a>, <a href="SurfaceBuilder.html#GRAVELLY_MOUNTAIN">GRAVELLY_MOUNTAIN</a>, <a href="SurfaceBuilder.html#MOUNTAIN">MOUNTAIN</a>, <a href="SurfaceBuilder.html#MYCELIUM">MYCELIUM</a>, <a href="SurfaceBuilder.html#MYCELIUM_CONFIG">MYCELIUM_CONFIG</a>, <a href="SurfaceBuilder.html#NETHER">NETHER</a>, <a href="SurfaceBuilder.html#NETHER_CONFIG">NETHER_CONFIG</a>, <a href="SurfaceBuilder.html#NETHER_FOREST">NETHER_FOREST</a>, <a href="SurfaceBuilder.html#NETHER_WART_BLOCK">NETHER_WART_BLOCK</a>, <a href="SurfaceBuilder.html#NETHERRACK">NETHERRACK</a>, <a href="SurfaceBuilder.html#NOPE">NOPE</a>, <a href="SurfaceBuilder.html#PODZOL">PODZOL</a>, <a href="SurfaceBuilder.html#PODZOL_CONFIG">PODZOL_CONFIG</a>, <a href="SurfaceBuilder.html#RED_SAND">RED_SAND</a>, <a href="SurfaceBuilder.html#SAND">SAND</a>, <a href="SurfaceBuilder.html#SAND_CONFIG">SAND_CONFIG</a>, <a href="SurfaceBuilder.html#SAND_SAND_UNDERWATER_CONFIG">SAND_SAND_UNDERWATER_CONFIG</a>, <a href="SurfaceBuilder.html#SHATTERED_SAVANNA">SHATTERED_SAVANNA</a>, <a href="SurfaceBuilder.html#SOUL_SAND_CONFIG">SOUL_SAND_CONFIG</a>, <a href="SurfaceBuilder.html#SOUL_SAND_VALLEY">SOUL_SAND_VALLEY</a>, <a href="SurfaceBuilder.html#STONE">STONE</a>, <a href="SurfaceBuilder.html#STONE_CONFIG">STONE_CONFIG</a>, <a href="SurfaceBuilder.html#SWAMP">SWAMP</a>, <a href="SurfaceBuilder.html#WARPED_NYLIUM">WARPED_NYLIUM</a>, <a href="SurfaceBuilder.html#WARPED_NYLIUM_CONFIG">WARPED_NYLIUM_CONFIG</a>, <a href="SurfaceBuilder.html#WARPED_WART_BLOCK">WARPED_WART_BLOCK</a>, <a href="SurfaceBuilder.html#WHITE_TERRACOTTA">WHITE_TERRACOTTA</a>, <a href="SurfaceBuilder.html#WOODED_BADLANDS">WOODED_BADLANDS</a></code></div>
+</a><code><a href="SurfaceBuilder.html#AIR">AIR</a>, <a href="SurfaceBuilder.html#AIR_CONFIG">AIR_CONFIG</a>, <a href="SurfaceBuilder.html#BADLANDS">BADLANDS</a>, <a href="SurfaceBuilder.html#BADLANDS_CONFIG">BADLANDS_CONFIG</a>, <a href="SurfaceBuilder.html#BASALT">BASALT</a>, <a href="SurfaceBuilder.html#BASALT_DELTA_CONFIG">BASALT_DELTA_CONFIG</a>, <a href="SurfaceBuilder.html#BASALT_DELTAS">BASALT_DELTAS</a>, <a href="SurfaceBuilder.html#BLACKSTONE">BLACKSTONE</a>, <a href="SurfaceBuilder.html#COARSE_DIRT">COARSE_DIRT</a>, <a href="SurfaceBuilder.html#COARSE_DIRT_CONFIG">COARSE_DIRT_CONFIG</a>, <a href="SurfaceBuilder.html#CRIMSON_NYLIUM">CRIMSON_NYLIUM</a>, <a href="SurfaceBuilder.html#CRIMSON_NYLIUM_CONFIG">CRIMSON_NYLIUM_CONFIG</a>, <a href="SurfaceBuilder.html#DEFAULT">DEFAULT</a>, <a href="SurfaceBuilder.html#DIRT">DIRT</a>, <a href="SurfaceBuilder.html#DIRT_CONFIG">DIRT_CONFIG</a>, <a href="SurfaceBuilder.html#END_CONFIG">END_CONFIG</a>, <a href="SurfaceBuilder.html#END_STONE">END_STONE</a>, <a href="SurfaceBuilder.html#ERODED_BADLANDS">ERODED_BADLANDS</a>, <a href="SurfaceBuilder.html#FROZEN_OCEAN">FROZEN_OCEAN</a>, <a href="SurfaceBuilder.html#GIANT_TREE_TAIGA">GIANT_TREE_TAIGA</a>, <a href="SurfaceBuilder.html#GRASS_BLOCK">GRASS_BLOCK</a>, <a href="SurfaceBuilder.html#GRASS_CONFIG">GRASS_CONFIG</a>, <a href="SurfaceBuilder.html#GRASS_SAND_UNDERWATER_CONFIG">GRASS_SAND_UNDERWATER_CONFIG</a>, <a href="SurfaceBuilder.html#GRAVEL_CONFIG">GRAVEL_CONFIG</a>, <a href="SurfaceBuilder.html#GRAVELLY_MOUNTAIN">GRAVELLY_MOUNTAIN</a>, <a href="SurfaceBuilder.html#MAGMA_BLOCK">MAGMA_BLOCK</a>, <a href="SurfaceBuilder.html#MOUNTAIN">MOUNTAIN</a>, <a href="SurfaceBuilder.html#MYCELIUM">MYCELIUM</a>, <a href="SurfaceBuilder.html#MYCELIUM_CONFIG">MYCELIUM_CONFIG</a>, <a href="SurfaceBuilder.html#NETHER">NETHER</a>, <a href="SurfaceBuilder.html#NETHER_CONFIG">NETHER_CONFIG</a>, <a href="SurfaceBuilder.html#NETHER_FOREST">NETHER_FOREST</a>, <a href="SurfaceBuilder.html#NETHER_WART_BLOCK">NETHER_WART_BLOCK</a>, <a href="SurfaceBuilder.html#NETHERRACK">NETHERRACK</a>, <a href="SurfaceBuilder.html#NOPE">NOPE</a>, <a href="SurfaceBuilder.html#PODZOL">PODZOL</a>, <a href="SurfaceBuilder.html#PODZOL_CONFIG">PODZOL_CONFIG</a>, <a href="SurfaceBuilder.html#RED_SAND">RED_SAND</a>, <a href="SurfaceBuilder.html#SAND">SAND</a>, <a href="SurfaceBuilder.html#SAND_CONFIG">SAND_CONFIG</a>, <a href="SurfaceBuilder.html#SAND_SAND_UNDERWATER_CONFIG">SAND_SAND_UNDERWATER_CONFIG</a>, <a href="SurfaceBuilder.html#SHATTERED_SAVANNA">SHATTERED_SAVANNA</a>, <a href="SurfaceBuilder.html#SOUL_SAND_CONFIG">SOUL_SAND_CONFIG</a>, <a href="SurfaceBuilder.html#SOUL_SAND_VALLEY">SOUL_SAND_VALLEY</a>, <a href="SurfaceBuilder.html#STONE">STONE</a>, <a href="SurfaceBuilder.html#STONE_CONFIG">STONE_CONFIG</a>, <a href="SurfaceBuilder.html#SWAMP">SWAMP</a>, <a href="SurfaceBuilder.html#WARPED_NYLIUM">WARPED_NYLIUM</a>, <a href="SurfaceBuilder.html#WARPED_NYLIUM_CONFIG">WARPED_NYLIUM_CONFIG</a>, <a href="SurfaceBuilder.html#WARPED_WART_BLOCK">WARPED_WART_BLOCK</a>, <a href="SurfaceBuilder.html#WHITE_TERRACOTTA">WHITE_TERRACOTTA</a>, <a href="SurfaceBuilder.html#WOODED_BADLANDS">WOODED_BADLANDS</a></code></div>
 </section>
 </li>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
@@ -128,7 +164,7 @@ extends <a href="SurfaceBuilder.html" title="class in net.minecraft.world.gen.su
 </thead>
 <tbody>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.util.function.Function)">SoulSandValleySurfaceBuilder</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;com.mojang.datafixers.Dynamic&lt;?&gt;,&#8203;? extends <a href="TernarySurfaceConfig.html" title="class in net.minecraft.world.gen.surfacebuilder">TernarySurfaceConfig</a>&gt;&nbsp;function)</code></th>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(com.mojang.serialization.Codec)">SoulSandValleySurfaceBuilder</a></span>&#8203;(com.mojang.serialization.Codec&lt;<a href="TernarySurfaceConfig.html" title="class in net.minecraft.world.gen.surfacebuilder">TernarySurfaceConfig</a>&gt;&nbsp;codec)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -155,30 +191,34 @@ extends <a href="SurfaceBuilder.html" title="class in net.minecraft.world.gen.su
 </thead>
 <tbody>
 <tr class="altColor" id="i0">
-<td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#generate(java.util.Random,net.minecraft.world.chunk.Chunk,net.minecraft.world.biome.Biome,int,int,int,double,net.minecraft.block.BlockState,net.minecraft.block.BlockState,int,long,net.minecraft.world.gen.surfacebuilder.TernarySurfaceConfig)">generate</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random,
-<a href="../../chunk/Chunk.html" title="interface in net.minecraft.world.chunk">Chunk</a>&nbsp;chunk,
-<a href="../../biome/Biome.html" title="class in net.minecraft.world.biome">Biome</a>&nbsp;biome,
-int&nbsp;int2,
-int&nbsp;int3,
-int&nbsp;int4,
-double&nbsp;double2,
-<a href="../../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState,
-<a href="../../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState2,
-int&nbsp;int5,
-long&nbsp;long2,
-<a href="TernarySurfaceConfig.html" title="class in net.minecraft.world.gen.surfacebuilder">TernarySurfaceConfig</a>&nbsp;ternarySurfaceConfig)</code></th>
+<td class="colFirst"><code>protected <a href="https://guava.dev/releases/21.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect" class="externalLink">ImmutableList</a>&lt;<a href="../../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_27129()">method_27129</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
-<td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#initSeed(long)">initSeed</a></span>&#8203;(long&nbsp;seed)</code></th>
+<td class="colFirst"><code>protected <a href="https://guava.dev/releases/21.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect" class="externalLink">ImmutableList</a>&lt;<a href="../../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_27133()">method_27133</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i2">
+<td class="colFirst"><code>protected <a href="../../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_27135()">method_27135</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
+<div class="inheritedList">
+<h3>Methods inherited from class&nbsp;net.minecraft.world.gen.surfacebuilder.<a href="AbstractNetherSurfaceBuilder.html" title="class in net.minecraft.world.gen.surfacebuilder">AbstractNetherSurfaceBuilder</a></h3>
+<a id="methods.inherited.from.class.net.minecraft.world.gen.surfacebuilder.AbstractNetherSurfaceBuilder">
+<!--   -->
+</a><code><a href="AbstractNetherSurfaceBuilder.html#generate(java.util.Random,net.minecraft.world.chunk.Chunk,net.minecraft.world.biome.Biome,int,int,int,double,net.minecraft.block.BlockState,net.minecraft.block.BlockState,int,long,net.minecraft.world.gen.surfacebuilder.TernarySurfaceConfig)">generate</a>, <a href="AbstractNetherSurfaceBuilder.html#initSeed(long)">initSeed</a></code></div>
+<div class="inheritedList">
+<h3>Methods inherited from class&nbsp;net.minecraft.world.gen.surfacebuilder.<a href="SurfaceBuilder.html" title="class in net.minecraft.world.gen.surfacebuilder">SurfaceBuilder</a></h3>
+<a id="methods.inherited.from.class.net.minecraft.world.gen.surfacebuilder.SurfaceBuilder">
+<!--   -->
+</a><code><a href="SurfaceBuilder.html#method_29003()">method_29003</a></code></div>
 <div class="inheritedList">
 <h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></h3>
 <a id="methods.inherited.from.class.java.lang.Object">
@@ -190,6 +230,40 @@ long&nbsp;long2,
 </section>
 <section class="details">
 <ul class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<li class="blockList">
+<section class="fieldDetails"><a id="field.detail">
+<!--   -->
+</a>
+<h2>Field Details</h2>
+<ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="SOUL_SAND">SOUL_SAND</a></h3>
+<div class="memberSignature"><span class="modifiers">private static final</span>&nbsp;<span class="returnType"><a href="../../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a></span>&nbsp;<span class="memberName">SOUL_SAND</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="SOUL_SOIL">SOUL_SOIL</a></h3>
+<div class="memberSignature"><span class="modifiers">private static final</span>&nbsp;<span class="returnType"><a href="../../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a></span>&nbsp;<span class="memberName">SOUL_SOIL</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="GRAVEL">GRAVEL</a></h3>
+<div class="memberSignature"><span class="modifiers">private static final</span>&nbsp;<span class="returnType"><a href="../../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a></span>&nbsp;<span class="memberName">GRAVEL</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="field_23924">field_23924</a></h3>
+<div class="memberSignature"><span class="modifiers">private static final</span>&nbsp;<span class="returnType"><a href="https://guava.dev/releases/21.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect" class="externalLink">ImmutableList</a>&lt;<a href="../../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&gt;</span>&nbsp;<span class="memberName">field_23924</span></div>
+</section>
+</li>
+</ul>
+</section>
+</li>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <li class="blockList">
 <section class="constructorDetails"><a id="constructor.detail">
@@ -199,8 +273,8 @@ long&nbsp;long2,
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="&lt;init&gt;(java.util.function.Function)">SoulSandValleySurfaceBuilder</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">SoulSandValleySurfaceBuilder</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;com.mojang.datafixers.Dynamic&lt;?&gt;,&#8203;? extends <a href="TernarySurfaceConfig.html" title="class in net.minecraft.world.gen.surfacebuilder">TernarySurfaceConfig</a>&gt;&nbsp;function)</span></div>
+<h3><a id="&lt;init&gt;(com.mojang.serialization.Codec)">SoulSandValleySurfaceBuilder</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">SoulSandValleySurfaceBuilder</span>&#8203;(<span class="arguments">com.mojang.serialization.Codec&lt;<a href="TernarySurfaceConfig.html" title="class in net.minecraft.world.gen.surfacebuilder">TernarySurfaceConfig</a>&gt;&nbsp;codec)</span></div>
 </section>
 </li>
 </ul>
@@ -215,32 +289,31 @@ long&nbsp;long2,
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="generate(java.util.Random,net.minecraft.world.chunk.Chunk,net.minecraft.world.biome.Biome,int,int,int,double,net.minecraft.block.BlockState,net.minecraft.block.BlockState,int,long,net.minecraft.world.gen.surfacebuilder.TernarySurfaceConfig)">generate</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">generate</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random,
-<a href="../../chunk/Chunk.html" title="interface in net.minecraft.world.chunk">Chunk</a>&nbsp;chunk,
-<a href="../../biome/Biome.html" title="class in net.minecraft.world.biome">Biome</a>&nbsp;biome,
-int&nbsp;int2,
-int&nbsp;int3,
-int&nbsp;int4,
-double&nbsp;double2,
-<a href="../../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState,
-<a href="../../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState2,
-int&nbsp;int5,
-long&nbsp;long2,
-<a href="TernarySurfaceConfig.html" title="class in net.minecraft.world.gen.surfacebuilder">TernarySurfaceConfig</a>&nbsp;ternarySurfaceConfig)</span></div>
+<h3><a id="method_27129()">method_27129</a></h3>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType"><a href="https://guava.dev/releases/21.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect" class="externalLink">ImmutableList</a>&lt;<a href="../../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&gt;</span>&nbsp;<span class="memberName">method_27129</span>()</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="SurfaceBuilder.html#generate(java.util.Random,net.minecraft.world.chunk.Chunk,net.minecraft.world.biome.Biome,int,int,int,double,net.minecraft.block.BlockState,net.minecraft.block.BlockState,int,long,C)">generate</a></code>&nbsp;in class&nbsp;<code><a href="SurfaceBuilder.html" title="class in net.minecraft.world.gen.surfacebuilder">SurfaceBuilder</a>&lt;<a href="TernarySurfaceConfig.html" title="class in net.minecraft.world.gen.surfacebuilder">TernarySurfaceConfig</a>&gt;</code></dd>
+<dd><code><a href="AbstractNetherSurfaceBuilder.html#method_27129()">method_27129</a></code>&nbsp;in class&nbsp;<code><a href="AbstractNetherSurfaceBuilder.html" title="class in net.minecraft.world.gen.surfacebuilder">AbstractNetherSurfaceBuilder</a></code></dd>
 </dl>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="initSeed(long)">initSeed</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">initSeed</span>&#8203;(<span class="arguments">long&nbsp;seed)</span></div>
+<h3><a id="method_27133()">method_27133</a></h3>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType"><a href="https://guava.dev/releases/21.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect" class="externalLink">ImmutableList</a>&lt;<a href="../../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&gt;</span>&nbsp;<span class="memberName">method_27133</span>()</div>
 <dl>
-<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code><a href="SurfaceBuilder.html#initSeed(long)">initSeed</a></code>&nbsp;in class&nbsp;<code><a href="SurfaceBuilder.html" title="class in net.minecraft.world.gen.surfacebuilder">SurfaceBuilder</a>&lt;<a href="TernarySurfaceConfig.html" title="class in net.minecraft.world.gen.surfacebuilder">TernarySurfaceConfig</a>&gt;</code></dd>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="AbstractNetherSurfaceBuilder.html#method_27133()">method_27133</a></code>&nbsp;in class&nbsp;<code><a href="AbstractNetherSurfaceBuilder.html" title="class in net.minecraft.world.gen.surfacebuilder">AbstractNetherSurfaceBuilder</a></code></dd>
+</dl>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="method_27135()">method_27135</a></h3>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType"><a href="../../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a></span>&nbsp;<span class="memberName">method_27135</span>()</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="AbstractNetherSurfaceBuilder.html#method_27135()">method_27135</a></code>&nbsp;in class&nbsp;<code><a href="AbstractNetherSurfaceBuilder.html" title="class in net.minecraft.world.gen.surfacebuilder">AbstractNetherSurfaceBuilder</a></code></dd>
 </dl>
 </section>
 </li>
@@ -283,7 +356,7 @@ long&nbsp;long2,
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>

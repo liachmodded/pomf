@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":9,"i8":9,"i9":9,"i10":9,"i11":9,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":9,"i18":9,"i19":10,"i20":10,"i21":10,"i22":9,"i23":10,"i24":10,"i25":10,"i26":10,"i27":10,"i28":10,"i29":10,"i30":10,"i31":10,"i32":10,"i33":10,"i34":10,"i35":10,"i36":10,"i37":10,"i38":10,"i39":10,"i40":10};
+<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":9,"i11":9,"i12":9,"i13":9,"i14":10,"i15":9,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10,"i23":9,"i24":9,"i25":10,"i26":10,"i27":10,"i28":10,"i29":10,"i30":10,"i31":10,"i32":10,"i33":9,"i34":10,"i35":10,"i36":10,"i37":10,"i38":10,"i39":10,"i40":10,"i41":10,"i42":10,"i43":10,"i44":10,"i45":10,"i46":10,"i47":10,"i48":10,"i49":10,"i50":10,"i51":10,"i52":10,"i53":10,"i54":10,"i55":10,"i56":10,"i57":10,"i58":10,"i59":10,"i60":10,"i61":10,"i62":10,"i63":10,"i64":10,"i65":10,"i66":10,"i67":10,"i68":10,"i69":10,"i70":10,"i71":10,"i72":10,"i73":10,"i74":10,"i75":10,"i76":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -124,6 +124,11 @@ implements <a href="../../resource/SynchronousResourceReloadListener.html" title
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="WorldRenderer.ChunkInfo.html" title="class in net.minecraft.client.render">WorldRenderer.ChunkInfo</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static class&nbsp;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="WorldRenderer.ShaderException.html" title="class in net.minecraft.client.render">WorldRenderer.ShaderException</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -152,8 +157,353 @@ implements <a href="../../resource/SynchronousResourceReloadListener.html" title
 </thead>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code>private <a href="http://fastutil.di.unimi.it/docs/it/unimi/dsi/fastutil/ints/Int2ObjectMap.html?is-external=true" title="class or interface in it.unimi.dsi.fastutil.ints" class="externalLink">Int2ObjectMap</a>&lt;<a href="BlockBreakingInfo.html" title="class in net.minecraft.client.render">BlockBreakingInfo</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#blockBreakingInfos">blockBreakingInfos</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://fastutil.di.unimi.it/docs/it/unimi/dsi/fastutil/longs/Long2ObjectMap.html?is-external=true" title="class or interface in it.unimi.dsi.fastutil.longs" class="externalLink">Long2ObjectMap</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/SortedSet.html?is-external=true" title="class or interface in java.util" class="externalLink">SortedSet</a>&lt;<a href="BlockBreakingInfo.html" title="class in net.minecraft.client.render">BlockBreakingInfo</a>&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#blockBreakingProgressions">blockBreakingProgressions</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#blockEntityCount">blockEntityCount</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="BufferBuilderStorage.html" title="class in net.minecraft.client.render">BufferBuilderStorage</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#bufferBuilders">bufferBuilders</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#cameraChunkX">cameraChunkX</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#cameraChunkY">cameraChunkY</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#cameraChunkZ">cameraChunkZ</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../util/math/Vector4f.html" title="class in net.minecraft.client.util.math">Vector4f</a>[]</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#capturedFrustrumOrientation">capturedFrustrumOrientation</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="Frustum.html" title="class in net.minecraft.client.render">Frustum</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#capturedFrustum">capturedFrustum</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../util/math/Vector3d.html" title="class in net.minecraft.client.util.math">Vector3d</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#capturedFrustumPosition">capturedFrustumPosition</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="chunk/ChunkBuilder.html" title="class in net.minecraft.client.render.chunk">ChunkBuilder</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#chunkBuilder">chunkBuilder</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="BuiltChunkStorage.html" title="class in net.minecraft.client.render">BuiltChunkStorage</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#chunks">chunks</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="chunk/ChunkBuilder.BuiltChunk.html" title="class in net.minecraft.client.render.chunk">ChunkBuilder.BuiltChunk</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#chunksToRebuild">chunksToRebuild</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="FpsSmoother.html" title="class in net.minecraft.client.render">FpsSmoother</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#chunkUpdateSmoother">chunkUpdateSmoother</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../MinecraftClient.html" title="class in net.minecraft.client">MinecraftClient</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#client">client</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static <a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#CLOUDS">CLOUDS</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../gl/VertexBuffer.html" title="class in net.minecraft.client.gl">VertexBuffer</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#cloudsBuffer">cloudsBuffer</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#cloudsDirty">cloudsDirty</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../gl/Framebuffer.html" title="class in net.minecraft.client.gl">Framebuffer</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#cloudsFramebuffer">cloudsFramebuffer</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../gl/VertexBuffer.html" title="class in net.minecraft.client.gl">VertexBuffer</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#darkSkyBuffer">darkSkyBuffer</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="../../util/math/Direction.html" title="enum in net.minecraft.util.math">Direction</a>[]</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#DIRECTIONS">DIRECTIONS</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static <a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#END_SKY">END_SKY</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../gl/Framebuffer.html" title="class in net.minecraft.client.gl">Framebuffer</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#entityFramebuffer">entityFramebuffer</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../gl/Framebuffer.html" title="class in net.minecraft.client.gl">Framebuffer</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#entityOutlinesFramebuffer">entityOutlinesFramebuffer</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../gl/ShaderEffect.html" title="class in net.minecraft.client.gl">ShaderEffect</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#entityOutlineShader">entityOutlineShader</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="entity/EntityRenderDispatcher.html" title="class in net.minecraft.client.render.entity">EntityRenderDispatcher</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#entityRenderDispatcher">entityRenderDispatcher</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#field_20793">field_20793</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private float[]</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#field_20794">field_20794</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private float[]</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#field_20795">field_20795</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static <a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#FORCEFIELD">FORCEFIELD</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#frame">frame</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private double</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#lastCameraChunkUpdateX">lastCameraChunkUpdateX</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private double</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#lastCameraChunkUpdateY">lastCameraChunkUpdateY</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private double</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#lastCameraChunkUpdateZ">lastCameraChunkUpdateZ</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private double</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#lastCameraPitch">lastCameraPitch</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private double</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#lastCameraX">lastCameraX</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private double</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#lastCameraY">lastCameraY</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private double</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#lastCameraYaw">lastCameraYaw</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private double</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#lastCameraZ">lastCameraZ</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#lastCloudsBlockX">lastCloudsBlockX</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#lastCloudsBlockY">lastCloudsBlockY</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#lastCloudsBlockZ">lastCloudsBlockZ</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../util/math/Vec3d.html" title="class in net.minecraft.util.math">Vec3d</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#lastCloudsColor">lastCloudsColor</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../options/CloudRenderMode.html" title="enum in net.minecraft.client.options">CloudRenderMode</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#lastCloudsRenderMode">lastCloudsRenderMode</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private double</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#lastTranslucentSortX">lastTranslucentSortX</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private double</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#lastTranslucentSortY">lastTranslucentSortY</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private double</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#lastTranslucentSortZ">lastTranslucentSortZ</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../gl/VertexBuffer.html" title="class in net.minecraft.client.gl">VertexBuffer</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#lightSkyBuffer">lightSkyBuffer</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="https://logging.apache.org/log4j/2.x/log4j-api/apidocs/org/apache/logging/log4j/Logger.html?is-external=true" title="class or interface in org.apache.logging.log4j" class="externalLink">Logger</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#LOGGER">LOGGER</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static <a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#MOON_PHASES">MOON_PHASES</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#needsTerrainUpdate">needsTerrainUpdate</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="../../block/entity/BlockEntity.html" title="class in net.minecraft.block.entity">BlockEntity</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#noCullingBlockEntities">noCullingBlockEntities</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../gl/Framebuffer.html" title="class in net.minecraft.client.gl">Framebuffer</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#particlesFramebuffer">particlesFramebuffer</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util" class="externalLink">Map</a>&lt;<a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>,&#8203;<a href="../sound/SoundInstance.html" title="interface in net.minecraft.client.sound">SoundInstance</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#playingSongs">playingSongs</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#RAIN">RAIN</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#regularEntityCount">regularEntityCount</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#renderDistance">renderDistance</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#shouldCaptureFrustum">shouldCaptureFrustum</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="VertexFormat.html" title="class in net.minecraft.client.render">VertexFormat</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#skyVertexFormat">skyVertexFormat</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static <a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#SNOW">SNOW</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../gl/VertexBuffer.html" title="class in net.minecraft.client.gl">VertexBuffer</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#starsBuffer">starsBuffer</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static <a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#SUN">SUN</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../texture/TextureManager.html" title="class in net.minecraft.client.texture">TextureManager</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#textureManager">textureManager</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#ticks">ticks</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../gl/Framebuffer.html" title="class in net.minecraft.client.gl">Framebuffer</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#translucentFramebuffer">translucentFramebuffer</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../gl/ShaderEffect.html" title="class in net.minecraft.client.gl">ShaderEffect</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#transparencyShader">transparencyShader</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="VertexFormat.html" title="class in net.minecraft.client.render">VertexFormat</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#vertexFormat">vertexFormat</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://fastutil.di.unimi.it/docs/it/unimi/dsi/fastutil/objects/ObjectList.html?is-external=true" title="class or interface in it.unimi.dsi.fastutil.objects" class="externalLink">ObjectList</a>&lt;<a href="WorldRenderer.ChunkInfo.html" title="class in net.minecraft.client.render">WorldRenderer.ChunkInfo</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#visibleChunks">visibleChunks</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../gl/Framebuffer.html" title="class in net.minecraft.client.gl">Framebuffer</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#weatherFramebuffer">weatherFramebuffer</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../world/ClientWorld.html" title="class in net.minecraft.client.world">ClientWorld</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#world">world</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -215,7 +565,7 @@ double&nbsp;y,
 double&nbsp;z,
 double&nbsp;velocityX,
 double&nbsp;velocityY,
-double&nbsp;double2)</code></th>
+double&nbsp;velocityZ)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
@@ -231,33 +581,64 @@ double&nbsp;velocityZ)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i2">
+<td class="colFirst"><code>private &lt;T extends <a href="../../particle/ParticleEffect.html" title="interface in net.minecraft.particle">ParticleEffect</a>&gt;<br>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addParticle(T,double,double,double,double,double,double)">addParticle</a></span>&#8203;(T&nbsp;parameters,
+double&nbsp;x,
+double&nbsp;y,
+double&nbsp;z,
+double&nbsp;velocityX,
+double&nbsp;velocityY,
+double&nbsp;velocityZ)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i3">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#apply(net.minecraft.resource.ResourceManager)">apply</a></span>&#8203;(<a href="../../resource/ResourceManager.html" title="interface in net.minecraft.resource">ResourceManager</a>&nbsp;manager)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i3">
+<tr class="altColor" id="i4">
 <td class="colFirst"><code>protected boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#canDrawEntityOutlines()">canDrawEntityOutlines</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i4">
-<td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#checkBlockRerender(net.minecraft.util.math.BlockPos,net.minecraft.block.BlockState,net.minecraft.block.BlockState)">checkBlockRerender</a></span>&#8203;(<a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
-<a href="../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;old,
-<a href="../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;updated)</code></th>
+<tr class="rowColor" id="i5">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#captureFrustum(net.minecraft.util.math.Matrix4f,net.minecraft.util.math.Matrix4f,double,double,double,net.minecraft.client.render.Frustum)">captureFrustum</a></span>&#8203;(<a href="../../util/math/Matrix4f.html" title="class in net.minecraft.util.math">Matrix4f</a>&nbsp;modelMatrix,
+<a href="../../util/math/Matrix4f.html" title="class in net.minecraft.util.math">Matrix4f</a>&nbsp;matrix4f,
+double&nbsp;x,
+double&nbsp;y,
+double&nbsp;z,
+<a href="Frustum.html" title="class in net.minecraft.client.render">Frustum</a>&nbsp;frustum)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i5">
+<tr class="altColor" id="i6">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#checkEmpty(net.minecraft.client.util.math.MatrixStack)">checkEmpty</a></span>&#8203;(<a href="../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i7">
 <td class="colFirst"><code>protected void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#clearChunkRenderers()">clearChunkRenderers</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i6">
+<tr class="altColor" id="i8">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#close()">close</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i7">
+<tr class="rowColor" id="i9">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#drawBlockOutline(net.minecraft.client.util.math.MatrixStack,net.minecraft.client.render.VertexConsumer,net.minecraft.entity.Entity,double,double,double,net.minecraft.util.math.BlockPos,net.minecraft.block.BlockState)">drawBlockOutline</a></span>&#8203;(<a href="../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrixStack,
+<a href="VertexConsumer.html" title="interface in net.minecraft.client.render">VertexConsumer</a>&nbsp;vertexConsumer,
+<a href="../../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&nbsp;entity,
+double&nbsp;double2,
+double&nbsp;double3,
+double&nbsp;double4,
+<a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
+<a href="../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i10">
 <td class="colFirst"><code>static void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#drawBox(net.minecraft.client.render.BufferBuilder,double,double,double,double,double,double,float,float,float,float)">drawBox</a></span>&#8203;(<a href="BufferBuilder.html" title="class in net.minecraft.client.render">BufferBuilder</a>&nbsp;buffer,
 double&nbsp;x1,
@@ -272,38 +653,25 @@ float&nbsp;blue,
 float&nbsp;alpha)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i8">
+<tr class="rowColor" id="i11">
 <td class="colFirst"><code>static void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#drawBox(net.minecraft.client.render.VertexConsumer,double,double,double,double,double,double,float,float,float,float)">drawBox</a></span>&#8203;(<a href="VertexConsumer.html" title="interface in net.minecraft.client.render">VertexConsumer</a>&nbsp;vertexConsumer,
-double&nbsp;double2,
-double&nbsp;double3,
-double&nbsp;double4,
-double&nbsp;double5,
-double&nbsp;double6,
-double&nbsp;double7,
-float&nbsp;float2,
-float&nbsp;float3,
-float&nbsp;float4,
-float&nbsp;float5)</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="rowColor" id="i9">
-<td class="colFirst"><code>static void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#drawBox(net.minecraft.client.util.math.MatrixStack,net.minecraft.client.render.VertexConsumer,double,double,double,double,double,double,float,float,float,float)">drawBox</a></span>&#8203;(<a href="../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrixStack,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#drawBox(net.minecraft.client.util.math.MatrixStack,net.minecraft.client.render.VertexConsumer,double,double,double,double,double,double,float,float,float,float)">drawBox</a></span>&#8203;(<a href="../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
 <a href="VertexConsumer.html" title="interface in net.minecraft.client.render">VertexConsumer</a>&nbsp;vertexConsumer,
-double&nbsp;double2,
-double&nbsp;double3,
-double&nbsp;double4,
-double&nbsp;double5,
-double&nbsp;double6,
-double&nbsp;double7,
-float&nbsp;float2,
-float&nbsp;float3,
-float&nbsp;float4,
-float&nbsp;float5)</code></th>
-<td class="colLast">&nbsp;</td>
+double&nbsp;x1,
+double&nbsp;y1,
+double&nbsp;z1,
+double&nbsp;x2,
+double&nbsp;y2,
+double&nbsp;z2,
+float&nbsp;red,
+float&nbsp;green,
+float&nbsp;blue,
+float&nbsp;alpha)</code></th>
+<td class="colLast">
+<div class="block">Draws a box spanning from [x1,y1,z1] to [x2,y2,z2].</div>
+</td>
 </tr>
-<tr class="altColor" id="i10">
+<tr class="altColor" id="i12">
 <td class="colFirst"><code>static void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#drawBox(net.minecraft.client.util.math.MatrixStack,net.minecraft.client.render.VertexConsumer,double,double,double,double,double,double,float,float,float,float,float,float,float)">drawBox</a></span>&#8203;(<a href="../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
 <a href="VertexConsumer.html" title="interface in net.minecraft.client.render">VertexConsumer</a>&nbsp;vertexConsumer,
@@ -314,79 +682,147 @@ double&nbsp;x2,
 double&nbsp;y2,
 double&nbsp;z2,
 float&nbsp;red,
-float&nbsp;float2,
-float&nbsp;float3,
-float&nbsp;alpha,
-float&nbsp;float4,
 float&nbsp;green,
-float&nbsp;blue)</code></th>
-<td class="colLast">&nbsp;</td>
+float&nbsp;blue,
+float&nbsp;alpha,
+float&nbsp;xAxisRed,
+float&nbsp;yAxisGreen,
+float&nbsp;zAxisBlue)</code></th>
+<td class="colLast">
+<div class="block">Draws a box spanning from [x1,y1,z1] to [x2,y2,z2].</div>
+</td>
 </tr>
-<tr class="rowColor" id="i11">
+<tr class="rowColor" id="i13">
 <td class="colFirst"><code>static void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#drawBox(net.minecraft.client.util.math.MatrixStack,net.minecraft.client.render.VertexConsumer,net.minecraft.util.math.Box,float,float,float,float)">drawBox</a></span>&#8203;(<a href="../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrixStack,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#drawBox(net.minecraft.client.util.math.MatrixStack,net.minecraft.client.render.VertexConsumer,net.minecraft.util.math.Box,float,float,float,float)">drawBox</a></span>&#8203;(<a href="../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
 <a href="VertexConsumer.html" title="interface in net.minecraft.client.render">VertexConsumer</a>&nbsp;vertexConsumer,
 <a href="../../util/math/Box.html" title="class in net.minecraft.util.math">Box</a>&nbsp;box,
+float&nbsp;red,
+float&nbsp;green,
+float&nbsp;blue,
+float&nbsp;alpha)</code></th>
+<td class="colLast">
+<div class="block">Draws a box.</div>
+</td>
+</tr>
+<tr class="altColor" id="i14">
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#drawEntityOutlinesFramebuffer()">drawEntityOutlinesFramebuffer</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i15">
+<td class="colFirst"><code>private static void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#drawShapeOutline(net.minecraft.client.util.math.MatrixStack,net.minecraft.client.render.VertexConsumer,net.minecraft.util.shape.VoxelShape,double,double,double,float,float,float,float)">drawShapeOutline</a></span>&#8203;(<a href="../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrixStack,
+<a href="VertexConsumer.html" title="interface in net.minecraft.client.render">VertexConsumer</a>&nbsp;vertexConsumer,
+<a href="../../util/shape/VoxelShape.html" title="class in net.minecraft.util.shape">VoxelShape</a>&nbsp;voxelShape,
+double&nbsp;double2,
+double&nbsp;double3,
+double&nbsp;double4,
 float&nbsp;float2,
 float&nbsp;float3,
 float&nbsp;float4,
 float&nbsp;float5)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i12">
-<td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#drawEntityOutlinesFramebuffer()">drawEntityOutlinesFramebuffer</a></span>()</code></th>
+<tr class="altColor" id="i16">
+<td class="colFirst"><code>private <a href="chunk/ChunkBuilder.BuiltChunk.html" title="class in net.minecraft.client.render.chunk">ChunkBuilder.BuiltChunk</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getAdjacentChunk(net.minecraft.util.math.BlockPos,net.minecraft.client.render.chunk.ChunkBuilder.BuiltChunk,net.minecraft.util.math.Direction)">getAdjacentChunk</a></span>&#8203;(<a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<a href="chunk/ChunkBuilder.BuiltChunk.html" title="class in net.minecraft.client.render.chunk">ChunkBuilder.BuiltChunk</a>&nbsp;chunk,
+<a href="../../util/math/Direction.html" title="enum in net.minecraft.util.math">Direction</a>&nbsp;direction)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i13">
+<tr class="rowColor" id="i17">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getChunksDebugString()">getChunksDebugString</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i14">
+<tr class="altColor" id="i18">
+<td class="colFirst"><code><a href="../gl/Framebuffer.html" title="class in net.minecraft.client.gl">Framebuffer</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getCloudsFramebuffer()">getCloudsFramebuffer</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i19">
 <td class="colFirst"><code>protected int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getCompletedChunkCount()">getCompletedChunkCount</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i15">
+<tr class="altColor" id="i20">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getEntitiesDebugString()">getEntitiesDebugString</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i16">
+<tr class="rowColor" id="i21">
+<td class="colFirst"><code><a href="../gl/Framebuffer.html" title="class in net.minecraft.client.gl">Framebuffer</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getEntityFramebuffer()">getEntityFramebuffer</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i22">
 <td class="colFirst"><code><a href="../gl/Framebuffer.html" title="class in net.minecraft.client.gl">Framebuffer</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getEntityOutlinesFramebuffer()">getEntityOutlinesFramebuffer</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i17">
+<tr class="rowColor" id="i23">
 <td class="colFirst"><code>static int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getLightmapCoordinates(net.minecraft.world.BlockRenderView,net.minecraft.block.BlockState,net.minecraft.util.math.BlockPos)">getLightmapCoordinates</a></span>&#8203;(<a href="../../world/BlockRenderView.html" title="interface in net.minecraft.world">BlockRenderView</a>&nbsp;world,
 <a href="../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state,
 <a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i18">
+<tr class="altColor" id="i24">
 <td class="colFirst"><code>static int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getLightmapCoordinates(net.minecraft.world.BlockRenderView,net.minecraft.util.math.BlockPos)">getLightmapCoordinates</a></span>&#8203;(<a href="../../world/BlockRenderView.html" title="interface in net.minecraft.world">BlockRenderView</a>&nbsp;world,
 <a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i19">
+<tr class="rowColor" id="i25">
+<td class="colFirst"><code><a href="../gl/Framebuffer.html" title="class in net.minecraft.client.gl">Framebuffer</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getParticlesFramebuffer()">getParticlesFramebuffer</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i26">
+<td class="colFirst"><code>private <a href="../options/ParticlesOption.html" title="enum in net.minecraft.client.options">ParticlesOption</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getRandomParticleSpawnChance(boolean)">getRandomParticleSpawnChance</a></span>&#8203;(boolean&nbsp;canSpawnOnMinimal)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i27">
+<td class="colFirst"><code><a href="../gl/Framebuffer.html" title="class in net.minecraft.client.gl">Framebuffer</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getTranslucentFramebuffer()">getTranslucentFramebuffer</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i28">
+<td class="colFirst"><code><a href="../gl/Framebuffer.html" title="class in net.minecraft.client.gl">Framebuffer</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getWeatherFramebuffer()">getWeatherFramebuffer</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i29">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isTerrainRenderComplete()">isTerrainRenderComplete</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i20">
+<tr class="altColor" id="i30">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#loadEntityOutlineShader()">loadEntityOutlineShader</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i21">
-<td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_22713(net.minecraft.client.render.Camera)">method_22713</a></span>&#8203;(<a href="Camera.html" title="class in net.minecraft.client.render">Camera</a>&nbsp;camera)</code></th>
+<tr class="rowColor" id="i31">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#loadTransparencyShader()">loadTransparencyShader</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i22">
+<tr class="altColor" id="i32">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_22978(net.minecraft.client.render.BufferBuilder,double,double,double,double,int,double,float,float)">method_22978</a></span>&#8203;(<a href="BufferBuilder.html" title="class in net.minecraft.client.render">BufferBuilder</a>&nbsp;bufferBuilder,
+double&nbsp;double2,
+double&nbsp;double3,
+double&nbsp;double4,
+double&nbsp;double5,
+int&nbsp;int2,
+double&nbsp;double6,
+float&nbsp;float2,
+float&nbsp;float3)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i33">
 <td class="colFirst"><code>static void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_22983(net.minecraft.client.util.math.MatrixStack,net.minecraft.client.render.VertexConsumer,net.minecraft.util.shape.VoxelShape,double,double,double,float,float,float,float)">method_22983</a></span>&#8203;(<a href="../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrixStack,
 <a href="VertexConsumer.html" title="interface in net.minecraft.client.render">VertexConsumer</a>&nbsp;vertexConsumer,
@@ -400,44 +836,67 @@ float&nbsp;float4,
 float&nbsp;float5)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i23">
+<tr class="altColor" id="i34">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_22984(net.minecraft.client.render.VertexConsumer,int)">method_22984</a></span>&#8203;(<a href="VertexConsumer.html" title="interface in net.minecraft.client.render">VertexConsumer</a>&nbsp;vertexConsumer,
+int&nbsp;int2)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i35">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_22985(net.minecraft.client.render.VertexConsumer,int,int,int,int,int,int,int)">method_22985</a></span>&#8203;(<a href="VertexConsumer.html" title="interface in net.minecraft.client.render">VertexConsumer</a>&nbsp;vertexConsumer,
+int&nbsp;int2,
+int&nbsp;int3,
+int&nbsp;int4,
+int&nbsp;int5,
+int&nbsp;int6,
+int&nbsp;int7,
+int&nbsp;int8)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i36">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_3267()">method_3267</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i24">
+<tr class="rowColor" id="i37">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#onResized(int,int)">onResized</a></span>&#8203;(int&nbsp;int2,
 int&nbsp;int3)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i25">
-<td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#playGlobalEvent(int,net.minecraft.util.math.BlockPos,int)">playGlobalEvent</a></span>&#8203;(int&nbsp;eventId,
-<a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
-int&nbsp;int2)</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="altColor" id="i26">
-<td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#playLevelEvent(net.minecraft.entity.player.PlayerEntity,int,net.minecraft.util.math.BlockPos,int)">playLevelEvent</a></span>&#8203;(<a href="../../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;source,
-int&nbsp;type,
-<a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
-int&nbsp;data)</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="rowColor" id="i27">
+<tr class="altColor" id="i38">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#playSong(net.minecraft.sound.SoundEvent,net.minecraft.util.math.BlockPos)">playSong</a></span>&#8203;(<a href="../../sound/SoundEvent.html" title="class in net.minecraft.sound">SoundEvent</a>&nbsp;song,
 <a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;songPosition)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i28">
+<tr class="rowColor" id="i39">
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#processGlobalEvent(int,net.minecraft.util.math.BlockPos,int)">processGlobalEvent</a></span>&#8203;(int&nbsp;eventId,
+<a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+int&nbsp;int2)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i40">
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#processWorldEvent(net.minecraft.entity.player.PlayerEntity,int,net.minecraft.util.math.BlockPos,int)">processWorldEvent</a></span>&#8203;(<a href="../../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;source,
+int&nbsp;eventId,
+<a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+int&nbsp;data)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i41">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#reload()">reload</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i29">
+<tr class="altColor" id="i42">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#removeBlockBreakingInfo(net.minecraft.client.render.BlockBreakingInfo)">removeBlockBreakingInfo</a></span>&#8203;(<a href="BlockBreakingInfo.html" title="class in net.minecraft.client.render">BlockBreakingInfo</a>&nbsp;blockBreakingInfo)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i43">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#render(net.minecraft.client.util.math.MatrixStack,float,long,boolean,net.minecraft.client.render.Camera,net.minecraft.client.render.GameRenderer,net.minecraft.client.render.LightmapTextureManager,net.minecraft.util.math.Matrix4f)">render</a></span>&#8203;(<a href="../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
 float&nbsp;tickDelta,
@@ -449,7 +908,21 @@ boolean&nbsp;renderBlockOutline,
 <a href="../../util/math/Matrix4f.html" title="class in net.minecraft.util.math">Matrix4f</a>&nbsp;matrix4f)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i30">
+<tr class="altColor" id="i44">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#renderChunkDebugInfo(net.minecraft.client.render.Camera)">renderChunkDebugInfo</a></span>&#8203;(<a href="Camera.html" title="class in net.minecraft.client.render">Camera</a>&nbsp;camera)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i45">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#renderClouds(net.minecraft.client.render.BufferBuilder,double,double,double,net.minecraft.util.math.Vec3d)">renderClouds</a></span>&#8203;(<a href="BufferBuilder.html" title="class in net.minecraft.client.render">BufferBuilder</a>&nbsp;builder,
+double&nbsp;x,
+double&nbsp;y,
+double&nbsp;z,
+<a href="../../util/math/Vec3d.html" title="class in net.minecraft.util.math">Vec3d</a>&nbsp;color)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i46">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#renderClouds(net.minecraft.client.util.math.MatrixStack,float,double,double,double)">renderClouds</a></span>&#8203;(<a href="../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
 float&nbsp;tickDelta,
@@ -458,27 +931,98 @@ double&nbsp;cameraY,
 double&nbsp;cameraZ)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i31">
-<td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#renderSky(net.minecraft.client.util.math.MatrixStack,float)">renderSky</a></span>&#8203;(<a href="../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrixStack,
-float&nbsp;float2)</code></th>
+<tr class="rowColor" id="i47">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#renderDarkSky()">renderDarkSky</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i32">
+<tr class="altColor" id="i48">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#renderEndSky(net.minecraft.client.util.math.MatrixStack)">renderEndSky</a></span>&#8203;(<a href="../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i49">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#renderEntity(net.minecraft.entity.Entity,double,double,double,float,net.minecraft.client.util.math.MatrixStack,net.minecraft.client.render.VertexConsumerProvider)">renderEntity</a></span>&#8203;(<a href="../../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&nbsp;entity,
+double&nbsp;cameraX,
+double&nbsp;cameraY,
+double&nbsp;cameraZ,
+float&nbsp;tickDelta,
+<a href="../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
+<a href="VertexConsumerProvider.html" title="interface in net.minecraft.client.render">VertexConsumerProvider</a>&nbsp;vertexConsumers)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i50">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#renderLayer(net.minecraft.client.render.RenderLayer,net.minecraft.client.util.math.MatrixStack,double,double,double)">renderLayer</a></span>&#8203;(<a href="RenderLayer.html" title="class in net.minecraft.client.render">RenderLayer</a>&nbsp;renderLayer,
+<a href="../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrixStack,
+double&nbsp;double2,
+double&nbsp;double3,
+double&nbsp;double4)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i51">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#renderLightSky()">renderLightSky</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i52">
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#renderSky(net.minecraft.client.util.math.MatrixStack,float)">renderSky</a></span>&#8203;(<a href="../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
+float&nbsp;tickDelta)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i53">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#renderSkyHalf(net.minecraft.client.render.BufferBuilder,float,boolean)">renderSkyHalf</a></span>&#8203;(<a href="BufferBuilder.html" title="class in net.minecraft.client.render">BufferBuilder</a>&nbsp;buffer,
+float&nbsp;y,
+boolean&nbsp;bottom)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i54">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#renderStars()">renderStars</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i55">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#renderStars(net.minecraft.client.render.BufferBuilder)">renderStars</a></span>&#8203;(<a href="BufferBuilder.html" title="class in net.minecraft.client.render">BufferBuilder</a>&nbsp;buffer)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i56">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#renderWeather(net.minecraft.client.render.LightmapTextureManager,float,double,double,double)">renderWeather</a></span>&#8203;(<a href="LightmapTextureManager.html" title="class in net.minecraft.client.render">LightmapTextureManager</a>&nbsp;manager,
+float&nbsp;float2,
+double&nbsp;double2,
+double&nbsp;double3,
+double&nbsp;double4)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i57">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#renderWorldBorder(net.minecraft.client.render.Camera)">renderWorldBorder</a></span>&#8203;(<a href="Camera.html" title="class in net.minecraft.client.render">Camera</a>&nbsp;camera)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i58">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#resetTransparencyShader()">resetTransparencyShader</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i59">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#scheduleBlockRender(int,int,int)">scheduleBlockRender</a></span>&#8203;(int&nbsp;x,
 int&nbsp;y,
 int&nbsp;z)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i33">
+<tr class="altColor" id="i60">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#scheduleBlockRenders(int,int,int)">scheduleBlockRenders</a></span>&#8203;(int&nbsp;x,
 int&nbsp;y,
 int&nbsp;z)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i34">
+<tr class="rowColor" id="i61">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#scheduleBlockRenders(int,int,int,int,int,int)">scheduleBlockRenders</a></span>&#8203;(int&nbsp;minX,
 int&nbsp;minY,
@@ -488,29 +1032,89 @@ int&nbsp;maxY,
 int&nbsp;maxZ)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i35">
+<tr class="altColor" id="i62">
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#scheduleBlockRerenderIfNeeded(net.minecraft.util.math.BlockPos,net.minecraft.block.BlockState,net.minecraft.block.BlockState)">scheduleBlockRerenderIfNeeded</a></span>&#8203;(<a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<a href="../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;old,
+<a href="../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;updated)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i63">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#scheduleChunkRender(int,int,int,boolean)">scheduleChunkRender</a></span>&#8203;(int&nbsp;x,
+int&nbsp;y,
+int&nbsp;z,
+boolean&nbsp;important)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i64">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#scheduleSectionRender(net.minecraft.util.math.BlockPos,boolean)">scheduleSectionRender</a></span>&#8203;(<a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+boolean&nbsp;important)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i65">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#scheduleTerrainUpdate()">scheduleTerrainUpdate</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i36">
+<tr class="altColor" id="i66">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setBlockBreakingInfo(int,net.minecraft.util.math.BlockPos,int)">setBlockBreakingInfo</a></span>&#8203;(int&nbsp;entityId,
 <a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
 int&nbsp;stage)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i37">
+<tr class="rowColor" id="i67">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setupTerrain(net.minecraft.client.render.Camera,net.minecraft.client.render.Frustum,boolean,int,boolean)">setupTerrain</a></span>&#8203;(<a href="Camera.html" title="class in net.minecraft.client.render">Camera</a>&nbsp;camera,
+<a href="Frustum.html" title="class in net.minecraft.client.render">Frustum</a>&nbsp;frustum,
+boolean&nbsp;hasForcedFrustum,
+int&nbsp;frame,
+boolean&nbsp;spectator)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i68">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setWorld(net.minecraft.client.world.ClientWorld)">setWorld</a></span>&#8203;(<a href="../world/ClientWorld.html" title="class in net.minecraft.client.world">ClientWorld</a>&nbsp;clientWorld)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i38">
+<tr class="rowColor" id="i69">
+<td class="colFirst"><code>private <a href="../particle/Particle.html" title="class in net.minecraft.client.particle">Particle</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#spawnParticle(net.minecraft.particle.ParticleEffect,boolean,boolean,double,double,double,double,double,double)">spawnParticle</a></span>&#8203;(<a href="../../particle/ParticleEffect.html" title="interface in net.minecraft.particle">ParticleEffect</a>&nbsp;parameters,
+boolean&nbsp;alwaysSpawn,
+boolean&nbsp;canSpawnOnMinimal,
+double&nbsp;x,
+double&nbsp;y,
+double&nbsp;z,
+double&nbsp;velocityX,
+double&nbsp;velocityY,
+double&nbsp;velocityZ)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i70">
+<td class="colFirst"><code>private <a href="../particle/Particle.html" title="class in net.minecraft.client.particle">Particle</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#spawnParticle(net.minecraft.particle.ParticleEffect,boolean,double,double,double,double,double,double)">spawnParticle</a></span>&#8203;(<a href="../../particle/ParticleEffect.html" title="interface in net.minecraft.particle">ParticleEffect</a>&nbsp;parameters,
+boolean&nbsp;alwaysSpawn,
+double&nbsp;x,
+double&nbsp;y,
+double&nbsp;z,
+double&nbsp;velocityX,
+double&nbsp;velocityY,
+double&nbsp;velocityZ)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i71">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#tick()">tick</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i39">
+<tr class="altColor" id="i72">
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#tickRainSplashing(net.minecraft.client.render.Camera)">tickRainSplashing</a></span>&#8203;(<a href="Camera.html" title="class in net.minecraft.client.render">Camera</a>&nbsp;camera)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i73">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#updateBlock(net.minecraft.world.BlockView,net.minecraft.util.math.BlockPos,net.minecraft.block.BlockState,net.minecraft.block.BlockState,int)">updateBlock</a></span>&#8203;(<a href="../../world/BlockView.html" title="interface in net.minecraft.world">BlockView</a>&nbsp;world,
 <a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
@@ -519,7 +1123,19 @@ int&nbsp;stage)</code></th>
 int&nbsp;flags)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i40">
+<tr class="altColor" id="i74">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#updateChunks(long)">updateChunks</a></span>&#8203;(long&nbsp;limitTime)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i75">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#updateEntitiesForSong(net.minecraft.world.World,net.minecraft.util.math.BlockPos,boolean)">updateEntitiesForSong</a></span>&#8203;(<a href="../../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world,
+<a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+boolean&nbsp;playing)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i76">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#updateNoCullingBlockEntities(java.util.Collection,java.util.Collection)">updateNoCullingBlockEntities</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util" class="externalLink">Collection</a>&lt;<a href="../../block/entity/BlockEntity.html" title="class in net.minecraft.block.entity">BlockEntity</a>&gt;&nbsp;removed,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util" class="externalLink">Collection</a>&lt;<a href="../../block/entity/BlockEntity.html" title="class in net.minecraft.block.entity">BlockEntity</a>&gt;&nbsp;added)</code></th>
@@ -559,8 +1175,435 @@ int&nbsp;flags)</code></th>
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
+<h3><a id="LOGGER">LOGGER</a></h3>
+<div class="memberSignature"><span class="modifiers">private static final</span>&nbsp;<span class="returnType"><a href="https://logging.apache.org/log4j/2.x/log4j-api/apidocs/org/apache/logging/log4j/Logger.html?is-external=true" title="class or interface in org.apache.logging.log4j" class="externalLink">Logger</a></span>&nbsp;<span class="memberName">LOGGER</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="MOON_PHASES">MOON_PHASES</a></h3>
+<div class="memberSignature"><span class="modifiers">private static final</span>&nbsp;<span class="returnType"><a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a></span>&nbsp;<span class="memberName">MOON_PHASES</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="SUN">SUN</a></h3>
+<div class="memberSignature"><span class="modifiers">private static final</span>&nbsp;<span class="returnType"><a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a></span>&nbsp;<span class="memberName">SUN</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="CLOUDS">CLOUDS</a></h3>
+<div class="memberSignature"><span class="modifiers">private static final</span>&nbsp;<span class="returnType"><a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a></span>&nbsp;<span class="memberName">CLOUDS</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="END_SKY">END_SKY</a></h3>
+<div class="memberSignature"><span class="modifiers">private static final</span>&nbsp;<span class="returnType"><a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a></span>&nbsp;<span class="memberName">END_SKY</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="FORCEFIELD">FORCEFIELD</a></h3>
+<div class="memberSignature"><span class="modifiers">private static final</span>&nbsp;<span class="returnType"><a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a></span>&nbsp;<span class="memberName">FORCEFIELD</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="RAIN">RAIN</a></h3>
+<div class="memberSignature"><span class="modifiers">private static final</span>&nbsp;<span class="returnType"><a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a></span>&nbsp;<span class="memberName">RAIN</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="SNOW">SNOW</a></h3>
+<div class="memberSignature"><span class="modifiers">private static final</span>&nbsp;<span class="returnType"><a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a></span>&nbsp;<span class="memberName">SNOW</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="DIRECTIONS">DIRECTIONS</a></h3>
 <div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="../../util/math/Direction.html" title="enum in net.minecraft.util.math">Direction</a>[]</span>&nbsp;<span class="memberName">DIRECTIONS</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="client">client</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../MinecraftClient.html" title="class in net.minecraft.client">MinecraftClient</a></span>&nbsp;<span class="memberName">client</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="textureManager">textureManager</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../texture/TextureManager.html" title="class in net.minecraft.client.texture">TextureManager</a></span>&nbsp;<span class="memberName">textureManager</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="entityRenderDispatcher">entityRenderDispatcher</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="entity/EntityRenderDispatcher.html" title="class in net.minecraft.client.render.entity">EntityRenderDispatcher</a></span>&nbsp;<span class="memberName">entityRenderDispatcher</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="bufferBuilders">bufferBuilders</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="BufferBuilderStorage.html" title="class in net.minecraft.client.render">BufferBuilderStorage</a></span>&nbsp;<span class="memberName">bufferBuilders</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="world">world</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="../world/ClientWorld.html" title="class in net.minecraft.client.world">ClientWorld</a></span>&nbsp;<span class="memberName">world</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="chunksToRebuild">chunksToRebuild</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="chunk/ChunkBuilder.BuiltChunk.html" title="class in net.minecraft.client.render.chunk">ChunkBuilder.BuiltChunk</a>&gt;</span>&nbsp;<span class="memberName">chunksToRebuild</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="visibleChunks">visibleChunks</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="http://fastutil.di.unimi.it/docs/it/unimi/dsi/fastutil/objects/ObjectList.html?is-external=true" title="class or interface in it.unimi.dsi.fastutil.objects" class="externalLink">ObjectList</a>&lt;<a href="WorldRenderer.ChunkInfo.html" title="class in net.minecraft.client.render">WorldRenderer.ChunkInfo</a>&gt;</span>&nbsp;<span class="memberName">visibleChunks</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="noCullingBlockEntities">noCullingBlockEntities</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="../../block/entity/BlockEntity.html" title="class in net.minecraft.block.entity">BlockEntity</a>&gt;</span>&nbsp;<span class="memberName">noCullingBlockEntities</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="chunks">chunks</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="BuiltChunkStorage.html" title="class in net.minecraft.client.render">BuiltChunkStorage</a></span>&nbsp;<span class="memberName">chunks</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="skyVertexFormat">skyVertexFormat</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="VertexFormat.html" title="class in net.minecraft.client.render">VertexFormat</a></span>&nbsp;<span class="memberName">skyVertexFormat</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="starsBuffer">starsBuffer</a></h3>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="../gl/VertexBuffer.html" title="class in net.minecraft.client.gl">VertexBuffer</a></span>&nbsp;<span class="memberName">starsBuffer</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="lightSkyBuffer">lightSkyBuffer</a></h3>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="../gl/VertexBuffer.html" title="class in net.minecraft.client.gl">VertexBuffer</a></span>&nbsp;<span class="memberName">lightSkyBuffer</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="darkSkyBuffer">darkSkyBuffer</a></h3>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="../gl/VertexBuffer.html" title="class in net.minecraft.client.gl">VertexBuffer</a></span>&nbsp;<span class="memberName">darkSkyBuffer</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="cloudsDirty">cloudsDirty</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">cloudsDirty</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="cloudsBuffer">cloudsBuffer</a></h3>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="../gl/VertexBuffer.html" title="class in net.minecraft.client.gl">VertexBuffer</a></span>&nbsp;<span class="memberName">cloudsBuffer</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="chunkUpdateSmoother">chunkUpdateSmoother</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="FpsSmoother.html" title="class in net.minecraft.client.render">FpsSmoother</a></span>&nbsp;<span class="memberName">chunkUpdateSmoother</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="ticks">ticks</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">ticks</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="blockBreakingInfos">blockBreakingInfos</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="http://fastutil.di.unimi.it/docs/it/unimi/dsi/fastutil/ints/Int2ObjectMap.html?is-external=true" title="class or interface in it.unimi.dsi.fastutil.ints" class="externalLink">Int2ObjectMap</a>&lt;<a href="BlockBreakingInfo.html" title="class in net.minecraft.client.render">BlockBreakingInfo</a>&gt;</span>&nbsp;<span class="memberName">blockBreakingInfos</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="blockBreakingProgressions">blockBreakingProgressions</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="http://fastutil.di.unimi.it/docs/it/unimi/dsi/fastutil/longs/Long2ObjectMap.html?is-external=true" title="class or interface in it.unimi.dsi.fastutil.longs" class="externalLink">Long2ObjectMap</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/SortedSet.html?is-external=true" title="class or interface in java.util" class="externalLink">SortedSet</a>&lt;<a href="BlockBreakingInfo.html" title="class in net.minecraft.client.render">BlockBreakingInfo</a>&gt;&gt;</span>&nbsp;<span class="memberName">blockBreakingProgressions</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="playingSongs">playingSongs</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util" class="externalLink">Map</a>&lt;<a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>,&#8203;<a href="../sound/SoundInstance.html" title="interface in net.minecraft.client.sound">SoundInstance</a>&gt;</span>&nbsp;<span class="memberName">playingSongs</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="entityOutlinesFramebuffer">entityOutlinesFramebuffer</a></h3>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="../gl/Framebuffer.html" title="class in net.minecraft.client.gl">Framebuffer</a></span>&nbsp;<span class="memberName">entityOutlinesFramebuffer</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="entityOutlineShader">entityOutlineShader</a></h3>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="../gl/ShaderEffect.html" title="class in net.minecraft.client.gl">ShaderEffect</a></span>&nbsp;<span class="memberName">entityOutlineShader</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="translucentFramebuffer">translucentFramebuffer</a></h3>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="../gl/Framebuffer.html" title="class in net.minecraft.client.gl">Framebuffer</a></span>&nbsp;<span class="memberName">translucentFramebuffer</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="entityFramebuffer">entityFramebuffer</a></h3>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="../gl/Framebuffer.html" title="class in net.minecraft.client.gl">Framebuffer</a></span>&nbsp;<span class="memberName">entityFramebuffer</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="particlesFramebuffer">particlesFramebuffer</a></h3>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="../gl/Framebuffer.html" title="class in net.minecraft.client.gl">Framebuffer</a></span>&nbsp;<span class="memberName">particlesFramebuffer</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="weatherFramebuffer">weatherFramebuffer</a></h3>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="../gl/Framebuffer.html" title="class in net.minecraft.client.gl">Framebuffer</a></span>&nbsp;<span class="memberName">weatherFramebuffer</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="cloudsFramebuffer">cloudsFramebuffer</a></h3>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="../gl/Framebuffer.html" title="class in net.minecraft.client.gl">Framebuffer</a></span>&nbsp;<span class="memberName">cloudsFramebuffer</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="transparencyShader">transparencyShader</a></h3>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="../gl/ShaderEffect.html" title="class in net.minecraft.client.gl">ShaderEffect</a></span>&nbsp;<span class="memberName">transparencyShader</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="lastCameraChunkUpdateX">lastCameraChunkUpdateX</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">double</span>&nbsp;<span class="memberName">lastCameraChunkUpdateX</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="lastCameraChunkUpdateY">lastCameraChunkUpdateY</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">double</span>&nbsp;<span class="memberName">lastCameraChunkUpdateY</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="lastCameraChunkUpdateZ">lastCameraChunkUpdateZ</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">double</span>&nbsp;<span class="memberName">lastCameraChunkUpdateZ</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="cameraChunkX">cameraChunkX</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">cameraChunkX</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="cameraChunkY">cameraChunkY</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">cameraChunkY</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="cameraChunkZ">cameraChunkZ</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">cameraChunkZ</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="lastCameraX">lastCameraX</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">double</span>&nbsp;<span class="memberName">lastCameraX</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="lastCameraY">lastCameraY</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">double</span>&nbsp;<span class="memberName">lastCameraY</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="lastCameraZ">lastCameraZ</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">double</span>&nbsp;<span class="memberName">lastCameraZ</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="lastCameraPitch">lastCameraPitch</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">double</span>&nbsp;<span class="memberName">lastCameraPitch</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="lastCameraYaw">lastCameraYaw</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">double</span>&nbsp;<span class="memberName">lastCameraYaw</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="lastCloudsBlockX">lastCloudsBlockX</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">lastCloudsBlockX</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="lastCloudsBlockY">lastCloudsBlockY</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">lastCloudsBlockY</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="lastCloudsBlockZ">lastCloudsBlockZ</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">lastCloudsBlockZ</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="lastCloudsColor">lastCloudsColor</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="../../util/math/Vec3d.html" title="class in net.minecraft.util.math">Vec3d</a></span>&nbsp;<span class="memberName">lastCloudsColor</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="lastCloudsRenderMode">lastCloudsRenderMode</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="../options/CloudRenderMode.html" title="enum in net.minecraft.client.options">CloudRenderMode</a></span>&nbsp;<span class="memberName">lastCloudsRenderMode</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="chunkBuilder">chunkBuilder</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="chunk/ChunkBuilder.html" title="class in net.minecraft.client.render.chunk">ChunkBuilder</a></span>&nbsp;<span class="memberName">chunkBuilder</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="vertexFormat">vertexFormat</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="VertexFormat.html" title="class in net.minecraft.client.render">VertexFormat</a></span>&nbsp;<span class="memberName">vertexFormat</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="renderDistance">renderDistance</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">renderDistance</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="regularEntityCount">regularEntityCount</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">regularEntityCount</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="blockEntityCount">blockEntityCount</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">blockEntityCount</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="shouldCaptureFrustum">shouldCaptureFrustum</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">shouldCaptureFrustum</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="capturedFrustum">capturedFrustum</a></h3>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="Frustum.html" title="class in net.minecraft.client.render">Frustum</a></span>&nbsp;<span class="memberName">capturedFrustum</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="capturedFrustrumOrientation">capturedFrustrumOrientation</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../util/math/Vector4f.html" title="class in net.minecraft.client.util.math">Vector4f</a>[]</span>&nbsp;<span class="memberName">capturedFrustrumOrientation</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="capturedFrustumPosition">capturedFrustumPosition</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../util/math/Vector3d.html" title="class in net.minecraft.client.util.math">Vector3d</a></span>&nbsp;<span class="memberName">capturedFrustumPosition</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="lastTranslucentSortX">lastTranslucentSortX</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">double</span>&nbsp;<span class="memberName">lastTranslucentSortX</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="lastTranslucentSortY">lastTranslucentSortY</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">double</span>&nbsp;<span class="memberName">lastTranslucentSortY</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="lastTranslucentSortZ">lastTranslucentSortZ</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">double</span>&nbsp;<span class="memberName">lastTranslucentSortZ</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="needsTerrainUpdate">needsTerrainUpdate</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">needsTerrainUpdate</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="frame">frame</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">frame</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="field_20793">field_20793</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">field_20793</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="field_20794">field_20794</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType">float[]</span>&nbsp;<span class="memberName">field_20794</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="field_20795">field_20795</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType">float[]</span>&nbsp;<span class="memberName">field_20795</span></div>
 </section>
 </li>
 </ul>
@@ -592,8 +1635,18 @@ int&nbsp;flags)</code></th>
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="method_22713(net.minecraft.client.render.Camera)">method_22713</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">method_22713</span>&#8203;(<span class="arguments"><a href="Camera.html" title="class in net.minecraft.client.render">Camera</a>&nbsp;camera)</span></div>
+<h3><a id="renderWeather(net.minecraft.client.render.LightmapTextureManager,float,double,double,double)">renderWeather</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">renderWeather</span>&#8203;(<span class="arguments"><a href="LightmapTextureManager.html" title="class in net.minecraft.client.render">LightmapTextureManager</a>&nbsp;manager,
+float&nbsp;float2,
+double&nbsp;double2,
+double&nbsp;double3,
+double&nbsp;double4)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="tickRainSplashing(net.minecraft.client.render.Camera)">tickRainSplashing</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">tickRainSplashing</span>&#8203;(<span class="arguments"><a href="Camera.html" title="class in net.minecraft.client.render">Camera</a>&nbsp;camera)</span></div>
 </section>
 </li>
 <li class="blockList">
@@ -624,6 +1677,18 @@ int&nbsp;flags)</code></th>
 </li>
 <li class="blockList">
 <section class="detail">
+<h3><a id="loadTransparencyShader()">loadTransparencyShader</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">loadTransparencyShader</span>()</div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="resetTransparencyShader()">resetTransparencyShader</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">resetTransparencyShader</span>()</div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="drawEntityOutlinesFramebuffer()">drawEntityOutlinesFramebuffer</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">drawEntityOutlinesFramebuffer</span>()</div>
 </section>
@@ -636,8 +1701,40 @@ int&nbsp;flags)</code></th>
 </li>
 <li class="blockList">
 <section class="detail">
+<h3><a id="renderDarkSky()">renderDarkSky</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">renderDarkSky</span>()</div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="renderLightSky()">renderLightSky</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">renderLightSky</span>()</div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="renderSkyHalf(net.minecraft.client.render.BufferBuilder,float,boolean)">renderSkyHalf</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">renderSkyHalf</span>&#8203;(<span class="arguments"><a href="BufferBuilder.html" title="class in net.minecraft.client.render">BufferBuilder</a>&nbsp;buffer,
+float&nbsp;y,
+boolean&nbsp;bottom)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="renderStars()">renderStars</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">renderStars</span>()</div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="renderStars(net.minecraft.client.render.BufferBuilder)">renderStars</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">renderStars</span>&#8203;(<span class="arguments"><a href="BufferBuilder.html" title="class in net.minecraft.client.render">BufferBuilder</a>&nbsp;buffer)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="setWorld(net.minecraft.client.world.ClientWorld)">setWorld</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setWorld</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setWorld</span>&#8203;(<span class="arguments"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 <a href="../world/ClientWorld.html" title="class in net.minecraft.client.world">ClientWorld</a>&nbsp;clientWorld)</span></div>
 </section>
 </li>
@@ -680,6 +1777,36 @@ int&nbsp;int3)</span></div>
 </li>
 <li class="blockList">
 <section class="detail">
+<h3><a id="setupTerrain(net.minecraft.client.render.Camera,net.minecraft.client.render.Frustum,boolean,int,boolean)">setupTerrain</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setupTerrain</span>&#8203;(<span class="arguments"><a href="Camera.html" title="class in net.minecraft.client.render">Camera</a>&nbsp;camera,
+<a href="Frustum.html" title="class in net.minecraft.client.render">Frustum</a>&nbsp;frustum,
+boolean&nbsp;hasForcedFrustum,
+int&nbsp;frame,
+boolean&nbsp;spectator)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="getAdjacentChunk(net.minecraft.util.math.BlockPos,net.minecraft.client.render.chunk.ChunkBuilder.BuiltChunk,net.minecraft.util.math.Direction)">getAdjacentChunk</a></h3>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="chunk/ChunkBuilder.BuiltChunk.html" title="class in net.minecraft.client.render.chunk">ChunkBuilder.BuiltChunk</a></span>&nbsp;<span class="memberName">getAdjacentChunk</span>&#8203;(<span class="arguments"><a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<a href="chunk/ChunkBuilder.BuiltChunk.html" title="class in net.minecraft.client.render.chunk">ChunkBuilder.BuiltChunk</a>&nbsp;chunk,
+<a href="../../util/math/Direction.html" title="enum in net.minecraft.util.math">Direction</a>&nbsp;direction)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="captureFrustum(net.minecraft.util.math.Matrix4f,net.minecraft.util.math.Matrix4f,double,double,double,net.minecraft.client.render.Frustum)">captureFrustum</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">captureFrustum</span>&#8203;(<span class="arguments"><a href="../../util/math/Matrix4f.html" title="class in net.minecraft.util.math">Matrix4f</a>&nbsp;modelMatrix,
+<a href="../../util/math/Matrix4f.html" title="class in net.minecraft.util.math">Matrix4f</a>&nbsp;matrix4f,
+double&nbsp;x,
+double&nbsp;y,
+double&nbsp;z,
+<a href="Frustum.html" title="class in net.minecraft.client.render">Frustum</a>&nbsp;frustum)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="render(net.minecraft.client.util.math.MatrixStack,float,long,boolean,net.minecraft.client.render.Camera,net.minecraft.client.render.GameRenderer,net.minecraft.client.render.LightmapTextureManager,net.minecraft.util.math.Matrix4f)">render</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">render</span>&#8203;(<span class="arguments"><a href="../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
 float&nbsp;tickDelta,
@@ -693,15 +1820,81 @@ boolean&nbsp;renderBlockOutline,
 </li>
 <li class="blockList">
 <section class="detail">
+<h3><a id="checkEmpty(net.minecraft.client.util.math.MatrixStack)">checkEmpty</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">checkEmpty</span>&#8203;(<span class="arguments"><a href="../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="renderEntity(net.minecraft.entity.Entity,double,double,double,float,net.minecraft.client.util.math.MatrixStack,net.minecraft.client.render.VertexConsumerProvider)">renderEntity</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">renderEntity</span>&#8203;(<span class="arguments"><a href="../../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&nbsp;entity,
+double&nbsp;cameraX,
+double&nbsp;cameraY,
+double&nbsp;cameraZ,
+float&nbsp;tickDelta,
+<a href="../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
+<a href="VertexConsumerProvider.html" title="interface in net.minecraft.client.render">VertexConsumerProvider</a>&nbsp;vertexConsumers)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="renderLayer(net.minecraft.client.render.RenderLayer,net.minecraft.client.util.math.MatrixStack,double,double,double)">renderLayer</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">renderLayer</span>&#8203;(<span class="arguments"><a href="RenderLayer.html" title="class in net.minecraft.client.render">RenderLayer</a>&nbsp;renderLayer,
+<a href="../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrixStack,
+double&nbsp;double2,
+double&nbsp;double3,
+double&nbsp;double4)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="renderChunkDebugInfo(net.minecraft.client.render.Camera)">renderChunkDebugInfo</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">renderChunkDebugInfo</span>&#8203;(<span class="arguments"><a href="Camera.html" title="class in net.minecraft.client.render">Camera</a>&nbsp;camera)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="method_22984(net.minecraft.client.render.VertexConsumer,int)">method_22984</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">method_22984</span>&#8203;(<span class="arguments"><a href="VertexConsumer.html" title="interface in net.minecraft.client.render">VertexConsumer</a>&nbsp;vertexConsumer,
+int&nbsp;int2)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="method_22985(net.minecraft.client.render.VertexConsumer,int,int,int,int,int,int,int)">method_22985</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">method_22985</span>&#8203;(<span class="arguments"><a href="VertexConsumer.html" title="interface in net.minecraft.client.render">VertexConsumer</a>&nbsp;vertexConsumer,
+int&nbsp;int2,
+int&nbsp;int3,
+int&nbsp;int4,
+int&nbsp;int5,
+int&nbsp;int6,
+int&nbsp;int7,
+int&nbsp;int8)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="tick()">tick</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">tick</span>()</div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
+<h3><a id="removeBlockBreakingInfo(net.minecraft.client.render.BlockBreakingInfo)">removeBlockBreakingInfo</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">removeBlockBreakingInfo</span>&#8203;(<span class="arguments"><a href="BlockBreakingInfo.html" title="class in net.minecraft.client.render">BlockBreakingInfo</a>&nbsp;blockBreakingInfo)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="renderEndSky(net.minecraft.client.util.math.MatrixStack)">renderEndSky</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">renderEndSky</span>&#8203;(<span class="arguments"><a href="../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="renderSky(net.minecraft.client.util.math.MatrixStack,float)">renderSky</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">renderSky</span>&#8203;(<span class="arguments"><a href="../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrixStack,
-float&nbsp;float2)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">renderSky</span>&#8203;(<span class="arguments"><a href="../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
+float&nbsp;tickDelta)</span></div>
 </section>
 </li>
 <li class="blockList">
@@ -712,6 +1905,55 @@ float&nbsp;tickDelta,
 double&nbsp;cameraX,
 double&nbsp;cameraY,
 double&nbsp;cameraZ)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="renderClouds(net.minecraft.client.render.BufferBuilder,double,double,double,net.minecraft.util.math.Vec3d)">renderClouds</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">renderClouds</span>&#8203;(<span class="arguments"><a href="BufferBuilder.html" title="class in net.minecraft.client.render">BufferBuilder</a>&nbsp;builder,
+double&nbsp;x,
+double&nbsp;y,
+double&nbsp;z,
+<a href="../../util/math/Vec3d.html" title="class in net.minecraft.util.math">Vec3d</a>&nbsp;color)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="updateChunks(long)">updateChunks</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">updateChunks</span>&#8203;(<span class="arguments">long&nbsp;limitTime)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="renderWorldBorder(net.minecraft.client.render.Camera)">renderWorldBorder</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">renderWorldBorder</span>&#8203;(<span class="arguments"><a href="Camera.html" title="class in net.minecraft.client.render">Camera</a>&nbsp;camera)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="method_22978(net.minecraft.client.render.BufferBuilder,double,double,double,double,int,double,float,float)">method_22978</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">method_22978</span>&#8203;(<span class="arguments"><a href="BufferBuilder.html" title="class in net.minecraft.client.render">BufferBuilder</a>&nbsp;bufferBuilder,
+double&nbsp;double2,
+double&nbsp;double3,
+double&nbsp;double4,
+double&nbsp;double5,
+int&nbsp;int2,
+double&nbsp;double6,
+float&nbsp;float2,
+float&nbsp;float3)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="drawBlockOutline(net.minecraft.client.util.math.MatrixStack,net.minecraft.client.render.VertexConsumer,net.minecraft.entity.Entity,double,double,double,net.minecraft.util.math.BlockPos,net.minecraft.block.BlockState)">drawBlockOutline</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">drawBlockOutline</span>&#8203;(<span class="arguments"><a href="../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrixStack,
+<a href="VertexConsumer.html" title="interface in net.minecraft.client.render">VertexConsumer</a>&nbsp;vertexConsumer,
+<a href="../../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&nbsp;entity,
+double&nbsp;double2,
+double&nbsp;double3,
+double&nbsp;double4,
+<a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
+<a href="../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;blockState)</span></div>
 </section>
 </li>
 <li class="blockList">
@@ -731,14 +1973,13 @@ float&nbsp;float5)</span></div>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="drawBox(net.minecraft.client.render.VertexConsumer,double,double,double,double,double,double,float,float,float,float)">drawBox</a></h3>
-<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">drawBox</span>&#8203;(<span class="arguments"><a href="VertexConsumer.html" title="interface in net.minecraft.client.render">VertexConsumer</a>&nbsp;vertexConsumer,
+<h3><a id="drawShapeOutline(net.minecraft.client.util.math.MatrixStack,net.minecraft.client.render.VertexConsumer,net.minecraft.util.shape.VoxelShape,double,double,double,float,float,float,float)">drawShapeOutline</a></h3>
+<div class="memberSignature"><span class="modifiers">private static</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">drawShapeOutline</span>&#8203;(<span class="arguments"><a href="../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrixStack,
+<a href="VertexConsumer.html" title="interface in net.minecraft.client.render">VertexConsumer</a>&nbsp;vertexConsumer,
+<a href="../../util/shape/VoxelShape.html" title="class in net.minecraft.util.shape">VoxelShape</a>&nbsp;voxelShape,
 double&nbsp;double2,
 double&nbsp;double3,
 double&nbsp;double4,
-double&nbsp;double5,
-double&nbsp;double6,
-double&nbsp;double7,
 float&nbsp;float2,
 float&nbsp;float3,
 float&nbsp;float4,
@@ -748,30 +1989,36 @@ float&nbsp;float5)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="drawBox(net.minecraft.client.util.math.MatrixStack,net.minecraft.client.render.VertexConsumer,net.minecraft.util.math.Box,float,float,float,float)">drawBox</a></h3>
-<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">drawBox</span>&#8203;(<span class="arguments"><a href="../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrixStack,
+<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">drawBox</span>&#8203;(<span class="arguments"><a href="../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
 <a href="VertexConsumer.html" title="interface in net.minecraft.client.render">VertexConsumer</a>&nbsp;vertexConsumer,
 <a href="../../util/math/Box.html" title="class in net.minecraft.util.math">Box</a>&nbsp;box,
-float&nbsp;float2,
-float&nbsp;float3,
-float&nbsp;float4,
-float&nbsp;float5)</span></div>
+float&nbsp;red,
+float&nbsp;green,
+float&nbsp;blue,
+float&nbsp;alpha)</span></div>
+<div class="block">Draws a box.
+
+ <p>Note the coordinates the box spans are relative to current translation of the matrices.</div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="drawBox(net.minecraft.client.util.math.MatrixStack,net.minecraft.client.render.VertexConsumer,double,double,double,double,double,double,float,float,float,float)">drawBox</a></h3>
-<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">drawBox</span>&#8203;(<span class="arguments"><a href="../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrixStack,
+<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">drawBox</span>&#8203;(<span class="arguments"><a href="../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
 <a href="VertexConsumer.html" title="interface in net.minecraft.client.render">VertexConsumer</a>&nbsp;vertexConsumer,
-double&nbsp;double2,
-double&nbsp;double3,
-double&nbsp;double4,
-double&nbsp;double5,
-double&nbsp;double6,
-double&nbsp;double7,
-float&nbsp;float2,
-float&nbsp;float3,
-float&nbsp;float4,
-float&nbsp;float5)</span></div>
+double&nbsp;x1,
+double&nbsp;y1,
+double&nbsp;z1,
+double&nbsp;x2,
+double&nbsp;y2,
+double&nbsp;z2,
+float&nbsp;red,
+float&nbsp;green,
+float&nbsp;blue,
+float&nbsp;alpha)</span></div>
+<div class="block">Draws a box spanning from [x1,y1,z1] to [x2,y2,z2].
+
+ <p>Note the coordinates the box spans are relative to current translation of the matrices.</div>
 </section>
 </li>
 <li class="blockList">
@@ -786,12 +2033,16 @@ double&nbsp;x2,
 double&nbsp;y2,
 double&nbsp;z2,
 float&nbsp;red,
-float&nbsp;float2,
-float&nbsp;float3,
-float&nbsp;alpha,
-float&nbsp;float4,
 float&nbsp;green,
-float&nbsp;blue)</span></div>
+float&nbsp;blue,
+float&nbsp;alpha,
+float&nbsp;xAxisRed,
+float&nbsp;yAxisGreen,
+float&nbsp;zAxisBlue)</span></div>
+<div class="block">Draws a box spanning from [x1,y1,z1] to [x2,y2,z2].
+ The 3 axes centered at [x1,y1,z1] may be colored differently using xAxisRed, yAxisGreen, and zAxisBlue.
+
+ <p>Note the coordinates the box spans are relative to current translation of the matrices.</div>
 </section>
 </li>
 <li class="blockList">
@@ -822,6 +2073,13 @@ int&nbsp;flags)</span></div>
 </li>
 <li class="blockList">
 <section class="detail">
+<h3><a id="scheduleSectionRender(net.minecraft.util.math.BlockPos,boolean)">scheduleSectionRender</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">scheduleSectionRender</span>&#8203;(<span class="arguments"><a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+boolean&nbsp;important)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="scheduleBlockRenders(int,int,int,int,int,int)">scheduleBlockRenders</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">scheduleBlockRenders</span>&#8203;(<span class="arguments">int&nbsp;minX,
 int&nbsp;minY,
@@ -833,8 +2091,8 @@ int&nbsp;maxZ)</span></div>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="checkBlockRerender(net.minecraft.util.math.BlockPos,net.minecraft.block.BlockState,net.minecraft.block.BlockState)">checkBlockRerender</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">checkBlockRerender</span>&#8203;(<span class="arguments"><a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+<h3><a id="scheduleBlockRerenderIfNeeded(net.minecraft.util.math.BlockPos,net.minecraft.block.BlockState,net.minecraft.block.BlockState)">scheduleBlockRerenderIfNeeded</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">scheduleBlockRerenderIfNeeded</span>&#8203;(<span class="arguments"><a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
 <a href="../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;old,
 <a href="../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;updated)</span></div>
 </section>
@@ -857,10 +2115,27 @@ int&nbsp;z)</span></div>
 </li>
 <li class="blockList">
 <section class="detail">
+<h3><a id="scheduleChunkRender(int,int,int,boolean)">scheduleChunkRender</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">scheduleChunkRender</span>&#8203;(<span class="arguments">int&nbsp;x,
+int&nbsp;y,
+int&nbsp;z,
+boolean&nbsp;important)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="playSong(net.minecraft.sound.SoundEvent,net.minecraft.util.math.BlockPos)">playSong</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">playSong</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">playSong</span>&#8203;(<span class="arguments"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 <a href="../../sound/SoundEvent.html" title="class in net.minecraft.sound">SoundEvent</a>&nbsp;song,
 <a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;songPosition)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="updateEntitiesForSong(net.minecraft.world.World,net.minecraft.util.math.BlockPos,boolean)">updateEntitiesForSong</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">updateEntitiesForSong</span>&#8203;(<span class="arguments"><a href="../../world/World.html" title="class in net.minecraft.world">World</a>&nbsp;world,
+<a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
+boolean&nbsp;playing)</span></div>
 </section>
 </li>
 <li class="blockList">
@@ -887,7 +2162,56 @@ double&nbsp;y,
 double&nbsp;z,
 double&nbsp;velocityX,
 double&nbsp;velocityY,
-double&nbsp;double2)</span></div>
+double&nbsp;velocityZ)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="addParticle(net.minecraft.particle.ParticleEffect,double,double,double,double,double,double)">
+<!--   -->
+</a><a id="addParticle(T,double,double,double,double,double,double)">addParticle</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="typeParameters">&lt;T extends <a href="../../particle/ParticleEffect.html" title="interface in net.minecraft.particle">ParticleEffect</a>&gt;</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">addParticle</span>&#8203;(<span class="arguments">T&nbsp;parameters,
+double&nbsp;x,
+double&nbsp;y,
+double&nbsp;z,
+double&nbsp;velocityX,
+double&nbsp;velocityY,
+double&nbsp;velocityZ)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="spawnParticle(net.minecraft.particle.ParticleEffect,boolean,double,double,double,double,double,double)">spawnParticle</a></h3>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="../particle/Particle.html" title="class in net.minecraft.client.particle">Particle</a></span>&nbsp;<span class="memberName">spawnParticle</span>&#8203;(<span class="arguments"><a href="../../particle/ParticleEffect.html" title="interface in net.minecraft.particle">ParticleEffect</a>&nbsp;parameters,
+boolean&nbsp;alwaysSpawn,
+double&nbsp;x,
+double&nbsp;y,
+double&nbsp;z,
+double&nbsp;velocityX,
+double&nbsp;velocityY,
+double&nbsp;velocityZ)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="spawnParticle(net.minecraft.particle.ParticleEffect,boolean,boolean,double,double,double,double,double,double)">spawnParticle</a></h3>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="../particle/Particle.html" title="class in net.minecraft.client.particle">Particle</a></span>&nbsp;<span class="memberName">spawnParticle</span>&#8203;(<span class="arguments"><a href="../../particle/ParticleEffect.html" title="interface in net.minecraft.particle">ParticleEffect</a>&nbsp;parameters,
+boolean&nbsp;alwaysSpawn,
+boolean&nbsp;canSpawnOnMinimal,
+double&nbsp;x,
+double&nbsp;y,
+double&nbsp;z,
+double&nbsp;velocityX,
+double&nbsp;velocityY,
+double&nbsp;velocityZ)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="getRandomParticleSpawnChance(boolean)">getRandomParticleSpawnChance</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="../options/ParticlesOption.html" title="enum in net.minecraft.client.options">ParticlesOption</a></span>&nbsp;<span class="memberName">getRandomParticleSpawnChance</span>&#8203;(<span class="arguments">boolean&nbsp;canSpawnOnMinimal)</span></div>
 </section>
 </li>
 <li class="blockList">
@@ -898,17 +2222,17 @@ double&nbsp;double2)</span></div>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="playGlobalEvent(int,net.minecraft.util.math.BlockPos,int)">playGlobalEvent</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">playGlobalEvent</span>&#8203;(<span class="arguments">int&nbsp;eventId,
+<h3><a id="processGlobalEvent(int,net.minecraft.util.math.BlockPos,int)">processGlobalEvent</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">processGlobalEvent</span>&#8203;(<span class="arguments">int&nbsp;eventId,
 <a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
 int&nbsp;int2)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="playLevelEvent(net.minecraft.entity.player.PlayerEntity,int,net.minecraft.util.math.BlockPos,int)">playLevelEvent</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">playLevelEvent</span>&#8203;(<span class="arguments"><a href="../../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;source,
-int&nbsp;type,
+<h3><a id="processWorldEvent(net.minecraft.entity.player.PlayerEntity,int,net.minecraft.util.math.BlockPos,int)">processWorldEvent</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">processWorldEvent</span>&#8203;(<span class="arguments"><a href="../../entity/player/PlayerEntity.html" title="class in net.minecraft.entity.player">PlayerEntity</a>&nbsp;source,
+int&nbsp;eventId,
 <a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
 int&nbsp;data)</span></div>
 </section>
@@ -958,7 +2282,43 @@ int&nbsp;stage)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getEntityOutlinesFramebuffer()">getEntityOutlinesFramebuffer</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../gl/Framebuffer.html" title="class in net.minecraft.client.gl">Framebuffer</a></span>&nbsp;<span class="memberName">getEntityOutlinesFramebuffer</span>()</div>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../gl/Framebuffer.html" title="class in net.minecraft.client.gl">Framebuffer</a></span>&nbsp;<span class="memberName">getEntityOutlinesFramebuffer</span>()</div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="getTranslucentFramebuffer()">getTranslucentFramebuffer</a></h3>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../gl/Framebuffer.html" title="class in net.minecraft.client.gl">Framebuffer</a></span>&nbsp;<span class="memberName">getTranslucentFramebuffer</span>()</div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="getEntityFramebuffer()">getEntityFramebuffer</a></h3>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../gl/Framebuffer.html" title="class in net.minecraft.client.gl">Framebuffer</a></span>&nbsp;<span class="memberName">getEntityFramebuffer</span>()</div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="getParticlesFramebuffer()">getParticlesFramebuffer</a></h3>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../gl/Framebuffer.html" title="class in net.minecraft.client.gl">Framebuffer</a></span>&nbsp;<span class="memberName">getParticlesFramebuffer</span>()</div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="getWeatherFramebuffer()">getWeatherFramebuffer</a></h3>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../gl/Framebuffer.html" title="class in net.minecraft.client.gl">Framebuffer</a></span>&nbsp;<span class="memberName">getWeatherFramebuffer</span>()</div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="getCloudsFramebuffer()">getCloudsFramebuffer</a></h3>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../gl/Framebuffer.html" title="class in net.minecraft.client.gl">Framebuffer</a></span>&nbsp;<span class="memberName">getCloudsFramebuffer</span>()</div>
 </section>
 </li>
 </ul>

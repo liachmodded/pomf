@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10};
+<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -62,7 +62,7 @@ loadScripts(document, 'script');</script>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
@@ -123,6 +123,25 @@ extends <a href="../ai/goal/FleeEntityGoal.html" title="class in net.minecraft.e
 <!--   -->
 </a>
 <h2>Field Summary</h2>
+<div class="memberSummary">
+<table>
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<thead>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colSecond" scope="col">Field</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="WolfEntity.html" title="class in net.minecraft.entity.passive">WolfEntity</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#wolf">wolf</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
 <div class="inheritedList">
 <h3>Fields inherited from class&nbsp;net.minecraft.entity.ai.goal.<a href="../ai/goal/FleeEntityGoal.html" title="class in net.minecraft.entity.ai.goal">FleeEntityGoal</a></h3>
 <a id="fields.inherited.from.class.net.minecraft.entity.ai.goal.FleeEntityGoal">
@@ -147,11 +166,11 @@ extends <a href="../ai/goal/FleeEntityGoal.html" title="class in net.minecraft.e
 </thead>
 <tbody>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.entity.passive.WolfEntity,java.lang.Class,float,double,double)">AvoidLlamaGoal</a></span>&#8203;(<a href="WolfEntity.html" title="class in net.minecraft.entity.passive">WolfEntity</a>&nbsp;wolfEntity,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang" class="externalLink">Class</a>&lt;<a href="WolfEntity.AvoidLlamaGoal.html" title="type parameter in WolfEntity.AvoidLlamaGoal">T</a>&gt;&nbsp;wolf,
-float&nbsp;fleeFromType,
-double&nbsp;distance,
-double&nbsp;double2)</code></th>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.entity.passive.WolfEntity,java.lang.Class,float,double,double)">AvoidLlamaGoal</a></span>&#8203;(<a href="WolfEntity.html" title="class in net.minecraft.entity.passive">WolfEntity</a>&nbsp;wolf,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang" class="externalLink">Class</a>&lt;<a href="WolfEntity.AvoidLlamaGoal.html" title="type parameter in WolfEntity.AvoidLlamaGoal">T</a>&gt;&nbsp;fleeFromType,
+float&nbsp;distance,
+double&nbsp;slowSpeed,
+double&nbsp;fastSpeed)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -183,11 +202,16 @@ double&nbsp;double2)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isScaredOf(net.minecraft.entity.passive.LlamaEntity)">isScaredOf</a></span>&#8203;(<a href="LlamaEntity.html" title="class in net.minecraft.entity.passive">LlamaEntity</a>&nbsp;llama)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i2">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#start()">start</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i2">
+<tr class="rowColor" id="i3">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#tick()">tick</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
@@ -217,6 +241,22 @@ double&nbsp;double2)</code></th>
 </section>
 <section class="details">
 <ul class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<li class="blockList">
+<section class="fieldDetails"><a id="field.detail">
+<!--   -->
+</a>
+<h2>Field Details</h2>
+<ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="wolf">wolf</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="WolfEntity.html" title="class in net.minecraft.entity.passive">WolfEntity</a></span>&nbsp;<span class="memberName">wolf</span></div>
+</section>
+</li>
+</ul>
+</section>
+</li>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <li class="blockList">
 <section class="constructorDetails"><a id="constructor.detail">
@@ -227,11 +267,11 @@ double&nbsp;double2)</code></th>
 <li class="blockList">
 <section class="detail">
 <h3><a id="&lt;init&gt;(net.minecraft.entity.passive.WolfEntity,java.lang.Class,float,double,double)">AvoidLlamaGoal</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">AvoidLlamaGoal</span>&#8203;(<span class="arguments"><a href="WolfEntity.html" title="class in net.minecraft.entity.passive">WolfEntity</a>&nbsp;wolfEntity,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang" class="externalLink">Class</a>&lt;<a href="WolfEntity.AvoidLlamaGoal.html" title="type parameter in WolfEntity.AvoidLlamaGoal">T</a>&gt;&nbsp;wolf,
-float&nbsp;fleeFromType,
-double&nbsp;distance,
-double&nbsp;double2)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">AvoidLlamaGoal</span>&#8203;(<span class="arguments"><a href="WolfEntity.html" title="class in net.minecraft.entity.passive">WolfEntity</a>&nbsp;wolf,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang" class="externalLink">Class</a>&lt;<a href="WolfEntity.AvoidLlamaGoal.html" title="type parameter in WolfEntity.AvoidLlamaGoal">T</a>&gt;&nbsp;fleeFromType,
+float&nbsp;distance,
+double&nbsp;slowSpeed,
+double&nbsp;fastSpeed)</span></div>
 </section>
 </li>
 </ul>
@@ -252,6 +292,12 @@ double&nbsp;double2)</span></div>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../ai/goal/FleeEntityGoal.html#canStart()">canStart</a></code>&nbsp;in class&nbsp;<code><a href="../ai/goal/FleeEntityGoal.html" title="class in net.minecraft.entity.ai.goal">FleeEntityGoal</a>&lt;<a href="WolfEntity.AvoidLlamaGoal.html" title="type parameter in WolfEntity.AvoidLlamaGoal">T</a> extends <a href="../LivingEntity.html" title="class in net.minecraft.entity">LivingEntity</a>&gt;</code></dd>
 </dl>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="isScaredOf(net.minecraft.entity.passive.LlamaEntity)">isScaredOf</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isScaredOf</span>&#8203;(<span class="arguments"><a href="LlamaEntity.html" title="class in net.minecraft.entity.passive">LlamaEntity</a>&nbsp;llama)</span></div>
 </section>
 </li>
 <li class="blockList">
@@ -313,7 +359,7 @@ double&nbsp;double2)</span></div>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>

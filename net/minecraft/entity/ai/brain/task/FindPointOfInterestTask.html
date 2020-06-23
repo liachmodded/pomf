@@ -19,8 +19,8 @@
 <script type="text/javascript" src="../../../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":10,"i1":10};
-var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
+<script type="text/javascript">var data = {"i0":9,"i1":10,"i2":10};
+var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
@@ -62,7 +62,7 @@ loadScripts(document, 'script');</script>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
@@ -104,6 +104,25 @@ extends <a href="Task.html" title="class in net.minecraft.entity.ai.brain.task">
 <!--   -->
 </a>
 <h2>Nested Class Summary</h2>
+<div class="memberSummary">
+<table>
+<caption><span>Nested Classes</span><span class="tabEnd">&nbsp;</span></caption>
+<thead>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colSecond" scope="col">Class</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static class&nbsp;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="FindPointOfInterestTask.RetryMarker.html" title="class in net.minecraft.entity.ai.brain.task">FindPointOfInterestTask.RetryMarker</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
 <div class="inheritedList">
 <h2>Nested classes/interfaces inherited from class&nbsp;net.minecraft.entity.ai.brain.task.<a href="Task.html" title="class in net.minecraft.entity.ai.brain.task">Task</a></h2>
 <a id="nested.classes.inherited.from.class.net.minecraft.entity.ai.brain.task.Task">
@@ -117,6 +136,45 @@ extends <a href="Task.html" title="class in net.minecraft.entity.ai.brain.task">
 <!--   -->
 </a>
 <h2>Field Summary</h2>
+<div class="memberSummary">
+<table>
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<thead>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colSecond" scope="col">Field</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://fastutil.di.unimi.it/docs/it/unimi/dsi/fastutil/longs/Long2ObjectMap.html?is-external=true" title="class or interface in it.unimi.dsi.fastutil.longs" class="externalLink">Long2ObjectMap</a>&lt;<a href="FindPointOfInterestTask.RetryMarker.html" title="class in net.minecraft.entity.ai.brain.task">FindPointOfInterestTask.RetryMarker</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#foundPositionsToExpiry">foundPositionsToExpiry</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#onlyRunIfChild">onlyRunIfChild</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../world/poi/PointOfInterestType.html" title="class in net.minecraft.world.poi">PointOfInterestType</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#poiType">poiType</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private long</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#positionExpireTimeLimit">positionExpireTimeLimit</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../MemoryModuleType.html" title="class in net.minecraft.entity.ai.brain">MemoryModuleType</a>&lt;<a href="../../../../util/dynamic/GlobalPos.html" title="class in net.minecraft.util.dynamic">GlobalPos</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#targetMemoryModuleType">targetMemoryModuleType</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
 <div class="inheritedList">
 <h3>Fields inherited from class&nbsp;net.minecraft.entity.ai.brain.task.<a href="Task.html" title="class in net.minecraft.entity.ai.brain.task">Task</a></h3>
 <a id="fields.inherited.from.class.net.minecraft.entity.ai.brain.task.Task">
@@ -141,9 +199,16 @@ extends <a href="Task.html" title="class in net.minecraft.entity.ai.brain.task">
 </thead>
 <tbody>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.world.poi.PointOfInterestType,net.minecraft.entity.ai.brain.MemoryModuleType,boolean)">FindPointOfInterestTask</a></span>&#8203;(<a href="../../../../world/poi/PointOfInterestType.html" title="class in net.minecraft.world.poi">PointOfInterestType</a>&nbsp;poiType,
-<a href="../MemoryModuleType.html" title="class in net.minecraft.entity.ai.brain">MemoryModuleType</a>&lt;<a href="../../../../util/dynamic/GlobalPos.html" title="class in net.minecraft.util.dynamic">GlobalPos</a>&gt;&nbsp;targetMemoryModule,
-boolean&nbsp;onlyRunIfChild)</code></th>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.world.poi.PointOfInterestType,net.minecraft.entity.ai.brain.MemoryModuleType,boolean)">FindPointOfInterestTask</a></span>&#8203;(<a href="../../../../world/poi/PointOfInterestType.html" title="class in net.minecraft.world.poi">PointOfInterestType</a>&nbsp;pointOfInterestType,
+<a href="../MemoryModuleType.html" title="class in net.minecraft.entity.ai.brain">MemoryModuleType</a>&lt;<a href="../../../../util/dynamic/GlobalPos.html" title="class in net.minecraft.util.dynamic">GlobalPos</a>&gt;&nbsp;memoryModuleType,
+boolean&nbsp;bool)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.world.poi.PointOfInterestType,net.minecraft.entity.ai.brain.MemoryModuleType,net.minecraft.entity.ai.brain.MemoryModuleType,boolean)">FindPointOfInterestTask</a></span>&#8203;(<a href="../../../../world/poi/PointOfInterestType.html" title="class in net.minecraft.world.poi">PointOfInterestType</a>&nbsp;poiType,
+<a href="../MemoryModuleType.html" title="class in net.minecraft.entity.ai.brain">MemoryModuleType</a>&lt;<a href="../../../../util/dynamic/GlobalPos.html" title="class in net.minecraft.util.dynamic">GlobalPos</a>&gt;&nbsp;memoryModuleType,
+<a href="../MemoryModuleType.html" title="class in net.minecraft.entity.ai.brain">MemoryModuleType</a>&lt;<a href="../../../../util/dynamic/GlobalPos.html" title="class in net.minecraft.util.dynamic">GlobalPos</a>&gt;&nbsp;memoryModuleType2,
+boolean&nbsp;bool)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -158,7 +223,7 @@ boolean&nbsp;onlyRunIfChild)</code></th>
 </a>
 <h2>Method Summary</h2>
 <div class="memberSummary">
-<div role="tablist" aria-orientation="horizontal"><button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t2" class="tableTab" onclick="show(2);">Instance Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t4" class="tableTab" onclick="show(8);">Concrete Methods</button></div>
+<div role="tablist" aria-orientation="horizontal"><button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t1" class="tableTab" onclick="show(1);">Static Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t2" class="tableTab" onclick="show(2);">Instance Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t4" class="tableTab" onclick="show(8);">Concrete Methods</button></div>
 <div id="memberSummary_tabpanel" role="tabpanel">
 <table aria-labelledby="t0">
 <thead>
@@ -170,13 +235,19 @@ boolean&nbsp;onlyRunIfChild)</code></th>
 </thead>
 <tbody>
 <tr class="altColor" id="i0">
+<td class="colFirst"><code>private static <a href="https://guava.dev/releases/21.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect" class="externalLink">ImmutableMap</a>&lt;<a href="../MemoryModuleType.html" title="class in net.minecraft.entity.ai.brain">MemoryModuleType</a>&lt;?&gt;,&#8203;<a href="../MemoryModuleState.html" title="enum in net.minecraft.entity.ai.brain">MemoryModuleState</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_29245(net.minecraft.entity.ai.brain.MemoryModuleType,net.minecraft.entity.ai.brain.MemoryModuleType)">method_29245</a></span>&#8203;(<a href="../MemoryModuleType.html" title="class in net.minecraft.entity.ai.brain">MemoryModuleType</a>&lt;<a href="../../../../util/dynamic/GlobalPos.html" title="class in net.minecraft.util.dynamic">GlobalPos</a>&gt;&nbsp;memoryModuleType,
+<a href="../MemoryModuleType.html" title="class in net.minecraft.entity.ai.brain">MemoryModuleType</a>&lt;<a href="../../../../util/dynamic/GlobalPos.html" title="class in net.minecraft.util.dynamic">GlobalPos</a>&gt;&nbsp;memoryModuleType2)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i1">
 <td class="colFirst"><code>protected void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#run(net.minecraft.server.world.ServerWorld,net.minecraft.entity.mob.MobEntityWithAi,long)">run</a></span>&#8203;(<a href="../../../../server/world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a>&nbsp;serverWorld,
 <a href="../../../mob/MobEntityWithAi.html" title="class in net.minecraft.entity.mob">MobEntityWithAi</a>&nbsp;mobEntityWithAi,
 long&nbsp;long2)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i1">
+<tr class="altColor" id="i2">
 <td class="colFirst"><code>protected boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#shouldRun(net.minecraft.server.world.ServerWorld,net.minecraft.entity.mob.MobEntityWithAi)">shouldRun</a></span>&#8203;(<a href="../../../../server/world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a>&nbsp;serverWorld,
 <a href="../../../mob/MobEntityWithAi.html" title="class in net.minecraft.entity.mob">MobEntityWithAi</a>&nbsp;mobEntityWithAi)</code></th>
@@ -202,6 +273,46 @@ long&nbsp;long2)</code></th>
 </section>
 <section class="details">
 <ul class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<li class="blockList">
+<section class="fieldDetails"><a id="field.detail">
+<!--   -->
+</a>
+<h2>Field Details</h2>
+<ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="poiType">poiType</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../../../../world/poi/PointOfInterestType.html" title="class in net.minecraft.world.poi">PointOfInterestType</a></span>&nbsp;<span class="memberName">poiType</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="targetMemoryModuleType">targetMemoryModuleType</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../MemoryModuleType.html" title="class in net.minecraft.entity.ai.brain">MemoryModuleType</a>&lt;<a href="../../../../util/dynamic/GlobalPos.html" title="class in net.minecraft.util.dynamic">GlobalPos</a>&gt;</span>&nbsp;<span class="memberName">targetMemoryModuleType</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="onlyRunIfChild">onlyRunIfChild</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">onlyRunIfChild</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="positionExpireTimeLimit">positionExpireTimeLimit</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">long</span>&nbsp;<span class="memberName">positionExpireTimeLimit</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="foundPositionsToExpiry">foundPositionsToExpiry</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="http://fastutil.di.unimi.it/docs/it/unimi/dsi/fastutil/longs/Long2ObjectMap.html?is-external=true" title="class or interface in it.unimi.dsi.fastutil.longs" class="externalLink">Long2ObjectMap</a>&lt;<a href="FindPointOfInterestTask.RetryMarker.html" title="class in net.minecraft.entity.ai.brain.task">FindPointOfInterestTask.RetryMarker</a>&gt;</span>&nbsp;<span class="memberName">foundPositionsToExpiry</span></div>
+</section>
+</li>
+</ul>
+</section>
+</li>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <li class="blockList">
 <section class="constructorDetails"><a id="constructor.detail">
@@ -211,10 +322,19 @@ long&nbsp;long2)</code></th>
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="&lt;init&gt;(net.minecraft.world.poi.PointOfInterestType,net.minecraft.entity.ai.brain.MemoryModuleType,boolean)">FindPointOfInterestTask</a></h3>
+<h3><a id="&lt;init&gt;(net.minecraft.world.poi.PointOfInterestType,net.minecraft.entity.ai.brain.MemoryModuleType,net.minecraft.entity.ai.brain.MemoryModuleType,boolean)">FindPointOfInterestTask</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">FindPointOfInterestTask</span>&#8203;(<span class="arguments"><a href="../../../../world/poi/PointOfInterestType.html" title="class in net.minecraft.world.poi">PointOfInterestType</a>&nbsp;poiType,
-<a href="../MemoryModuleType.html" title="class in net.minecraft.entity.ai.brain">MemoryModuleType</a>&lt;<a href="../../../../util/dynamic/GlobalPos.html" title="class in net.minecraft.util.dynamic">GlobalPos</a>&gt;&nbsp;targetMemoryModule,
-boolean&nbsp;onlyRunIfChild)</span></div>
+<a href="../MemoryModuleType.html" title="class in net.minecraft.entity.ai.brain">MemoryModuleType</a>&lt;<a href="../../../../util/dynamic/GlobalPos.html" title="class in net.minecraft.util.dynamic">GlobalPos</a>&gt;&nbsp;memoryModuleType,
+<a href="../MemoryModuleType.html" title="class in net.minecraft.entity.ai.brain">MemoryModuleType</a>&lt;<a href="../../../../util/dynamic/GlobalPos.html" title="class in net.minecraft.util.dynamic">GlobalPos</a>&gt;&nbsp;memoryModuleType2,
+boolean&nbsp;bool)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="&lt;init&gt;(net.minecraft.world.poi.PointOfInterestType,net.minecraft.entity.ai.brain.MemoryModuleType,boolean)">FindPointOfInterestTask</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">FindPointOfInterestTask</span>&#8203;(<span class="arguments"><a href="../../../../world/poi/PointOfInterestType.html" title="class in net.minecraft.world.poi">PointOfInterestType</a>&nbsp;pointOfInterestType,
+<a href="../MemoryModuleType.html" title="class in net.minecraft.entity.ai.brain">MemoryModuleType</a>&lt;<a href="../../../../util/dynamic/GlobalPos.html" title="class in net.minecraft.util.dynamic">GlobalPos</a>&gt;&nbsp;memoryModuleType,
+boolean&nbsp;bool)</span></div>
 </section>
 </li>
 </ul>
@@ -227,6 +347,13 @@ boolean&nbsp;onlyRunIfChild)</span></div>
 </a>
 <h2>Method Details</h2>
 <ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="method_29245(net.minecraft.entity.ai.brain.MemoryModuleType,net.minecraft.entity.ai.brain.MemoryModuleType)">method_29245</a></h3>
+<div class="memberSignature"><span class="modifiers">private static</span>&nbsp;<span class="returnType"><a href="https://guava.dev/releases/21.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect" class="externalLink">ImmutableMap</a>&lt;<a href="../MemoryModuleType.html" title="class in net.minecraft.entity.ai.brain">MemoryModuleType</a>&lt;?&gt;,&#8203;<a href="../MemoryModuleState.html" title="enum in net.minecraft.entity.ai.brain">MemoryModuleState</a>&gt;</span>&nbsp;<span class="memberName">method_29245</span>&#8203;(<span class="arguments"><a href="../MemoryModuleType.html" title="class in net.minecraft.entity.ai.brain">MemoryModuleType</a>&lt;<a href="../../../../util/dynamic/GlobalPos.html" title="class in net.minecraft.util.dynamic">GlobalPos</a>&gt;&nbsp;memoryModuleType,
+<a href="../MemoryModuleType.html" title="class in net.minecraft.entity.ai.brain">MemoryModuleType</a>&lt;<a href="../../../../util/dynamic/GlobalPos.html" title="class in net.minecraft.util.dynamic">GlobalPos</a>&gt;&nbsp;memoryModuleType2)</span></div>
+</section>
+</li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="shouldRun(net.minecraft.server.world.ServerWorld,net.minecraft.entity.mob.MobEntityWithAi)">shouldRun</a></h3>
@@ -289,7 +416,7 @@ long&nbsp;long2)</span></div>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>

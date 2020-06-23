@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":9,"i1":10,"i2":10,"i3":10};
+<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":9,"i3":9,"i4":10,"i5":10,"i6":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -62,7 +62,7 @@ loadScripts(document, 'script');</script>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
@@ -105,6 +105,40 @@ extends <a href="../../recipe/book/RecipeBook.html" title="class in net.minecraf
 <!--   -->
 </a>
 <h2>Field Summary</h2>
+<div class="memberSummary">
+<table>
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<thead>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colSecond" scope="col">Field</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="https://logging.apache.org/log4j/2.x/log4j-api/apidocs/org/apache/logging/log4j/Logger.html?is-external=true" title="class or interface in org.apache.logging.log4j" class="externalLink">Logger</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#field_25622">field_25622</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../recipe/RecipeManager.html" title="class in net.minecraft.recipe">RecipeManager</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#manager">manager</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../gui/screen/recipebook/RecipeResultCollection.html" title="class in net.minecraft.client.gui.screen.recipebook">RecipeResultCollection</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#orderedResults">orderedResults</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util" class="externalLink">Map</a>&lt;<a href="RecipeBookGroup.html" title="enum in net.minecraft.client.recipebook">RecipeBookGroup</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../gui/screen/recipebook/RecipeResultCollection.html" title="class in net.minecraft.client.gui.screen.recipebook">RecipeResultCollection</a>&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#resultsByGroup">resultsByGroup</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
 <div class="inheritedList">
 <h3>Fields inherited from class&nbsp;net.minecraft.recipe.book.<a href="../../recipe/book/RecipeBook.html" title="class in net.minecraft.recipe.book">RecipeBook</a></h3>
 <a id="fields.inherited.from.class.net.minecraft.recipe.book.RecipeBook">
@@ -156,21 +190,37 @@ extends <a href="../../recipe/book/RecipeBook.html" title="class in net.minecraf
 </thead>
 <tbody>
 <tr class="altColor" id="i0">
+<td class="colFirst"><code>private <a href="../gui/screen/recipebook/RecipeResultCollection.html" title="class in net.minecraft.client.gui.screen.recipebook">RecipeResultCollection</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addGroup(net.minecraft.client.recipebook.RecipeBookGroup)">addGroup</a></span>&#8203;(<a href="RecipeBookGroup.html" title="enum in net.minecraft.client.recipebook">RecipeBookGroup</a>&nbsp;group)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i1">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addGroupResults(net.minecraft.client.recipebook.RecipeBookGroup,net.minecraft.client.gui.screen.recipebook.RecipeResultCollection)">addGroupResults</a></span>&#8203;(<a href="RecipeBookGroup.html" title="enum in net.minecraft.client.recipebook">RecipeBookGroup</a>&nbsp;group,
+<a href="../gui/screen/recipebook/RecipeResultCollection.html" title="class in net.minecraft.client.gui.screen.recipebook">RecipeResultCollection</a>&nbsp;results)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i2">
+<td class="colFirst"><code>private static <a href="RecipeBookGroup.html" title="enum in net.minecraft.client.recipebook">RecipeBookGroup</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getGroupForRecipe(net.minecraft.recipe.Recipe)">getGroupForRecipe</a></span>&#8203;(<a href="../../recipe/Recipe.html" title="interface in net.minecraft.recipe">Recipe</a>&lt;?&gt;&nbsp;recipe)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i3">
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="RecipeBookGroup.html" title="enum in net.minecraft.client.recipebook">RecipeBookGroup</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getGroups(net.minecraft.screen.AbstractRecipeScreenHandler)">getGroups</a></span>&#8203;(<a href="../../screen/AbstractRecipeScreenHandler.html" title="class in net.minecraft.screen">AbstractRecipeScreenHandler</a>&lt;?&gt;&nbsp;handler)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i1">
+<tr class="altColor" id="i4">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../gui/screen/recipebook/RecipeResultCollection.html" title="class in net.minecraft.client.gui.screen.recipebook">RecipeResultCollection</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getOrderedResults()">getOrderedResults</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i2">
+<tr class="rowColor" id="i5">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../gui/screen/recipebook/RecipeResultCollection.html" title="class in net.minecraft.client.gui.screen.recipebook">RecipeResultCollection</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getResultsForGroup(net.minecraft.client.recipebook.RecipeBookGroup)">getResultsForGroup</a></span>&#8203;(<a href="RecipeBookGroup.html" title="enum in net.minecraft.client.recipebook">RecipeBookGroup</a>&nbsp;category)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i3">
+<tr class="altColor" id="i6">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#reload()">reload</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
@@ -195,6 +245,40 @@ extends <a href="../../recipe/book/RecipeBook.html" title="class in net.minecraf
 </section>
 <section class="details">
 <ul class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<li class="blockList">
+<section class="fieldDetails"><a id="field.detail">
+<!--   -->
+</a>
+<h2>Field Details</h2>
+<ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="field_25622">field_25622</a></h3>
+<div class="memberSignature"><span class="modifiers">private static final</span>&nbsp;<span class="returnType"><a href="https://logging.apache.org/log4j/2.x/log4j-api/apidocs/org/apache/logging/log4j/Logger.html?is-external=true" title="class or interface in org.apache.logging.log4j" class="externalLink">Logger</a></span>&nbsp;<span class="memberName">field_25622</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="manager">manager</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../../recipe/RecipeManager.html" title="class in net.minecraft.recipe">RecipeManager</a></span>&nbsp;<span class="memberName">manager</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="resultsByGroup">resultsByGroup</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util" class="externalLink">Map</a>&lt;<a href="RecipeBookGroup.html" title="enum in net.minecraft.client.recipebook">RecipeBookGroup</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../gui/screen/recipebook/RecipeResultCollection.html" title="class in net.minecraft.client.gui.screen.recipebook">RecipeResultCollection</a>&gt;&gt;</span>&nbsp;<span class="memberName">resultsByGroup</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="orderedResults">orderedResults</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../gui/screen/recipebook/RecipeResultCollection.html" title="class in net.minecraft.client.gui.screen.recipebook">RecipeResultCollection</a>&gt;</span>&nbsp;<span class="memberName">orderedResults</span></div>
+</section>
+</li>
+</ul>
+</section>
+</li>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <li class="blockList">
 <section class="constructorDetails"><a id="constructor.detail">
@@ -222,6 +306,25 @@ extends <a href="../../recipe/book/RecipeBook.html" title="class in net.minecraf
 <section class="detail">
 <h3><a id="reload()">reload</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">reload</span>()</div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="addGroup(net.minecraft.client.recipebook.RecipeBookGroup)">addGroup</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="../gui/screen/recipebook/RecipeResultCollection.html" title="class in net.minecraft.client.gui.screen.recipebook">RecipeResultCollection</a></span>&nbsp;<span class="memberName">addGroup</span>&#8203;(<span class="arguments"><a href="RecipeBookGroup.html" title="enum in net.minecraft.client.recipebook">RecipeBookGroup</a>&nbsp;group)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="addGroupResults(net.minecraft.client.recipebook.RecipeBookGroup,net.minecraft.client.gui.screen.recipebook.RecipeResultCollection)">addGroupResults</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">addGroupResults</span>&#8203;(<span class="arguments"><a href="RecipeBookGroup.html" title="enum in net.minecraft.client.recipebook">RecipeBookGroup</a>&nbsp;group,
+<a href="../gui/screen/recipebook/RecipeResultCollection.html" title="class in net.minecraft.client.gui.screen.recipebook">RecipeResultCollection</a>&nbsp;results)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="getGroupForRecipe(net.minecraft.recipe.Recipe)">getGroupForRecipe</a></h3>
+<div class="memberSignature"><span class="modifiers">private static</span>&nbsp;<span class="returnType"><a href="RecipeBookGroup.html" title="enum in net.minecraft.client.recipebook">RecipeBookGroup</a></span>&nbsp;<span class="memberName">getGroupForRecipe</span>&#8203;(<span class="arguments"><a href="../../recipe/Recipe.html" title="interface in net.minecraft.recipe">Recipe</a>&lt;?&gt;&nbsp;recipe)</span></div>
 </section>
 </li>
 <li class="blockList">
@@ -281,7 +384,7 @@ extends <a href="../../recipe/book/RecipeBook.html" title="class in net.minecraf
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>

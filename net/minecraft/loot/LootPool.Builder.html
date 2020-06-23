@@ -56,13 +56,13 @@ loadScripts(document, 'script');</script>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
@@ -105,6 +105,53 @@ implements <a href="function/LootFunctionConsumingBuilder.html" title="interface
 </section>
 <section class="summary">
 <ul class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<li class="blockList">
+<section class="fieldSummary"><a id="field.summary">
+<!--   -->
+</a>
+<h2>Field Summary</h2>
+<div class="memberSummary">
+<table>
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<thead>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colSecond" scope="col">Field</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="UniformLootTableRange.html" title="class in net.minecraft.loot">UniformLootTableRange</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#bonusRollsRange">bonusRollsRange</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="condition/LootCondition.html" title="interface in net.minecraft.loot.condition">LootCondition</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#conditions">conditions</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="entry/LootPoolEntry.html" title="class in net.minecraft.loot.entry">LootPoolEntry</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#entries">entries</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="function/LootFunction.html" title="interface in net.minecraft.loot.function">LootFunction</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#functions">functions</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="LootTableRange.html" title="interface in net.minecraft.loot">LootTableRange</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#rolls">rolls</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</li>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <li class="blockList">
 <section class="constructorSummary"><a id="constructor.summary">
@@ -149,33 +196,33 @@ implements <a href="function/LootFunctionConsumingBuilder.html" title="interface
 </thead>
 <tbody>
 <tr class="altColor" id="i0">
+<td class="colFirst"><code><a href="LootPool.Builder.html" title="class in net.minecraft.loot">LootPool.Builder</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#apply(net.minecraft.loot.function.LootFunction.Builder)">apply</a></span>&#8203;(<a href="function/LootFunction.Builder.html" title="interface in net.minecraft.loot.function">LootFunction.Builder</a>&nbsp;builder)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i1">
 <td class="colFirst"><code><a href="LootPool.html" title="class in net.minecraft.loot">LootPool</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#build()">build</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i1">
-<td class="colFirst"><code><a href="LootPool.Builder.html" title="class in net.minecraft.loot">LootPool.Builder</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getThis()">getThis</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
 <tr class="altColor" id="i2">
 <td class="colFirst"><code><a href="LootPool.Builder.html" title="class in net.minecraft.loot">LootPool.Builder</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#withCondition(net.minecraft.loot.condition.LootCondition.Builder)">withCondition</a></span>&#8203;(<a href="condition/LootCondition.Builder.html" title="interface in net.minecraft.loot.condition">LootCondition.Builder</a>&nbsp;builder)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#conditionally(net.minecraft.loot.condition.LootCondition.Builder)">conditionally</a></span>&#8203;(<a href="condition/LootCondition.Builder.html" title="interface in net.minecraft.loot.condition">LootCondition.Builder</a>&nbsp;builder)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i3">
 <td class="colFirst"><code><a href="LootPool.Builder.html" title="class in net.minecraft.loot">LootPool.Builder</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#withEntry(net.minecraft.loot.entry.LootEntry.Builder)">withEntry</a></span>&#8203;(<a href="entry/LootEntry.Builder.html" title="class in net.minecraft.loot.entry">LootEntry.Builder</a>&lt;?&gt;&nbsp;entryBuilder)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getThis()">getThis</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i4">
 <td class="colFirst"><code><a href="LootPool.Builder.html" title="class in net.minecraft.loot">LootPool.Builder</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#withFunction(net.minecraft.loot.function.LootFunction.Builder)">withFunction</a></span>&#8203;(<a href="function/LootFunction.Builder.html" title="interface in net.minecraft.loot.function">LootFunction.Builder</a>&nbsp;builder)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#rolls(net.minecraft.loot.LootTableRange)">rolls</a></span>&#8203;(<a href="LootTableRange.html" title="interface in net.minecraft.loot">LootTableRange</a>&nbsp;rolls)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i5">
 <td class="colFirst"><code><a href="LootPool.Builder.html" title="class in net.minecraft.loot">LootPool.Builder</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#withRolls(net.minecraft.loot.LootTableRange)">withRolls</a></span>&#8203;(<a href="LootTableRange.html" title="interface in net.minecraft.loot">LootTableRange</a>&nbsp;rollsRange)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#with(net.minecraft.loot.entry.LootPoolEntry.Builder)">with</a></span>&#8203;(<a href="entry/LootPoolEntry.Builder.html" title="class in net.minecraft.loot.entry">LootPoolEntry.Builder</a>&lt;?&gt;&nbsp;entry)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -193,6 +240,46 @@ implements <a href="function/LootFunctionConsumingBuilder.html" title="interface
 </section>
 <section class="details">
 <ul class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<li class="blockList">
+<section class="fieldDetails"><a id="field.detail">
+<!--   -->
+</a>
+<h2>Field Details</h2>
+<ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="entries">entries</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="entry/LootPoolEntry.html" title="class in net.minecraft.loot.entry">LootPoolEntry</a>&gt;</span>&nbsp;<span class="memberName">entries</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="conditions">conditions</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="condition/LootCondition.html" title="interface in net.minecraft.loot.condition">LootCondition</a>&gt;</span>&nbsp;<span class="memberName">conditions</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="functions">functions</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="function/LootFunction.html" title="interface in net.minecraft.loot.function">LootFunction</a>&gt;</span>&nbsp;<span class="memberName">functions</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="rolls">rolls</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="LootTableRange.html" title="interface in net.minecraft.loot">LootTableRange</a></span>&nbsp;<span class="memberName">rolls</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="bonusRollsRange">bonusRollsRange</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="UniformLootTableRange.html" title="class in net.minecraft.loot">UniformLootTableRange</a></span>&nbsp;<span class="memberName">bonusRollsRange</span></div>
+</section>
+</li>
+</ul>
+</section>
+</li>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <li class="blockList">
 <section class="constructorDetails"><a id="constructor.detail">
@@ -218,8 +305,8 @@ implements <a href="function/LootFunctionConsumingBuilder.html" title="interface
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="withRolls(net.minecraft.loot.LootTableRange)">withRolls</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="LootPool.Builder.html" title="class in net.minecraft.loot">LootPool.Builder</a></span>&nbsp;<span class="memberName">withRolls</span>&#8203;(<span class="arguments"><a href="LootTableRange.html" title="interface in net.minecraft.loot">LootTableRange</a>&nbsp;rollsRange)</span></div>
+<h3><a id="rolls(net.minecraft.loot.LootTableRange)">rolls</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="LootPool.Builder.html" title="class in net.minecraft.loot">LootPool.Builder</a></span>&nbsp;<span class="memberName">rolls</span>&#8203;(<span class="arguments"><a href="LootTableRange.html" title="interface in net.minecraft.loot">LootTableRange</a>&nbsp;rolls)</span></div>
 </section>
 </li>
 <li class="blockList">
@@ -236,27 +323,27 @@ implements <a href="function/LootFunctionConsumingBuilder.html" title="interface
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="withEntry(net.minecraft.loot.entry.LootEntry.Builder)">withEntry</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="LootPool.Builder.html" title="class in net.minecraft.loot">LootPool.Builder</a></span>&nbsp;<span class="memberName">withEntry</span>&#8203;(<span class="arguments"><a href="entry/LootEntry.Builder.html" title="class in net.minecraft.loot.entry">LootEntry.Builder</a>&lt;?&gt;&nbsp;entryBuilder)</span></div>
+<h3><a id="with(net.minecraft.loot.entry.LootPoolEntry.Builder)">with</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="LootPool.Builder.html" title="class in net.minecraft.loot">LootPool.Builder</a></span>&nbsp;<span class="memberName">with</span>&#8203;(<span class="arguments"><a href="entry/LootPoolEntry.Builder.html" title="class in net.minecraft.loot.entry">LootPoolEntry.Builder</a>&lt;?&gt;&nbsp;entry)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="withCondition(net.minecraft.loot.condition.LootCondition.Builder)">withCondition</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="LootPool.Builder.html" title="class in net.minecraft.loot">LootPool.Builder</a></span>&nbsp;<span class="memberName">withCondition</span>&#8203;(<span class="arguments"><a href="condition/LootCondition.Builder.html" title="interface in net.minecraft.loot.condition">LootCondition.Builder</a>&nbsp;builder)</span></div>
+<h3><a id="conditionally(net.minecraft.loot.condition.LootCondition.Builder)">conditionally</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="LootPool.Builder.html" title="class in net.minecraft.loot">LootPool.Builder</a></span>&nbsp;<span class="memberName">conditionally</span>&#8203;(<span class="arguments"><a href="condition/LootCondition.Builder.html" title="interface in net.minecraft.loot.condition">LootCondition.Builder</a>&nbsp;builder)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="condition/LootConditionConsumingBuilder.html#withCondition(net.minecraft.loot.condition.LootCondition.Builder)">withCondition</a></code>&nbsp;in interface&nbsp;<code><a href="condition/LootConditionConsumingBuilder.html" title="interface in net.minecraft.loot.condition">LootConditionConsumingBuilder</a>&lt;<a href="LootPool.Builder.html" title="class in net.minecraft.loot">LootPool.Builder</a>&gt;</code></dd>
+<dd><code><a href="condition/LootConditionConsumingBuilder.html#conditionally(net.minecraft.loot.condition.LootCondition.Builder)">conditionally</a></code>&nbsp;in interface&nbsp;<code><a href="condition/LootConditionConsumingBuilder.html" title="interface in net.minecraft.loot.condition">LootConditionConsumingBuilder</a>&lt;<a href="LootPool.Builder.html" title="class in net.minecraft.loot">LootPool.Builder</a>&gt;</code></dd>
 </dl>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="withFunction(net.minecraft.loot.function.LootFunction.Builder)">withFunction</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="LootPool.Builder.html" title="class in net.minecraft.loot">LootPool.Builder</a></span>&nbsp;<span class="memberName">withFunction</span>&#8203;(<span class="arguments"><a href="function/LootFunction.Builder.html" title="interface in net.minecraft.loot.function">LootFunction.Builder</a>&nbsp;builder)</span></div>
+<h3><a id="apply(net.minecraft.loot.function.LootFunction.Builder)">apply</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="LootPool.Builder.html" title="class in net.minecraft.loot">LootPool.Builder</a></span>&nbsp;<span class="memberName">apply</span>&#8203;(<span class="arguments"><a href="function/LootFunction.Builder.html" title="interface in net.minecraft.loot.function">LootFunction.Builder</a>&nbsp;builder)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="function/LootFunctionConsumingBuilder.html#withFunction(net.minecraft.loot.function.LootFunction.Builder)">withFunction</a></code>&nbsp;in interface&nbsp;<code><a href="function/LootFunctionConsumingBuilder.html" title="interface in net.minecraft.loot.function">LootFunctionConsumingBuilder</a>&lt;<a href="LootPool.Builder.html" title="class in net.minecraft.loot">LootPool.Builder</a>&gt;</code></dd>
+<dd><code><a href="function/LootFunctionConsumingBuilder.html#apply(net.minecraft.loot.function.LootFunction.Builder)">apply</a></code>&nbsp;in interface&nbsp;<code><a href="function/LootFunctionConsumingBuilder.html" title="interface in net.minecraft.loot.function">LootFunctionConsumingBuilder</a>&lt;<a href="LootPool.Builder.html" title="class in net.minecraft.loot">LootPool.Builder</a>&gt;</code></dd>
 </dl>
 </section>
 </li>
@@ -299,13 +386,13 @@ implements <a href="function/LootFunctionConsumingBuilder.html" title="interface
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>

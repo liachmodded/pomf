@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10};
+<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -147,6 +147,21 @@ extends <a href="Goal.html" title="class in net.minecraft.entity.ai.goal">Goal</
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#mob">mob</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#shouldStop">shouldStop</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private float</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#xOffset">xOffset</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private float</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#zOffset">zOffset</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -169,7 +184,7 @@ extends <a href="Goal.html" title="class in net.minecraft.entity.ai.goal">Goal</
 </thead>
 <tbody>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.entity.mob.MobEntity)">DoorInteractGoal</a></span>&#8203;(<a href="../../mob/MobEntity.html" title="class in net.minecraft.entity.mob">MobEntity</a>&nbsp;mob)</code></th>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.entity.mob.MobEntity)">DoorInteractGoal</a></span>&#8203;(<a href="../../mob/MobEntity.html" title="class in net.minecraft.entity.mob">MobEntity</a>&nbsp;mobEntity)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -206,21 +221,26 @@ extends <a href="Goal.html" title="class in net.minecraft.entity.ai.goal">Goal</
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i2">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_30146()">method_30146</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i3">
 <td class="colFirst"><code>protected void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setDoorOpen(boolean)">setDoorOpen</a></span>&#8203;(boolean&nbsp;open)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i3">
+<tr class="altColor" id="i4">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#shouldContinue()">shouldContinue</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i4">
+<tr class="rowColor" id="i5">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#start()">start</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i5">
+<tr class="altColor" id="i6">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#tick()">tick</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
@@ -270,6 +290,24 @@ extends <a href="Goal.html" title="class in net.minecraft.entity.ai.goal">Goal</
 <div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">doorValid</span></div>
 </section>
 </li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="shouldStop">shouldStop</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">shouldStop</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="xOffset">xOffset</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">float</span>&nbsp;<span class="memberName">xOffset</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="zOffset">zOffset</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">float</span>&nbsp;<span class="memberName">zOffset</span></div>
+</section>
+</li>
 </ul>
 </section>
 </li>
@@ -283,7 +321,7 @@ extends <a href="Goal.html" title="class in net.minecraft.entity.ai.goal">Goal</
 <li class="blockList">
 <section class="detail">
 <h3><a id="&lt;init&gt;(net.minecraft.entity.mob.MobEntity)">DoorInteractGoal</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">DoorInteractGoal</span>&#8203;(<span class="arguments"><a href="../../mob/MobEntity.html" title="class in net.minecraft.entity.mob">MobEntity</a>&nbsp;mob)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">DoorInteractGoal</span>&#8203;(<span class="arguments"><a href="../../mob/MobEntity.html" title="class in net.minecraft.entity.mob">MobEntity</a>&nbsp;mobEntity)</span></div>
 </section>
 </li>
 </ul>
@@ -346,6 +384,12 @@ extends <a href="Goal.html" title="class in net.minecraft.entity.ai.goal">Goal</
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="Goal.html#tick()">tick</a></code>&nbsp;in class&nbsp;<code><a href="Goal.html" title="class in net.minecraft.entity.ai.goal">Goal</a></code></dd>
 </dl>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="method_30146()">method_30146</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">method_30146</span>()</div>
 </section>
 </li>
 </ul>

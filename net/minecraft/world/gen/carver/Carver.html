@@ -19,8 +19,8 @@
 <script type="text/javascript" src="../../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":6,"i4":10,"i5":10,"i6":10,"i7":6,"i8":10,"i9":6};
-var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],8:["t4","Concrete Methods"]};
+<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":6,"i4":10,"i5":10,"i6":10,"i7":10,"i8":6,"i9":10,"i10":10,"i11":9,"i12":6};
+var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
@@ -148,32 +148,37 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private com.mojang.serialization.Codec&lt;<a href="ConfiguredCarver.html" title="class in net.minecraft.world.gen.carver">ConfiguredCarver</a>&lt;<a href="Carver.html" title="type parameter in Carver">C</a>&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#field_24831">field_24831</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>protected int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#heightLimit">heightLimit</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
-<td class="colFirst"><code>protected static <a href="../../../fluid/FluidState.html" title="interface in net.minecraft.fluid">FluidState</a></code></td>
+<tr class="altColor">
+<td class="colFirst"><code>protected static <a href="../../../fluid/FluidState.html" title="class in net.minecraft.fluid">FluidState</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#LAVA">LAVA</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="Carver.html" title="class in net.minecraft.world.gen.carver">Carver</a>&lt;<a href="../ProbabilityConfig.html" title="class in net.minecraft.world.gen">ProbabilityConfig</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#NETHER_CAVE">NETHER_CAVE</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="Carver.html" title="class in net.minecraft.world.gen.carver">Carver</a>&lt;<a href="../ProbabilityConfig.html" title="class in net.minecraft.world.gen">ProbabilityConfig</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#UNDERWATER_CANYON">UNDERWATER_CANYON</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="Carver.html" title="class in net.minecraft.world.gen.carver">Carver</a>&lt;<a href="../ProbabilityConfig.html" title="class in net.minecraft.world.gen">ProbabilityConfig</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#UNDERWATER_CAVE">UNDERWATER_CAVE</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
-<td class="colFirst"><code>protected static <a href="../../../fluid/FluidState.html" title="interface in net.minecraft.fluid">FluidState</a></code></td>
+<tr class="altColor">
+<td class="colFirst"><code>protected static <a href="../../../fluid/FluidState.html" title="class in net.minecraft.fluid">FluidState</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#WATER">WATER</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -199,7 +204,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </thead>
 <tbody>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.util.function.Function,int)">Carver</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;com.mojang.datafixers.Dynamic&lt;?&gt;,&#8203;? extends <a href="Carver.html" title="type parameter in Carver">C</a>&gt;&nbsp;configDeserializer,
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(com.mojang.serialization.Codec,int)">Carver</a></span>&#8203;(com.mojang.serialization.Codec&lt;<a href="Carver.html" title="type parameter in Carver">C</a>&gt;&nbsp;codec,
 int&nbsp;heightLimit)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -215,7 +220,7 @@ int&nbsp;heightLimit)</code></th>
 </a>
 <h2>Method Summary</h2>
 <div class="memberSummary">
-<div role="tablist" aria-orientation="horizontal"><button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t2" class="tableTab" onclick="show(2);">Instance Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t3" class="tableTab" onclick="show(4);">Abstract Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t4" class="tableTab" onclick="show(8);">Concrete Methods</button></div>
+<div role="tablist" aria-orientation="horizontal"><button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t1" class="tableTab" onclick="show(1);">Static Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t2" class="tableTab" onclick="show(2);">Instance Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t3" class="tableTab" onclick="show(4);">Abstract Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t4" class="tableTab" onclick="show(8);">Concrete Methods</button></div>
 <div id="memberSummary_tabpanel" role="tabpanel">
 <table aria-labelledby="t0">
 <thead>
@@ -264,7 +269,7 @@ int&nbsp;mainChunkZ,
 </tr>
 <tr class="altColor" id="i4">
 <td class="colFirst"><code>protected boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#carveAtPoint(net.minecraft.world.chunk.Chunk,java.util.function.Function,java.util.BitSet,java.util.Random,net.minecraft.util.math.BlockPos.Mutable,net.minecraft.util.math.BlockPos.Mutable,net.minecraft.util.math.BlockPos.Mutable,int,int,int,int,int,int,int,int,java.util.concurrent.atomic.AtomicBoolean)">carveAtPoint</a></span>&#8203;(<a href="../../chunk/Chunk.html" title="interface in net.minecraft.world.chunk">Chunk</a>&nbsp;chunk,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#carveAtPoint(net.minecraft.world.chunk.Chunk,java.util.function.Function,java.util.BitSet,java.util.Random,net.minecraft.util.math.BlockPos.Mutable,net.minecraft.util.math.BlockPos.Mutable,net.minecraft.util.math.BlockPos.Mutable,int,int,int,int,int,int,int,int,org.apache.commons.lang3.mutable.MutableBoolean)">carveAtPoint</a></span>&#8203;(<a href="../../chunk/Chunk.html" title="interface in net.minecraft.world.chunk">Chunk</a>&nbsp;chunk,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>,&#8203;<a href="../../biome/Biome.html" title="class in net.minecraft.world.biome">Biome</a>&gt;&nbsp;posToBiome,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/BitSet.html?is-external=true" title="class or interface in java.util" class="externalLink">BitSet</a>&nbsp;carvingMask,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random,
@@ -279,7 +284,7 @@ int&nbsp;z,
 int&nbsp;relativeX,
 int&nbsp;y,
 int&nbsp;relativeZ,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/atomic/AtomicBoolean.html?is-external=true" title="class or interface in java.util.concurrent.atomic" class="externalLink">AtomicBoolean</a>&nbsp;foundSurface)</code></th>
+<a href="https://commons.apache.org/proper/commons-lang/javadocs/api-3.5/org/apache/commons/lang3/mutable/MutableBoolean.html?is-external=true" title="class or interface in org.apache.commons.lang3.mutable" class="externalLink">MutableBoolean</a>&nbsp;mutableBoolean)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i5">
@@ -304,6 +309,16 @@ double&nbsp;pitch,
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i7">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isOnBoundary(int,int,int,int,int,int)">isOnBoundary</a></span>&#8203;(int&nbsp;minX,
+int&nbsp;maxX,
+int&nbsp;minZ,
+int&nbsp;maxZ,
+int&nbsp;x,
+int&nbsp;z)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i8">
 <td class="colFirst"><code>protected abstract boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isPositionExcluded(double,double,double,int)">isPositionExcluded</a></span>&#8203;(double&nbsp;scaledRelativeX,
 double&nbsp;scaledRelativeY,
@@ -311,7 +326,7 @@ double&nbsp;scaledRelativeZ,
 int&nbsp;y)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i8">
+<tr class="rowColor" id="i9">
 <td class="colFirst"><code>protected boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isRegionUncarvable(net.minecraft.world.chunk.Chunk,int,int,int,int,int,int,int,int)">isRegionUncarvable</a></span>&#8203;(<a href="../../chunk/Chunk.html" title="interface in net.minecraft.world.chunk">Chunk</a>&nbsp;chunk,
 int&nbsp;mainChunkX,
@@ -324,7 +339,19 @@ int&nbsp;relMinZ,
 int&nbsp;relMaxZ)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i9">
+<tr class="altColor" id="i10">
+<td class="colFirst"><code>com.mojang.serialization.Codec&lt;<a href="ConfiguredCarver.html" title="class in net.minecraft.world.gen.carver">ConfiguredCarver</a>&lt;<a href="Carver.html" title="type parameter in Carver">C</a>&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_28616()">method_28616</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i11">
+<td class="colFirst"><code>private static &lt;C extends <a href="CarverConfig.html" title="interface in net.minecraft.world.gen.carver">CarverConfig</a>,&#8203;
+F extends <a href="Carver.html" title="class in net.minecraft.world.gen.carver">Carver</a>&lt;C&gt;&gt;<br>F</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#register(java.lang.String,F)">register</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;string,
+F&nbsp;f)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i12">
 <td class="colFirst"><code>abstract boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#shouldCarve(java.util.Random,int,int,C)">shouldCarve</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random,
 int&nbsp;chunkX,
@@ -399,13 +426,13 @@ int&nbsp;chunkZ,
 <li class="blockList">
 <section class="detail">
 <h3><a id="WATER">WATER</a></h3>
-<div class="memberSignature"><span class="modifiers">protected static final</span>&nbsp;<span class="returnType"><a href="../../../fluid/FluidState.html" title="interface in net.minecraft.fluid">FluidState</a></span>&nbsp;<span class="memberName">WATER</span></div>
+<div class="memberSignature"><span class="modifiers">protected static final</span>&nbsp;<span class="returnType"><a href="../../../fluid/FluidState.html" title="class in net.minecraft.fluid">FluidState</a></span>&nbsp;<span class="memberName">WATER</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="LAVA">LAVA</a></h3>
-<div class="memberSignature"><span class="modifiers">protected static final</span>&nbsp;<span class="returnType"><a href="../../../fluid/FluidState.html" title="interface in net.minecraft.fluid">FluidState</a></span>&nbsp;<span class="memberName">LAVA</span></div>
+<div class="memberSignature"><span class="modifiers">protected static final</span>&nbsp;<span class="returnType"><a href="../../../fluid/FluidState.html" title="class in net.minecraft.fluid">FluidState</a></span>&nbsp;<span class="memberName">LAVA</span></div>
 </section>
 </li>
 <li class="blockList">
@@ -418,6 +445,12 @@ int&nbsp;chunkZ,
 <section class="detail">
 <h3><a id="carvableFluids">carvableFluids</a></h3>
 <div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="../../../fluid/Fluid.html" title="class in net.minecraft.fluid">Fluid</a>&gt;</span>&nbsp;<span class="memberName">carvableFluids</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="field_24831">field_24831</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType">com.mojang.serialization.Codec&lt;<a href="ConfiguredCarver.html" title="class in net.minecraft.world.gen.carver">ConfiguredCarver</a>&lt;<a href="Carver.html" title="type parameter in Carver">C</a> extends <a href="CarverConfig.html" title="interface in net.minecraft.world.gen.carver">CarverConfig</a>&gt;&gt;</span>&nbsp;<span class="memberName">field_24831</span></div>
 </section>
 </li>
 <li class="blockList">
@@ -438,8 +471,8 @@ int&nbsp;chunkZ,
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="&lt;init&gt;(java.util.function.Function,int)">Carver</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">Carver</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;com.mojang.datafixers.Dynamic&lt;?&gt;,&#8203;? extends <a href="Carver.html" title="type parameter in Carver">C</a>&gt;&nbsp;configDeserializer,
+<h3><a id="&lt;init&gt;(com.mojang.serialization.Codec,int)">Carver</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">Carver</span>&#8203;(<span class="arguments">com.mojang.serialization.Codec&lt;<a href="Carver.html" title="type parameter in Carver">C</a>&gt;&nbsp;codec,
 int&nbsp;heightLimit)</span></div>
 </section>
 </li>
@@ -453,6 +486,23 @@ int&nbsp;heightLimit)</span></div>
 </a>
 <h2>Method Details</h2>
 <ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="register(java.lang.String,net.minecraft.world.gen.carver.Carver)">
+<!--   -->
+</a><a id="register(java.lang.String,F)">register</a></h3>
+<div class="memberSignature"><span class="modifiers">private static</span>&nbsp;<span class="typeParameters">&lt;C extends <a href="CarverConfig.html" title="interface in net.minecraft.world.gen.carver">CarverConfig</a>,&#8203;
+F extends <a href="Carver.html" title="class in net.minecraft.world.gen.carver">Carver</a>&lt;C&gt;&gt;</span>
+<span class="returnType">F</span>&nbsp;<span class="memberName">register</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;string,
+F&nbsp;f)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="method_28616()">method_28616</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">com.mojang.serialization.Codec&lt;<a href="ConfiguredCarver.html" title="class in net.minecraft.world.gen.carver">ConfiguredCarver</a>&lt;<a href="Carver.html" title="type parameter in Carver">C</a>&gt;&gt;</span>&nbsp;<span class="memberName">method_28616</span>()</div>
+</section>
+</li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getBranchFactor()">getBranchFactor</a></h3>
@@ -478,7 +528,7 @@ double&nbsp;pitch,
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="carveAtPoint(net.minecraft.world.chunk.Chunk,java.util.function.Function,java.util.BitSet,java.util.Random,net.minecraft.util.math.BlockPos.Mutable,net.minecraft.util.math.BlockPos.Mutable,net.minecraft.util.math.BlockPos.Mutable,int,int,int,int,int,int,int,int,java.util.concurrent.atomic.AtomicBoolean)">carveAtPoint</a></h3>
+<h3><a id="carveAtPoint(net.minecraft.world.chunk.Chunk,java.util.function.Function,java.util.BitSet,java.util.Random,net.minecraft.util.math.BlockPos.Mutable,net.minecraft.util.math.BlockPos.Mutable,net.minecraft.util.math.BlockPos.Mutable,int,int,int,int,int,int,int,int,org.apache.commons.lang3.mutable.MutableBoolean)">carveAtPoint</a></h3>
 <div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">carveAtPoint</span>&#8203;(<span class="arguments"><a href="../../chunk/Chunk.html" title="interface in net.minecraft.world.chunk">Chunk</a>&nbsp;chunk,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>,&#8203;<a href="../../biome/Biome.html" title="class in net.minecraft.world.biome">Biome</a>&gt;&nbsp;posToBiome,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/BitSet.html?is-external=true" title="class or interface in java.util" class="externalLink">BitSet</a>&nbsp;carvingMask,
@@ -494,7 +544,7 @@ int&nbsp;z,
 int&nbsp;relativeX,
 int&nbsp;y,
 int&nbsp;relativeZ,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/atomic/AtomicBoolean.html?is-external=true" title="class or interface in java.util.concurrent.atomic" class="externalLink">AtomicBoolean</a>&nbsp;foundSurface)</span></div>
+<a href="https://commons.apache.org/proper/commons-lang/javadocs/api-3.5/org/apache/commons/lang3/mutable/MutableBoolean.html?is-external=true" title="class or interface in org.apache.commons.lang3.mutable" class="externalLink">MutableBoolean</a>&nbsp;mutableBoolean)</span></div>
 </section>
 </li>
 <li class="blockList">
@@ -550,6 +600,17 @@ int&nbsp;minY,
 int&nbsp;maxY,
 int&nbsp;relMinZ,
 int&nbsp;relMaxZ)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="isOnBoundary(int,int,int,int,int,int)">isOnBoundary</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isOnBoundary</span>&#8203;(<span class="arguments">int&nbsp;minX,
+int&nbsp;maxX,
+int&nbsp;minZ,
+int&nbsp;maxZ,
+int&nbsp;x,
+int&nbsp;z)</span></div>
 </section>
 </li>
 <li class="blockList">

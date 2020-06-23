@@ -154,9 +154,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </thead>
 <tbody>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.util.UUID,net.minecraft.village.VillageGossipType,int)">GossipEntry</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util" class="externalLink">UUID</a>&nbsp;target,
-<a href="VillageGossipType.html" title="enum in net.minecraft.village">VillageGossipType</a>&nbsp;type,
-int&nbsp;value)</code></th>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.util.UUID,net.minecraft.village.VillageGossipType,int)">GossipEntry</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util" class="externalLink">UUID</a>&nbsp;uUID,
+<a href="VillageGossipType.html" title="enum in net.minecraft.village">VillageGossipType</a>&nbsp;villageGossipType,
+int&nbsp;int2)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -183,8 +183,8 @@ int&nbsp;value)</code></th>
 </thead>
 <tbody>
 <tr class="altColor" id="i0">
-<td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util" class="externalLink">Optional</a>&lt;<a href="VillagerGossips.GossipEntry.html" title="class in net.minecraft.village">VillagerGossips.GossipEntry</a>&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#deserialize(com.mojang.datafixers.Dynamic)">deserialize</a></span>&#8203;(com.mojang.datafixers.Dynamic&lt;?&gt;&nbsp;dynamic)</code></th>
+<td class="colFirst"><code>static com.mojang.serialization.DataResult&lt;<a href="VillagerGossips.GossipEntry.html" title="class in net.minecraft.village">VillagerGossips.GossipEntry</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#deserialize(com.mojang.serialization.Dynamic)">deserialize</a></span>&#8203;(com.mojang.serialization.Dynamic&lt;?&gt;&nbsp;dynamic)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
@@ -193,8 +193,8 @@ int&nbsp;value)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i2">
-<td class="colFirst"><code>&lt;T&gt;&nbsp;com.mojang.datafixers.Dynamic&lt;T&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#serialize(com.mojang.datafixers.types.DynamicOps)">serialize</a></span>&#8203;(com.mojang.datafixers.types.DynamicOps&lt;T&gt;&nbsp;ops)</code></th>
+<td class="colFirst"><code>&lt;T&gt;&nbsp;com.mojang.serialization.Dynamic&lt;T&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#serialize(com.mojang.serialization.DynamicOps)">serialize</a></span>&#8203;(com.mojang.serialization.DynamicOps&lt;T&gt;&nbsp;dynamicOps)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i3">
@@ -255,9 +255,9 @@ int&nbsp;value)</code></th>
 <li class="blockList">
 <section class="detail">
 <h3><a id="&lt;init&gt;(java.util.UUID,net.minecraft.village.VillageGossipType,int)">GossipEntry</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">GossipEntry</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util" class="externalLink">UUID</a>&nbsp;target,
-<a href="VillageGossipType.html" title="enum in net.minecraft.village">VillageGossipType</a>&nbsp;type,
-int&nbsp;value)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">GossipEntry</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util" class="externalLink">UUID</a>&nbsp;uUID,
+<a href="VillageGossipType.html" title="enum in net.minecraft.village">VillageGossipType</a>&nbsp;villageGossipType,
+int&nbsp;int2)</span></div>
 </section>
 </li>
 </ul>
@@ -288,14 +288,14 @@ int&nbsp;value)</span></div>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="serialize(com.mojang.datafixers.types.DynamicOps)">serialize</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="typeParameters">&lt;T&gt;</span>&nbsp;<span class="returnType">com.mojang.datafixers.Dynamic&lt;T&gt;</span>&nbsp;<span class="memberName">serialize</span>&#8203;(<span class="arguments">com.mojang.datafixers.types.DynamicOps&lt;T&gt;&nbsp;ops)</span></div>
+<h3><a id="serialize(com.mojang.serialization.DynamicOps)">serialize</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="typeParameters">&lt;T&gt;</span>&nbsp;<span class="returnType">com.mojang.serialization.Dynamic&lt;T&gt;</span>&nbsp;<span class="memberName">serialize</span>&#8203;(<span class="arguments">com.mojang.serialization.DynamicOps&lt;T&gt;&nbsp;dynamicOps)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="deserialize(com.mojang.datafixers.Dynamic)">deserialize</a></h3>
-<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util" class="externalLink">Optional</a>&lt;<a href="VillagerGossips.GossipEntry.html" title="class in net.minecraft.village">VillagerGossips.GossipEntry</a>&gt;</span>&nbsp;<span class="memberName">deserialize</span>&#8203;(<span class="arguments">com.mojang.datafixers.Dynamic&lt;?&gt;&nbsp;dynamic)</span></div>
+<h3><a id="deserialize(com.mojang.serialization.Dynamic)">deserialize</a></h3>
+<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType">com.mojang.serialization.DataResult&lt;<a href="VillagerGossips.GossipEntry.html" title="class in net.minecraft.village">VillagerGossips.GossipEntry</a>&gt;</span>&nbsp;<span class="memberName">deserialize</span>&#8203;(<span class="arguments">com.mojang.serialization.Dynamic&lt;?&gt;&nbsp;dynamic)</span></div>
 </section>
 </li>
 </ul>

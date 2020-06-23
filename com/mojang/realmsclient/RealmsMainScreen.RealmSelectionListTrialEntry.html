@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":10,"i1":10};
+<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -57,13 +57,13 @@ loadScripts(document, 'script');</script>
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
 </div>
@@ -111,6 +111,33 @@ extends <a href="RealmsMainScreen.Entry.html" title="class in com.mojang.realmsc
 </section>
 <section class="summary">
 <ul class="blockList">
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<li class="blockList">
+<section class="constructorSummary"><a id="constructor.summary">
+<!--   -->
+</a>
+<h2>Constructor Summary</h2>
+<div class="memberSummary">
+<table>
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<thead>
+<tr>
+<th class="colFirst" scope="col">Modifier</th>
+<th class="colSecond" scope="col">Constructor</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private </code></td>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E()">RealmSelectionListTrialEntry</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</li>
 <!-- ========== METHOD SUMMARY =========== -->
 <li class="blockList">
 <section class="methodSummary"><a id="method.summary">
@@ -138,15 +165,26 @@ int&nbsp;button)</code></th>
 </tr>
 <tr class="rowColor" id="i1">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#render(int,int,int,int,int,int,int,boolean,float)">render</a></span>&#8203;(int&nbsp;index,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#render(net.minecraft.client.util.math.MatrixStack,int,int,int,int,int,int,int,boolean,float)">render</a></span>&#8203;(<a href="../../../net/minecraft/client/util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
+int&nbsp;index,
 int&nbsp;y,
 int&nbsp;x,
-int&nbsp;width,
-int&nbsp;height,
+int&nbsp;entryWidth,
+int&nbsp;entryHeight,
 int&nbsp;mouseX,
 int&nbsp;mouseY,
-boolean&nbsp;hovering,
-float&nbsp;delta)</code></th>
+boolean&nbsp;hovered,
+float&nbsp;tickDelta)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i2">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#renderTrialItem(net.minecraft.client.util.math.MatrixStack,int,int,int,int,int)">renderTrialItem</a></span>&#8203;(<a href="../../../net/minecraft/client/util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrixStack,
+int&nbsp;int2,
+int&nbsp;int3,
+int&nbsp;int4,
+int&nbsp;int5,
+int&nbsp;int6)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -179,6 +217,22 @@ float&nbsp;delta)</code></th>
 </section>
 <section class="details">
 <ul class="blockList">
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<li class="blockList">
+<section class="constructorDetails"><a id="constructor.detail">
+<!--   -->
+</a>
+<h2>Constructor Details</h2>
+<ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="&lt;init&gt;()">RealmSelectionListTrialEntry</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="memberName">RealmSelectionListTrialEntry</span>()</div>
+</section>
+</li>
+</ul>
+</section>
+</li>
 <!-- ============ METHOD DETAIL ========== -->
 <li class="blockList">
 <section class="methodDetails"><a id="method.detail">
@@ -188,19 +242,20 @@ float&nbsp;delta)</code></th>
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="render(int,int,int,int,int,int,int,boolean,float)">render</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">render</span>&#8203;(<span class="arguments">int&nbsp;index,
+<h3><a id="render(net.minecraft.client.util.math.MatrixStack,int,int,int,int,int,int,int,boolean,float)">render</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">render</span>&#8203;(<span class="arguments"><a href="../../../net/minecraft/client/util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
+int&nbsp;index,
 int&nbsp;y,
 int&nbsp;x,
-int&nbsp;width,
-int&nbsp;height,
+int&nbsp;entryWidth,
+int&nbsp;entryHeight,
 int&nbsp;mouseX,
 int&nbsp;mouseY,
-boolean&nbsp;hovering,
-float&nbsp;delta)</span></div>
+boolean&nbsp;hovered,
+float&nbsp;tickDelta)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../net/minecraft/client/gui/widget/EntryListWidget.Entry.html#render(int,int,int,int,int,int,int,boolean,float)">render</a></code>&nbsp;in class&nbsp;<code><a href="../../../net/minecraft/client/gui/widget/EntryListWidget.Entry.html" title="class in net.minecraft.client.gui.widget">EntryListWidget.Entry</a>&lt;<a href="RealmsMainScreen.Entry.html" title="class in com.mojang.realmsclient">RealmsMainScreen.Entry</a>&gt;</code></dd>
+<dd><code><a href="../../../net/minecraft/client/gui/widget/EntryListWidget.Entry.html#render(net.minecraft.client.util.math.MatrixStack,int,int,int,int,int,int,int,boolean,float)">render</a></code>&nbsp;in class&nbsp;<code><a href="../../../net/minecraft/client/gui/widget/EntryListWidget.Entry.html" title="class in net.minecraft.client.gui.widget">EntryListWidget.Entry</a>&lt;<a href="RealmsMainScreen.Entry.html" title="class in com.mojang.realmsclient">RealmsMainScreen.Entry</a>&gt;</code></dd>
 </dl>
 </section>
 </li>
@@ -210,6 +265,17 @@ float&nbsp;delta)</span></div>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">mouseClicked</span>&#8203;(<span class="arguments">double&nbsp;mouseX,
 double&nbsp;mouseY,
 int&nbsp;button)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="renderTrialItem(net.minecraft.client.util.math.MatrixStack,int,int,int,int,int)">renderTrialItem</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">renderTrialItem</span>&#8203;(<span class="arguments"><a href="../../../net/minecraft/client/util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrixStack,
+int&nbsp;int2,
+int&nbsp;int3,
+int&nbsp;int4,
+int&nbsp;int5,
+int&nbsp;int6)</span></div>
 </section>
 </li>
 </ul>
@@ -246,13 +312,13 @@ int&nbsp;button)</span></div>
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
 </div>

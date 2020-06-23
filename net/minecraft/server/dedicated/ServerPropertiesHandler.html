@@ -165,17 +165,37 @@ extends <a href="AbstractPropertiesHandler.html" title="class in net.minecraft.s
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#enableQuery">enableQuery</a></span></code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#enableJmxMonitoring">enableJmxMonitoring</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#enableQuery">enableQuery</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#enableRcon">enableRcon</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#enableStatus">enableStatus</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#enforceWhitelist">enforceWhitelist</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#entityBroadcastRangePercentage">entityBroadcastRangePercentage</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../world/gen/GeneratorOptions.html" title="class in net.minecraft.world.gen">GeneratorOptions</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#field_24623">field_24623</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
@@ -195,32 +215,12 @@ extends <a href="AbstractPropertiesHandler.html" title="class in net.minecraft.s
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#generateStructures">generateStructures</a></span></code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#generatorSettings">generatorSettings</a></span></code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#hardcore">hardcore</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#levelName">levelName</a></span></code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#levelSeed">levelSeed</a></span></code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code><a href="../../world/level/LevelGeneratorType.html" title="class in net.minecraft.world.level">LevelGeneratorType</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#levelType">levelType</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
@@ -519,12 +519,6 @@ extends <a href="AbstractPropertiesHandler.html" title="class in net.minecraft.s
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="generateStructures">generateStructures</a></h3>
-<div class="memberSignature"><span class="modifiers">public final</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">generateStructures</span></div>
-</section>
-</li>
-<li class="blockList">
-<section class="detail">
 <h3><a id="difficulty">difficulty</a></h3>
 <div class="memberSignature"><span class="modifiers">public final</span>&nbsp;<span class="returnType"><a href="../../world/Difficulty.html" title="enum in net.minecraft.world">Difficulty</a></span>&nbsp;<span class="memberName">difficulty</span></div>
 </section>
@@ -539,24 +533,6 @@ extends <a href="AbstractPropertiesHandler.html" title="class in net.minecraft.s
 <section class="detail">
 <h3><a id="levelName">levelName</a></h3>
 <div class="memberSignature"><span class="modifiers">public final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></span>&nbsp;<span class="memberName">levelName</span></div>
-</section>
-</li>
-<li class="blockList">
-<section class="detail">
-<h3><a id="levelSeed">levelSeed</a></h3>
-<div class="memberSignature"><span class="modifiers">public final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></span>&nbsp;<span class="memberName">levelSeed</span></div>
-</section>
-</li>
-<li class="blockList">
-<section class="detail">
-<h3><a id="levelType">levelType</a></h3>
-<div class="memberSignature"><span class="modifiers">public final</span>&nbsp;<span class="returnType"><a href="../../world/level/LevelGeneratorType.html" title="class in net.minecraft.world.level">LevelGeneratorType</a></span>&nbsp;<span class="memberName">levelType</span></div>
-</section>
-</li>
-<li class="blockList">
-<section class="detail">
-<h3><a id="generatorSettings">generatorSettings</a></h3>
-<div class="memberSignature"><span class="modifiers">public final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></span>&nbsp;<span class="memberName">generatorSettings</span></div>
 </section>
 </li>
 <li class="blockList">
@@ -723,6 +699,24 @@ extends <a href="AbstractPropertiesHandler.html" title="class in net.minecraft.s
 </li>
 <li class="blockList">
 <section class="detail">
+<h3><a id="enableJmxMonitoring">enableJmxMonitoring</a></h3>
+<div class="memberSignature"><span class="modifiers">public final</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">enableJmxMonitoring</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="enableStatus">enableStatus</a></h3>
+<div class="memberSignature"><span class="modifiers">public final</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">enableStatus</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="entityBroadcastRangePercentage">entityBroadcastRangePercentage</a></h3>
+<div class="memberSignature"><span class="modifiers">public final</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">entityBroadcastRangePercentage</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="playerIdleTimeout">playerIdleTimeout</a></h3>
 <div class="memberSignature"><span class="modifiers">public final</span>&nbsp;<span class="returnType"><a href="AbstractPropertiesHandler.PropertyAccessor.html" title="class in net.minecraft.server.dedicated">AbstractPropertiesHandler.PropertyAccessor</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang" class="externalLink">Integer</a>&gt;</span>&nbsp;<span class="memberName">playerIdleTimeout</span></div>
 </section>
@@ -731,6 +725,12 @@ extends <a href="AbstractPropertiesHandler.html" title="class in net.minecraft.s
 <section class="detail">
 <h3><a id="whiteList">whiteList</a></h3>
 <div class="memberSignature"><span class="modifiers">public final</span>&nbsp;<span class="returnType"><a href="AbstractPropertiesHandler.PropertyAccessor.html" title="class in net.minecraft.server.dedicated">AbstractPropertiesHandler.PropertyAccessor</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang" class="externalLink">Boolean</a>&gt;</span>&nbsp;<span class="memberName">whiteList</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="field_24623">field_24623</a></h3>
+<div class="memberSignature"><span class="modifiers">public final</span>&nbsp;<span class="returnType"><a href="../../world/gen/GeneratorOptions.html" title="class in net.minecraft.world.gen">GeneratorOptions</a></span>&nbsp;<span class="memberName">field_24623</span></div>
 </section>
 </li>
 </ul>

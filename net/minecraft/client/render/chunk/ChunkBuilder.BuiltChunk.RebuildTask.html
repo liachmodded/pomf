@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":10,"i1":10};
+<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -156,8 +156,7 @@ extends <a href="ChunkBuilder.BuiltChunk.Task.html" title="class in net.minecraf
 </thead>
 <tbody>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.client.render.chunk.ChunkBuilder.BuiltChunk,double,net.minecraft.client.render.chunk.ChunkRendererRegion)">RebuildTask</a></span>&#8203;(<a href="ChunkBuilder.BuiltChunk.html" title="class in net.minecraft.client.render.chunk">ChunkBuilder.BuiltChunk</a>&nbsp;builtChunk,
-double&nbsp;double2,
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(double,net.minecraft.client.render.chunk.ChunkRendererRegion)">RebuildTask</a></span>&#8203;(double&nbsp;double2,
 <a href="ChunkRendererRegion.html" title="class in net.minecraft.client.render.chunk">ChunkRendererRegion</a>&nbsp;chunkRendererRegion)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -185,11 +184,27 @@ double&nbsp;double2,
 </thead>
 <tbody>
 <tr class="altColor" id="i0">
+<td class="colFirst"><code>private &lt;E extends <a href="../../../block/entity/BlockEntity.html" title="class in net.minecraft.block.entity">BlockEntity</a>&gt;<br>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addBlockEntity(net.minecraft.client.render.chunk.ChunkBuilder.ChunkData,java.util.Set,E)">addBlockEntity</a></span>&#8203;(<a href="ChunkBuilder.ChunkData.html" title="class in net.minecraft.client.render.chunk">ChunkBuilder.ChunkData</a>&nbsp;data,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="../../../block/entity/BlockEntity.html" title="class in net.minecraft.block.entity">BlockEntity</a>&gt;&nbsp;blockEntities,
+E&nbsp;blockEntity)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i1">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#cancel()">cancel</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i1">
+<tr class="altColor" id="i2">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="../../../block/entity/BlockEntity.html" title="class in net.minecraft.block.entity">BlockEntity</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#render(float,float,float,net.minecraft.client.render.chunk.ChunkBuilder.ChunkData,net.minecraft.client.render.chunk.BlockBufferBuilderStorage)">render</a></span>&#8203;(float&nbsp;cameraX,
+float&nbsp;cameraY,
+float&nbsp;cameraZ,
+<a href="ChunkBuilder.ChunkData.html" title="class in net.minecraft.client.render.chunk">ChunkBuilder.ChunkData</a>&nbsp;data,
+<a href="BlockBufferBuilderStorage.html" title="class in net.minecraft.client.render.chunk">BlockBufferBuilderStorage</a>&nbsp;buffers)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i3">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html?is-external=true" title="class or interface in java.util.concurrent" class="externalLink">CompletableFuture</a>&lt;<a href="ChunkBuilder.Result.html" title="enum in net.minecraft.client.render.chunk">ChunkBuilder.Result</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#run(net.minecraft.client.render.chunk.BlockBufferBuilderStorage)">run</a></span>&#8203;(<a href="BlockBufferBuilderStorage.html" title="class in net.minecraft.client.render.chunk">BlockBufferBuilderStorage</a>&nbsp;buffers)</code></th>
 <td class="colLast">&nbsp;</td>
@@ -224,7 +239,7 @@ double&nbsp;double2,
 <li class="blockList">
 <section class="detail">
 <h3><a id="region">region</a></h3>
-<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 </span><span class="modifiers">protected</span>&nbsp;<span class="returnType"><a href="ChunkRendererRegion.html" title="class in net.minecraft.client.render.chunk">ChunkRendererRegion</a></span>&nbsp;<span class="memberName">region</span></div>
 </section>
 </li>
@@ -240,10 +255,8 @@ double&nbsp;double2,
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="&lt;init&gt;(net.minecraft.client.render.chunk.ChunkBuilder.BuiltChunk,double,net.minecraft.client.render.chunk.ChunkRendererRegion)">RebuildTask</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">RebuildTask</span>&#8203;(<span class="arguments"><a href="ChunkBuilder.BuiltChunk.html" title="class in net.minecraft.client.render.chunk">ChunkBuilder.BuiltChunk</a>&nbsp;builtChunk,
-double&nbsp;double2,
-<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<h3><a id="&lt;init&gt;(double,net.minecraft.client.render.chunk.ChunkRendererRegion)">RebuildTask</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">RebuildTask</span>&#8203;(<span class="arguments">double&nbsp;double2,
 <a href="ChunkRendererRegion.html" title="class in net.minecraft.client.render.chunk">ChunkRendererRegion</a>&nbsp;chunkRendererRegion)</span></div>
 </section>
 </li>
@@ -265,6 +278,26 @@ double&nbsp;double2,
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="ChunkBuilder.BuiltChunk.Task.html#run(net.minecraft.client.render.chunk.BlockBufferBuilderStorage)">run</a></code>&nbsp;in class&nbsp;<code><a href="ChunkBuilder.BuiltChunk.Task.html" title="class in net.minecraft.client.render.chunk">ChunkBuilder.BuiltChunk.Task</a></code></dd>
 </dl>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="render(float,float,float,net.minecraft.client.render.chunk.ChunkBuilder.ChunkData,net.minecraft.client.render.chunk.BlockBufferBuilderStorage)">render</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="../../../block/entity/BlockEntity.html" title="class in net.minecraft.block.entity">BlockEntity</a>&gt;</span>&nbsp;<span class="memberName">render</span>&#8203;(<span class="arguments">float&nbsp;cameraX,
+float&nbsp;cameraY,
+float&nbsp;cameraZ,
+<a href="ChunkBuilder.ChunkData.html" title="class in net.minecraft.client.render.chunk">ChunkBuilder.ChunkData</a>&nbsp;data,
+<a href="BlockBufferBuilderStorage.html" title="class in net.minecraft.client.render.chunk">BlockBufferBuilderStorage</a>&nbsp;buffers)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="addBlockEntity(net.minecraft.client.render.chunk.ChunkBuilder.ChunkData,java.util.Set,net.minecraft.block.entity.BlockEntity)">
+<!--   -->
+</a><a id="addBlockEntity(net.minecraft.client.render.chunk.ChunkBuilder.ChunkData,java.util.Set,E)">addBlockEntity</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="typeParameters">&lt;E extends <a href="../../../block/entity/BlockEntity.html" title="class in net.minecraft.block.entity">BlockEntity</a>&gt;</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">addBlockEntity</span>&#8203;(<span class="arguments"><a href="ChunkBuilder.ChunkData.html" title="class in net.minecraft.client.render.chunk">ChunkBuilder.ChunkData</a>&nbsp;data,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="../../../block/entity/BlockEntity.html" title="class in net.minecraft.block.entity">BlockEntity</a>&gt;&nbsp;blockEntities,
+E&nbsp;blockEntity)</span></div>
 </section>
 </li>
 <li class="blockList">

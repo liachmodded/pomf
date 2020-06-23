@@ -19,8 +19,8 @@
 <script type="text/javascript" src="../../../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":10};
-var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
+<script type="text/javascript">var data = {"i0":9,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10};
+var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
@@ -62,7 +62,7 @@ loadScripts(document, 'script');</script>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
@@ -117,6 +117,25 @@ extends <a href="Task.html" title="class in net.minecraft.entity.ai.brain.task">
 <!--   -->
 </a>
 <h2>Field Summary</h2>
+<div class="memberSummary">
+<table>
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<thead>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colSecond" scope="col">Field</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Predicate</a>&lt;<a href="../../../LivingEntity.html" title="class in net.minecraft.entity">LivingEntity</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#alternativeCondition">alternativeCondition</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
 <div class="inheritedList">
 <h3>Fields inherited from class&nbsp;net.minecraft.entity.ai.brain.task.<a href="Task.html" title="class in net.minecraft.entity.ai.brain.task">Task</a></h3>
 <a id="fields.inherited.from.class.net.minecraft.entity.ai.brain.task.Task">
@@ -160,7 +179,7 @@ extends <a href="Task.html" title="class in net.minecraft.entity.ai.brain.task">
 </a>
 <h2>Method Summary</h2>
 <div class="memberSummary">
-<div role="tablist" aria-orientation="horizontal"><button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t2" class="tableTab" onclick="show(2);">Instance Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t4" class="tableTab" onclick="show(8);">Concrete Methods</button></div>
+<div role="tablist" aria-orientation="horizontal"><button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t1" class="tableTab" onclick="show(1);">Static Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t2" class="tableTab" onclick="show(2);">Instance Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t4" class="tableTab" onclick="show(8);">Concrete Methods</button></div>
 <div id="memberSummary_tabpanel" role="tabpanel">
 <table aria-labelledby="t0">
 <thead>
@@ -172,6 +191,31 @@ extends <a href="Task.html" title="class in net.minecraft.entity.ai.brain.task">
 </thead>
 <tbody>
 <tr class="altColor" id="i0">
+<td class="colFirst"><code>private static &lt;E extends <a href="../../../LivingEntity.html" title="class in net.minecraft.entity">LivingEntity</a>&gt;<br>boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#cannotReachTarget(E)">cannotReachTarget</a></span>&#8203;(E&nbsp;entity)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i1">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#forgetAttackTarget(E)">forgetAttackTarget</a></span>&#8203;(<a href="ForgetAttackTargetTask.html" title="type parameter in ForgetAttackTargetTask">E</a>&nbsp;entity)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i2">
+<td class="colFirst"><code>private <a href="../../../LivingEntity.html" title="class in net.minecraft.entity">LivingEntity</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getAttackTarget(E)">getAttackTarget</a></span>&#8203;(<a href="ForgetAttackTargetTask.html" title="type parameter in ForgetAttackTargetTask">E</a>&nbsp;entity)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i3">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isAttackTargetDead(E)">isAttackTargetDead</a></span>&#8203;(<a href="ForgetAttackTargetTask.html" title="type parameter in ForgetAttackTargetTask">E</a>&nbsp;entity)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i4">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isAttackTargetInAnotherWorld(E)">isAttackTargetInAnotherWorld</a></span>&#8203;(<a href="ForgetAttackTargetTask.html" title="type parameter in ForgetAttackTargetTask">E</a>&nbsp;entity)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i5">
 <td class="colFirst"><code>protected void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#run(net.minecraft.server.world.ServerWorld,E,long)">run</a></span>&#8203;(<a href="../../../../server/world/ServerWorld.html" title="class in net.minecraft.server.world">ServerWorld</a>&nbsp;serverWorld,
 <a href="ForgetAttackTargetTask.html" title="type parameter in ForgetAttackTargetTask">E</a>&nbsp;e,
@@ -198,6 +242,22 @@ long&nbsp;long2)</code></th>
 </section>
 <section class="details">
 <ul class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<li class="blockList">
+<section class="fieldDetails"><a id="field.detail">
+<!--   -->
+</a>
+<h2>Field Details</h2>
+<ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="alternativeCondition">alternativeCondition</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Predicate</a>&lt;<a href="../../../LivingEntity.html" title="class in net.minecraft.entity">LivingEntity</a>&gt;</span>&nbsp;<span class="memberName">alternativeCondition</span></div>
+</section>
+</li>
+</ul>
+</section>
+</li>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <li class="blockList">
 <section class="constructorDetails"><a id="constructor.detail">
@@ -241,6 +301,46 @@ long&nbsp;long2)</span></div>
 </dl>
 </section>
 </li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="isAttackTargetInAnotherWorld(net.minecraft.entity.mob.MobEntity)">
+<!--   -->
+</a><a id="isAttackTargetInAnotherWorld(E)">isAttackTargetInAnotherWorld</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isAttackTargetInAnotherWorld</span>&#8203;(<span class="arguments"><a href="ForgetAttackTargetTask.html" title="type parameter in ForgetAttackTargetTask">E</a>&nbsp;entity)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="getAttackTarget(net.minecraft.entity.mob.MobEntity)">
+<!--   -->
+</a><a id="getAttackTarget(E)">getAttackTarget</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="../../../LivingEntity.html" title="class in net.minecraft.entity">LivingEntity</a></span>&nbsp;<span class="memberName">getAttackTarget</span>&#8203;(<span class="arguments"><a href="ForgetAttackTargetTask.html" title="type parameter in ForgetAttackTargetTask">E</a>&nbsp;entity)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="cannotReachTarget(net.minecraft.entity.LivingEntity)">
+<!--   -->
+</a><a id="cannotReachTarget(E)">cannotReachTarget</a></h3>
+<div class="memberSignature"><span class="modifiers">private static</span>&nbsp;<span class="typeParameters">&lt;E extends <a href="../../../LivingEntity.html" title="class in net.minecraft.entity">LivingEntity</a>&gt;</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">cannotReachTarget</span>&#8203;(<span class="arguments">E&nbsp;entity)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="isAttackTargetDead(net.minecraft.entity.mob.MobEntity)">
+<!--   -->
+</a><a id="isAttackTargetDead(E)">isAttackTargetDead</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isAttackTargetDead</span>&#8203;(<span class="arguments"><a href="ForgetAttackTargetTask.html" title="type parameter in ForgetAttackTargetTask">E</a>&nbsp;entity)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="forgetAttackTarget(net.minecraft.entity.mob.MobEntity)">
+<!--   -->
+</a><a id="forgetAttackTarget(E)">forgetAttackTarget</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">forgetAttackTarget</span>&#8203;(<span class="arguments"><a href="ForgetAttackTargetTask.html" title="type parameter in ForgetAttackTargetTask">E</a>&nbsp;entity)</span></div>
+</section>
+</li>
 </ul>
 </section>
 </li>
@@ -280,7 +380,7 @@ long&nbsp;long2)</span></div>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>

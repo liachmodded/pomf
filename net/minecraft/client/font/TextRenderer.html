@@ -19,8 +19,8 @@
 <script type="text/javascript" src="../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10};
-var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
+<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10,"i23":10,"i24":10,"i25":10,"i26":9,"i27":10};
+var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
@@ -55,7 +55,7 @@ loadScripts(document, 'script');</script>
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#nested.class.summary">Nested</a>&nbsp;|&nbsp;</li>
 <li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
@@ -90,18 +90,40 @@ loadScripts(document, 'script');</script>
 <div class="inheritance">net.minecraft.client.font.TextRenderer</div>
 </div>
 <section class="description">
-<dl>
-<dt>All Implemented Interfaces:</dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseable.html?is-external=true" title="class or interface in java.lang" class="externalLink">AutoCloseable</a></code></dd>
-</dl>
 <hr>
 <pre>@Environment(CLIENT)
 public class <span class="typeNameLabel">TextRenderer</span>
-extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>
-implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseable.html?is-external=true" title="class or interface in java.lang" class="externalLink">AutoCloseable</a></pre>
+extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></pre>
 </section>
 <section class="summary">
 <ul class="blockList">
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+<li class="blockList">
+<section class="nestedClassSummary"><a id="nested.class.summary">
+<!--   -->
+</a>
+<h2>Nested Class Summary</h2>
+<div class="memberSummary">
+<table>
+<caption><span>Nested Classes</span><span class="tabEnd">&nbsp;</span></caption>
+<thead>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colSecond" scope="col">Class</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) class&nbsp;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="TextRenderer.ShadowDrawer.html" title="class in net.minecraft.client.font">TextRenderer.ShadowDrawer</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</li>
 <!-- =========== FIELD SUMMARY =========== -->
 <li class="blockList">
 <section class="fieldSummary"><a id="field.summary">
@@ -125,6 +147,21 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/AutoClos
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;<a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>,&#8203;<a href="FontStorage.html" title="class in net.minecraft.client.font">FontStorage</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#fontStorageAccessor">fontStorageAccessor</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="../util/math/Vector3f.html" title="class in net.minecraft.client.util.math">Vector3f</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#FORWARD_SHIFT">FORWARD_SHIFT</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="TextHandler.html" title="class in net.minecraft.client.font">TextHandler</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#handler">handler</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#random">random</a></span></code></th>
 <td class="colLast">&nbsp;</td>
@@ -151,8 +188,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/AutoClos
 </thead>
 <tbody>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.client.texture.TextureManager,net.minecraft.client.font.FontStorage)">TextRenderer</a></span>&#8203;(<a href="../texture/TextureManager.html" title="class in net.minecraft.client.texture">TextureManager</a>&nbsp;textureManager,
-<a href="FontStorage.html" title="class in net.minecraft.client.font">FontStorage</a>&nbsp;fontStorage)</code></th>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.util.function.Function)">TextRenderer</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;<a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>,&#8203;<a href="FontStorage.html" title="class in net.minecraft.client.font">FontStorage</a>&gt;&nbsp;fontStorageAccessor)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -167,7 +203,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/AutoClos
 </a>
 <h2>Method Summary</h2>
 <div class="memberSummary">
-<div role="tablist" aria-orientation="horizontal"><button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t2" class="tableTab" onclick="show(2);">Instance Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t4" class="tableTab" onclick="show(8);">Concrete Methods</button></div>
+<div role="tablist" aria-orientation="horizontal"><button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t1" class="tableTab" onclick="show(1);">Static Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t2" class="tableTab" onclick="show(2);">Instance Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t4" class="tableTab" onclick="show(8);">Concrete Methods</button></div>
 <div id="memberSummary_tabpanel" role="tabpanel">
 <table aria-labelledby="t0">
 <thead>
@@ -179,21 +215,122 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/AutoClos
 </thead>
 <tbody>
 <tr class="altColor" id="i0">
-<td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#close()">close</a></span>()</code></th>
+<td class="colFirst"><code>int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#draw(java.lang.String,float,float,int,boolean,net.minecraft.util.math.Matrix4f,net.minecraft.client.render.VertexConsumerProvider,boolean,int,int)">draw</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;text,
+float&nbsp;x,
+float&nbsp;y,
+int&nbsp;color,
+boolean&nbsp;shadow,
+<a href="../../util/math/Matrix4f.html" title="class in net.minecraft.util.math">Matrix4f</a>&nbsp;matrix,
+<a href="../render/VertexConsumerProvider.html" title="interface in net.minecraft.client.render">VertexConsumerProvider</a>&nbsp;vertexConsumers,
+boolean&nbsp;seeThrough,
+int&nbsp;backgroundColor,
+int&nbsp;light)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
 <td class="colFirst"><code>int</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#draw(java.lang.String,float,float,int)">draw</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;text,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#draw(java.lang.String,float,float,int,boolean,net.minecraft.util.math.Matrix4f,net.minecraft.client.render.VertexConsumerProvider,boolean,int,int,boolean)">draw</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;text,
+float&nbsp;x,
+float&nbsp;y,
+int&nbsp;color,
+boolean&nbsp;shadow,
+<a href="../../util/math/Matrix4f.html" title="class in net.minecraft.util.math">Matrix4f</a>&nbsp;matrix,
+<a href="../render/VertexConsumerProvider.html" title="interface in net.minecraft.client.render">VertexConsumerProvider</a>&nbsp;vertexConsumers,
+boolean&nbsp;seeThrough,
+int&nbsp;backgroundColor,
+int&nbsp;light,
+boolean&nbsp;rightToLeft)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i2">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#draw(java.lang.String,float,float,int,net.minecraft.util.math.Matrix4f,boolean,boolean)">draw</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;text,
+float&nbsp;x,
+float&nbsp;y,
+int&nbsp;color,
+<a href="../../util/math/Matrix4f.html" title="class in net.minecraft.util.math">Matrix4f</a>&nbsp;matrix,
+boolean&nbsp;shadow,
+boolean&nbsp;mirror)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i3">
+<td class="colFirst"><code>int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#draw(net.minecraft.client.util.math.MatrixStack,java.lang.String,float,float,int)">draw</a></span>&#8203;(<a href="../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;text,
 float&nbsp;x,
 float&nbsp;y,
 int&nbsp;color)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i2">
+<tr class="altColor" id="i4">
 <td class="colFirst"><code>int</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#draw(java.lang.String,float,float,int,boolean,net.minecraft.util.math.Matrix4f,net.minecraft.client.render.VertexConsumerProvider,boolean,int,int)">draw</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;text,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#draw(net.minecraft.client.util.math.MatrixStack,net.minecraft.text.StringRenderable,float,float,int)">draw</a></span>&#8203;(<a href="../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
+<a href="../../text/StringRenderable.html" title="interface in net.minecraft.text">StringRenderable</a>&nbsp;text,
+float&nbsp;x,
+float&nbsp;y,
+int&nbsp;color)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i5">
+<td class="colFirst"><code>int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#draw(net.minecraft.text.StringRenderable,float,float,int,boolean,net.minecraft.util.math.Matrix4f,net.minecraft.client.render.VertexConsumerProvider,boolean,int,int)">draw</a></span>&#8203;(<a href="../../text/StringRenderable.html" title="interface in net.minecraft.text">StringRenderable</a>&nbsp;text,
+float&nbsp;x,
+float&nbsp;y,
+int&nbsp;color,
+boolean&nbsp;shadow,
+<a href="../../util/math/Matrix4f.html" title="class in net.minecraft.util.math">Matrix4f</a>&nbsp;matrix,
+<a href="../render/VertexConsumerProvider.html" title="interface in net.minecraft.client.render">VertexConsumerProvider</a>&nbsp;vertexConsumers,
+boolean&nbsp;seeThrough,
+int&nbsp;backgroundColor,
+int&nbsp;light)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i6">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#draw(net.minecraft.text.StringRenderable,float,float,int,net.minecraft.util.math.Matrix4f,boolean)">draw</a></span>&#8203;(<a href="../../text/StringRenderable.html" title="interface in net.minecraft.text">StringRenderable</a>&nbsp;text,
+float&nbsp;x,
+float&nbsp;y,
+int&nbsp;color,
+<a href="../../util/math/Matrix4f.html" title="class in net.minecraft.util.math">Matrix4f</a>&nbsp;matrix,
+boolean&nbsp;shadow)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i7">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#drawGlyph(net.minecraft.client.font.GlyphRenderer,boolean,boolean,float,float,float,net.minecraft.util.math.Matrix4f,net.minecraft.client.render.VertexConsumer,float,float,float,float,int)">drawGlyph</a></span>&#8203;(<a href="GlyphRenderer.html" title="class in net.minecraft.client.font">GlyphRenderer</a>&nbsp;glyphRenderer,
+boolean&nbsp;bold,
+boolean&nbsp;italic,
+float&nbsp;weight,
+float&nbsp;x,
+float&nbsp;y,
+<a href="../../util/math/Matrix4f.html" title="class in net.minecraft.util.math">Matrix4f</a>&nbsp;matrix,
+<a href="../render/VertexConsumer.html" title="interface in net.minecraft.client.render">VertexConsumer</a>&nbsp;vertexConsumer,
+float&nbsp;red,
+float&nbsp;green,
+float&nbsp;blue,
+float&nbsp;alpha,
+int&nbsp;light)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i8">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#drawInternal(java.lang.String,float,float,int,boolean,net.minecraft.util.math.Matrix4f,net.minecraft.client.render.VertexConsumerProvider,boolean,int,int,boolean)">drawInternal</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;text,
+float&nbsp;x,
+float&nbsp;y,
+int&nbsp;color,
+boolean&nbsp;shadow,
+<a href="../../util/math/Matrix4f.html" title="class in net.minecraft.util.math">Matrix4f</a>&nbsp;matrix,
+<a href="../render/VertexConsumerProvider.html" title="interface in net.minecraft.client.render">VertexConsumerProvider</a>&nbsp;vertexConsumers,
+boolean&nbsp;seeThrough,
+int&nbsp;backgroundColor,
+int&nbsp;light,
+boolean&nbsp;mirror)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i9">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#drawInternal(net.minecraft.text.StringRenderable,float,float,int,boolean,net.minecraft.util.math.Matrix4f,net.minecraft.client.render.VertexConsumerProvider,boolean,int,int)">drawInternal</a></span>&#8203;(<a href="../../text/StringRenderable.html" title="interface in net.minecraft.text">StringRenderable</a>&nbsp;text,
 float&nbsp;x,
 float&nbsp;y,
 int&nbsp;color,
@@ -205,95 +342,134 @@ int&nbsp;backgroundColor,
 int&nbsp;light)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i3">
+<tr class="altColor" id="i10">
+<td class="colFirst"><code>private float</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#drawLayer(java.lang.String,float,float,int,boolean,net.minecraft.util.math.Matrix4f,net.minecraft.client.render.VertexConsumerProvider,boolean,int,int)">drawLayer</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;text,
+float&nbsp;x,
+float&nbsp;y,
+int&nbsp;color,
+boolean&nbsp;shadow,
+<a href="../../util/math/Matrix4f.html" title="class in net.minecraft.util.math">Matrix4f</a>&nbsp;matrix,
+<a href="../render/VertexConsumerProvider.html" title="interface in net.minecraft.client.render">VertexConsumerProvider</a>&nbsp;vertexConsumerProvider,
+boolean&nbsp;seeThrough,
+int&nbsp;underlineColor,
+int&nbsp;light)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i11">
+<td class="colFirst"><code>private float</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#drawLayer(net.minecraft.text.StringRenderable,float,float,int,boolean,net.minecraft.util.math.Matrix4f,net.minecraft.client.render.VertexConsumerProvider,boolean,int,int)">drawLayer</a></span>&#8203;(<a href="../../text/StringRenderable.html" title="interface in net.minecraft.text">StringRenderable</a>&nbsp;text,
+float&nbsp;x,
+float&nbsp;y,
+int&nbsp;color,
+boolean&nbsp;shadow,
+<a href="../../util/math/Matrix4f.html" title="class in net.minecraft.util.math">Matrix4f</a>&nbsp;matrix,
+<a href="../render/VertexConsumerProvider.html" title="interface in net.minecraft.client.render">VertexConsumerProvider</a>&nbsp;vertexConsumerProvider,
+boolean&nbsp;seeThrough,
+int&nbsp;underlineColor,
+int&nbsp;light)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i12">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#drawTrimmed(java.lang.String,int,int,int,int)">drawTrimmed</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;text,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#drawTrimmed(net.minecraft.text.StringRenderable,int,int,int,int)">drawTrimmed</a></span>&#8203;(<a href="../../text/StringRenderable.html" title="interface in net.minecraft.text">StringRenderable</a>&nbsp;text,
 int&nbsp;x,
 int&nbsp;y,
 int&nbsp;maxWidth,
 int&nbsp;color)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i4">
+<tr class="rowColor" id="i13">
 <td class="colFirst"><code>int</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#drawWithShadow(java.lang.String,float,float,int)">drawWithShadow</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;text,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#drawWithShadow(net.minecraft.client.util.math.MatrixStack,java.lang.String,float,float,int)">drawWithShadow</a></span>&#8203;(<a href="../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;text,
 float&nbsp;x,
 float&nbsp;y,
 int&nbsp;color)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i5">
+<tr class="altColor" id="i14">
 <td class="colFirst"><code>int</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#findWordEdge(java.lang.String,int,int,boolean)">findWordEdge</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;text,
-int&nbsp;direction,
-int&nbsp;position,
-boolean&nbsp;skipWhitespaceToRightOfWord)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#drawWithShadow(net.minecraft.client.util.math.MatrixStack,java.lang.String,float,float,int,boolean)">drawWithShadow</a></span>&#8203;(<a href="../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;text,
+float&nbsp;x,
+float&nbsp;y,
+int&nbsp;color,
+boolean&nbsp;rightToLeft)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i6">
+<tr class="rowColor" id="i15">
 <td class="colFirst"><code>int</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getCharacterCountForWidth(java.lang.String,int)">getCharacterCountForWidth</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;text,
-int&nbsp;offset)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#drawWithShadow(net.minecraft.client.util.math.MatrixStack,net.minecraft.text.StringRenderable,float,float,int)">drawWithShadow</a></span>&#8203;(<a href="../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
+<a href="../../text/StringRenderable.html" title="interface in net.minecraft.text">StringRenderable</a>&nbsp;text,
+float&nbsp;x,
+float&nbsp;y,
+int&nbsp;color)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i7">
-<td class="colFirst"><code>float</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getCharWidth(char)">getCharWidth</a></span>&#8203;(char&nbsp;character)</code></th>
+<tr class="altColor" id="i16">
+<td class="colFirst"><code>private <a href="FontStorage.html" title="class in net.minecraft.client.font">FontStorage</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getFontStorage(net.minecraft.util.Identifier)">getFontStorage</a></span>&#8203;(<a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;id)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i8">
+<tr class="rowColor" id="i17">
 <td class="colFirst"><code>int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getStringBoundedHeight(java.lang.String,int)">getStringBoundedHeight</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;text,
 int&nbsp;maxWidth)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i9">
-<td class="colFirst"><code>int</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getStringWidth(java.lang.String)">getStringWidth</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;text)</code></th>
+<tr class="altColor" id="i18">
+<td class="colFirst"><code><a href="TextHandler.html" title="class in net.minecraft.client.font">TextHandler</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getTextHandler()">getTextHandler</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i10">
+<tr class="rowColor" id="i19">
+<td class="colFirst"><code>int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getWidth(java.lang.String)">getWidth</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;text)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i20">
+<td class="colFirst"><code>int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getWidth(net.minecraft.text.StringRenderable)">getWidth</a></span>&#8203;(<a href="../../text/StringRenderable.html" title="interface in net.minecraft.text">StringRenderable</a>&nbsp;stringRenderable)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i21">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isRightToLeft()">isRightToLeft</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i11">
+<tr class="altColor" id="i22">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#mirror(java.lang.String)">mirror</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;text)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i12">
-<td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setFonts(java.util.List)">setFonts</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="Font.html" title="interface in net.minecraft.client.font">Font</a>&gt;&nbsp;fonts)</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="rowColor" id="i13">
-<td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setRightToLeft(boolean)">setRightToLeft</a></span>&#8203;(boolean&nbsp;rightToLeft)</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="altColor" id="i14">
+<tr class="rowColor" id="i23">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#trimToWidth(java.lang.String,int)">trimToWidth</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;text,
-int&nbsp;width)</code></th>
+int&nbsp;maxWidth)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i15">
+<tr class="altColor" id="i24">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#trimToWidth(java.lang.String,int,boolean)">trimToWidth</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;text,
-int&nbsp;width,
-boolean&nbsp;rightToLeft)</code></th>
+int&nbsp;maxWidth,
+boolean&nbsp;backwards)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i16">
-<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#wrapStringToWidth(java.lang.String,int)">wrapStringToWidth</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;text,
+<tr class="rowColor" id="i25">
+<td class="colFirst"><code><a href="../../text/StringRenderable.html" title="interface in net.minecraft.text">StringRenderable</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#trimToWidth(net.minecraft.text.StringRenderable,int)">trimToWidth</a></span>&#8203;(<a href="../../text/StringRenderable.html" title="interface in net.minecraft.text">StringRenderable</a>&nbsp;text,
 int&nbsp;width)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i17">
-<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#wrapStringToWidthAsList(java.lang.String,int)">wrapStringToWidthAsList</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;text,
+<tr class="altColor" id="i26">
+<td class="colFirst"><code>private static int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#tweakTransparency(int)">tweakTransparency</a></span>&#8203;(int&nbsp;argb)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i27">
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../../text/StringRenderable.html" title="interface in net.minecraft.text">StringRenderable</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#wrapLines(net.minecraft.text.StringRenderable,int)">wrapLines</a></span>&#8203;(<a href="../../text/StringRenderable.html" title="interface in net.minecraft.text">StringRenderable</a>&nbsp;text,
 int&nbsp;width)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -321,6 +497,12 @@ int&nbsp;width)</code></th>
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
+<h3><a id="FORWARD_SHIFT">FORWARD_SHIFT</a></h3>
+<div class="memberSignature"><span class="modifiers">private static final</span>&nbsp;<span class="returnType"><a href="../util/math/Vector3f.html" title="class in net.minecraft.client.util.math">Vector3f</a></span>&nbsp;<span class="memberName">FORWARD_SHIFT</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="fontHeight">fontHeight</a></h3>
 <div class="memberSignature"><span class="modifiers">public final</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">fontHeight</span></div>
 <dl>
@@ -335,6 +517,18 @@ int&nbsp;width)</code></th>
 <div class="memberSignature"><span class="modifiers">public final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a></span>&nbsp;<span class="memberName">random</span></div>
 </section>
 </li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="fontStorageAccessor">fontStorageAccessor</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;<a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>,&#8203;<a href="FontStorage.html" title="class in net.minecraft.client.font">FontStorage</a>&gt;</span>&nbsp;<span class="memberName">fontStorageAccessor</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="handler">handler</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="TextHandler.html" title="class in net.minecraft.client.font">TextHandler</a></span>&nbsp;<span class="memberName">handler</span></div>
+</section>
+</li>
 </ul>
 </section>
 </li>
@@ -347,9 +541,8 @@ int&nbsp;width)</code></th>
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="&lt;init&gt;(net.minecraft.client.texture.TextureManager,net.minecraft.client.font.FontStorage)">TextRenderer</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">TextRenderer</span>&#8203;(<span class="arguments"><a href="../texture/TextureManager.html" title="class in net.minecraft.client.texture">TextureManager</a>&nbsp;textureManager,
-<a href="FontStorage.html" title="class in net.minecraft.client.font">FontStorage</a>&nbsp;fontStorage)</span></div>
+<h3><a id="&lt;init&gt;(java.util.function.Function)">TextRenderer</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">TextRenderer</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Function</a>&lt;<a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>,&#8203;<a href="FontStorage.html" title="class in net.minecraft.client.font">FontStorage</a>&gt;&nbsp;fontStorageAccessor)</span></div>
 </section>
 </li>
 </ul>
@@ -364,24 +557,15 @@ int&nbsp;width)</code></th>
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="setFonts(java.util.List)">setFonts</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setFonts</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="Font.html" title="interface in net.minecraft.client.font">Font</a>&gt;&nbsp;fonts)</span></div>
+<h3><a id="getFontStorage(net.minecraft.util.Identifier)">getFontStorage</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="FontStorage.html" title="class in net.minecraft.client.font">FontStorage</a></span>&nbsp;<span class="memberName">getFontStorage</span>&#8203;(<span class="arguments"><a href="../../util/Identifier.html" title="class in net.minecraft.util">Identifier</a>&nbsp;id)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="close()">close</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">close</span>()</div>
-<dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseable.html?is-external=true#close()" title="class or interface in java.lang" class="externalLink">close</a></code>&nbsp;in interface&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseable.html?is-external=true" title="class or interface in java.lang" class="externalLink">AutoCloseable</a></code></dd>
-</dl>
-</section>
-</li>
-<li class="blockList">
-<section class="detail">
-<h3><a id="drawWithShadow(java.lang.String,float,float,int)">drawWithShadow</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">drawWithShadow</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;text,
+<h3><a id="drawWithShadow(net.minecraft.client.util.math.MatrixStack,java.lang.String,float,float,int)">drawWithShadow</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">drawWithShadow</span>&#8203;(<span class="arguments"><a href="../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;text,
 float&nbsp;x,
 float&nbsp;y,
 int&nbsp;color)</span></div>
@@ -389,8 +573,40 @@ int&nbsp;color)</span></div>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="draw(java.lang.String,float,float,int)">draw</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">draw</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;text,
+<h3><a id="drawWithShadow(net.minecraft.client.util.math.MatrixStack,java.lang.String,float,float,int,boolean)">drawWithShadow</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">drawWithShadow</span>&#8203;(<span class="arguments"><a href="../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;text,
+float&nbsp;x,
+float&nbsp;y,
+int&nbsp;color,
+boolean&nbsp;rightToLeft)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="draw(net.minecraft.client.util.math.MatrixStack,java.lang.String,float,float,int)">draw</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">draw</span>&#8203;(<span class="arguments"><a href="../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;text,
+float&nbsp;x,
+float&nbsp;y,
+int&nbsp;color)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="drawWithShadow(net.minecraft.client.util.math.MatrixStack,net.minecraft.text.StringRenderable,float,float,int)">drawWithShadow</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">drawWithShadow</span>&#8203;(<span class="arguments"><a href="../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
+<a href="../../text/StringRenderable.html" title="interface in net.minecraft.text">StringRenderable</a>&nbsp;text,
+float&nbsp;x,
+float&nbsp;y,
+int&nbsp;color)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="draw(net.minecraft.client.util.math.MatrixStack,net.minecraft.text.StringRenderable,float,float,int)">draw</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">draw</span>&#8203;(<span class="arguments"><a href="../util/math/MatrixStack.html" title="class in net.minecraft.client.util.math">MatrixStack</a>&nbsp;matrices,
+<a href="../../text/StringRenderable.html" title="interface in net.minecraft.text">StringRenderable</a>&nbsp;text,
 float&nbsp;x,
 float&nbsp;y,
 int&nbsp;color)</span></div>
@@ -404,8 +620,99 @@ int&nbsp;color)</span></div>
 </li>
 <li class="blockList">
 <section class="detail">
+<h3><a id="draw(java.lang.String,float,float,int,net.minecraft.util.math.Matrix4f,boolean,boolean)">draw</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">draw</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;text,
+float&nbsp;x,
+float&nbsp;y,
+int&nbsp;color,
+<a href="../../util/math/Matrix4f.html" title="class in net.minecraft.util.math">Matrix4f</a>&nbsp;matrix,
+boolean&nbsp;shadow,
+boolean&nbsp;mirror)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="draw(net.minecraft.text.StringRenderable,float,float,int,net.minecraft.util.math.Matrix4f,boolean)">draw</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">draw</span>&#8203;(<span class="arguments"><a href="../../text/StringRenderable.html" title="interface in net.minecraft.text">StringRenderable</a>&nbsp;text,
+float&nbsp;x,
+float&nbsp;y,
+int&nbsp;color,
+<a href="../../util/math/Matrix4f.html" title="class in net.minecraft.util.math">Matrix4f</a>&nbsp;matrix,
+boolean&nbsp;shadow)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="draw(java.lang.String,float,float,int,boolean,net.minecraft.util.math.Matrix4f,net.minecraft.client.render.VertexConsumerProvider,boolean,int,int)">draw</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">draw</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;text,
+float&nbsp;x,
+float&nbsp;y,
+int&nbsp;color,
+boolean&nbsp;shadow,
+<a href="../../util/math/Matrix4f.html" title="class in net.minecraft.util.math">Matrix4f</a>&nbsp;matrix,
+<a href="../render/VertexConsumerProvider.html" title="interface in net.minecraft.client.render">VertexConsumerProvider</a>&nbsp;vertexConsumers,
+boolean&nbsp;seeThrough,
+int&nbsp;backgroundColor,
+int&nbsp;light)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="draw(java.lang.String,float,float,int,boolean,net.minecraft.util.math.Matrix4f,net.minecraft.client.render.VertexConsumerProvider,boolean,int,int,boolean)">draw</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">draw</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;text,
+float&nbsp;x,
+float&nbsp;y,
+int&nbsp;color,
+boolean&nbsp;shadow,
+<a href="../../util/math/Matrix4f.html" title="class in net.minecraft.util.math">Matrix4f</a>&nbsp;matrix,
+<a href="../render/VertexConsumerProvider.html" title="interface in net.minecraft.client.render">VertexConsumerProvider</a>&nbsp;vertexConsumers,
+boolean&nbsp;seeThrough,
+int&nbsp;backgroundColor,
+int&nbsp;light,
+boolean&nbsp;rightToLeft)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="draw(net.minecraft.text.StringRenderable,float,float,int,boolean,net.minecraft.util.math.Matrix4f,net.minecraft.client.render.VertexConsumerProvider,boolean,int,int)">draw</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">draw</span>&#8203;(<span class="arguments"><a href="../../text/StringRenderable.html" title="interface in net.minecraft.text">StringRenderable</a>&nbsp;text,
+float&nbsp;x,
+float&nbsp;y,
+int&nbsp;color,
+boolean&nbsp;shadow,
+<a href="../../util/math/Matrix4f.html" title="class in net.minecraft.util.math">Matrix4f</a>&nbsp;matrix,
+<a href="../render/VertexConsumerProvider.html" title="interface in net.minecraft.client.render">VertexConsumerProvider</a>&nbsp;vertexConsumers,
+boolean&nbsp;seeThrough,
+int&nbsp;backgroundColor,
+int&nbsp;light)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="tweakTransparency(int)">tweakTransparency</a></h3>
+<div class="memberSignature"><span class="modifiers">private static</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">tweakTransparency</span>&#8203;(<span class="arguments">int&nbsp;argb)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="drawInternal(java.lang.String,float,float,int,boolean,net.minecraft.util.math.Matrix4f,net.minecraft.client.render.VertexConsumerProvider,boolean,int,int,boolean)">drawInternal</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">drawInternal</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;text,
+float&nbsp;x,
+float&nbsp;y,
+int&nbsp;color,
+boolean&nbsp;shadow,
+<a href="../../util/math/Matrix4f.html" title="class in net.minecraft.util.math">Matrix4f</a>&nbsp;matrix,
+<a href="../render/VertexConsumerProvider.html" title="interface in net.minecraft.client.render">VertexConsumerProvider</a>&nbsp;vertexConsumers,
+boolean&nbsp;seeThrough,
+int&nbsp;backgroundColor,
+int&nbsp;light,
+boolean&nbsp;mirror)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="drawInternal(net.minecraft.text.StringRenderable,float,float,int,boolean,net.minecraft.util.math.Matrix4f,net.minecraft.client.render.VertexConsumerProvider,boolean,int,int)">drawInternal</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">drawInternal</span>&#8203;(<span class="arguments"><a href="../../text/StringRenderable.html" title="interface in net.minecraft.text">StringRenderable</a>&nbsp;text,
 float&nbsp;x,
 float&nbsp;y,
 int&nbsp;color,
@@ -419,35 +726,90 @@ int&nbsp;light)</span></div>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="getStringWidth(java.lang.String)">getStringWidth</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getStringWidth</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;text)</span></div>
+<h3><a id="drawLayer(java.lang.String,float,float,int,boolean,net.minecraft.util.math.Matrix4f,net.minecraft.client.render.VertexConsumerProvider,boolean,int,int)">drawLayer</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">float</span>&nbsp;<span class="memberName">drawLayer</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;text,
+float&nbsp;x,
+float&nbsp;y,
+int&nbsp;color,
+boolean&nbsp;shadow,
+<a href="../../util/math/Matrix4f.html" title="class in net.minecraft.util.math">Matrix4f</a>&nbsp;matrix,
+<a href="../render/VertexConsumerProvider.html" title="interface in net.minecraft.client.render">VertexConsumerProvider</a>&nbsp;vertexConsumerProvider,
+boolean&nbsp;seeThrough,
+int&nbsp;underlineColor,
+int&nbsp;light)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="getCharWidth(char)">getCharWidth</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">float</span>&nbsp;<span class="memberName">getCharWidth</span>&#8203;(<span class="arguments">char&nbsp;character)</span></div>
+<h3><a id="drawLayer(net.minecraft.text.StringRenderable,float,float,int,boolean,net.minecraft.util.math.Matrix4f,net.minecraft.client.render.VertexConsumerProvider,boolean,int,int)">drawLayer</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">float</span>&nbsp;<span class="memberName">drawLayer</span>&#8203;(<span class="arguments"><a href="../../text/StringRenderable.html" title="interface in net.minecraft.text">StringRenderable</a>&nbsp;text,
+float&nbsp;x,
+float&nbsp;y,
+int&nbsp;color,
+boolean&nbsp;shadow,
+<a href="../../util/math/Matrix4f.html" title="class in net.minecraft.util.math">Matrix4f</a>&nbsp;matrix,
+<a href="../render/VertexConsumerProvider.html" title="interface in net.minecraft.client.render">VertexConsumerProvider</a>&nbsp;vertexConsumerProvider,
+boolean&nbsp;seeThrough,
+int&nbsp;underlineColor,
+int&nbsp;light)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="trimToWidth(java.lang.String,int)">trimToWidth</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></span>&nbsp;<span class="memberName">trimToWidth</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;text,
-int&nbsp;width)</span></div>
+<h3><a id="drawGlyph(net.minecraft.client.font.GlyphRenderer,boolean,boolean,float,float,float,net.minecraft.util.math.Matrix4f,net.minecraft.client.render.VertexConsumer,float,float,float,float,int)">drawGlyph</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">drawGlyph</span>&#8203;(<span class="arguments"><a href="GlyphRenderer.html" title="class in net.minecraft.client.font">GlyphRenderer</a>&nbsp;glyphRenderer,
+boolean&nbsp;bold,
+boolean&nbsp;italic,
+float&nbsp;weight,
+float&nbsp;x,
+float&nbsp;y,
+<a href="../../util/math/Matrix4f.html" title="class in net.minecraft.util.math">Matrix4f</a>&nbsp;matrix,
+<a href="../render/VertexConsumer.html" title="interface in net.minecraft.client.render">VertexConsumer</a>&nbsp;vertexConsumer,
+float&nbsp;red,
+float&nbsp;green,
+float&nbsp;blue,
+float&nbsp;alpha,
+int&nbsp;light)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="getWidth(java.lang.String)">getWidth</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getWidth</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;text)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="getWidth(net.minecraft.text.StringRenderable)">getWidth</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getWidth</span>&#8203;(<span class="arguments"><a href="../../text/StringRenderable.html" title="interface in net.minecraft.text">StringRenderable</a>&nbsp;stringRenderable)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="trimToWidth(java.lang.String,int,boolean)">trimToWidth</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></span>&nbsp;<span class="memberName">trimToWidth</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;text,
-int&nbsp;width,
-boolean&nbsp;rightToLeft)</span></div>
+int&nbsp;maxWidth,
+boolean&nbsp;backwards)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="drawTrimmed(java.lang.String,int,int,int,int)">drawTrimmed</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">drawTrimmed</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;text,
+<h3><a id="trimToWidth(java.lang.String,int)">trimToWidth</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></span>&nbsp;<span class="memberName">trimToWidth</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;text,
+int&nbsp;maxWidth)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="trimToWidth(net.minecraft.text.StringRenderable,int)">trimToWidth</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../text/StringRenderable.html" title="interface in net.minecraft.text">StringRenderable</a></span>&nbsp;<span class="memberName">trimToWidth</span>&#8203;(<span class="arguments"><a href="../../text/StringRenderable.html" title="interface in net.minecraft.text">StringRenderable</a>&nbsp;text,
+int&nbsp;width)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="drawTrimmed(net.minecraft.text.StringRenderable,int,int,int,int)">drawTrimmed</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">drawTrimmed</span>&#8203;(<span class="arguments"><a href="../../text/StringRenderable.html" title="interface in net.minecraft.text">StringRenderable</a>&nbsp;text,
 int&nbsp;x,
 int&nbsp;y,
 int&nbsp;maxWidth,
@@ -463,44 +825,21 @@ int&nbsp;maxWidth)</span></div>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="setRightToLeft(boolean)">setRightToLeft</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setRightToLeft</span>&#8203;(<span class="arguments">boolean&nbsp;rightToLeft)</span></div>
-</section>
-</li>
-<li class="blockList">
-<section class="detail">
-<h3><a id="wrapStringToWidthAsList(java.lang.String,int)">wrapStringToWidthAsList</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&gt;</span>&nbsp;<span class="memberName">wrapStringToWidthAsList</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;text,
+<h3><a id="wrapLines(net.minecraft.text.StringRenderable,int)">wrapLines</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../../text/StringRenderable.html" title="interface in net.minecraft.text">StringRenderable</a>&gt;</span>&nbsp;<span class="memberName">wrapLines</span>&#8203;(<span class="arguments"><a href="../../text/StringRenderable.html" title="interface in net.minecraft.text">StringRenderable</a>&nbsp;text,
 int&nbsp;width)</span></div>
-</section>
-</li>
-<li class="blockList">
-<section class="detail">
-<h3><a id="wrapStringToWidth(java.lang.String,int)">wrapStringToWidth</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></span>&nbsp;<span class="memberName">wrapStringToWidth</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;text,
-int&nbsp;width)</span></div>
-</section>
-</li>
-<li class="blockList">
-<section class="detail">
-<h3><a id="getCharacterCountForWidth(java.lang.String,int)">getCharacterCountForWidth</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getCharacterCountForWidth</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;text,
-int&nbsp;offset)</span></div>
-</section>
-</li>
-<li class="blockList">
-<section class="detail">
-<h3><a id="findWordEdge(java.lang.String,int,int,boolean)">findWordEdge</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">findWordEdge</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;text,
-int&nbsp;direction,
-int&nbsp;position,
-boolean&nbsp;skipWhitespaceToRightOfWord)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="isRightToLeft()">isRightToLeft</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isRightToLeft</span>()</div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="getTextHandler()">getTextHandler</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="TextHandler.html" title="class in net.minecraft.client.font">TextHandler</a></span>&nbsp;<span class="memberName">getTextHandler</span>()</div>
 </section>
 </li>
 </ul>
@@ -535,7 +874,7 @@ boolean&nbsp;skipWhitespaceToRightOfWord)</span></div>
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#nested.class.summary">Nested</a>&nbsp;|&nbsp;</li>
 <li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>

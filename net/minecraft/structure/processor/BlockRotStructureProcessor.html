@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10};
+<script type="text/javascript">var data = {"i0":10,"i1":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -56,13 +56,13 @@ loadScripts(document, 'script');</script>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
@@ -98,6 +98,38 @@ extends <a href="StructureProcessor.html" title="class in net.minecraft.structur
 </section>
 <section class="summary">
 <ul class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<li class="blockList">
+<section class="fieldSummary"><a id="field.summary">
+<!--   -->
+</a>
+<h2>Field Summary</h2>
+<div class="memberSummary">
+<table>
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<thead>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colSecond" scope="col">Field</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>static com.mojang.serialization.Codec&lt;<a href="BlockRotStructureProcessor.html" title="class in net.minecraft.structure.processor">BlockRotStructureProcessor</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#CODEC">CODEC</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private float</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#integrity">integrity</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</li>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <li class="blockList">
 <section class="constructorSummary"><a id="constructor.summary">
@@ -116,10 +148,6 @@ extends <a href="StructureProcessor.html" title="class in net.minecraft.structur
 <tbody>
 <tr class="altColor">
 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(float)">BlockRotStructureProcessor</a></span>&#8203;(float&nbsp;integrity)</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(com.mojang.datafixers.Dynamic)">BlockRotStructureProcessor</a></span>&#8203;(com.mojang.datafixers.Dynamic&lt;?&gt;&nbsp;dynamic)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -146,7 +174,7 @@ extends <a href="StructureProcessor.html" title="class in net.minecraft.structur
 </thead>
 <tbody>
 <tr class="altColor" id="i0">
-<td class="colFirst"><code>protected <a href="StructureProcessorType.html" title="interface in net.minecraft.structure.processor">StructureProcessorType</a></code></td>
+<td class="colFirst"><code>protected <a href="StructureProcessorType.html" title="interface in net.minecraft.structure.processor">StructureProcessorType</a>&lt;?&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getType()">getType</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -160,20 +188,10 @@ extends <a href="StructureProcessor.html" title="class in net.minecraft.structur
 <a href="../StructurePlacementData.html" title="class in net.minecraft.structure">StructurePlacementData</a>&nbsp;structurePlacementData)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i2">
-<td class="colFirst"><code>protected &lt;T&gt;&nbsp;com.mojang.datafixers.Dynamic&lt;T&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#rawToDynamic(com.mojang.datafixers.types.DynamicOps)">rawToDynamic</a></span>&#8203;(com.mojang.datafixers.types.DynamicOps&lt;T&gt;&nbsp;dynamicOps)</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
 </tbody>
 </table>
 </div>
 </div>
-<div class="inheritedList">
-<h3>Methods inherited from class&nbsp;net.minecraft.structure.processor.<a href="StructureProcessor.html" title="class in net.minecraft.structure.processor">StructureProcessor</a></h3>
-<a id="methods.inherited.from.class.net.minecraft.structure.processor.StructureProcessor">
-<!--   -->
-</a><code><a href="StructureProcessor.html#toDynamic(com.mojang.datafixers.types.DynamicOps)">toDynamic</a></code></div>
 <div class="inheritedList">
 <h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></h3>
 <a id="methods.inherited.from.class.java.lang.Object">
@@ -185,6 +203,28 @@ extends <a href="StructureProcessor.html" title="class in net.minecraft.structur
 </section>
 <section class="details">
 <ul class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<li class="blockList">
+<section class="fieldDetails"><a id="field.detail">
+<!--   -->
+</a>
+<h2>Field Details</h2>
+<ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="CODEC">CODEC</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType">com.mojang.serialization.Codec&lt;<a href="BlockRotStructureProcessor.html" title="class in net.minecraft.structure.processor">BlockRotStructureProcessor</a>&gt;</span>&nbsp;<span class="memberName">CODEC</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="integrity">integrity</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType">float</span>&nbsp;<span class="memberName">integrity</span></div>
+</section>
+</li>
+</ul>
+</section>
+</li>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <li class="blockList">
 <section class="constructorDetails"><a id="constructor.detail">
@@ -196,12 +236,6 @@ extends <a href="StructureProcessor.html" title="class in net.minecraft.structur
 <section class="detail">
 <h3><a id="&lt;init&gt;(float)">BlockRotStructureProcessor</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">BlockRotStructureProcessor</span>&#8203;(<span class="arguments">float&nbsp;integrity)</span></div>
-</section>
-</li>
-<li class="blockList">
-<section class="detail">
-<h3><a id="&lt;init&gt;(com.mojang.datafixers.Dynamic)">BlockRotStructureProcessor</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">BlockRotStructureProcessor</span>&#8203;(<span class="arguments">com.mojang.datafixers.Dynamic&lt;?&gt;&nbsp;dynamic)</span></div>
 </section>
 </li>
 </ul>
@@ -217,7 +251,7 @@ extends <a href="StructureProcessor.html" title="class in net.minecraft.structur
 <li class="blockList">
 <section class="detail">
 <h3><a id="process(net.minecraft.world.WorldView,net.minecraft.util.math.BlockPos,net.minecraft.util.math.BlockPos,net.minecraft.structure.Structure.StructureBlockInfo,net.minecraft.structure.Structure.StructureBlockInfo,net.minecraft.structure.StructurePlacementData)">process</a></h3>
-<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 </span><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../Structure.StructureBlockInfo.html" title="class in net.minecraft.structure">Structure.StructureBlockInfo</a></span>&nbsp;<span class="memberName">process</span>&#8203;(<span class="arguments"><a href="../../world/WorldView.html" title="interface in net.minecraft.world">WorldView</a>&nbsp;worldView,
 <a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
 <a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;blockPos,
@@ -233,20 +267,10 @@ extends <a href="StructureProcessor.html" title="class in net.minecraft.structur
 <li class="blockList">
 <section class="detail">
 <h3><a id="getType()">getType</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType"><a href="StructureProcessorType.html" title="interface in net.minecraft.structure.processor">StructureProcessorType</a></span>&nbsp;<span class="memberName">getType</span>()</div>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="returnType"><a href="StructureProcessorType.html" title="interface in net.minecraft.structure.processor">StructureProcessorType</a>&lt;?&gt;</span>&nbsp;<span class="memberName">getType</span>()</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="StructureProcessor.html#getType()">getType</a></code>&nbsp;in class&nbsp;<code><a href="StructureProcessor.html" title="class in net.minecraft.structure.processor">StructureProcessor</a></code></dd>
-</dl>
-</section>
-</li>
-<li class="blockList">
-<section class="detail">
-<h3><a id="rawToDynamic(com.mojang.datafixers.types.DynamicOps)">rawToDynamic</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="typeParameters">&lt;T&gt;</span>&nbsp;<span class="returnType">com.mojang.datafixers.Dynamic&lt;T&gt;</span>&nbsp;<span class="memberName">rawToDynamic</span>&#8203;(<span class="arguments">com.mojang.datafixers.types.DynamicOps&lt;T&gt;&nbsp;dynamicOps)</span></div>
-<dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="StructureProcessor.html#rawToDynamic(com.mojang.datafixers.types.DynamicOps)">rawToDynamic</a></code>&nbsp;in class&nbsp;<code><a href="StructureProcessor.html" title="class in net.minecraft.structure.processor">StructureProcessor</a></code></dd>
 </dl>
 </section>
 </li>
@@ -283,13 +307,13 @@ extends <a href="StructureProcessor.html" title="class in net.minecraft.structur
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>

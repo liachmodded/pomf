@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":10};
+<script type="text/javascript">var data = {"i0":10,"i1":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -87,7 +87,7 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="contentContainer">
 <div class="inheritance" title="Inheritance Tree"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">java.lang.Object</a>
-<div class="inheritance"><a href="LootEntry.html" title="class in net.minecraft.loot.entry">net.minecraft.loot.entry.LootEntry</a>
+<div class="inheritance"><a href="LootPoolEntry.html" title="class in net.minecraft.loot.entry">net.minecraft.loot.entry.LootPoolEntry</a>
 <div class="inheritance"><a href="CombinedEntry.html" title="class in net.minecraft.loot.entry">net.minecraft.loot.entry.CombinedEntry</a>
 <div class="inheritance">net.minecraft.loot.entry.GroupEntry</div>
 </div>
@@ -114,12 +114,12 @@ extends <a href="CombinedEntry.html" title="class in net.minecraft.loot.entry">C
 <h2>Nested classes/interfaces inherited from class&nbsp;net.minecraft.loot.entry.<a href="CombinedEntry.html" title="class in net.minecraft.loot.entry">CombinedEntry</a></h2>
 <a id="nested.classes.inherited.from.class.net.minecraft.loot.entry.CombinedEntry">
 <!--   -->
-</a><code><a href="CombinedEntry.Factory.html" title="interface in net.minecraft.loot.entry">CombinedEntry.Factory</a>&lt;<a href="CombinedEntry.Factory.html" title="type parameter in CombinedEntry.Factory">T</a> extends <a href="CombinedEntry.html" title="class in net.minecraft.loot.entry">CombinedEntry</a>&gt;, <a href="CombinedEntry.Serializer.html" title="class in net.minecraft.loot.entry">CombinedEntry.Serializer</a>&lt;<a href="CombinedEntry.Serializer.html" title="type parameter in CombinedEntry.Serializer">T</a> extends <a href="CombinedEntry.html" title="class in net.minecraft.loot.entry">CombinedEntry</a>&gt;</code></div>
+</a><code><a href="CombinedEntry.Factory.html" title="interface in net.minecraft.loot.entry">CombinedEntry.Factory</a>&lt;<a href="CombinedEntry.Factory.html" title="type parameter in CombinedEntry.Factory">T</a> extends <a href="CombinedEntry.html" title="class in net.minecraft.loot.entry">CombinedEntry</a>&gt;</code></div>
 <div class="inheritedList">
-<h2>Nested classes/interfaces inherited from class&nbsp;net.minecraft.loot.entry.<a href="LootEntry.html" title="class in net.minecraft.loot.entry">LootEntry</a></h2>
-<a id="nested.classes.inherited.from.class.net.minecraft.loot.entry.LootEntry">
+<h2>Nested classes/interfaces inherited from class&nbsp;net.minecraft.loot.entry.<a href="LootPoolEntry.html" title="class in net.minecraft.loot.entry">LootPoolEntry</a></h2>
+<a id="nested.classes.inherited.from.class.net.minecraft.loot.entry.LootPoolEntry">
 <!--   -->
-</a><code><a href="LootEntry.Builder.html" title="class in net.minecraft.loot.entry">LootEntry.Builder</a>&lt;<a href="LootEntry.Builder.html" title="type parameter in LootEntry.Builder">T</a> extends <a href="LootEntry.Builder.html" title="class in net.minecraft.loot.entry">LootEntry.Builder</a>&lt;<a href="LootEntry.Builder.html" title="type parameter in LootEntry.Builder">T</a>&gt;&gt;</code></div>
+</a><code><a href="LootPoolEntry.Builder.html" title="class in net.minecraft.loot.entry">LootPoolEntry.Builder</a>&lt;<a href="LootPoolEntry.Builder.html" title="type parameter in LootPoolEntry.Builder">T</a> extends <a href="LootPoolEntry.Builder.html" title="class in net.minecraft.loot.entry">LootPoolEntry.Builder</a>&lt;<a href="LootPoolEntry.Builder.html" title="type parameter in LootPoolEntry.Builder">T</a>&gt;&gt;, <a href="LootPoolEntry.Serializer.html" title="class in net.minecraft.loot.entry">LootPoolEntry.Serializer</a>&lt;<a href="LootPoolEntry.Serializer.html" title="type parameter in LootPoolEntry.Serializer">T</a> extends <a href="LootPoolEntry.html" title="class in net.minecraft.loot.entry">LootPoolEntry</a>&gt;</code></div>
 </section>
 </li>
 <!-- =========== FIELD SUMMARY =========== -->
@@ -134,10 +134,10 @@ extends <a href="CombinedEntry.html" title="class in net.minecraft.loot.entry">C
 <!--   -->
 </a><code><a href="CombinedEntry.html#children">children</a></code></div>
 <div class="inheritedList">
-<h3>Fields inherited from class&nbsp;net.minecraft.loot.entry.<a href="LootEntry.html" title="class in net.minecraft.loot.entry">LootEntry</a></h3>
-<a id="fields.inherited.from.class.net.minecraft.loot.entry.LootEntry">
+<h3>Fields inherited from class&nbsp;net.minecraft.loot.entry.<a href="LootPoolEntry.html" title="class in net.minecraft.loot.entry">LootPoolEntry</a></h3>
+<a id="fields.inherited.from.class.net.minecraft.loot.entry.LootPoolEntry">
 <!--   -->
-</a><code><a href="LootEntry.html#conditions">conditions</a></code></div>
+</a><code><a href="LootPoolEntry.html#conditions">conditions</a></code></div>
 <div class="inheritedList">
 <h3>Fields inherited from interface&nbsp;net.minecraft.loot.entry.<a href="EntryCombiner.html" title="interface in net.minecraft.loot.entry">EntryCombiner</a></h3>
 <a id="fields.inherited.from.class.net.minecraft.loot.entry.EntryCombiner">
@@ -162,7 +162,7 @@ extends <a href="CombinedEntry.html" title="class in net.minecraft.loot.entry">C
 </thead>
 <tbody>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.loot.entry.LootEntry%5B%5D,net.minecraft.loot.condition.LootCondition%5B%5D)">GroupEntry</a></span>&#8203;(<a href="LootEntry.html" title="class in net.minecraft.loot.entry">LootEntry</a>[]&nbsp;children,
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.loot.entry.LootPoolEntry%5B%5D,net.minecraft.loot.condition.LootCondition%5B%5D)">GroupEntry</a></span>&#8203;(<a href="LootPoolEntry.html" title="class in net.minecraft.loot.entry">LootPoolEntry</a>[]&nbsp;children,
 <a href="../condition/LootCondition.html" title="interface in net.minecraft.loot.condition">LootCondition</a>[]&nbsp;conditions)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -194,6 +194,11 @@ extends <a href="CombinedEntry.html" title="class in net.minecraft.loot.entry">C
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#combine(net.minecraft.loot.entry.EntryCombiner%5B%5D)">combine</a></span>&#8203;(<a href="EntryCombiner.html" title="interface in net.minecraft.loot.entry">EntryCombiner</a>[]&nbsp;children)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
+<tr class="rowColor" id="i1">
+<td class="colFirst"><code><a href="LootPoolEntryType.html" title="class in net.minecraft.loot.entry">LootPoolEntryType</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getType()">getType</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -202,12 +207,12 @@ extends <a href="CombinedEntry.html" title="class in net.minecraft.loot.entry">C
 <h3>Methods inherited from class&nbsp;net.minecraft.loot.entry.<a href="CombinedEntry.html" title="class in net.minecraft.loot.entry">CombinedEntry</a></h3>
 <a id="methods.inherited.from.class.net.minecraft.loot.entry.CombinedEntry">
 <!--   -->
-</a><code><a href="CombinedEntry.html#check(net.minecraft.loot.LootTableReporter)">check</a>, <a href="CombinedEntry.html#createSerializer(net.minecraft.util.Identifier,java.lang.Class,net.minecraft.loot.entry.CombinedEntry.Factory)">createSerializer</a>, <a href="CombinedEntry.html#expand(net.minecraft.loot.context.LootContext,java.util.function.Consumer)">expand</a></code></div>
+</a><code><a href="CombinedEntry.html#createSerializer(net.minecraft.loot.entry.CombinedEntry.Factory)">createSerializer</a>, <a href="CombinedEntry.html#expand(net.minecraft.loot.context.LootContext,java.util.function.Consumer)">expand</a>, <a href="CombinedEntry.html#validate(net.minecraft.loot.LootTableReporter)">validate</a></code></div>
 <div class="inheritedList">
-<h3>Methods inherited from class&nbsp;net.minecraft.loot.entry.<a href="LootEntry.html" title="class in net.minecraft.loot.entry">LootEntry</a></h3>
-<a id="methods.inherited.from.class.net.minecraft.loot.entry.LootEntry">
+<h3>Methods inherited from class&nbsp;net.minecraft.loot.entry.<a href="LootPoolEntry.html" title="class in net.minecraft.loot.entry">LootPoolEntry</a></h3>
+<a id="methods.inherited.from.class.net.minecraft.loot.entry.LootPoolEntry">
 <!--   -->
-</a><code><a href="LootEntry.html#test(net.minecraft.loot.context.LootContext)">test</a></code></div>
+</a><code><a href="LootPoolEntry.html#test(net.minecraft.loot.context.LootContext)">test</a></code></div>
 <div class="inheritedList">
 <h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></h3>
 <a id="methods.inherited.from.class.java.lang.Object">
@@ -233,8 +238,8 @@ extends <a href="CombinedEntry.html" title="class in net.minecraft.loot.entry">C
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="&lt;init&gt;(net.minecraft.loot.entry.LootEntry[],net.minecraft.loot.condition.LootCondition[])">GroupEntry</a></h3>
-<div class="memberSignature"><span class="memberName">GroupEntry</span>&#8203;(<span class="arguments"><a href="LootEntry.html" title="class in net.minecraft.loot.entry">LootEntry</a>[]&nbsp;children,
+<h3><a id="&lt;init&gt;(net.minecraft.loot.entry.LootPoolEntry[],net.minecraft.loot.condition.LootCondition[])">GroupEntry</a></h3>
+<div class="memberSignature"><span class="memberName">GroupEntry</span>&#8203;(<span class="arguments"><a href="LootPoolEntry.html" title="class in net.minecraft.loot.entry">LootPoolEntry</a>[]&nbsp;children,
 <a href="../condition/LootCondition.html" title="interface in net.minecraft.loot.condition">LootCondition</a>[]&nbsp;conditions)</span></div>
 </section>
 </li>
@@ -248,6 +253,16 @@ extends <a href="CombinedEntry.html" title="class in net.minecraft.loot.entry">C
 </a>
 <h2>Method Details</h2>
 <ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="getType()">getType</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="LootPoolEntryType.html" title="class in net.minecraft.loot.entry">LootPoolEntryType</a></span>&nbsp;<span class="memberName">getType</span>()</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="LootPoolEntry.html#getType()">getType</a></code>&nbsp;in class&nbsp;<code><a href="LootPoolEntry.html" title="class in net.minecraft.loot.entry">LootPoolEntry</a></code></dd>
+</dl>
+</section>
+</li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="combine(net.minecraft.loot.entry.EntryCombiner[])">combine</a></h3>

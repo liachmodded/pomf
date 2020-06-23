@@ -158,22 +158,30 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tr class="rowColor">
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Predicate</a>&lt;<a href="../../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#NOT_MOUNTED">NOT_MOUNTED</a></span></code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Tests if an entity is not mounted.</div>
+</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Predicate</a>&lt;<a href="../../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#VALID_ENTITY">VALID_ENTITY</a></span></code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Tests if an entity is valid.</div>
+</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Predicate</a>&lt;<a href="../../entity/LivingEntity.html" title="class in net.minecraft.entity">LivingEntity</a>&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#VALID_ENTITY_LIVING">VALID_ENTITY_LIVING</a></span></code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="altColor">
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Predicate</a>&lt;<a href="../../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#VALID_INVENTORIES">VALID_INVENTORIES</a></span></code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Tests if an entity has a valid inventory.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Predicate</a>&lt;<a href="../../entity/LivingEntity.html" title="class in net.minecraft.entity">LivingEntity</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#VALID_LIVING_ENTITY">VALID_LIVING_ENTITY</a></span></code></th>
+<td class="colLast">
+<div class="block">Tests if a living entity is valid.</div>
+</td>
 </tr>
 </tbody>
 </table>
@@ -230,7 +238,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </tr>
 <tr class="rowColor" id="i1">
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Predicate</a>&lt;<a href="../../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#maximumDistance(double,double,double,double)">maximumDistance</a></span>&#8203;(double&nbsp;x,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#maxDistance(double,double,double,double)">maxDistance</a></span>&#8203;(double&nbsp;x,
 double&nbsp;y,
 double&nbsp;z,
 double&nbsp;double2)</code></th>
@@ -267,24 +275,57 @@ double&nbsp;double2)</code></th>
 <section class="detail">
 <h3><a id="VALID_ENTITY">VALID_ENTITY</a></h3>
 <div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Predicate</a>&lt;<a href="../../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&gt;</span>&nbsp;<span class="memberName">VALID_ENTITY</span></div>
+<div class="block">Tests if an entity is valid.
+
+ <p>An entity is valid when the entity is alive.</div>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../entity/Entity.html#isAlive()"><code>Entity.isAlive()</code></a></dd>
+</dl>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="VALID_ENTITY_LIVING">VALID_ENTITY_LIVING</a></h3>
-<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Predicate</a>&lt;<a href="../../entity/LivingEntity.html" title="class in net.minecraft.entity">LivingEntity</a>&gt;</span>&nbsp;<span class="memberName">VALID_ENTITY_LIVING</span></div>
+<h3><a id="VALID_LIVING_ENTITY">VALID_LIVING_ENTITY</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Predicate</a>&lt;<a href="../../entity/LivingEntity.html" title="class in net.minecraft.entity">LivingEntity</a>&gt;</span>&nbsp;<span class="memberName">VALID_LIVING_ENTITY</span></div>
+<div class="block">Tests if a living entity is valid.
+
+ <p>A living entity is valid when the entity is alive.</div>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../entity/LivingEntity.html#isAlive()"><code>LivingEntity.isAlive()</code></a></dd>
+</dl>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="NOT_MOUNTED">NOT_MOUNTED</a></h3>
 <div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Predicate</a>&lt;<a href="../../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&gt;</span>&nbsp;<span class="memberName">NOT_MOUNTED</span></div>
+<div class="block">Tests if an entity is not mounted.
+
+ <p>An entity is not mounted when:
+
+ <ul><li>The entity is alive
+ <li>The entity has no passengers
+ <li>The entity is not in a vehicle
+ </ul></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="VALID_INVENTORIES">VALID_INVENTORIES</a></h3>
 <div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Predicate</a>&lt;<a href="../../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&gt;</span>&nbsp;<span class="memberName">VALID_INVENTORIES</span></div>
+<div class="block">Tests if an entity has a valid inventory.
+
+ <p>An entity has a valid inventory when:
+
+ <ul><li>The entity is alive
+ <li>The entity implements <a href="../../inventory/Inventory.html" title="interface in net.minecraft.inventory"><code>Inventory</code></a>
+ </ul></div>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../entity/vehicle/StorageMinecartEntity.html" title="class in net.minecraft.entity.vehicle"><code>StorageMinecartEntity</code></a></dd>
+</dl>
 </section>
 </li>
 <li class="blockList">
@@ -333,8 +374,8 @@ double&nbsp;double2)</code></th>
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="maximumDistance(double,double,double,double)">maximumDistance</a></h3>
-<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Predicate</a>&lt;<a href="../../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&gt;</span>&nbsp;<span class="memberName">maximumDistance</span>&#8203;(<span class="arguments">double&nbsp;x,
+<h3><a id="maxDistance(double,double,double,double)">maxDistance</a></h3>
+<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Predicate</a>&lt;<a href="../../entity/Entity.html" title="class in net.minecraft.entity">Entity</a>&gt;</span>&nbsp;<span class="memberName">maxDistance</span>&#8203;(<span class="arguments">double&nbsp;x,
 double&nbsp;y,
 double&nbsp;z,
 double&nbsp;double2)</span></div>

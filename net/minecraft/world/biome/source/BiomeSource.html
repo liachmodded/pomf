@@ -19,8 +19,8 @@
 <script type="text/javascript" src="../../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10};
-var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
+<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":6,"i7":10,"i8":6};
+var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
@@ -123,8 +123,18 @@ implements <a href="BiomeAccess.Storage.html" title="interface in net.minecraft.
 </thead>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><code>protected <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="../Biome.html" title="class in net.minecraft.world.biome">Biome</a>&gt;</code></td>
+<td class="colFirst"><code>protected <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../Biome.html" title="class in net.minecraft.world.biome">Biome</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#biomes">biomes</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static com.mojang.serialization.Codec&lt;<a href="BiomeSource.html" title="class in net.minecraft.world.biome.source">BiomeSource</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#field_24713">field_24713</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../Biome.html" title="class in net.minecraft.world.biome">Biome</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#SPAWN_BIOMES">SPAWN_BIOMES</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
@@ -161,7 +171,7 @@ implements <a href="BiomeAccess.Storage.html" title="interface in net.minecraft.
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>protected </code></td>
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.util.Set)">BiomeSource</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="../Biome.html" title="class in net.minecraft.world.biome">Biome</a>&gt;&nbsp;biomes)</code></th>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.util.List)">BiomeSource</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../Biome.html" title="class in net.minecraft.world.biome">Biome</a>&gt;&nbsp;biomes)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -176,7 +186,7 @@ implements <a href="BiomeAccess.Storage.html" title="interface in net.minecraft.
 </a>
 <h2>Method Summary</h2>
 <div class="memberSummary">
-<div role="tablist" aria-orientation="horizontal"><button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t2" class="tableTab" onclick="show(2);">Instance Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t4" class="tableTab" onclick="show(8);">Concrete Methods</button></div>
+<div role="tablist" aria-orientation="horizontal"><button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t2" class="tableTab" onclick="show(2);">Instance Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t3" class="tableTab" onclick="show(4);">Abstract Methods</button><button role="tab" aria-selected="false" aria-controls="memberSummary_tabpanel" tabindex="-1" onkeydown="switchTab(event)" id="t4" class="tableTab" onclick="show(8);">Concrete Methods</button></div>
 <div id="memberSummary_tabpanel" role="tabpanel">
 <table aria-labelledby="t0">
 <thead>
@@ -196,24 +206,30 @@ int&nbsp;radius)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
-<td class="colFirst"><code>float</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getNoiseRange(int,int)">getNoiseRange</a></span>&#8203;(int&nbsp;int2,
-int&nbsp;int3)</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="altColor" id="i2">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../Biome.html" title="class in net.minecraft.world.biome">Biome</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getSpawnBiomes()">getSpawnBiomes</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i3">
+<tr class="altColor" id="i2">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="../../../block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getTopMaterials()">getTopMaterials</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i4">
+<tr class="rowColor" id="i3">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#hasStructureFeature(net.minecraft.world.gen.feature.StructureFeature)">hasStructureFeature</a></span>&#8203;(<a href="../../gen/feature/StructureFeature.html" title="class in net.minecraft.world.gen.feature">StructureFeature</a>&lt;?&gt;&nbsp;feature)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i4">
+<td class="colFirst"><code><a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#locateBiome(int,int,int,int,int,java.util.List,java.util.Random,boolean)">locateBiome</a></span>&#8203;(int&nbsp;x,
+int&nbsp;y,
+int&nbsp;z,
+int&nbsp;radius,
+int&nbsp;int2,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../Biome.html" title="class in net.minecraft.world.biome">Biome</a>&gt;&nbsp;biomes,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random,
+boolean&nbsp;bool)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i5">
@@ -222,20 +238,23 @@ int&nbsp;int3)</code></th>
 int&nbsp;y,
 int&nbsp;z,
 int&nbsp;radius,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../Biome.html" title="class in net.minecraft.world.biome">Biome</a>&gt;&nbsp;list,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../Biome.html" title="class in net.minecraft.world.biome">Biome</a>&gt;&nbsp;biomes,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i6">
-<td class="colFirst"><code><a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_24385(int,int,int,int,int,java.util.List,java.util.Random,boolean)">method_24385</a></span>&#8203;(int&nbsp;int2,
-int&nbsp;int3,
-int&nbsp;int4,
-int&nbsp;int5,
-int&nbsp;int6,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../Biome.html" title="class in net.minecraft.world.biome">Biome</a>&gt;&nbsp;list,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random,
-boolean&nbsp;bool)</code></th>
+<td class="colFirst"><code>protected abstract com.mojang.serialization.Codec&lt;? extends <a href="BiomeSource.html" title="class in net.minecraft.world.biome.source">BiomeSource</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_28442()">method_28442</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i7">
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../Biome.html" title="class in net.minecraft.world.biome">Biome</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_28443()">method_28443</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i8">
+<td class="colFirst"><code>abstract <a href="BiomeSource.html" title="class in net.minecraft.world.biome.source">BiomeSource</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#withSeed(long)">withSeed</a></span>&#8203;(long&nbsp;seed)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -267,6 +286,18 @@ boolean&nbsp;bool)</code></th>
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
+<h3><a id="field_24713">field_24713</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType">com.mojang.serialization.Codec&lt;<a href="BiomeSource.html" title="class in net.minecraft.world.biome.source">BiomeSource</a>&gt;</span>&nbsp;<span class="memberName">field_24713</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="SPAWN_BIOMES">SPAWN_BIOMES</a></h3>
+<div class="memberSignature"><span class="modifiers">private static final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../Biome.html" title="class in net.minecraft.world.biome">Biome</a>&gt;</span>&nbsp;<span class="memberName">SPAWN_BIOMES</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="structureFeatures">structureFeatures</a></h3>
 <div class="memberSignature"><span class="modifiers">protected final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util" class="externalLink">Map</a>&lt;<a href="../../gen/feature/StructureFeature.html" title="class in net.minecraft.world.gen.feature">StructureFeature</a>&lt;?&gt;,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang" class="externalLink">Boolean</a>&gt;</span>&nbsp;<span class="memberName">structureFeatures</span></div>
 </section>
@@ -280,7 +311,7 @@ boolean&nbsp;bool)</code></th>
 <li class="blockList">
 <section class="detail">
 <h3><a id="biomes">biomes</a></h3>
-<div class="memberSignature"><span class="modifiers">protected final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="../Biome.html" title="class in net.minecraft.world.biome">Biome</a>&gt;</span>&nbsp;<span class="memberName">biomes</span></div>
+<div class="memberSignature"><span class="modifiers">protected final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../Biome.html" title="class in net.minecraft.world.biome">Biome</a>&gt;</span>&nbsp;<span class="memberName">biomes</span></div>
 </section>
 </li>
 </ul>
@@ -295,8 +326,8 @@ boolean&nbsp;bool)</code></th>
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="&lt;init&gt;(java.util.Set)">BiomeSource</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="memberName">BiomeSource</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="../Biome.html" title="class in net.minecraft.world.biome">Biome</a>&gt;&nbsp;biomes)</span></div>
+<h3><a id="&lt;init&gt;(java.util.List)">BiomeSource</a></h3>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="memberName">BiomeSource</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../Biome.html" title="class in net.minecraft.world.biome">Biome</a>&gt;&nbsp;biomes)</span></div>
 </section>
 </li>
 </ul>
@@ -311,8 +342,27 @@ boolean&nbsp;bool)</code></th>
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
+<h3><a id="method_28442()">method_28442</a></h3>
+<div class="memberSignature"><span class="modifiers">protected abstract</span>&nbsp;<span class="returnType">com.mojang.serialization.Codec&lt;? extends <a href="BiomeSource.html" title="class in net.minecraft.world.biome.source">BiomeSource</a>&gt;</span>&nbsp;<span class="memberName">method_28442</span>()</div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="withSeed(long)">withSeed</a></h3>
+<div class="memberSignature"><span class="annotations">@Environment(CLIENT)
+</span><span class="modifiers">public abstract</span>&nbsp;<span class="returnType"><a href="BiomeSource.html" title="class in net.minecraft.world.biome.source">BiomeSource</a></span>&nbsp;<span class="memberName">withSeed</span>&#8203;(<span class="arguments">long&nbsp;seed)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="getSpawnBiomes()">getSpawnBiomes</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../Biome.html" title="class in net.minecraft.world.biome">Biome</a>&gt;</span>&nbsp;<span class="memberName">getSpawnBiomes</span>()</div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="method_28443()">method_28443</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../Biome.html" title="class in net.minecraft.world.biome">Biome</a>&gt;</span>&nbsp;<span class="memberName">method_28443</span>()</div>
 </section>
 </li>
 <li class="blockList">
@@ -327,33 +377,27 @@ int&nbsp;radius)</span></div>
 <li class="blockList">
 <section class="detail">
 <h3><a id="locateBiome(int,int,int,int,java.util.List,java.util.Random)">locateBiome</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a></span>&nbsp;<span class="memberName">locateBiome</span>&#8203;(<span class="arguments">int&nbsp;x,
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a></span>&nbsp;<span class="memberName">locateBiome</span>&#8203;(<span class="arguments">int&nbsp;x,
 int&nbsp;y,
 int&nbsp;z,
 int&nbsp;radius,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../Biome.html" title="class in net.minecraft.world.biome">Biome</a>&gt;&nbsp;list,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../Biome.html" title="class in net.minecraft.world.biome">Biome</a>&gt;&nbsp;biomes,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="method_24385(int,int,int,int,int,java.util.List,java.util.Random,boolean)">method_24385</a></h3>
-<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a></span>&nbsp;<span class="memberName">method_24385</span>&#8203;(<span class="arguments">int&nbsp;int2,
-int&nbsp;int3,
-int&nbsp;int4,
-int&nbsp;int5,
-int&nbsp;int6,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../Biome.html" title="class in net.minecraft.world.biome">Biome</a>&gt;&nbsp;list,
+<h3><a id="locateBiome(int,int,int,int,int,java.util.List,java.util.Random,boolean)">locateBiome</a></h3>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a></span>&nbsp;<span class="memberName">locateBiome</span>&#8203;(<span class="arguments">int&nbsp;x,
+int&nbsp;y,
+int&nbsp;z,
+int&nbsp;radius,
+int&nbsp;int2,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../Biome.html" title="class in net.minecraft.world.biome">Biome</a>&gt;&nbsp;biomes,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util" class="externalLink">Random</a>&nbsp;random,
 boolean&nbsp;bool)</span></div>
-</section>
-</li>
-<li class="blockList">
-<section class="detail">
-<h3><a id="getNoiseRange(int,int)">getNoiseRange</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">float</span>&nbsp;<span class="memberName">getNoiseRange</span>&#8203;(<span class="arguments">int&nbsp;int2,
-int&nbsp;int3)</span></div>
 </section>
 </li>
 <li class="blockList">

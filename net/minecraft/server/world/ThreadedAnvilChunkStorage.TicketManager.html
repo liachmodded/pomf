@@ -134,8 +134,7 @@ extends <a href="ChunkTicketManager.html" title="class in net.minecraft.server.w
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>protected </code></td>
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.server.world.ThreadedAnvilChunkStorage,java.util.concurrent.Executor,java.util.concurrent.Executor)">TicketManager</a></span>&#8203;(<a href="ThreadedAnvilChunkStorage.html" title="class in net.minecraft.server.world">ThreadedAnvilChunkStorage</a>&nbsp;workerExecutor,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executor.html?is-external=true" title="class or interface in java.util.concurrent" class="externalLink">Executor</a>&nbsp;mainThreadExecutor,
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.util.concurrent.Executor,java.util.concurrent.Executor)">TicketManager</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executor.html?is-external=true" title="class or interface in java.util.concurrent" class="externalLink">Executor</a>&nbsp;mainThreadExecutor,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executor.html?is-external=true" title="class or interface in java.util.concurrent" class="externalLink">Executor</a>&nbsp;executor)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -188,7 +187,7 @@ int&nbsp;int2)</code></th>
 <h3>Methods inherited from class&nbsp;net.minecraft.server.world.<a href="ChunkTicketManager.html" title="class in net.minecraft.server.world">ChunkTicketManager</a></h3>
 <a id="methods.inherited.from.class.net.minecraft.server.world.ChunkTicketManager">
 <!--   -->
-</a><code><a href="ChunkTicketManager.html#addTicket(net.minecraft.server.world.ChunkTicketType,net.minecraft.util.math.ChunkPos,int,T)">addTicket</a>, <a href="ChunkTicketManager.html#addTicketWithLevel(net.minecraft.server.world.ChunkTicketType,net.minecraft.util.math.ChunkPos,int,T)">addTicketWithLevel</a>, <a href="ChunkTicketManager.html#getLevelCount()">getLevelCount</a>, <a href="ChunkTicketManager.html#getTicket(long)">getTicket</a>, <a href="ChunkTicketManager.html#handleChunkEnter(net.minecraft.util.math.ChunkSectionPos,net.minecraft.server.network.ServerPlayerEntity)">handleChunkEnter</a>, <a href="ChunkTicketManager.html#handleChunkLeave(net.minecraft.util.math.ChunkSectionPos,net.minecraft.server.network.ServerPlayerEntity)">handleChunkLeave</a>, <a href="ChunkTicketManager.html#method_20800(long)">method_20800</a>, <a href="ChunkTicketManager.html#purge()">purge</a>, <a href="ChunkTicketManager.html#removeTicket(net.minecraft.server.world.ChunkTicketType,net.minecraft.util.math.ChunkPos,int,T)">removeTicket</a>, <a href="ChunkTicketManager.html#removeTicketWithLevel(net.minecraft.server.world.ChunkTicketType,net.minecraft.util.math.ChunkPos,int,T)">removeTicketWithLevel</a>, <a href="ChunkTicketManager.html#setChunkForced(net.minecraft.util.math.ChunkPos,boolean)">setChunkForced</a>, <a href="ChunkTicketManager.html#setWatchDistance(int)">setWatchDistance</a>, <a href="ChunkTicketManager.html#tick(net.minecraft.server.world.ThreadedAnvilChunkStorage)">tick</a>, <a href="ChunkTicketManager.html#toDumpString()">toDumpString</a></code></div>
+</a><code><a href="ChunkTicketManager.html#addTicket(net.minecraft.server.world.ChunkTicketType,net.minecraft.util.math.ChunkPos,int,T)">addTicket</a>, <a href="ChunkTicketManager.html#addTicketWithLevel(net.minecraft.server.world.ChunkTicketType,net.minecraft.util.math.ChunkPos,int,T)">addTicketWithLevel</a>, <a href="ChunkTicketManager.html#getSpawningChunkCount()">getSpawningChunkCount</a>, <a href="ChunkTicketManager.html#getTicket(long)">getTicket</a>, <a href="ChunkTicketManager.html#handleChunkEnter(net.minecraft.util.math.ChunkSectionPos,net.minecraft.server.network.ServerPlayerEntity)">handleChunkEnter</a>, <a href="ChunkTicketManager.html#handleChunkLeave(net.minecraft.util.math.ChunkSectionPos,net.minecraft.server.network.ServerPlayerEntity)">handleChunkLeave</a>, <a href="ChunkTicketManager.html#method_20800(long)">method_20800</a>, <a href="ChunkTicketManager.html#purge()">purge</a>, <a href="ChunkTicketManager.html#removeTicket(net.minecraft.server.world.ChunkTicketType,net.minecraft.util.math.ChunkPos,int,T)">removeTicket</a>, <a href="ChunkTicketManager.html#removeTicketWithLevel(net.minecraft.server.world.ChunkTicketType,net.minecraft.util.math.ChunkPos,int,T)">removeTicketWithLevel</a>, <a href="ChunkTicketManager.html#setChunkForced(net.minecraft.util.math.ChunkPos,boolean)">setChunkForced</a>, <a href="ChunkTicketManager.html#setWatchDistance(int)">setWatchDistance</a>, <a href="ChunkTicketManager.html#tick(net.minecraft.server.world.ThreadedAnvilChunkStorage)">tick</a>, <a href="ChunkTicketManager.html#toDumpString()">toDumpString</a></code></div>
 <div class="inheritedList">
 <h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></h3>
 <a id="methods.inherited.from.class.java.lang.Object">
@@ -209,9 +208,8 @@ int&nbsp;int2)</code></th>
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="&lt;init&gt;(net.minecraft.server.world.ThreadedAnvilChunkStorage,java.util.concurrent.Executor,java.util.concurrent.Executor)">TicketManager</a></h3>
-<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="memberName">TicketManager</span>&#8203;(<span class="arguments"><a href="ThreadedAnvilChunkStorage.html" title="class in net.minecraft.server.world">ThreadedAnvilChunkStorage</a>&nbsp;workerExecutor,
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executor.html?is-external=true" title="class or interface in java.util.concurrent" class="externalLink">Executor</a>&nbsp;mainThreadExecutor,
+<h3><a id="&lt;init&gt;(java.util.concurrent.Executor,java.util.concurrent.Executor)">TicketManager</a></h3>
+<div class="memberSignature"><span class="modifiers">protected</span>&nbsp;<span class="memberName">TicketManager</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executor.html?is-external=true" title="class or interface in java.util.concurrent" class="externalLink">Executor</a>&nbsp;mainThreadExecutor,
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executor.html?is-external=true" title="class or interface in java.util.concurrent" class="externalLink">Executor</a>&nbsp;executor)</span></div>
 </section>
 </li>
@@ -238,7 +236,7 @@ int&nbsp;int2)</code></th>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getChunkHolder(long)">getChunkHolder</a></h3>
-<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 </span><span class="modifiers">protected</span>&nbsp;<span class="returnType"><a href="ChunkHolder.html" title="class in net.minecraft.server.world">ChunkHolder</a></span>&nbsp;<span class="memberName">getChunkHolder</span>&#8203;(<span class="arguments">long&nbsp;pos)</span></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
@@ -249,10 +247,10 @@ int&nbsp;int2)</code></th>
 <li class="blockList">
 <section class="detail">
 <h3><a id="setLevel(long,int,net.minecraft.server.world.ChunkHolder,int)">setLevel</a></h3>
-<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 </span><span class="modifiers">protected</span>&nbsp;<span class="returnType"><a href="ChunkHolder.html" title="class in net.minecraft.server.world">ChunkHolder</a></span>&nbsp;<span class="memberName">setLevel</span>&#8203;(<span class="arguments">long&nbsp;pos,
 int&nbsp;level,
-<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+<a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
 <a href="ChunkHolder.html" title="class in net.minecraft.server.world">ChunkHolder</a>&nbsp;holder,
 int&nbsp;int2)</span></div>
 <dl>

@@ -206,8 +206,9 @@ extends <a href="AbstractCriterion.html" title="class in net.minecraft.advanceme
 <tbody>
 <tr class="altColor" id="i0">
 <td class="colFirst"><code><a href="TickCriterion.Conditions.html" title="class in net.minecraft.advancement.criterion">TickCriterion.Conditions</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#conditionsFromJson(com.google.gson.JsonObject,com.google.gson.JsonDeserializationContext)">conditionsFromJson</a></span>&#8203;(com.google.gson.JsonObject&nbsp;jsonObject,
-com.google.gson.JsonDeserializationContext&nbsp;jsonDeserializationContext)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#conditionsFromJson(com.google.gson.JsonObject,net.minecraft.predicate.entity.EntityPredicate.Extended,net.minecraft.predicate.entity.AdvancementEntityPredicateDeserializer)">conditionsFromJson</a></span>&#8203;(<a href="https://www.javadoc.io/doc/com.google.code.gson/gson/2.8.0/com/google/gson/JsonObject.html?is-external=true" title="class or interface in com.google.gson" class="externalLink">JsonObject</a>&nbsp;jsonObject,
+<a href="../../predicate/entity/EntityPredicate.Extended.html" title="class in net.minecraft.predicate.entity">EntityPredicate.Extended</a>&nbsp;extended,
+<a href="../../predicate/entity/AdvancementEntityPredicateDeserializer.html" title="class in net.minecraft.predicate.entity">AdvancementEntityPredicateDeserializer</a>&nbsp;advancementEntityPredicateDeserializer)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
@@ -228,7 +229,7 @@ com.google.gson.JsonDeserializationContext&nbsp;jsonDeserializationContext)</cod
 <h3>Methods inherited from class&nbsp;net.minecraft.advancement.criterion.<a href="AbstractCriterion.html" title="class in net.minecraft.advancement.criterion">AbstractCriterion</a></h3>
 <a id="methods.inherited.from.class.net.minecraft.advancement.criterion.AbstractCriterion">
 <!--   -->
-</a><code><a href="AbstractCriterion.html#beginTrackingCondition(net.minecraft.advancement.PlayerAdvancementTracker,net.minecraft.advancement.criterion.Criterion.ConditionsContainer)">beginTrackingCondition</a>, <a href="AbstractCriterion.html#endTracking(net.minecraft.advancement.PlayerAdvancementTracker)">endTracking</a>, <a href="AbstractCriterion.html#endTrackingCondition(net.minecraft.advancement.PlayerAdvancementTracker,net.minecraft.advancement.criterion.Criterion.ConditionsContainer)">endTrackingCondition</a>, <a href="AbstractCriterion.html#grant(net.minecraft.advancement.PlayerAdvancementTracker)">grant</a>, <a href="AbstractCriterion.html#test(net.minecraft.advancement.PlayerAdvancementTracker,java.util.function.Predicate)">test</a></code></div>
+</a><code><a href="AbstractCriterion.html#beginTrackingCondition(net.minecraft.advancement.PlayerAdvancementTracker,net.minecraft.advancement.criterion.Criterion.ConditionsContainer)">beginTrackingCondition</a>, <a href="AbstractCriterion.html#conditionsFromJson(com.google.gson.JsonObject,net.minecraft.predicate.entity.AdvancementEntityPredicateDeserializer)">conditionsFromJson</a>, <a href="AbstractCriterion.html#endTracking(net.minecraft.advancement.PlayerAdvancementTracker)">endTracking</a>, <a href="AbstractCriterion.html#endTrackingCondition(net.minecraft.advancement.PlayerAdvancementTracker,net.minecraft.advancement.criterion.Criterion.ConditionsContainer)">endTrackingCondition</a>, <a href="AbstractCriterion.html#test(net.minecraft.server.network.ServerPlayerEntity,java.util.function.Predicate)">test</a></code></div>
 <div class="inheritedList">
 <h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></h3>
 <a id="methods.inherited.from.class.java.lang.Object">
@@ -287,9 +288,14 @@ com.google.gson.JsonDeserializationContext&nbsp;jsonDeserializationContext)</cod
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="conditionsFromJson(com.google.gson.JsonObject,com.google.gson.JsonDeserializationContext)">conditionsFromJson</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="TickCriterion.Conditions.html" title="class in net.minecraft.advancement.criterion">TickCriterion.Conditions</a></span>&nbsp;<span class="memberName">conditionsFromJson</span>&#8203;(<span class="arguments">com.google.gson.JsonObject&nbsp;jsonObject,
-com.google.gson.JsonDeserializationContext&nbsp;jsonDeserializationContext)</span></div>
+<h3><a id="conditionsFromJson(com.google.gson.JsonObject,net.minecraft.predicate.entity.EntityPredicate.Extended,net.minecraft.predicate.entity.AdvancementEntityPredicateDeserializer)">conditionsFromJson</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="TickCriterion.Conditions.html" title="class in net.minecraft.advancement.criterion">TickCriterion.Conditions</a></span>&nbsp;<span class="memberName">conditionsFromJson</span>&#8203;(<span class="arguments"><a href="https://www.javadoc.io/doc/com.google.code.gson/gson/2.8.0/com/google/gson/JsonObject.html?is-external=true" title="class or interface in com.google.gson" class="externalLink">JsonObject</a>&nbsp;jsonObject,
+<a href="../../predicate/entity/EntityPredicate.Extended.html" title="class in net.minecraft.predicate.entity">EntityPredicate.Extended</a>&nbsp;extended,
+<a href="../../predicate/entity/AdvancementEntityPredicateDeserializer.html" title="class in net.minecraft.predicate.entity">AdvancementEntityPredicateDeserializer</a>&nbsp;advancementEntityPredicateDeserializer)</span></div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="AbstractCriterion.html#conditionsFromJson(com.google.gson.JsonObject,net.minecraft.predicate.entity.EntityPredicate.Extended,net.minecraft.predicate.entity.AdvancementEntityPredicateDeserializer)">conditionsFromJson</a></code>&nbsp;in class&nbsp;<code><a href="AbstractCriterion.html" title="class in net.minecraft.advancement.criterion">AbstractCriterion</a>&lt;<a href="TickCriterion.Conditions.html" title="class in net.minecraft.advancement.criterion">TickCriterion.Conditions</a>&gt;</code></dd>
+</dl>
 </section>
 </li>
 <li class="blockList">

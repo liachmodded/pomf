@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10,"i23":10,"i24":10,"i25":10,"i26":10,"i27":10,"i28":10,"i29":10,"i30":10,"i31":10,"i32":10,"i33":10,"i34":10,"i35":10,"i36":10,"i37":10,"i38":10,"i39":10,"i40":10,"i41":10};
+<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10,"i23":10,"i24":10,"i25":10,"i26":10,"i27":10,"i28":10,"i29":10,"i30":10,"i31":10,"i32":10,"i33":10,"i34":10,"i35":10,"i36":10,"i37":10,"i38":10,"i39":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -62,7 +62,7 @@ loadScripts(document, 'script');</script>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
@@ -87,14 +87,17 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="contentContainer">
 <div class="inheritance" title="Inheritance Tree"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">java.lang.Object</a>
-<div class="inheritance"><a href="LevelProperties.html" title="class in net.minecraft.world.level">net.minecraft.world.level.LevelProperties</a>
 <div class="inheritance">net.minecraft.world.level.UnmodifiableLevelProperties</div>
 </div>
-</div>
 <section class="description">
+<dl>
+<dt>All Implemented Interfaces:</dt>
+<dd><code><a href="ServerWorldProperties.html" title="interface in net.minecraft.world.level">ServerWorldProperties</a></code>, <code><a href="../MutableWorldProperties.html" title="interface in net.minecraft.world">MutableWorldProperties</a></code>, <code><a href="../WorldProperties.html" title="interface in net.minecraft.world">WorldProperties</a></code></dd>
+</dl>
 <hr>
 <pre>public class <span class="typeNameLabel">UnmodifiableLevelProperties</span>
-extends <a href="LevelProperties.html" title="class in net.minecraft.world.level">LevelProperties</a></pre>
+extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>
+implements <a href="ServerWorldProperties.html" title="interface in net.minecraft.world.level">ServerWorldProperties</a></pre>
 </section>
 <section class="summary">
 <ul class="blockList">
@@ -104,11 +107,30 @@ extends <a href="LevelProperties.html" title="class in net.minecraft.world.level
 <!--   -->
 </a>
 <h2>Field Summary</h2>
-<div class="inheritedList">
-<h3>Fields inherited from class&nbsp;net.minecraft.world.level.<a href="LevelProperties.html" title="class in net.minecraft.world.level">LevelProperties</a></h3>
-<a id="fields.inherited.from.class.net.minecraft.world.level.LevelProperties">
-<!--   -->
-</a><code><a href="LevelProperties.html#DEFAULT_DIFFICULTY">DEFAULT_DIFFICULTY</a></code></div>
+<div class="memberSummary">
+<table>
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<thead>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colSecond" scope="col">Field</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../SaveProperties.html" title="interface in net.minecraft.world">SaveProperties</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#field_24179">field_24179</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="ServerWorldProperties.html" title="interface in net.minecraft.world.level">ServerWorldProperties</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#properties">properties</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 </li>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
@@ -128,7 +150,8 @@ extends <a href="LevelProperties.html" title="class in net.minecraft.world.level
 </thead>
 <tbody>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.world.level.LevelProperties)">UnmodifiableLevelProperties</a></span>&#8203;(<a href="LevelProperties.html" title="class in net.minecraft.world.level">LevelProperties</a>&nbsp;properties)</code></th>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.world.SaveProperties,net.minecraft.world.level.ServerWorldProperties)">UnmodifiableLevelProperties</a></span>&#8203;(<a href="../SaveProperties.html" title="interface in net.minecraft.world">SaveProperties</a>&nbsp;saveProperties,
+<a href="ServerWorldProperties.html" title="interface in net.minecraft.world.level">ServerWorldProperties</a>&nbsp;serverWorldProperties)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -160,8 +183,8 @@ extends <a href="LevelProperties.html" title="class in net.minecraft.world.level
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
-<td class="colFirst"><code><a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#cloneWorldTag(net.minecraft.nbt.CompoundTag)">cloneWorldTag</a></span>&#8203;(<a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;playerTag)</code></th>
+<td class="colFirst"><code>int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getClearWeatherTime()">getClearWeatherTime</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i2">
@@ -180,200 +203,184 @@ extends <a href="LevelProperties.html" title="class in net.minecraft.world.level
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i5">
-<td class="colFirst"><code><a href="LevelGeneratorType.html" title="class in net.minecraft.world.level">LevelGeneratorType</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getGeneratorType()">getGeneratorType</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="altColor" id="i6">
-<td class="colFirst"><code>long</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getLastPlayed()">getLastPlayed</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="rowColor" id="i7">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getLevelName()">getLevelName</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i8">
-<td class="colFirst"><code><a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPlayerData()">getPlayerData</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="rowColor" id="i9">
+<tr class="altColor" id="i6">
 <td class="colFirst"><code>int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getRainTime()">getRainTime</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i10">
+<tr class="rowColor" id="i7">
 <td class="colFirst"><code><a href="../timer/Timer.html" title="class in net.minecraft.world.timer">Timer</a>&lt;<a href="../../server/MinecraftServer.html" title="class in net.minecraft.server">MinecraftServer</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getScheduledEvents()">getScheduledEvents</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i11">
-<td class="colFirst"><code>long</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getSeed()">getSeed</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="altColor" id="i12">
+<tr class="altColor" id="i8">
 <td class="colFirst"><code>int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getSpawnX()">getSpawnX</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i13">
+<tr class="rowColor" id="i9">
 <td class="colFirst"><code>int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getSpawnY()">getSpawnY</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i14">
+<tr class="altColor" id="i10">
 <td class="colFirst"><code>int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getSpawnZ()">getSpawnZ</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i15">
+<tr class="rowColor" id="i11">
 <td class="colFirst"><code>int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getThunderTime()">getThunderTime</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i16">
+<tr class="altColor" id="i12">
 <td class="colFirst"><code>long</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getTime()">getTime</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i17">
+<tr class="rowColor" id="i13">
 <td class="colFirst"><code>long</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getTimeOfDay()">getTimeOfDay</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i18">
+<tr class="altColor" id="i14">
 <td class="colFirst"><code>int</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getVersion()">getVersion</a></span>()</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getWanderingTraderSpawnChance()">getWanderingTraderSpawnChance</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i19">
-<td class="colFirst"><code><a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getWorldData(net.minecraft.world.dimension.DimensionType)">getWorldData</a></span>&#8203;(<a href="../dimension/DimensionType.html" title="class in net.minecraft.world.dimension">DimensionType</a>&nbsp;type)</code></th>
+<tr class="rowColor" id="i15">
+<td class="colFirst"><code>int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getWanderingTraderSpawnDelay()">getWanderingTraderSpawnDelay</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i20">
-<td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#hasStructures()">hasStructures</a></span>()</code></th>
+<tr class="altColor" id="i16">
+<td class="colFirst"><code><a href="../border/WorldBorder.Properties.html" title="class in net.minecraft.world.border">WorldBorder.Properties</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getWorldBorder()">getWorldBorder</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i21">
+<tr class="rowColor" id="i17">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isDifficultyLocked()">isDifficultyLocked</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i22">
+<tr class="altColor" id="i18">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isHardcore()">isHardcore</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i23">
+<tr class="rowColor" id="i19">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isInitialized()">isInitialized</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i24">
+<tr class="altColor" id="i20">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isRaining()">isRaining</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i25">
+<tr class="rowColor" id="i21">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isThundering()">isThundering</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
+<tr class="altColor" id="i22">
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_29034(long)">method_29034</a></span>&#8203;(long&nbsp;long2)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i23">
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_29035(long)">method_29035</a></span>&#8203;(long&nbsp;long2)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i24">
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#populateCrashReport(net.minecraft.util.crash.CrashReportSection)">populateCrashReport</a></span>&#8203;(<a href="../../util/crash/CrashReportSection.html" title="class in net.minecraft.util.crash">CrashReportSection</a>&nbsp;reportSection)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i25">
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setClearWeatherTime(int)">setClearWeatherTime</a></span>&#8203;(int&nbsp;clearWeatherTime)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
 <tr class="altColor" id="i26">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#populateCrashReport(net.minecraft.util.crash.CrashReportSection)">populateCrashReport</a></span>&#8203;(<a href="../../util/crash/CrashReportSection.html" title="class in net.minecraft.util.crash">CrashReportSection</a>&nbsp;section)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setGameMode(net.minecraft.world.GameMode)">setGameMode</a></span>&#8203;(<a href="../GameMode.html" title="enum in net.minecraft.world">GameMode</a>&nbsp;gameMode)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i27">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setCommandsAllowed(boolean)">setCommandsAllowed</a></span>&#8203;(boolean&nbsp;commandsAllowed)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setInitialized(boolean)">setInitialized</a></span>&#8203;(boolean&nbsp;initialized)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i28">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setDifficulty(net.minecraft.world.Difficulty)">setDifficulty</a></span>&#8203;(<a href="../Difficulty.html" title="enum in net.minecraft.world">Difficulty</a>&nbsp;difficulty)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setRaining(boolean)">setRaining</a></span>&#8203;(boolean&nbsp;raining)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i29">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setDifficultyLocked(boolean)">setDifficultyLocked</a></span>&#8203;(boolean&nbsp;difficultyLocked)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setRainTime(int)">setRainTime</a></span>&#8203;(int&nbsp;rainTime)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i30">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setGeneratorOptions(net.minecraft.world.level.LevelGeneratorOptions)">setGeneratorOptions</a></span>&#8203;(<a href="LevelGeneratorOptions.html" title="class in net.minecraft.world.level">LevelGeneratorOptions</a>&nbsp;options)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setSpawnPos(net.minecraft.util.math.BlockPos)">setSpawnPos</a></span>&#8203;(<a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i31">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setInitialized(boolean)">setInitialized</a></span>&#8203;(boolean&nbsp;initialized)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setSpawnX(int)">setSpawnX</a></span>&#8203;(int&nbsp;spawnX)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i32">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setLevelName(java.lang.String)">setLevelName</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;levelName)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setSpawnY(int)">setSpawnY</a></span>&#8203;(int&nbsp;spawnY)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i33">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setRaining(boolean)">setRaining</a></span>&#8203;(boolean&nbsp;raining)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setSpawnZ(int)">setSpawnZ</a></span>&#8203;(int&nbsp;spawnZ)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i34">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setRainTime(int)">setRainTime</a></span>&#8203;(int&nbsp;rainTime)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setThundering(boolean)">setThundering</a></span>&#8203;(boolean&nbsp;thundering)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i35">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setSpawnPos(net.minecraft.util.math.BlockPos)">setSpawnPos</a></span>&#8203;(<a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setThunderTime(int)">setThunderTime</a></span>&#8203;(int&nbsp;thunderTime)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i36">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setThundering(boolean)">setThundering</a></span>&#8203;(boolean&nbsp;thundering)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setWanderingTraderId(java.util.UUID)">setWanderingTraderId</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util" class="externalLink">UUID</a>&nbsp;uuid)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i37">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setThunderTime(int)">setThunderTime</a></span>&#8203;(int&nbsp;thunderTime)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setWanderingTraderSpawnChance(int)">setWanderingTraderSpawnChance</a></span>&#8203;(int&nbsp;wanderingTraderSpawnChance)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i38">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setTime(long)">setTime</a></span>&#8203;(long&nbsp;time)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setWanderingTraderSpawnDelay(int)">setWanderingTraderSpawnDelay</a></span>&#8203;(int&nbsp;wanderingTraderSpawnDelay)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i39">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setTimeOfDay(long)">setTimeOfDay</a></span>&#8203;(long&nbsp;timeOfDay)</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="altColor" id="i40">
-<td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setVersion(int)">setVersion</a></span>&#8203;(int&nbsp;version)</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="rowColor" id="i41">
-<td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setWorldData(net.minecraft.world.dimension.DimensionType,net.minecraft.nbt.CompoundTag)">setWorldData</a></span>&#8203;(<a href="../dimension/DimensionType.html" title="class in net.minecraft.world.dimension">DimensionType</a>&nbsp;type,
-<a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;tag)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setWorldBorder(net.minecraft.world.border.WorldBorder.Properties)">setWorldBorder</a></span>&#8203;(<a href="../border/WorldBorder.Properties.html" title="class in net.minecraft.world.border">WorldBorder.Properties</a>&nbsp;properties)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
-<div class="inheritedList">
-<h3>Methods inherited from class&nbsp;net.minecraft.world.level.<a href="LevelProperties.html" title="class in net.minecraft.world.level">LevelProperties</a></h3>
-<a id="methods.inherited.from.class.net.minecraft.world.level.LevelProperties">
-<!--   -->
-</a><code><a href="LevelProperties.html#addServerBrand(java.lang.String,boolean)">addServerBrand</a>, <a href="LevelProperties.html#borderCenterZ(double)">borderCenterZ</a>, <a href="LevelProperties.html#getBorderCenterX()">getBorderCenterX</a>, <a href="LevelProperties.html#getBorderCenterZ()">getBorderCenterZ</a>, <a href="LevelProperties.html#getBorderDamagePerBlock()">getBorderDamagePerBlock</a>, <a href="LevelProperties.html#getBorderSafeZone()">getBorderSafeZone</a>, <a href="LevelProperties.html#getBorderSize()">getBorderSize</a>, <a href="LevelProperties.html#getBorderSizeLerpTarget()">getBorderSizeLerpTarget</a>, <a href="LevelProperties.html#getBorderSizeLerpTime()">getBorderSizeLerpTime</a>, <a href="LevelProperties.html#getBorderWarningBlocks()">getBorderWarningBlocks</a>, <a href="LevelProperties.html#getBorderWarningTime()">getBorderWarningTime</a>, <a href="LevelProperties.html#getClearWeatherTime()">getClearWeatherTime</a>, <a href="LevelProperties.html#getCustomBossEvents()">getCustomBossEvents</a>, <a href="LevelProperties.html#getDisabledDataPacks()">getDisabledDataPacks</a>, <a href="LevelProperties.html#getEnabledDataPacks()">getEnabledDataPacks</a>, <a href="LevelProperties.html#getGeneratorOptions()">getGeneratorOptions</a>, <a href="LevelProperties.html#getVersionId()">getVersionId</a>, <a href="LevelProperties.html#getVersionName()">getVersionName</a>, <a href="LevelProperties.html#getWanderingTraderSpawnChance()">getWanderingTraderSpawnChance</a>, <a href="LevelProperties.html#getWanderingTraderSpawnDelay()">getWanderingTraderSpawnDelay</a>, <a href="LevelProperties.html#isVersionSnapshot()">isVersionSnapshot</a>, <a href="LevelProperties.html#loadLevelInfo(net.minecraft.world.level.LevelInfo)">loadLevelInfo</a>, <a href="LevelProperties.html#setBorderCenterX(double)">setBorderCenterX</a>, <a href="LevelProperties.html#setBorderDamagePerBlock(double)">setBorderDamagePerBlock</a>, <a href="LevelProperties.html#setBorderSafeZone(double)">setBorderSafeZone</a>, <a href="LevelProperties.html#setBorderSize(double)">setBorderSize</a>, <a href="LevelProperties.html#setBorderSizeLerpTarget(double)">setBorderSizeLerpTarget</a>, <a href="LevelProperties.html#setBorderSizeLerpTime(long)">setBorderSizeLerpTime</a>, <a href="LevelProperties.html#setBorderWarningBlocks(int)">setBorderWarningBlocks</a>, <a href="LevelProperties.html#setBorderWarningTime(int)">setBorderWarningTime</a>, <a href="LevelProperties.html#setClearWeatherTime(int)">setClearWeatherTime</a>, <a href="LevelProperties.html#setCustomBossEvents(net.minecraft.nbt.CompoundTag)">setCustomBossEvents</a>, <a href="LevelProperties.html#setGameMode(net.minecraft.world.GameMode)">setGameMode</a>, <a href="LevelProperties.html#setHardcore(boolean)">setHardcore</a>, <a href="LevelProperties.html#setStructures(boolean)">setStructures</a>, <a href="LevelProperties.html#setWanderingTraderId(java.util.UUID)">setWanderingTraderId</a>, <a href="LevelProperties.html#setWanderingTraderSpawnChance(int)">setWanderingTraderSpawnChance</a>, <a href="LevelProperties.html#setWanderingTraderSpawnDelay(int)">setWanderingTraderSpawnDelay</a>, <a href="LevelProperties.html#sha256Hash(long)">sha256Hash</a></code></div>
 <div class="inheritedList">
 <h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></h3>
 <a id="methods.inherited.from.class.java.lang.Object">
@@ -385,6 +392,28 @@ extends <a href="LevelProperties.html" title="class in net.minecraft.world.level
 </section>
 <section class="details">
 <ul class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<li class="blockList">
+<section class="fieldDetails"><a id="field.detail">
+<!--   -->
+</a>
+<h2>Field Details</h2>
+<ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="field_24179">field_24179</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../SaveProperties.html" title="interface in net.minecraft.world">SaveProperties</a></span>&nbsp;<span class="memberName">field_24179</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="properties">properties</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="ServerWorldProperties.html" title="interface in net.minecraft.world.level">ServerWorldProperties</a></span>&nbsp;<span class="memberName">properties</span></div>
+</section>
+</li>
+</ul>
+</section>
+</li>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <li class="blockList">
 <section class="constructorDetails"><a id="constructor.detail">
@@ -394,8 +423,9 @@ extends <a href="LevelProperties.html" title="class in net.minecraft.world.level
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="&lt;init&gt;(net.minecraft.world.level.LevelProperties)">UnmodifiableLevelProperties</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">UnmodifiableLevelProperties</span>&#8203;(<span class="arguments"><a href="LevelProperties.html" title="class in net.minecraft.world.level">LevelProperties</a>&nbsp;properties)</span></div>
+<h3><a id="&lt;init&gt;(net.minecraft.world.SaveProperties,net.minecraft.world.level.ServerWorldProperties)">UnmodifiableLevelProperties</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">UnmodifiableLevelProperties</span>&#8203;(<span class="arguments"><a href="../SaveProperties.html" title="interface in net.minecraft.world">SaveProperties</a>&nbsp;saveProperties,
+<a href="ServerWorldProperties.html" title="interface in net.minecraft.world.level">ServerWorldProperties</a>&nbsp;serverWorldProperties)</span></div>
 </section>
 </li>
 </ul>
@@ -410,32 +440,11 @@ extends <a href="LevelProperties.html" title="class in net.minecraft.world.level
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="cloneWorldTag(net.minecraft.nbt.CompoundTag)">cloneWorldTag</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a></span>&nbsp;<span class="memberName">cloneWorldTag</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
-<a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;playerTag)</span></div>
-<dl>
-<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code><a href="LevelProperties.html#cloneWorldTag(net.minecraft.nbt.CompoundTag)">cloneWorldTag</a></code>&nbsp;in class&nbsp;<code><a href="LevelProperties.html" title="class in net.minecraft.world.level">LevelProperties</a></code></dd>
-</dl>
-</section>
-</li>
-<li class="blockList">
-<section class="detail">
-<h3><a id="getSeed()">getSeed</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">long</span>&nbsp;<span class="memberName">getSeed</span>()</div>
-<dl>
-<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code><a href="LevelProperties.html#getSeed()">getSeed</a></code>&nbsp;in class&nbsp;<code><a href="LevelProperties.html" title="class in net.minecraft.world.level">LevelProperties</a></code></dd>
-</dl>
-</section>
-</li>
-<li class="blockList">
-<section class="detail">
 <h3><a id="getSpawnX()">getSpawnX</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getSpawnX</span>()</div>
 <dl>
-<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code><a href="LevelProperties.html#getSpawnX()">getSpawnX</a></code>&nbsp;in class&nbsp;<code><a href="LevelProperties.html" title="class in net.minecraft.world.level">LevelProperties</a></code></dd>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../WorldProperties.html#getSpawnX()">getSpawnX</a></code>&nbsp;in interface&nbsp;<code><a href="../WorldProperties.html" title="interface in net.minecraft.world">WorldProperties</a></code></dd>
 </dl>
 </section>
 </li>
@@ -444,8 +453,8 @@ extends <a href="LevelProperties.html" title="class in net.minecraft.world.level
 <h3><a id="getSpawnY()">getSpawnY</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getSpawnY</span>()</div>
 <dl>
-<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code><a href="LevelProperties.html#getSpawnY()">getSpawnY</a></code>&nbsp;in class&nbsp;<code><a href="LevelProperties.html" title="class in net.minecraft.world.level">LevelProperties</a></code></dd>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../WorldProperties.html#getSpawnY()">getSpawnY</a></code>&nbsp;in interface&nbsp;<code><a href="../WorldProperties.html" title="interface in net.minecraft.world">WorldProperties</a></code></dd>
 </dl>
 </section>
 </li>
@@ -454,8 +463,8 @@ extends <a href="LevelProperties.html" title="class in net.minecraft.world.level
 <h3><a id="getSpawnZ()">getSpawnZ</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getSpawnZ</span>()</div>
 <dl>
-<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code><a href="LevelProperties.html#getSpawnZ()">getSpawnZ</a></code>&nbsp;in class&nbsp;<code><a href="LevelProperties.html" title="class in net.minecraft.world.level">LevelProperties</a></code></dd>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../WorldProperties.html#getSpawnZ()">getSpawnZ</a></code>&nbsp;in interface&nbsp;<code><a href="../WorldProperties.html" title="interface in net.minecraft.world">WorldProperties</a></code></dd>
 </dl>
 </section>
 </li>
@@ -464,8 +473,8 @@ extends <a href="LevelProperties.html" title="class in net.minecraft.world.level
 <h3><a id="getTime()">getTime</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">long</span>&nbsp;<span class="memberName">getTime</span>()</div>
 <dl>
-<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code><a href="LevelProperties.html#getTime()">getTime</a></code>&nbsp;in class&nbsp;<code><a href="LevelProperties.html" title="class in net.minecraft.world.level">LevelProperties</a></code></dd>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../WorldProperties.html#getTime()">getTime</a></code>&nbsp;in interface&nbsp;<code><a href="../WorldProperties.html" title="interface in net.minecraft.world">WorldProperties</a></code></dd>
 </dl>
 </section>
 </li>
@@ -474,18 +483,8 @@ extends <a href="LevelProperties.html" title="class in net.minecraft.world.level
 <h3><a id="getTimeOfDay()">getTimeOfDay</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">long</span>&nbsp;<span class="memberName">getTimeOfDay</span>()</div>
 <dl>
-<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code><a href="LevelProperties.html#getTimeOfDay()">getTimeOfDay</a></code>&nbsp;in class&nbsp;<code><a href="LevelProperties.html" title="class in net.minecraft.world.level">LevelProperties</a></code></dd>
-</dl>
-</section>
-</li>
-<li class="blockList">
-<section class="detail">
-<h3><a id="getPlayerData()">getPlayerData</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a></span>&nbsp;<span class="memberName">getPlayerData</span>()</div>
-<dl>
-<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code><a href="LevelProperties.html#getPlayerData()">getPlayerData</a></code>&nbsp;in class&nbsp;<code><a href="LevelProperties.html" title="class in net.minecraft.world.level">LevelProperties</a></code></dd>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../WorldProperties.html#getTimeOfDay()">getTimeOfDay</a></code>&nbsp;in interface&nbsp;<code><a href="../WorldProperties.html" title="interface in net.minecraft.world">WorldProperties</a></code></dd>
 </dl>
 </section>
 </li>
@@ -494,29 +493,28 @@ extends <a href="LevelProperties.html" title="class in net.minecraft.world.level
 <h3><a id="getLevelName()">getLevelName</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></span>&nbsp;<span class="memberName">getLevelName</span>()</div>
 <dl>
-<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code><a href="LevelProperties.html#getLevelName()">getLevelName</a></code>&nbsp;in class&nbsp;<code><a href="LevelProperties.html" title="class in net.minecraft.world.level">LevelProperties</a></code></dd>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="ServerWorldProperties.html#getLevelName()">getLevelName</a></code>&nbsp;in interface&nbsp;<code><a href="ServerWorldProperties.html" title="interface in net.minecraft.world.level">ServerWorldProperties</a></code></dd>
 </dl>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="getVersion()">getVersion</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getVersion</span>()</div>
+<h3><a id="getClearWeatherTime()">getClearWeatherTime</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getClearWeatherTime</span>()</div>
 <dl>
-<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code><a href="LevelProperties.html#getVersion()">getVersion</a></code>&nbsp;in class&nbsp;<code><a href="LevelProperties.html" title="class in net.minecraft.world.level">LevelProperties</a></code></dd>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="ServerWorldProperties.html#getClearWeatherTime()">getClearWeatherTime</a></code>&nbsp;in interface&nbsp;<code><a href="ServerWorldProperties.html" title="interface in net.minecraft.world.level">ServerWorldProperties</a></code></dd>
 </dl>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="getLastPlayed()">getLastPlayed</a></h3>
-<div class="memberSignature"><span class="annotations">@Environment(CLIENT)
-</span><span class="modifiers">public</span>&nbsp;<span class="returnType">long</span>&nbsp;<span class="memberName">getLastPlayed</span>()</div>
+<h3><a id="setClearWeatherTime(int)">setClearWeatherTime</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setClearWeatherTime</span>&#8203;(<span class="arguments">int&nbsp;clearWeatherTime)</span></div>
 <dl>
-<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code><a href="LevelProperties.html#getLastPlayed()">getLastPlayed</a></code>&nbsp;in class&nbsp;<code><a href="LevelProperties.html" title="class in net.minecraft.world.level">LevelProperties</a></code></dd>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="ServerWorldProperties.html#setClearWeatherTime(int)">setClearWeatherTime</a></code>&nbsp;in interface&nbsp;<code><a href="ServerWorldProperties.html" title="interface in net.minecraft.world.level">ServerWorldProperties</a></code></dd>
 </dl>
 </section>
 </li>
@@ -525,8 +523,8 @@ extends <a href="LevelProperties.html" title="class in net.minecraft.world.level
 <h3><a id="isThundering()">isThundering</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isThundering</span>()</div>
 <dl>
-<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code><a href="LevelProperties.html#isThundering()">isThundering</a></code>&nbsp;in class&nbsp;<code><a href="LevelProperties.html" title="class in net.minecraft.world.level">LevelProperties</a></code></dd>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../WorldProperties.html#isThundering()">isThundering</a></code>&nbsp;in interface&nbsp;<code><a href="../WorldProperties.html" title="interface in net.minecraft.world">WorldProperties</a></code></dd>
 </dl>
 </section>
 </li>
@@ -535,8 +533,8 @@ extends <a href="LevelProperties.html" title="class in net.minecraft.world.level
 <h3><a id="getThunderTime()">getThunderTime</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getThunderTime</span>()</div>
 <dl>
-<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code><a href="LevelProperties.html#getThunderTime()">getThunderTime</a></code>&nbsp;in class&nbsp;<code><a href="LevelProperties.html" title="class in net.minecraft.world.level">LevelProperties</a></code></dd>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="ServerWorldProperties.html#getThunderTime()">getThunderTime</a></code>&nbsp;in interface&nbsp;<code><a href="ServerWorldProperties.html" title="interface in net.minecraft.world.level">ServerWorldProperties</a></code></dd>
 </dl>
 </section>
 </li>
@@ -545,8 +543,8 @@ extends <a href="LevelProperties.html" title="class in net.minecraft.world.level
 <h3><a id="isRaining()">isRaining</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isRaining</span>()</div>
 <dl>
-<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code><a href="LevelProperties.html#isRaining()">isRaining</a></code>&nbsp;in class&nbsp;<code><a href="LevelProperties.html" title="class in net.minecraft.world.level">LevelProperties</a></code></dd>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../WorldProperties.html#isRaining()">isRaining</a></code>&nbsp;in interface&nbsp;<code><a href="../WorldProperties.html" title="interface in net.minecraft.world">WorldProperties</a></code></dd>
 </dl>
 </section>
 </li>
@@ -555,8 +553,8 @@ extends <a href="LevelProperties.html" title="class in net.minecraft.world.level
 <h3><a id="getRainTime()">getRainTime</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getRainTime</span>()</div>
 <dl>
-<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code><a href="LevelProperties.html#getRainTime()">getRainTime</a></code>&nbsp;in class&nbsp;<code><a href="LevelProperties.html" title="class in net.minecraft.world.level">LevelProperties</a></code></dd>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="ServerWorldProperties.html#getRainTime()">getRainTime</a></code>&nbsp;in interface&nbsp;<code><a href="ServerWorldProperties.html" title="interface in net.minecraft.world.level">ServerWorldProperties</a></code></dd>
 </dl>
 </section>
 </li>
@@ -565,28 +563,58 @@ extends <a href="LevelProperties.html" title="class in net.minecraft.world.level
 <h3><a id="getGameMode()">getGameMode</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../GameMode.html" title="enum in net.minecraft.world">GameMode</a></span>&nbsp;<span class="memberName">getGameMode</span>()</div>
 <dl>
-<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code><a href="LevelProperties.html#getGameMode()">getGameMode</a></code>&nbsp;in class&nbsp;<code><a href="LevelProperties.html" title="class in net.minecraft.world.level">LevelProperties</a></code></dd>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="ServerWorldProperties.html#getGameMode()">getGameMode</a></code>&nbsp;in interface&nbsp;<code><a href="ServerWorldProperties.html" title="interface in net.minecraft.world.level">ServerWorldProperties</a></code></dd>
 </dl>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="setTime(long)">setTime</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setTime</span>&#8203;(<span class="arguments">long&nbsp;time)</span></div>
+<h3><a id="setSpawnX(int)">setSpawnX</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setSpawnX</span>&#8203;(<span class="arguments">int&nbsp;spawnX)</span></div>
 <dl>
-<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code><a href="LevelProperties.html#setTime(long)">setTime</a></code>&nbsp;in class&nbsp;<code><a href="LevelProperties.html" title="class in net.minecraft.world.level">LevelProperties</a></code></dd>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../MutableWorldProperties.html#setSpawnX(int)">setSpawnX</a></code>&nbsp;in interface&nbsp;<code><a href="../MutableWorldProperties.html" title="interface in net.minecraft.world">MutableWorldProperties</a></code></dd>
 </dl>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="setTimeOfDay(long)">setTimeOfDay</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setTimeOfDay</span>&#8203;(<span class="arguments">long&nbsp;timeOfDay)</span></div>
+<h3><a id="setSpawnY(int)">setSpawnY</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setSpawnY</span>&#8203;(<span class="arguments">int&nbsp;spawnY)</span></div>
 <dl>
-<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code><a href="LevelProperties.html#setTimeOfDay(long)">setTimeOfDay</a></code>&nbsp;in class&nbsp;<code><a href="LevelProperties.html" title="class in net.minecraft.world.level">LevelProperties</a></code></dd>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../MutableWorldProperties.html#setSpawnY(int)">setSpawnY</a></code>&nbsp;in interface&nbsp;<code><a href="../MutableWorldProperties.html" title="interface in net.minecraft.world">MutableWorldProperties</a></code></dd>
+</dl>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="setSpawnZ(int)">setSpawnZ</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setSpawnZ</span>&#8203;(<span class="arguments">int&nbsp;spawnZ)</span></div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../MutableWorldProperties.html#setSpawnZ(int)">setSpawnZ</a></code>&nbsp;in interface&nbsp;<code><a href="../MutableWorldProperties.html" title="interface in net.minecraft.world">MutableWorldProperties</a></code></dd>
+</dl>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="method_29034(long)">method_29034</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">method_29034</span>&#8203;(<span class="arguments">long&nbsp;long2)</span></div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="ServerWorldProperties.html#method_29034(long)">method_29034</a></code>&nbsp;in interface&nbsp;<code><a href="ServerWorldProperties.html" title="interface in net.minecraft.world.level">ServerWorldProperties</a></code></dd>
+</dl>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="method_29035(long)">method_29035</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">method_29035</span>&#8203;(<span class="arguments">long&nbsp;long2)</span></div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="ServerWorldProperties.html#method_29035(long)">method_29035</a></code>&nbsp;in interface&nbsp;<code><a href="ServerWorldProperties.html" title="interface in net.minecraft.world.level">ServerWorldProperties</a></code></dd>
 </dl>
 </section>
 </li>
@@ -595,28 +623,8 @@ extends <a href="LevelProperties.html" title="class in net.minecraft.world.level
 <h3><a id="setSpawnPos(net.minecraft.util.math.BlockPos)">setSpawnPos</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setSpawnPos</span>&#8203;(<span class="arguments"><a href="../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</span></div>
 <dl>
-<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code><a href="LevelProperties.html#setSpawnPos(net.minecraft.util.math.BlockPos)">setSpawnPos</a></code>&nbsp;in class&nbsp;<code><a href="LevelProperties.html" title="class in net.minecraft.world.level">LevelProperties</a></code></dd>
-</dl>
-</section>
-</li>
-<li class="blockList">
-<section class="detail">
-<h3><a id="setLevelName(java.lang.String)">setLevelName</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setLevelName</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;levelName)</span></div>
-<dl>
-<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code><a href="LevelProperties.html#setLevelName(java.lang.String)">setLevelName</a></code>&nbsp;in class&nbsp;<code><a href="LevelProperties.html" title="class in net.minecraft.world.level">LevelProperties</a></code></dd>
-</dl>
-</section>
-</li>
-<li class="blockList">
-<section class="detail">
-<h3><a id="setVersion(int)">setVersion</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setVersion</span>&#8203;(<span class="arguments">int&nbsp;version)</span></div>
-<dl>
-<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code><a href="LevelProperties.html#setVersion(int)">setVersion</a></code>&nbsp;in class&nbsp;<code><a href="LevelProperties.html" title="class in net.minecraft.world.level">LevelProperties</a></code></dd>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../MutableWorldProperties.html#setSpawnPos(net.minecraft.util.math.BlockPos)">setSpawnPos</a></code>&nbsp;in interface&nbsp;<code><a href="../MutableWorldProperties.html" title="interface in net.minecraft.world">MutableWorldProperties</a></code></dd>
 </dl>
 </section>
 </li>
@@ -625,8 +633,8 @@ extends <a href="LevelProperties.html" title="class in net.minecraft.world.level
 <h3><a id="setThundering(boolean)">setThundering</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setThundering</span>&#8203;(<span class="arguments">boolean&nbsp;thundering)</span></div>
 <dl>
-<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code><a href="LevelProperties.html#setThundering(boolean)">setThundering</a></code>&nbsp;in class&nbsp;<code><a href="LevelProperties.html" title="class in net.minecraft.world.level">LevelProperties</a></code></dd>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="ServerWorldProperties.html#setThundering(boolean)">setThundering</a></code>&nbsp;in interface&nbsp;<code><a href="ServerWorldProperties.html" title="interface in net.minecraft.world.level">ServerWorldProperties</a></code></dd>
 </dl>
 </section>
 </li>
@@ -635,8 +643,8 @@ extends <a href="LevelProperties.html" title="class in net.minecraft.world.level
 <h3><a id="setThunderTime(int)">setThunderTime</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setThunderTime</span>&#8203;(<span class="arguments">int&nbsp;thunderTime)</span></div>
 <dl>
-<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code><a href="LevelProperties.html#setThunderTime(int)">setThunderTime</a></code>&nbsp;in class&nbsp;<code><a href="LevelProperties.html" title="class in net.minecraft.world.level">LevelProperties</a></code></dd>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="ServerWorldProperties.html#setThunderTime(int)">setThunderTime</a></code>&nbsp;in interface&nbsp;<code><a href="ServerWorldProperties.html" title="interface in net.minecraft.world.level">ServerWorldProperties</a></code></dd>
 </dl>
 </section>
 </li>
@@ -645,8 +653,8 @@ extends <a href="LevelProperties.html" title="class in net.minecraft.world.level
 <h3><a id="setRaining(boolean)">setRaining</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setRaining</span>&#8203;(<span class="arguments">boolean&nbsp;raining)</span></div>
 <dl>
-<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code><a href="LevelProperties.html#setRaining(boolean)">setRaining</a></code>&nbsp;in class&nbsp;<code><a href="LevelProperties.html" title="class in net.minecraft.world.level">LevelProperties</a></code></dd>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../WorldProperties.html#setRaining(boolean)">setRaining</a></code>&nbsp;in interface&nbsp;<code><a href="../WorldProperties.html" title="interface in net.minecraft.world">WorldProperties</a></code></dd>
 </dl>
 </section>
 </li>
@@ -655,18 +663,18 @@ extends <a href="LevelProperties.html" title="class in net.minecraft.world.level
 <h3><a id="setRainTime(int)">setRainTime</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setRainTime</span>&#8203;(<span class="arguments">int&nbsp;rainTime)</span></div>
 <dl>
-<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code><a href="LevelProperties.html#setRainTime(int)">setRainTime</a></code>&nbsp;in class&nbsp;<code><a href="LevelProperties.html" title="class in net.minecraft.world.level">LevelProperties</a></code></dd>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="ServerWorldProperties.html#setRainTime(int)">setRainTime</a></code>&nbsp;in interface&nbsp;<code><a href="ServerWorldProperties.html" title="interface in net.minecraft.world.level">ServerWorldProperties</a></code></dd>
 </dl>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="hasStructures()">hasStructures</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">hasStructures</span>()</div>
+<h3><a id="setGameMode(net.minecraft.world.GameMode)">setGameMode</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setGameMode</span>&#8203;(<span class="arguments"><a href="../GameMode.html" title="enum in net.minecraft.world">GameMode</a>&nbsp;gameMode)</span></div>
 <dl>
-<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code><a href="LevelProperties.html#hasStructures()">hasStructures</a></code>&nbsp;in class&nbsp;<code><a href="LevelProperties.html" title="class in net.minecraft.world.level">LevelProperties</a></code></dd>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="ServerWorldProperties.html#setGameMode(net.minecraft.world.GameMode)">setGameMode</a></code>&nbsp;in interface&nbsp;<code><a href="ServerWorldProperties.html" title="interface in net.minecraft.world.level">ServerWorldProperties</a></code></dd>
 </dl>
 </section>
 </li>
@@ -675,28 +683,8 @@ extends <a href="LevelProperties.html" title="class in net.minecraft.world.level
 <h3><a id="isHardcore()">isHardcore</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isHardcore</span>()</div>
 <dl>
-<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code><a href="LevelProperties.html#isHardcore()">isHardcore</a></code>&nbsp;in class&nbsp;<code><a href="LevelProperties.html" title="class in net.minecraft.world.level">LevelProperties</a></code></dd>
-</dl>
-</section>
-</li>
-<li class="blockList">
-<section class="detail">
-<h3><a id="getGeneratorType()">getGeneratorType</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="LevelGeneratorType.html" title="class in net.minecraft.world.level">LevelGeneratorType</a></span>&nbsp;<span class="memberName">getGeneratorType</span>()</div>
-<dl>
-<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code><a href="LevelProperties.html#getGeneratorType()">getGeneratorType</a></code>&nbsp;in class&nbsp;<code><a href="LevelProperties.html" title="class in net.minecraft.world.level">LevelProperties</a></code></dd>
-</dl>
-</section>
-</li>
-<li class="blockList">
-<section class="detail">
-<h3><a id="setGeneratorOptions(net.minecraft.world.level.LevelGeneratorOptions)">setGeneratorOptions</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setGeneratorOptions</span>&#8203;(<span class="arguments"><a href="LevelGeneratorOptions.html" title="class in net.minecraft.world.level">LevelGeneratorOptions</a>&nbsp;options)</span></div>
-<dl>
-<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code><a href="LevelProperties.html#setGeneratorOptions(net.minecraft.world.level.LevelGeneratorOptions)">setGeneratorOptions</a></code>&nbsp;in class&nbsp;<code><a href="LevelProperties.html" title="class in net.minecraft.world.level">LevelProperties</a></code></dd>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../WorldProperties.html#isHardcore()">isHardcore</a></code>&nbsp;in interface&nbsp;<code><a href="../WorldProperties.html" title="interface in net.minecraft.world">WorldProperties</a></code></dd>
 </dl>
 </section>
 </li>
@@ -705,18 +693,8 @@ extends <a href="LevelProperties.html" title="class in net.minecraft.world.level
 <h3><a id="areCommandsAllowed()">areCommandsAllowed</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">areCommandsAllowed</span>()</div>
 <dl>
-<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code><a href="LevelProperties.html#areCommandsAllowed()">areCommandsAllowed</a></code>&nbsp;in class&nbsp;<code><a href="LevelProperties.html" title="class in net.minecraft.world.level">LevelProperties</a></code></dd>
-</dl>
-</section>
-</li>
-<li class="blockList">
-<section class="detail">
-<h3><a id="setCommandsAllowed(boolean)">setCommandsAllowed</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setCommandsAllowed</span>&#8203;(<span class="arguments">boolean&nbsp;commandsAllowed)</span></div>
-<dl>
-<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code><a href="LevelProperties.html#setCommandsAllowed(boolean)">setCommandsAllowed</a></code>&nbsp;in class&nbsp;<code><a href="LevelProperties.html" title="class in net.minecraft.world.level">LevelProperties</a></code></dd>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="ServerWorldProperties.html#areCommandsAllowed()">areCommandsAllowed</a></code>&nbsp;in interface&nbsp;<code><a href="ServerWorldProperties.html" title="interface in net.minecraft.world.level">ServerWorldProperties</a></code></dd>
 </dl>
 </section>
 </li>
@@ -725,8 +703,8 @@ extends <a href="LevelProperties.html" title="class in net.minecraft.world.level
 <h3><a id="isInitialized()">isInitialized</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isInitialized</span>()</div>
 <dl>
-<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code><a href="LevelProperties.html#isInitialized()">isInitialized</a></code>&nbsp;in class&nbsp;<code><a href="LevelProperties.html" title="class in net.minecraft.world.level">LevelProperties</a></code></dd>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="ServerWorldProperties.html#isInitialized()">isInitialized</a></code>&nbsp;in interface&nbsp;<code><a href="ServerWorldProperties.html" title="interface in net.minecraft.world.level">ServerWorldProperties</a></code></dd>
 </dl>
 </section>
 </li>
@@ -735,8 +713,8 @@ extends <a href="LevelProperties.html" title="class in net.minecraft.world.level
 <h3><a id="setInitialized(boolean)">setInitialized</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setInitialized</span>&#8203;(<span class="arguments">boolean&nbsp;initialized)</span></div>
 <dl>
-<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code><a href="LevelProperties.html#setInitialized(boolean)">setInitialized</a></code>&nbsp;in class&nbsp;<code><a href="LevelProperties.html" title="class in net.minecraft.world.level">LevelProperties</a></code></dd>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="ServerWorldProperties.html#setInitialized(boolean)">setInitialized</a></code>&nbsp;in interface&nbsp;<code><a href="ServerWorldProperties.html" title="interface in net.minecraft.world.level">ServerWorldProperties</a></code></dd>
 </dl>
 </section>
 </li>
@@ -745,8 +723,28 @@ extends <a href="LevelProperties.html" title="class in net.minecraft.world.level
 <h3><a id="getGameRules()">getGameRules</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../GameRules.html" title="class in net.minecraft.world">GameRules</a></span>&nbsp;<span class="memberName">getGameRules</span>()</div>
 <dl>
-<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code><a href="LevelProperties.html#getGameRules()">getGameRules</a></code>&nbsp;in class&nbsp;<code><a href="LevelProperties.html" title="class in net.minecraft.world.level">LevelProperties</a></code></dd>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../WorldProperties.html#getGameRules()">getGameRules</a></code>&nbsp;in interface&nbsp;<code><a href="../WorldProperties.html" title="interface in net.minecraft.world">WorldProperties</a></code></dd>
+</dl>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="getWorldBorder()">getWorldBorder</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../border/WorldBorder.Properties.html" title="class in net.minecraft.world.border">WorldBorder.Properties</a></span>&nbsp;<span class="memberName">getWorldBorder</span>()</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="ServerWorldProperties.html#getWorldBorder()">getWorldBorder</a></code>&nbsp;in interface&nbsp;<code><a href="ServerWorldProperties.html" title="interface in net.minecraft.world.level">ServerWorldProperties</a></code></dd>
+</dl>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="setWorldBorder(net.minecraft.world.border.WorldBorder.Properties)">setWorldBorder</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setWorldBorder</span>&#8203;(<span class="arguments"><a href="../border/WorldBorder.Properties.html" title="class in net.minecraft.world.border">WorldBorder.Properties</a>&nbsp;properties)</span></div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="ServerWorldProperties.html#setWorldBorder(net.minecraft.world.border.WorldBorder.Properties)">setWorldBorder</a></code>&nbsp;in interface&nbsp;<code><a href="ServerWorldProperties.html" title="interface in net.minecraft.world.level">ServerWorldProperties</a></code></dd>
 </dl>
 </section>
 </li>
@@ -755,18 +753,8 @@ extends <a href="LevelProperties.html" title="class in net.minecraft.world.level
 <h3><a id="getDifficulty()">getDifficulty</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../Difficulty.html" title="enum in net.minecraft.world">Difficulty</a></span>&nbsp;<span class="memberName">getDifficulty</span>()</div>
 <dl>
-<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code><a href="LevelProperties.html#getDifficulty()">getDifficulty</a></code>&nbsp;in class&nbsp;<code><a href="LevelProperties.html" title="class in net.minecraft.world.level">LevelProperties</a></code></dd>
-</dl>
-</section>
-</li>
-<li class="blockList">
-<section class="detail">
-<h3><a id="setDifficulty(net.minecraft.world.Difficulty)">setDifficulty</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setDifficulty</span>&#8203;(<span class="arguments"><a href="../Difficulty.html" title="enum in net.minecraft.world">Difficulty</a>&nbsp;difficulty)</span></div>
-<dl>
-<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code><a href="LevelProperties.html#setDifficulty(net.minecraft.world.Difficulty)">setDifficulty</a></code>&nbsp;in class&nbsp;<code><a href="LevelProperties.html" title="class in net.minecraft.world.level">LevelProperties</a></code></dd>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../WorldProperties.html#getDifficulty()">getDifficulty</a></code>&nbsp;in interface&nbsp;<code><a href="../WorldProperties.html" title="interface in net.minecraft.world">WorldProperties</a></code></dd>
 </dl>
 </section>
 </li>
@@ -775,18 +763,8 @@ extends <a href="LevelProperties.html" title="class in net.minecraft.world.level
 <h3><a id="isDifficultyLocked()">isDifficultyLocked</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isDifficultyLocked</span>()</div>
 <dl>
-<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code><a href="LevelProperties.html#isDifficultyLocked()">isDifficultyLocked</a></code>&nbsp;in class&nbsp;<code><a href="LevelProperties.html" title="class in net.minecraft.world.level">LevelProperties</a></code></dd>
-</dl>
-</section>
-</li>
-<li class="blockList">
-<section class="detail">
-<h3><a id="setDifficultyLocked(boolean)">setDifficultyLocked</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setDifficultyLocked</span>&#8203;(<span class="arguments">boolean&nbsp;difficultyLocked)</span></div>
-<dl>
-<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code><a href="LevelProperties.html#setDifficultyLocked(boolean)">setDifficultyLocked</a></code>&nbsp;in class&nbsp;<code><a href="LevelProperties.html" title="class in net.minecraft.world.level">LevelProperties</a></code></dd>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../WorldProperties.html#isDifficultyLocked()">isDifficultyLocked</a></code>&nbsp;in interface&nbsp;<code><a href="../WorldProperties.html" title="interface in net.minecraft.world">WorldProperties</a></code></dd>
 </dl>
 </section>
 </li>
@@ -795,39 +773,70 @@ extends <a href="LevelProperties.html" title="class in net.minecraft.world.level
 <h3><a id="getScheduledEvents()">getScheduledEvents</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../timer/Timer.html" title="class in net.minecraft.world.timer">Timer</a>&lt;<a href="../../server/MinecraftServer.html" title="class in net.minecraft.server">MinecraftServer</a>&gt;</span>&nbsp;<span class="memberName">getScheduledEvents</span>()</div>
 <dl>
-<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code><a href="LevelProperties.html#getScheduledEvents()">getScheduledEvents</a></code>&nbsp;in class&nbsp;<code><a href="LevelProperties.html" title="class in net.minecraft.world.level">LevelProperties</a></code></dd>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="ServerWorldProperties.html#getScheduledEvents()">getScheduledEvents</a></code>&nbsp;in interface&nbsp;<code><a href="ServerWorldProperties.html" title="interface in net.minecraft.world.level">ServerWorldProperties</a></code></dd>
 </dl>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="setWorldData(net.minecraft.world.dimension.DimensionType,net.minecraft.nbt.CompoundTag)">setWorldData</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setWorldData</span>&#8203;(<span class="arguments"><a href="../dimension/DimensionType.html" title="class in net.minecraft.world.dimension">DimensionType</a>&nbsp;type,
-<a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a>&nbsp;tag)</span></div>
+<h3><a id="getWanderingTraderSpawnDelay()">getWanderingTraderSpawnDelay</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getWanderingTraderSpawnDelay</span>()</div>
 <dl>
-<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code><a href="LevelProperties.html#setWorldData(net.minecraft.world.dimension.DimensionType,net.minecraft.nbt.CompoundTag)">setWorldData</a></code>&nbsp;in class&nbsp;<code><a href="LevelProperties.html" title="class in net.minecraft.world.level">LevelProperties</a></code></dd>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="ServerWorldProperties.html#getWanderingTraderSpawnDelay()">getWanderingTraderSpawnDelay</a></code>&nbsp;in interface&nbsp;<code><a href="ServerWorldProperties.html" title="interface in net.minecraft.world.level">ServerWorldProperties</a></code></dd>
 </dl>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="getWorldData(net.minecraft.world.dimension.DimensionType)">getWorldData</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../../nbt/CompoundTag.html" title="class in net.minecraft.nbt">CompoundTag</a></span>&nbsp;<span class="memberName">getWorldData</span>&#8203;(<span class="arguments"><a href="../dimension/DimensionType.html" title="class in net.minecraft.world.dimension">DimensionType</a>&nbsp;type)</span></div>
+<h3><a id="setWanderingTraderSpawnDelay(int)">setWanderingTraderSpawnDelay</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setWanderingTraderSpawnDelay</span>&#8203;(<span class="arguments">int&nbsp;wanderingTraderSpawnDelay)</span></div>
 <dl>
-<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code><a href="LevelProperties.html#getWorldData(net.minecraft.world.dimension.DimensionType)">getWorldData</a></code>&nbsp;in class&nbsp;<code><a href="LevelProperties.html" title="class in net.minecraft.world.level">LevelProperties</a></code></dd>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="ServerWorldProperties.html#setWanderingTraderSpawnDelay(int)">setWanderingTraderSpawnDelay</a></code>&nbsp;in interface&nbsp;<code><a href="ServerWorldProperties.html" title="interface in net.minecraft.world.level">ServerWorldProperties</a></code></dd>
+</dl>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="getWanderingTraderSpawnChance()">getWanderingTraderSpawnChance</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getWanderingTraderSpawnChance</span>()</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="ServerWorldProperties.html#getWanderingTraderSpawnChance()">getWanderingTraderSpawnChance</a></code>&nbsp;in interface&nbsp;<code><a href="ServerWorldProperties.html" title="interface in net.minecraft.world.level">ServerWorldProperties</a></code></dd>
+</dl>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="setWanderingTraderSpawnChance(int)">setWanderingTraderSpawnChance</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setWanderingTraderSpawnChance</span>&#8203;(<span class="arguments">int&nbsp;wanderingTraderSpawnChance)</span></div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="ServerWorldProperties.html#setWanderingTraderSpawnChance(int)">setWanderingTraderSpawnChance</a></code>&nbsp;in interface&nbsp;<code><a href="ServerWorldProperties.html" title="interface in net.minecraft.world.level">ServerWorldProperties</a></code></dd>
+</dl>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="setWanderingTraderId(java.util.UUID)">setWanderingTraderId</a></h3>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setWanderingTraderId</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util" class="externalLink">UUID</a>&nbsp;uuid)</span></div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="ServerWorldProperties.html#setWanderingTraderId(java.util.UUID)">setWanderingTraderId</a></code>&nbsp;in interface&nbsp;<code><a href="ServerWorldProperties.html" title="interface in net.minecraft.world.level">ServerWorldProperties</a></code></dd>
 </dl>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="populateCrashReport(net.minecraft.util.crash.CrashReportSection)">populateCrashReport</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">populateCrashReport</span>&#8203;(<span class="arguments"><a href="../../util/crash/CrashReportSection.html" title="class in net.minecraft.util.crash">CrashReportSection</a>&nbsp;section)</span></div>
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">populateCrashReport</span>&#8203;(<span class="arguments"><a href="../../util/crash/CrashReportSection.html" title="class in net.minecraft.util.crash">CrashReportSection</a>&nbsp;reportSection)</span></div>
 <dl>
-<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code><a href="LevelProperties.html#populateCrashReport(net.minecraft.util.crash.CrashReportSection)">populateCrashReport</a></code>&nbsp;in class&nbsp;<code><a href="LevelProperties.html" title="class in net.minecraft.world.level">LevelProperties</a></code></dd>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="ServerWorldProperties.html#populateCrashReport(net.minecraft.util.crash.CrashReportSection)">populateCrashReport</a></code>&nbsp;in interface&nbsp;<code><a href="ServerWorldProperties.html" title="interface in net.minecraft.world.level">ServerWorldProperties</a></code></dd>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../WorldProperties.html#populateCrashReport(net.minecraft.util.crash.CrashReportSection)">populateCrashReport</a></code>&nbsp;in interface&nbsp;<code><a href="../WorldProperties.html" title="interface in net.minecraft.world">WorldProperties</a></code></dd>
 </dl>
 </section>
 </li>
@@ -870,7 +879,7 @@ extends <a href="LevelProperties.html" title="class in net.minecraft.world.level
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>

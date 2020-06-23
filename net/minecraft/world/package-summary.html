@@ -82,7 +82,9 @@ loadScripts(document, 'script');</script>
 </tr>
 <tr class="rowColor">
 <th class="colFirst" scope="row"><a href="BlockView.html" title="interface in net.minecraft.world">BlockView</a></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Represents a scoped, read-only view of block states, fluid states and block entities.</div>
+</td>
 </tr>
 <tr class="altColor">
 <th class="colFirst" scope="row"><a href="CollisionView.html" title="interface in net.minecraft.world">CollisionView</a></th>
@@ -93,11 +95,11 @@ loadScripts(document, 'script');</script>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
-<th class="colFirst" scope="row"><a href="GameRules.RuleTypeConsumer.html" title="interface in net.minecraft.world">GameRules.RuleTypeConsumer</a></th>
+<th class="colFirst" scope="row"><a href="GameRules.Acceptor.html" title="interface in net.minecraft.world">GameRules.Acceptor</a>&lt;T extends <a href="GameRules.Rule.html" title="class in net.minecraft.world">GameRules.Rule</a>&lt;T&gt;&gt;</th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<th class="colFirst" scope="row"><a href="IWorld.html" title="interface in net.minecraft.world">IWorld</a></th>
+<th class="colFirst" scope="row"><a href="GameRules.TypeConsumer.html" title="interface in net.minecraft.world">GameRules.TypeConsumer</a></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
@@ -106,10 +108,12 @@ loadScripts(document, 'script');</script>
 </tr>
 <tr class="rowColor">
 <th class="colFirst" scope="row"><a href="ModifiableWorld.html" title="interface in net.minecraft.world">ModifiableWorld</a></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Represents a modifable world where block states can be changed and entities spawned.</div>
+</td>
 </tr>
 <tr class="altColor">
-<th class="colFirst" scope="row"><a href="PlayerSaveHandler.html" title="interface in net.minecraft.world">PlayerSaveHandler</a></th>
+<th class="colFirst" scope="row"><a href="MutableWorldProperties.html" title="interface in net.minecraft.world">MutableWorldProperties</a></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
@@ -117,20 +121,50 @@ loadScripts(document, 'script');</script>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
-<th class="colFirst" scope="row"><a href="StructureHolder.html" title="interface in net.minecraft.world">StructureHolder</a></th>
+<th class="colFirst" scope="row"><a href="SaveProperties.html" title="interface in net.minecraft.world">SaveProperties</a></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<th class="colFirst" scope="row"><a href="TestableWorld.html" title="interface in net.minecraft.world">TestableWorld</a></th>
+<th class="colFirst" scope="row"><a href="ServerWorldAccess.html" title="interface in net.minecraft.world">ServerWorldAccess</a></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
-<th class="colFirst" scope="row"><a href="TickScheduler.html" title="interface in net.minecraft.world">TickScheduler</a>&lt;T&gt;</th>
+<th class="colFirst" scope="row"><a href="SpawnHelper.Checker.html" title="interface in net.minecraft.world">SpawnHelper.Checker</a></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<th class="colFirst" scope="row"><a href="WorldView.html" title="interface in net.minecraft.world">WorldView</a></th>
+<th class="colFirst" scope="row"><a href="SpawnHelper.ChunkSource.html" title="interface in net.minecraft.world">SpawnHelper.ChunkSource</a></th>
 <td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<th class="colFirst" scope="row"><a href="SpawnHelper.Runner.html" title="interface in net.minecraft.world">SpawnHelper.Runner</a></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<th class="colFirst" scope="row"><a href="StructureHolder.html" title="interface in net.minecraft.world">StructureHolder</a></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<th class="colFirst" scope="row"><a href="TestableWorld.html" title="interface in net.minecraft.world">TestableWorld</a></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<th class="colFirst" scope="row"><a href="TickScheduler.html" title="interface in net.minecraft.world">TickScheduler</a>&lt;T&gt;</th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<th class="colFirst" scope="row"><a href="WorldAccess.html" title="interface in net.minecraft.world">WorldAccess</a></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<th class="colFirst" scope="row"><a href="WorldProperties.html" title="interface in net.minecraft.world">WorldProperties</a></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<th class="colFirst" scope="row"><a href="WorldView.html" title="interface in net.minecraft.world">WorldView</a></th>
+<td class="colLast">
+<div class="block">Represents a scoped, read-only view of a world like structure that contains biomes, chunks and is bound to a dimension.</div>
+</td>
 </tr>
 </tbody>
 </table>
@@ -148,47 +182,55 @@ loadScripts(document, 'script');</script>
 </thead>
 <tbody>
 <tr class="altColor">
+<th class="colFirst" scope="row"><a href="BlockCollisionSpliterator.html" title="class in net.minecraft.world">BlockCollisionSpliterator</a></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <th class="colFirst" scope="row"><a href="ChunkPosDistanceLevelPropagator.html" title="class in net.minecraft.world">ChunkPosDistanceLevelPropagator</a></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <th class="colFirst" scope="row"><a href="ChunkRegion.html" title="class in net.minecraft.world">ChunkRegion</a></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <th class="colFirst" scope="row"><a href="ChunkSerializer.html" title="class in net.minecraft.world">ChunkSerializer</a></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <th class="colFirst" scope="row"><a href="ChunkTickScheduler.html" title="class in net.minecraft.world">ChunkTickScheduler</a>&lt;T&gt;</th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <th class="colFirst" scope="row"><a href="ChunkUpdateState.html" title="class in net.minecraft.world">ChunkUpdateState</a></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <th class="colFirst" scope="row"><a href="CommandBlockExecutor.html" title="class in net.minecraft.world">CommandBlockExecutor</a></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <th class="colFirst" scope="row"><a href="FeatureUpdater.html" title="class in net.minecraft.world">FeatureUpdater</a></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <th class="colFirst" scope="row"><a href="ForcedChunkState.html" title="class in net.minecraft.world">ForcedChunkState</a></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <th class="colFirst" scope="row"><a href="GameRules.html" title="class in net.minecraft.world">GameRules</a></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <th class="colFirst" scope="row"><a href="GameRules.BooleanRule.html" title="class in net.minecraft.world">GameRules.BooleanRule</a></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <th class="colFirst" scope="row"><a href="GameRules.IntRule.html" title="class in net.minecraft.world">GameRules.IntRule</a></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<th class="colFirst" scope="row"><a href="GameRules.Key.html" title="class in net.minecraft.world">GameRules.Key</a>&lt;T extends <a href="GameRules.Rule.html" title="class in net.minecraft.world">GameRules.Rule</a>&lt;T&gt;&gt;</th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
@@ -196,63 +238,63 @@ loadScripts(document, 'script');</script>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
-<th class="colFirst" scope="row"><a href="GameRules.RuleKey.html" title="class in net.minecraft.world">GameRules.RuleKey</a>&lt;T extends <a href="GameRules.Rule.html" title="class in net.minecraft.world">GameRules.Rule</a>&lt;T&gt;&gt;</th>
+<th class="colFirst" scope="row"><a href="GameRules.Type.html" title="class in net.minecraft.world">GameRules.Type</a>&lt;T extends <a href="GameRules.Rule.html" title="class in net.minecraft.world">GameRules.Rule</a>&lt;T&gt;&gt;</th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<th class="colFirst" scope="row"><a href="GameRules.RuleType.html" title="class in net.minecraft.world">GameRules.RuleType</a>&lt;T extends <a href="GameRules.Rule.html" title="class in net.minecraft.world">GameRules.Rule</a>&lt;T&gt;&gt;</th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="altColor">
 <th class="colFirst" scope="row"><a href="Heightmap.html" title="class in net.minecraft.world">Heightmap</a></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <th class="colFirst" scope="row"><a href="IdCountsState.html" title="class in net.minecraft.world">IdCountsState</a></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <th class="colFirst" scope="row"><a href="LocalDifficulty.html" title="class in net.minecraft.world">LocalDifficulty</a></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <th class="colFirst" scope="row"><a href="MobSpawnerEntry.html" title="class in net.minecraft.world">MobSpawnerEntry</a></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <th class="colFirst" scope="row"><a href="MobSpawnerLogic.html" title="class in net.minecraft.world">MobSpawnerLogic</a></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <th class="colFirst" scope="row"><a href="MultiTickScheduler.html" title="class in net.minecraft.world">MultiTickScheduler</a>&lt;T&gt;</th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <th class="colFirst" scope="row"><a href="PersistentState.html" title="class in net.minecraft.world">PersistentState</a></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <th class="colFirst" scope="row"><a href="PersistentStateManager.html" title="class in net.minecraft.world">PersistentStateManager</a></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <th class="colFirst" scope="row"><a href="PortalForcer.html" title="class in net.minecraft.world">PortalForcer</a></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <th class="colFirst" scope="row"><a href="RayTraceContext.html" title="class in net.minecraft.world">RayTraceContext</a></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <th class="colFirst" scope="row"><a href="ScheduledTick.html" title="class in net.minecraft.world">ScheduledTick</a>&lt;T&gt;</th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <th class="colFirst" scope="row"><a href="SectionDistanceLevelPropagator.html" title="class in net.minecraft.world">SectionDistanceLevelPropagator</a></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <th class="colFirst" scope="row"><a href="SpawnHelper.html" title="class in net.minecraft.world">SpawnHelper</a></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<th class="colFirst" scope="row"><a href="SpawnHelper.Info.html" title="class in net.minecraft.world">SpawnHelper.Info</a></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
@@ -295,26 +337,30 @@ loadScripts(document, 'script');</script>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<th class="colFirst" scope="row"><a href="GameRules.Category.html" title="enum in net.minecraft.world">GameRules.Category</a></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
 <th class="colFirst" scope="row"><a href="Heightmap.Purpose.html" title="enum in net.minecraft.world">Heightmap.Purpose</a></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <th class="colFirst" scope="row"><a href="Heightmap.Type.html" title="enum in net.minecraft.world">Heightmap.Type</a></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <th class="colFirst" scope="row"><a href="LightType.html" title="enum in net.minecraft.world">LightType</a></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <th class="colFirst" scope="row"><a href="RayTraceContext.FluidHandling.html" title="enum in net.minecraft.world">RayTraceContext.FluidHandling</a></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <th class="colFirst" scope="row"><a href="RayTraceContext.ShapeType.html" title="enum in net.minecraft.world">RayTraceContext.ShapeType</a></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <th class="colFirst" scope="row"><a href="TickPriority.html" title="enum in net.minecraft.world">TickPriority</a></th>
 <td class="colLast">&nbsp;</td>
 </tr>

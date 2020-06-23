@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10};
+<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -62,7 +62,7 @@ loadScripts(document, 'script');</script>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
@@ -123,6 +123,30 @@ extends <a href="ChunkLightProvider.html" title="class in net.minecraft.world.ch
 <!--   -->
 </a>
 <h2>Field Summary</h2>
+<div class="memberSummary">
+<table>
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<thead>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colSecond" scope="col">Field</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="../../../util/math/Direction.html" title="enum in net.minecraft.util.math">Direction</a>[]</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#DIRECTIONS">DIRECTIONS</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../util/math/BlockPos.Mutable.html" title="class in net.minecraft.util.math">BlockPos.Mutable</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#mutablePos">mutablePos</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
 <div class="inheritedList">
 <h3>Fields inherited from class&nbsp;net.minecraft.world.chunk.light.<a href="ChunkLightProvider.html" title="class in net.minecraft.world.chunk.light">ChunkLightProvider</a></h3>
 <a id="fields.inherited.from.class.net.minecraft.world.chunk.light.ChunkLightProvider">
@@ -180,20 +204,25 @@ int&nbsp;level)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getLightSourceLuminance(long)">getLightSourceLuminance</a></span>&#8203;(long&nbsp;blockPos)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i2">
 <td class="colFirst"><code>protected int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPropagatedLevel(long,long,int)">getPropagatedLevel</a></span>&#8203;(long&nbsp;sourceId,
 long&nbsp;targetId,
 int&nbsp;level)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i2">
+<tr class="rowColor" id="i3">
 <td class="colFirst"><code>protected void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#propagateLevel(long,int,boolean)">propagateLevel</a></span>&#8203;(long&nbsp;id,
 int&nbsp;level,
 boolean&nbsp;decrease)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i3">
+<tr class="altColor" id="i4">
 <td class="colFirst"><code>protected int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#recalculateLevel(long,long,int)">recalculateLevel</a></span>&#8203;(long&nbsp;id,
 long&nbsp;excludedId,
@@ -208,7 +237,7 @@ int&nbsp;maxLevel)</code></th>
 <h3>Methods inherited from class&nbsp;net.minecraft.world.chunk.light.<a href="ChunkLightProvider.html" title="class in net.minecraft.world.chunk.light">ChunkLightProvider</a></h3>
 <a id="methods.inherited.from.class.net.minecraft.world.chunk.light.ChunkLightProvider">
 <!--   -->
-</a><code><a href="ChunkLightProvider.html#checkBlock(net.minecraft.util.math.BlockPos)">checkBlock</a>, <a href="ChunkLightProvider.html#doLightUpdates(int,boolean,boolean)">doLightUpdates</a>, <a href="ChunkLightProvider.html#getCurrentLevelFromArray(net.minecraft.world.chunk.ChunkNibbleArray,long)">getCurrentLevelFromArray</a>, <a href="ChunkLightProvider.html#getLevel(long)">getLevel</a>, <a href="ChunkLightProvider.html#getLightArray(net.minecraft.util.math.ChunkSectionPos)">getLightArray</a>, <a href="ChunkLightProvider.html#getLightLevel(net.minecraft.util.math.BlockPos)">getLightLevel</a>, <a href="ChunkLightProvider.html#getOpaqueShape(net.minecraft.block.BlockState,long,net.minecraft.util.math.Direction)">getOpaqueShape</a>, <a href="ChunkLightProvider.html#getRealisticOpacity(net.minecraft.world.BlockView,net.minecraft.block.BlockState,net.minecraft.util.math.BlockPos,net.minecraft.block.BlockState,net.minecraft.util.math.BlockPos,net.minecraft.util.math.Direction,int)">getRealisticOpacity</a>, <a href="ChunkLightProvider.html#getStateForLighting(long,org.apache.commons.lang3.mutable.MutableInt)">getStateForLighting</a>, <a href="ChunkLightProvider.html#hasUpdates()">hasUpdates</a>, <a href="ChunkLightProvider.html#isMarker(long)">isMarker</a>, <a href="ChunkLightProvider.html#method_22875(long)">method_22875</a>, <a href="ChunkLightProvider.html#resetLevel(long)">resetLevel</a>, <a href="ChunkLightProvider.html#setLevel(long,int)">setLevel</a>, <a href="ChunkLightProvider.html#setLightArray(long,net.minecraft.world.chunk.ChunkNibbleArray)">setLightArray</a>, <a href="ChunkLightProvider.html#setLightEnabled(net.minecraft.util.math.ChunkPos,boolean)">setLightEnabled</a>, <a href="ChunkLightProvider.html#setRetainData(net.minecraft.util.math.ChunkPos,boolean)">setRetainData</a>, <a href="ChunkLightProvider.html#updateSectionStatus(net.minecraft.util.math.ChunkSectionPos,boolean)">updateSectionStatus</a></code></div>
+</a><code><a href="ChunkLightProvider.html#checkBlock(net.minecraft.util.math.BlockPos)">checkBlock</a>, <a href="ChunkLightProvider.html#doLightUpdates(int,boolean,boolean)">doLightUpdates</a>, <a href="ChunkLightProvider.html#getCurrentLevelFromArray(net.minecraft.world.chunk.ChunkNibbleArray,long)">getCurrentLevelFromArray</a>, <a href="ChunkLightProvider.html#getLevel(long)">getLevel</a>, <a href="ChunkLightProvider.html#getLightArray(net.minecraft.util.math.ChunkSectionPos)">getLightArray</a>, <a href="ChunkLightProvider.html#getLightLevel(net.minecraft.util.math.BlockPos)">getLightLevel</a>, <a href="ChunkLightProvider.html#getOpaqueShape(net.minecraft.block.BlockState,long,net.minecraft.util.math.Direction)">getOpaqueShape</a>, <a href="ChunkLightProvider.html#getRealisticOpacity(net.minecraft.world.BlockView,net.minecraft.block.BlockState,net.minecraft.util.math.BlockPos,net.minecraft.block.BlockState,net.minecraft.util.math.BlockPos,net.minecraft.util.math.Direction,int)">getRealisticOpacity</a>, <a href="ChunkLightProvider.html#getStateForLighting(long,org.apache.commons.lang3.mutable.MutableInt)">getStateForLighting</a>, <a href="ChunkLightProvider.html#hasUpdates()">hasUpdates</a>, <a href="ChunkLightProvider.html#isMarker(long)">isMarker</a>, <a href="ChunkLightProvider.html#method_22875(long)">method_22875</a>, <a href="ChunkLightProvider.html#resetLevel(long)">resetLevel</a>, <a href="ChunkLightProvider.html#setLevel(long,int)">setLevel</a>, <a href="ChunkLightProvider.html#setLightArray(long,net.minecraft.world.chunk.ChunkNibbleArray,boolean)">setLightArray</a>, <a href="ChunkLightProvider.html#setLightEnabled(net.minecraft.util.math.ChunkPos,boolean)">setLightEnabled</a>, <a href="ChunkLightProvider.html#setRetainData(net.minecraft.util.math.ChunkPos,boolean)">setRetainData</a>, <a href="ChunkLightProvider.html#updateSectionStatus(net.minecraft.util.math.ChunkSectionPos,boolean)">updateSectionStatus</a></code></div>
 <div class="inheritedList">
 <h3>Methods inherited from class&nbsp;net.minecraft.world.chunk.light.<a href="LevelPropagator.html" title="class in net.minecraft.world.chunk.light">LevelPropagator</a></h3>
 <a id="methods.inherited.from.class.net.minecraft.world.chunk.light.LevelPropagator">
@@ -230,6 +259,28 @@ int&nbsp;maxLevel)</code></th>
 </section>
 <section class="details">
 <ul class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<li class="blockList">
+<section class="fieldDetails"><a id="field.detail">
+<!--   -->
+</a>
+<h2>Field Details</h2>
+<ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="DIRECTIONS">DIRECTIONS</a></h3>
+<div class="memberSignature"><span class="modifiers">private static final</span>&nbsp;<span class="returnType"><a href="../../../util/math/Direction.html" title="enum in net.minecraft.util.math">Direction</a>[]</span>&nbsp;<span class="memberName">DIRECTIONS</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="mutablePos">mutablePos</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="../../../util/math/BlockPos.Mutable.html" title="class in net.minecraft.util.math">BlockPos.Mutable</a></span>&nbsp;<span class="memberName">mutablePos</span></div>
+</section>
+</li>
+</ul>
+</section>
+</li>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <li class="blockList">
 <section class="constructorDetails"><a id="constructor.detail">
@@ -253,6 +304,12 @@ int&nbsp;maxLevel)</code></th>
 </a>
 <h2>Method Details</h2>
 <ul class="blockList">
+<li class="blockList">
+<section class="detail">
+<h3><a id="getLightSourceLuminance(long)">getLightSourceLuminance</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getLightSourceLuminance</span>&#8203;(<span class="arguments">long&nbsp;blockPos)</span></div>
+</section>
+</li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getPropagatedLevel(long,long,int)">getPropagatedLevel</a></h3>
@@ -339,7 +396,7 @@ int&nbsp;level)</span></div>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>

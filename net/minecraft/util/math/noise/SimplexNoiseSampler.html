@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":9,"i1":10,"i2":10};
+<script type="text/javascript">var data = {"i0":9,"i1":10,"i2":10,"i3":10,"i4":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -133,6 +133,26 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#originZ">originZ</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int[]</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#permutations">permutations</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static double</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#SKEW_FACTOR_2D">SKEW_FACTOR_2D</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static double</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#sqrt3">sqrt3</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static double</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#UNSKEW_FACTOR_2D">UNSKEW_FACTOR_2D</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -190,13 +210,27 @@ double&nbsp;z)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getGradient(int)">getGradient</a></span>&#8203;(int&nbsp;hash)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i2">
+<td class="colFirst"><code>private double</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#grad(int,double,double,double,double)">grad</a></span>&#8203;(int&nbsp;hash,
+double&nbsp;x,
+double&nbsp;y,
+double&nbsp;z,
+double&nbsp;double2)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i3">
 <td class="colFirst"><code>double</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_22416(double,double,double)">method_22416</a></span>&#8203;(double&nbsp;double2,
 double&nbsp;double3,
 double&nbsp;double4)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i2">
+<tr class="altColor" id="i4">
 <td class="colFirst"><code>double</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#sample(double,double)">sample</a></span>&#8203;(double&nbsp;x,
 double&nbsp;y)</code></th>
@@ -228,6 +262,30 @@ double&nbsp;y)</code></th>
 <section class="detail">
 <h3><a id="gradients">gradients</a></h3>
 <div class="memberSignature"><span class="modifiers">protected static final</span>&nbsp;<span class="returnType">int[][]</span>&nbsp;<span class="memberName">gradients</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="sqrt3">sqrt3</a></h3>
+<div class="memberSignature"><span class="modifiers">private static final</span>&nbsp;<span class="returnType">double</span>&nbsp;<span class="memberName">sqrt3</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="SKEW_FACTOR_2D">SKEW_FACTOR_2D</a></h3>
+<div class="memberSignature"><span class="modifiers">private static final</span>&nbsp;<span class="returnType">double</span>&nbsp;<span class="memberName">SKEW_FACTOR_2D</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="UNSKEW_FACTOR_2D">UNSKEW_FACTOR_2D</a></h3>
+<div class="memberSignature"><span class="modifiers">private static final</span>&nbsp;<span class="returnType">double</span>&nbsp;<span class="memberName">UNSKEW_FACTOR_2D</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="permutations">permutations</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType">int[]</span>&nbsp;<span class="memberName">permutations</span></div>
 </section>
 </li>
 <li class="blockList">
@@ -276,11 +334,27 @@ double&nbsp;y)</code></th>
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
+<h3><a id="getGradient(int)">getGradient</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">getGradient</span>&#8203;(<span class="arguments">int&nbsp;hash)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
 <h3><a id="dot(int[],double,double,double)">dot</a></h3>
 <div class="memberSignature"><span class="modifiers">protected static</span>&nbsp;<span class="returnType">double</span>&nbsp;<span class="memberName">dot</span>&#8203;(<span class="arguments">int[]&nbsp;gArr,
 double&nbsp;x,
 double&nbsp;y,
 double&nbsp;z)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="grad(int,double,double,double,double)">grad</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">double</span>&nbsp;<span class="memberName">grad</span>&#8203;(<span class="arguments">int&nbsp;hash,
+double&nbsp;x,
+double&nbsp;y,
+double&nbsp;z,
+double&nbsp;double2)</span></div>
 </section>
 </li>
 <li class="blockList">

@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10};
+<script type="text/javascript">var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -129,8 +129,43 @@ extends <a href="Goal.html" title="class in net.minecraft.entity.ai.goal">Goal</
 </thead>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#distance">distance</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/BooleanSupplier.html?is-external=true" title="class or interface in java.util.function" class="externalLink">BooleanSupplier</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#doorPassingThroughGetter">doorPassingThroughGetter</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../mob/MobEntityWithAi.html" title="class in net.minecraft.entity.mob">MobEntityWithAi</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#mob">mob</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#requiresNighttime">requiresNighttime</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private double</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#speed">speed</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#target">target</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../pathing/Path.html" title="class in net.minecraft.entity.ai.pathing">Path</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#targetPath">targetPath</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#visitedTargets">visitedTargets</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -155,7 +190,7 @@ extends <a href="Goal.html" title="class in net.minecraft.entity.ai.goal">Goal</
 </thead>
 <tbody>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.entity.mob.MobEntityWithAi,double,boolean,int,java.util.function.BooleanSupplier)">MoveThroughVillageGoal</a></span>&#8203;(<a href="../../mob/MobEntityWithAi.html" title="class in net.minecraft.entity.mob">MobEntityWithAi</a>&nbsp;mob,
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.minecraft.entity.mob.MobEntityWithAi,double,boolean,int,java.util.function.BooleanSupplier)">MoveThroughVillageGoal</a></span>&#8203;(<a href="../../mob/MobEntityWithAi.html" title="class in net.minecraft.entity.mob">MobEntityWithAi</a>&nbsp;mobEntityWithAi,
 double&nbsp;speed,
 boolean&nbsp;requiresNighttime,
 int&nbsp;distance,
@@ -191,16 +226,31 @@ int&nbsp;distance,
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
+<td class="colFirst"><code>private void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#forgetOldTarget()">forgetOldTarget</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i2">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#method_30147()">method_30147</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i3">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#shouldContinue()">shouldContinue</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i2">
+<tr class="altColor" id="i4">
+<td class="colFirst"><code>private boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#shouldVisit(net.minecraft.util.math.BlockPos)">shouldVisit</a></span>&#8203;(<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i5">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#start()">start</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i3">
+<tr class="altColor" id="i6">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#stop()">stop</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
@@ -238,6 +288,48 @@ int&nbsp;distance,
 <div class="memberSignature"><span class="modifiers">protected final</span>&nbsp;<span class="returnType"><a href="../../mob/MobEntityWithAi.html" title="class in net.minecraft.entity.mob">MobEntityWithAi</a></span>&nbsp;<span class="memberName">mob</span></div>
 </section>
 </li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="speed">speed</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType">double</span>&nbsp;<span class="memberName">speed</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="targetPath">targetPath</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="../pathing/Path.html" title="class in net.minecraft.entity.ai.pathing">Path</a></span>&nbsp;<span class="memberName">targetPath</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="target">target</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType"><a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a></span>&nbsp;<span class="memberName">target</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="requiresNighttime">requiresNighttime</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">requiresNighttime</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="visitedTargets">visitedTargets</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;</span>&nbsp;<span class="memberName">visitedTargets</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="distance">distance</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">distance</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="doorPassingThroughGetter">doorPassingThroughGetter</a></h3>
+<div class="memberSignature"><span class="modifiers">private final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/BooleanSupplier.html?is-external=true" title="class or interface in java.util.function" class="externalLink">BooleanSupplier</a></span>&nbsp;<span class="memberName">doorPassingThroughGetter</span></div>
+</section>
+</li>
 </ul>
 </section>
 </li>
@@ -251,7 +343,7 @@ int&nbsp;distance,
 <li class="blockList">
 <section class="detail">
 <h3><a id="&lt;init&gt;(net.minecraft.entity.mob.MobEntityWithAi,double,boolean,int,java.util.function.BooleanSupplier)">MoveThroughVillageGoal</a></h3>
-<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">MoveThroughVillageGoal</span>&#8203;(<span class="arguments"><a href="../../mob/MobEntityWithAi.html" title="class in net.minecraft.entity.mob">MobEntityWithAi</a>&nbsp;mob,
+<div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="memberName">MoveThroughVillageGoal</span>&#8203;(<span class="arguments"><a href="../../mob/MobEntityWithAi.html" title="class in net.minecraft.entity.mob">MobEntityWithAi</a>&nbsp;mobEntityWithAi,
 double&nbsp;speed,
 boolean&nbsp;requiresNighttime,
 int&nbsp;distance,
@@ -306,6 +398,24 @@ int&nbsp;distance,
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="Goal.html#stop()">stop</a></code>&nbsp;in class&nbsp;<code><a href="Goal.html" title="class in net.minecraft.entity.ai.goal">Goal</a></code></dd>
 </dl>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="shouldVisit(net.minecraft.util.math.BlockPos)">shouldVisit</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">shouldVisit</span>&#8203;(<span class="arguments"><a href="../../../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="forgetOldTarget()">forgetOldTarget</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">forgetOldTarget</span>()</div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="method_30147()">method_30147</a></h3>
+<div class="memberSignature"><span class="modifiers">private</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">method_30147</span>()</div>
 </section>
 </li>
 </ul>

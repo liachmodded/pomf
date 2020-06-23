@@ -63,6 +63,38 @@ loadScripts(document, 'script');</script>
 <h1 class="title">yarn API</h1>
 </div>
 <div class="contentContainer">
+<div class="block"><h1 id="yarn">Yarn</h1>
+<p>Yarn is a set of open, unencumbered Minecraft mappings, free for everyone to use under the Creative Commons Zero license. The intention is to let everyone mod Minecraft freely and openly, while also being able to innovate and process the mappings as they see fit.</p>
+<p>To see the current version being targeted, check the branch name!</p>
+<h2 id="usage">Usage</h2>
+<p>To use yarn-deobfuscated Minecraft for Minecraft modding or as a dependency in a Java project, you can use <a href="https://github.com/fabricmc/fabric-loom">loom</a> Gradle plugin. See <a href="https://fabricmc.net/wiki/tutorial:setup">fabric wiki tutorial</a> for more information.</p>
+<p>To obtain a deobfuscated Minecraft jar, <a href="#mapNamedJar"><code>./gradlew mapNamedJar</code></a> will generate a jar named like <code>&lt;minecraft version&gt;-named.jar</code>, which can be sent to a decompiler for deobfuscated code.</p>
+<h2 id="contributing">Contributing</h2>
+<p>Please remember that copying and pasting mappings from alternate projects under more restrictive licenses (such as MCP or Mojang's obfuscation maps) is <strong>completely forbidden</strong> without explicit permission from the owners of said mappings to distribute the names under the CC0 license. This includes using the names from those mappings for inspiration. Discussing the naming approaches used in said projects is also not welcome - you have been warned. However, it is a good idea to consult name changes with other people - use pull requests or our community spaces to ask questions!</p>
+<p>Please have a look at the <a href="/CONVENTIONS.md">naming conventions</a> before submitting mappings.</p>
+<h3 id="getting-started">Getting Started</h3>
+<ol type="1">
+<li>Fork and clone the repo</li>
+<li>Run <code>./gradlew yarn</code> (Linux, macOS) or <code>gradlew yarn</code> (Windows)</li>
+<li>Profit</li>
+</ol>
+<h2 id="gradle">Gradle</h2>
+<p>Yarn uses Gradle to provide a number of utility tasks for working with the mappings.</p>
+<h3 id="yarn-1"><code>yarn</code></h3>
+<p><a href="#setupYarn"><code>setupYarn</code></a> and download and launch the latest version of <a href="https://github.com/FabricMC/Enigma">Enigma</a> automatically configured to use the merged jar and the mappings.</p>
+<p>Compared to launching Enigma externally, the gradle task adds a name guesser plugin that automatically map enums and a few constant field names.</p>
+<h3 id="build"><code>build</code></h3>
+<p>Build a GZip'd archive containing a tiny mapping between official (obfuscated), <a href="https://github.com/FabricMC/intermediary">intermediary</a>, and yarn names (&quot;named&quot;) and packages enigma mappings into a zip archive..</p>
+<h3 id="mapnamedjar"><code>mapNamedJar</code></h3>
+<p>Builds a deobfuscated jar with yarn mappings and automapped fields (enums, etc.). Unmapped names will be filled with <a href="https://github.com/FabricMC/Intermediary">intermediary</a> names.</p>
+<h3 id="download"><code>download</code></h3>
+<p>Downloads the client and server Minecraft jars for the current Minecraft version to <code>.gradle/minecraft</code></p>
+<h3 id="mergejars"><code>mergeJars</code></h3>
+<p>Merges the client and server jars into one merged jar, located at <code>VERSION-merged.jar</code> in the mappings directory where <code>VERSION</code> is the current Minecraft version.</p>
+<h3 id="setupyarn"><code>setupYarn</code></h3>
+<p><a href="#download"><code>download</code></a> and <a href="#mergeJars"><code>mergeJars</code></a></p></div>
+</div>
+<div class="contentContainer">
 <div class="overviewSummary">
 <table>
 <caption><span>Packages</span><span class="tabEnd">&nbsp;</span></caption>
@@ -210,11 +242,11 @@ loadScripts(document, 'script');</script>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i34">
-<th class="colFirst" scope="row"><a href="net/minecraft/client/gui/screen/recipebook/package-summary.html">net.minecraft.client.gui.screen.recipebook</a></th>
+<th class="colFirst" scope="row"><a href="net/minecraft/client/gui/screen/pack/package-summary.html">net.minecraft.client.gui.screen.pack</a></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i35">
-<th class="colFirst" scope="row"><a href="net/minecraft/client/gui/screen/resourcepack/package-summary.html">net.minecraft.client.gui.screen.resourcepack</a></th>
+<th class="colFirst" scope="row"><a href="net/minecraft/client/gui/screen/recipebook/package-summary.html">net.minecraft.client.gui.screen.recipebook</a></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i36">
@@ -794,110 +826,118 @@ loadScripts(document, 'script');</script>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i180">
-<th class="colFirst" scope="row"><a href="net/minecraft/world/package-summary.html">net.minecraft.world</a></th>
+<th class="colFirst" scope="row"><a href="net/minecraft/village/raid/package-summary.html">net.minecraft.village.raid</a></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i181">
-<th class="colFirst" scope="row"><a href="net/minecraft/world/biome/package-summary.html">net.minecraft.world.biome</a></th>
+<th class="colFirst" scope="row"><a href="net/minecraft/world/package-summary.html">net.minecraft.world</a></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i182">
-<th class="colFirst" scope="row"><a href="net/minecraft/world/biome/layer/package-summary.html">net.minecraft.world.biome.layer</a></th>
+<th class="colFirst" scope="row"><a href="net/minecraft/world/biome/package-summary.html">net.minecraft.world.biome</a></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i183">
-<th class="colFirst" scope="row"><a href="net/minecraft/world/biome/layer/type/package-summary.html">net.minecraft.world.biome.layer.type</a></th>
+<th class="colFirst" scope="row"><a href="net/minecraft/world/biome/layer/package-summary.html">net.minecraft.world.biome.layer</a></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i184">
-<th class="colFirst" scope="row"><a href="net/minecraft/world/biome/layer/util/package-summary.html">net.minecraft.world.biome.layer.util</a></th>
+<th class="colFirst" scope="row"><a href="net/minecraft/world/biome/layer/type/package-summary.html">net.minecraft.world.biome.layer.type</a></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i185">
-<th class="colFirst" scope="row"><a href="net/minecraft/world/biome/source/package-summary.html">net.minecraft.world.biome.source</a></th>
+<th class="colFirst" scope="row"><a href="net/minecraft/world/biome/layer/util/package-summary.html">net.minecraft.world.biome.layer.util</a></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i186">
-<th class="colFirst" scope="row"><a href="net/minecraft/world/border/package-summary.html">net.minecraft.world.border</a></th>
+<th class="colFirst" scope="row"><a href="net/minecraft/world/biome/source/package-summary.html">net.minecraft.world.biome.source</a></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i187">
-<th class="colFirst" scope="row"><a href="net/minecraft/world/chunk/package-summary.html">net.minecraft.world.chunk</a></th>
+<th class="colFirst" scope="row"><a href="net/minecraft/world/border/package-summary.html">net.minecraft.world.border</a></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i188">
-<th class="colFirst" scope="row"><a href="net/minecraft/world/chunk/light/package-summary.html">net.minecraft.world.chunk.light</a></th>
+<th class="colFirst" scope="row"><a href="net/minecraft/world/chunk/package-summary.html">net.minecraft.world.chunk</a></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i189">
-<th class="colFirst" scope="row"><a href="net/minecraft/world/dimension/package-summary.html">net.minecraft.world.dimension</a></th>
+<th class="colFirst" scope="row"><a href="net/minecraft/world/chunk/light/package-summary.html">net.minecraft.world.chunk.light</a></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i190">
-<th class="colFirst" scope="row"><a href="net/minecraft/world/explosion/package-summary.html">net.minecraft.world.explosion</a></th>
+<th class="colFirst" scope="row"><a href="net/minecraft/world/dimension/package-summary.html">net.minecraft.world.dimension</a></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i191">
-<th class="colFirst" scope="row"><a href="net/minecraft/world/gen/package-summary.html">net.minecraft.world.gen</a></th>
+<th class="colFirst" scope="row"><a href="net/minecraft/world/explosion/package-summary.html">net.minecraft.world.explosion</a></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i192">
-<th class="colFirst" scope="row"><a href="net/minecraft/world/gen/carver/package-summary.html">net.minecraft.world.gen.carver</a></th>
+<th class="colFirst" scope="row"><a href="net/minecraft/world/gen/package-summary.html">net.minecraft.world.gen</a></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i193">
-<th class="colFirst" scope="row"><a href="net/minecraft/world/gen/chunk/package-summary.html">net.minecraft.world.gen.chunk</a></th>
+<th class="colFirst" scope="row"><a href="net/minecraft/world/gen/carver/package-summary.html">net.minecraft.world.gen.carver</a></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i194">
-<th class="colFirst" scope="row"><a href="net/minecraft/world/gen/decorator/package-summary.html">net.minecraft.world.gen.decorator</a></th>
+<th class="colFirst" scope="row"><a href="net/minecraft/world/gen/chunk/package-summary.html">net.minecraft.world.gen.chunk</a></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i195">
-<th class="colFirst" scope="row"><a href="net/minecraft/world/gen/feature/package-summary.html">net.minecraft.world.gen.feature</a></th>
+<th class="colFirst" scope="row"><a href="net/minecraft/world/gen/decorator/package-summary.html">net.minecraft.world.gen.decorator</a></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i196">
-<th class="colFirst" scope="row"><a href="net/minecraft/world/gen/foliage/package-summary.html">net.minecraft.world.gen.foliage</a></th>
+<th class="colFirst" scope="row"><a href="net/minecraft/world/gen/feature/package-summary.html">net.minecraft.world.gen.feature</a></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i197">
-<th class="colFirst" scope="row"><a href="net/minecraft/world/gen/placer/package-summary.html">net.minecraft.world.gen.placer</a></th>
+<th class="colFirst" scope="row"><a href="net/minecraft/world/gen/feature/size/package-summary.html">net.minecraft.world.gen.feature.size</a></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i198">
-<th class="colFirst" scope="row"><a href="net/minecraft/world/gen/stateprovider/package-summary.html">net.minecraft.world.gen.stateprovider</a></th>
+<th class="colFirst" scope="row"><a href="net/minecraft/world/gen/foliage/package-summary.html">net.minecraft.world.gen.foliage</a></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i199">
-<th class="colFirst" scope="row"><a href="net/minecraft/world/gen/surfacebuilder/package-summary.html">net.minecraft.world.gen.surfacebuilder</a></th>
+<th class="colFirst" scope="row"><a href="net/minecraft/world/gen/placer/package-summary.html">net.minecraft.world.gen.placer</a></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i200">
-<th class="colFirst" scope="row"><a href="net/minecraft/world/gen/trunk/package-summary.html">net.minecraft.world.gen.trunk</a></th>
+<th class="colFirst" scope="row"><a href="net/minecraft/world/gen/stateprovider/package-summary.html">net.minecraft.world.gen.stateprovider</a></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i201">
-<th class="colFirst" scope="row"><a href="net/minecraft/world/level/package-summary.html">net.minecraft.world.level</a></th>
+<th class="colFirst" scope="row"><a href="net/minecraft/world/gen/surfacebuilder/package-summary.html">net.minecraft.world.gen.surfacebuilder</a></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i202">
-<th class="colFirst" scope="row"><a href="net/minecraft/world/level/storage/package-summary.html">net.minecraft.world.level.storage</a></th>
+<th class="colFirst" scope="row"><a href="net/minecraft/world/gen/trunk/package-summary.html">net.minecraft.world.gen.trunk</a></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i203">
-<th class="colFirst" scope="row"><a href="net/minecraft/world/poi/package-summary.html">net.minecraft.world.poi</a></th>
+<th class="colFirst" scope="row"><a href="net/minecraft/world/level/package-summary.html">net.minecraft.world.level</a></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i204">
-<th class="colFirst" scope="row"><a href="net/minecraft/world/storage/package-summary.html">net.minecraft.world.storage</a></th>
+<th class="colFirst" scope="row"><a href="net/minecraft/world/level/storage/package-summary.html">net.minecraft.world.level.storage</a></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i205">
-<th class="colFirst" scope="row"><a href="net/minecraft/world/timer/package-summary.html">net.minecraft.world.timer</a></th>
+<th class="colFirst" scope="row"><a href="net/minecraft/world/poi/package-summary.html">net.minecraft.world.poi</a></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i206">
+<th class="colFirst" scope="row"><a href="net/minecraft/world/storage/package-summary.html">net.minecraft.world.storage</a></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor" id="i207">
+<th class="colFirst" scope="row"><a href="net/minecraft/world/timer/package-summary.html">net.minecraft.world.timer</a></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i208">
 <th class="colFirst" scope="row"><a href="net/minecraft/world/updater/package-summary.html">net.minecraft.world.updater</a></th>
 <td class="colLast">&nbsp;</td>
 </tr>

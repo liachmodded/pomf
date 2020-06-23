@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../../../../script-dir/jquery-ui.js"></script>
 </head>
 <body class="class-declaration">
-<script type="text/javascript">var data = {"i0":9,"i1":9,"i2":9,"i3":9,"i4":9,"i5":9,"i6":9,"i7":9,"i8":9,"i9":9};
+<script type="text/javascript">var data = {"i0":9,"i1":9,"i2":9,"i3":9,"i4":9,"i5":9,"i6":9,"i7":9};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -116,7 +116,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>static class&nbsp;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="InputUtil.KeyCode.html" title="class in net.minecraft.client.util">InputUtil.KeyCode</a></span></code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="InputUtil.Key.html" title="class in net.minecraft.client.util">InputUtil.Key</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
@@ -147,8 +147,18 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </thead>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><code>static <a href="InputUtil.KeyCode.html" title="class in net.minecraft.client.util">InputUtil.KeyCode</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#UNKNOWN_KEYCODE">UNKNOWN_KEYCODE</a></span></code></th>
+<td class="colFirst"><code>private static int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#GLFW_RAW_MOUSE_MOTION">GLFW_RAW_MOUSE_MOTION</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/invoke/MethodHandle.html?is-external=true" title="class or interface in java.lang.invoke" class="externalLink">MethodHandle</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#GLFW_RAW_MOUSE_MOTION_SUPPORTED_HANDLE">GLFW_RAW_MOUSE_MOTION_SUPPORTED_HANDLE</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="InputUtil.Key.html" title="class in net.minecraft.client.util">InputUtil.Key</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#UNKNOWN_KEY">UNKNOWN_KEY</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -200,61 +210,52 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </thead>
 <tbody>
 <tr class="altColor" id="i0">
-<td class="colFirst"><code>static <a href="InputUtil.KeyCode.html" title="class in net.minecraft.client.util">InputUtil.KeyCode</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#fromName(java.lang.String)">fromName</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;s)</code></th>
+<td class="colFirst"><code>static <a href="InputUtil.Key.html" title="class in net.minecraft.client.util">InputUtil.Key</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#fromKeyCode(int,int)">fromKeyCode</a></span>&#8203;(int&nbsp;keyCode,
+int&nbsp;scanCode)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
-<td class="colFirst"><code>static <a href="InputUtil.KeyCode.html" title="class in net.minecraft.client.util">InputUtil.KeyCode</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getKeyCode(int,int)">getKeyCode</a></span>&#8203;(int&nbsp;int2,
-int&nbsp;int3)</code></th>
+<td class="colFirst"><code>static <a href="InputUtil.Key.html" title="class in net.minecraft.client.util">InputUtil.Key</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#fromTranslationKey(java.lang.String)">fromTranslationKey</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;translationKey)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i2">
-<td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getKeycodeName(int)">getKeycodeName</a></span>&#8203;(int&nbsp;int2)</code></th>
+<td class="colFirst"><code>static boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isKeyPressed(long,int)">isKeyPressed</a></span>&#8203;(long&nbsp;handle,
+int&nbsp;code)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i3">
-<td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getScancodeName(int)">getScancodeName</a></span>&#8203;(int&nbsp;int2)</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="altColor" id="i4">
-<td class="colFirst"><code>static boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isKeyPressed(long,int)">isKeyPressed</a></span>&#8203;(long&nbsp;handle,
-int&nbsp;int2)</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="rowColor" id="i5">
 <td class="colFirst"><code>static boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isRawMouseMotionSupported()">isRawMouseMotionSupported</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i6">
+<tr class="altColor" id="i4">
 <td class="colFirst"><code>static void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setCursorParameters(long,int,double,double)">setCursorParameters</a></span>&#8203;(long&nbsp;long2,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setCursorParameters(long,int,double,double)">setCursorParameters</a></span>&#8203;(long&nbsp;handler,
 int&nbsp;int2,
 double&nbsp;double2,
 double&nbsp;double3)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i7">
+<tr class="rowColor" id="i5">
 <td class="colFirst"><code>static void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setKeyboardCallbacks(long,org.lwjgl.glfw.GLFWKeyCallbackI,org.lwjgl.glfw.GLFWCharModsCallbackI)">setKeyboardCallbacks</a></span>&#8203;(long&nbsp;handle,
-org.lwjgl.glfw.GLFWKeyCallbackI&nbsp;gLFWKeyCallbackI,
-org.lwjgl.glfw.GLFWCharModsCallbackI&nbsp;gLFWCharModsCallbackI)</code></th>
+<a href="https://javadoc.lwjgl.org/org/lwjgl/glfw/GLFWKeyCallbackI.html?is-external=true" title="class or interface in org.lwjgl.glfw" class="externalLink">GLFWKeyCallbackI</a>&nbsp;keyCallback,
+<a href="https://javadoc.lwjgl.org/org/lwjgl/glfw/GLFWCharModsCallbackI.html?is-external=true" title="class or interface in org.lwjgl.glfw" class="externalLink">GLFWCharModsCallbackI</a>&nbsp;charModsCallback)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor" id="i8">
+<tr class="altColor" id="i6">
 <td class="colFirst"><code>static void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setMouseCallbacks(long,org.lwjgl.glfw.GLFWCursorPosCallbackI,org.lwjgl.glfw.GLFWMouseButtonCallbackI,org.lwjgl.glfw.GLFWScrollCallbackI)">setMouseCallbacks</a></span>&#8203;(long&nbsp;handle,
-org.lwjgl.glfw.GLFWCursorPosCallbackI&nbsp;gLFWCursorPosCallbackI,
-org.lwjgl.glfw.GLFWMouseButtonCallbackI&nbsp;gLFWMouseButtonCallbackI,
-org.lwjgl.glfw.GLFWScrollCallbackI&nbsp;gLFWScrollCallbackI)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setMouseCallbacks(long,org.lwjgl.glfw.GLFWCursorPosCallbackI,org.lwjgl.glfw.GLFWMouseButtonCallbackI,org.lwjgl.glfw.GLFWScrollCallbackI,org.lwjgl.glfw.GLFWDropCallbackI)">setMouseCallbacks</a></span>&#8203;(long&nbsp;handle,
+<a href="https://javadoc.lwjgl.org/org/lwjgl/glfw/GLFWCursorPosCallbackI.html?is-external=true" title="class or interface in org.lwjgl.glfw" class="externalLink">GLFWCursorPosCallbackI</a>&nbsp;cursorPosCallback,
+<a href="https://javadoc.lwjgl.org/org/lwjgl/glfw/GLFWMouseButtonCallbackI.html?is-external=true" title="class or interface in org.lwjgl.glfw" class="externalLink">GLFWMouseButtonCallbackI</a>&nbsp;mouseButtonCallback,
+<a href="https://javadoc.lwjgl.org/org/lwjgl/glfw/GLFWScrollCallbackI.html?is-external=true" title="class or interface in org.lwjgl.glfw" class="externalLink">GLFWScrollCallbackI</a>&nbsp;scrollCallback,
+<a href="https://javadoc.lwjgl.org/org/lwjgl/glfw/GLFWDropCallbackI.html?is-external=true" title="class or interface in org.lwjgl.glfw" class="externalLink">GLFWDropCallbackI</a>&nbsp;gLFWDropCallbackI)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor" id="i9">
+<tr class="rowColor" id="i7">
 <td class="colFirst"><code>static void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setRawMouseMotionMode(long,boolean)">setRawMouseMotionMode</a></span>&#8203;(long&nbsp;window,
 boolean&nbsp;value)</code></th>
@@ -284,8 +285,21 @@ boolean&nbsp;value)</code></th>
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="UNKNOWN_KEYCODE">UNKNOWN_KEYCODE</a></h3>
-<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="InputUtil.KeyCode.html" title="class in net.minecraft.client.util">InputUtil.KeyCode</a></span>&nbsp;<span class="memberName">UNKNOWN_KEYCODE</span></div>
+<h3><a id="GLFW_RAW_MOUSE_MOTION_SUPPORTED_HANDLE">GLFW_RAW_MOUSE_MOTION_SUPPORTED_HANDLE</a></h3>
+<div class="memberSignature"><span class="annotations"><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.2/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
+</span><span class="modifiers">private static final</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/invoke/MethodHandle.html?is-external=true" title="class or interface in java.lang.invoke" class="externalLink">MethodHandle</a></span>&nbsp;<span class="memberName">GLFW_RAW_MOUSE_MOTION_SUPPORTED_HANDLE</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="GLFW_RAW_MOUSE_MOTION">GLFW_RAW_MOUSE_MOTION</a></h3>
+<div class="memberSignature"><span class="modifiers">private static final</span>&nbsp;<span class="returnType">int</span>&nbsp;<span class="memberName">GLFW_RAW_MOUSE_MOTION</span></div>
+</section>
+</li>
+<li class="blockList">
+<section class="detail">
+<h3><a id="UNKNOWN_KEY">UNKNOWN_KEY</a></h3>
+<div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="InputUtil.Key.html" title="class in net.minecraft.client.util">InputUtil.Key</a></span>&nbsp;<span class="memberName">UNKNOWN_KEY</span></div>
 </section>
 </li>
 </ul>
@@ -316,45 +330,46 @@ boolean&nbsp;value)</code></th>
 <ul class="blockList">
 <li class="blockList">
 <section class="detail">
-<h3><a id="getKeyCode(int,int)">getKeyCode</a></h3>
-<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType"><a href="InputUtil.KeyCode.html" title="class in net.minecraft.client.util">InputUtil.KeyCode</a></span>&nbsp;<span class="memberName">getKeyCode</span>&#8203;(<span class="arguments">int&nbsp;int2,
-int&nbsp;int3)</span></div>
+<h3><a id="fromKeyCode(int,int)">fromKeyCode</a></h3>
+<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType"><a href="InputUtil.Key.html" title="class in net.minecraft.client.util">InputUtil.Key</a></span>&nbsp;<span class="memberName">fromKeyCode</span>&#8203;(<span class="arguments">int&nbsp;keyCode,
+int&nbsp;scanCode)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="fromName(java.lang.String)">fromName</a></h3>
-<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType"><a href="InputUtil.KeyCode.html" title="class in net.minecraft.client.util">InputUtil.KeyCode</a></span>&nbsp;<span class="memberName">fromName</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;s)</span></div>
+<h3><a id="fromTranslationKey(java.lang.String)">fromTranslationKey</a></h3>
+<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType"><a href="InputUtil.Key.html" title="class in net.minecraft.client.util">InputUtil.Key</a></span>&nbsp;<span class="memberName">fromTranslationKey</span>&#8203;(<span class="arguments"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;translationKey)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="isKeyPressed(long,int)">isKeyPressed</a></h3>
 <div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isKeyPressed</span>&#8203;(<span class="arguments">long&nbsp;handle,
-int&nbsp;int2)</span></div>
+int&nbsp;code)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="setKeyboardCallbacks(long,org.lwjgl.glfw.GLFWKeyCallbackI,org.lwjgl.glfw.GLFWCharModsCallbackI)">setKeyboardCallbacks</a></h3>
 <div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setKeyboardCallbacks</span>&#8203;(<span class="arguments">long&nbsp;handle,
-org.lwjgl.glfw.GLFWKeyCallbackI&nbsp;gLFWKeyCallbackI,
-org.lwjgl.glfw.GLFWCharModsCallbackI&nbsp;gLFWCharModsCallbackI)</span></div>
+<a href="https://javadoc.lwjgl.org/org/lwjgl/glfw/GLFWKeyCallbackI.html?is-external=true" title="class or interface in org.lwjgl.glfw" class="externalLink">GLFWKeyCallbackI</a>&nbsp;keyCallback,
+<a href="https://javadoc.lwjgl.org/org/lwjgl/glfw/GLFWCharModsCallbackI.html?is-external=true" title="class or interface in org.lwjgl.glfw" class="externalLink">GLFWCharModsCallbackI</a>&nbsp;charModsCallback)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
-<h3><a id="setMouseCallbacks(long,org.lwjgl.glfw.GLFWCursorPosCallbackI,org.lwjgl.glfw.GLFWMouseButtonCallbackI,org.lwjgl.glfw.GLFWScrollCallbackI)">setMouseCallbacks</a></h3>
+<h3><a id="setMouseCallbacks(long,org.lwjgl.glfw.GLFWCursorPosCallbackI,org.lwjgl.glfw.GLFWMouseButtonCallbackI,org.lwjgl.glfw.GLFWScrollCallbackI,org.lwjgl.glfw.GLFWDropCallbackI)">setMouseCallbacks</a></h3>
 <div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setMouseCallbacks</span>&#8203;(<span class="arguments">long&nbsp;handle,
-org.lwjgl.glfw.GLFWCursorPosCallbackI&nbsp;gLFWCursorPosCallbackI,
-org.lwjgl.glfw.GLFWMouseButtonCallbackI&nbsp;gLFWMouseButtonCallbackI,
-org.lwjgl.glfw.GLFWScrollCallbackI&nbsp;gLFWScrollCallbackI)</span></div>
+<a href="https://javadoc.lwjgl.org/org/lwjgl/glfw/GLFWCursorPosCallbackI.html?is-external=true" title="class or interface in org.lwjgl.glfw" class="externalLink">GLFWCursorPosCallbackI</a>&nbsp;cursorPosCallback,
+<a href="https://javadoc.lwjgl.org/org/lwjgl/glfw/GLFWMouseButtonCallbackI.html?is-external=true" title="class or interface in org.lwjgl.glfw" class="externalLink">GLFWMouseButtonCallbackI</a>&nbsp;mouseButtonCallback,
+<a href="https://javadoc.lwjgl.org/org/lwjgl/glfw/GLFWScrollCallbackI.html?is-external=true" title="class or interface in org.lwjgl.glfw" class="externalLink">GLFWScrollCallbackI</a>&nbsp;scrollCallback,
+<a href="https://javadoc.lwjgl.org/org/lwjgl/glfw/GLFWDropCallbackI.html?is-external=true" title="class or interface in org.lwjgl.glfw" class="externalLink">GLFWDropCallbackI</a>&nbsp;gLFWDropCallbackI)</span></div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="setCursorParameters(long,int,double,double)">setCursorParameters</a></h3>
-<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setCursorParameters</span>&#8203;(<span class="arguments">long&nbsp;long2,
+<div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setCursorParameters</span>&#8203;(<span class="arguments">long&nbsp;handler,
 int&nbsp;int2,
 double&nbsp;double2,
 double&nbsp;double3)</span></div>
@@ -371,20 +386,6 @@ double&nbsp;double3)</span></div>
 <h3><a id="setRawMouseMotionMode(long,boolean)">setRawMouseMotionMode</a></h3>
 <div class="memberSignature"><span class="modifiers">public static</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setRawMouseMotionMode</span>&#8203;(<span class="arguments">long&nbsp;window,
 boolean&nbsp;value)</span></div>
-</section>
-</li>
-<li class="blockList">
-<section class="detail">
-<h3><a id="getKeycodeName(int)">getKeycodeName</a></h3>
-<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
-</span><span class="modifiers">public static</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></span>&nbsp;<span class="memberName">getKeycodeName</span>&#8203;(<span class="arguments">int&nbsp;int2)</span></div>
-</section>
-</li>
-<li class="blockList">
-<section class="detail">
-<h3><a id="getScancodeName(int)">getScancodeName</a></h3>
-<div class="memberSignature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation" class="externalLink">@Nullable</a>
-</span><span class="modifiers">public static</span>&nbsp;<span class="returnType"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></span>&nbsp;<span class="memberName">getScancodeName</span>&#8203;(<span class="arguments">int&nbsp;int2)</span></div>
 </section>
 </li>
 </ul>
