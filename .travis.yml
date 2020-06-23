@@ -19,7 +19,7 @@ jobs:
     script: "./gradlew build javadocJar checkMappings -S -i"
   - stage: deploy
     before_install: sudo apt-get install pandoc
-    install: pandoc --from markdown --to html4 --standalone -o readme.html README.md
+    install: pandoc --from markdown --to html5 --standalone -o readme.html README.md
     script: "./gradlew build javadocJar bintrayUpload publishMavenGitHubPublicationToGitHubRepository -S -i"
     deploy:
       - provider: pages
@@ -41,7 +41,7 @@ jobs:
 stages:
 - build
 - name: deploy
-  if: repo = liachmodded/carttemplate AND env(bintray_key) AND env(GITHUB_OAUTH_TOKEN)
+  if: repo = liachmodded/yarn AND env(bintray_key) AND env(GITHUB_OAUTH_TOKEN) AND branch = MAIN
 env:
   global:
   - TERM=dumb
