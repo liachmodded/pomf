@@ -20,7 +20,7 @@ jobs:
   - stage: deploy
     before_install: sudo apt-get install pandoc
     install: pandoc --from markdown --to html5 --standalone -o readme.html README.md
-    script: "./gradlew build javadocJar bintrayUpload publishMavenGitHubPublicationToGitHubRepository -S -i"
+    script: "./gradlew build javadocJar checkMappings bintrayUpload publishMavenGitHubPublicationToGitHubRepository -S -i"
     deploy:
       - provider: pages
         github_token: "$GITHUB_OAUTH_TOKEN"
@@ -39,9 +39,10 @@ jobs:
           tags: true
 
 stages:
-- build
+- name: build
+  if: repo != liachmodded/yarn OR branch != main
 - name: deploy
-  if: repo = liachmodded/yarn AND env(bintray_key) AND env(GITHUB_OAUTH_TOKEN) AND branch = MAIN
+  if: repo = liachmodded/yarn AND branch = main
 env:
   global:
   - TERM=dumb
