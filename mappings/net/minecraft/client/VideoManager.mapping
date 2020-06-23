@@ -1,0 +1,22 @@
+CLASS net/minecraft/class_5407 net/minecraft/client/VideoManager
+	FIELD field_25689 GPU_WARNLIST_ID Lnet/minecraft/class_2960;
+	FIELD field_25690 debugInfos Lcom/google/common/collect/ImmutableMap;
+	FIELD field_25716 LOGGER Lorg/apache/logging/log4j/Logger;
+	METHOD method_30055 hasDebugInfo ()Z
+	METHOD method_30057 parseRegex (Lcom/google/gson/JsonArray;Ljava/util/List;)V
+		ARG 0 array
+		ARG 1 target
+	METHOD method_30060 getRenderer ()Ljava/lang/String;
+	METHOD method_30061 loadGpuWarnlist (Lnet/minecraft/class_3300;Lnet/minecraft/class_3695;)Lcom/google/gson/JsonObject;
+		ARG 0 resourceManager
+		ARG 1 profiler
+	METHOD method_30062 getVersion ()Ljava/lang/String;
+	METHOD method_30063 getVendor ()Ljava/lang/String;
+	CLASS class_5408 PatternBuilder
+		FIELD field_25691 rendererPatterns Ljava/util/List;
+		FIELD field_25692 versionPatterns Ljava/util/List;
+		FIELD field_25693 vendorPatterns Ljava/util/List;
+		METHOD method_30064 createInfoMap ()Lcom/google/common/collect/ImmutableMap;
+		METHOD method_30066 findMatches (Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
+			ARG 0 patterns
+			ARG 1 info
