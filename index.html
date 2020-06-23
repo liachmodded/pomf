@@ -65,9 +65,23 @@ loadScripts(document, 'script');</script>
 <div class="contentContainer">
 <div class="block"><h1 id="yarn">Yarn</h1>
 <p>Yarn is a set of open, unencumbered Minecraft mappings, free for everyone to use under the Creative Commons Zero license. The intention is to let everyone mod Minecraft freely and openly, while also being able to innovate and process the mappings as they see fit.</p>
-<p>To see the current version being targeted, check the branch name!</p>
+<p>To see the current version being targeted, check the version in <code>build.gradle</code>!</p>
+<h2 id="how-important-is-yarn">How important is yarn</h2>
+<p>Minecraft mappings is a fairly important but not required to Minecraft modding. It allows modders to modify Minecraft efficiently compared to directly looking at obfuscated code and guessing the functionalities.</p>
+<p>It is not required to make a mod, and has nothing to do with running the game. Minecraft with fabric loader does not need yarn mappings at all; it only runs with <a href="https://github.com/FabricMC/Intermediary">intermediary</a>, another set of mappings that allows mods to preserve maximum compatibility between Minecraft updates.</p>
 <h2 id="usage">Usage</h2>
 <p>To use yarn-deobfuscated Minecraft for Minecraft modding or as a dependency in a Java project, you can use <a href="https://github.com/fabricmc/fabric-loom">loom</a> Gradle plugin. See <a href="https://fabricmc.net/wiki/tutorial:setup">fabric wiki tutorial</a> for more information.</p>
+<p>In your fabric mod's <code>build.gradle</code>, in the <code>dependencies</code> block, change</p>
+<pre class="gradle"><code>mappings &quot;net.fabricmc:yarn:${project.yarn_mappings}:v2&quot;</code></pre>
+<p>to</p>
+<pre class="gradle"><code>mappings &quot;com.github.liachmodded:yarn:${project.yarn_mappings}:v2&quot;</code></pre>
+<p>and add</p>
+<pre class="gradle"><code>repositories {
+    maven { url = &quot;https://dl.bintray.com/liachmodded/doublecart/&quot; }
+}</code></pre>
+<p>before the <code>dependencies</code> block.</p>
+<p>A list of versions can be found on <a href="https://dl.bintray.com/liachmodded/doublecart/com/github/liachmodded/yarn/">the maven repo</a>. Replace the yarn version listed in your <code>gradle.properties</code> accordingly.</p>
+<p>There is <a href="https://liachmodded.github.io/yarn">javadoc</a> available online as well. Feel free to dive into that.</p>
 <p>To obtain a deobfuscated Minecraft jar, <a href="#mapNamedJar"><code>./gradlew mapNamedJar</code></a> will generate a jar named like <code>&lt;minecraft version&gt;-named.jar</code>, which can be sent to a decompiler for deobfuscated code.</p>
 <h2 id="contributing">Contributing</h2>
 <p>Please remember that copying and pasting mappings from alternate projects under more restrictive licenses (such as MCP or Mojang's obfuscation maps) is <strong>completely forbidden</strong> without explicit permission from the owners of said mappings to distribute the names under the CC0 license. This includes using the names from those mappings for inspiration. Discussing the naming approaches used in said projects is also not welcome - you have been warned. However, it is a good idea to consult name changes with other people - use pull requests or our community spaces to ask questions!</p>
