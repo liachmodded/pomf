@@ -755,19 +755,7 @@ if (!isNullOrEmpty(ENV.GITHUB_OAUTH_TOKEN)) {
 				groupId project.mavenGroup
 				artifactId "yarn"
 				version yarnVersion
-
-				artifact(compressTiny.output) {
-					classifier "tiny"
-					builtBy compressTiny
-				}
-				artifact(tinyJar)
-				artifact(v2UnmergedYarnJar) {
-					classifier "v2"
-				}
-				artifact(v2MergedYarnJar) {
-					classifier "mergedv2"
-				}
-				artifact javadocJar
+				
 				pom {
 					name = project.name
 					description = project.description
@@ -795,7 +783,7 @@ if (!isNullOrEmpty(ENV.GITHUB_OAUTH_TOKEN)) {
 				artifact(v2MergedYarnJar) {
 					classifier "mergedv2"
 				}
-				artifact javadocJar
+				//artifact javadocJar
 			}
 		}
 		// select the repositories you want to publish to
